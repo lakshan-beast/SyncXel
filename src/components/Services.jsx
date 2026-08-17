@@ -219,7 +219,7 @@ export default function Services() {
 
       <div className="max-w-7xl mx-auto space-y-24 relative z-10">
         {/* section header */}
-        <div className="text-center space-y-4 max-w-3xl mx-auto">
+        <div className="text-center space-y-1 max-w-3xl mx-auto mb-8">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-syncxel-cyan/10 border border-syncxel-cyan/20 text-syncxel-cyan text-xs font-semibold">
             <HiOutlineChatBubbleLeftRight className="w-4 h-4" />
             <span>Client Services & Engineering</span>
@@ -239,7 +239,7 @@ export default function Services() {
         </div>
 
         {/* services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-3">
           {services.map((item, index) => (
             <div
               className="group relative p-6 rounded-2xl bg-syncxel-card/60 border border-syncxel-border/60 hover:border-syncxel-cyan/40 transition-all duration-300 backdrop-blur-sm flex flex-col justify-between"
