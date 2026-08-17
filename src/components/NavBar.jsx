@@ -7,7 +7,7 @@ export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 px-4 sm:px-8 pt-4">
+    <header className="fixed top-0 left-0 right-0 px-4 sm:px-8 pt-4 z-50">
       <nav className="max-w-7xl mx-auto bg-syncxel-dark/80 backdrop-blur-md border border-syncxel-border/60 rounded-2xl px-6 py-3 shadow-2xl transition-all duration-300">
         <div className="flex items-center justify-between">
           {/* brand name and logo */}
@@ -176,7 +176,7 @@ export default function NavBar() {
               Resources
             </a>
 
-            <div className="pt-2 flex flex-col gap-2">
+            <div className="pt-2 flex flex-col gap-3">
               <a
                 href="#hire"
                 className="text-center text-sm font-medium text-white bg-syncxel-card py-2.5 rounded-xl border border-syncxel-border">
