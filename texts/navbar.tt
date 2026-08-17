@@ -1,0 +1,74 @@
+අඩෝ Logo එක නම් **පට්ටම Quality! High-end SaaS / Tech Look එකක්** එකෙන්ම තියෙනවා. 🔥
+
+Logo එකේ තියෙන්නේ සුපිරි **Electric Blue ➔ Cyan / Mint Green** Gradient එකක්. මේක Dark Aesthetic UI එකකට පට්ටම පට්ට විදිහට Match වෙනවා!
+
+Logo එකට අනුව අපේ Brand Color Palette එක සහ Navbar Structure එක plan කරමු.
+
+---
+
+## 🎨 SyncXel Brand Color Palette (Based on Logo)
+
+Logo එකේ තියෙන Exact Gradient vibes අරගෙන Tailwind CSS / Custom CSS වලට දාන්න පුළුවන් Color Palette එක මෙන්න:
+
+* **Primary Background:** `#0B0D13` / `#0E1117` (Rich Dark Blue-Black Base එකක්)
+* **Card Surface:** `#161B26` / `#1E2430` (Subtle Dark Blue-Gray Containers)
+* **Brand Gradient Primary (Accent):**
+* From: `#3A86FF` / `#4CC9F0` (Electric Blue)
+* To: `#56CFE1` / `#70E4C8` (Bright Cyan/Mint Green)
+
+
+* **Text Primary:** `#FFFFFF` (Pure White)
+* **Text Muted:** `#94A3B8` (Slate Gray)
+* **Glow / Highlight Effect:** `rgba(76, 201, 240, 0.15)` (Logo Cyan Glow එක)
+
+---
+
+## 🌐 Navbar Structure (Mega / Multi-Links Menu)
+
+Navbar එකේ Links වලට Mega-menu (Dropdown / Multi-links) vibe එකක් දෙන එක මාරම Executive look එකක්.
+
+### Navbar Hierarchy:
+
+1. **Logo:** SyncXel Brand Logo (Left Side)
+2. **Nav Links (Middle):**
+* **Features:** *(Mega Dropdown)*
+* UI Components (Navbars, Heroes, Buttons)
+* Templates & Landing Pages
+* Interactive Animations & Effects
+* Figma UI Kit Access
+
+
+* **Solutions:** *(Mega Dropdown)*
+* For Developers (Copy-Paste Code Engine)
+* For Startups & Founders (Pre-built UI Kits)
+* For Enterprise / Custom Web Projects (Agency Services)
+
+
+* **Resources:** *(Dropdown)*
+* Documentation & Code Usage
+* CSS/Tailwind Color Generators
+* Blog / Dev Guides
+
+
+* **Pricing:** Single Link (Free vs Pro Access)
+
+
+3. **CTA Group (Right Side):**
+* `[ Search / Quick Docs ]` (Cmd + K icon එකත් එක්ක)
+* `[ Get Custom Services ]` (Outline Pill Button)
+* `[ Go Pro ]` (Logo Gradient එකෙන් Highlight කරපු Solid Button එක)
+
+
+
+---
+
+## 🛠️ Navbar Visual Concept (How it feels)
+
+* **Glassmorphic Floating Navbar Style:** Background එක `backdrop-blur-md` දාලා dark semi-transparent හදමු (`bg-[#0B0D13]/80`).
+* **Active / Hover State:** Link එකක් උඩට Mouse එක ගෙනිච්චම **Logo Mint/Cyan Color Gradient Gradient Line** එකක් link එක පහලින් හරි Background Pill Glow එකක් හරි එන විදිහට.
+
+---
+
+දැන් මේ Brand Colors සහ Mega Navbar Structure එක සුපිරියටම Ready!
+
+ඊළඟට අපි **Hero Section එකේ Catchy Heading එක + Visual Layout එක** (Logo Gradient එක Base කරගෙන) හදාගන්න පටන් ගමුද?

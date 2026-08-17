@@ -1,0 +1,73 @@
+ඒ අදහස මාරම **Smart**! "How It Works" එක **Developers** සහ **Clients** කියලා කොටස් දෙකකට කඩන එකෙන් SyncXel වල තියෙන dual-purpose එක (Product + Agency/Custom Service) ආපු ගමන්ම පැහැදිලි වෙනවා.
+
+ඔයා එවපු Image එකේ තියෙන Dark Aesthetic & Clean Theme එක **SyncXel** එකට පට්ටම ගැලපෙනවා. ඒකේ Footer එක ඉතාම High-end SaaS/Agency look එකක් දෙනවා.
+
+අපි ඔයාගේ **How It Works** අදහස, **Footer Style** එක සහ **Overall UI/UX Design Direction** එක සවිස්තරාත්මකව Plan කරගමු:
+
+---
+
+## 1. Dual "How It Works" Section Structure
+
+මත Tab Switcher එකක් (e.g., `[ For Developers ]` | `[ For Clients ]`) හරි, එහෙම නැත්නම් Side-by-Side Cards දෙකක් විදිහට මේක Display කරන්න පුළුවන්.
+
+### 🛠️ For Developers (UI Components & Code)
+
+1. **Browse Components:** Explore our library of modern, responsive Tailwind, React & HTML elements.
+2. **Copy the Code:** Select your preferred framework and copy clean, production-ready code in 1-click.
+3. **Ship Your Product:** Paste it into your codebase and launch your web app 10x faster.
+
+### 💼 For Clients (Custom Web Development Services)
+
+1. **Book a Call:** Schedule a quick discovery session to share your product vision and goals.
+2. **Scope the Project:** We map out custom features, design systems, and exact timelines for your brand.
+3. **Lightning-Fast Delivery:** Get a fully responsive, pixel-perfect, custom website delivered on time.
+
+---
+
+## 2. Footer Design Direction (Based on Image Style)
+
+Image එකේ Footer එකේ තියෙන **Bold Typography & High Contrast CTA Card** style එක අපි SyncXel එකට මෙහෙම Adapt කරමු:
+
+* **Top Section (Big CTA Box):**
+* Dark rounded container with subtle border.
+* **Huge Bold Heading:** "LET’S BUILD SOMETHING EXTRAORDINARY." / "READY TO ELEVATE YOUR DIGITAL PRODUCT?"
+* Subtext & White Pill Button: `[ START A PROJECT / GET PRO ACCESS ]`
+
+
+* **Bottom Bar:**
+* Left: `SyncXel © 2026. All Rights Reserved.`
+* Middle/Right: Quick Links (`Components`, `Pricing`, `Services`, `Privacy`, `Terms`) + Social Media Icons (GitHub, X/Twitter, LinkedIn).
+
+
+
+---
+
+## 3. SyncXel Design System & UI Specs (Design එක කරන්නේ කොහොමද?)
+
+Image එකේ තියෙන High-end Dark Theme Look එක SyncXel එකට ගන්න ඕන Design Guidelines ටික මෙන්න:
+
+### 🎨 Color Palette (Dark Aesthetic)
+
+* **Background:** Deep Dark Neutral (`#0A0A0B` / `#0D0D0E` - pure black වලට වඩා premium).
+* **Card Surfaces:** Dark Charcoal (`#141416` / `#18181B`) with very light borders (`border-zinc-800`).
+* **Text Colors:** Primary: Pure White (`#FFFFFF`), Secondary: Muted Gray (`#A1A1AA`).
+* **Accent Colors:** Electric Cyan / Neon Purple or Emerald Gradient (Sync + Pixel vibe එක ගන්න).
+
+### 📐 UI Features & Visual Elements
+
+1. **Glow Effects:** Cards සහ CTA Box වල Hover වෙද්දී Subtle Radial Gradient Glow එකක් (Tailwind glassmorphism effect).
+2. **Interactive Code Preview Boxes:** Dark theme code editor views (Syntax highlighting සමඟ).
+3. **Bento Grid Layout:** Features සහ Components Showcase කරද්දී Image එකේ තියෙනවා වගේ Rounded Corners (`rounded-2xl`) තියෙන Modern Bento Boxes පාවිච්චි කිරීම.
+
+---
+
+### ඊළඟට කරන්නේ මොකක්ද?
+
+Structure එක සහ Design Direction එක දැන් 100% Clear.
+
+අපිට දැන් කරන්න පුළුවන් ඊළඟ පියවර:
+
+1. **SyncXel Landing Page එකේ Hero Section එකට යන HTML/Tailwind Code Draft එක සකස් කිරීම.**
+2. **Figma / Direct Coding වලින් මේ Design එක Start කරන්නේ කොහොමද කියන Technical Steps ටික කතා කිරීම.**
+
+ඔයා මුලින්ම Figma එකෙන් Mockup එක හදලද Code කරන්න පටන් ගන්නේ, නැත්නම් කෙලින්ම React/Tailwind වලින් Design එක Code කරගෙන යන්නද හිතන්නේ?

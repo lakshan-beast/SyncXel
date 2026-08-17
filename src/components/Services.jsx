@@ -239,7 +239,7 @@ export default function Services() {
         </div>
 
         {/* services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3">
           {services.map((item, index) => (
             <div
               className="group relative p-6 rounded-3xl bg-syncxel-card/60 border-2 border-syncxel-border/60 hover:border-syncxel-cyan/40 transition-all duration-300 backdrop-blur-sm flex flex-col justify-between"

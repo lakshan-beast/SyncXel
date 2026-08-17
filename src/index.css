@@ -25,13 +25,32 @@
   --font-baloo: "Baloo 2", cursive;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 /* Base Body Font */
 body {
   font-family: var(--font-baloo);
   background-color: var(--color-syncxel-dark);
   color: #ffffff;
-  /* color: #999da3; */
 }
+
+/* 3. Dark Theme Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #56cfe1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
 
 /* Headings Custom Font */
 h1,
