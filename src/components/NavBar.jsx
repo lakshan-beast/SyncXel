@@ -18,7 +18,7 @@ export default function NavBar() {
               width={50}
               height={50}
             />
-            <span className="text-xl font-bold tracking-tight text-white">
+            <span className="text-xl font-bold font-heading tracking-tight text-white">
               Sync
               <span className="text-transparent bg-clip-text bg-syncxel-gradient ">
                 Xel
@@ -123,7 +123,7 @@ export default function NavBar() {
             {/* custom projects link */}
             <a
               href="#hire"
-              className="text-sm font-medium text-whit hover:text-syncxel-cyan transition-colors px-3 py-2">
+              className="text-sm font-medium text-white hover:text-syncxel-cyan transition-colors px-3 py-2">
               Hire Us
             </a>
 
@@ -142,9 +142,9 @@ export default function NavBar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-syncxel-text-muted hover:text-white">
+              className="hover:text-syncxel-text-muted text-white">
               {mobileMenuOpen ? (
-                <BiX className="w-6 h-5" />
+                <IoClose className="w-6 h-5" />
               ) : (
                 <FaBarsStaggered className="w-6 h-6" />
               )}
@@ -154,29 +154,29 @@ export default function NavBar() {
 
         {/* mobile menu (open state) */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pt-4 border-syncxel-border/60 flex flex-col space-y-3">
+          <div className="mt-4 pt-4 border-t border-syncxel-border/60 flex flex-col space-y-3 md:hidden">
             <a
               href="#features"
-              className="text-syncxel-text-muted hover:text-white py-1">
+              className="text-syncxel-textMuted hover:text-white py-1 transition-colors">
               Features
             </a>
             <a
               href="#solutions"
-              className="text-syncxel-text-muted hover:text-white py-1">
+              className="text-syncxel-textMuted hover:text-white py-1 transition-colors">
               Solutions
             </a>
             <a
               href="#pricing"
-              className="text-syncxel-text-muted hover:text-white py-1">
+              className="text-syncxel-textMuted hover:text-white py-1 transition-colors">
               Pricing
             </a>
             <a
               href="#resources"
-              className="text-syncxel-text-muted hover:text-white py-1">
+              className="text-syncxel-textMuted hover:text-white py-1 transition-colors">
               Resources
             </a>
 
-            <div className="pt-2">
+            <div className="pt-2 flex flex-col gap-2">
               <a
                 href="#hire"
                 className="text-center text-sm font-medium text-white bg-syncxel-card py-2.5 rounded-xl border border-syncxel-border">

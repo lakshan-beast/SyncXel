@@ -1,23 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
 
 @theme {
   /* SyncXel Brand Colors (Logo Matrix) */
-  --color-syncxel-dark: #0B0D13;
+  --color-syncxel-dark: #0b0d13;
   /* --color-syncxel-dark: #191b1f; */
-  --color-syncxel-card: #161B26;
-  --color-syncxel-border: #2A324B;
-  --color-syncxel-blue: #3A86FF;
-  --color-syncxel-cyan: #56CFE1;
-  --color-syncxel-mint: #70E4C8;
-  --color-syncxel-text-muted: #94A3B8;
+  --color-syncxel-card: #161b26;
+  --color-syncxel-border: #2a324b;
+  --color-syncxel-blue: #3a86ff;
+  --color-syncxel-cyan: #56cfe1;
+  --color-syncxel-mint: #70e4c8;
+  --color-syncxel-text-muted: #999da3;
 
   /* Brand Custom Gradients */
-  --background-image-syncxel-gradient: linear-gradient(135deg, #3A86FF 0%, #56CFE1 50%, #70E4C8 100%);
+  --background-image-syncxel-gradient: linear-gradient(
+    135deg,
+    #3a86ff 0%,
+    #56cfe1 50%,
+    #70e4c8 100%
+  );
+
+  --font-exo: "Exo", sans-serif;
+  --font-baloo: "Baloo 2", cursive;
 }
 
+/* Base Body Font */
 body {
+  font-family: var(--font-baloo);
   background-color: var(--color-syncxel-dark);
   color: #ffffff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  overflow-x: hidden;
+  /* color: #999da3; */
+}
+
+/* Headings Custom Font */
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: var(--font-exo);
 }
