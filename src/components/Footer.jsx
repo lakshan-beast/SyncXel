@@ -294,14 +294,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pt-6 border-t border-syncxel-border/30">
           {/* Brand Column */}
           <div className="col-span-2 space-y-4">
-            <div className="flex items-center space-x-3">
-              {/* <div className="w-8 h-8 rounded-lg bg-syncxel-gradient p-0.5 flex items-center justify-center">
-                <div className="w-full h-full bg-syncxel-dark rounded-md flex items-center justify-center">
-                  <span className="text-transparent bg-clip-text bg-syncxel-gradient font-black text-sm">
-                    SX
-                  </span>
-                </div>
-              </div> */}
+            <div className="flex items-center space-x-3">            
               <img
                 src="/syncxel-logo-removebg.png"
                 alt="SyncXel Logo"
