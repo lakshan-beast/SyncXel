@@ -234,6 +234,8 @@ import {
 } from "react-icons/fa6";
 import { FaCoffee } from "react-icons/fa";
 import { HiOutlineSparkles, HiOutlineArrowUpRight } from "react-icons/hi2";
+// import { GoPlus } from "react-icons/go";
+import { FaCaretRight } from "react-icons/fa6";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -306,7 +308,7 @@ export default function Footer() {
                 width={50}
                 height={50}
               />
-              <span className="text-lg font-bold text-white tracking-tight">
+              <span className="text-2xl font-bold text-white tracking-tight font-exo">
                 Sync
                 <span className="text-transparent bg-clip-text bg-syncxel-gradient">
                   Xel
@@ -314,7 +316,7 @@ export default function Footer() {
               </span>
             </div>
 
-            <p className="text-xs text-syncxel-textMuted max-w-sm leading-relaxed">
+            <p className="text-xs text-white/70 max-w-sm leading-relaxed">
               Crafting production-ready UI components, design systems, and
               custom web applications for developers and startups globally.
             </p>
@@ -344,25 +346,28 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Product
             </h4>
-            <ul className="space-y-2.5 text-xs text-syncxel-textMuted">
+            <ul className="space-y-1 text-xs text-white/70 pl-1">
               <li>
                 <a
                   href="#components"
-                  className="hover:text-white transition-colors">
+                  className="hover:text-white transition-colors flex flex-row items-center gap-1.5 group">
+                  <FaCaretRight className="group-hover:rotate-90" />
                   UI Components
                 </a>
               </li>
               <li>
                 <a
                   href="#templates"
-                  className="hover:text-white transition-colors">
+                  className="hover:text-white transition-colors flex flex-row items-center gap-1.5 group">
+                  <FaCaretRight className="group-hover:rotate-90" />
                   Templates
                 </a>
               </li>
               <li>
                 <a
                   href="#pricing"
-                  className="hover:text-white transition-colors">
+                  className="hover:text-white transition-colors flex flex-row items-center gap-1.5 group">
+                  <FaCaretRight className="group-hover:rotate-90" />
                   Pro Access
                 </a>
               </li>
@@ -373,19 +378,28 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Services
             </h4>
-            <ul className="space-y-2.5 text-xs text-syncxel-textMuted">
+            <ul className="space-y-1 text-xs text-white/70 pl-1">
               <li>
-                <a href="#hire" className="hover:text-white transition-colors">
+                <a
+                  href="#hire"
+                  className="hover:text-white transition-colors flex flex-row items-center gap-1.5 group">
+                  <FaCaretRight className="group-hover:rotate-90" />
                   Custom Web Design
                 </a>
               </li>
               <li>
-                <a href="#hire" className="hover:text-white transition-colors">
+                <a
+                  href="#hire"
+                  className="hover:text-white transition-colors flex flex-row items-center gap-1.5 group">
+                  <FaCaretRight className="group-hover:rotate-90" />
                   React & Tailwind
                 </a>
               </li>
               <li>
-                <a href="#hire" className="hover:text-white transition-colors">
+                <a
+                  href="#hire"
+                  className="hover:text-white transition-colors flex flex-row items-center gap-1.5 group">
+                  <FaCaretRight className="group-hover:rotate-90" />
                   Full Stack Apps
                 </a>
               </li>
@@ -396,21 +410,28 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Support
             </h4>
-            <ul className="space-y-2.5 text-xs text-syncxel-textMuted">
+            <ul className="space-y-1 text-xs text-white/70 pl-1">
               <li>
-                <a href="#docs" className="hover:text-white transition-colors">
+                <a
+                  href="#docs"
+                  className="hover:text-white transition-colors flex flex-row items-center gap-1.5 group">
+                  <FaCaretRight className="group-hover:rotate-90" />
                   Documentation
                 </a>
               </li>
               <li>
                 <a
                   href="#privacy"
-                  className="hover:text-white transition-colors">
+                  className="hover:text-white transition-colors flex flex-row items-center gap-1.5 group">
+                  <FaCaretRight className="group-hover:rotate-90" />
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#terms" className="hover:text-white transition-colors">
+                <a
+                  href="#terms"
+                  className="hover:text-white  transition-colors flex flex-row items-center gap-1.5 group">
+                  <FaCaretRight className="group-hover:rotate-90" />
                   Terms of Service
                 </a>
               </li>
