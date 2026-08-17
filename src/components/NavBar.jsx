@@ -144,7 +144,7 @@ export default function NavBar() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="hover:text-syncxel-text-muted text-white">
               {mobileMenuOpen ? (
-                <IoClose className="w-6 h-5" />
+                <IoClose className="w-6 h-6" />
               ) : (
                 <FaBarsStaggered className="w-6 h-6" />
               )}
@@ -176,15 +176,17 @@ export default function NavBar() {
               Resources
             </a>
 
-            <div className="pt-2 flex flex-col gap-3">
+            <div className="pt-2 flex flex-col gap-2">
               <a
                 href="#hire"
                 className="text-center text-sm font-medium text-white bg-syncxel-card py-2.5 rounded-xl border border-syncxel-border">
                 Hire Us
               </a>
+
               <a
                 href="#pro"
                 className="text-center text-sm font-semibold text-syncxel-dark bg-syncxel-gradient py-2.5 rounded-xl">
+                <IoSparklesOutline className="w-4 h-4 fill-syncxel-dark" />
                 Go Pro
               </a>
             </div>
