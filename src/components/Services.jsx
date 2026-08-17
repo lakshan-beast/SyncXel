@@ -217,7 +217,7 @@ export default function Services() {
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-syncxel-cyan/5 blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-syncxel-blue/5 blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto space-y-24 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-14 relative z-10">
         {/* section header */}
         <div className="text-center space-y-1 max-w-3xl mx-auto mb-8">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-syncxel-cyan/10 border border-syncxel-cyan/20 text-syncxel-cyan text-xs font-semibold">
@@ -256,7 +256,7 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2 pt-0">
+              <div className="flex flex-wrap gap-2 pt-4">
                 {item.tags.map((tag, tIndx) => (
                   <span
                     key={tIndx}
@@ -270,7 +270,7 @@ export default function Services() {
         </div>
 
         {/* 2. the 4-step process */}
-        <div className="space-y-4">
+        <div className="space-y-2">
           <div className="text-center space-y-1">
             <h3 className="text-2xl sm:text-3xlfont-bold text-white font-heading">
               How To Work Together
@@ -300,8 +300,8 @@ export default function Services() {
         </div>
 
         {/* 3. contact form / inquary box */}
-        <div className="relative rounded-3xl bg-linear-to-b from-syncxel-card to-[#0b121c] border border-syncxel-border p-8 md:p-12 shadow-xl">
-          <div className="mx-auto max-w-3xl space-y-8">
+        <div className="relative rounded-3xl bg-linear-to-b from-syncxel-card to-[#0b121c] border border-syncxel-border p-8 md:px-8 py-10 shadow-xl max-w-2xl w-full mx-auto">
+          <div className="mx-auto max-w-2xl w-full space-y-8">
             <div className="text-center space-y-3">
               <h3 className="text-2xl sm:text-3xl font-bold text-white font-stretch-extra-condensed">
                 Have A Project In Mind?
@@ -311,6 +311,92 @@ export default function Services() {
                 within 24 hours.
               </p>
             </div>
+
+            {submitted ? (
+              <div className="p-6 rounded-2xl bg-syncxel-cyan/10 border border-syncxel-cyan/30 text-center space-y-3">
+                <HiOutlineCheckCircle className="w-10 h-10 text-syncxel-cyan mx-auto" />
+                <h4 className="text-lg font-bold text-white">
+                  Message Received!
+                </h4>
+                <p className="text-xs text-syncxel-textMuted">
+                  Thank you for reaching out. We will review your project
+                  details and get back to you shortly.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-white">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="John Doe"
+                      className="w-full px-4 py-3 rounded-xl bg-syncxel-dark border border-syncxel-border text-white text-sm focus:outline-none focus:border-syncxel-cyan transition-colors"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-xs font-semibold text-white">
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="john@example.com"
+                      className="w-full px-4 py-3 rounded-xl bg-syncxel-dark border border-syncxel-border text-white text-sm focus:outline-none focus:border-syncxel-cyan transition-colors"
+                    />
+                  </div>
+                </div>
+
+                {/* Budget Selector */}
+                <div className="space-y-2">
+                  <label className="text-xs font-semibold text-white">
+                    Estimated Budget
+                  </label>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    {[
+                      "<$500",
+                      "$500 - $1,000",
+                      "$1,000 - $3,000",
+                      "$3,000+",
+                    ].map((budget) => (
+                      <button
+                        key={budget}
+                        type="button"
+                        onClick={() => setSelectedBudget(budget)}
+                        className={`py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all ${
+                          selectedBudget === budget
+                            ? "bg-syncxel-cyan/10 border-syncxel-cyan text-syncxel-cyan"
+                            : "bg-syncxel-dark border-syncxel-border text-syncxel-textMuted hover:text-white"
+                        }`}>
+                        {budget}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Project Details */}
+                <div className="space-y-2">
+                  <label className="text-xs font-semibold text-white">
+                    Project Overview
+                  </label>
+                  <textarea
+                    rows={4}
+                    required
+                    placeholder="Tell us about your project goals, features needed, and timeline..."
+                    className="w-full px-4 py-3 rounded-xl bg-syncxel-dark border border-syncxel-border text-white text-sm focus:outline-none focus:border-syncxel-cyan transition-colors resize-none"></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-3.5 rounded-xl bg-syncxel-gradient text-syncxel-dark font-bold text-sm hover:opacity-90 transition-opacity flex items-center justify-center space-x-2 shadow-lg shadow-syncxel-cyan/20 cursor-pointer">
+                  <HiOutlinePaperAirplane className="w-4 h-4" />
+                  <span>Send Project Inquiry</span>
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>
