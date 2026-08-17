@@ -226,7 +226,7 @@ export default function Services() {
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-exo tracking-tight">
-            Turn your web ideas into{" "}
+            Turn Your Web Ideas Into{" "}
             <span className="text-transparent bg-clip-text bg-syncxel-gradient">
               Production Reality
             </span>
@@ -242,9 +242,9 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-3">
           {services.map((item, index) => (
             <div
-              className="group relative p-6 rounded-2xl bg-syncxel-card/60 border border-syncxel-border/60 hover:border-syncxel-cyan/40 transition-all duration-300 backdrop-blur-sm flex flex-col justify-between"
+              className="group relative p-6 rounded-3xl bg-syncxel-card/60 border-2 border-syncxel-border/60 hover:border-syncxel-cyan/40 transition-all duration-300 backdrop-blur-sm flex flex-col justify-between"
               key={index}>
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <div className="w-12 h-12 rounded-xl bg-syncxel-dark border border-syncxel-border flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
@@ -256,7 +256,7 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2 pt-6">
+              <div className="flex flex-wrap gap-2 pt-0">
                 {item.tags.map((tag, tIndx) => (
                   <span
                     key={tIndx}
@@ -267,6 +267,51 @@ export default function Services() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* 2. the 4-step process */}
+        <div className="space-y-4">
+          <div className="text-center space-y-1">
+            <h3 className="text-2xl sm:text-3xlfont-bold text-white font-heading">
+              How To Work Together
+            </h3>
+            <p className="text-syncxel-text-muted text-sm">
+              A transparent 4-step workflow from initial idea to deployment.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {steps.map((step, idx) => (
+              <div
+                key={idx}
+                className="relative p-6 rounded-2xl bg-syncxel-card/40 border border-syncxel-border/40 hover:border-syncxel-border transition-colors space-y-3">
+                <span className="text-3xl font-extrabold text-transparent bg-clip-text bg-syncxel-gradient font-exo ">
+                  {step.number}
+                </span>
+                <h4 className="text-lg font-bold text-white font-exo">
+                  {step.title}
+                </h4>
+                <p className="text-xs text-white/60 leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 3. contact form / inquary box */}
+        <div className="relative rounded-3xl bg-linear-to-b from-syncxel-card to-[#0b121c] border border-syncxel-border p-8 md:p-12 shadow-xl">
+          <div className="mx-auto max-w-3xl space-y-8">
+            <div className="text-center space-y-3">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white font-stretch-extra-condensed">
+                Have A Project In Mind?
+              </h3>
+              <p className="text sm text-syncxel-text-muted">
+                Fill out the form below or drop us an email. We usually respond
+                within 24 hours.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
