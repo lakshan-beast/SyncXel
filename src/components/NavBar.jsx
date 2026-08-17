@@ -13,7 +13,7 @@ export default function NavBar() {
           {/* brand name and logo */}
           <div className="flex items-center space-x-3 cursor-pointer">
             <img
-              src="/syncxel-logo.webp"
+              src="/syncxel-logo-removebg.png"
               alt="SyncXel Logo"
               width={50}
               height={50}

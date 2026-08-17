@@ -301,7 +301,7 @@ export default function Footer() {
                 </div>
               </div> */}
               <img
-                src="/syncxel-logo.webp"
+                src="/syncxel-logo-removebg.png"
                 alt="SyncXel Logo"
                 width={50}
                 height={50}
