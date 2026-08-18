@@ -185,7 +185,7 @@ export default function NavBar() {
 
               <a
                 href="#pro"
-                className="text-center text-sm font-semibold text-syncxel-dark bg-syncxel-gradient py-2.5 rounded-xl flex flex-row items-center gap-1.5">
+                className="text-center text-sm font-semibold text-syncxel-dark bg-syncxel-gradient py-2.5 rounded-xl flex flex-row items-center justify-center gap-1.5">
                 <IoSparklesOutline className="w-4 h-4 fill-syncxel-dark" />
                 Go Pro
               </a>

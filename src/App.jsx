@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 
+import HeroSection from "./components/Hero";
 import ServicesSection from "./components/Services";
 import FeaturesSection from "./components/Features";
 
@@ -13,6 +14,8 @@ export default function App() {
 
       {/* Hero Section Placeholder */}
       <main className="pt-24">
+        <HeroSection />
+
         {/* Features / Benefits Grid */}
         <FeaturesSection />
 
