@@ -27,6 +27,7 @@
 
 * {
   scroll-behavior: smooth;
+  scroll-margin-top: 1rem;
 }
 
 /* Base Body Font */
