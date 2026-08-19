@@ -40,12 +40,12 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-75 bg-syncxel-cyan/15 blur-[150px] pointer-events-none rounded-full animate-pulse duration-1000" />
       <div className="absolute top-1/3 right-10 w-87.5 h-87.5 bg-syncxel-blue/15 blur-[160px] pointer-events-none rounded-full animate-bounce duration-3000" />
 
-      <div className="max-w-7xl mx-auto space-y-12 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-10 relative z-10">
         {/* top badge headline & CTAs */}
         <div className="text-center space-y-1 max-w-4xl mx-auto">
           <a
             href="#features"
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-syncxel-card border border-syncxel-border/80 hover:border-syncxel-cyan/50 text-xs text-syncxel-textMuted hover:text-white transition-all duration-300 shadow-lg group">
+            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-syncxel-card border border-syncxel-border/90 hover:border-syncxel-cyan/50 text-xs text-syncxel-textMuted hover:text-white transition-all duration-300 shadow-lg group">
             <span className="flex h-2 w-2 rounded-full bg-syncxel-cyan animate-pulse" />
             <span className="font-semibold text-white">SyncXel v1.0</span>
             <span>• Modern React & Tailwind Architecture</span>
@@ -61,13 +61,13 @@ export default function Hero() {
           </h1>
 
           {/* subtitle */}
-          <p className="text-white/60 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/60 text-base sm:text-lg max-w-2xl mx-auto">
             Production-ready UI components for developers, and high-performance
             custom web engineering for startups and founders.
           </p>
 
           {/* dual action buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-1 md:gap-4 pt-4">
             <a
               href="#components"
               className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-syncxel-gradient text-syncxel-dark font-bold text-sm hover:opacity-90 transition-all flex items-center justify-center space-x-2 shadow-xl shadow-syncxel-cyan/20 group cursor-pointer">
@@ -85,7 +85,7 @@ export default function Hero() {
         </div>
 
         {/* hero interactive code & preview box */}
-        <div className="max-w-4xl mx-auto rounded-2xl bg-syncxel-card/80 border border-syncxel-border/80 shadow-2xl overflow-hidden backdrop-blur-md">
+        <div className="max-w-2xl mx-auto rounded-2xl bg-syncxel-card/80 border border-syncxel-border/80 shadow-2xl overflow-hidden backdrop-blur-md">
           {/* header bar */}
           <div className="flex items-center justify-between px-4 py-3 bg-syncxel-dark/90 border-b border-syncxel-border/60">
             {/* window dots */}
@@ -99,8 +99,8 @@ export default function Hero() {
             </div>
 
             {/* tabs & copy button */}
-            <div className="flex">
-              <div className="flex">
+            <div className="flex items-center gap-1.5">
+              <div className="flex ">
                 {/* preview button */}
                 <button
                   type="button"
@@ -140,7 +140,7 @@ export default function Hero() {
           </div>
 
           {/* tab content box */}
-          <div className="p-8 sm:p-12 min-h-55 flex items-center justify-center bg-[#0b0f19]">
+          <div className="p-4 sm:p-12 min-h-55 flex items-center justify-center bg-[#0b0f19]">
             {activeTab === "preview" ? (
               <div className="text-center space-y-4">
                 <div className="p-6 rounded-2xl bg-syncxel-dark/90 border border-syncxel-border shadow-xl space-y-3 max-w-sm mx-auto">
