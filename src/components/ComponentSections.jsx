@@ -9,6 +9,8 @@ import {
   HiOutlineClipboardDocumentCheck,
   HiOutlineArrowRight,
   HiOutlineArrowLeft,
+  HiOutlineArrowDownTray,
+  HiOutlineShoppingBag,
 } from "react-icons/hi2";
 
 export default function AllComponents() {
@@ -114,9 +116,7 @@ export default function AllComponents() {
                   <h3 className="text-white font-bold text-base">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-white/60">
-                    {item.description}
-                  </p>
+                  <p className="text-xs text-white/60">{item.description}</p>
                 </div>
 
                 {/* Preview / Code Toggle Buttons */}
@@ -186,12 +186,12 @@ export default function AllComponents() {
               </div> */}
 
               {/* Card Footer (Dynamic Action: Free vs Paid) */}
-              <div className="p-3 border-t border-syncxel-border/50 bg-syncxel-dark/30 flex items-center justify-between text-xs">
+              <div className="px-3 pt-3 border-t border-syncxel-border/50 bg-syncxel-dark/30 flex items-center justify-between text-xs">
                 {item.isPaid ? (
                   /* 🌟 1. PAID TEMPLATE FOOTER */
                   <>
                     <div className="flex items-center space-x-1.5">
-                      <span className="text-syncxel-cyan font-bold font-mono text-sm">
+                      <span className="text-syncxel-cyan font-bold font-exo text-sm">
                         {item.price || "$9"}
                       </span>
                     </div>
@@ -242,6 +242,36 @@ export default function AllComponents() {
                     </button>
                   </>
                 )}
+              </div>
+
+              <div className="flex items-center justify-between px-1.5 py-2 border-b border-syncxel-border/50 bg-syncxel-dark/40">
+                {/* 🌟 STATS BADGES */}
+                <div className="flex items-center space-x-3 text-[11px] text-syncxel-textMuted mt-1 gap-3">
+                  {/* Views Count */}
+                  <span className="flex items-center gap-1 space-x-2 px-2 py-1">
+                    <HiOutlineEye className="w-3.5 h-3.5 text-syncxel-cyan" />
+                    <span className="border-l-2 border-white/20 pl-2">
+                      {item.views || "100"} views
+                    </span>
+                  </span>
+
+                  {/* Free item: Copy Count / Paid item: Sales Count */}
+                  {item.isPaid ? (
+                    <span className="flex items-center space-x-1 text-amber-400 font-medium">
+                      <HiOutlineShoppingBag className="w-3.5 h-3.5" />
+                      <span className="border-l-2 border-white/20 pl-2">
+                        {item.sales || "50+ Sold"}
+                      </span>
+                    </span>
+                  ) : (
+                    <span className="flex items-center space-x-1">
+                      <HiOutlineArrowDownTray className="w-3.5 h-3.5 text-green-400" />
+                      <span className="border-l-2 border-white/20 pl-2">
+                        {item.downloads || "10+"} copies
+                      </span>
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
           );
