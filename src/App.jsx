@@ -23,10 +23,12 @@ export default function App() {
         {/* Features / Benefits Grid */}
         <FeaturesSection />
 
-        {/* Client Services & Hire Us */}
-        <ServicesSection />
         {/* proof */}
         <TeamSection />
+
+        {/* Client Services & Hire Us */}
+        <ServicesSection />
+
         <FaqSection />
       </main>
 
