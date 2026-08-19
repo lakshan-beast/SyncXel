@@ -44,7 +44,7 @@ export const componentsData = [
     // ⚠️ අවධානයට: HTML එකේ position: absolute තියෙන නිසා Preview Card එක ඇතුලේ
     // ලස්සනට තියාගන්න wrapper div එකට 'relative h-[260px] overflow-hidden' දානවා.
     component: (
-      <div className="relative w-full h-[260px] rounded-lg overflow-hidden bg-syncxel-dark/50 border border-syncxel-border/30">
+      <div className="relative w-full h-65 rounded-lg overflow-hidden bg-syncxel-dark/50 border border-syncxel-border/30">
         <div dangerouslySetInnerHTML={{ __html: sideNavHtml }} />
       </div>
     ),
