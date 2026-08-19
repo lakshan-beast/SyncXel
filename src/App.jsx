@@ -6,6 +6,7 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 import HeroSection from "./components/Hero";
+import TrustBar from "./components/TrustBar";
 import TeckStack from "./components/TeckStack";
 import ServicesSection from "./components/Services";
 import TeamSection from "./components/TeamSection";
@@ -64,7 +65,8 @@ export default function App() {
                 <>
                   <HeroSection />
                   <TeckStack />
-                  <Components /> {/* Cards 4 ක් විතරක් තියෙන Teaser එක */}
+                  <TrustBar />
+                  <Components />
                   <FeaturesSection />
                   <TeamSection />
                   <ServicesSection />
