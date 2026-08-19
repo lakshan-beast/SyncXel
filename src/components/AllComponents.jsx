@@ -44,7 +44,7 @@ export default function AllComponents() {
       {/* components grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {componentsData.map((item) => {
-          const currentTab = activeTab[item.id] || "Preview";
+          const currentTab = activeTab[item.id] || "preview";
 
           return (
             <div
