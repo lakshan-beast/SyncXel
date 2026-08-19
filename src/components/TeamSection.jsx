@@ -46,8 +46,9 @@ export default function TeamSection() {
               and reliability.
             </p>
           </div>
+
           {/* 1. STATS / METRICS BAR */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {stats.map((stat, idx) => (
               <div
                 key={idx}
@@ -55,7 +56,7 @@ export default function TeamSection() {
                 <div className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-syncxel-gradient font-heading">
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-sm text-syncxel-textMuted font-medium">
+                <div className="text-xs sm:text-sm text-syncxel-text-muted font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -92,7 +93,7 @@ export default function TeamSection() {
               <img
                 src={HeroIamge}
                 alt=""
-                className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl "
+                className="w-32 h-32 sm:w-40 sm:h-40 rounded-4xl"
               />
 
               {/* Founder Bio & Details */}
@@ -120,12 +121,12 @@ export default function TeamSection() {
                 </p>
 
                 {/* Tech Highlights Tags */}
-                <div className="flex flex-wrap gap-2 pt-2 justify-center md:justify-start">
+                <div className="flex flex-wrap gap-2 pt-1 justify-center md:justify-start">
                   {[
                     "React",
-                    "Next.js",
+                    // "Next.js",
                     "Tailwind CSS",
-                    "Full-Stack Dev",
+                    "Frontend Dev",
                     "UI/UX Architecture",
                   ].map((tag, tIdx) => (
                     <span
@@ -137,7 +138,7 @@ export default function TeamSection() {
                 </div>
 
                 {/* Social Links */}
-                <div className="pt-4 flex items-center justify-center md:justify-start space-x-4">
+                <div className="pt-1 flex items-center justify-center md:justify-start space-x-2">
                   <a
                     href="https://github.com"
                     target="_blank"
