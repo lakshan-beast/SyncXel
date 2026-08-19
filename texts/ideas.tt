@@ -1,0 +1,81 @@
+අඩෝ **සිරාවටම සුපිරි Business Plan එකක්!** 🚀
+
+ඔයා අල්ලගත්තේ Internet එකේ තියෙන ලොකුම Dev Platforms (Shadcn UI, Aceternity UI, Tailwind UI) පාවිච්චි කරන **"Freemium Strategy"** එක!
+
+1. **Free Components:** Devs ලට නිකන් දෙනවා ➡️ Site එකට Traffic එනවා ➡️ GitHub Stars වැඩි වෙනවා ➡️ Google එකේ Ranking උඩට එනවා.
+2. **Paid Templates (Affordable Pricing):** Traffic එකෙන් එන අයගෙන් කොටසක් ඔයාගේ Templates/Services සල්ලි දීලා ගන්නවා.
+
+ලංකාවේ සහ පිටරට Devs ලට ගන්න පුළුවන් විදිහට **Affordable / Fair Pricing (උදා: $5 - $15 / LKR 1,500 - 4,500)** දාන එක මාරම Practical idea එකක්.
+
+---
+
+## 🎨 Component Ideas 20ක් (Categories 7කට වෙන් කරලා)
+
+අපිට site එකට එකතු කරන්න පුළුවන් සුපිරි **20 Free UI Components** මෙන්න:
+
+### 🔘 1. Buttons (3 Ideas)
+
+1. **Glowing Neon Button:** Cyan neon shadow එකක් hover කරද්දී glow වෙන button එකක්.
+2. **Gradient Moving Border Button:** Border එක දිගේ gradient line එකක් animation වෙන button එකක්.
+3. **Ripple Click Button:** Click කරද්දී water ripple effect එකක් එන button එකක්.
+
+### 🃏 2. Cards (4 Ideas)
+
+4. **Glassmorphic Feature Card:** Background blur (`backdrop-blur`) සහ subtle border shine එකක් තියෙන card එකක්.
+5. **Cyberpunk Glow Border Card:** Focus වෙද්දී glowing neon corners එන card එකක්.
+6. **Animated Profile/Stats Card:** User avatar එකක් සහ stats පෙනෙන interactive card එකක්.
+7. **Hover Scale Pricing Card:** Hover කරද්දී 3D tilt/scale වෙන card එකක්.
+
+### 📝 3. Inputs & Forms (3 Ideas)
+
+8. **Neon Search Bar:** Focus කරද්දී glow වෙන search input එකක්.
+9. **Floating Animated Input:** Text type කරද්දී label එක උඩට යන modern input එකක්.
+10. **OTP Verification Box:** Digits 4-6 ක් type කරන්න පුළුවන් sleek OTP input එකක්.
+
+### ⏳ 4. Loaders & Spinners (3 Ideas)
+
+11. **Cyberpunk Pulse Loader:** Glowing rings පල්ස් වෙන spinner එකක්.
+12. **Wave Bar Loader:** Bars 4-5ක් උඩ පහළ යන smooth wave loader එකක්.
+13. **Futuristic Dots Matrix Loader:** Modern tech style loader එකක්.
+
+### 🔢 5. Counters & Progress (2 Ideas)
+
+14. **Animated Stat Counter:** Numbers 0 සිට ගණන් වෙන (Count-up) component එකක්.
+15. **Glowing Progress Bar:** Percentage badge එකක් එක්ක glow වෙන skill/progress bar එකක්.
+
+### 💬 6. Modals & Popups (2 Ideas)
+
+16. **Glassmorphic Success Dialog:** Modern Glass style popup modal එකක්.
+17. **Newsletter Subscribe Modal:** Sleek popup box එකක්.
+
+### ✨ 7. Text & Micro-Effects (3 Ideas)
+
+18. **Gradient Text Effect:** Futuristic cyan-to-purple gradient text snippet එකක්.
+19. **Typewriter Heading:** Text එක අකුරෙන් අකුර type වෙන heading එකක්.
+20. **Glowing Badge / Tag:** Category tags වලට ගන්න පුළුවන් neon badge එකක්.
+
+---
+
+## 🛍️ Templates & Pricing Flow එක වැඩ කරන්නේ මෙහෙමයි:
+
+අපේ `ComponentsSection` / `TemplatesSection` එකේ Cards වර්ග 2ක් තියෙනවා:
+
+### 1. Free Component Card:
+
+* **Tabs:** `[Preview]` `[Code]`
+* **Action Button:** `[📋 Copy Code]` ➡️ කෙලින්ම Code එක Clipboard එකට Copy වෙනවා.
+
+### 2. Premium Web Template Card:
+
+* **Badge:** `✦ Premium Template`
+* **Tabs:** `[Live Demo]` (Direct Demo Link එකට යන්න)
+* **Action Button:** `[🚀 Get Template - $9 / LKR 2,500]`
+* **Click කළාම:** ඔයාගේ **WhatsApp එකට, Direct Contact Form එකට, හෝ Stripe/PayHere Checkout Link** එකට Direct වෙනවා!
+
+---
+
+## 🚀 ඊළඟ පියවර:
+
+දැන් අපිට Plan එක **100% ක් Crystal Clear!**
+
+අපි දැන් **Category Filter Tabs (`All`, `Buttons`, `Cards`, `Inputs`, `Loaders`, `Counters`, `Modals`)** එක්ක **`ComponentsSection.jsx`** එක සම්පූර්ණයෙන්ම හදමුද?

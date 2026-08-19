@@ -69,6 +69,7 @@ export default function App() {
                   <TeamSection />
                   <ServicesSection />
                   <FaqSection />
+                  <Footer />
                 </>
               }
             />
@@ -79,9 +80,6 @@ export default function App() {
         </main>
 
         <ScrollToTop />
-
-        {/* Footer (හැම Page එකේම පෙනෙනවා) */}
-        <Footer />
       </div>
     </Router>
   );

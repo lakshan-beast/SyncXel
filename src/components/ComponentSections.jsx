@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { componentsData } from "../data/componentsData";
 import {
   HiOutlineSparkles,
@@ -7,6 +8,7 @@ import {
   HiOutlineDocumentDuplicate,
   HiOutlineClipboardDocumentCheck,
   HiOutlineArrowRight,
+  HiOutlineArrowLeft,
 } from "react-icons/hi2";
 
 export default function AllComponents() {
@@ -45,13 +47,24 @@ export default function AllComponents() {
       ? componentsData
       : componentsData.filter((item) => item.category === selectedCategory);
 
+  const navigate = useNavigate();
+
   return (
     <section className="py-2 px-4 sm:px-8 max-w-7xl mx-auto space-y-12 relative">
       {/* Background Accent Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-125 h-75 bg-syncxel-cyan/5 blur-[150px] pointer-events-none rounded-full" />
 
+      <div className="mb-2 border-b-2 border-syncxel-border">
+        <button
+          onClick={() => navigate("/")}
+          className="inline-flex items-center space-x-1 px-4 py-2 rounded-xl bg-syncxel-card/80 border border-syncxel-border/80 text-syncxel-textMuted hover:text-white hover:border-syncxel-cyan/50 text-xs font-semibold transition-all duration-300">
+          <HiOutlineArrowLeft className="w-4 h-4" />
+          <span>Back to Home</span>
+        </button>
+      </div>
+
       {/* 1. SECTION HEADER */}
-      <div className="text-center space-y-4 relative z-10 max-w-2xl mx-auto">
+      <div className="text-center space-y-4 relative z-10 max-w-2xl mx-auto pt-4">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-syncxel-cyan/10 border border-syncxel-cyan/20 text-syncxel-cyan text-xs font-semibold">
           <HiOutlineSparkles className="w-4 h-4" />
           <span>Copy-Paste UI Library</span>
@@ -87,27 +100,27 @@ export default function AllComponents() {
       </div>
 
       {/* components grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {componentsData.map((item) => {
           const currentTab = activeTab[item.id] || "preview";
 
           return (
             <div
               key={item.id}
-              className="rounded-2xl bg-syncxel-card/60 border border-syncxel-border/80 overflow-hidden backdrop-blur-md flex flex-col justify-between">
+              className="rounded-2xl bg-syncxel-card/60 border-2 border-syncxel-border/90 overflow-hidden backdrop-blur-md flex flex-col justify-between">
               {/* Card Header (Title & Controls) */}
-              <div className="p-4 border-b border-syncxel-border/50 flex items-center justify-between bg-syncxel-dark/40">
+              <div className="p-4 border-b border-syncxel-border/50 flex items-center justify-between bg-syncxel-dark/40 md:flex-col md:justify-start md:items-start md:gap-2">
                 <div>
                   <h3 className="text-white font-bold text-base">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-syncxel-textMuted">
+                  <p className="text-xs text-white/60">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Preview / Code Toggle Buttons */}
-                <div className="flex items-center space-x-1 bg-syncxel-dark p-1 rounded-lg border border-syncxel-border/60">
+                <div className="flex items-center space-x-1 bg-syncxel-dark p-1 rounded-lg border border-syncxel-border/60 gap-1.5">
                   <button
                     onClick={() => toggleTab(item.id, "preview")}
                     className={`px-3 py-1 rounded-md text-xs font-semibold flex items-center space-x-1.5 transition-all ${
