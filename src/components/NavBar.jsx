@@ -8,15 +8,15 @@ export default function NavBar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 px-4 sm:px-8 pt-4 z-50">
-      <nav className="max-w-7xl mx-auto bg-syncxel-dark/80 backdrop-blur-md border border-syncxel-border/60 rounded-2xl px-6 py-3 shadow-2xl transition-all duration-300">
+      <nav className="max-w-7xl mx-auto bg-white/12 backdrop-blur-md border-2 border-white/15 rounded-2xl px-6 py-3 shadow-2xl transition-all duration-300">
         <div className="flex items-center justify-between">
           {/* brand name and logo */}
-          <div className="flex items-center space-x-3 cursor-pointer">
+          <div className="flex items-center space-x-1 cursor-pointer">
             <img
               src="/syncxel-logo-removebg.png"
               alt="SyncXel Logo"
-              width={50}
-              height={50}
+              width={45}
+              height={45}
             />
             <span className="text-2xl font-bold font-heading tracking-tight text-white">
               Sync
@@ -130,7 +130,7 @@ export default function NavBar() {
             {/* go to primary button  */}
             <a
               href="#pro"
-              className="flex items-center space-x-1.5 text-sm font-semibold text-syncxel-dark bg-syncxel-gradient hover:opacity-90 transition-opacity px-4 py-2 rounded-xl shadow-lg shadow-syncxel-cyan/20
+              className="flex items-center gap-1.5 space-x-1.5 text-sm font-semibold hover:opacity-90 transition-opacity px-4 py-2 rounded-xl shadow-lg shadow-syncxel-cyan/20  bg-amber-400 text-syncxel-dark/60
             ">
               <IoSparklesOutline className="w-4 h-4 fill-syncxel-dark" />
               <span>Go Pro</span>
@@ -154,7 +154,7 @@ export default function NavBar() {
 
         {/* mobile menu (open state) */}
         {mobileMenuOpen && (
-          <div className="mt-4 pt-4 border-t border-syncxel-border/60 flex flex-col space-y-3 md:hidden">
+          <div className="mt-4 pt-4 border-t border-syncxel-border/10 flex flex-col space-y-3 md:hidden">
             <a
               href="#features"
               className="text-syncxel-textMuted hover:text-white py-1 transition-colors">
@@ -185,7 +185,7 @@ export default function NavBar() {
 
               <a
                 href="#pro"
-                className="text-center text-sm font-semibold text-syncxel-dark bg-syncxel-gradient py-2.5 rounded-xl flex flex-row items-center justify-center gap-1.5">
+                className="text-center text-sm font-semibold text-syncxel-dark bg-syncxel-gradient py-2.5 rounded-xl flex flex-row items-center justify-center gap-2.5 border-amber-300 border-2 hover:bg-amber-300">
                 <IoSparklesOutline className="w-4 h-4 fill-syncxel-dark" />
                 Go Pro
               </a>
