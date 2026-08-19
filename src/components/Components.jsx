@@ -21,7 +21,7 @@ export default function HomeComponentsTeaser() {
       </div>
 
       {/* 4 Clean Visual Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {teaserItems.map((item) => (
           <Link
             key={item.id}
@@ -52,7 +52,7 @@ export default function HomeComponentsTeaser() {
       </div>
 
       {/* Explore All Components Button */}
-      <div className="text-center pt-2">
+      <div className="text-center pt-1">
         <Link
           to="/components"
           className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-xl bg-syncxel-gradient text-black font-extrabold text-sm hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:scale-105 transition-all duration-300"
