@@ -1,0 +1,13 @@
+{/* Avatar Box with Glowing Effect */}
+              {/* <div className="relative group shrink-0">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl bg-syncxel-dark border-2 border-syncxel-cyan/40 p-2 flex items-center justify-center relative z-10 shadow-xl group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-full h-full rounded-xl bg-linear-to-br from-syncxel-cyan/20 to-syncxel-blue/20 flex flex-col items-center justify-center text-syncxel-cyan space-y-2">
+                    <HiOutlineCodeBracket className="w-12 h-12" />
+                    <span className="text-[10px] font-mono tracking-wider uppercase text-white/80">
+                      Developer
+                    </span>
+                  </div>
+                </div>
+                {/* Glowing Background Ring 
+                <div className="absolute inset-0 bg-syncxel-cyan/20 blur-xl rounded-2xl group-hover:bg-syncxel-cyan/30 transition-all" />
+              </div> */}
