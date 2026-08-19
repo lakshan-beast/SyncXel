@@ -1,4 +1,5 @@
 import React from "react";
+import { FaAngleDown } from "react-icons/fa6";
 
 import NeonButton from "../components/library/NeonButton";
 import neonButtonCode from "../components/library/NeonButton.jsx?raw";
@@ -6,6 +7,20 @@ import neonButtonCode from "../components/library/NeonButton.jsx?raw";
 import photographerImg from "../assets/photograpy-website.png";
 
 import sideNavHtml from "../components/library/SideNav.html?raw";
+
+const paidCode = (
+  <div className="space-y-2 text-center flex flex-col items-center justify-center">
+    <h4 className="text-white text-xs font-bold font-heading">
+      Premium Source Code
+    </h4>
+    <p className="text-[11px] text-syncxel-text-muted font-baloo text-wrap leading-relaxed">
+      This is a full template. Click{" "}
+      <span className="text-amber-400 font-semibold">"Get Template"</span> below
+      to get instant code access via WhatsApp.
+    </p>
+    <FaAngleDown className="animate-[bounce_2s_infinite] text-xl text-syncxel-cyan" />
+  </div>
+);
 
 export const componentsData = [
   // Neon-Button
@@ -18,6 +33,8 @@ export const componentsData = [
       "Modern futuristic glowing button with smooth hover glow effects.",
     component: <NeonButton />,
     code: neonButtonCode,
+    views: "140",
+    downloads: "12+",
   },
 
   // PAID / PREMIUM TEMPLATE
@@ -31,6 +48,9 @@ export const componentsData = [
     demoUrl: "https://photography-website-puce-omega.vercel.app/",
     whatsappUrl: "https://wa.me/94707046840?text=I_want_to_buy_Agency_Template",
     component: <img src={photographerImg} alt="Photographer Template" />,
+    views: "15",
+    sales: "01 Sold",
+    code: paidCode,
   },
 
   {
