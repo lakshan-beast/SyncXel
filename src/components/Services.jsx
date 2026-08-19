@@ -284,11 +284,11 @@ export default function Services() {
             {steps.map((step, idx) => (
               <div
                 key={idx}
-                className="relative p-6 rounded-2xl bg-syncxel-card/40 border border-syncxel-border/40 hover:border-syncxel-border transition-colors space-y-3">
-                <span className="text-3xl font-extrabold text-transparent bg-clip-text bg-syncxel-gradient font-exo ">
+                className="relative p-6 rounded-2xl bg-syncxel-card/70 border border-syncxel-border/40 hover:border-syncxel-border transition-colors space-y-3">
+                <span className="text-3xl font-extrabold text-transparent bg-clip-text bg-syncxel-gradient font-exo">
                   {step.number}
                 </span>
-                <h4 className="text-lg font-bold text-white font-exo">
+                <h4 className="text-lg font-bold text-white font-exo border-t border-syncxel-border pt-1">
                   {step.title}
                 </h4>
                 <p className="text-xs text-white/60 leading-relaxed">
