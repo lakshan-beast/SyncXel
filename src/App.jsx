@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Home from "./pages/Home";
 
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -9,34 +11,78 @@ import ServicesSection from "./components/Services";
 import TeamSection from "./components/TeamSection";
 import FaqSection from "./components/FAQ";
 import FeaturesSection from "./components/Features";
+import Components from "./components/Components";
 
-import AllComponents from "./components/AllComponents";
+import AllComponents from "./components/ComponentSections";
+import ScrollToTop from "./components/ScrollTop";
+
+// export default function App() {
+//   return (
+//     <div className="min-h-screen bg-syncxel-dark text-white selection:bg-syncxel-cyan selection:text-syncxel-dark ">
+//       <Navbar />
+
+//       {/* Hero Section Placeholder */}
+//       <main className="pt-24">
+//         <HeroSection />
+//         <TeckStack />
+
+//         <Components />
+
+//         {/* Features / Benefits Grid */}
+//         <FeaturesSection />
+
+//         {/* proof */}
+//         <TeamSection />
+
+//         {/* Client Services & Hire Us */}
+//         <ServicesSection />
+
+//         <FaqSection />
+//       </main>
+
+//       {/* <AllComponents /> */}
+
+//       <Footer />
+//     </div>
+//   );
+// }
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-syncxel-dark text-white selection:bg-syncxel-cyan selection:text-syncxel-dark ">
-      <Navbar />
+    <Router>
+      <div className="min-h-screen bg-syncxel-dark text-white selection:bg-syncxel-cyan selection:text-syncxel-dark flex flex-col justify-between">
+        {/* Navbar (හැම Page එකේම පෙනෙනවා) */}
+        <Navbar />
 
-      {/* Hero Section Placeholder */}
-      <main className="pt-24">
-        <HeroSection />
-        <TeckStack />
+        {/* Dynamic Page Routing */}
+        <main className="pt-24 grow">
+          <Routes>
+            {/* 1. HOME PAGE ROUTE (/) */}
+            <Route
+              path="/"
+              element={
+                <>
+                  <HeroSection />
+                  <TeckStack />
+                  <Components /> {/* Cards 4 ක් විතරක් තියෙන Teaser එක */}
+                  <FeaturesSection />
+                  <TeamSection />
+                  <ServicesSection />
+                  <FaqSection />
+                </>
+              }
+            />
 
-        {/* Features / Benefits Grid */}
-        <FeaturesSection />
+            {/* 2. ALL COMPONENTS PAGE ROUTE (/components) */}
+            <Route path="/components" element={<AllComponents />} />
+          </Routes>
+        </main>
 
-        {/* proof */}
-        <TeamSection />
+        <ScrollToTop />
 
-        {/* Client Services & Hire Us */}
-        <ServicesSection />
-
-        <FaqSection />
-      </main>
-
-      <AllComponents />
-
-      <Footer />
-    </div>
+        {/* Footer (හැම Page එකේම පෙනෙනවා) */}
+        <Footer />
+      </div>
+    </Router>
   );
 }
