@@ -10,6 +10,8 @@ import TeamSection from "./components/TeamSection";
 import FaqSection from "./components/FAQ";
 import FeaturesSection from "./components/Features";
 
+import AllComponents from "./components/AllComponents";
+
 export default function App() {
   return (
     <div className="min-h-screen bg-syncxel-dark text-white selection:bg-syncxel-cyan selection:text-syncxel-dark ">
@@ -31,6 +33,8 @@ export default function App() {
 
         <FaqSection />
       </main>
+
+      <AllComponents />
 
       <Footer />
     </div>
