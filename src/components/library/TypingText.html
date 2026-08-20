@@ -1,0 +1,171 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Text - SyncXel Web Solutions</title>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } */
+      div {
+        display: flex;align-items: center;justify-content: center;
+      }
+      .text-box {
+        max-width: calc(100% - 5rem);
+        width: 100%;
+        height: 250px;
+        padding: 1rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        border-radius: 1rem;
+        box-shadow: 1px 1px 15px 5px gray;
+        text-align: center;
+      }
+      .typing-text {
+        font-size: 2rem;
+        font-weight: bolder;
+        min-width: 280px;
+        font-family: monospace;
+      }
+      .typing-text span {
+        position: relative;
+        font-family: "fauna one";
+      }
+      .typing-text span::before {
+        content: "Web Designer";
+        color: orange;
+        animation: 8s infinite words;
+      }
+      .typing-text span::after {
+        content: "";
+        position: absolute;
+        right: -10px;
+        height: 100%;
+        width: 1px;
+        background: orange;
+        animation: 1s infinite cursor;
+      }
+      @keyframes cursor {
+        to {
+          border-left: 3px solid grey;
+        }
+      }
+      @keyframes words {
+        0%,
+        33% {
+          content: "Frontend Developer";
+        }
+        34%,
+        65% {
+          content: "Web Designer & Developer";
+        }
+        100%,
+        66% {
+          content: "Freelancer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-box">
+      <h2 id="typing-text" class="typing-text"><span></span></h2>
+    </div>
+  </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Text - SyncXel</title>
+    <!-- Google Font Import -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Fira+Code:wght@500&display=swap"
+      rel="stylesheet" />
+
+    <style>
+      body {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0d1117;
+      }
+      .text-box {
+        max-width: 800px;
+        width: 100%;
+        padding: 2.5rem 1.5rem;
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+      .typing-text {
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        font-family: "Fauna One", serif;
+      }
+      .typing-text span {
+        position: relative;
+        color: #f97316; /* Orange Glow */
+      }
+      .typing-text span::before {
+        content: "Frontend Developer";
+        animation: words 9s infinite;
+      }
+      .typing-text span::after {
+        content: "";
+        position: absolute;
+        right: -8px;
+        top: 10%;
+        height: 80%;
+        width: 3px;
+        background: #f97316;
+        animation: cursor 0.8s infinite;
+      }
+
+      /* Blinking Cursor */
+      @keyframes cursor {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+
+      /* Text Words Change */
+      @keyframes words {
+        0%,
+        30% {
+          content: "Frontend Developer";
+        }
+        33%,
+        63% {
+          content: "Web Designer";
+        }
+        66%,
+        96% {
+          content: "Freelancer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-box">
+      <h2 class="typing-text"><span></span></h2>
+    </div>
+  </body>
+</html>

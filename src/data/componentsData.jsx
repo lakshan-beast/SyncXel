@@ -7,6 +7,9 @@ import neonButtonCode from "../components/library/NeonButton.jsx?raw";
 import photographerImg from "../assets/photograpy-website.png";
 
 import sideNavHtml from "../components/library/SideNav.html?raw";
+import typingTextHtml from "../components/library/TypingText.html?raw";
+
+import GlassLoginForm from "../components/library/GlassLoginForm";
 
 const paidCode = (
   <div className="space-y-2 text-center flex flex-col items-center justify-center">
@@ -37,6 +40,39 @@ export const componentsData = [
     downloads: "12+",
   },
 
+  {
+    id: "side-navigation-menu",
+    title: "Animated Side Navigation",
+    category: "Navbars",
+    techStack: "HTML + CSS",
+    isPaid: false,
+    component: (
+      <div className="relative w-full h-65 rounded-lg overflow-hidden bg-syncxel-dark/50 border border-syncxel-border/30">
+        <div dangerouslySetInnerHTML={{ __html: sideNavHtml }} />
+      </div>
+    ),
+    code: sideNavHtml,
+    views: "83",
+    downloads: "5+",
+  },
+
+  // typingTextHtml
+  {
+    id: "typing-texts",
+    title: "Typing Texts",
+    category: "UI",
+    techStack: "HTML + CSS",
+    isPaid: false,
+    component: (
+      <div className="relative w-full h-65 rounded-lg overflow-hidden bg-syncxel-dark/50 border border-syncxel-border/30 flex items-center justify-center">
+        <div dangerouslySetInnerHTML={{ __html: typingTextHtml }} />
+      </div>
+    ),
+    code: typingTextHtml,
+    views: "90",
+    downloads: "25+",
+  },
+
   // PAID / PREMIUM TEMPLATE
   {
     id: "photograper-template",
@@ -54,16 +90,14 @@ export const componentsData = [
   },
 
   {
-    id: "side-navigation-menu",
-    title: "Animated Side Navigation",
-    category: "Navbars",
-    techStack: "HTML + CSS",
-    isPaid: false,
-    component: (
-      <div className="relative w-full h-65 rounded-lg overflow-hidden bg-syncxel-dark/50 border border-syncxel-border/30">
-        <div dangerouslySetInnerHTML={{ __html: sideNavHtml }} />
-      </div>
-    ),
-    code: sideNavHtml,
+    id: "glass-auth-card",
+    title: "Glassmorphism Auth Card",
+    category: "Forms",
+    isPaid: true,
+    price: "$5 / LKR 1,500",
+    views: "200",
+    sales: "6 Sold",
+    component: <GlassLoginForm />,
+    code: paidCode,
   },
 ];
