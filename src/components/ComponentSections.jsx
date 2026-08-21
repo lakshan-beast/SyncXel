@@ -13,6 +13,9 @@ import {
   HiOutlineShoppingBag,
 } from "react-icons/hi2";
 
+import QuickSetupGuide from '../components/QuickSetup';
+
+
 export default function AllComponents() {
   // Categories List
   const categories = [
@@ -37,9 +40,9 @@ export default function AllComponents() {
   // copy function
   const handleCopy = (id, codeText) => {
     navigator.clipboard.writeText(codeText);
-    setCopied(id);
+    setCopiedId(id);
     setTimeout(() => {
-      setCopied(null);
+      setCopiedId(null);
     }, 2000);
   };
 
@@ -84,6 +87,8 @@ export default function AllComponents() {
           projects. Zero setup required.
         </p>
       </div>
+
+      <QuickSetupGuide />
 
       {/* 2. CATEGORY FILTER TABS */}
       <div className="flex flex-wrap items-center justify-center gap-2 relative z-10">
