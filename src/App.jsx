@@ -15,6 +15,7 @@ import FeaturesSection from "./components/Features";
 import Components from "./components/Components";
 
 import AllComponents from "./components/ComponentSections";
+import Legal from "./pages/Legel";
 import ScrollToTop from "./components/ScrollTop";
 
 // export default function App() {
@@ -78,6 +79,8 @@ export default function App() {
 
             {/* 2. ALL COMPONENTS PAGE ROUTE (/components) */}
             <Route path="/components" element={<AllComponents />} />
+
+            <Route path="/legal" element={<Legal />} />
           </Routes>
         </main>
 

@@ -294,7 +294,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pt-6 border-t border-syncxel-border/30">
           {/* Brand Column */}
           <div className="col-span-2 space-y-4">
-            <div className="flex items-center space-x-3">            
+            <div className="flex items-center space-x-3">
               <img
                 src="/syncxel-logo-removebg.png"
                 alt="SyncXel Logo"
@@ -443,6 +443,18 @@ export default function Footer() {
             </span>
             <span>All rights reserved.</span>
           </p>
+
+          <div className="flex items-center gap-6">
+            <a href="/legal" 
+            target="_blank" className="hover:text-cyan-400 transition-colors">
+              Privacy & Terms
+            </a>
+            <a target="_blank" 
+              href="mailto:syncxelofficial@gmail.com"
+              className="hover:text-cyan-400 font-baloo">
+              syncxelofficial@gmail.com
+            </a>
+          </div>
 
           {/* Sri Lanka Flag SVG Badge */}
           <div className="flex items-center space-x-1.5 bg-syncxel-card px-3.5 py-1.5 rounded-full border border-syncxel-border/50 text-zinc-300">
