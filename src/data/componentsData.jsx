@@ -20,6 +20,7 @@ import arrowButtonCode from "../components/library/button-002.jsx?raw";
 import RobotHtml from "../components/library/robot.html?raw";
 import expandableSearchBar from "../components/library/expandableSearchBar.html?raw";
 import colorFlipperHtml from "../components/library/colorFlipper.html?raw";
+import glassEffectButtons from "../components/library/glassEffectButton.html?raw";
 
 const paidCode = (
   <div className="space-y-2 text-center flex flex-col items-center justify-center">
@@ -189,5 +190,23 @@ export const componentsData = [
     techStack: "HTML + JS",
     views: "98",
     downloads: "17+",
+  },
+
+  {
+    id: "neon-glow-reflection-buttons",
+    title: "Neon Glow Reflection Buttons",
+    category: "Buttons",
+    isPaid: false,
+    description:
+      "Dark-mode neon buttons featuring vibrant hover glowing effects paired with smooth CSS bottom reflections.",
+    component: (
+      <div className="relative w-full h-65 rounded-lg overflow-hidden bg-syncxel-dark/50 border border-syncxel-border/30 flex items-center justify-center">
+        <div dangerouslySetInnerHTML={{ __html: glassEffectButtons }} />
+      </div>
+    ),
+    code: glassEffectButtons,
+    techStack: "HTML + CSS",
+    views: "200",
+    downloads: "27+",
   },
 ];
