@@ -17,7 +17,7 @@ import rippleButtonCode from "../components/library/button-001.jsx?raw";
 import ArrowButton from "../components/library/button-002";
 import arrowButtonCode from "../components/library/button-002.jsx?raw";
 
-import RobotHtml from "../components/library/Robot.html?raw";
+import RobotHtml from "../components/library/robot.html?raw";
 import expandableSearchBar from "../components/library/expandableSearchBar.html?raw";
 import colorFlipperHtml from "../components/library/colorFlipper.html?raw";
 
