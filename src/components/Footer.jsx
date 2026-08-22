@@ -232,6 +232,8 @@ import {
   FaHeart,
   FaRegCopyright,
 } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+
 import { FaCoffee } from "react-icons/fa";
 import { HiOutlineSparkles, HiOutlineArrowUpRight } from "react-icons/hi2";
 // import { GoPlus } from "react-icons/go";
@@ -451,8 +453,8 @@ export default function Footer() {
             </a>
             <a target="_blank" 
               href="mailto:syncxelofficial@gmail.com"
-              className="hover:text-cyan-400 font-baloo">
-              syncxelofficial@gmail.com
+              className="hover:text-cyan-400 font-baloo flex flex-row items-center gap-2">
+              <IoMdMail /> syncxelofficial@gmail.com
             </a>
           </div>
 
