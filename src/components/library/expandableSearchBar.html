@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <title>Search Bar - SyncXel Web Solutions</title>
+
+    <style>
+      body {
+        /* height: 100vh; */
+        /* width: 100%; */
+        display: flex;
+        /* background-color: #004864; */
+        align-items: center;
+        justify-content: center;
+      }
+      .box {
+        width: 100%;
+        max-width: 400px;
+      }
+      .box .search-box {
+        position: relative;
+        height: 50px;
+        max-width: 45px;
+        margin: auto;
+        border-radius: 25px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
+        transition: all 0.2s ease-in-out;
+      }
+      #check:checked ~ .search-box {
+        max-width: 380px;
+      }
+      .search-box input {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding-left: 20px;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        background: #fff;
+        border-radius: 25px;
+      }
+
+      .search-box .icon {
+        position: absolute;
+        right: -2px;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        padding: 0 12px;
+        line-height: 50px;
+        border-radius: 25px;
+        color: #004864;
+        background-color: #fff;
+        font-size: 1.5rem;
+      }
+      #check:checked ~ .search-box .icon {
+        width: 60px;
+        color: #fff;
+        background-color: #004864;
+        border-radius: 0 25px 25px 0;
+      }
+      #check {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="ody">
+    <div class="box">
+      <input type="checkbox" id="check" />
+
+      <div class="search-box">
+        <label for="check" class="sr-only">Search</label>
+
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Search here.." />
+
+        <label for="check" class="icon">
+          <i class="fas fa-search"></i>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>

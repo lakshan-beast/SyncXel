@@ -18,6 +18,8 @@ import ArrowButton from "../components/library/button-002";
 import arrowButtonCode from "../components/library/button-002.jsx?raw";
 
 import RobotHtml from "../components/library/Robot.html?raw";
+import expandableSearchBar from "../components/library/expandableSearchBar.html?raw";
+import colorFlipperHtml from "../components/library/colorFlipper.html?raw";
 
 const paidCode = (
   <div className="space-y-2 text-center flex flex-col items-center justify-center">
@@ -151,5 +153,41 @@ export const componentsData = [
     techStack: "HTML + CSS",
     views: "160",
     downloads: "60+",
+  },
+
+  {
+    id: "expandable-search-bar",
+    title: "Expandable Pure CSS Search Bar",
+    category: "Inputs",
+    isPaid: false,
+    description:
+      "A space-saving search bar that smoothly expands when clicked, built entirely using pure HTML and CSS with the checkbox-toggle trick.",
+    component: (
+      <div className="relative w-full h-65 rounded-lg overflow-hidden bg-syncxel-dark/50 border border-syncxel-border/30 flex items-center justify-center">
+        <div dangerouslySetInnerHTML={{ __html: expandableSearchBar }} />
+      </div>
+    ),
+    code: expandableSearchBar,
+    techStack: "HTML + CSS",
+    views: "60",
+    downloads: "13+",
+  },
+
+  {
+    id: "interactive-color-flipper",
+    title: "Random Hex Color Flipper",
+    category: "Uitilities",
+    isPaid: false,
+    description:
+      "An interactive DOM utility that dynamically generates random 6-digit HEX color codes and flips the background color in real-time.",
+    component: (
+      <div className="relative w-full h-65 rounded-lg overflow-hidden bg-syncxel-dark/50 border border-syncxel-border/30 flex items-center justify-center">
+        <div dangerouslySetInnerHTML={{ __html: colorFlipperHtml }} />
+      </div>
+    ),
+    code: colorFlipperHtml,
+    techStack: "HTML + JS",
+    views: "98",
+    downloads: "17+",
   },
 ];
