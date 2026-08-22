@@ -11,6 +11,12 @@ import typingTextHtml from "../components/library/TypingText.html?raw";
 
 import GlassLoginForm from "../components/library/GlassLoginForm";
 
+import RippleButton from "../components/library/button-001";
+import rippleButtonCode from "../components/library/button-001.jsx?raw";
+
+import ArrowButton from "../components/library/button-002";
+import arrowButtonCode from "../components/library/button-002.jsx?raw";
+
 const paidCode = (
   <div className="space-y-2 text-center flex flex-col items-center justify-center">
     <h4 className="text-white text-xs font-bold font-heading">
@@ -99,5 +105,31 @@ export const componentsData = [
     sales: "6 Sold",
     component: <GlassLoginForm />,
     code: paidCode,
+  },
+
+  {
+    id: "ripple-button",
+    title: "Ripple Button",
+    category: "Buttons",
+    isPaid: false,
+    description:
+      "Interactive CTA button featuring a smooth, center-expanding color ripple effect on hover.",
+    component: <RippleButton />,
+    code: rippleButtonCode,
+    views: "95",
+    downloads: "20+",
+  },
+
+  {
+    id: "arrow-hover-button",
+    title: "Arrow Hover Button",
+    category: "Buttons",
+    isPaid: false,
+    description:
+      "Dynamic action button with text-sliding micro-interaction that smoothly reveals a directional arrow on hover.",
+    component: <ArrowButton />,
+    code: arrowButtonCode,
+    views: "78",
+    downloads: "11+",
   },
 ];
