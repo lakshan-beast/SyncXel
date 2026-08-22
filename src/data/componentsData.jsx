@@ -17,6 +17,8 @@ import rippleButtonCode from "../components/library/button-001.jsx?raw";
 import ArrowButton from "../components/library/button-002";
 import arrowButtonCode from "../components/library/button-002.jsx?raw";
 
+import RobotHtml from "../components/library/Robot.html?raw";
+
 const paidCode = (
   <div className="space-y-2 text-center flex flex-col items-center justify-center">
     <h4 className="text-white text-xs font-bold font-heading">
@@ -131,5 +133,23 @@ export const componentsData = [
     code: arrowButtonCode,
     views: "78",
     downloads: "11+",
+  },
+
+  {
+    id: "robot-animation",
+    title: "Robot Animation",
+    category: "Animation",
+    isPaid: false,
+    description:
+      "Pure HTML & CSS animated robot character featuring custom keyframe waving arm mechanics and pulsing eye animation effects.",
+    component: (
+      <div className="relative w-full h-65 rounded-lg overflow-hidden bg-syncxel-dark/50 border border-syncxel-border/30 flex items-center justify-center">
+        <div dangerouslySetInnerHTML={{ __html: RobotHtml }} />
+      </div>
+    ),
+    code: RobotHtml,
+    techStack: "HTML + CSS",
+    views: "160",
+    downloads: "60+",
   },
 ];

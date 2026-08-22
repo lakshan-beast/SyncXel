@@ -9,8 +9,6 @@ import {
   HiOutlineExclamationCircle,
 } from "react-icons/hi";
 
-// import LoginImage from "../../assets/login-background.jpg";
-
 const GlassLoginForm = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
@@ -31,7 +29,7 @@ const GlassLoginForm = () => {
 
     if (isLogin) {
       // Mock Login Check (Demo Credentials)
-      if (username === "admin" && password === "1234") {
+      if (username === "Admin" && password === "1234") {
         setAuthStatus({
           success: true,
           title: `Welcome, ${username}! 🎉`,
@@ -69,12 +67,7 @@ const GlassLoginForm = () => {
   };
 
   return (
-    // <div
-    //   className="relative flex items-center justify-center min-h-130 w-full p-4 overflow-hidden rounded-2xl bg-slate-950 border border-slate-800"
-    //   style={{ backgroundImage: `url('../../assets/login-background.jpg')` }}>
-    <div
-      className="relative flex items-center justify-center min-h-full w-full p-2 overflow-hidden rounded-2xl bg-cover bg-center border border-slate-800"
-      style={{ backgroundImage: `url('../../assets/login-background.jpg')` }}>
+    <div className="relative flex items-center justify-center min-h-full w-full p-2 overflow-hidden rounded-2xl bg-cover bg-center border border-slate-800">
       {/* Background Glows */}
       <div className="absolute top-10 left-10 w-48 h-48 bg-cyan-500/20 rounded-full blur-[80px] pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-48 h-48 bg-purple-500/15 rounded-full blur-[80px] pointer-events-none" />
