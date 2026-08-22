@@ -58,7 +58,7 @@ export default function AllComponents() {
     <section className="py-2 px-4 sm:px-8 max-w-7xl mx-auto space-y-12 relative">
       {/* Background Accent Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-125 h-75 bg-syncxel-cyan/5 blur-[150px] pointer-events-none rounded-full" />
-
+{/* 
       <div className="mb-2 border-b-2 border-syncxel-border">
         <button
           onClick={() => navigate("/")}
@@ -66,7 +66,7 @@ export default function AllComponents() {
           <HiOutlineArrowLeft className="w-4 h-4" />
           <span>Back to Home</span>
         </button>
-      </div>
+      </div> */}
 
       {/* 1. SECTION HEADER */}
       <div className="text-center space-y-4 relative z-10 max-w-2xl mx-auto pt-4">
@@ -88,7 +88,7 @@ export default function AllComponents() {
         </p>
       </div>
 
-      <QuickSetupGuide />
+      {/* <QuickSetupGuide /> */}
 
       {/* 2. CATEGORY FILTER TABS */}
       <div className="flex flex-wrap items-center justify-center gap-2 relative z-10">
