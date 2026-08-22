@@ -1,4 +1,3 @@
-import React from "react";
 import {
   HiOutlineUser,
   HiOutlineSparkles,
@@ -6,7 +5,8 @@ import {
   HiOutlineCheckBadge,
   HiOutlineChartBar,
 } from "react-icons/hi2";
-import { SiGithub, SiX } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { SlGlobe } from "react-icons/sl";
 import { RxLinkedinLogo } from "react-icons/rx";
 
 import HeroIamge from "/hero.jpg";
@@ -41,7 +41,7 @@ export default function TeamSection() {
               </span>
             </h2>
 
-            <p className="text-syncxel-textMuted text-xs sm:text-sm leading-relaxed">
+            <p className="text-syncxel-text-muted text-xs sm:text-sm leading-relaxed">
               Real metrics that reflect our commitment to speed, code quality,
               and reliability.
             </p>
@@ -73,14 +73,14 @@ export default function TeamSection() {
               <span>Behind SyncXel</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-heading tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-heading tracking-tight ">
               Meet the
-              <span className="text-transparent bg-clip-text bg-syncxel-gradient">
+              <span className="text-transparent bg-clip-text bg-syncxel-gradient ml-3">
                 Founder & Architect
               </span>
             </h2>
 
-            <p className="text-syncxel-textMuted text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+            <p className="text-syncxel-text-muted text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
               Building modern digital products with a strong focus on
               high-performance code, clean UI architecture, and seamless user
               experiences.
@@ -113,7 +113,7 @@ export default function TeamSection() {
                   </p>
                 </div>
 
-                <p className="text-syncxel-textMuted text-sm sm:text-base leading-relaxed font-body">
+                <p className="text-syncxel-text-muted text-sm sm:text-base leading-relaxed font-body">
                   Passionate about crafting high-performance web applications,
                   clean code, and modern dark aesthetics. Building SyncXel to
                   help developers code faster and businesses launch
@@ -131,7 +131,7 @@ export default function TeamSection() {
                   ].map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-3 py-1 rounded-lg bg-syncxel-dark/90 border border-syncxel-border text-xs font-medium text-syncxel-textMuted">
+                      className="px-3 py-1 rounded-lg bg-syncxel-dark/90 border border-syncxel-border text-xs font-medium text-syncxel-text-muted">
                       {tag}
                     </span>
                   ))}
@@ -140,28 +140,28 @@ export default function TeamSection() {
                 {/* Social Links */}
                 <div className="pt-1 flex items-center justify-center md:justify-start space-x-2">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/lakshan-beast"
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2.5 rounded-xl bg-syncxel-dark border border-syncxel-border text-syncxel-textMuted hover:text-white hover:border-syncxel-cyan/40 transition-all"
+                    className="p-2.5 rounded-xl bg-syncxel-dark border border-syncxel-border text-syncxel-text-muted hover:text-white hover:border-syncxel-cyan/40 transition-all"
                     title="GitHub Profile">
                     <SiGithub className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/lakshan-sandeepa"
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2.5 rounded-xl bg-syncxel-dark border border-syncxel-border text-syncxel-textMuted hover:text-white hover:border-syncxel-cyan/40 transition-all"
+                    className="p-2.5 rounded-xl bg-syncxel-dark border border-syncxel-border text-syncxel-text-muted hover:text-white hover:border-syncxel-cyan/40 transition-all"
                     title="LinkedIn Profile">
                     <RxLinkedinLogo className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://x.com"
+                    href="https://lakshan-sandeepa-dev.vercel.app/"
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2.5 rounded-xl bg-syncxel-dark border border-syncxel-border text-syncxel-textMuted hover:text-white hover:border-syncxel-cyan/40 transition-all"
-                    title="X Profile">
-                    <SiX className="w-5 h-5" />
+                    className="p-2.5 rounded-xl bg-syncxel-dark border border-syncxel-border text-syncxel-text-muted hover:text-white hover:border-syncxel-cyan/40 transition-all"
+                    title="Portfolio Profile">
+                    <SlGlobe className="w-5 h-5" />
                   </a>
                 </div>
               </div>
