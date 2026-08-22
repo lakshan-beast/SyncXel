@@ -11,7 +11,7 @@
   --color-syncxel-blue: #3a86ff;
   --color-syncxel-cyan: #56cfe1;
   --color-syncxel-mint: #70e4c8;
-  --color-syncxel-text-muted: #999da3;
+  --color-syncxel-text-muted: #d0d5db;
 
   /* Brand Custom Gradients */
   --background-image-syncxel-gradient: linear-gradient(
@@ -35,6 +35,7 @@ body {
   font-family: var(--font-baloo);
   background-color: var(--color-syncxel-dark);
   color: #ffffff;
+  /* color: #d0d5db; */
 }
 
 /* 3. Dark Theme Custom Scrollbar */
