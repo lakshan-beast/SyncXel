@@ -24,7 +24,7 @@ const QuickSetupGuide = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto mb-8 bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-300">
+    <div className="w-full max-w-4xl mx-auto mb-8 bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-300">
       {/* Banner Header */}
       <div
         onClick={() => setIsOpen(!isOpen)}
