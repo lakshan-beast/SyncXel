@@ -12,15 +12,15 @@ export default function Hero() {
   const [copied, setCopied] = useState(false);
 
   const sampleCode = `
-    import { Button } from "@syncxel/ui";
+  import React from 'react';
 
-    export default function App() {
-        return (
-            <Button variant="cyan" glow>
-            Get Started with SyncXel
-            </Button>
-        );
-    }`;
+  export default function GlassGlowHeroButton() {
+    return (
+      <button className="px-8 py-3.5 text-lg font-mono font-bold tracking-[4px] text-white bg-transparent border-2 border-white/80 rounded-full transition-all duration-300 ease-out hover:text-white hover:border-white hover:shadow-[0_0_45px_rgba(255,255,255,0.9)] [webkit-box-reflect:below_0px_linear-gradient(transparent,transparent,#0004)] active:scale-95 cursor-pointer">
+        GET STARTED
+      </button>
+    );
+  };`;
 
   const handleCopy = () => {
     navigator.clipboard.write(sampleCode);
@@ -29,7 +29,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative pt-12 pb-20 px-4 sm:px-8 overflow-hidden">
+    <section className="relative pt-12 pb-20 px-4 sm:px-8 overflow-hidden ">
       {/* 🌟 1. ANIMATED BACKGROUND GRID PATTERN */}
       <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [bg-size:24px_24px] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] animate-pulse" />
 
@@ -40,7 +40,7 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-75 bg-syncxel-cyan/15 blur-[150px] pointer-events-none rounded-full animate-pulse duration-1000" />
       <div className="absolute top-1/3 right-10 w-87.5 h-87.5 bg-syncxel-blue/15 blur-[160px] pointer-events-none rounded-full animate-bounce duration-3000" />
 
-      <div className="max-w-7xl mx-auto space-y-10 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-10 relative z-10 h-dvh">
         {/* top badge headline & CTAs */}
         <div className="text-center space-y-1 max-w-4xl mx-auto">
           <a
@@ -99,8 +99,8 @@ export default function Hero() {
             </div>
 
             {/* tabs & copy button */}
-            <div className="flex items-center gap-1.5">
-              <div className="flex ">
+            <div className="flex items-center space-x-3">
+              <div className="flex bg-syncxel-card p-1 rounded-lg border border-syncxel-border/60 text-xs">
                 {/* preview button */}
                 <button
                   type="button"
@@ -140,9 +140,9 @@ export default function Hero() {
           </div>
 
           {/* tab content box */}
-          <div className="p-4 sm:p-12 min-h-55 flex items-center justify-center bg-[#0b0f19]">
+          <div className="p-2 sm:p-3 min-h-55 flex items-center justify-center bg-[#080b12] relative overflow-hidden">
             {activeTab === "preview" ? (
-              <div className="text-center space-y-4">
+              <div className="text-center space-y-4 relative z-10">
                 <div className="p-6 rounded-2xl bg-syncxel-dark/90 border border-syncxel-border shadow-xl space-y-3 max-w-sm mx-auto">
                   <span className="px-2.5 py-0.5 rounded-full bg-syncxel-cyan/10 text-syncxel-cyan text-xs font-semibold">
                     Interactive UI Component
@@ -150,8 +150,11 @@ export default function Hero() {
                   <h4 className="text-white font-bold text-lg font-heading">
                     SyncXel Premium Card
                   </h4>
-                  <button className="w-full py-2.5 rounded-xl bg-syncxel-gradient text-syncxel-dark font-bold text-xs shadow-lg shadow-syncxel-cyan/20 hover:opacity-90 transition-opacity">
+                  {/* <button className="w-full py-2.5 rounded-xl bg-syncxel-gradient text-syncxel-dark font-bold text-xs shadow-lg shadow-syncxel-cyan/20 hover:opacity-90 transition-opacity">
                     Get Started Now
+                  </button> */}
+                  <button className="px-8 py-3.5 text-lg font-mono font-bold tracking-[4px] text-white bg-transparent border-2 border-white/80 rounded-full transition-all duration-300 ease-out hover:text-white hover:border-white hover:shadow-[0_0_45px_rgba(255,255,255,0.9)] [webkit-box-reflect:below_0px_linear-gradient(transparent,transparent,#0004)] active:scale-95 cursor-pointer">
+                    GET STARTED
                   </button>
                 </div>
               </div>
