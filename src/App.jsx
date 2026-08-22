@@ -11,7 +11,7 @@ import TeckStack from "./components/TeckStack";
 import ServicesSection from "./components/Services";
 import TeamSection from "./components/TeamSection";
 import FaqSection from "./components/FAQ";
-import FeaturesSection from "./components/Features";
+import FeaturesSection from "./components/WhyChoose";
 import Components from "./components/Components";
 
 import AllComponents from "./components/ComponentSections";
