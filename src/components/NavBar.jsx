@@ -72,7 +72,7 @@ export default function NavBar() {
 
               <div className="absolute top-full left-0 mt-3 w-60 bg-syncxel-card border border-syncxel-border rounded-xl p-3 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <a
-                  href="#devs"
+                  href="#components"
                   className="block px-3 py-2 rounded-lg hover:bg-syncxel-dark transition-colors">
                   <div className="text-white font-medium">For Developers</div>
                   <div className="text-xs text-white/60">
@@ -80,7 +80,7 @@ export default function NavBar() {
                   </div>
                 </a>
                 <a
-                  href="#clients"
+                  href="#hire"
                   className="block px-3 py-2 rounded-lg hover:bg-syncxel-dark transition-colors">
                   <div className="text-white font-medium">
                     For Clients & Startups
@@ -105,14 +105,14 @@ export default function NavBar() {
 
               <div className="absolute top-full left-0 mt-3 w-52 bg-syncxel-card border border-syncxel-border rounded-xl p-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <a
-                  href="#docs"
+                  href="#setup"
                   className="block px-3 py-2 rounded-lg hover:bg-syncxel-dark text-white text-sm">
-                  Documentation
+                  Quick Setup Guide
                 </a>
                 <a
-                  href="#colors"
+                  href="#how-it-works"
                   className="block px-3 py-2 rounded-lg hover:bg-syncxel-dark text-white text-sm">
-                  Color Palettes
+                  How We Work
                 </a>
               </div>
             </div>
