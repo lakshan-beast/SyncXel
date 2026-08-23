@@ -592,7 +592,7 @@ export default function Services() {
         </div>
 
         {/* 1. Services Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
           {services.map((item, index) => (
             <div
               key={index}
@@ -625,7 +625,7 @@ export default function Services() {
         {/* 2. The 4-Step Process */}
         <div className="space-y-8">
           <div className="text-center space-y-2">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-bold  font-exo text-white tracking-tight">
               How We Work Together
             </h3>
             <p className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto">

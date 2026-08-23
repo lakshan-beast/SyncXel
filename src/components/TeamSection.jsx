@@ -222,7 +222,7 @@ export default function TeamSection() {
           </div>
 
           {/* Metrics Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4  gap-2 md:gap-4 lg:gap-6">
             {stats.map((stat, idx) => (
               <div
                 key={idx}
@@ -262,16 +262,16 @@ export default function TeamSection() {
           </div>
 
           {/* SOLO FOUNDER CARD */}
-          <div className="relative p-8 sm:p-10 rounded-3xl bg-slate-900/70 border border-white/10 shadow-2xl backdrop-blur-xl hover:border-cyan-500/40 transition-all duration-300">
+          <div className="relative p-8 sm:p-10 rounded-3xl bg-slate-900/70 border-2 border-white/10 shadow-2xl backdrop-blur-xl hover:border-cyan-500/20 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10">
               {/* Profile Image with Object Cover */}
-              <div className="shrink-0 relative">
+              <div className="shrink-0 relative border-4 border-syncxel-cyan/50 rounded-full hover:scale-105 transition-all duration-300">
                 <img
                   src={HeroImage}
                   alt="Lakshan Sandeepa - Founder of SyncXel"
-                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl object-cover border-2 border-white/10 shadow-xl"
+                  className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-2 border-white/10 shadow-xl"
                 />
-                <div className="absolute -bottom-2 -right-2 bg-slate-950 p-1.5 rounded-full border border-white/10">
+                <div className="absolute bottom-2 right-0 bg-slate-950 p-1.5 rounded-full border border-white/10">
                   <HiOutlineCheckBadge
                     className="w-6 h-6 text-cyan-400"
                     title="Verified Creator"
@@ -280,7 +280,7 @@ export default function TeamSection() {
               </div>
 
               {/* Founder Bio & Details */}
-              <div className="space-y-4 text-center md:text-left flex-1">
+              <div className="space-y-2 text-center md:text-left flex-1">
                 <div className="space-y-1">
                   <div className="flex items-center justify-center md:justify-start space-x-2">
                     <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -300,9 +300,10 @@ export default function TeamSection() {
                 </p>
 
                 {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 pt-1 justify-center md:justify-start">
+                <div className="flex flex-wrap gap-1 pt-1 justify-center md:justify-start">
                   {[
                     "React.js",
+                    "TypeScript",
                     "Tailwind CSS",
                     "Frontend Architecture",
                     "UI/UX Design",
@@ -316,7 +317,7 @@ export default function TeamSection() {
                 </div>
 
                 {/* Social Links */}
-                <div className="pt-2 flex items-center justify-center md:justify-start space-x-3">
+                <div className="pt-2 flex items-center justify-center md:justify-start space-x-1">
                   <a
                     href="https://github.com/lakshan-beast"
                     target="_blank"

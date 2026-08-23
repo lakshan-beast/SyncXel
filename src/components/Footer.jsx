@@ -279,11 +279,11 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         {/* 1. TOP BIG HIGH CONTRAST CTA BOX */}
-        <div className="relative rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-white/10 p-8 md:p-12 shadow-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Background Radial Glow */}
+        {/* <div className="relative rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-white/10 p-8 md:p-12 shadow-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Background Radial Glow *
           <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px] pointer-events-none" />
 
-          {/* Left Text Box */}
+          {/* Left Text Box *
           <div className="space-y-3 max-w-xl text-center md:text-left">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold">
               <HiOutlineSparkles className="w-4 h-4" />
@@ -300,7 +300,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Right Action Buttons */}
+          {/* Right Action Buttons *
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto z-10">
             <a
               href="#hire"
@@ -317,6 +317,60 @@ export default function Footer() {
               <FaCoffee className="w-4 h-4 text-black" />
               <span>Buy Me a Coffee</span>
             </a>
+          </div>
+        </div> */}
+
+        {/* 1. TOP BIG HIGH CONTRAST CTA BOX WITH ANIMATED BORDER */}
+        <div className="relative rounded-3xl p-[1px] overflow-hidden group max-w-6xl mx-auto my-10">
+          {/* 🌟 1. DUWANA BORDER EFFECT (Animated Rotating Gradient) */}
+          <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,#06b6d4_0%,#6366f1_50%,#06b6d4_100%)] opacity-70 animate-[spin_6s_linear_infinite] group-hover:opacity-100 transition-opacity" />
+
+          {/* 🌟 2. INNER CONTENT BOX (Dark Background over Border) */}
+          <div className="relative rounded-[calc(1.5rem-1px)] bg-slate-950/90 backdrop-blur-xl p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 z-10">
+            {/* Radial Background Glow */}
+            <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/15 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -left-20 -top-20 w-60 h-60 bg-indigo-500/10 rounded-full blur-[90px] pointer-events-none" />
+
+            {/* Left Text Box */}
+            <div className="space-y-4 max-w-xl text-center md:text-left z-10">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold shadow-[0_0_15px_rgba(6,182,212,0.15)]">
+                <HiOutlineSparkles className="w-4 h-4 animate-pulse" />
+                <span>Let's Build Something Great</span>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                Ready to elevate your{" "}
+                <span className="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+                  digital experience?
+                </span>
+              </h2>
+
+              <p className="text-slate-400 text-sm md:text-base leading-relaxed">
+                Explore our production-ready UI components or hire us to build
+                your custom web product with precision.
+              </p>
+            </div>
+
+            {/* Right Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto z-10">
+              {/* Start Project Button */}
+              <a
+                href="#hire"
+                className="w-full sm:w-auto text-center px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-extrabold text-sm transition-all shadow-lg hover:shadow-cyan-500/20 hover:scale-[1.02] flex items-center justify-center space-x-2 group/btn active:scale-95">
+                <span>Start a Project</span>
+                <HiOutlineArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+              </a>
+
+              {/* Buy Me A Coffee Button */}
+              <a
+                href="https://buymeacoffee.com/lakshansandeepa"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto text-center px-5 py-3.5 rounded-xl bg-[#FFDD00] hover:bg-[#ffe536] text-black font-extrabold text-sm transition-all shadow-[0_0_20px_rgba(255,221,0,0.2)] hover:shadow-[0_0_25px_rgba(255,221,0,0.45)] hover:scale-[1.02] flex items-center justify-center space-x-2.5 active:scale-95">
+                <FaCoffee className="w-4 h-4 text-black" />
+                <span>Buy Me a Coffee</span>
+              </a>
+            </div>
           </div>
         </div>
 

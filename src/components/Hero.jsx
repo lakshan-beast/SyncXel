@@ -203,9 +203,9 @@ export default function GlassGlowHeroButton() {
   return (
     <section className="relative pt-2 pb-16 px-4 sm:px-8 md;pt-5  lg:pt-18 overflow-hidden min-h-screen flex items-center justify-center">
       {/* 1. ANIMATED BACKGROUND GRID PATTERN */}
-       <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:24px_24px] animate-pulse" />
+      <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:24px_24px] animate-pulse" />
 
-       {/* 2. PULSING GLOW ORBS (Standardized Arbitrary Classes)  */}
+      {/* 2. PULSING GLOW ORBS (Standardized Arbitrary Classes)  */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] bg-cyan-500/55 blur-[140px] pointer-events-none rounded-full animate-pulse" />
       {/* <div className="absolute top-1/3 right-10 w-[250px] sm:w-[350px] h-[250px] sm:h-[350px] bg-blue-600/15 blur-[150px] pointer-events-none rounded-full" />  */}
 
@@ -240,14 +240,14 @@ export default function GlassGlowHeroButton() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <a
               href="#components"
-              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 text-slate-950 font-bold text-sm hover:opacity-95 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20 group cursor-pointer">
+              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-linear-to-r from-cyan-400 to-indigo-500 text-slate-950 font-bold text-sm hover:opacity-95 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20 group cursor-pointer">
               <HiOutlineSparkles className="w-4 h-4 fill-slate-950" />
               <span>Explore Components</span>
               <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#hire"
-              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900/80 border border-white/15 hover:border-cyan-400/50 text-white font-semibold text-sm hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 cursor-pointer">
+              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900/80 border-2 border-white/15 hover:border-cyan-400/50 text-white font-semibold text-sm hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 cursor-pointer">
               <HiOutlineCodeBracket className="w-4 h-4 text-cyan-400" />
               <span>Hire Us for Custom Project</span>
             </a>

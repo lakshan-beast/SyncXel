@@ -264,6 +264,7 @@
 // }
 
 import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaBarsStaggered } from "react-icons/fa6";
@@ -274,12 +275,37 @@ export default function NavBar() {
   // Function to close mobile menu on link click
   const closeMenu = () => setMobileMenuOpen(false);
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // 🎯 Dynamic Nav Handler Function
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+
+    if (location.pathname !== "/") {
+      // Home Page නෙවෙයි නම්, මුලින්ම Home Page එකට Navigate වෙලා ඉන්නවා
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100); // Home page load වෙනකම් podi delay එකක්
+    } else {
+      // දැනටමත් Home Page එකේ ඉන්නවා නම් Direct Smooth Scroll
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 px-2 sm:px-8 pt-4 z-50">
       <nav className="max-w-7xl mx-auto bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-4 sm:px-6 py-5 shadow-2xl transition-all duration-300">
         <div className="flex items-center justify-between">
           {/* Brand Logo & Name */}
-          <a href="#" className="flex items-center space-x-2 cursor-pointer">
+          <Link to="/" className="flex items-center space-x-2 cursor-pointer">
             <img
               src="/syncxel-logo-removebg.png"
               alt="SyncXel Logo"
@@ -287,26 +313,37 @@ export default function NavBar() {
               height={35}
               className="object-contain"
             />
-            <span className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+            <span className="text-xl sm:text-2xl font-bold tracking-tight text-white font-exo">
               Sync
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
                 Xel
               </span>
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium text-white/80">
             {/* Direct Link: Components */}
-            <a
-              href="#components"
+            <Link
+              to="/components"
               className="hover:text-white transition-colors">
               Components
+            </Link>
+
+            {/* 3. Features Section */}
+            <a
+              href="#features"
+              onClick={(e) => handleNavClick(e, "features")}
+              className="hover:text-cyan-400 transition-colors">
+              Why Syncxel
             </a>
 
-            {/* Direct Link: Templates */}
-            <a href="#templates" className="hover:text-white transition-colors">
-              Templates
+            {/* 4. FAQ Section */}
+            <a
+              href="#faq"
+              onClick={(e) => handleNavClick(e, "faq")}
+              className="hover:text-cyan-400 transition-colors">
+              FAQ
             </a>
 
             {/* Dropdown: Solutions / Services */}
@@ -318,16 +355,17 @@ export default function NavBar() {
 
               {/* Desktop Only Dropdown Menu */}
               <div className="absolute top-full left-0 mt-3 w-60 bg-slate-900/95 backdrop-blur-lg border border-white/10 rounded-xl p-3 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <a
-                  href="#components"
+                <Link
+                  to="/components"
                   className="block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors">
                   <div className="text-white font-medium">Free UI Library</div>
                   <div className="text-xs text-white/60">
                     Copy-paste buttons, inputs & loaders
                   </div>
-                </a>
+                </Link>
                 <a
                   href="#hire"
+                  onClick={(e) => handleNavClick(e, "hire")}
                   className="block px-3 py-2 rounded-lg hover:bg-white/10 transition-colors">
                   <div className="text-white font-medium">
                     Custom Engineering
@@ -338,25 +376,21 @@ export default function NavBar() {
                 </a>
               </div>
             </div>
-
-            {/* Direct Link: Services */}
-            <a href="#services" className="hover:text-white transition-colors">
-              Services
-            </a>
           </div>
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <a
               href="#hire"
+              onClick={(e) => handleNavClick(e, "hire")}
               className="text-sm font-medium text-white hover:text-cyan-400 transition-colors px-3 py-2">
               Hire Us
             </a>
-            <a
-              href="#components"
+            <Link
+              to="/components"
               className="text-sm font-semibold text-slate-950 bg-cyan-400 hover:bg-cyan-300 transition-colors px-4 py-2 rounded-xl shadow-lg shadow-cyan-500/20">
               Get Started
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle Button */}
@@ -377,39 +411,38 @@ export default function NavBar() {
 
         {/* Mobile Menu Dropdown (Clean, Non-nested Structure) */}
         {mobileMenuOpen && (
-          <div className="mt-4 pt-4 border-t border-white/10 flex flex-col space-y-3 md:hidden">
-            <a
-              href="#components"
+          <div className="mt-4 pt-4 border-t border-white/10 flex flex-col space-y-3 md:hidden text-center">
+            <Link
+              to="/components"
               onClick={closeMenu}
-              className="text-white/90 hover:text-white py-1.5 px-2 rounded-lg hover:bg-white/5 font-medium">
+              className="text-white/90 hover:text-white py-1.5 rounded-lg hover:bg-white/5 font-medium">
               UI Components
+            </Link>
+            <a
+              href="#features"
+              onClick={(e) => handleNavClick(e, "features")}
+              className="hover:text-cyan-400 transition-colors">
+              Why Syncxel
             </a>
             <a
-              href="#templates"
-              onClick={closeMenu}
-              className="text-white/90 hover:text-white py-1.5 px-2 rounded-lg hover:bg-white/5 font-medium">
-              Templates
-            </a>
-            <a
-              href="#services"
-              onClick={closeMenu}
-              className="text-white/90 hover:text-white py-1.5 px-2 rounded-lg hover:bg-white/5 font-medium">
-              Services
+              href="#faq"
+              onClick={(e) => handleNavClick(e, "faq")}
+              className="hover:text-cyan-400 transition-colors">
+              FAQ
             </a>
 
-            <div className="pt-2 flex flex-col gap-2">
+            <div className="pt-8 flex flex-col gap-2 text-center">
               <a
                 href="#hire"
-                onClick={closeMenu}
-                className="text-center text-sm font-medium text-white bg-white/10 py-2.5 rounded-xl border border-white/10 active:bg-white/20">
+                onClick={(e) => handleNavClick(e, "hire")}
+                className="text-sm font-medium text-white hover:text-cyan-400 transition-colors px-3 py-2">
                 Hire Us
               </a>
-              <a
-                href="#components"
-                onClick={closeMenu}
-                className="text-center text-sm font-semibold text-slate-950 bg-cyan-400 active:bg-cyan-500 py-2.5 rounded-xl">
-                Explore Components
-              </a>
+              <Link
+                to="/components"
+                className="text-sm font-semibold text-slate-950 bg-cyan-400 hover:bg-cyan-300 transition-colors px-4 py-2 rounded-xl shadow-lg shadow-cyan-500/20">
+                Get Started
+              </Link>
             </div>
           </div>
         )}

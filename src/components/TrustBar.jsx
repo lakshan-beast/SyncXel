@@ -102,7 +102,7 @@ export default function TrustBar() {
             }`}>
             <div className="flex items-center space-x-2">
               {item.icon}
-              <span className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
+              <span className="text-xl sm:text-2xl font-extrabold text-white tracking-tight font-exo">
                 {item.value}
               </span>
             </div>
