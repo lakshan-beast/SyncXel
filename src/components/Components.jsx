@@ -93,7 +93,7 @@ export default function HomeComponentsTeaser() {
       </div>
 
       {/* 4 Visual Components Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-2 md:gap-4 lg:gap-6">
         {teaserItems.map((item) => (
           <Link
             key={item.id}
@@ -123,7 +123,7 @@ export default function HomeComponentsTeaser() {
       </div>
 
       {/* Explore All Components Button */}
-      <div className="text-center pt-2">
+      <div className="text-center pt-0">
         <Link
           to="/components"
           className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 text-slate-950 font-extrabold text-sm hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105 transition-all duration-300">
