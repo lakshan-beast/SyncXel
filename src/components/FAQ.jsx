@@ -191,7 +191,7 @@ export default function FaqSection() {
         </div>
 
         {/* FAQ Accordion List */}
-        <div className="space-y-3">
+        <div className="space-y-1 md:space-y-2 lg:space-y-3">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
 
