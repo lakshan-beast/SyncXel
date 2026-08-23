@@ -275,8 +275,8 @@ export default function NavBar() {
   const closeMenu = () => setMobileMenuOpen(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 px-3 sm:px-8 pt-4 z-50">
-      <nav className="max-w-7xl mx-auto bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-4 sm:px-6 py-3 shadow-2xl transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 px-2 sm:px-8 pt-4 z-50">
+      <nav className="max-w-7xl mx-auto bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-4 sm:px-6 py-5 shadow-2xl transition-all duration-300">
         <div className="flex items-center justify-between">
           {/* Brand Logo & Name */}
           <a href="#" className="flex items-center space-x-2 cursor-pointer">

@@ -195,10 +195,10 @@ export default function TechStack() {
         {/* Marquee Container with Reliable Left/Right Gradient Overlays */}
         <div className="relative w-full overflow-hidden">
           {/* Left Gradient Fade */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#080b12] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-linear-to-r from-[#080b12] to-transparent z-10 pointer-events-none" />
 
           {/* Right Gradient Fade */}
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[#080b12] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-linear-to-l from-[#080b12] to-transparent z-10 pointer-events-none" />
 
           {/* Animated Track */}
           <div className="animate-marquee items-center space-x-12 sm:space-x-16">

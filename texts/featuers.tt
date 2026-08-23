@@ -1,0 +1,67 @@
+ඔව්, code එකේ logic එක වැඩ කළාට **User Experience (UX)**, **Performance**, සහ **Code Structure** පැත්තෙන් තව හදන්න ඕන වැදගත් කරුණු කීපයක් තියෙනවා:
+
+---
+
+### 1. ⚠️ Bug Fix: Search එක Category එක මාරු කරද්දී Reset වෙන්නේ නෑ
+
+* **ප්‍රශ්නය:** User කෙනෙක් Search Bar එකේ "Button" කියලා search කරලා, ඊටපස්සේ "Templates" Category tab එක ක්ලික් කළොත් filter එක පටලැවෙනවා.
+* **විසඳුම:** Category එකක් select කරද්දී search bar එක clear වෙන්න හෝ Search කරද්දී Category එක "All" වෙන්න හදන්න ඕන.
+
+```jsx
+// Category එක select කරද්දී Search එක Clear කිරීමට:
+const handleCategoryChange = (cat) => {
+  setSelectedCategory(cat);
+  setSearchQuery(""); // clear search query
+};
+
+```
+
+---
+
+### 2. ⚡ Performance: Debounce For Search Bar
+
+* **ප්‍රශ්නය:** User Type කරන සෑම Akura (keystroke) එකකටම `filteredItems` recalculate වෙනවා. Components 50-100+ තියෙද්දී App එක Lag වෙන්න පුළුවන්.
+* **විසඳුම:** React `useMemo` එකක් දාලා Filter Logic එක Wrap කරන්න.
+
+```jsx
+import React, { useState, useMemo } from "react";
+
+// re-render වෙන වාර ගණන අඩු කර Performance වැඩි කිරීමට
+const filteredItems = useMemo(() => {
+  return componentsData.filter((item) => {
+    const matchesCategory =
+      selectedCategory === "All" || item.category === selectedCategory;
+
+    const matchesSearch =
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase());
+
+    return matchesCategory && matchesSearch;
+  });
+}, [selectedCategory, searchQuery]);
+
+```
+
+---
+
+### 3. 🎨 UI/UX Improvements (තවත් සුපිරි කරන්න)
+
+* **Active Category Indicator (Counts):**
+හැම Category Tab එකක් ළඟම components කීයක් තියෙනවද කියලා badge එකක් දැම්මොත් visual එක තවත් පැහැදිලියි. (`Buttons (12)`)
+* **Responsive Layout Grid Gap:**
+Mobile එකේ `gap-3` හෝ `gap-4` හොඳයි. ඒත් Large Screen (Desktop) වල `gap-6` වගේ දැම්මොත් Card ටික තද වෙන්නේ නැතුව ලස්සනට පෙනෙයි (`gap-4 lg:gap-6`).
+* **Active Tab Animations:**
+Preview සහ Code tabs මාරු කරද්දී smooth transition එකක් නැහැ. Simple Framer Motion හරි CSS transition එකක් හරි දාන්න පුළුවන්.
+
+---
+
+### 4. 📂 Architecture & Maintainability (Code Clean කිරීම)
+
+1. **Card Component එක Cut කරලා වෙනම File එකකට දැමීම:**
+`AllComponents.jsx` එක ඇතුලෙම Card Rendering code එක පේළි 100+ ක් තියෙනවා. ඒක `ComponentCard.jsx` කියලා වෙනම file එකකට split කළොත් Main Component එක ගොඩක් clean වෙනවා.
+2. **Category Names Hardcode නොකිරීම:**
+Categories array එක static නැතුව `componentsData` එකෙන් dynamic විදිහට extract කරන්න පුළුවන්:
+```jsx
+const categories = ["All", ...new Set(componentsData.map(item => item.category))];
+
+```

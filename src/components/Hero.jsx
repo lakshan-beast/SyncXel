@@ -193,8 +193,6 @@ export default function GlassGlowHeroButton() {
   );
 }`;
 
-
-
   // Fixed Copy Handler
   const handleCopy = () => {
     navigator.clipboard.writeText(sampleCode.trim());
@@ -203,12 +201,12 @@ export default function GlassGlowHeroButton() {
   };
 
   return (
-    <section className="relative pt-28 pb-16 px-4 sm:px-8 overflow-hidden min-h-screen flex items-center justify-center">
+    <section className="relative pt-3 pb-16 px-4 sm:px-8  lg:pt-28 overflow-hidden min-h-screen flex items-center justify-center">
       {/* 1. ANIMATED BACKGROUND GRID PATTERN */}
-      <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:24px_24px] animate-pulse" />
+      <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:24px_24px] animate-pulse" />
 
       {/* 2. PULSING GLOW ORBS (Standardized Arbitrary Classes) */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] bg-cyan-500/15 blur-[140px] pointer-events-none rounded-full animate-pulse" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] bg-cyan-500/55 blur-[140px] pointer-events-none rounded-full animate-pulse" />
       <div className="absolute top-1/3 right-10 w-[250px] sm:w-[350px] h-[250px] sm:h-[350px] bg-blue-600/15 blur-[150px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto space-y-8 relative z-10 w-full">
