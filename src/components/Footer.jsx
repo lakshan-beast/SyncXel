@@ -273,7 +273,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-slate-950 pt-20 pb-10 px-4 sm:px-8 border-t border-white/10 overflow-hidden">
+    <footer className="relative bg-slate-950 pt-20 pb-10 px-4 sm:px-8 border-t border-white/10 overflow-hidden rounded-t-4xl">
       {/* Background Accent Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-indigo-500/10 blur-[120px] pointer-events-none" />
 
@@ -502,7 +502,7 @@ export default function Footer() {
           {/* Sri Lanka Flag Badge */}
           <div className="flex items-center space-x-1.5 bg-slate-900 px-3.5 py-1.5 rounded-full border border-white/10 text-slate-300">
             <span>Handcrafted with</span>
-            <FaHeart className="w-3 h-3 text-red-500 inline" />
+            <FaHeart className="w-3 h-3 text-white/50 inline" />
             <span>in</span>
             <span className="inline-flex items-center gap-1.5 font-semibold text-white">
               <img
