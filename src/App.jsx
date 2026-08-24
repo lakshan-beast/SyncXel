@@ -14,7 +14,7 @@ import FaqSection from "./components/FAQ";
 import FeaturesSection from "./components/WhyChoose";
 import Components from "./components/Components";
 
-import AllComponents from "./components/ComponentSections";
+import AllComponents from "./components/allComponents2";
 import Legal from "./pages/Legel";
 import ScrollToTop from "./components/ScrollTop";
 
