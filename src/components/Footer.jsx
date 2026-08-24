@@ -261,6 +261,7 @@
 // }
 
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaHeart, FaRegCopyright, FaCaretRight } from "react-icons/fa6";
 import { FaCoffee } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
@@ -497,12 +498,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>
-                <a
-                  href="#docs"
+                <Link
+                  to="/docs"
                   className="hover:text-white transition-colors flex items-center gap-1.5 group">
                   <FaCaretRight className="text-cyan-400 transition-transform group-hover:translate-x-0.5" />
                   Documentation
-                </a>
+                </Link>
               </li>
               <li>
                 <a
