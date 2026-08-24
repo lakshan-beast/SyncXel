@@ -93,7 +93,7 @@ export default function TrustBar() {
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-8 py-4 my-4">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 p-6 rounded-2xl bg-slate-900/60 border border-white/10 backdrop-blur-md shadow-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 p-6 rounded-2xl bg-slate-900/60 border border-white/10 backdrop-blur-md shadow-2xl">
         {stats.map((item, index) => (
           <div
             key={item.id}
