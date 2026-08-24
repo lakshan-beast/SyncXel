@@ -11,16 +11,19 @@ import typingTextHtml from "../components/library/TypingText.html?raw";
 
 import GlassLoginForm from "../components/library/GlassLoginForm";
 
-import RippleButton from "../components/library/button-001";
-import rippleButtonCode from "../components/library/button-001.jsx?raw";
+import RippleButton from "../library/buttons/rippleButton-001";
+import rippleButtonCode from "../library/buttons/rippleButton-001.jsx?raw";
 
-import ArrowButton from "../components/library/button-002";
-import arrowButtonCode from "../components/library/button-002.jsx?raw";
+import ArrowButton from "../library/buttons/arrowHoverButton";
+import arrowButtonCode from "../library/buttons/arrowHoverButton.jsx?raw";
 
 import RobotHtml from "../components/library/robot.html?raw";
 import expandableSearchBar from "../components/library/expandableSearchBar.html?raw";
 import colorFlipperHtml from "../components/library/colorFlipper.html?raw";
 import glassEffectButtons from "../components/library/glassEffectButton.html?raw";
+
+import Footer01 from "../components/library/footer-01";
+import Footer01Code from "../components/library/footer-01?raw";
 
 const paidCode = (
   <div className="space-y-2 text-center flex flex-col items-center justify-center">
@@ -208,5 +211,20 @@ export const componentsData = [
     techStack: "HTML + CSS",
     views: "200",
     downloads: "27+",
+  },
+
+  // Dark Modern Agency Footer with CTA
+  {
+    id: "dark-agency-cta-footer",
+    title: "Dark Modern Agency Footer with CTA",
+    category: "Footers",
+    isPaid: false,
+    description:
+      "A high-converting, modern agency footer featuring a bold CTA header, glassmorphic studio card, social media bar, and back-to-top scroll logic.",
+    component: <Footer01 />,
+    code: Footer01Code,
+    techStack: "React & Tailwind",
+    views: "340",
+    downloads: "40+",
   },
 ];
