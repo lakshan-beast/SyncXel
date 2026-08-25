@@ -185,7 +185,7 @@ export default function App() {
         {/* 🌟 FIXED BACKGROUND */}
         <div className="fixed inset-0 pointer-events-none z-0">
           {/* 1. Grid Pattern */}
-          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:24px_24px] animate-pulse" />
+          <div className=" inset-0 opacity-20 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:24px_24px] animate-pulse" />
 
           {/* 2. Glow Orbs */}
           <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[500px] sm:w-[700px] h-[400px] bg-cyan-500/20 blur-[150px] rounded-full animate-pulse" />
