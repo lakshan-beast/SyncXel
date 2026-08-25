@@ -93,16 +93,16 @@ export default function TrustBar() {
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-8 py-4 my-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 p-6 rounded-2xl bg-slate-900/60 border-2 border-white/20 backdrop-blur-md shadow-2xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 p-6 rounded-2xl bg-slate-900/60 border-2 border-white/30 backdrop-blur-lg shadow-2xl">
         {stats.map((item, index) => (
           <div
             key={item.id}
             className={`flex flex-col items-center sm:items-start text-center sm:text-left space-y-1 p-2 ${
-              index !== 0 ? "sm:border-l sm:border-white/10 sm:pl-6" : ""
+              index !== 0 ? "sm:border-2 sm:border-white/10 sm:pl-6" : ""
             }`}>
             <div className="flex items-center space-x-2">
               {item.icon}
-              <span className="text-xl sm:text-2xl font-extrabold text-white tracking-tight font-exo">
+              <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-exo">
                 {item.value}
               </span>
             </div>
