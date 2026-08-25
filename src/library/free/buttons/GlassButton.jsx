@@ -30,7 +30,7 @@ export default function GlassButton() {
 
       {/* Button Element */}
       <button type="button" className="effect-button">
-        Button yt
+        Button
       </button>
     </>
   );
