@@ -169,12 +169,13 @@ import FaqSection from "./components/FAQ";
 import FeaturesSection from "./components/WhyChoose";
 import Components from "./components/Components";
 
-import AllComponents from "./pages/allComponents2";
+import AllComponents from "./pages/AllComponentsNew";
 import Legal from "./pages/Legel";
 import Documentation from "./pages/Documentation"; // 👈 1. Docs Page එක Import කළා
 import ScrollToTop from "./components/ScrollTop";
 
 import DocsPreviewSection from "./components/DocsPreview";
+import SocialProof from "./components/SocailProof";
 
 export default function App() {
   return (
@@ -208,6 +209,7 @@ export default function App() {
                     <TrustBar />
                     <Components />
                     <DocsPreviewSection />
+                    <SocialProof />
                     <FeaturesSection />
                     <TeamSection />
                     <ServicesSection />
