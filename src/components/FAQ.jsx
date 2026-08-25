@@ -171,7 +171,7 @@ export default function FaqSection() {
 
       <div className="max-w-4xl mx-auto space-y-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-2">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold">
             <HiOutlineQuestionMarkCircle className="w-4 h-4" />
             <span>Got Questions?</span>
@@ -184,7 +184,7 @@ export default function FaqSection() {
             </span>
           </h2>
 
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+          <p className="text-slate-400 text-sm sm:text-base leading-4 md:leading-relaxed max-w-xl mx-auto">
             Everything you need to know about SyncXel UI components and custom
             frontend engineering services.
           </p>
@@ -198,9 +198,9 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className={`rounded-2xl border transition-all duration-300 overflow-hidden backdrop-blur-md ${
+                className={`rounded-2xl border-3 transition-all duration-300 overflow-hidden backdrop-blur-md ${
                   isOpen
-                    ? "bg-slate-900/80 border-cyan-500/40 shadow-xl shadow-cyan-500/5"
+                    ? "bg-slate-900/80 border-cyan-500/20 shadow-xl shadow-cyan-500/5"
                     : "bg-slate-900/40 border-white/10 hover:border-white/20"
                 }`}>
                 {/* Accordion Question Header */}
@@ -224,7 +224,7 @@ export default function FaqSection() {
 
                 {/* Accordion Answer Content */}
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-0 text-slate-400 text-sm sm:text-base leading-relaxed border-t border-white/5 mt-1">
+                  <div className="px-6 pb-6 pt-0 text-slate-300 text-sm sm:text-base leading-relaxed border-t border-white/10 mt-1">
                     <p className="pt-4">{faq.answer}</p>
                   </div>
                 )}
