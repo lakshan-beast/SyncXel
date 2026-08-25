@@ -571,7 +571,7 @@ export default function Services() {
 
       <div className="max-w-7xl mx-auto space-y-20 relative z-10">
         {/* Section Header */}
-        <div className="text-center space-y-4 max-w-3xl mx-auto">
+        <div className="text-center space-y-2 max-w-3xl mx-auto">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold">
             <HiOutlineChatBubbleLeftRight className="w-4 h-4" />
             <span>Client Services & Engineering</span>
@@ -584,7 +584,7 @@ export default function Services() {
             </span>
           </h2>
 
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-400 text-sm sm:text-base leading-4 md:leading-relaxed max-w-2xl mx-auto">
             Need a custom web application or modern landing page? I partner with
             founders, startups, and businesses to build high-converting web
             solutions.
@@ -592,11 +592,11 @@ export default function Services() {
         </div>
 
         {/* 1. Services Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6 ">
           {services.map((item, index) => (
             <div
               key={index}
-              className="group relative p-6 rounded-2xl bg-slate-900/60 border border-white/10 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-md flex flex-col justify-between">
+              className="group relative p-6 rounded-4xl bg-slate-900/60 border-3 border-white/10 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-md flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-slate-950 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-cyan-500/40 transition-all duration-300">
                   {item.icon}
@@ -609,11 +609,11 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2 pt-6">
+              <div className="flex flex-wrap gap-1 pt-6">
                 {item.tags.map((tag, tIndx) => (
                   <span
                     key={tIndx}
-                    className="px-2.5 py-1 rounded-md bg-slate-950 border border-white/10 text-[11px] font-medium text-slate-400">
+                    className="px-3 py-1 rounded-3xl bg-slate-950 border border-white/20 text-[11px] font-medium text-slate-400">
                     {tag}
                   </span>
                 ))}
@@ -625,21 +625,21 @@ export default function Services() {
         {/* 2. The 4-Step Process */}
         <div className="space-y-8">
           <div className="text-center space-y-2">
-            <h3 className="text-2xl sm:text-3xl font-bold  font-exo text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl  font-exo text-white tracking-tight">
               How We Work Together
             </h3>
-            <p className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto">
+            <p className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto leading-4 md:leading-relaxed">
               A transparent 4-step workflow from initial design to final
               deployment.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
             {steps.map((step, idx) => (
               <div
                 key={idx}
-                className="relative p-6 rounded-2xl bg-slate-900/40 border border-white/10 hover:border-cyan-500/30 transition-all space-y-3 backdrop-blur-sm">
-                <span className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
+                className="relative py-6 px-10 rounded-4xl bg-slate-900/40 border-3 border-white/10 hover:border-cyan-500/30 transition-all space-y-3 backdrop-blur-sm hover:shadow-xl">
+                <span className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
                   {step.number}
                 </span>
                 <h4 className="text-lg font-bold text-white border-t border-white/10 pt-2">
@@ -755,7 +755,7 @@ export default function Services() {
           </div>
         </div> */}
 
-        <div className="relative rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-white/10 p-6 sm:p-10 shadow-2xl max-w-2xl w-full mx-auto backdrop-blur-xl">
+        <div className="relative rounded-3xl bg-linear-to-b from-slate-900 to-slate-950 border-3 border-white/10 p-6 sm:p-10 shadow-2xl max-w-2xl w-full mx-auto backdrop-blur-xl">
           <div className="space-y-6">
             <div className="text-center space-y-2">
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
