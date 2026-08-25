@@ -12,6 +12,9 @@ import {
   HiCheckCircle,
 } from "react-icons/hi";
 
+import { freeComponents } from "../data/freeComponentsData";
+import { premiumKits } from "../data/premiumKitData";
+
 export default function AllComponents() {
   // State for Main Tabs: "freemium" or "premium"
   const [mainTab, setMainTab] = useState("freemium");
@@ -41,62 +44,62 @@ export default function AllComponents() {
   const categories = ["Buttons", "Cards", "Loaders", "Navbars"];
 
   // Mock Data for Free Components (Freemium with Categories)
-  const freeComponents = [
-    {
-      id: "btn-primary",
-      title: "Interactive Primary Button",
-      category: "Buttons",
-      description:
-        "Clean Tailwind button with smooth hover animation and glowing effect.",
-      code: `<button className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all shadow-lg shadow-cyan-500/20 cursor-pointer">\n  Click Me\n</button>`,
-    },
-    {
-      id: "btn-outline",
-      title: "Cyber Outline Button",
-      category: "Buttons",
-      description: "Sleek dark-mode outline button with border transition.",
-      code: `<button className="px-4 py-2 bg-slate-900 border border-slate-700 hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-medium rounded-xl transition-all cursor-pointer">\n  Explore More\n</button>`,
-    },
-    {
-      id: "card-stats",
-      title: "Stats Glass Card",
-      category: "Cards",
-      description:
-        "Glassmorphism card designed for SaaS metrics and data display.",
-      code: `<div className="p-6 bg-slate-900/40 border border-slate-800 rounded-2xl backdrop-blur-md">\n  <h4 className="text-2xl font-black text-white">500+</h4>\n  <p className="text-xs text-slate-400 mt-1">Active Users</p>\n</div>`,
-    },
-    {
-      id: "card-pricing",
-      title: "Pricing Mini Card",
-      category: "Cards",
-      description:
-        "Minimalist modern pricing card with active highlight state.",
-      code: `<div className="p-6 bg-slate-900/60 border border-cyan-500/40 rounded-2xl shadow-xl">\n  <span className="text-xs text-cyan-400 font-bold">PRO</span>\n  <h4 className="text-xl font-bold text-white mt-1">$19 <span className="text-xs text-slate-400">/month</span></h4>\n</div>`,
-    },
-    {
-      id: "loader-spinner",
-      title: "Cyber Spinner Loader",
-      category: "Loaders",
-      description:
-        "Modern spinning loader with cyan glowing dual-border effect.",
-      code: `<div className="w-6 h-6 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin" />`,
-    },
-    {
-      id: "loader-pulse",
-      title: "Pulsing Dot Loader",
-      category: "Loaders",
-      description: "Subtle pulsing dot indicator for live status updates.",
-      code: `<div className="flex items-center space-x-2">\n  <span className="w-3 h-3 bg-cyan-400 rounded-full animate-ping" />\n  <span className="text-xs text-slate-300">Live system</span>\n</div>`,
-    },
-    {
-      id: "navbar-basic",
-      title: "Minimal Navbar Fragment",
-      category: "Navbars",
-      description:
-        "Responsive branding and link layout ready for agency landing pages.",
-      code: `<nav className="flex items-center justify-between px-6 py-4 bg-slate-900/80 border border-slate-800 rounded-2xl">\n  <span className="font-black text-white">Syncxel.</span>\n  <div className="flex space-x-4 text-xs text-slate-300">\n    <a href="#features">Features</a>\n    <a href="#pricing">Pricing</a>\n  </div>\n</nav>`,
-    },
-  ];
+  //   const freeComponents = [
+  //     {
+  //       id: "btn-primary",
+  //       title: "Interactive Primary Button",
+  //       category: "Buttons",
+  //       description:
+  //         "Clean Tailwind button with smooth hover animation and glowing effect.",
+  //       code: `<button className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all shadow-lg shadow-cyan-500/20 cursor-pointer">\n  Click Me\n</button>`,
+  //     },
+  //     {
+  //       id: "btn-outline",
+  //       title: "Cyber Outline Button",
+  //       category: "Buttons",
+  //       description: "Sleek dark-mode outline button with border transition.",
+  //       code: `<button className="px-4 py-2 bg-slate-900 border border-slate-700 hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-medium rounded-xl transition-all cursor-pointer">\n  Explore More\n</button>`,
+  //     },
+  //     {
+  //       id: "card-stats",
+  //       title: "Stats Glass Card",
+  //       category: "Cards",
+  //       description:
+  //         "Glassmorphism card designed for SaaS metrics and data display.",
+  //       code: `<div className="p-6 bg-slate-900/40 border border-slate-800 rounded-2xl backdrop-blur-md">\n  <h4 className="text-2xl font-black text-white">500+</h4>\n  <p className="text-xs text-slate-400 mt-1">Active Users</p>\n</div>`,
+  //     },
+  //     {
+  //       id: "card-pricing",
+  //       title: "Pricing Mini Card",
+  //       category: "Cards",
+  //       description:
+  //         "Minimalist modern pricing card with active highlight state.",
+  //       code: `<div className="p-6 bg-slate-900/60 border border-cyan-500/40 rounded-2xl shadow-xl">\n  <span className="text-xs text-cyan-400 font-bold">PRO</span>\n  <h4 className="text-xl font-bold text-white mt-1">$19 <span className="text-xs text-slate-400">/month</span></h4>\n</div>`,
+  //     },
+  //     {
+  //       id: "loader-spinner",
+  //       title: "Cyber Spinner Loader",
+  //       category: "Loaders",
+  //       description:
+  //         "Modern spinning loader with cyan glowing dual-border effect.",
+  //       code: `<div className="w-6 h-6 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin" />`,
+  //     },
+  //     {
+  //       id: "loader-pulse",
+  //       title: "Pulsing Dot Loader",
+  //       category: "Loaders",
+  //       description: "Subtle pulsing dot indicator for live status updates.",
+  //       code: `<div className="flex items-center space-x-2">\n  <span className="w-3 h-3 bg-cyan-400 rounded-full animate-ping" />\n  <span className="text-xs text-slate-300">Live system</span>\n</div>`,
+  //     },
+  //     {
+  //       id: "navbar-basic",
+  //       title: "Minimal Navbar Fragment",
+  //       category: "Navbars",
+  //       description:
+  //         "Responsive branding and link layout ready for agency landing pages.",
+  //       code: `<nav className="flex items-center justify-between px-6 py-4 bg-slate-900/80 border border-slate-800 rounded-2xl">\n  <span className="font-black text-white">Syncxel.</span>\n  <div className="flex space-x-4 text-xs text-slate-300">\n    <a href="#features">Features</a>\n    <a href="#pricing">Pricing</a>\n  </div>\n</nav>`,
+  //     },
+  //   ];
 
   // Filtered components based on selected category
   const filteredFreeComponents = freeComponents.filter(
@@ -104,27 +107,27 @@ export default function AllComponents() {
   );
 
   // Mock Data for Premium UI-Kit (Templates)
-  const premiumKits = [
-    {
-      id: "kit-photographer",
-      title: "Photographer Portfolio & Agency Kit",
-      category: "Full Template Suite",
-      price: "$19",
-      description:
-        "Complete dark-mode ready photographer website template with Navbar, Hero, Services, Contact, Footer, and Framer Motion animations fully integrated.",
-      previewImg: "src/assets/photograpy-website.png",
-      demoUrl: "https://photography-website-puce-omega.vercel.app",
-      checkoutUrl: "https://yourstore.lemonsqueezy.com/buy/your-product-id",
-    },
-  ];
+  //   const premiumKits = [
+  //     {
+  //       id: "kit-photographer",
+  //       title: "Photographer Portfolio & Agency Kit",
+  //       category: "Full Template Suite",
+  //       price: "$19",
+  //       description:
+  //         "Complete dark-mode ready photographer website template with Navbar, Hero, Services, Contact, Footer, and Framer Motion animations fully integrated.",
+  //       previewImg: "src/assets/photograpy-website.png",
+  //       demoUrl: "https://photography-website-puce-omega.vercel.app",
+  //       checkoutUrl: "https://yourstore.lemonsqueezy.com/buy/your-product-id",
+  //     },
+  //   ];
 
   // Telegram username for custom engineering / modifications
   //   const telegramUsername = "lakshan_dev";
   //   const telegramCustomLink = `https://t.me/${telegramUsername}?text=Hi,%20I%20want%20to%20customize%20the%20Syncxel%20UI-Kit%20for%20my%20project.`;
 
-//   const telegramCustomLink = `https://t.me/lakshan_dev?text=${encodeURIComponent(
-//     `Hi, I want to customize the "${kit.title}" UI-Kit for my project. Let's discuss!`,
-//   )}`;
+  //   const telegramCustomLink = `https://t.me/lakshan_dev?text=${encodeURIComponent(
+  //     `Hi, I want to customize the "${kit.title}" UI-Kit for my project. Let's discuss!`,
+  //   )}`;
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
