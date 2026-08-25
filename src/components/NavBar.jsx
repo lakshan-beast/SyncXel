@@ -346,6 +346,10 @@ export default function NavBar() {
               FAQ
             </a>
 
+            <Link to="/docs" className="hover:text-white transition-colors">
+              Documentation
+            </Link>
+
             {/* Dropdown: Solutions / Services */}
             <div className="relative group cursor-pointer py-1">
               <span className="hover:text-white flex items-center space-x-1 transition-colors">
@@ -430,6 +434,9 @@ export default function NavBar() {
               className="hover:text-cyan-400 transition-colors">
               FAQ
             </a>
+            <Link to="/docs" className="hover:text-white transition-colors">
+              Documentation
+            </Link>
 
             <div className="pt-8 flex flex-col gap-2 text-center">
               <a
