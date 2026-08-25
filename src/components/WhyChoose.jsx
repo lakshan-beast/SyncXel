@@ -190,7 +190,7 @@ export default function Features() {
             </span>
           </h2>
 
-          <p className="text-slate-300/80 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-300/80 text-sm sm:text-base  leading-4 md:leading-relaxed max-w-2xl mx-auto">
             Whether you are using our pre-built component blocks or hiring us
             for custom development, we maintain the highest engineering
             standards.
@@ -202,7 +202,7 @@ export default function Features() {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="group relative p-7 rounded-2xl bg-slate-900/60 border border-white/10 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-md flex flex-col justify-between">
+              className="group relative p-7 rounded-4xl bg-slate-900/60 border-3 border-white/10 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-md flex flex-col justify-between">
               <div className="space-y-4">
                 {/* Icon Box */}
                 <div className="w-12 h-12 rounded-xl bg-slate-950 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-cyan-500/40 transition-all duration-300">
