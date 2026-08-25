@@ -69,7 +69,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowRight } from "react-icons/hi2";
-import { componentsData } from "../data/componentsData";
+import { componentsData } from "../data/componentData2";
 
 export default function HomeComponentsTeaser() {
   // Array Safety check + Get first 4 components
@@ -83,7 +83,7 @@ export default function HomeComponentsTeaser() {
       <div className="text-center space-y-2">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
           Explore{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500">
             UI Library
           </span>
         </h2>
@@ -126,7 +126,7 @@ export default function HomeComponentsTeaser() {
       <div className="text-center pt-0">
         <Link
           to="/components"
-          className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 text-slate-950 font-extrabold text-sm hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105 transition-all duration-300">
+          className="inline-flex items-center space-x-2 px-8 py-3.5 rounded-xl bg-linear-to-r from-cyan-400 to-indigo-500 text-slate-950 font-extrabold text-sm hover:shadow-lg hover:shadow-cyan-500/25 hover:gap-2 transition-all duration-300">
           <span>Explore All Components</span>
           <HiOutlineArrowRight className="w-4 h-4" />
         </Link>
