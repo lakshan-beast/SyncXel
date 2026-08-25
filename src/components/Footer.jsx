@@ -264,6 +264,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaHeart, FaRegCopyright, FaCaretRight } from "react-icons/fa6";
 import { FaCoffee } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { SiGithub } from "react-icons/si";
 import { SlGlobe } from "react-icons/sl";
@@ -423,6 +424,14 @@ export default function Footer() {
                 className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all"
                 title="Portfolio Profile">
                 <SlGlobe className="w-5 h-5" />
+              </a>
+              <a
+                href="https://t.me/lakshan_dev"
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer"
+                title="Telegram Chat">
+                <FaTelegramPlane className="w-5 h-5" />
               </a>
             </div>
           </div>
