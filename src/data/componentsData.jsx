@@ -11,11 +11,11 @@ import typingTextHtml from "../components/library/TypingText.html?raw";
 
 import GlassLoginForm from "../components/library/GlassLoginForm";
 
-import RippleButton from "../library/buttons/rippleButton-001";
-import rippleButtonCode from "../library/buttons/rippleButton-001.jsx?raw";
+import RippleButton from "../library/free/buttons/rippleButton-001";
+import rippleButtonCode from "../library/free/buttons/rippleButton-001.jsx?raw";
 
-import ArrowButton from "../library/buttons/arrowHoverButton";
-import arrowButtonCode from "../library/buttons/arrowHoverButton.jsx?raw";
+import ArrowButton from "../library/free/buttons/arrowHoverButton";
+import arrowButtonCode from "../library/free/buttons/arrowHoverButton.jsx?raw";
 
 import RobotHtml from "../components/library/robot.html?raw";
 import expandableSearchBar from "../components/library/expandableSearchBar.html?raw";
