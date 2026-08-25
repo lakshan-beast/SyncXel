@@ -130,7 +130,7 @@ export default function AllComponents() {
   //   )}`;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="min-h-screen bg-white/1 backdrop-blur-md border border-white/15 rounded-2xl text-slate-100 py-4 mt-4 px-4 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto">
       {/* 1. TOP HEADER SECTION */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
         <div className="flex items-center space-x-4">
@@ -221,7 +221,7 @@ export default function AllComponents() {
                   key={item.id}
                   className="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
                   {/* Card Header */}
-                  <div className="p-4 border-b border-slate-800 bg-slate-900/60 flex items-center justify-between">
+                  <div className="p-4 border-b border-slate-800 bg-slate-900/60 flex items-start justify-between">
                     <div>
                       <h3 className="text-sm font-bold text-white">
                         {item.title}
@@ -229,6 +229,9 @@ export default function AllComponents() {
                       <span className="text-[10px] text-cyan-400 uppercase tracking-wider font-semibold">
                         {item.category}
                       </span>
+                      <p className="text-xs text-slate-400 mb-1 border-t border-white/10 pt-1">
+                        {item.description}
+                      </p>
                     </div>
                     <span className="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">
                       Free
@@ -252,13 +255,9 @@ export default function AllComponents() {
                   </div>
 
                   {/* Body Content */}
-                  <div className="p-6 min-h-[160px] bg-slate-950/60 flex items-center justify-center">
+                  <div className="p-2 min-h-40 bg-slate-950/60 flex items-center justify-center">
                     {currentTab === "preview" ? (
                       <div className="text-center w-full">
-                        <p className="text-xs text-slate-400 mb-4">
-                          {item.description}
-                        </p>
-
                         {/* Dynamic Render Based on ID */}
                         {item.id === "btn-primary" && (
                           <button className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs rounded-xl transition-all shadow-lg shadow-cyan-500/20 cursor-pointer">
@@ -324,7 +323,7 @@ export default function AllComponents() {
                   </div>
 
                   {/* Footer Action with Dynamic "Copied! ✨" feedback */}
-                  <div className="p-3 bg-slate-900/80 flex items-center justify-between border-t border-slate-800">
+                  <div className="py-2 px-3 bg-slate-900/80 flex items-center justify-between border-t border-slate-800">
                     <span className="text-[10px] text-slate-400">
                       Ready to copy
                     </span>
