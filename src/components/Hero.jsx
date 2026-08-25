@@ -201,7 +201,7 @@ export default function GlassGlowHeroButton() {
   };
 
   return (
-    <section className="relative pt-2 pb-16 px-4 sm:px-8 md;pt-5  lg:pt-18 overflow-hidden min-h-screen flex items-center justify-center">
+    <section className="relative pt-1 pb-16 px-4 sm:px-8 md:pt-5  lg:pt-18 overflow-hidden min-h-screen flex items-center justify-center sm:items-start text-wrap">
       {/* 1. ANIMATED BACKGROUND GRID PATTERN */}
       <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:24px_24px] animate-pulse" />
 
@@ -209,35 +209,35 @@ export default function GlassGlowHeroButton() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] bg-cyan-500/55 blur-[140px] pointer-events-none rounded-full animate-pulse" />
       {/* <div className="absolute top-1/3 right-10 w-[250px] sm:w-[350px] h-[250px] sm:h-[350px] bg-blue-600/15 blur-[150px] pointer-events-none rounded-full" />  */}
 
-      <div className="max-w-7xl mx-auto space-y-8 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto space-y-3 md:space-y-8 relative z-10 w-full">
         {/* Top Badge, Headline & CTAs */}
         <div className="text-center space-y-4 max-w-4xl mx-auto">
           {/* Version Badge */}
           <a
             href="#components"
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-white/10 hover:border-cyan-500/50 text-xs text-slate-300 transition-all duration-300 shadow-lg group">
+            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-white/10 hover:border-cyan-500/50 text-xs text-slate-300 transition-all duration-300 shadow-lg group text-wrap ">
             <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
-            <span className="font-semibold text-white">SyncXel v1.0</span>
+            <span className="font-semibold text-white ">SyncXel v1.0</span>
             <span>• React & Tailwind Architecture</span>
             <HiOutlineArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </a>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
             Build Modern Web Apps{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500 block sm:inline mt-1 sm:mt-0">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500 block sm:inline mt-1 sm:mt-0">
               10x Faster
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-slate-300/80 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-2">
+          <p className="text-slate-300/80 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-5 md:leading-relaxed px-2">
             Production-ready UI components for developers, and high-performance
             custom web engineering for startups and founders.
           </p>
 
           {/* Dual Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-3 pt-2">
             <a
               href="#components"
               className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-linear-to-r from-cyan-400 to-indigo-500 text-slate-950 font-bold text-sm hover:opacity-95 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20 group cursor-pointer">
@@ -308,14 +308,14 @@ export default function GlassGlowHeroButton() {
           </div>
 
           {/* Tab Content Box */}
-          <div className="p-6 min-h-[200px] flex items-center justify-center bg-slate-950/50 relative overflow-x-auto">
+          <div className="p-3 min-h-50 flex items-center justify-center bg-transparent bordernn] relative overflow-x-auto">
             {activeTab === "preview" ? (
               <div className="text-center space-y-4">
-                <div className="p-6 rounded-2xl bg-slate-900 border border-white/10 shadow-xl space-y-4 max-w-sm mx-auto">
+                <div className="p-6 rounded-2xl bg-slate-900 border-non border-white/10 shadow-xl space-y-4 max-w-sm mx-auto">
                   <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold">
                     Interactive UI Component
                   </span>
-                  <h4 className="text-white font-bold text-base">
+                  <h4 className="text-white font-bold text-base mt-0.5">
                     SyncXel Premium Glow Button
                   </h4>
                   <div className="pt-2">
