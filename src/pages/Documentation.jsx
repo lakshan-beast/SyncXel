@@ -62,9 +62,10 @@ export default function Documentation() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      
       {/* 1. TOP LICENSE BANNER */}
       <div className="mb-8 p-4 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-slate-900 to-emerald-500/10 border border-cyan-500/20 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg shadow-cyan-950/30">
-        <div className="flex items-center space-x-3">
+        <div className="flex space-x-3 items-start">
           <div className="p-2 bg-cyan-500/20 rounded-xl text-cyan-400 border border-cyan-500/30">
             <HiSparklesIcon className="w-5 h-5" />
           </div>
@@ -85,7 +86,7 @@ export default function Documentation() {
 
       {/* 2. HEADER & SEARCH BAR */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
-        <div>
+        <div className="px-5 text-center">
           <h1 className="text-3xl font-black text-white tracking-tight">
             Developer Knowledge Hub
           </h1>
