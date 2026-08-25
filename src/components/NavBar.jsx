@@ -301,8 +301,8 @@ export default function NavBar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 px-2 sm:px-8 pt-4 z-50">
-      <nav className="max-w-7xl mx-auto bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-4 sm:px-6 py-5 shadow-2xl transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 px-4 sm:px-8 pt-4 lg:pt-5 z-50">
+      <nav className="max-w-7xl mx-auto bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-5 sm:px-6 py-5 shadow-2xl transition-all duration-300">
         <div className="flex items-center justify-between">
           {/* Brand Logo & Name */}
           <Link to="/" className="flex items-center space-x-2 cursor-pointer">
@@ -313,7 +313,7 @@ export default function NavBar() {
               height={35}
               className="object-contain"
             />
-            <span className="text-xl sm:text-2xl font-bold tracking-tight text-white font-exo">
+            <span className="text-3xl sm:text-2xl font-bold tracking-tight text-white font-exo">
               Sync
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
                 Xel
@@ -328,6 +328,9 @@ export default function NavBar() {
               to="/components"
               className="hover:text-white transition-colors">
               Components
+            </Link>
+            <Link to="/docs" className="hover:text-white transition-colors">
+              Documentation
             </Link>
 
             {/* 3. Features Section */}
@@ -345,10 +348,6 @@ export default function NavBar() {
               className="hover:text-cyan-400 transition-colors">
               FAQ
             </a>
-
-            <Link to="/docs" className="hover:text-white transition-colors">
-              Documentation
-            </Link>
 
             {/* Dropdown: Solutions / Services */}
             <div className="relative group cursor-pointer py-1">
@@ -405,7 +404,7 @@ export default function NavBar() {
               className="text-white hover:text-white/80 p-1 focus:outline-none"
               aria-label="Toggle Menu">
               {mobileMenuOpen ? (
-                <IoClose className="w-6 h-6" />
+                <IoClose className="w-8 h-8" />
               ) : (
                 <FaBarsStaggered className="w-6 h-6" />
               )}
@@ -422,21 +421,24 @@ export default function NavBar() {
               className="text-white/90 hover:text-white py-1.5 rounded-lg hover:bg-white/5 font-medium">
               UI Components
             </Link>
+            <Link
+              to="/docs"
+              className="hover:text-white transition-colors hover:bg-white/5 rounded-lg">
+              Documentation
+            </Link>
             <a
               href="#features"
               onClick={(e) => handleNavClick(e, "features")}
               className="hover:text-cyan-400 transition-colors">
               Why Syncxel
             </a>
+
             <a
               href="#faq"
               onClick={(e) => handleNavClick(e, "faq")}
               className="hover:text-cyan-400 transition-colors">
               FAQ
             </a>
-            <Link to="/docs" className="hover:text-white transition-colors">
-              Documentation
-            </Link>
 
             <div className="pt-8 flex flex-col gap-2 text-center">
               <a
