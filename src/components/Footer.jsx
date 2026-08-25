@@ -275,7 +275,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-slate-950 pt-20 pb-10 px-4 sm:px-8 border-t border-white/10 overflow-hidden rounded-t-4xl">
+    <footer className="relative bg-slate-950 pt-0 md:pt-20  pb-10 px-4 sm:px-8 border-t border-white/10 overflow-hidden rounded-t-4xl">
       {/* Background Accent Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-indigo-500/10 blur-[120px] pointer-events-none" />
 
@@ -323,7 +323,7 @@ export default function Footer() {
         </div> */}
 
         {/* 1. TOP BIG HIGH CONTRAST CTA BOX WITH ANIMATED BORDER */}
-        <div className="relative rounded-3xl p-[1px] overflow-hidden group max-w-6xl mx-auto my-10">
+        <div className="relative rounded-3xl p-1px overflow-hidden group max-w-6xl mx-auto my-10">
           {/* 🌟 1. DUWANA BORDER EFFECT (Animated Rotating Gradient) */}
           <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,#06b6d4_0%,#6366f1_50%,#06b6d4_100%)] opacity-70 animate-[spin_6s_linear_infinite] group-hover:opacity-100 transition-opacity" />
 
@@ -354,13 +354,13 @@ export default function Footer() {
             </div>
 
             {/* Right Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto z-10">
+            <div className="flex flex-col sm:flex-row items-center gap-1 md:gap-4 w-full md:w-auto z-10">
               {/* Start Project Button */}
               <a
                 href="#hire"
                 className="w-full sm:w-auto text-center px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-extrabold text-sm transition-all shadow-lg hover:shadow-cyan-500/20 hover:scale-[1.02] flex items-center justify-center space-x-2 group/btn active:scale-95">
                 <span>Start a Project</span>
-                <HiOutlineArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                <HiOutlineArrowUpRight className="w-4 h-4 ml-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
               </a>
 
               {/* Buy Me A Coffee Button */}
@@ -368,7 +368,7 @@ export default function Footer() {
                 href="https://buymeacoffee.com/lakshansandeepa"
                 target="_blank"
                 rel="noreferrer"
-                className="w-full sm:w-auto text-center px-5 py-3.5 rounded-xl bg-[#FFDD00] hover:bg-[#ffe536] text-black font-extrabold text-sm transition-all shadow-[0_0_20px_rgba(255,221,0,0.2)] hover:shadow-[0_0_25px_rgba(255,221,0,0.45)] hover:scale-[1.02] flex items-center justify-center space-x-2.5 active:scale-95">
+                className="w-full sm:w-auto text-center px-5 py-3.5 rounded-xl bg-[#FFDD00] hover:bg-[#ffe536] text-black font-extrabold text-sm transition-all shadow-[0_0_20px_rgba(255,221,0,0.2)] hover:shadow-[0_0_25px_rgba(255,221,0,0.45)] hover:scale-[1.02] flex items-center justify-center space-x-2.5 active:scale-95 hover:border-2 border-amber-600">
                 <FaCoffee className="w-4 h-4 text-black" />
                 <span>Buy Me a Coffee</span>
               </a>
@@ -377,16 +377,16 @@ export default function Footer() {
         </div>
 
         {/* 2. MIDDLE FOOTER LINKS GRID */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pt-6 border-t border-white/10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-12  pt-20 md:pt-6 border-t border-white/10">
           {/* Brand Column */}
           <div className="col-span-2 space-y-4">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2">
               <img
                 src="/syncxel-logo-removebg.png"
                 alt="SyncXel Logo"
-                className="w-9 h-9 object-contain"
+                className="w-10 h-10 object-contain"
               />
-              <span className="text-2xl font-bold text-white tracking-tight">
+              <span className="text-3xl font-bold text-white tracking-tight font-exo">
                 Sync
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
                   Xel
@@ -405,7 +405,7 @@ export default function Footer() {
                 href="https://github.com/lakshan-beast"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all"
+                className="p-2.5 rounded-xl bg-slate-900 border-3 border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
                 title="GitHub Profile">
                 <SiGithub className="w-5 h-5" />
               </a>
@@ -413,7 +413,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/lakshan-sandeepa"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all"
+                className="p-2.5 rounded-xl bg-slate-900 border-3 border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
                 title="LinkedIn Profile">
                 <RxLinkedinLogo className="w-5 h-5" />
               </a>
@@ -421,7 +421,7 @@ export default function Footer() {
                 href="https://lakshan-sandeepa-dev.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all"
+                className="p-2.5 rounded-xl bg-slate-900 border-3 border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
                 title="Portfolio Profile">
                 <SlGlobe className="w-5 h-5" />
               </a>
@@ -430,7 +430,7 @@ export default function Footer() {
                 href="https://t.me/lakshan_dev"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer"
+                className="p-2.5 rounded-xl bg-slate-900 border-3 border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer hover:rounded-2xl shadow-md"
                 title="Telegram Chat">
                 <FaTelegramPlane className="w-5 h-5" />
               </a>
@@ -438,7 +438,7 @@ export default function Footer() {
                 href="mailto:syncxelofficial@gmail.com:"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer"
+                className="p-2.5 rounded-xl bg-slate-900 border-3 border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer hover:rounded-2xl shadow-md"
                 title="Email Chat">
                 <FaEnvelope className="w-5 h-5" />
               </a>
