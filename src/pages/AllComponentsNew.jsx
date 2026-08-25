@@ -130,7 +130,7 @@ export default function AllComponents() {
   //   )}`;
 
   return (
-    <div className="min-h-screen bg-white/1 backdrop-blur-md border border-white/15 rounded-2xl text-slate-100 py-4 mt-4 px-4 sm:px-6 lg:px-8 max-w-7xl w-full mx-auto">
+    <div className="min-h-screen bg-white/1 backdrop-blur-md  md:rounded-2xl text-slate-100 py-4 mt-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* 1. TOP HEADER SECTION */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
         <div className="flex items-center space-x-4">
