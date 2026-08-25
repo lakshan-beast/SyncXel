@@ -419,15 +419,15 @@ import { componentsData } from "../data/componentData2"; // 👈 Data source
 import ComponentCard from "../components/componentCard"; // 👈 මෙතනට ComponentCard එක import කරන්න
 
 export default function AllComponents2() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("animations");
 
   const categories = [
-    "all",
+    "animations",
     ...new Set(componentsData.map((item) => item.category)),
   ];
 
   const filteredComponents = componentsData.filter(
-    (item) => selectedCategory === "all" || item.category === selectedCategory,
+    (item) => selectedCategory === "animations" || item.category === selectedCategory,
   );
 
   return (
