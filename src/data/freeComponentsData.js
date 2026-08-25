@@ -89,4 +89,18 @@ export const freeComponents = [
     copiesCount: 245,
     code: `<nav className="flex items-center justify-between px-6 py-4 bg-slate-900/80 border border-slate-800 rounded-2xl">\n  <span className="font-black text-white">Syncxel.</span>\n  <div className="flex space-x-4 text-xs text-slate-300">\n    <a href="#features">Features</a>\n    <a href="#pricing">Pricing</a>\n  </div>\n</nav>`,
   },
+
+  {
+    id: "loader-spinner",
+    title: "Spinner Loader",
+    category: "Loaders",
+    description: "Modern spinning loader with cyan glowing dual-border effect.",
+    copiesCount: 289,
+    code: `<div className="flex flex-col gap-5">
+      <div className="flex flex-row gap-2 items-center justify-center">
+        <div className="w-10 h-10 border-4 border-t-emerald-500 border-gray-800 rounded-full animate-spin"></div>
+      </div>
+      Coming Soon...
+    </div>`,
+  },
 ];
