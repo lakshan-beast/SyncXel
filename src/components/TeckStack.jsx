@@ -167,7 +167,7 @@ export default function TechStack() {
   const duplicatedTech = [...technologies, ...technologies, ...technologies];
 
   return (
-    <section className="py-10 border-y border-white/10 bg-[#080b12] overflow-hidden relative">
+    <section className="py-15 border-y border-white/15 bg-[#080b12] overflow-hidden relative">
       {/* Animation Styles */}
       <style>
         {`
@@ -188,12 +188,12 @@ export default function TechStack() {
       </style>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-8 relative">
-        <p className="text-center text-xs sm:text-sm font-semibold text-white/50 tracking-[0.2rem] uppercase mb-8">
+        <p className="text-center text-xs sm:text-sm font-semibold text-white/80 tracking-[0.2rem] uppercase mb-8">
           Built for Modern Web Technologies
         </p>
 
         {/* Marquee Container with Reliable Left/Right Gradient Overlays */}
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden pt-5">
           {/* Left Gradient Fade */}
           <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-linear-to-r from-[#080b12] to-transparent z-10 pointer-events-none" />
 
