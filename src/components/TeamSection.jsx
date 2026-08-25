@@ -211,12 +211,12 @@ export default function TeamSection() {
 
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               Driven by Numbers, Engineered for{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500">
                 Excellence
               </span>
             </h2>
 
-            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            <p className="text-slate-400 text-xs sm:text-sm leading-4 md:leading-relaxed">
               Real metrics that reflect our commitment to speed, code quality,
               and reliability.
             </p>
@@ -227,8 +227,8 @@ export default function TeamSection() {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-900/60 border border-white/10 text-center space-y-2 backdrop-blur-md hover:border-cyan-500/40 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
+                className="p-6 rounded-2xl bg-slate-900/60 border-2 border-white/10 text-center space-y-2 backdrop-blur-md hover:border-cyan-500/40 transition-all duration-300">
+                <div className="text-4xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500 border-b-2 border-white/30">
                   {stat.value}
                 </div>
                 <div className="text-xs sm:text-sm text-slate-400 font-medium">
@@ -255,7 +255,7 @@ export default function TeamSection() {
               </span>
             </h2>
 
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+            <p className="text-slate-400 text-sm sm:text-base leading-5 md:leading-relaxed max-w-xl mx-auto">
               Building modern digital products with a strong focus on
               high-performance code, clean UI architecture, and seamless user
               experiences.
@@ -263,8 +263,8 @@ export default function TeamSection() {
           </div>
 
           {/* SOLO FOUNDER CARD */}
-          <div className="relative p-8 sm:p-10 rounded-3xl bg-slate-900/70 border-2 border-white/10 shadow-2xl backdrop-blur-xl hover:border-cyan-500/20 transition-all duration-300">
-            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10">
+          <div className="relative p-8 sm:p-10 rounded-4xl bg-slate-900/70 border-3 border-white/30 shadow-2xl backdrop-blur-xl hover:border-cyan-500/30 transition-all duration-300">
+            <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 lg:gap-10">
               {/* Profile Image with Object Cover */}
               <div className="shrink-0 relative border-4 border-syncxel-cyan/50 rounded-full hover:scale-105 transition-all duration-300">
                 <img
@@ -272,9 +272,9 @@ export default function TeamSection() {
                   alt="Lakshan Sandeepa - Founder of SyncXel"
                   className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-2 border-white/10 shadow-xl"
                 />
-                <div className="absolute bottom-2 right-0 bg-slate-950 p-1.5 rounded-full border border-white/10">
+                <div className="absolute -bottom-2 right-0 bg-slate-950 p-1.5 rounded-full border border-white/10">
                   <HiOutlineCheckBadge
-                    className="w-6 h-6 text-cyan-400"
+                    className="w-8 h-8 text-cyan-400"
                     title="Verified Creator"
                   />
                 </div>
@@ -288,7 +288,7 @@ export default function TeamSection() {
                       Lakshan Sandeepa
                     </h3>
                   </div>
-                  <p className="text-cyan-400 font-medium text-sm">
+                  <p className="text-cyan-400 font-medium text-sm border-b-3 border-white/20 pb-3">
                     Founder & Lead Web Engineer @ SyncXel
                   </p>
                 </div>
@@ -318,7 +318,7 @@ export default function TeamSection() {
                 </div>
 
                 {/* Social Links */}
-                <div className="pt-2 flex items-center justify-center md:justify-start space-x-1">
+                <div className="pt-4 flex items-center justify-center md:justify-start space-x-1">
                   <a
                     href="https://github.com/lakshan-beast"
                     target="_blank"
@@ -347,7 +347,7 @@ export default function TeamSection() {
                     href="https://t.me/lakshan_dev"
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer"
+                    className="p-2.5 rounded-xl bg-slate-950 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-400/50 transition-all"
                     title="Telegram Chat">
                     <FaTelegramPlane className="w-5 h-5" />
                   </a>
@@ -355,7 +355,7 @@ export default function TeamSection() {
                     href="mailto:syncxelofficial@gmail.com:"
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer"
+                    className="p-2.5 rounded-xl bg-slate-950 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-400/50 transition-all"
                     title="Email Chat">
                     <FaEnvelope className="w-5 h-5" />
                   </a>
