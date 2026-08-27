@@ -198,7 +198,7 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className={`rounded-2xl border-3 transition-all duration-300 overflow-hidden backdrop-blur-md ${
+                className={`rounded-2xl border-3 md:border-2 transition-all duration-300 overflow-hidden backdrop-blur-md ${
                   isOpen
                     ? "bg-slate-900/80 border-cyan-500/20 shadow-xl shadow-cyan-500/5"
                     : "bg-slate-900/40 border-white/10 hover:border-white/20"
