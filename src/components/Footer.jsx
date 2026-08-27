@@ -354,7 +354,7 @@ export default function Footer() {
             </div>
 
             {/* Right Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center gap-1 md:gap-4 w-full md:w-auto z-10">
+            <div className="flex flex-col sm:flex-row md:flex-col items-center gap-1 md:gap-4 w-full md:w-auto z-10">
               {/* Start Project Button */}
               <a
                 href="#hire"
@@ -368,7 +368,7 @@ export default function Footer() {
                 href="https://buymeacoffee.com/lakshansandeepa"
                 target="_blank"
                 rel="noreferrer"
-                className="w-full sm:w-auto text-center px-5 py-3.5 rounded-xl bg-[#FFDD00] hover:bg-[#ffe536] text-black font-extrabold text-sm transition-all shadow-[0_0_20px_rgba(255,221,0,0.2)] hover:shadow-[0_0_25px_rgba(255,221,0,0.45)] hover:scale-[1.02] flex items-center justify-center space-x-2.5 active:scale-95 hover:border-2 border-amber-600">
+                className="w-full sm:w-auto md:w-full text-center px-5 py-3.5 rounded-xl bg-[#FFDD00] hover:bg-[#ffe536] text-black font-extrabold text-sm transition-all shadow-[0_0_20px_rgba(255,221,0,0.2)] hover:shadow-[0_0_25px_rgba(255,221,0,0.45)] hover:scale-[1.02] flex items-center justify-center space-x-2.5 active:scale-95 hover:border-2 border-amber-600">
                 <FaCoffee className="w-4 h-4 text-black" />
                 <span>Buy Me a Coffee</span>
               </a>
@@ -405,7 +405,7 @@ export default function Footer() {
                 href="https://github.com/lakshan-beast"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border-3 border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
                 title="GitHub Profile">
                 <SiGithub className="w-5 h-5" />
               </a>
@@ -413,7 +413,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/lakshan-sandeepa"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border-3 border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
                 title="LinkedIn Profile">
                 <RxLinkedinLogo className="w-5 h-5" />
               </a>
@@ -421,7 +421,7 @@ export default function Footer() {
                 href="https://lakshan-sandeepa-dev.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border-3 border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
                 title="Portfolio Profile">
                 <SlGlobe className="w-5 h-5" />
               </a>
@@ -430,7 +430,7 @@ export default function Footer() {
                 href="https://t.me/lakshan_dev"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border-3 border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer hover:rounded-2xl shadow-md"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer hover:rounded-2xl shadow-md"
                 title="Telegram Chat">
                 <FaTelegramPlane className="w-5 h-5" />
               </a>
@@ -438,7 +438,7 @@ export default function Footer() {
                 href="mailto:syncxelofficial@gmail.com:"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border-3 border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer hover:rounded-2xl shadow-md"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer hover:rounded-2xl shadow-md"
                 title="Email Chat">
                 <FaEnvelope className="w-5 h-5" />
               </a>
