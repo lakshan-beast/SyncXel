@@ -596,7 +596,7 @@ export default function Services() {
           {services.map((item, index) => (
             <div
               key={index}
-              className="group relative p-6 rounded-4xl bg-slate-900/60 border-3 border-white/10 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-md flex flex-col justify-between">
+              className="group relative p-6 rounded-4xl bg-slate-900/60 border-3 md:border-2 border-white/10 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-md flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-slate-950 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-cyan-500/40 transition-all duration-300">
                   {item.icon}
@@ -638,7 +638,7 @@ export default function Services() {
             {steps.map((step, idx) => (
               <div
                 key={idx}
-                className="relative py-6 px-10 rounded-4xl bg-slate-900/40 border-3 border-white/10 hover:border-cyan-500/30 transition-all space-y-3 backdrop-blur-sm hover:shadow-xl">
+                className="relative py-6 px-10 rounded-4xl bg-slate-900/40 border-3 md:border-2 border-white/10 hover:border-cyan-500/30 transition-all space-y-3 backdrop-blur-sm hover:shadow-xl">
                 <span className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
                   {step.number}
                 </span>
@@ -755,7 +755,7 @@ export default function Services() {
           </div>
         </div> */}
 
-        <div className="relative rounded-3xl bg-linear-to-b from-slate-900 to-slate-950 border-3 border-white/10 p-6 sm:p-10 shadow-2xl max-w-2xl w-full mx-auto backdrop-blur-xl">
+        <div className="relative rounded-3xl bg-linear-to-b from-slate-900 to-slate-950 border-3 md:border-2 border-white/10 p-6 sm:p-10 shadow-2xl max-w-2xl w-full mx-auto backdrop-blur-xl">
           <div className="space-y-6">
             <div className="text-center space-y-2">
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
