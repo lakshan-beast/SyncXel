@@ -263,7 +263,7 @@ export default function TeamSection() {
           </div>
 
           {/* SOLO FOUNDER CARD */}
-          <div className="relative p-8 sm:p-10 rounded-4xl bg-slate-900/70 border-3 border-white/30 shadow-2xl backdrop-blur-xl hover:border-cyan-500/30 transition-all duration-300">
+          <div className="relative p-8 sm:p-10 rounded-4xl bg-slate-900/70 border-3 md:border-2 border-white/10 shadow-2xl backdrop-blur-xl hover:border-cyan-500/30 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 lg:gap-10">
               {/* Profile Image with Object Cover */}
               <div className="shrink-0 relative border-4 border-syncxel-cyan/50 rounded-full hover:scale-105 transition-all duration-300">
