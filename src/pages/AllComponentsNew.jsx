@@ -11,8 +11,9 @@ import {
   HiBookOpen,
   HiCheckCircle,
 } from "react-icons/hi";
+import { LuStamp } from "react-icons/lu";
 
-import { freeComponents } from "../data/freeComponentsData";
+import { freeComponentsData } from "../data/free/freeIndex";
 import { premiumKits } from "../data/premiumKitData";
 
 export default function AllComponents() {
@@ -43,91 +44,10 @@ export default function AllComponents() {
   // Categories list for Freemium
   const categories = ["Buttons", "Cards", "Loaders", "Navbars"];
 
-  // Mock Data for Free Components (Freemium with Categories)
-  //   const freeComponents = [
-  //     {
-  //       id: "btn-primary",
-  //       title: "Interactive Primary Button",
-  //       category: "Buttons",
-  //       description:
-  //         "Clean Tailwind button with smooth hover animation and glowing effect.",
-  //       code: `<button className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all shadow-lg shadow-cyan-500/20 cursor-pointer">\n  Click Me\n</button>`,
-  //     },
-  //     {
-  //       id: "btn-outline",
-  //       title: "Cyber Outline Button",
-  //       category: "Buttons",
-  //       description: "Sleek dark-mode outline button with border transition.",
-  //       code: `<button className="px-4 py-2 bg-slate-900 border border-slate-700 hover:border-cyan-400 text-slate-200 hover:text-cyan-400 font-medium rounded-xl transition-all cursor-pointer">\n  Explore More\n</button>`,
-  //     },
-  //     {
-  //       id: "card-stats",
-  //       title: "Stats Glass Card",
-  //       category: "Cards",
-  //       description:
-  //         "Glassmorphism card designed for SaaS metrics and data display.",
-  //       code: `<div className="p-6 bg-slate-900/40 border border-slate-800 rounded-2xl backdrop-blur-md">\n  <h4 className="text-2xl font-black text-white">500+</h4>\n  <p className="text-xs text-slate-400 mt-1">Active Users</p>\n</div>`,
-  //     },
-  //     {
-  //       id: "card-pricing",
-  //       title: "Pricing Mini Card",
-  //       category: "Cards",
-  //       description:
-  //         "Minimalist modern pricing card with active highlight state.",
-  //       code: `<div className="p-6 bg-slate-900/60 border border-cyan-500/40 rounded-2xl shadow-xl">\n  <span className="text-xs text-cyan-400 font-bold">PRO</span>\n  <h4 className="text-xl font-bold text-white mt-1">$19 <span className="text-xs text-slate-400">/month</span></h4>\n</div>`,
-  //     },
-  //     {
-  //       id: "loader-spinner",
-  //       title: "Cyber Spinner Loader",
-  //       category: "Loaders",
-  //       description:
-  //         "Modern spinning loader with cyan glowing dual-border effect.",
-  //       code: `<div className="w-6 h-6 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin" />`,
-  //     },
-  //     {
-  //       id: "loader-pulse",
-  //       title: "Pulsing Dot Loader",
-  //       category: "Loaders",
-  //       description: "Subtle pulsing dot indicator for live status updates.",
-  //       code: `<div className="flex items-center space-x-2">\n  <span className="w-3 h-3 bg-cyan-400 rounded-full animate-ping" />\n  <span className="text-xs text-slate-300">Live system</span>\n</div>`,
-  //     },
-  //     {
-  //       id: "navbar-basic",
-  //       title: "Minimal Navbar Fragment",
-  //       category: "Navbars",
-  //       description:
-  //         "Responsive branding and link layout ready for agency landing pages.",
-  //       code: `<nav className="flex items-center justify-between px-6 py-4 bg-slate-900/80 border border-slate-800 rounded-2xl">\n  <span className="font-black text-white">Syncxel.</span>\n  <div className="flex space-x-4 text-xs text-slate-300">\n    <a href="#features">Features</a>\n    <a href="#pricing">Pricing</a>\n  </div>\n</nav>`,
-  //     },
-  //   ];
-
   // Filtered components based on selected category
-  const filteredFreeComponents = freeComponents.filter(
+  const filteredFreeComponents = freeComponentsData.filter(
     (item) => item.category === activeCategory,
   );
-
-  // Mock Data for Premium UI-Kit (Templates)
-  //   const premiumKits = [
-  //     {
-  //       id: "kit-photographer",
-  //       title: "Photographer Portfolio & Agency Kit",
-  //       category: "Full Template Suite",
-  //       price: "$19",
-  //       description:
-  //         "Complete dark-mode ready photographer website template with Navbar, Hero, Services, Contact, Footer, and Framer Motion animations fully integrated.",
-  //       previewImg: "src/assets/photograpy-website.png",
-  //       demoUrl: "https://photography-website-puce-omega.vercel.app",
-  //       checkoutUrl: "https://yourstore.lemonsqueezy.com/buy/your-product-id",
-  //     },
-  //   ];
-
-  // Telegram username for custom engineering / modifications
-  //   const telegramUsername = "lakshan_dev";
-  //   const telegramCustomLink = `https://t.me/${telegramUsername}?text=Hi,%20I%20want%20to%20customize%20the%20Syncxel%20UI-Kit%20for%20my%20project.`;
-
-  //   const telegramCustomLink = `https://t.me/lakshan_dev?text=${encodeURIComponent(
-  //     `Hi, I want to customize the "${kit.title}" UI-Kit for my project. Let's discuss!`,
-  //   )}`;
 
   return (
     <div className="min-h-screen bg-white/1 backdrop-blur-md  md:rounded-2xl text-slate-100 py-4 mt-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -147,7 +67,7 @@ export default function AllComponents() {
 
         {/* Friendly Free Usage Banner */}
         <div className="bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-xl flex items-center space-x-2 text-xs text-cyan-300">
-          <HiSparkles className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+          <HiSparkles className="w-4 h-4 text-cyan-400 shrink-0" />
           <span>
             All free components can be used anywhere in your personal & client
             projects freely!
@@ -157,8 +77,11 @@ export default function AllComponents() {
 
       {/* Main Heading & Description */}
       <div className="text-center max-w-2xl mx-auto mb-10">
-        <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-          Syncxel <span className="text-cyan-400">Developer Hub</span>
+        <h1 className="text-5xl sm:text-6xl font-black text-white tracking-tight ">
+          SyncXel{" "}
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500 block sm:inline mt-1 sm:mt-0">
+            Developer Hub
+          </span>
         </h1>
         <p className="text-sm text-slate-400 mt-2">
           Explore modular React & Tailwind components or unlock professional
@@ -257,63 +180,10 @@ export default function AllComponents() {
                   {/* Body Content */}
                   <div className="p-2 min-h-40 bg-slate-950/60 flex items-center justify-center">
                     {currentTab === "preview" ? (
-                      <div className="text-center w-full">
-                        {/* Dynamic Render Based on ID */}
-                        {item.id === "btn-primary" && (
-                          <button className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs rounded-xl transition-all shadow-lg shadow-cyan-500/20 cursor-pointer">
-                            Click Me
-                          </button>
-                        )}
-                        {item.id === "btn-outline" && (
-                          <button className="px-4 py-2 bg-slate-900 border border-slate-700 hover:border-cyan-400 text-slate-200 hover:text-cyan-400 text-xs font-medium rounded-xl transition-all cursor-pointer">
-                            Explore More
-                          </button>
-                        )}
-                        {item.id === "card-stats" && (
-                          <div className="p-4 bg-slate-900 border border-slate-800 rounded-xl text-left">
-                            <h4 className="text-lg font-black text-white">
-                              500+
-                            </h4>
-                            <p className="text-[10px] text-slate-400">
-                              Active Users
-                            </p>
-                          </div>
-                        )}
-                        {item.id === "card-pricing" && (
-                          <div className="p-4 bg-slate-900/60 border border-cyan-500/40 rounded-xl text-left">
-                            <span className="text-[10px] text-cyan-400 font-bold">
-                              PRO
-                            </span>
-                            <h4 className="text-base font-bold text-white mt-0.5">
-                              $19{" "}
-                              <span className="text-[10px] text-slate-400">
-                                /mo
-                              </span>
-                            </h4>
-                          </div>
-                        )}
-                        {item.id === "loader-spinner" && (
-                          <div className="w-6 h-6 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto" />
-                        )}
-                        {item.id === "loader-pulse" && (
-                          <div className="flex items-center justify-center space-x-2">
-                            <span className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-ping" />
-                            <span className="text-xs text-slate-300">
-                              Live system
-                            </span>
-                          </div>
-                        )}
-                        {item.id === "navbar-basic" && (
-                          <div className="flex items-center justify-between px-3 py-2 bg-slate-900 border border-slate-800 rounded-lg text-left">
-                            <span className="font-bold text-xs text-white">
-                              Syncxel.
-                            </span>
-                            <div className="flex space-x-2 text-[10px] text-slate-400">
-                              <span>Features</span>
-                              <span>Pricing</span>
-                            </div>
-                          </div>
-                        )}
+                      <div className="text-center w-full flex items-center justify-center">
+                        {/* අර පරණ item.id කන්ඩිෂන් ඔක්කොම අයින් කරලා මේක විතරක් දාන්න */}
+                        {/* <div dangerouslySetInnerHTML={{ __html: item.code }} /> */}
+                        {item.component}
                       </div>
                     ) : (
                       <pre className="w-full h-32 overflow-auto text-[11px] text-cyan-300 bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-left">
@@ -327,6 +197,8 @@ export default function AllComponents() {
                     <span className="text-[10px] text-slate-400">
                       Ready to copy
                     </span>
+
+                    <span>{item.copiesCount}</span>
                     <button
                       onClick={() => handleCopy(item.id, item.code)}
                       className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center space-x-1 ${
@@ -337,7 +209,7 @@ export default function AllComponents() {
                       {isCopied ? (
                         <>
                           <HiCheck className="w-3.5 h-3.5" />
-                          <span>Copied! ✨</span>
+                          <span>Copied!</span>
                         </>
                       ) : (
                         <>
@@ -363,7 +235,7 @@ export default function AllComponents() {
             return (
               <div
                 key={kit.id}
-                className="bg-slate-900/60 border-2 border-amber-500/40 rounded-3xl overflow-hidden shadow-2xl">
+                className="bg-slate-900/60 border-2 border-amber-500/40 rounded-3xl overflow-hidden shadow-2xl mb-1">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                   {/* Kit Image Preview */}
                   <div className="relative h-64 lg:h-full overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800">
@@ -372,9 +244,14 @@ export default function AllComponents() {
                       alt={kit.title}
                       className="w-full h-full object-contain"
                     />
-                    <div className="absolute top-4 left-4">
+                    <div className="absolute top-4 left-4 space-x-1 flex">
                       <span className="text-xs font-bold text-amber-950 bg-amber-400 px-3 py-1 rounded-full shadow-lg">
                         Pro UI-Kit • {kit.price}
+                      </span>
+
+                      <span className="text-xs font-bold text-amber-950 bg-white/80 backdrop-blur-2xl px-3 py-1 rounded-full shadow-lg flex items-center">
+                        {/* <LuStamp className="text--500 text-lg mr-2" />{" "} */}
+                        {kit.sales}
                       </span>
                     </div>
                   </div>
@@ -415,7 +292,7 @@ export default function AllComponents() {
                       {/* Documentation Note Box */}
                       <div className="bg-amber-500/10 border border-amber-500/20 p-3.5 rounded-2xl mb-6">
                         <div className="flex items-start space-x-2 text-xs text-amber-200">
-                          <HiBookOpen className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                          <HiBookOpen className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                           <div>
                             <strong className="text-white block mb-0.5">
                               A-Z Documentation Included:
@@ -453,9 +330,11 @@ export default function AllComponents() {
                           href={kit.checkoutUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex-1 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-xl text-xs font-bold flex items-center justify-center space-x-2 transition-all shadow-lg shadow-amber-400/20 cursor-pointer">
+                          className="flex-1 px-5 py-1 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-xl text-xs font-bold flex items-center justify-center space-x-2 transition-all shadow-lg shadow-amber-400/20 cursor-pointer">
                           <HiShoppingCart className="w-4 h-4" />
-                          <span>Get UI-Kit ({kit.price})</span>
+                          <span>
+                            Get UI-Kit <span className="text-2xl">({kit.price})</span>
+                          </span>
                         </a>
                       </div>
 

@@ -35,7 +35,6 @@ body {
   font-family: var(--font-baloo);
   background-color: var(--color-syncxel-dark);
   color: #ffffff;
-  /* color: #d0d5db; */
 }
 
 /* 3. Dark Theme Custom Scrollbar */
@@ -46,7 +45,7 @@ body {
   background: #0a0a0a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #56cfe1;
+  background: #3d94a1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {

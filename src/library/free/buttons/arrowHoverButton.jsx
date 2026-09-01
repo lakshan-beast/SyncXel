@@ -1,6 +1,3 @@
-// src/library/buttons/ArrowHoverButton.jsx
-import React from "react";
-
 export default function ArrowHoverButton() {
   return (
     <button className="group relative inline-flex items-center justify-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 px-6 rounded-xl overflow-hidden transition-all duration-300 shadow-lg shadow-amber-500/20 active:scale-95">
