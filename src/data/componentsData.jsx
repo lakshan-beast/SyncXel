@@ -9,7 +9,7 @@ import photographerImg from "../assets/photograpy-website.png";
 import sideNavHtml from "../components/library/SideNav.html?raw";
 import typingTextHtml from "../components/library/TypingText.html?raw";
 
-import GlassLoginForm from "../components/library/GlassLoginForm";
+import GlassLoginForm from "../library/free/loginform/GlassLoginForm";
 
 import RippleButton from "../library/free/buttons/rippleButton-001";
 import rippleButtonCode from "../library/free/buttons/rippleButton-001.jsx?raw";

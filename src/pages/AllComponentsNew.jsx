@@ -11,7 +11,8 @@ import {
   HiBookOpen,
   HiCheckCircle,
 } from "react-icons/hi";
-import { LuStamp } from "react-icons/lu";
+// import { LuStamp } from "react-icons/lu";
+import { TbFileDownloadFilled } from "react-icons/tb";
 
 import { freeComponentsData } from "../data/free/freeIndex";
 import { premiumKits } from "../data/premiumKitData";
@@ -42,7 +43,14 @@ export default function AllComponents() {
   };
 
   // Categories list for Freemium
-  const categories = ["Buttons", "Cards", "Loaders", "Navbars"];
+  const categories = [
+    "Buttons",
+    "Cards",
+    "Loaders",
+    "Navbars",
+    "Animations",
+    "Login",
+  ];
 
   // Filtered components based on selected category
   const filteredFreeComponents = freeComponentsData.filter(
@@ -198,7 +206,9 @@ export default function AllComponents() {
                       Ready to copy
                     </span>
 
-                    <span>{item.copiesCount}</span>
+                    <span className="flex items-center gap-2 font-exo ">
+                      <TbFileDownloadFilled /> {item.copiesCount}
+                    </span>
                     <button
                       onClick={() => handleCopy(item.id, item.code)}
                       className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center space-x-1 ${
@@ -333,7 +343,8 @@ export default function AllComponents() {
                           className="flex-1 px-5 py-1 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-xl text-xs font-bold flex items-center justify-center space-x-2 transition-all shadow-lg shadow-amber-400/20 cursor-pointer">
                           <HiShoppingCart className="w-4 h-4" />
                           <span>
-                            Get UI-Kit <span className="text-2xl">({kit.price})</span>
+                            Get UI-Kit{" "}
+                            <span className="text-2xl">({kit.price})</span>
                           </span>
                         </a>
                       </div>
