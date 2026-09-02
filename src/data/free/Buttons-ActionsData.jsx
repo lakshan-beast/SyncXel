@@ -7,7 +7,7 @@ import GradientBorderButton from "../../library/free/buttons/GradientBorderButto
 import GradientFillButton from "../../library/free/buttons/GradientFillButton";
 
 import MagneticButton from "../../library/free/buttons/MagneticButton";
-// import SpringElasticButton from "../../library/free/buttons/SpringElasticButton";
+import SpringElasticButton from "../../library/free/buttons/SpringElasticButton";
 import LiquidMorphButton from "../../library/free/buttons/LiquidMorphButton";
 import LaserBeamButton from "../../library/free/buttons/LaserBeamButton";
 import GlitchButton from "../../library/free/buttons/GlitchButton";
@@ -160,16 +160,16 @@ export const buttonsData = [
     component: <MagneticButton />,
     code: `<motion.button whileHover={{ scale: 1.08, y: -2 }} whileTap={{ scale: 0.94 }} transition={{ type: "spring", stiffness: 350, damping: 15 }} className="px-5 py-2.5 bg-slate-900 border border-cyan-500/50 hover:border-cyan-400 text-cyan-300 font-mono text-xs rounded-xl shadow-[0_0_20px_rgba(34,211,238,0.15)] cursor-pointer">[ Magnetic Pull ]</motion.button>`,
   },
-  // {
-  //   id: "btn-spring-elastic",
-  //   title: "Spring Elastic Push Button",
-  //   category: "Buttons & Actions",
-  //   description:
-  //     "High-energy button with bouncy spring physics and micro-rotation feedback.",
-  //   copiesCount: 289,
-  //   component: <SpringElasticButton />,
-  //   code: `<motion.button whileHover={{ scale: 1.1, rotate: [-1, 1, -1, 0] }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 500, damping: 10 }} className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-indigo-600/30 cursor-pointer">Elastic Pop</motion.button>`,
-  // },
+  {
+    id: "btn-spring-elastic",
+    title: "Spring Elastic Push Button",
+    category: "Buttons & Actions",
+    description:
+      "High-energy button with bouncy spring physics and micro-rotation feedback.",
+    copiesCount: 289,
+    component: <SpringElasticButton />,
+    code: `<motion.button whileHover={{ scale: 1.1, rotate: [-1, 1, -1, 0] }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 500, damping: 10 }} className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-indigo-600/30 cursor-pointer">Elastic Pop</motion.button>`,
+  },
   {
     id: "btn-liquid-morph",
     title: "Liquid Morphing Fill Button",
