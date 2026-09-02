@@ -1,7 +1,6 @@
 import { buttonsData } from "./Buttons-ActionsData";
 import { loadersData } from "./Loarders-AnimationsData";
 import { animationsData } from "./AnimationData";
-// import { loginFormsData } from "./FormsData";
 import { notificationsData } from "./NavigationsData";
 import { cardsData } from "./Cards&Containers";
 import { badgesData } from "./Badges-PIlls-Indeicators";
