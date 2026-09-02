@@ -17,7 +17,7 @@ export default function CyberMetricCard() {
           initial={{ width: 0 }}
           animate={{ width: "75%" }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 shadow-[0_0_10px_#6366f1]"
+          className="h-full bg-linear-to-r from-indigo-500 to-cyan-400 shadow-[0_0_10px_#6366f1]"
         />
       </div>
     </motion.div>
