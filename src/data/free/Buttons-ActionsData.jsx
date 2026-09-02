@@ -18,7 +18,6 @@ import TerminalButton from "../../library/free/buttons/TerminalButton";
 import SoundwaveButton from "../../library/free/buttons/SoundwaveButton";
 import GlassBevelButton from "../../library/free/buttons/GlassBevelButton";
 
-// export const buttonsData = [
 //   // 1
 //   {
 //     id: "btn-primary",
