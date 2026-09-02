@@ -1,6 +1,6 @@
-import GlassLoginForm from "../../library/free/loginform/GlassLoginForm";
-import GlassLoginForm1 from "../../library/free/loginform/f1";
-import GlassLoginForm2 from "../../library/free/loginform/f2";
+import GlassLoginForm from "../../library/free/inputs/GlassLoginForm";
+import GlassLoginForm1 from "../../library/free/inputs/f1";
+import GlassLoginForm2 from "../../library/free/inputs/f2";
 
 export const loginFormsData = [
   {

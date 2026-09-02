@@ -22,7 +22,7 @@ export default function AllComponents() {
   const [mainTab, setMainTab] = useState("freemium");
 
   // State for Freemium Categories Sub-tabs
-  const [activeCategory, setActiveCategory] = useState("Buttons");
+  const [activeCategory, setActiveCategory] = useState("Buttons & Actions");
 
   // State to track active sub-tab for individual free cards ("preview" or "code")
   const [cardTabs, setCardTabs] = useState({});
@@ -47,9 +47,9 @@ export default function AllComponents() {
     "Buttons & Actions",
     "Cards & Containers",
     "Loaders & Animations",
-    "Navigation & Dropdowns",
-    "Inputs & Forms",
-    "Feedback, Badges & Overlays",
+    "Modals, Toasts & Notifications",
+    "Inputs & Search Bars",
+    "Badges & Status Indicators",
   ];
 
   // Filtered components based on selected category
@@ -86,9 +86,9 @@ export default function AllComponents() {
       {/* Main Heading & Description */}
       <div className="text-center max-w-2xl mx-auto mb-10">
         <h1 className="text-5xl sm:text-6xl font-black text-white tracking-tight ">
-          SyncXel{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500 block sm:inline mt-1 sm:mt-0">
-            Developer Hub
+          {/* SyncXel{" "} */}Developer
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500 block sm:inline mt-1 sm:mt-0 ml-5">
+            Hub
           </span>
         </h1>
         <p className="text-sm text-slate-400 mt-2">
@@ -142,7 +142,7 @@ export default function AllComponents() {
           </div>
 
           {/* Component Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6">
             {filteredFreeComponents.map((item) => {
               const currentTab = cardTabs[item.id] || "preview";
               const isCopied = copiedId === item.id;

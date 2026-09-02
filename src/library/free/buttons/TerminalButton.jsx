@@ -6,7 +6,7 @@ export default function TerminalButton() {
     <motion.button
       whileHover={{ scale: 1.03, borderColor: "rgba(34,211,238,0.8)" }}
       whileTap={{ scale: 0.95 }}
-      className="px-4 py-2.5 bg-slate-950 border border-slate-800 text-cyan-400 font-mono text-xs rounded-xl shadow-md flex items-center gap-2 cursor-pointer"
+      className="px-4 py-2.5 bg-slate-950 border border-slate-800 text-cyan-400 font-baloo text-xs rounded-xl shadow-md flex items-center gap-2 cursor-pointer"
     >
       <span className="text-slate-500">$</span>
       <span>npm run deploy</span>

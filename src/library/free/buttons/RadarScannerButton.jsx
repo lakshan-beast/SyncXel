@@ -6,7 +6,7 @@ export default function RadarScannerButton() {
     <motion.button
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.95 }}
-      className="relative overflow-hidden px-5 py-2.5 bg-slate-950 border border-cyan-500/40 text-cyan-300 font-mono text-xs rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.15)] cursor-pointer group"
+      className="relative overflow-hidden px-5 py-2.5 bg-slate-950 border border-cyan-500/40 text-cyan-300 font-baloo text-xs rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.15)] cursor-pointer group"
     >
       <span className="relative z-10 flex items-center gap-2">
         <motion.span 

@@ -18,6 +18,10 @@ import TerminalButton from "../../library/free/buttons/TerminalButton";
 import SoundwaveButton from "../../library/free/buttons/SoundwaveButton";
 import GlassBevelButton from "../../library/free/buttons/GlassBevelButton";
 
+import HolographicShimmerButton from "../../library/free/buttons/HolographicShimmerButton";
+import BioScanButton from "../../library/free/buttons/BioScanButton";
+import QuantumFluxButton from "../../library/free/buttons/QuantumFluxButton";
+
 //   // 1
 //   {
 //     id: "btn-primary",
@@ -99,6 +103,36 @@ import GlassBevelButton from "../../library/free/buttons/GlassBevelButton";
 
 // Updated buttonsData array for your state management
 export const buttonsData = [
+  {
+    id: "btn-holo-shimmer",
+    title: "Holographic Shimmer Button",
+    category: "Buttons & Actions",
+    description:
+      "Cyberpunk neon button featuring an animated holographic light refraction beam sweep.",
+    copiesCount: 490,
+    component: <HolographicShimmerButton />,
+    code: `<motion.button whileHover={{ scale: 1.03 }} className="relative overflow-hidden px-5 py-2.5 bg-slate-950 border border-pink-500/40 text-pink-400 font-mono text-xs rounded-xl">HOLO_SHIMMER</motion.button>`,
+  },
+  {
+    id: "btn-bio-scan",
+    title: "Bio-Scan Pulse Button",
+    category: "Buttons & Actions",
+    description:
+      "Interactive security-themed button with live scanning beam and radar pulse dot.",
+    copiesCount: 360,
+    component: <BioScanButton />,
+    code: `<motion.button className="relative px-5 py-2.5 bg-slate-900 border border-emerald-500/40 text-emerald-400 font-mono text-xs rounded-xl">BIO_ACCESS</motion.button>`,
+  },
+  {
+    id: "btn-quantum-flux",
+    title: "Quantum Flux Slide Button",
+    category: "Buttons & Actions",
+    description:
+      "High-end transition button where text morphs and slides smoothly on hover.",
+    copiesCount: 580,
+    component: <QuantumFluxButton />,
+    code: `<motion.button whileHover={{ scale: 1.04 }} className="relative px-5 py-2.5 bg-slate-950 border border-violet-500/40 text-violet-300 font-mono text-xs rounded-xl overflow-hidden group">QUANTUM_FLUX</motion.button>`,
+  },
   {
     id: "btn-radar-scanner",
     title: "Radar Scanner Action Button",
