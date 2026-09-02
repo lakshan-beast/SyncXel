@@ -11,7 +11,7 @@ import { togglesData } from "./TogglesData";
 import { pricingData } from "./PricingData";
 import { accordionsData } from "./AccordionsData";
 import { avatarsData } from "./AvatorsData";
-import { tabsData } from "./tabsData";
+import { tabsData } from "./tabletsData";
 import { footersData } from "./FootersData";
 
 export const freeComponentsData = [

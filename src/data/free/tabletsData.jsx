@@ -1,5 +1,5 @@
-import CyberTabPreview from "../../library/free/tabs/CyberTabPreview";
-import MatrixTabPanel from "../../library/free/tabs/MatrixTabPanel";
+import CyberTabPreview from "../../library/free/tabets/CyberTabPreview";
+import MatrixTabPanel from "../../library/free/tabets/MatrixTabPanel";
 
 export const tabsData = [
   {
