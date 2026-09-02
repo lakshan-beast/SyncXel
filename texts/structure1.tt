@@ -1,0 +1,111 @@
+නියමයි! Home Page එකට අදාළව ඔයා කියපු කරුණු 3 මම පැහැදිලිව සටහන් කරගත්තා:
+
+1. **Explore All Components** කොටසට නිවැරදි Images/Previews එකතු කිරීම.
+2. **Contact/Newsletter Form** එක Backend එකට Connect කිරීම.
+3. **Footer Links** ටික Correct Routes/URLs වලට Update කිරීම.
+
+මේ ටික Home Page එකේ වැඩ අල්ලද්දී අපි පිළිවෙලට කරමු. දැන් අපි **"Syncxel All Components Strategy & Free vs. Paid Model"** එක ගැන දීර්ඝව සහ පැහැදිලිව කතා කරමු.
+
+---
+
+### 💡 Syncxel: Free vs Paid Strategy (Monetization & Audience Growth)
+
+ඔයාගේ අදහස **100% සාර්ථක UI Libraries (e.g., Shadcn UI, Tailwind UI, Flowbite, Aceternity UI)** ලෝකය පුරා පාවිච්චි කරන Standard Business Model එකට මාරම විදිහට ගැලපෙනවා.
+
+developers ලව Site එකට ඇදගන්න (Traffic + Hype හදාගන්න) සහ ඒ අයගෙන් Revenue (ආදායම) ගන්න එක ලස්සනට Balance කරන්නේ මෙන්න මෙහෙමයි:
+
+---
+
+### 1. 🟢 100% FREE කොටස (The Audience Magnet)
+
+* **ඇතුළත් වෙන දේවල්:**
+* Buttons (Ripple, Hover, Glow, Neon, Gradient buttons)
+* Inputs & Checkboxes (Animated text inputs, Search bars, Toggle switches)
+* Badges & Micro-Animations (Loaders, Pulse badges, Hover micro-interactions)
+* Basic Cards (Feature cards, Pricing cards basic versions)
+
+
+* **මොකටද මේක Free දෙන්නේ?**
+* Developers ලා දිනපතා ගූගල් එකේ Search කරන්නේ "Tailwind button UI", "React animated card" වගේ Micro components.
+* මේවා Free දුන්නාම Site එකට **SEO Traffic** එකයි, Github/Twitter/LinkedIn වල **Social Shares** කියන දේ නිකන්ම ලැබෙනවා.
+* Site එක එකපාරටම Popular වෙන්න ප්‍රධානම හේතුව මේ Free Buttons & Micro UI ටික.
+
+
+
+---
+
+### 2. 🟡 FREE vs PAID (Dark Footer වගේ Component Blocks වල ප්‍රශ්නය)
+
+ඔයා ඇහුවා **Dark Footer, Complex Navbars, Hero Sections** වගේ දේවල් Free දෙන්නද Paid දෙන්නද කියලා. ඒකට සුපිරි විසඳුමක් තියෙනවා:
+
+* **80/20 Rule එක පාවිච්චි කරන්න:**
+* **Standard / Clean Footers & Heroes:** **FREE** දෙන්න. (උදා: සාමාන්‍ය Clean Footer 2-3ක් Free දෙන්න).
+* **Ultra-Premium / Heavy Animated Footers:** **PAID (PRO)** කරන්න.
+* (උදා: ඔයා හදපු Dark Glowing Grid & Blur effects තියෙන high-end Footer එක, Glassmorphism Hero Section එක වගේ දේවල් Pro එකට දාන්න).
+
+
+
+
+* **Launch Strategy (පටන් ගන්නකොට):**
+* Site එක Launch කරන මුල් කාලේ (Traffic හදනකල්) මෙන්න මේ Dark Footer එකත් **FREE** දීලා Social Media වල Post එකක් දාන්න: *"Free Glowing Modern Dark Footer Component for React + Tailwind!"* කියලා.
+* ඒකෙන් ලොකු Traffic එකක් ආවාට පස්සේ, ඉදිරියට හදන Premium Sections Pro එකට මාරු කරන්න පුළුවන්.
+
+
+
+---
+
+### 3. 🔴 100% PAID / PRO කොටස (The Business & Revenue)
+
+* **ඇතුළත් වෙන දේවල්:**
+* **Full Landing Page Templates:** (SaaS Landing Page, Agency Portfolio, E-commerce Starter).
+* **Complete Client Starters / Dashboards:** (Admin Dashboards, Analytics UI, User Settings Hubs).
+* **Complex Multi-step Components:** (Multi-step Checkout forms, Interactive Pricing Calculators).
+
+
+* **ඇයි මේවා Paid කරන්නේ?**
+* Freelance Developers ලා සහ Startups අය තමන්ගේ Client Projects වල දවස් 4-5ක් ඉතිරි කරගන්න $29 - $49 වගේ ගානක් Template එකකට ගෙවන්න දෙගිඩියාවක් නැතුව ලෑස්තියි.
+
+
+
+---
+
+### 4. ☕ "Buy Me a Coffee" vs "Pro Subscription/Lifetime Pass"
+
+* **දැනට තියෙන Buy Me a Coffee එක:**
+* මේක දැනට Home Page එකේ තියෙන එක ගොඩක් හොඳයි! මොකද Free Components පාවිච්චි කරන අයගෙන් කැමති කෙනෙක්ට Small Donation එකක් දෙන්න ඒකෙන් පුළුවන්.
+
+
+* **ඉදිරියට එන PRO System එක:**
+* **Lifetime Access Pass ($29 - $49):** එක පාරක් ගෙව්ව ගමන් හැමදාටම එන Pro Templates & Paid Sections unlocked වෙනවා. Developers ලා මාරම කැමති Model එකක්.
+
+
+
+---
+
+### 🎯 "All Components" Page එකේ Layout එක හදන නිවැරදි විදිහ
+
+අපි All Components Page එක හදද්දී Categories සහ Layout එක මේ විදිහට බෙදමු:
+
+1. **Tab Based Navigation (උඩින්ම Category Bar එක):**
+* `All` (අයින් කළාම පහත Categories විතරක් පෙන්නනවා)
+* `Buttons` (3 Grid layout - Small cards)
+* `Inputs & Form Controls` (3 Grid layout)
+* `Cards & Badges` (3 Grid layout)
+* `Sections (Footers / Heroes)` (1 Column Full-width layout - Large Cards)
+* `Templates (Pro)` (Full width layout with Live Demo link)
+
+
+2. **Visual Badging (Free & Pro පෙන්වන හැටි):**
+* Free components වල උඩින් **`FREE`** (Green Badge)
+* Paid components වල උඩින් **`PRO`** (Glowing Amber Badge)
+
+
+3. **User Action Control:**
+* Free Card එකේ "Copy Code" එබුවාම code එක copy වෙනවා.
+* Pro Card එකේ "Copy Code" එබුවාම **"Unlock Syncxel Pro to get this Component + All Templates"** කියන ලස්සන Upgrade Modal එකක් POP-UP වෙනවා.
+
+
+
+---
+
+මේ Strategy එක ගැන ඔයාගේ අදහස මොකක්ද? මේ විදිහට Components Category ටිකයි, Free/Pro split එකයි බෙදෙන එක ඔයාගේ Vision එකට ගැලපෙනවද?

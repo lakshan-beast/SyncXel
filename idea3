@@ -1,0 +1,84 @@
+**Inputs & Forms**
+
+* Keyboard shortcuts (`⌘K`) සහිත සෙවුම් තීරු (Command Search Bars)
+* Animated borders සහ smooth focus rings සහිත Floating label text inputs
+* Progress states සහ live feedback සහිත File upload dropzones
+* Built-in strength meter bars සහිත Password input fields
+
+**Cards & Containers**
+
+* Monthly/yearly toggle highlights සහ glowing borders සහිත Pricing cards
+* Modern Apple-style multi-box layouts (Bento grids)
+* User avatars සහ rating tags සහිත Testimonial සහ review cards
+* Hover zoom effects සහිත Blog post preview හෝ article cards
+
+**Navigation & Dropdowns**
+
+* Icon support, category dividers සහ keyboard hints සහිත Dropdown menus
+* Responsive mobile menus සහිත Glassmorphic top navigation bars
+* Active page highlights සහිත Clean pagination components
+* Smooth sliding backgrounds සහිත Interactive tab switchers
+
+**Feedback & Overlays**
+
+* Success, Error, Warning, Info states සහිත Toast notification popups
+* Dismiss buttons සහ action triggers සහිත Alert banners
+* Dark backdrop blur effects සහිත Modal dialogs
+* Context menus සහ interactive tooltips
+
+**Badges, Pills & Indicators**
+
+* Online, Processing, Syncing pulsing dots සහිත Live status pills
+* Copy-to-clipboard feedback animations සහිත Code snippet blocks
+* Rating stars සහ user review counter tags
+* Social proof හෝ feature highlight badges
+
+මේ කාණ්ඩ 5 යටතේ ඔයාට ඕනෑම modern UI component එකක් ඉතා පිළිවෙළට වර්ග කරගන්න පුළුවන්. මේ විදිහට database එකේ හෝ array එකේ structure එක හදාගත්තම, front-end එකේ filter කරන්නත්, developers ලාට code එක හොයාගන්නත් ගොඩක් ලේසි වෙනවා. මුලින්ම මේ categories වලින් කොයි කොටසට ද කම්පොනන්ට්ස් ටික එකතු කරන්න පටන් ගන්නේ?
+
+
+
+**Buttons & Actions**
+
+* Neon glow buttons සහ hover කළ විට දිලිසෙන border effects
+* Arrow icons මාරු වන interactive action buttons
+* Click කළ පසු loading state එකට මාරු වන spinner buttons
+* Minimalist text links (subtle underline animations එක්ක)
+
+**Loaders & Animations**
+
+* Modern circular spinners සහ dual-ring loaders
+* Twitter/Facebook ස්ටයිල් එකේ Shimmer skeleton loaders
+* Live pulsing dots සහ sound wave equalizers
+* Smooth percentage progress loaders
+
+**Inputs & Forms**
+
+* Keyboard shortcuts (`⌘K`) සහිත Command search bars
+* Animated borders සහ floating labels තියෙන text inputs
+* Live strength meter bars සහිත password input fields
+* Drag-and-drop progress states සහිත file upload dropzones
+* Cyberpunk style toggle switches සහ checkboxes
+
+**Cards & Containers**
+
+* Modern Apple-style multi-box Bento grids
+* Monthly/yearly toggle highlights සහ glowing borders සහිත pricing cards
+* User avatars සහ rating tags සහිත testimonial cards
+* Hover zoom effects තියෙන blog preview cards
+
+**Navigation & Dropdowns**
+
+* Glassmorphic top navigation bars (responsive mobile menus එක්ක)
+* Icon support සහ keyboard hints තියෙන dropdown menus
+* Sliding backgrounds සහිත interactive tab switchers
+* Active page highlights සහිත clean pagination components
+
+**Feedback, Badges & Overlays**
+
+* Success, Error, Warning, Info states සහිත toast notification popups
+* Dismiss buttons සහ action triggers සහිත alert banners
+* Online, Processing, Syncing pulsing dots තියෙන live status pills
+* Copy-to-clipboard feedback animations සහිත code snippet blocks
+* Dark backdrop blur effects තියෙන modal dialogs සහ tooltips
+
+මේ විදිහට හැම කාණ්ඩයකටම අවශ්‍ය කරන modern components ටික හරියටම plan කරගත්තම, සයිට් එක සම්පූර්ණ කළාම වෙනමම 2026 trend එකට ගැලපෙන elite UI library එකක් වෙනවා. දැන් මේවයින් මුලින්ම **Buttons & Actions** එකෙන් වැඩේ පටන් ගමුද?

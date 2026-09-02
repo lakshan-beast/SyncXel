@@ -1,0 +1,38 @@
+Aniwarenma, oya wage free component library ekak (Uiverse, Tailwind UI wage) hadana eka patta idea ekak! Developers lata godak helpful wena, web app ekakata anivaryema oana wena categories kochchara thiyenawada kiyala balanna. Oyata me categories wath, eke athule danna puluwan specific components wath include karanna puluwan.
+
+**Inputs & Forms**
+
+* Search bars with integrated keyboard shortcut indicators (`⌘K`)
+* Floating label text inputs with animated borders
+* File upload dropzones with progress states
+* Password inputs with built-in strength meter bars
+
+**Cards & Containers**
+
+* Pricing cards with monthly/yearly toggle highlights and glowing borders
+* Bento grid feature cards (modern Apple-style multi-box layouts)
+* Testimonial and review cards with user avatars
+* Blog post preview or article cards with hover zoom effects
+
+**Navigation & Dropdowns**
+
+* Dropdown menus with icon support, category dividers, and keyboard hints
+* Glassmorphic top navigation bars with responsive mobile menus
+* Clean pagination components with active page highlights
+* Interactive tab switchers with smooth sliding backgrounds
+
+**Feedback & Overlays**
+
+* Toast notification popups (Success, Error, Warning, Info states)
+* Alert banners with dismiss buttons and action triggers
+* Modal dialogs with dark backdrop blur effects
+* Context menus and interactive tooltips
+
+**Badges, Pills & Indicators**
+
+* Live status pills (Online, Processing, Syncing with pulsing dots)
+* Code snippet blocks with copy-to-clipboard feedback animations
+* Rating stars and user review counter tags
+* Social proof or feature highlight badges
+
+Mewain mona category ekenda mulinma component tikak hadanna oni kiyala kiyanna. Mama ewa oya illana format ekatama hadala dennam!

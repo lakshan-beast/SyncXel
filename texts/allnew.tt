@@ -1,0 +1,298 @@
+import React, { useState } from "react";
+import {
+  HiArrowLeft,
+  HiCheck,
+  HiCode,
+  HiEye,
+  HiExternalLink,
+  HiShoppingCart,
+  HiSparkles,
+} from "react-icons/hi";
+
+export default function AllComponents() {
+  // State for Main Tabs: "freemium" or "premium"
+  const [mainTab, setMainTab] = useState("freemium");
+
+  // State to track active sub-tab for individual free cards ("preview" or "code")
+  const [cardTabs, setCardTabs] = useState({});
+
+  const toggleCardTab = (id, tab) => {
+    setCardTabs((prev) => ({ ...prev, [id]: tab }));
+  };
+
+  // Mock Data for Free Components (Freemium)
+  const freeComponents = [
+    {
+      id: "btn-primary",
+      title: "Interactive Primary Button",
+      category: "Buttons",
+      type: "free",
+      description: "Clean Tailwind button with smooth hover animation.",
+      code: `<button className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all shadow-lg shadow-cyan-500/20">\n  Click Me\n</button>`,
+    },
+    {
+      id: "card-stats",
+      title: "Stats Glass Card",
+      category: "Cards",
+      type: "free",
+      description: "Glassmorphism card designed for SaaS metrics.",
+      code: `<div className="p-6 bg-slate-900/40 border border-slate-800 rounded-2xl backdrop-blur-md">\n  <h4 className="text-2xl font-black text-white">500+</h4>\n  <p className="text-xs text-slate-400 mt-1">Active Users</p>\n</div>`,
+    },
+    {
+      id: "loader-spinner",
+      title: "Cyber Loader",
+      category: "Loaders",
+      type: "free",
+      description: "Modern spinning loader with cyan glowing effect.",
+      code: `<div className="w-6 h-6 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin" />`,
+    },
+  ];
+
+  // Mock Data for Premium UI-Kit (Templates)
+  const premiumKits = [
+    {
+      id: "kit-photographer",
+      title: "Photographer Portfolio & Agency Kit",
+      category: "Full Template",
+      price: "$9",
+      description:
+        "Complete dark-mode ready photographer website template with Navbar, Hero, Services, Contact, and Footer components included.",
+      previewImg: "src/assets/photograpy-website.png",
+      demoUrl: "https://photography-website-puce-omega.vercel.app/",
+      checkoutUrl: "https://yourstore.lemonsqueezy.com/buy/your-product-id",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-100 py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* 1. TOP HEADER SECTION */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+        <div className="flex items-center space-x-4">
+          <a
+            href="/"
+            className="p-2.5 bg-slate-900 border border-slate-800 hover:bg-slate-800 rounded-xl transition-all text-slate-300 hover:text-white flex items-center space-x-2 text-xs font-medium">
+            <HiArrowLeft className="w-4 h-4" />
+            <span>Back to Home</span>
+          </a>
+          <span className="text-xs text-slate-400 bg-slate-900/60 px-3 py-1.5 rounded-xl border border-slate-800">
+            Last Updated: <strong className="text-cyan-400">August 2026</strong>
+          </span>
+        </div>
+
+        {/* Friendly Free Usage Banner */}
+        <div className="bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-xl flex items-center space-x-2 text-xs text-cyan-300">
+          <HiSparkles className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+          <span>
+            All free components can be used anywhere in your personal & client
+            projects freely!
+          </span>
+        </div>
+      </div>
+
+      {/* Main Heading & Description */}
+      <div className="text-center max-w-2xl mx-auto mb-10">
+        <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          Syncxel <span className="text-cyan-400">Developer Hub</span>
+        </h1>
+        <p className="text-sm text-slate-400 mt-2">
+          Explore high-performance React & Tailwind components or get the
+          professional UI-Kit bundle for your next big project.
+        </p>
+      </div>
+
+      {/* 2. MAIN TABS SWITCHER (Freemium vs Premium UI-Kit) */}
+      <div className="flex justify-center mb-10">
+        <div className="bg-slate-900 p-1.5 rounded-2xl border border-slate-800 flex space-x-2 shadow-xl">
+          <button
+            onClick={() => setMainTab("freemium")}
+            className={`px-6 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+              mainTab === "freemium"
+                ? "bg-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/20"
+                : "text-slate-400 hover:text-white"
+            }`}>
+            🧩 Freemium Components (Free)
+          </button>
+          <button
+            onClick={() => setMainTab("premium")}
+            className={`px-6 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+              mainTab === "premium"
+                ? "bg-amber-400 text-slate-950 shadow-lg shadow-amber-400/20"
+                : "text-slate-400 hover:text-white"
+            }`}>
+            🚀 Premium UI-Kit (Templates)
+          </button>
+        </div>
+      </div>
+
+      {/* 3. CONTENT AREA BASED ON MAIN TAB */}
+      {mainTab === "freemium" ? (
+        /* --- FREEMIUM TAB CONTENT --- */
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {freeComponents.map((item) => {
+            const currentTab = cardTabs[item.id] || "preview";
+            return (
+              <div
+                key={item.id}
+                className="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
+                {/* Card Header */}
+                <div className="p-4 border-b border-slate-800 bg-slate-900/60 flex items-center justify-between">
+                  <div>
+                    <h3 className="text-sm font-bold text-white">
+                      {item.title}
+                    </h3>
+                    <span className="text-[10px] text-cyan-400 uppercase tracking-wider font-semibold">
+                      {item.category}
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">
+                    Free
+                  </span>
+                </div>
+
+                {/* Sub-Tabs (Preview vs Code) */}
+                <div className="flex bg-slate-950 px-4 py-2 border-b border-slate-800/60 space-x-2">
+                  <button
+                    onClick={() => toggleCardTab(item.id, "preview")}
+                    className={`text-xs px-3 py-1 rounded-lg font-medium transition-all flex items-center space-x-1 cursor-pointer ${currentTab === "preview" ? "bg-cyan-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"}`}>
+                    <HiEye className="w-3.5 h-3.5" />
+                    <span>Preview</span>
+                  </button>
+                  <button
+                    onClick={() => toggleCardTab(item.id, "code")}
+                    className={`text-xs px-3 py-1 rounded-lg font-medium transition-all flex items-center space-x-1 cursor-pointer ${currentTab === "code" ? "bg-cyan-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"}`}>
+                    <HiCode className="w-3.5 h-3.5" />
+                    <span>Code</span>
+                  </button>
+                </div>
+
+                {/* Body Content */}
+                <div className="p-6 min-h-[160px] bg-slate-950/60 flex items-center justify-center">
+                  {currentTab === "preview" ? (
+                    <div className="text-center">
+                      <p className="text-xs text-slate-400 mb-4">
+                        {item.description}
+                      </p>
+                      {item.id === "btn-primary" && (
+                        <button className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs rounded-xl transition-all shadow-lg shadow-cyan-500/20">
+                          Click Me
+                        </button>
+                      )}
+                      {item.id === "card-stats" && (
+                        <div className="p-4 bg-slate-900 border border-slate-800 rounded-xl text-left">
+                          <h4 className="text-lg font-black text-white">
+                            500+
+                          </h4>
+                          <p className="text-[10px] text-slate-400">
+                            Active Users
+                          </p>
+                        </div>
+                      )}
+                      {item.id === "loader-spinner" && (
+                        <div className="w-6 h-6 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto" />
+                      )}
+                    </div>
+                  ) : (
+                    <pre className="w-full h-32 overflow-auto text-[11px] text-cyan-300 bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono">
+                      <code>{item.code}</code>
+                    </pre>
+                  )}
+                </div>
+
+                {/* Footer Action */}
+                <div className="p-3 bg-slate-900/80 flex items-center justify-between border-t border-slate-800">
+                  <span className="text-[10px] text-slate-400">
+                    Ready to copy
+                  </span>
+                  <button
+                    onClick={() => navigator.clipboard.writeText(item.code)}
+                    className="px-3.5 py-1.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 rounded-lg text-xs font-bold transition-all shadow-lg shadow-cyan-500/20 cursor-pointer flex items-center space-x-1">
+                    <HiCheck className="w-3.5 h-3.5" />
+                    <span>Copy Code</span>
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        /* --- PREMIUM UI-KIT TAB CONTENT --- */
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {premiumKits.map((kit) => (
+            <div
+              key={kit.id}
+              className="bg-slate-900/60 border border-amber-500/30 rounded-3xl overflow-hidden flex flex-col justify-between shadow-2xl col-span-full">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Kit Image Preview */}
+                <div className="relative h-64 lg:h-full overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800">
+                  <img
+                    src={kit.previewImg}
+                    alt={kit.title}
+                    className="w-full h-full object-contain"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="text-xs font-bold text-amber-950 bg-amber-400 px-3 py-1 rounded-full shadow-lg">
+                      Pro UI-Kit • {kit.price}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Kit Details & Actions */}
+                <div className="p-8 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {kit.title}
+                    </h3>
+                    <p className="text-xs text-slate-300 leading-relaxed mb-6">
+                      {kit.description}
+                    </p>
+
+                    {/* Features checklist included in kit */}
+                    <div className="space-y-2 mb-8">
+                      <div className="flex items-center space-x-2 text-xs text-slate-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                        <span>
+                          Navbar, Hero, Services, Contacts & Footer included
+                        </span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-xs text-slate-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                        <span>Fully responsive with dark mode enabled</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-xs text-slate-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                        <span>Instant .zip download via Lemon Squeezy</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Buy / Demo Actions */}
+                  <div className="flex items-center space-x-3 pt-4 border-t border-slate-800">
+                    {kit.demoUrl && (
+                      <a
+                        href={kit.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-semibold flex items-center space-x-1.5 transition-all">
+                        <HiExternalLink className="w-4 h-4" />
+                        <span>Live Demo</span>
+                      </a>
+                    )}
+                    <a
+                      href={kit.checkoutUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-xl text-xs font-bold flex items-center justify-center space-x-2 transition-all shadow-lg shadow-amber-400/20">
+                      <HiShoppingCart className="w-4 h-4" />
+                      <span>Get UI-Kit ({kit.price})</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+    

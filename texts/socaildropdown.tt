@@ -1,0 +1,43 @@
+{/* Navbar Dropdown for FAQ & Reviews */}
+<div className="relative group">
+  {configs/Trigger Button}
+  <button className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2 text-sm font-medium cursor-pointer">
+    <span>Resources</span> {/* නැත්නම් "Support" වගේ නමක් දාන්න පුළුවන් */}
+    <svg className="w-4 h-4 text-slate-400 group-hover:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  {/* Dropdown Box */}
+  <div className="absolute top-full left-0 mt-3 w-64 bg-slate-900/95 backdrop-blur-lg border border-white/10 rounded-xl p-2 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+    
+    {/* Reviews Link */}
+    <a
+      href="#reviews"
+      onClick={(e) => handleNavClick(e, "reviews")}
+      className="block px-3 py-2.5 rounded-lg hover:bg-white/10 transition-colors"
+    >
+      <div className="text-white font-medium text-sm flex items-center justify-between">
+        <span>⭐ Community Reviews</span>
+      </div>
+      <div className="text-xs text-white/60 mt-0.5">
+        See what developers are saying
+      </div>
+    </a>
+
+    {/* FAQ Link */}
+    <a
+      href="#faq"
+      onClick={(e) => handleNavClick(e, "faq")}
+      className="block px-3 py-2.5 rounded-lg hover:bg-white/10 transition-colors mt-1"
+    >
+      <div className="text-white font-medium text-sm flex items-center justify-between">
+        <span>❓ FAQ</span>
+      </div>
+      <div className="text-xs text-white/60 mt-0.5">
+        Common questions & licensing
+      </div>
+    </a>
+
+  </div>
+</div>
