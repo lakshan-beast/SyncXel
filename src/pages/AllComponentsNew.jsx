@@ -167,17 +167,17 @@ export default function AllComponents() {
               return (
                 <div
                   key={item.id}
-                  className="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
+                  className="bg-white/15 backdrop-blur-lg  border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
                   {/* Card Header */}
-                  <div className="p-4 border-b border-slate-800 bg-slate-900/60 flex items-start justify-between">
+                  <div className="px-4 py-6 border-b border-slate-800 bg-slate-900/60 flex items-start justify-between">
                     <div>
-                      <h3 className="text-sm font-bold text-white">
+                      <h3 className="text-sm font-bold text-white mb-1">
                         {item.title}
                       </h3>
-                      <span className="text-[10px] text-cyan-400 uppercase tracking-wider font-semibold">
+                      <span className="text-[10px] text-cyan-400 uppercase tracking-wider bg-cyan-400/10 px-4 py-0.5 rounded-full border border-cyan-400/20">
                         {item.category}
                       </span>
-                      <p className="text-xs text-slate-400 mb-1 border-t border-white/10 pt-1">
+                      <p className="text-xs text-slate-400 mt-1.5 mb-0.5 border-t border-white/10 pt-1">
                         {item.description}
                       </p>
                     </div>
@@ -187,23 +187,29 @@ export default function AllComponents() {
                   </div>
 
                   {/* Sub-Tabs (Preview vs Code) */}
-                  <div className="flex bg-slate-950 px-4 py-2 border-b border-slate-800/60 space-x-2">
-                    <button
-                      onClick={() => toggleCardTab(item.id, "preview")}
-                      className={`text-xs px-3 py-1 rounded-lg font-medium transition-all flex items-center space-x-1 cursor-pointer ${currentTab === "preview" ? "bg-cyan-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"}`}>
-                      <HiEye className="w-3.5 h-3.5" />
-                      <span>Preview</span>
-                    </button>
-                    <button
-                      onClick={() => toggleCardTab(item.id, "code")}
-                      className={`text-xs px-3 py-1 rounded-lg font-medium transition-all flex items-center space-x-1 cursor-pointer ${currentTab === "code" ? "bg-cyan-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"}`}>
-                      <HiCode className="w-3.5 h-3.5" />
-                      <span>Code</span>
-                    </button>
+                  <div className="flex px-2 py-2 justify-between ">
+                    <div className="flex space-x-2">
+                      <button
+                        onClick={() => toggleCardTab(item.id, "preview")}
+                        className={`text-xs px-3 py-1 rounded-lg font-medium transition-all flex items-center space-x-1 cursor-pointer ${currentTab === "preview" ? "bg-cyan-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"}`}>
+                        <HiEye className="w-3.5 h-3.5" />
+                        <span>Preview</span>
+                      </button>
+                      <button
+                        onClick={() => toggleCardTab(item.id, "code")}
+                        className={`text-xs px-3 py-1 rounded-lg font-medium transition-all flex items-center space-x-1 cursor-pointer ${currentTab === "code" ? "bg-cyan-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"}`}>
+                        <HiCode className="w-3.5 h-3.5" />
+                        <span>Code</span>
+                      </button>
+                    </div>
+
+                    <span className="flex items-center gap-2 font-exo text-xs font-bold text-orange-600 bg-orange-400/10 px-4 py-1 rounded-full border border-orange-400/20  ">
+                      <TbFileDownloadFilled /> {item.copiesCount}
+                    </span>
                   </div>
 
                   {/* Body Content */}
-                  <div className="p-2 min-h-40 bg-slate-950/60 flex items-center justify-center overflow-scroll">
+                  <div className="p-2 min-h-50 bg-slate-950/60 flex items-center justify-center">
                     {currentTab === "preview" ? (
                       <div className="text-center w-full flex items-center justify-center">
                         {/* අර පරණ item.id කන්ඩිෂන් ඔක්කොම අයින් කරලා මේක විතරක් දාන්න */}
@@ -223,9 +229,6 @@ export default function AllComponents() {
                       Ready to copy
                     </span>
 
-                    <span className="flex items-center gap-2 font-exo ">
-                      <TbFileDownloadFilled /> {item.copiesCount}
-                    </span>
                     <button
                       onClick={() => handleCopy(item.id, item.code)}
                       className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center space-x-1 ${

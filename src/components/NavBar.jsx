@@ -263,11 +263,12 @@
 //   );
 // }
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -283,16 +284,14 @@ export default function NavBar() {
     e.preventDefault();
 
     if (location.pathname !== "/") {
-      // Home Page නෙවෙයි නම්, මුලින්ම Home Page එකට Navigate වෙලා ඉන්නවා
       navigate("/");
       setTimeout(() => {
         const element = document.getElementById(targetId);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 100); // Home page load වෙනකම් podi delay එකක්
+      }, 100);
     } else {
-      // දැනටමත් Home Page එකේ ඉන්නවා නම් Direct Smooth Scroll
       const element = document.getElementById(targetId);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -309,13 +308,13 @@ export default function NavBar() {
             <img
               src="/syncxel-logo-removebg.png"
               alt="SyncXel Logo"
-              width={35}
-              height={35}
-              className="object-contain"
+              width={38}
+              height={38}
+              className="object-contain border-2 border-cyan-400 rounded-full p-1 "
             />
-            <span className="text-3xl sm:text-2xl font-bold tracking-tight text-white font-exo">
+            <span className="text-3xl sm:text-2xl font-bold tracking-tight text-white font-baloo uppercase">
               Sync
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500 text-3xl">
                 Xel
               </span>
             </span>
@@ -394,6 +393,15 @@ export default function NavBar() {
               className="text-sm font-semibold text-slate-950 bg-cyan-400 hover:bg-cyan-300 transition-colors px-4 py-2 rounded-xl shadow-lg shadow-cyan-500/20">
               Get Started
             </Link>
+
+            {/* <motion.link
+              to="/components"
+              whileHover={{ scale: 1.1, rotate: [-1, 1, -1, 0] }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 500, damping: 10 }}
+              className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-indigo-600/30 cursor-pointer">
+              Get Started
+            </motion.link> */}
           </div>
 
           {/* Mobile Menu Toggle Button */}

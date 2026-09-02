@@ -171,6 +171,7 @@
 // }
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   HiOutlineSparkles,
   HiOutlineCodeBracket,
@@ -201,22 +202,28 @@ export default function GlassGlowHeroButton() {
   };
 
   return (
-    <section className="relative pt-1 pb-16 px-4 sm:px-8 md:pt-5  lg:pt-18 overflow-hidden min-h-screen flex items-center justify-center sm:items-start text-wrap">
+    <section className="relative pt-0 pb-16 px-4 sm:px-8 md:pt-16 lg:pt-30 overflow-hidden min-h-screen flex items-center justify-center sm:items-start text-wrap">
       {/* 1. ANIMATED BACKGROUND GRID PATTERN */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:24px_24px] animate-pulse" />
+      <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:30px_30px] animate-pulse" />
 
       {/* 2. PULSING GLOW ORBS (Standardized Arbitrary Classes)  */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] bg-cyan-500/55 blur-[140px] pointer-events-none rounded-full animate-pulse" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 sm:w-125 h-75 bg-cyan-500/55 blur-[140px] pointer-events-none rounded-full animate-pulse" />
       {/* <div className="absolute top-1/3 right-10 w-[250px] sm:w-[350px] h-[250px] sm:h-[350px] bg-blue-600/15 blur-[150px] pointer-events-none rounded-full" />  */}
 
       <div className="max-w-7xl mx-auto space-y-3 md:space-y-8 relative z-10 w-full">
         {/* Top Badge, Headline & CTAs */}
-        <div className="text-center space-y-4 max-w-4xl mx-auto">
+        <div className="text-center space-y-3 max-w-4xl mx-auto">
           {/* Version Badge */}
           <a
             href="#components"
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-white/10 hover:border-cyan-500/50 text-xs text-slate-300 transition-all duration-300 shadow-lg group text-wrap ">
-            <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+            className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-slate-900/70 border-2 border-white/20 hover:border-cyan-500/50 text-xs text-slate-300 transition-all duration-300 shadow-lg group text-wrap ">
+            <div className="relative flex items-center justify-center w-4 h-4">
+              <motion.div
+                animate={{ scale: [1, 1.6], opacity: [0.6, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+                className="absolute w-3 h-3 rounded-full bg-cyan-500"
+              />
+            </div>
             <span className="font-semibold text-white ">SyncXel v1.0</span>
             <span>• React & Tailwind Architecture</span>
             <HiOutlineArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -241,14 +248,14 @@ export default function GlassGlowHeroButton() {
             <a
               href="#components"
               className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-linear-to-r from-cyan-400 to-indigo-500 text-slate-950 font-bold text-sm hover:opacity-95 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/20 group cursor-pointer">
-              <HiOutlineSparkles className="w-4 h-4 fill-slate-950" />
+              <HiOutlineSparkles className="w-4 h-4 fill-slate-950 group-hover:scale-250 group-hover:-rotate-12 duration-300" />
               <span>Explore Components</span>
-              <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <HiOutlineArrowRight className="w-4 h-4 font-bold group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#hire"
-              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900/80 border-2 border-white/15 hover:border-cyan-400/50 text-white font-semibold text-sm hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 cursor-pointer">
-              <HiOutlineCodeBracket className="w-4 h-4 text-cyan-400" />
+              className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900/80 border-2 border-white/15 hover:border-cyan-400/50 text-white font-semibold text-sm hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 cursor-pointer group:">
+              <HiOutlineCodeBracket className="w-4 h-4 text-cyan-400 group-hover:scale-250 group-hover:rotate-12 duration-300" />
               <span>Hire Us for Custom Project</span>
             </a>
           </div>
@@ -322,10 +329,17 @@ export default function GlassGlowHeroButton() {
                     {/* <button className="px-6 py-2.5 text-sm font-mono font-bold tracking-widest text-white bg-transparent border-2 border-white/80 rounded-full transition-all duration-300 hover:border-white hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] active:scale-95 cursor-pointer">
                       GET STARTED
                     </button> */}
-                    <button className="px-8 py-3.5 text-lg font-mono font-bold tracking-[4px] text-white bg-transparent border-2 border-white/80 rounded-full transition-all duration-300 ease-out hover:text-white hover:border-white hover:shadow-[0_0_45px_rgba(255,255,255,0.9)] [webkit-box-reflect:below_0px_linear-gradient(transparent,transparent,#0004)] active:scale-95 cursor-pointer">
+                    {/* <button className="px-8 py-3.5 text-lg font-mono font-bold tracking-[4px] text-white bg-transparent border-2 border-white/80 rounded-full transition-all duration-300 ease-out hover:text-white hover:border-white hover:shadow-[0_0_45px_rgba(255,255,255,0.9)] [webkit-box-reflect:below_0px_linear-gradient(transparent,transparent,#0004)] active:scale-95 cursor-pointer">
                       {" "}
                       GET STARTED
-                    </button>
+                    </button> */}
+
+                    <motion.button
+                      whileHover={{ skewX: [-5, 5, -2, 0], scale: 1.03 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-5 py-2.5 bg-slate-900 border border-rose-500/40 text-rose-400 hover:text-cyan-400 font-mono text-xs font-bold rounded-xl shadow-[0_0_15px_rgba(244,63,94,0.2)] cursor-pointer">
+                      SYS_GLITCH()
+                    </motion.button>
                   </div>
                 </div>
               </div>
