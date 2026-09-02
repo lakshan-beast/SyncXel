@@ -44,12 +44,12 @@ export default function AllComponents() {
 
   // Categories list for Freemium
   const categories = [
-    "Buttons",
-    "Cards",
-    "Loaders",
-    "Navbars",
-    "Animations",
-    "Login",
+    "Buttons & Actions",
+    "Cards & Containers",
+    "Loaders & Animations",
+    "Navigation & Dropdowns",
+    "Inputs & Forms",
+    "Feedback, Badges & Overlays",
   ];
 
   // Filtered components based on selected category

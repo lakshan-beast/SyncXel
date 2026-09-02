@@ -1,14 +1,44 @@
 import GlassLoginForm from "../../library/free/loginform/GlassLoginForm";
+import GlassLoginForm1 from "../../library/free/loginform/f1";
+import GlassLoginForm2 from "../../library/free/loginform/f2";
 
 export const loginFormsData = [
   {
     id: "loader-spinner-form",
     title: "Glowing Spinner Loader",
-    category: "Login", // 👈 category එක 'Loaders' විය යුතුයි
+    category: "Inputs & Forms", // 👈 category එක 'Loaders' විය යුතුයි
     description:
       "A smooth glowing spinner loader built with Tailwind CSS animation.",
     copiesCount: 154,
     component: <GlassLoginForm />, // 👈 Preview එකට පෙන්වීමට සැබෑ React Component එක
+    code: `<div className="relative w-12 h-12">
+  <div className="w-full h-full rounded-full border-4 border-slate-800"></div>
+  <div className="absolute inset-0 rounded-full border-4 border-cyan-400 border-t-transparent animate-spin shadow-[0_0_15px_rgba(34,211,238,0.5)]"></div>
+</div>`, // 👈 Code tab එකේ පෙන්වීමට JSX string එක
+  },
+
+  {
+    id: "loader-spinner-form1",
+    title: "Glowing Spinner Loader",
+    category: "Inputs & Forms", // 👈 category එක 'Loaders' විය යුතුයි
+    description:
+      "A smooth glowing spinner loader built with Tailwind CSS animation.",
+    copiesCount: 154,
+    component: <GlassLoginForm1 />, // 👈 Preview එකට පෙන්වීමට සැබෑ React Component එක
+    code: `<div className="relative w-12 h-12">
+  <div className="w-full h-full rounded-full border-4 border-slate-800"></div>
+  <div className="absolute inset-0 rounded-full border-4 border-cyan-400 border-t-transparent animate-spin shadow-[0_0_15px_rgba(34,211,238,0.5)]"></div>
+</div>`, // 👈 Code tab එකේ පෙන්වීමට JSX string එක
+  },
+
+  {
+    id: "loader-spinner-form2",
+    title: "Glowing Spinner Loader",
+    category: "Inputs & Forms", // 👈 category එක 'Loaders' විය යුතුයි
+    description:
+      "A smooth glowing spinner loader built with Tailwind CSS animation.",
+    copiesCount: 154,
+    component: <GlassLoginForm2 />, // 👈 Preview එකට පෙන්වීමට සැබෑ React Component එක
     code: `<div className="relative w-12 h-12">
   <div className="w-full h-full rounded-full border-4 border-slate-800"></div>
   <div className="absolute inset-0 rounded-full border-4 border-cyan-400 border-t-transparent animate-spin shadow-[0_0_15px_rgba(34,211,238,0.5)]"></div>

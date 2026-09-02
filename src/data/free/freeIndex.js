@@ -1,5 +1,5 @@
-import { buttonsData } from "./ButtonsData";
-import { loadersData } from "./LoardersData";
+import { buttonsData } from "./Buttons-ActionsData";
+import { loadersData } from "./Loarders-AnimationsData";
 // import { footersData } from "./FooterData";
 import { animationsData } from "./AnimationData";
 import { loginFormsData } from "./LoginFormData";
