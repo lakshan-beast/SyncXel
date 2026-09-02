@@ -1,16 +1,16 @@
 import HolographicCard from "../../library/free/cards/HolographicCard";
 import CyberMetricCard from "../../library/free/cards/CyberMetricCard";
 
-import BrutalProfileCard from "./BrutalProfileCard";
-import BrutalStatCard from "./BrutalStatCard";
-import GlassProfileCard from "./GlassProfileCard";
-import GlassStatsCard from "./GlassStatsCard";
-import BentoMetricCard from "./BentoMetricCard";
-import BentoFeatureCard from "./BentoFeatureCard";
-import ClayCardPrimary from "./ClayCardPrimary";
-import ClayActionCard from "./ClayActionCard";
-import RetroTerminalCard from "./RetroTerminalCard";
-import RetroLogCard from "./RetroLogCard";
+import BrutalProfileCard from "../../library/free/cards/BrutalProfileCard";
+import BrutalStatCard from "../../library/free/cards/BrutalStatCard";
+import GlassProfileCard from "../../library/free/cards/GlassProfileCard";
+import GlassStatsCard from "../../library/free/cards/GlassStatsCard";
+import BentoMetricCard from "../../library/free/cards/BentoMetricCard";
+import BentoFeatureCard from "../../library/free/cards/BentoFeatureCard";
+import ClayCardPrimary from "../../library/free/cards/ClayCardPrimary";
+import ClayActionCard from "../../library/free/cards/ClayActionCard";
+import RetroTerminalCard from "../../library/free/cards/RetroTerminalCard";
+import RetroLogCard from "../../library/free/cards/RetroLogCard";
 
 export const cardsData = [
   {
