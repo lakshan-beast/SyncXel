@@ -50,6 +50,14 @@ export default function AllComponents() {
     "Modals, Toasts & Notifications",
     "Inputs & Search Bars",
     "Badges & Status Indicators",
+    "Navbars & Dropdowns",
+    "Toggles & Switches",
+    "Pricing & Subscriptions",
+    "Accordions & Collapsibles",
+    "Avatars & Profiles",
+    "Tabs & Dynamic Panels",
+    "Footers & Status Bars",
+    "Forms",
   ];
 
   // Filtered components based on selected category
@@ -74,13 +82,13 @@ export default function AllComponents() {
         </div>
 
         {/* Friendly Free Usage Banner */}
-        <div className="bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-xl flex items-center space-x-2 text-xs text-cyan-300">
+        {/* <div className="bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-xl flex items-center space-x-2 text-xs text-cyan-300">
           <HiSparkles className="w-4 h-4 text-cyan-400 shrink-0" />
           <span>
             All free components can be used anywhere in your personal & client
             projects freely!
           </span>
-        </div>
+        </div> */}
       </div>
 
       {/* Main Heading & Description */}
@@ -95,6 +103,15 @@ export default function AllComponents() {
           Explore modular React & Tailwind components or unlock professional
           production-grade UI-Kit bundles.
         </p>
+
+        {/* Friendly Free Usage Banner */}
+        <div className="bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 mt-1 rounded-xl flex items-center space-x-2 text-xs text-cyan-300 text-center ">
+          <HiSparkles className="w-4 h-4 text-cyan-400 shrink-0" />
+          <span>
+            All free components can be used anywhere in your personal & client
+            projects freely!
+          </span>
+        </div>
       </div>
 
       {/* 2. MAIN TABS SWITCHER (Freemium vs Premium UI-Kit) */}
@@ -186,7 +203,7 @@ export default function AllComponents() {
                   </div>
 
                   {/* Body Content */}
-                  <div className="p-2 min-h-40 bg-slate-950/60 flex items-center justify-center">
+                  <div className="p-2 min-h-40 bg-slate-950/60 flex items-center justify-center overflow-scroll">
                     {currentTab === "preview" ? (
                       <div className="text-center w-full flex items-center justify-center">
                         {/* අර පරණ item.id කන්ඩිෂන් ඔක්කොම අයින් කරලා මේක විතරක් දාන්න */}
