@@ -61,6 +61,8 @@ export default function AllComponents() {
     "Footers & Status Bars",
     "Forms & Authentication",
     "Checkboxes & Radios",
+    "Success & Toasts",
+    "Back to Top & FAB",
   ];
 
   //   Buttons & Actions
@@ -85,18 +87,19 @@ export default function AllComponents() {
   );
 
   return (
-    <div className="min-h-screen bg-white/1 backdrop-blur-md  md:rounded-2xl text-slate-100 py-4 mt-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="min-h-screen bg-white/1 backdrop-blur-md md:bg-transparent md:rounded-2xl text-slate-100 py-4 mt-0 lg:mt-0.5 lg:pt-5 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* 1. TOP HEADER SECTION */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-        <div className="flex items-center space-x-4">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-8">
+        <div className="flex items-center space-x-1">
           <a
             href="/"
-            className="p-2.5 bg-slate-900 border border-slate-800 hover:bg-slate-800 rounded-xl transition-all text-slate-300 hover:text-white flex items-center space-x-2 text-xs font-medium cursor-pointer">
+            className="p-2.5 bg-slate-900 border border-slate-700 hover:bg-slate-800 rounded-xl transition-all text-slate-300 hover:text-white flex items-center space-x-2 text-xs font-medium cursor-pointer ">
             <HiArrowLeft className="w-4 h-4" />
             <span>Back to Home</span>
           </a>
-          <span className="text-xs text-slate-400 bg-slate-900/60 px-3 py-1.5 rounded-xl border border-slate-800">
-            Last Updated: <strong className="text-cyan-400">August 2026</strong>
+          <span className="text-xs text-slate-400 bg-slate-900/60 px-4 py-2 rounded-xl border border-slate-900">
+            Last Updated :{" "}
+            <strong className="text-cyan-400">September 2026</strong>
           </span>
         </div>
 
@@ -108,10 +111,19 @@ export default function AllComponents() {
             projects freely!
           </span>
         </div> */}
+
+        {/* Friendly Free Usage Banner */}
+        <div className="bg-red-500/20 ng-blur-md border border-red-500/20 px-4 py-2 mt-2 rounded-xl flex items-center space-x-2 text-xs text-orange-300 text-center ">
+          <HiSparkles className="w-4 h-4 text-orange-400 shrink-0" />
+          <span>
+            All free components can be used anywhere in your personal & client
+            projects freely!
+          </span>
+        </div>
       </div>
 
       {/* Main Heading & Description */}
-      <div className="text-center max-w-2xl mx-auto mb-10">
+      <div className="text-center max-w-2xl mx-auto mb-12">
         <h1 className="text-5xl sm:text-6xl font-black text-white tracking-tight ">
           {/* SyncXel{" "} */}Developer
           <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500 block sm:inline mt-1 sm:mt-0 ml-5">
@@ -122,19 +134,10 @@ export default function AllComponents() {
           Explore modular React & Tailwind components or unlock professional
           production-grade UI-Kit bundles.
         </p>
-
-        {/* Friendly Free Usage Banner */}
-        <div className="bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 mt-1 rounded-xl flex items-center space-x-2 text-xs text-cyan-300 text-center ">
-          <HiSparkles className="w-4 h-4 text-cyan-400 shrink-0" />
-          <span>
-            All free components can be used anywhere in your personal & client
-            projects freely!
-          </span>
-        </div>
       </div>
 
       {/* 2. MAIN TABS SWITCHER (Freemium vs Premium UI-Kit) */}
-      <div className="flex justify-center mb-10">
+      <div className="flex justify-items-start items-center mb-10">
         <div className="bg-slate-900 p-1.5 rounded-2xl border border-slate-800 flex space-x-2 shadow-xl">
           <button
             onClick={() => setMainTab("freemium")}
@@ -162,7 +165,7 @@ export default function AllComponents() {
         /* --- FREEMIUM TAB CONTENT WITH CATEGORIES --- */
         <div>
           {/* Categories Navigation Sub-tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap gap-2 mb-8">
             {categories.map((cat) => (
               <button
                 key={cat}
