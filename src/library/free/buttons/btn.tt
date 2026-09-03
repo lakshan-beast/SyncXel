@@ -1,0 +1,359 @@
+ඊළඟට අපි **Buttons & CTAs** (බටන්ස් සහ ඇක්ෂන් මූලද්‍රව්‍ය) කාණ්ඩයෙන් පටන් ගමු. මෙහිදීත් මීට පෙර වගේම මෝස්තර 6 ටම (Cyberpunk, Neo-Brutalism, Glassmorphism, Bento Grid, Claymorphism, Retro Terminal) අදාළව **ස්ටייל එකකට කම්පොනන්ට්ස් 2 බැගින් සම්පූර්ණ 12 ක්** අන්තර්ක්‍රියාකාරී (Interactive) විදිහට හදමු.
+
+මෙම කම්පොනන්ට්ස් ටික **`src/library/free/buttons/`** ෆෝල්ඩරය යටතේ සේව් කරගන්න.
+
+### 1. කම්පොනන්ට්ස් ටික (Components)
+
+**1. Cyberpunk Neon Glow Button (`CyberNeonButton.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function CyberNeonButton() {
+  return (
+    <motion.button
+      whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(34,211,238,0.6)" }}
+      whileTap={{ scale: 0.95 }}
+      className="px-6 py-2.5 bg-slate-950 border border-cyan-400 text-cyan-400 font-baloo text-xs font-bold rounded-xl tracking-wider uppercase shadow-[0_0_10px_rgba(34,211,238,0.3)] cursor-pointer"
+    >
+      EXECUTE_PROTOCOL
+    </motion.button>
+  );
+}
+
+```
+
+**2. Cyberpunk Glitch Action Button (`CyberGlitchButton.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function CyberGlitchButton() {
+  return (
+    <motion.button
+      whileHover={{ x: [-2, 2, -2, 0], backgroundColor: "#22d3ee", color: "#020617" }}
+      transition={{ duration: 0.2 }}
+      className="px-6 py-2.5 bg-slate-900 border-2 border-cyan-500 text-cyan-300 font-baloo text-xs font-black rounded-xl tracking-widest uppercase cursor-pointer"
+    >
+      SYS_OVERRIDE
+    </motion.button>
+  );
+}
+
+```
+
+**3. Neo-Brutalism Pop Button (`BrutalPopButton.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function BrutalPopButton() {
+  return (
+    <motion.button
+      whileHover={{ x: -2, y: -2, boxShadow: "6px 6px 0px 0px #020617" }}
+      whileTap={{ x: 2, y: 2, boxShadow: "2px 2px 0px 0px #020617" }}
+      className="px-6 py-2.5 bg-yellow-300 border-2 border-slate-950 text-slate-950 font-baloo text-xs font-black rounded-xl shadow-[4px_4px_0px_0px_#020617] uppercase cursor-pointer"
+    >
+      BRUTAL_CLICK
+    </motion.button>
+  );
+}
+
+```
+
+**4. Neo-Brutalism Action Pill (`BrutalActionPill.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function BrutalActionPill() {
+  return (
+    <motion.button
+      whileHover={{ y: -3, boxShadow: "5px 5px 0px 0px #020617" }}
+      className="px-6 py-2.5 bg-pink-500 border-2 border-slate-950 text-white font-baloo text-xs font-black rounded-full shadow-[3px_3px_0px_0px_#020617] uppercase cursor-pointer"
+    >
+      DEPLOY_NODE
+    </motion.button>
+  );
+}
+
+```
+
+**5. Glassmorphism Frosted Button (`GlassFrostedButton.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function GlassFrostedButton() {
+  return (
+    <motion.button
+      whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.2)" }}
+      whileTap={{ scale: 0.95 }}
+      className="px-6 py-2.5 bg-white/10 backdrop-blur-xl border border-white/25 text-white font-baloo text-xs font-bold rounded-2xl shadow-xl uppercase tracking-wider cursor-pointer"
+    >
+      ENCLAVE_ACCESS
+    </motion.button>
+  );
+}
+
+```
+
+**6. Glassmorphism Gradient Border Button (`GlassGradientButton.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function GlassGradientButton() {
+  return (
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      className="relative px-6 py-2.5 bg-slate-950/60 backdrop-blur-md text-cyan-300 font-baloo text-xs font-bold rounded-2xl border border-cyan-400/40 shadow-[0_0_15px_rgba(34,211,238,0.15)] uppercase tracking-wider cursor-pointer"
+    >
+      SECURE_TUNNEL
+    </motion.button>
+  );
+}
+
+```
+
+**7. Bento Grid Action Tile (`BentoActionTile.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function BentoActionTile() {
+  return (
+    <motion.button
+      whileHover={{ scale: 1.03, backgroundColor: "#1e293b" }}
+      className="px-5 py-3 bg-slate-900 border border-slate-800 text-slate-200 font-baloo text-xs font-bold rounded-2xl flex items-center gap-3 shadow-lg cursor-pointer"
+    >
+      <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+      <span>BENTO_CLUSTER</span>
+    </motion.button>
+  );
+}
+
+```
+
+**8. Bento Micro CTA Button (`BentoMicroCta.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function BentoMicroCta() {
+  return (
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      className="px-4 py-2 bg-slate-800 border border-slate-700 text-indigo-300 font-baloo text-xs font-bold rounded-xl shadow-md cursor-pointer"
+    >
+      Quick Deploy →
+    </motion.button>
+  );
+}
+
+```
+
+**9. Claymorphism Soft Push Button (`ClaySoftButton.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function ClaySoftButton() {
+  return (
+    <motion.button
+      whileTap={{ scale: 0.96, boxShadow: "inset 4px 4px 8px #020617, inset -4px -4px 8px #1e293b" }}
+      className="px-6 py-3 bg-slate-900 text-indigo-300 font-baloo text-xs font-bold rounded-2xl shadow-[6px_6px_12px_#020617,-6px_-6px_12px_#1e293b] border border-slate-800 cursor-pointer"
+    >
+      VOLUMETRIC_PUSH
+    </motion.button>
+  );
+}
+
+```
+
+**10. Claymorphism Pill Button (`ClayPillButton.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function ClayPillButton() {
+  return (
+    <motion.button
+      whileHover={{ scale: 1.03 }}
+      className="px-6 py-2.5 bg-slate-900 text-cyan-300 font-baloo text-xs font-bold rounded-full shadow-[5px_5px_10px_#020617,-5px_-5px_10px_#1e293b] border border-slate-800 cursor-pointer"
+    >
+      Soft Matte Action
+    </motion.button>
+  );
+}
+
+```
+
+**11. Retro Terminal Prompt Button (`RetroTerminalBtn.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function RetroTerminalBtn() {
+  return (
+    <motion.button
+      whileHover={{ backgroundColor: "#022c22", color: "#4ade80" }}
+      className="px-5 py-2 bg-black border-2 border-green-500 text-green-400 font-mono text-xs rounded shadow-[0_0_10px_rgba(34,197,94,0.3)] cursor-pointer"
+    >
+      [ EXEC_RUN ]
+    </motion.button>
+  );
+}
+
+```
+
+**12. Retro CRT Button (`RetroCrtBtn.jsx`)**
+
+```javascript
+import { motion } from "framer-motion";
+
+export default function RetroCrtBtn() {
+  return (
+    <motion.button
+      whileTap={{ scale: 0.95 }}
+      className="px-6 py-2 bg-green-950 border border-green-500 text-green-300 font-mono text-xs rounded tracking-widest uppercase shadow-[0_0_15px_rgba(34,197,94,0.4)] cursor-pointer"
+    >
+      SYS_COMMAND &gt;
+    </motion.button>
+  );
+}
+
+```
+
+---
+
+### 2. ඩේටා ඇරේ එක (`buttonsData.js`)
+
+මෙය **`src/data/free/buttonsData.js`** නමින් සේව් කරගන්න:
+
+```javascript
+import CyberNeonButton from "../../library/free/buttons/CyberNeonButton";
+import CyberGlitchButton from "../../library/free/buttons/CyberGlitchButton";
+import BrutalPopButton from "../../library/free/buttons/BrutalPopButton";
+import BrutalActionPill from "../../library/free/buttons/BrutalActionPill";
+import GlassFrostedButton from "../../library/free/buttons/GlassFrostedButton";
+import GlassGradientButton from "../../library/free/buttons/GlassGradientButton";
+import BentoActionTile from "../../library/free/buttons/BentoActionTile";
+import BentoMicroCta from "../../library/free/buttons/BentoMicroCta";
+import ClaySoftButton from "../../library/free/buttons/ClaySoftButton";
+import ClayPillButton from "../../library/free/buttons/ClayPillButton";
+import RetroTerminalBtn from "../../library/free/buttons/RetroTerminalBtn";
+import RetroCrtBtn from "../../library/free/buttons/RetroCrtBtn";
+
+export const buttonsData = [
+  {
+    id: "btn-cyber-neon",
+    title: "Cyberpunk Neon Glow Button",
+    category: "Buttons & CTAs",
+    description: "Pulsing cyberpunk action button featuring sharp neon border and glow effect.",
+    copiesCount: 410,
+    component: <CyberNeonButton />,
+    code: `<motion.button whileHover={{ scale: 1.05 }} className="px-6 py-2.5 bg-slate-950 border border-cyan-400 text-cyan-400 font-baloo text-xs font-bold rounded-xl shadow-[0_0_10px_rgba(34,211,238,0.3)] uppercase">EXECUTE_PROTOCOL</motion.button>`,
+  },
+  {
+    id: "btn-cyber-glitch",
+    title: "Cyberpunk Glitch Action Button",
+    category: "Buttons & CTAs",
+    description: "High-tech cyberpunk button with dynamic hover color displacement.",
+    copiesCount: 355,
+    component: <CyberGlitchButton />,
+    code: `<motion.button className="px-6 py-2.5 bg-slate-900 border-2 border-cyan-500 text-cyan-300 font-baloo text-xs font-black rounded-xl uppercase">SYS_OVERRIDE</motion.button>`,
+  },
+  {
+    id: "btn-brutal-pop",
+    title: "Neo-Brutalism Pop Button",
+    category: "Buttons & CTAs",
+    description: "High-contrast geometric brutalist button with hard directional drop-shadow shift.",
+    copiesCount: 390,
+    component: <BrutalPopButton />,
+    code: `<motion.button className="px-6 py-2.5 bg-yellow-300 border-2 border-slate-950 text-slate-950 font-baloo text-xs font-black rounded-xl shadow-[4px_4px_0px_0px_#020617] uppercase">BRUTAL_CLICK</motion.button>`,
+  },
+  {
+    id: "btn-brutal-pill",
+    title: "Neo-Brutalism Action Pill",
+    category: "Buttons & CTAs",
+    description: "Vibrant rounded pill button featuring heavy black borders and hard shadow.",
+    copiesCount: 310,
+    component: <BrutalActionPill />,
+    code: `<motion.button className="px-6 py-2.5 bg-pink-500 border-2 border-slate-950 text-white font-baloo text-xs font-black rounded-full shadow-[3px_3px_0px_0px_#020617] uppercase">DEPLOY_NODE</motion.button>`,
+  },
+  {
+    id: "btn-glass-frosted",
+    title: "Glassmorphism Frosted Button",
+    category: "Buttons & CTAs",
+    description: "Translucent glass button built with deep backdrop blur and soft borders.",
+    copiesCount: 440,
+    component: <GlassFrostedButton />,
+    code: `<motion.button className="px-6 py-2.5 bg-white/10 backdrop-blur-xl border border-white/25 text-white font-baloo text-xs font-bold rounded-2xl shadow-xl uppercase">ENCLAVE_ACCESS</motion.button>`,
+  },
+  {
+    id: "btn-glass-gradient",
+    title: "Glassmorphism Gradient Border Button",
+    category: "Buttons & CTAs",
+    description: "Frosted dark glass container highlighted with neon cyan boundary stroke.",
+    copiesCount: 375,
+    component: <GlassGradientButton />,
+    code: `<motion.button className="px-6 py-2.5 bg-slate-950/60 backdrop-blur-md text-cyan-300 font-baloo text-xs font-bold rounded-2xl border border-cyan-400/40 uppercase">SECURE_TUNNEL</motion.button>`,
+  },
+  {
+    id: "btn-bento-tile",
+    title: "Bento Grid Action Tile",
+    category: "Buttons & CTAs",
+    description: "Clean minimalist tile action container equipped with live status ping indicator.",
+    copiesCount: 420,
+    component: <BentoActionTile />,
+    code: `<motion.button className="px-5 py-3 bg-slate-900 border border-slate-800 text-slate-200 font-baloo text-xs font-bold rounded-2xl flex items-center gap-3"><span>BENTO_CLUSTER</span></motion.button>`,
+  },
+  {
+    id: "btn-bento-micro",
+    title: "Bento Micro CTA Button",
+    category: "Buttons & CTAs",
+    description: "Compact inline action link button ideal for modern dashboard card headers.",
+    copiesCount: 330,
+    component: <BentoMicroCta />,
+    code: `<motion.button className="px-4 py-2 bg-slate-800 border border-slate-700 text-indigo-300 font-baloo text-xs font-bold rounded-xl">Quick Deploy →</motion.button>`,
+  },
+  {
+    id: "btn-clay-soft",
+    title: "Claymorphism Soft Push Button",
+    category: "Buttons & CTAs",
+    description: "Tactile volumetric 3D matte button with inner depth press simulation.",
+    copiesCount: 300,
+    component: <ClaySoftButton />,
+    code: `<motion.button className="px-6 py-3 bg-slate-900 text-indigo-300 font-baloo text-xs font-bold rounded-2xl shadow-[6px_6px_12px_#020617,-6px_-6px_12px_#1e293b] border border-slate-800">VOLUMETRIC_PUSH</motion.button>`,
+  },
+  {
+    id: "btn-clay-pill",
+    title: "Claymorphism Soft Pill Button",
+    category: "Buttons & CTAs",
+    description: "Smooth pill-shaped tactile container with diffuse shadow lighting.",
+    copiesCount: 280,
+    component: <ClayPillButton />,
+    code: `<motion.button className="px-6 py-2.5 bg-slate-900 text-cyan-300 font-baloo text-xs font-bold rounded-full shadow-[5px_5px_10px_#020617,-5px_-5px_10px_#1e293b] border border-slate-800">Soft Matte Action</motion.button>`,
+  },
+  {
+    id: "btn-retro-terminal",
+    title: "Retro Terminal Prompt Button",
+    category: "Buttons & CTAs",
+    description: "Classic green phosphor monospaced terminal execution button.",
+    copiesCount: 315,
+    component: <RetroTerminalBtn />,
+    code: `<motion.button className="px-5 py-2 bg-black border-2 border-green-500 text-green-400 font-mono text-xs rounded">[ EXEC_RUN ]</motion.button>`,
+  },
+  {
+    id: "btn-retro-crt",
+    title: "Retro CRT Action Button",
+    category: "Buttons & CTAs",
+    description: "Phosphor glowing command button with nostalgic 90s terminal aesthetics.",
+    copiesCount: 295,
+    component: <RetroCrtBtn />,
+    code: `<motion.button className="px-6 py-2 bg-green-950 border border-green-500 text-green-300 font-mono text-xs rounded uppercase">SYS_COMMAND &gt;</motion.button>`,
+  },
+];
+
+```
