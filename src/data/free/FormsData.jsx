@@ -9,7 +9,7 @@ export const formsData = [
   {
     id: "loader-spinner-form",
     title: "Glowing Spinner Loader",
-    category: "Forms", // 👈 category එක 'Loaders' විය යුතුයි
+    category: "Forms & Authentication", // 👈 category එක 'Loaders' විය යුතුයි
     description:
       "A smooth glowing spinner loader built with Tailwind CSS animation.",
     copiesCount: 154,
@@ -23,7 +23,7 @@ export const formsData = [
   {
     id: "loader-spinner-form1",
     title: "Glowing Spinner Loader",
-    category: "Forms", // 👈 category එක 'Loaders' විය යුතුයි
+    category: "Forms & Authentication", // 👈 category එක 'Loaders' විය යුතුයි
     description:
       "A smooth glowing spinner loader built with Tailwind CSS animation.",
     copiesCount: 154,

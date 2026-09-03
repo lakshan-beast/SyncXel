@@ -262,6 +262,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { FaHeart, FaRegCopyright, FaCaretRight } from "react-icons/fa6";
 import { FaCoffee } from "react-icons/fa";
 import { FaTelegramPlane, FaEnvelope } from "react-icons/fa";
@@ -380,7 +381,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-12  pt-20 md:pt-6 border-t border-white/10">
           {/* Brand Column */}
           <div className="col-span-2 space-y-4">
-            <div className="flex items-center space-x-2">
+            {/* <div className="flex items-center space-x-2">
               <img
                 src="/syncxel-logo-removebg.png"
                 alt="SyncXel Logo"
@@ -392,7 +393,45 @@ export default function Footer() {
                   Xel
                 </span>
               </span>
-            </div>
+            </div> */}
+
+            <Link
+              to="/"
+              className="flex items-center space-x-3 cursor-pointer group">
+              {/* Animated Rotating Border Logo Container */}
+              <div className="relative w-11 h-11 flex items-center justify-center">
+                {/* Karakena (Spinning) Neon Gradient Ring */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-cyan-400 p-[2px] shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+                  <div className="w-full h-full bg-slate-950 rounded-full" />
+                </motion.div>
+
+                {/* Actual Logo Image */}
+                <motion.img
+                  whileHover={{ scale: 1.1 }}
+                  src="/syncxel-logo-removebg.png"
+                  alt="SyncXel Logo"
+                  width={28}
+                  height={28}
+                  className="object-contain relative z-10 rounded-full"
+                />
+              </div>
+
+              {/* Brand Name with Glow Effect */}
+              <div className="flex flex-col">
+                <span className="text-3xl font-black tracking-tighter text-white font-baloo uppercase group-hover:text-cyan-200 transition-colors drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+                  Sync
+                  <span className="text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 ml-1.5">
+                    Xel
+                  </span>
+                </span>
+                <span className="text-[7px] font-baloo tracking-widest text-cyan-400/80 -mt-1 uppercase">
+                  UI MATRIX v2.0
+                </span>
+              </div>
+            </Link>
 
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
               Crafting production-ready UI components, design systems, and
@@ -425,7 +464,7 @@ export default function Footer() {
                 title="Portfolio Profile">
                 <SlGlobe className="w-5 h-5" />
               </a>
-              
+
               <a
                 href="https://t.me/lakshan_dev"
                 target="_blank"

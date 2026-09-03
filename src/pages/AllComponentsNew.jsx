@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   HiArrowLeft,
   HiCheck,
@@ -10,6 +11,7 @@ import {
   HiChatAlt2,
   HiBookOpen,
   HiCheckCircle,
+  HiDuplicate,
 } from "react-icons/hi";
 // import { LuStamp } from "react-icons/lu";
 import { TbFileDownloadFilled } from "react-icons/tb";
@@ -57,8 +59,24 @@ export default function AllComponents() {
     "Avatars & Profiles",
     "Tabs & Dynamic Panels",
     "Footers & Status Bars",
-    "Forms",
+    "Forms & Authentication",
   ];
+
+  //   Buttons & Actions
+  // Loaders & Spinners
+  // Modals & Popups
+  // Cards & Containers
+  // Badges & Tags
+  // Inputs & Search Fields
+  // Navbars & Headers
+  // Forms & Authentication
+  // Toggles & Switches
+  // Pricing Tables
+  // Accordions & FAQs
+  // Avatars & Profiles
+  // Tabs & Dynamic Panels
+  // Footers & Sitemaps
+  // Notifications, Toasts & Alerts
 
   // Filtered components based on selected category
   const filteredFreeComponents = freeComponentsData.filter(
@@ -165,91 +183,203 @@ export default function AllComponents() {
               const isCopied = copiedId === item.id;
 
               return (
-                <div
+                // <div
+                //   key={item.id}
+                //   className="bg-white/15 backdrop-blur-lg  border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
+                //   {/* Card Header */}
+                //   <div className="px-4 py-6 border-b border-slate-800 bg-slate-900/60 flex items-start justify-between">
+                //     <div>
+                //       <h3 className="text-sm font-bold text-white mb-1">
+                //         {item.title}
+                //       </h3>
+                //       <span className="text-[10px] text-cyan-400 uppercase tracking-wider bg-cyan-400/10 px-4 py-0.5 rounded-full border border-cyan-400/20">
+                //         {item.category}
+                //       </span>
+                //       <p className="text-xs text-slate-400 mt-1.5 mb-0.5 border-t border-white/10 pt-1">
+                //         {item.description}
+                //       </p>
+                //     </div>
+                //     <span className="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">
+                //       Free
+                //     </span>
+                //   </div>
+
+                //   {/* Sub-Tabs (Preview vs Code) */}
+                //   <div className="flex px-2 py-2 justify-between ">
+                //     <div className="flex space-x-2">
+                //       <button
+                //         onClick={() => toggleCardTab(item.id, "preview")}
+                //         className={`text-xs px-3 py-1 rounded-lg font-medium transition-all flex items-center space-x-1 cursor-pointer ${currentTab === "preview" ? "bg-cyan-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"}`}>
+                //         <HiEye className="w-3.5 h-3.5" />
+                //         <span>Preview</span>
+                //       </button>
+                //       <button
+                //         onClick={() => toggleCardTab(item.id, "code")}
+                //         className={`text-xs px-3 py-1 rounded-lg font-medium transition-all flex items-center space-x-1 cursor-pointer ${currentTab === "code" ? "bg-cyan-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"}`}>
+                //         <HiCode className="w-3.5 h-3.5" />
+                //         <span>Code</span>
+                //       </button>
+                //     </div>
+
+                //     <span className="flex items-center gap-2 font-exo text-xs font-bold text-orange-600 bg-orange-400/10 px-4 py-1 rounded-full border border-orange-400/20  ">
+                //       <TbFileDownloadFilled /> {item.copiesCount}
+                //     </span>
+                //   </div>
+
+                //   {/* Body Content */}
+                //   <div className="p-2 min-h-50 bg-slate-950/60 flex items-center justify-center">
+                //     {currentTab === "preview" ? (
+                //       <div className="text-center w-full flex items-center justify-center">
+                //         {/* අර පරණ item.id කන්ඩිෂන් ඔක්කොම අයින් කරලා මේක විතරක් දාන්න */}
+                //         {/* <div dangerouslySetInnerHTML={{ __html: item.code }} /> */}
+                //         {item.component}
+                //       </div>
+                //     ) : (
+                //       <pre className="w-full h-32 overflow-auto text-[11px] text-cyan-300 bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-left">
+                //         <code>{item.code}</code>
+                //       </pre>
+                //     )}
+                //   </div>
+
+                //   {/* Footer Action with Dynamic "Copied! ✨" feedback */}
+                //   <div className="py-2 px-3 bg-slate-900/80 flex items-center justify-between border-t border-slate-800">
+                //     <span className="text-[10px] text-slate-400">
+                //       Ready to copy
+                //     </span>
+
+                //     <button
+                //       onClick={() => handleCopy(item.id, item.code)}
+                //       className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center space-x-1 ${
+                //         isCopied
+                //           ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20"
+                //           : "bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20"
+                //       }`}>
+                //       {isCopied ? (
+                //         <>
+                //           <HiCheck className="w-3.5 h-3.5" />
+                //           <span>Copied!</span>
+                //         </>
+                //       ) : (
+                //         <>
+                //           <HiCheck className="w-3.5 h-3.5" />
+                //           <span>Copy Code</span>
+                //         </>
+                //       )}
+                //     </button>
+                //   </div>
+                // </div>
+
+                // 2nd style
+                <motion.div
                   key={item.id}
-                  className="bg-white/15 backdrop-blur-lg  border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
-                  {/* Card Header */}
-                  <div className="px-4 py-6 border-b border-slate-800 bg-slate-900/60 flex items-start justify-between">
-                    <div>
-                      <h3 className="text-sm font-bold text-white mb-1">
-                        {item.title}
-                      </h3>
-                      <span className="text-[10px] text-cyan-400 uppercase tracking-wider bg-cyan-400/10 px-4 py-0.5 rounded-full border border-cyan-400/20">
-                        {item.category}
-                      </span>
-                      <p className="text-xs text-slate-400 mt-1.5 mb-0.5 border-t border-white/10 pt-1">
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                  className="relative group rounded-3xl p-[1px] bg-gradient-to-b from-slate-600 via-slate-800 to-slate-950 shadow-[0_20px_50px_rgba(8,112,184,0.2)]">
+                  {/* Inner Card Container */}
+                  <div className="h-full w-full bg-[#0b0f19] rounded-[23px] flex flex-col justify-between overflow-hidden relative">
+                    {/* Top Glowing Neon Line on Hover */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                    {/* Card Header */}
+                    <div className="p-5 pb-4 bg-gradient-to-b from-slate-900/90 to-transparent border-b border-slate-800/80">
+                      <div className="flex items-start justify-between gap-3 mb-2.5">
+                        <div className="space-y-1.5">
+                          <span className="inline-block text-[10px] font-bold text-cyan-400 tracking-wider uppercase bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20 shadow-sm">
+                            {item.category}
+                          </span>
+                          <h3 className="text-base font-bold text-white tracking-wide group-hover:text-cyan-300 transition-colors">
+                            {item.title}
+                          </h3>
+                        </div>
+                        <span className="text-[10px] font-black text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 shrink-0">
+                          FREE
+                        </span>
+                      </div>
+                      <p className="text-xs text-slate-300 leading-relaxed">
                         {item.description}
                       </p>
                     </div>
-                    <span className="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-md border border-emerald-400/20">
-                      Free
-                    </span>
-                  </div>
 
-                  {/* Sub-Tabs (Preview vs Code) */}
-                  <div className="flex px-2 py-2 justify-between ">
-                    <div className="flex space-x-2">
-                      <button
-                        onClick={() => toggleCardTab(item.id, "preview")}
-                        className={`text-xs px-3 py-1 rounded-lg font-medium transition-all flex items-center space-x-1 cursor-pointer ${currentTab === "preview" ? "bg-cyan-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"}`}>
-                        <HiEye className="w-3.5 h-3.5" />
-                        <span>Preview</span>
-                      </button>
-                      <button
-                        onClick={() => toggleCardTab(item.id, "code")}
-                        className={`text-xs px-3 py-1 rounded-lg font-medium transition-all flex items-center space-x-1 cursor-pointer ${currentTab === "code" ? "bg-cyan-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"}`}>
-                        <HiCode className="w-3.5 h-3.5" />
-                        <span>Code</span>
-                      </button>
+                    {/* Sub-Tabs & Counter Bar */}
+                    <div className="flex items-center justify-between px-4 py-2.5 bg-slate-900/50 border-b border-slate-800/70">
+                      <div className="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800 shadow-inner">
+                        <button
+                          onClick={() => toggleCardTab(item.id, "preview")}
+                          className={`text-xs px-3.5 py-1.5 rounded-lg font-medium transition-all flex items-center space-x-1.5 cursor-pointer ${
+                            currentTab === "preview"
+                              ? "bg-cyan-500 text-slate-950 font-bold shadow-md shadow-cyan-500/30"
+                              : "text-slate-400 hover:text-white"
+                          }`}>
+                          <HiEye className="w-4 h-4" />
+                          <span>Preview</span>
+                        </button>
+                        <button
+                          onClick={() => toggleCardTab(item.id, "code")}
+                          className={`text-xs px-3.5 py-1.5 rounded-lg font-medium transition-all flex items-center space-x-1.5 cursor-pointer ${
+                            currentTab === "code"
+                              ? "bg-cyan-500 text-slate-950 font-bold shadow-md shadow-cyan-500/30"
+                              : "text-slate-400 hover:text-white"
+                          }`}>
+                          <HiCode className="w-4 h-4" />
+                          <span>Code</span>
+                        </button>
+                      </div>
+
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-orange-400 bg-orange-500/10 px-3 py-1.5 rounded-xl border border-orange-500/20">
+                        <TbFileDownloadFilled className="w-4 h-4" />
+                        <span>{item.copiesCount}</span>
+                      </div>
                     </div>
 
-                    <span className="flex items-center gap-2 font-exo text-xs font-bold text-orange-600 bg-orange-400/10 px-4 py-1 rounded-full border border-orange-400/20  ">
-                      <TbFileDownloadFilled /> {item.copiesCount}
-                    </span>
-                  </div>
+                    {/* Body Content Box with Tech Grid Pattern */}
+                    <div className="p-6 min-h-[220px] bg-[#07090e] flex items-center justify-center relative overflow-hidden">
+                      {/* Background Grid Pattern */}
+                      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none" />
 
-                  {/* Body Content */}
-                  <div className="p-2 min-h-50 bg-slate-950/60 flex items-center justify-center">
-                    {currentTab === "preview" ? (
-                      <div className="text-center w-full flex items-center justify-center">
-                        {/* අර පරණ item.id කන්ඩිෂන් ඔක්කොම අයින් කරලා මේක විතරක් දාන්න */}
-                        {/* <div dangerouslySetInnerHTML={{ __html: item.code }} /> */}
-                        {item.component}
-                      </div>
-                    ) : (
-                      <pre className="w-full h-32 overflow-auto text-[11px] text-cyan-300 bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-left">
-                        <code>{item.code}</code>
-                      </pre>
-                    )}
-                  </div>
-
-                  {/* Footer Action with Dynamic "Copied! ✨" feedback */}
-                  <div className="py-2 px-3 bg-slate-900/80 flex items-center justify-between border-t border-slate-800">
-                    <span className="text-[10px] text-slate-400">
-                      Ready to copy
-                    </span>
-
-                    <button
-                      onClick={() => handleCopy(item.id, item.code)}
-                      className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center space-x-1 ${
-                        isCopied
-                          ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20"
-                          : "bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20"
-                      }`}>
-                      {isCopied ? (
-                        <>
-                          <HiCheck className="w-3.5 h-3.5" />
-                          <span>Copied!</span>
-                        </>
+                      {currentTab === "preview" ? (
+                        <div className="w-full flex items-center justify-center relative z-10">
+                          {item.component}
+                        </div>
                       ) : (
-                        <>
-                          <HiCheck className="w-3.5 h-3.5" />
-                          <span>Copy Code</span>
-                        </>
+                        <pre className="w-full h-36 overflow-auto text-xs text-cyan-300 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-left relative z-10 shadow-2xl">
+                          <code>{item.code}</code>
+                        </pre>
                       )}
-                    </button>
+                    </div>
+
+                    {/* Footer Action */}
+                    <div className="p-4 bg-slate-900/90 flex items-center justify-between border-t border-slate-800">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                        <span className="text-[11px] font-medium text-slate-300">
+                          Production Ready
+                        </span>
+                      </div>
+
+                      <motion.button
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => handleCopy(item.id, item.code)}
+                        className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center space-x-2 shadow-lg ${
+                          isCopied
+                            ? "bg-emerald-500 text-slate-950 shadow-emerald-500/30"
+                            : "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-cyan-500/30"
+                        }`}>
+                        {isCopied ? (
+                          <>
+                            <HiCheck className="w-4 h-4" />
+                            <span>Copied! </span>
+                          </>
+                        ) : (
+                          <>
+                            <HiDuplicate className="w-4 h-4" />
+                            <span>Copy Code</span>
+                          </>
+                        )}
+                      </motion.button>
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

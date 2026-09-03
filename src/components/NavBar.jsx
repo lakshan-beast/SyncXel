@@ -303,21 +303,42 @@ export default function NavBar() {
     <header className="fixed top-0 left-0 right-0 px-4 sm:px-8 pt-4 lg:pt-5 z-50">
       <nav className="max-w-7xl mx-auto bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-5 sm:px-6 py-5 shadow-2xl transition-all duration-300 lg:bg-transparent lg:border-none">
         <div className="flex items-center justify-between">
-          {/* Brand Logo & Name */}
-          <Link to="/" className="flex items-center space-x-2 cursor-pointer">
-            <img
-              src="/syncxel-logo-removebg.png"
-              alt="SyncXel Logo"
-              width={38}
-              height={38}
-              className="object-contain border-2 border-cyan-400 rounded-full p-1 "
-            />
-            <span className="text-3xl sm:text-2xl font-bold tracking-tight text-white font-baloo uppercase">
-              Sync
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500 text-3xl">
-                Xel
+          <Link
+            to="/"
+            className="flex items-center space-x-3 cursor-pointer group">
+            {/* Animated Rotating Border Logo Container */}
+            <div className="relative w-11 h-11 flex items-center justify-center">
+              {/* Karakena (Spinning) Neon Gradient Ring */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-cyan-400 p-[2px] shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+                <div className="w-full h-full bg-slate-950 rounded-full" />
+              </motion.div>
+
+              {/* Actual Logo Image */}
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                src="/syncxel-logo-removebg.png"
+                alt="SyncXel Logo"
+                width={28}
+                height={28}
+                className="object-contain relative z-10 rounded-full"
+              />
+            </div>
+
+            {/* Brand Name with Glow Effect */}
+            <div className="flex flex-col">
+              <span className="text-3xl font-black tracking-tighter text-white font-baloo uppercase group-hover:text-cyan-200 transition-colors drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+                Sync
+                <span className="text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 ml-1.5">
+                  Xel
+                </span>
               </span>
-            </span>
+              <span className="text-[7px] font-baloo tracking-widest text-cyan-400/80 -mt-1 uppercase">
+                UI MATRIX v2.0
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation Links */}
