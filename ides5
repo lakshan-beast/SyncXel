@@ -1,0 +1,31 @@
+ඔව්, UI ලයිබ්‍රරි එකක් පර්ෆෙක්ට් කරන්න ඔය වගේ **Micro-interactions සහ Utility Components** තමයි නියම ಲುක් එකක් සහ ප්‍රොෆෙෂනල් ගතියක් දෙන්නේ. අපි ඊළඟට හදන්න පුළුවන් පට්ට කුඩා අංග (Small Components) ටිකක් මෙන්න:
+
+**1. Custom Checkboxes & Radios**
+
+* **Cyberpunk Glow Box:** ක්ලික් කළ විට නියොන් බ්ලූ හෝ සයන් එළියක් විහිදෙන චෙක්බොක්ස්.
+* **Neo-Brutalism Hard Checkbox:** තද කළු බෝඩර් සහ ෂැඩෝ එකක් සහිත, ටික් එක වැටෙන විට පොඩි 'පොප්' වෙනස්වීමක් පෙන්වන මෝස්තරයක්.
+* **Glassmorphism Select Ring:** පාරභාසක වීදුරු බිත්ති අතරින් දිස්වන ස්මූත් චෙක්බොක්ස්.
+
+**2. Success & Toast Confirmation Banners**
+
+* **Animated Success Checkmark:** ඔබ කිව්ව වගේ ලස්සනට රවුමක් ඇඳීගෙනවිත් මැදට හරිය (✓) ලියවෙන / මතුවෙන සක්සස් ඇනිමේෂන් එකක්.
+* **Floating Toast Alarms:** කොනකින් මතුවී "Changes Saved Successfully ✨" වැනි මැසේජ් එකක් පෙන්වා අතුරුදහන් වන නොටිෆිකේෂන්ස්.
+
+**3. Back to Top & Floating Action Buttons (FAB)**
+
+* **Cyber Scroll Arrow:** පේජ් එක පහළට යද්දී මතුවන, ක්ලික් කළ විට උඩටම ගෙන යන නියොන් ග්ලෝ බටන් එකක්.
+* **Brutalist Jump Button:** ඝන ෂැඩෝ සහ බොල් අකුරු සහිත රෙට්රෝ බැක්-ටු-ටොප් බටන් එකක්.
+
+**4. Copy-to-Clipboard Snippets**
+
+* **Interactive Copy Button:** කෝඩ් එකක් හෝ ටෙක්ස්ට් එකක් කොපි කරගනිද්දී ක්ෂණිකව "Copied! ✓" බවට මාරුවෙන ස්මාර්ට් බටන් එකක්.
+
+**5. Tooltips & Hover Popovers**
+
+* මවුස් එක ගෙන ගිය විට කුඩා ෆ්‍රේම් එකක විස්තර මතුවන මයික්‍රෝ ටූල්ටිප්ස්.
+
+**6. Progress Bars & Scroll Trackers**
+
+* පේජ් එකේ ඉහළින්ම හෝ කාඩ් එකක් ඇතුළේ දුවන ලීනියර් ප්‍රොග්‍රෙස් බාර්ස් සහ රවුම් ලෝඩර්ස්.
+
+මේවයින් මුලින්ම **Checkboxes & Success Toasts** ටික එකතු කරමුද, නැත්නම් ඔයා වෙනත් කැටගරියකට (උදාහරණයක් විදිහට Back to Top සහ Copy buttons වගේ එකකට) මුලින්ම යමුද?

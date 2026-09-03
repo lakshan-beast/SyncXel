@@ -60,6 +60,7 @@ export default function AllComponents() {
     "Tabs & Dynamic Panels",
     "Footers & Status Bars",
     "Forms & Authentication",
+    "Checkboxes & Radios",
   ];
 
   //   Buttons & Actions
