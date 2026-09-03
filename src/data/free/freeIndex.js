@@ -13,6 +13,7 @@ import { accordionsData } from "./AccordionsData";
 import { avatarsData } from "./AvatorsData";
 import { tabsData } from "./tabletsData";
 import { footersData } from "./FootersData";
+import { checkboxesData } from "./CheckboxesData";
 
 export const freeComponentsData = [
   ...buttonsData,
@@ -30,4 +31,5 @@ export const freeComponentsData = [
   ...avatarsData,
   ...tabsData,
   ...footersData,
+  ...checkboxesData,
 ];
