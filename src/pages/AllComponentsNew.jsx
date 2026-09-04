@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   HiArrowLeft,
-  HiCheck,
+  // HiCheck,
   HiCode,
   HiEye,
   HiExternalLink,
@@ -10,11 +10,16 @@ import {
   HiSparkles,
   HiChatAlt2,
   HiBookOpen,
-  HiCheckCircle,
-  HiDuplicate,
+  // HiCheckCircle,
+  // HiDuplicate,
 } from "react-icons/hi";
 // import { LuStamp } from "react-icons/lu";
 import { TbFileDownloadFilled } from "react-icons/tb";
+
+import { TbCopyPlusFilled, TbCopyCheckFilled } from "react-icons/tb";
+// import { GiFishBucket } from "react-icons/gi";
+{/* <GiFishBucket /> */}
+import { GiBoatFishing } from "react-icons/gi";
 
 import { freeComponentsData } from "../data/free/freeIndex";
 import { premiumKits } from "../data/premiumKitData";
@@ -330,8 +335,8 @@ export default function AllComponents() {
                         </button>
                       </div>
 
-                      <div className="flex items-center gap-1.5 text-xs font-bold text-orange-400 bg-orange-500/10 px-3 py-1.5 rounded-xl border border-orange-500/20">
-                        <TbFileDownloadFilled className="w-4 h-4" />
+                      <div className="flex items-center gap-2.5 text-xs font-bold text-orange-400 bg-orange-500/10 px-3 py-1.5 rounded-xl ">
+                        <GiBoatFishing className="w-6 h-6" />
                         <span>{item.copiesCount}</span>
                       </div>
                     </div>
@@ -371,12 +376,12 @@ export default function AllComponents() {
                         }`}>
                         {isCopied ? (
                           <>
-                            <HiCheck className="w-4 h-4" />
+                            <TbCopyCheckFilled className="w-4 h-4" />
                             <span>Copied! </span>
                           </>
                         ) : (
                           <>
-                            <HiDuplicate className="w-4 h-4" />
+                            <TbCopyPlusFilled className="w-4 h-4" />
                             <span>Copy Code</span>
                           </>
                         )}
