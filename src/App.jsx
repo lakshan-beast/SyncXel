@@ -54,7 +54,7 @@ export default function App() {
                     <TrustBar />
                     <Components />
                     <DocsPreviewSection />
-                    <SocialProof />
+                    {/* <SocialProof /> */}
                     <FeaturesSection />
                     <TeamSection />
                     <ServicesSection />
