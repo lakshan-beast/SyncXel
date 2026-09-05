@@ -369,7 +369,6 @@
 //   );
 // }
 
-
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -404,7 +403,11 @@ export default function TeamSection() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
@@ -414,7 +417,6 @@ export default function TeamSection() {
       <div className="absolute top-1/4 right-10 w-72 h-72 bg-indigo-500/10 blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto space-y-24 relative z-10">
-        
         {/* 1. STATS / METRICS BAR WITH HEADING */}
         <div className="space-y-12">
           {/* Stats Header */}
@@ -423,8 +425,7 @@ export default function TeamSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center space-y-3 max-w-2xl mx-auto"
-          >
+            className="text-center space-y-3 max-w-2xl mx-auto">
             <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold shadow-sm">
               <HiOutlineChartBar className="w-4 h-4" />
               <span>Proven Impact & Metrics</span>
@@ -449,16 +450,14 @@ export default function TeamSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6"
-          >
+            className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 lg:gap-6 ">
             {stats.map((stat, idx) => (
               <motion.div
                 key={idx}
                 variants={itemVariants}
                 whileHover={{ y: -6, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="group relative p-6 sm:p-8 rounded-3xl bg-slate-900/60 border border-white/10 hover:border-cyan-500/40 text-center space-y-3 backdrop-blur-xl shadow-xl transition-all duration-300"
-              >
+                className="group relative p-6 sm:p-8 rounded-3xl bg-slate-900/60 border border-white/10 hover:border-cyan-500/40 text-center space-y-3 backdrop-blur-xl shadow-xl transition-all duration-300">
                 <div className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500 pb-2 border-b border-white/10 group-hover:border-cyan-500/30 transition-colors">
                   {stat.value}
                 </div>
@@ -478,8 +477,7 @@ export default function TeamSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center space-y-3"
-          >
+            className="text-center space-y-3">
             <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold shadow-sm">
               <HiOutlineUser className="w-4 h-4" />
               <span>Behind SyncXel</span>
@@ -505,15 +503,13 @@ export default function TeamSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative p-8 sm:p-10 rounded-3xl bg-slate-900/70 border border-white/15 shadow-2xl backdrop-blur-2xl hover:border-cyan-500/40 transition-all duration-300"
-          >
-            <div className="flex flex-col md:flex-row items-center gap-6 lg:gap-10">
+            className="relative p-8 sm:p-10 rounded-3xl bg-slate-900/70 border border-white/15 shadow-2xl backdrop-blur-2xl hover:border-cyan-500/40 transition-all duration-300">
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 lg:gap-6  ">
               {/* Profile Image with Hover Animation */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="shrink-0 relative rounded-full"
-              >
+                className="shrink-0 relative rounded-full">
                 <img
                   src={HeroImage}
                   alt="Lakshan Sandeepa - Founder of SyncXel"
@@ -556,8 +552,7 @@ export default function TeamSection() {
                   ].map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-3 py-1 rounded-xl bg-slate-950 border border-white/10 text-xs font-medium text-slate-300"
-                    >
+                      className="px-3 py-1 rounded-xl bg-slate-950 border border-white/10 text-xs font-medium text-slate-300">
                       {tag}
                     </span>
                   ))}
@@ -566,11 +561,31 @@ export default function TeamSection() {
                 {/* Social Links with Hover Effects */}
                 <div className="pt-2 flex items-center justify-center md:justify-start space-x-2">
                   {[
-                    { href: "https://github.com/lakshan-beast", icon: SiGithub, title: "GitHub Profile" },
-                    { href: "https://www.linkedin.com/in/lakshan-sandeepa", icon: RxLinkedinLogo, title: "LinkedIn Profile" },
-                    { href: "https://lakshan-sandeepa-dev.vercel.app/", icon: SlGlobe, title: "Portfolio Profile" },
-                    { href: "https://t.me/lakshan_dev", icon: FaTelegramPlane, title: "Telegram Chat" },
-                    { href: "mailto:syncxelofficial@gmail.com", icon: FaEnvelope, title: "Email Chat" },
+                    {
+                      href: "https://github.com/lakshan-beast",
+                      icon: SiGithub,
+                      title: "GitHub Profile",
+                    },
+                    {
+                      href: "https://www.linkedin.com/in/lakshan-sandeepa",
+                      icon: RxLinkedinLogo,
+                      title: "LinkedIn Profile",
+                    },
+                    {
+                      href: "https://lakshan-sandeepa-dev.vercel.app/",
+                      icon: SlGlobe,
+                      title: "Portfolio Profile",
+                    },
+                    {
+                      href: "https://t.me/lakshan_dev",
+                      icon: FaTelegramPlane,
+                      title: "Telegram Chat",
+                    },
+                    {
+                      href: "mailto:syncxelofficial@gmail.com",
+                      icon: FaEnvelope,
+                      title: "Email Chat",
+                    },
                   ].map((social, sIdx) => {
                     const Icon = social.icon;
                     return (
@@ -581,10 +596,13 @@ export default function TeamSection() {
                         rel="noreferrer"
                         whileHover={{ scale: 1.15, y: -3 }}
                         whileTap={{ scale: 0.95 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 17,
+                        }}
                         className="p-3 rounded-xl bg-slate-950 border border-white/10 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors shadow-md"
-                        title={social.title}
-                      >
+                        title={social.title}>
                         <Icon className="w-5 h-5" />
                       </motion.a>
                     );
@@ -594,7 +612,6 @@ export default function TeamSection() {
             </div>
           </motion.div>
         </div>
-
       </div>
     </section>
   );

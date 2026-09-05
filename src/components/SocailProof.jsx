@@ -77,7 +77,7 @@ export default function ReviewSlider() {
       </div>
 
       {/* Slider Container with Outer Buttons */}
-      <div className="relative flex items-center justify-center gap-3 sm:gap-6">
+      <div className="relative flex items-center justify-center gap-2 md:gap-4 lg:gap-6 ">
         
         {/* Left Arrow (Outside Card) */}
         <button 
