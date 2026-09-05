@@ -11,7 +11,7 @@ import ClayPillBanner from "../../library/free/success/ClayPillBanner";
 import RetroTerminalToast from "../../library/free/success/RetroTerminalToast";
 import RetroCrtBanner from "../../library/free/success/RetroCrtBanner";
 
-export const toastsData = [
+export const successData = [
   {
     id: "toast-cyber-neon",
     title: "Cyberpunk Neon Success Toast",
