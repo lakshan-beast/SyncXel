@@ -14,7 +14,7 @@ import { avatarsData } from "./AvatorsData";
 import { tabsData } from "./tabletsData";
 import { footersData } from "./FootersData";
 import { checkboxesData } from "./CheckboxesData";
-import { toastsData } from "./Toastsdata";
+import { successData } from "./SuccessData";
 import { fabData } from "./FabData";
 
 export const freeComponentsData = [
@@ -34,6 +34,6 @@ export const freeComponentsData = [
   ...tabsData,
   ...footersData,
   ...checkboxesData,
-  ...toastsData,
+  ...successData,
   ...fabData,
 ];

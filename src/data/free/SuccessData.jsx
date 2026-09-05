@@ -1,15 +1,15 @@
-import CyberNeonToast from "../../library/free/toasts/CyberNeonToast";
-import CyberGlitchBanner from "../../library/free/toasts/CyberGlitchBanner";
-import BrutalPopToast from "../../library/free/toasts/BrutalPopToast";
-import BrutalHardBanner from "../../library/free/toasts/BrutalHardBanner";
-import GlassFrostToast from "../../library/free/toasts/GlassFrostToast";
-import GlassNeonToast from "../../library/free/toasts/GlassNeonToast";
-import BentoStatusToast from "../../library/free/toasts/BentoStatusToast";
-import BentoClusterBanner from "../../library/free/toasts/BentoClusterBanner";
-import ClaySoftToast from "../../library/free/toasts/ClaySoftToast";
-import ClayPillBanner from "../../library/free/toasts/ClayPillBanner";
-import RetroTerminalToast from "../../library/free/toasts/RetroTerminalToast";
-import RetroCrtBanner from "../../library/free/toasts/RetroCrtBanner";
+import CyberNeonToast from "../../library/free/success/CyberNeonToast";
+import CyberGlitchBanner from "../../library/free/success/CyberGlitchBanner";
+import BrutalPopToast from "../../library/free/success/BrutalPopToast";
+import BrutalHardBanner from "../../library/free/success/BrutalHardBanner";
+import GlassFrostToast from "../../library/free/success/GlassFrostToast";
+import GlassNeonToast from "../../library/free/success/GlassNeonToast";
+import BentoStatusToast from "../../library/free/success/BentoStatusToast";
+import BentoClusterBanner from "../../library/free/success/BentoClusterBanner";
+import ClaySoftToast from "../../library/free/success/ClaySoftToast";
+import ClayPillBanner from "../../library/free/success/ClayPillBanner";
+import RetroTerminalToast from "../../library/free/success/RetroTerminalToast";
+import RetroCrtBanner from "../../library/free/success/RetroCrtBanner";
 
 export const toastsData = [
   {
