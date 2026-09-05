@@ -521,6 +521,10 @@ export default function Footer() {
                   UI MATRIX v2.0
                 </span>
               </div>
+
+              <span className="px-2.5 py-0.5 text-[10px] font-extrabold text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 rounded-full tracking-wider uppercase shadow-[0_0_10px_rgba(34,211,238,0.2)] animate-pulse">
+                Beta
+              </span>
             </Link>
 
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
