@@ -16,6 +16,7 @@
     "react-dom": "^19.2.8",
     "react-icons": "^5.7.0",
     "react-router-dom": "^7.18.2",
+    "source-map-explorer": "^2.5.3",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
@@ -23,6 +24,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "oxlint": "^1.75.0",
+    "rollup-plugin-visualizer": "^7.1.1",
     "vite": "^8.2.0"
   }
 }

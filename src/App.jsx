@@ -22,6 +22,10 @@ import ScrollToTop from "./components/ScrollTop";
 import DocsPreviewSection from "./components/DocsPreview";
 import SocialProof from "./components/SocailProof";
 
+import MatrixRain from "./components/MatrixRain";
+import SystemStatus from "./components/SystemStatus";
+import TerminalBox from "./components/TerminalBox";
+
 export default function App() {
   return (
     <Router>
@@ -29,6 +33,7 @@ export default function App() {
       <div className="relative min-h-screen bg-syncxel-dark text-white selection:bg-syncxel-cyan selection:text-syncxel-dark flex flex-col justify-between overflow-x-hidden">
         {/* 🌟 FIXED BACKGROUND */}
         <div className="fixed inset-0 pointer-events-none z-0">
+          <MatrixRain />
           {/* 1. Grid Pattern */}
           <div className=" inset-0 opacity-20 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [bg-size:24px_24px] animate-pulse" />
 
@@ -50,6 +55,7 @@ export default function App() {
                 element={
                   <>
                     <HeroSection />
+
                     <TeckStack />
                     <TrustBar />
                     <Components />
@@ -96,6 +102,8 @@ export default function App() {
               />
             </Routes>
           </main>
+
+          <SystemStatus />
 
           <ScrollToTop />
         </div>

@@ -193,6 +193,8 @@ import {
   HiOutlineClipboardDocument,
 } from "react-icons/hi2";
 
+import TerminalBox from "./TerminalBox";
+
 // --- Framer Motion Variants ---
 
 // මුළු container එක සඳහා variants (stagger children සඳහා)
@@ -420,7 +422,13 @@ export default function GlassGlowHeroButton() {
               </pre>
             )}
           </div>
+
+        
         </motion.div>
+
+          <div className="max-w-4xl mx-auto px-4 my-8 flex justify-center">
+            <TerminalBox />
+          </div>
       </motion.div>
     </section>
   );
