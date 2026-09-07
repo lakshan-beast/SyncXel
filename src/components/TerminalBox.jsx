@@ -148,7 +148,7 @@ export default function TerminalBox() {
         res = "Returning to Home...";
         setIsOpen(false);
       } else if (cmd === "github") {
-        window.open("https://github.com", "_blank");
+        window.open("https://github.com/lakshan-beast/SyncXel", "_blank");
         res = "Opening GitHub repository...";
       } else if (cmd === "clear") {
         setLogs(["Terminal cleared."]);
@@ -204,7 +204,7 @@ export default function TerminalBox() {
           </div>
           <div className="h-32 overflow-y-auto space-y-1 mb-2 text-cyan-300">
             {logs.map((log, i) => (
-              <div key={i} className="break-words">
+              <div key={i} className="wrap-break-word">
                 {log}
               </div>
             ))}

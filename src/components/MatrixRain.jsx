@@ -27,7 +27,7 @@ export default function MatrixRain() {
           drops[i] = 0;
         drops[i]++;
       }
-    }, 30000);
+    }, 30);
 
     return () => clearInterval(interval);
   }, []);
@@ -35,7 +35,7 @@ export default function MatrixRain() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0 opacity-15"
+      className="fixed inset-0 pointer-events-none z-0 opacity-20"
     />
   );
 }
