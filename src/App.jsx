@@ -26,6 +26,8 @@ import MatrixRain from "./components/MatrixRain";
 import SystemStatus from "./components/SystemStatus";
 import TerminalBox from "./components/TerminalBox";
 
+import SyncRunner from "./components/SyncRunner";
+
 export default function App() {
   return (
     <Router>
@@ -65,6 +67,8 @@ export default function App() {
                     <TeamSection />
                     <ServicesSection />
                     <FaqSection />
+
+                    <SyncRunner />
                     <Footer />
                   </>
                 }
