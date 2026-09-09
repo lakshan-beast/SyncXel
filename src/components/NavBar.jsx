@@ -782,7 +782,7 @@ export default function NavBar() {
                   <motion.button
                     whileHover="hover"
                     whileTap={{ scale: 0.95 }}
-                    className="relative overflow-hidden w-full py-2.5 bg-slate-950 border border-slate-800 text-slate-200 font-semibold text-xs rounded-xl cursor-pointer group">
+                    className="relative overflow-hidden w-full py-2.5 bg-white/10 border-none border-slate-800 text-slate-200 font-semibold text-xs rounded-xl cursor-pointer group">
                     <span className="relative z-10 group-hover:text-slate-950 transition-colors">
                       Hire Us
                     </span>
