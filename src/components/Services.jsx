@@ -1020,7 +1020,7 @@ export default function Services() {
             </span>
           </h2>
 
-          <p className="text-slate-400 text-sm sm:text-base leading-4 md:leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-400 text-sm sm:text-base leading-4 md:leading-tight max-w-2xl mx-auto">
             Need a custom web application or modern landing page? I partner with
             founders, startups, and businesses to build high-converting web
             solutions.
@@ -1040,15 +1040,15 @@ export default function Services() {
               variants={itemVariants}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="group relative p-6 rounded-4xl bg-slate-900/60 border-3 md:border-2 border-white/10 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 backdrop-blur-md flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-slate-950 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-cyan-500/40 transition-all duration-300">
+              className="group relative px-6 py-8 rounded-4xl bg-slate-900/90 border-3 md:border-2 border-white/5 hover:border-cyan-500/10 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 backdrop-blur-md flex flex-col justify-between">
+              <div className="space-y-2 lg:space-y-4">
+                <div className="w-12 h-12 rounded-xl bg-slate-800 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-cyan-500/40 transition-all duration-300">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                <p className="text-slate-400 text-xs sm:text-sm leading-tight">
                   {item.description}
                 </p>
               </div>
@@ -1074,7 +1074,7 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="text-center space-y-2">
-            <h3 className="text-2xl sm:text-3xl font-exo text-white tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-exo font-semibold text-white tracking-tight">
               How We Work Together
             </h3>
             <p className="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto leading-4 md:leading-relaxed">
@@ -1095,14 +1095,14 @@ export default function Services() {
                 variants={itemVariants}
                 whileHover={{ y: -4 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="relative py-6 px-10 rounded-4xl bg-slate-900/40 border-3 md:border-2 border-white/10 hover:border-cyan-500/30 transition-all space-y-3 backdrop-blur-sm hover:shadow-xl">
+                className="relative py-6 px-10 rounded-4xl bg-slate-900/90 border-3 md:border-2 border-white/5 hover:border-cyan-500/10 transition-all space-y-3 backdrop-blur-sm hover:shadow-xl">
                 <span className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
                   {step.number}
                 </span>
                 <h4 className="text-lg font-bold text-white border-t border-white/10 pt-2">
                   {step.title}
                 </h4>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-xs text-slate-400 leading-tight">
                   {step.desc}
                 </p>
               </motion.div>
