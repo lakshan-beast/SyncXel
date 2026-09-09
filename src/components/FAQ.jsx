@@ -329,7 +329,7 @@ export default function FaqSection() {
             </span>
           </h2>
 
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+          <p className="text-slate-400 text-sm sm:text-base leading-tight max-w-xl mx-auto">
             Everything you need to know about SyncXel UI components and custom
             frontend engineering services.
           </p>
@@ -341,7 +341,7 @@ export default function FaqSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="space-y-3">
+          className="space-y-2">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
 
@@ -349,10 +349,10 @@ export default function FaqSection() {
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                className={`rounded-2xl border-3 md:border-2 transition-all duration-300 overflow-hidden backdrop-blur-md ${
+                className={`px-3 py-0 rounded-4xl lg:rounded-2xl border-3 md:border-2 transition-all duration-300 overflow-hidden backdrop-blur-md ${
                   isOpen
-                    ? "bg-slate-900/80 border-cyan-500/30 shadow-xl shadow-cyan-500/5"
-                    : "bg-slate-900/40 border-white/10 hover:border-white/20"
+                    ? "bg-slate-900/90 border-cyan-500/15 shadow-xl shadow-cyan-500/5"
+                    : "bg-slate-900/40 border-white/8 hover:border-white/12"
                 }`}>
                 {/* Accordion Question Header */}
                 <button
@@ -360,13 +360,13 @@ export default function FaqSection() {
                   onClick={() => toggleFaq(idx)}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}>
-                  <span className="text-base sm:text-lg font-bold text-white tracking-tight">
+                  <span className="text-base sm:text-lg font-semibold text-white/80 hover:text-white tracking-tight">
                     {faq.question}
                   </span>
                   <div
                     className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300 ${
                       isOpen
-                        ? "bg-cyan-500/20 border-cyan-500/40 text-cyan-400 rotate-180"
+                        ? "bg-cyan-500/10 border-cyan-500/50 text-cyan-300 rotate-540 scale-120"
                         : "bg-slate-950 border-white/10 text-slate-400"
                     }`}>
                     <HiOutlineChevronDown className="w-4 h-4" />
@@ -381,7 +381,7 @@ export default function FaqSection() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}>
-                      <div className="px-6 pb-6 pt-0 text-slate-300 text-sm sm:text-base leading-relaxed border-t border-white/10 mt-1">
+                      <div className="px-8 pb-3 pt-0 text-slate-400 text-sm sm:text-base leading-tight border-t border-white/10 mt-0">
                         <p className="pt-4">{faq.answer}</p>
                       </div>
                     </motion.div>
