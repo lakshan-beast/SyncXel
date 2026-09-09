@@ -59,11 +59,11 @@ export default function App() {
                   <HeroSection />
 
                   <TeckStack />
-                  <TrustBar />
                   <Components />
                   <DocsPreviewSection />
                   {/* <SocialProof /> */}
                   <FeaturesSection />
+                  <TrustBar />
                   <TeamSection />
                   <ServicesSection />
                   <FaqSection />
