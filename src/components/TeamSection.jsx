@@ -418,8 +418,8 @@ export default function TeamSection() {
 
       <div className="max-w-7xl mx-auto space-y-24 relative z-10">
         {/* 1. STATS / METRICS BAR WITH HEADING */}
-        <div className="space-y-12">
-          {/* Stats Header */}
+        {/* <div className="space-y-12">
+          {/* Stats Header *
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -444,7 +444,7 @@ export default function TeamSection() {
             </p>
           </motion.div>
 
-          {/* Metrics Grid with Framer Motion Stagger */}
+          {/* Metrics Grid with Framer Motion Stagger *
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -467,7 +467,7 @@ export default function TeamSection() {
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </div> */}
 
         {/* 2. MEET THE FOUNDER SECTION */}
         <div className="max-w-4xl mx-auto space-y-12">
@@ -490,7 +490,7 @@ export default function TeamSection() {
               </span>
             </h2>
 
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
+            <p className="text-slate-400 text-sm sm:text-base leading-tight max-w-xl mx-auto">
               Building modern digital products with a strong focus on
               high-performance code, clean UI architecture, and seamless user
               experiences.
@@ -503,7 +503,7 @@ export default function TeamSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative p-8 sm:p-10 rounded-3xl bg-slate-900/70 border border-white/15 shadow-2xl backdrop-blur-2xl hover:border-cyan-500/40 transition-all duration-300">
+            className="relative p-8 sm:p-10 rounded-4xl bg-slate-900/90 border-2 border-white/5 shadow-2xl backdrop-blur-2xl hover:border-cyan-500/10 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 lg:gap-6  ">
               {/* Profile Image with Hover Animation */}
               <motion.div
@@ -524,7 +524,7 @@ export default function TeamSection() {
               </motion.div>
 
               {/* Founder Bio & Details */}
-              <div className="space-y-4 text-center md:text-left flex-1">
+              <div className="space-y-2 text-center md:text-left flex-1">
                 <div className="space-y-1">
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                     Lakshan Sandeepa
@@ -534,7 +534,7 @@ export default function TeamSection() {
                   </p>
                 </div>
 
-                <p className="text-slate-300/90 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-400/90 text-sm sm:text-base leading-tight">
                   Passionate about crafting high-performance web applications,
                   clean code, and modern dark aesthetics. Building SyncXel to
                   help developers code faster and businesses launch
@@ -542,7 +542,7 @@ export default function TeamSection() {
                 </p>
 
                 {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 pt-1 justify-center md:justify-start">
+                <div className="flex flex-wrap gap-1 pt-1 justify-center md:justify-start">
                   {[
                     "React.js",
                     "TypeScript",
@@ -552,14 +552,14 @@ export default function TeamSection() {
                   ].map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-3 py-1 rounded-xl bg-slate-950 border border-white/10 text-xs font-medium text-slate-300">
+                      className="px-4 py-1 rounded-xl bg-slate-950 border border-white/15 text-xs font-medium text-slate-300">
                       {tag}
                     </span>
                   ))}
                 </div>
 
                 {/* Social Links with Hover Effects */}
-                <div className="pt-2 flex items-center justify-center md:justify-start space-x-2">
+                <div className="pt-2 flex items-center justify-center md:justify-start space-x-1">
                   {[
                     {
                       href: "https://github.com/lakshan-beast",
@@ -601,9 +601,9 @@ export default function TeamSection() {
                           stiffness: 400,
                           damping: 17,
                         }}
-                        className="p-3 rounded-xl bg-slate-950 border border-white/10 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors shadow-md"
+                        className="p-3 rounded-xl bg-slate-950 border-2 border-white/10 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors shadow-md gruop "
                         title={social.title}>
-                        <Icon className="w-5 h-5" />
+                        <Icon className="w-5 h-5 group-hover:scale-110" />
                       </motion.a>
                     );
                   })}
