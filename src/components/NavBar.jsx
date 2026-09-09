@@ -554,7 +554,7 @@ export default function NavBar() {
           </div>
         </div>
 
-        <div className="px-5 sm:px-6 py-3.5 flex items-center justify-between">
+        <div className="px-5 sm:px-6 py-5 flex items-center justify-between">
           {/* Logo Section */}
           <Link
             to="/"
