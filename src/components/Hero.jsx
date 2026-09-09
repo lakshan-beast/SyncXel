@@ -248,7 +248,7 @@ export default function GlassGlowHeroButton() {
       {/* <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:30px_30px] animate-pulse" /> */}
 
       {/* 2. PULSING GLOW ORBS */}
-      <div className="absolute top-1/5 left-1/2 -translate-x-1/2 -translate-y-1/2 w-95 sm:w-125 h-75 bg-cyan-500/85 blur-[130px] pointer-events-none rounded-full animate-pulse" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-95 sm:w-125 h-75 bg-cyan-500/85 blur-[130px] pointer-events-none rounded-full animate-pulse" />
 
       {/* Main Content Container - motion.div එකක් බවට පත් කළා */}
       <motion.div
