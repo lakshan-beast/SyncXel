@@ -208,7 +208,7 @@ export default function Footer() {
         {/* 2. MIDDLE FOOTER LINKS GRID */}
         <motion.div
           variants={itemVariants}
-          className="grid grid-cols-1 md:grid-cols-4 gap-10 pt-10 md:pt-8 px-6  border-t border-white/10">
+          className="grid grid-cols-1 md:grid-cols-4 gap-10 pt-10 md:pt-8 px-3  border-t border-white/10">
           {/* 1. Products / Library */}
           <div className="flex flex-col space-y-2">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">

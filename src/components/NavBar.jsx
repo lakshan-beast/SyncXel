@@ -578,7 +578,7 @@ export default function NavBar() {
             </div>
 
             <div className="flex flex-col">
-              <span className="text-2xl font-black tracking-tighter text-white font-baloo uppercase group-hover:text-cyan-200 transition-colors">
+              <span className="text-3xl font-black tracking-tighter text-white font-baloo uppercase group-hover:text-cyan-200 transition-colors">
                 Sync
                 <span className="text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 ml-1">
                   Xel
