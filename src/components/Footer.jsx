@@ -45,7 +45,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-slate-950 pt-0 md:pt-20 pb-10 px-4 sm:px-8 border-t border-white/10 overflow-hidden rounded-t-4xl">
+    <footer className="relative bg-slate-950 pt-0 md:pt-12 pb-10 px-4 sm:px-8 border-t border-white/20 overflow-hidden rounded-t-4xl">
       <motion.div
         className="max-w-7xl mx-auto space-y-16 relative z-10"
         variants={containerVariants}
@@ -55,31 +55,31 @@ export default function Footer() {
         {/* 1. TOP BIG HIGH CONTRAST CTA BOX WITH ANIMATED BORDER */}
         <motion.div
           variants={itemVariants}
-          className="relative rounded-4xl p-0.5 overflow-hidden group max-w-6xl mx-auto my-10">
+          className="relative rounded-4xl p-0.5 overflow-hidden group max-w-6xl lg:max-w-4xl mx-auto my-10">
           {/* 🌟 1. DUWANA BORDER EFFECT (Animated Rotating Gradient) */}
           <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,#06b6d4_0%,#6366f1_50%,#06b6d4_100%)] opacity-70 animate-[spin_6s_linear_infinite] group-hover:opacity-100 transition-opacity" />
 
           {/* 🌟 2. INNER CONTENT BOX (Dark Background over Border) */}
-          <div className="relative rounded-[calc(1.5rem-1px)] bg-slate-950/90 backdrop-blur-xl p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 z-10">
+          <div className="relative rounded-[calc(1.5rem-1px)] bg-slate-950/50 backdrop-blur-xl p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 z-10">
             {/* Radial Background Glow */}
             <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/15 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute -left-20 -top-20 w-60 h-60 bg-indigo-500/10 rounded-full blur-[90px] pointer-events-none" />
 
             {/* Left Text Box */}
-            <div className="space-y-4 max-w-xl text-center md:text-left z-10">
-              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold shadow-[0_0_15px_rgba(6,182,212,0.15)]">
+            <div className="space-y-1 max-w-xl text-center md:text-left z-10">
+              <div className="inline-flex items-center space-x-2 px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold shadow-[0_0_15px_rgba(6,182,212,0.15)]">
                 <HiOutlineSparkles className="w-4 h-4 animate-pulse" />
                 <span>Let's Build Something Great</span>
               </div>
 
               <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
                 Ready to elevate your{" "}
-                <span className="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
                   digital experience?
                 </span>
               </h2>
 
-              <p className="text-slate-400 text-sm md:text-base leading-relaxed">
+              <p className="text-slate-400 text-sm md:text-base leading-tight">
                 Explore our production-ready UI components or hire us to build
                 your custom web product with precision.
               </p>
@@ -109,7 +109,7 @@ export default function Footer() {
         </motion.div>
 
         {/* Brand Column */}
-        <div className="col-span-2 space-y-4">
+        <div className="col-span-2 space-y-2 mt-26 ">
           <Link
             to="/"
             className="flex items-center space-x-3 cursor-pointer group">
@@ -155,13 +155,13 @@ export default function Footer() {
             </span>
           </Link>
 
-          <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
+          <p className="text-xs text-slate-400 max-w-sm leading-tight">
             Crafting production-ready UI components, design systems, and custom
             web applications for developers and startups globally.
           </p>
 
           {/* Social Icons */}
-          <div className="flex items-center space-x-3 pt-2">
+          <div className="flex items-center space-x-2 pt-2">
             <a
               href="https://github.com/lakshan-beast"
               target="_blank"
@@ -208,111 +208,13 @@ export default function Footer() {
         {/* 2. MIDDLE FOOTER LINKS GRID */}
         <motion.div
           variants={itemVariants}
-          className="grid grid-cols-1 md:grid-cols-4 gap-10 pt-20 md:pt-16 border-t border-white/10 ">
-          {/* Nav Links */}
-          {/* <div></div>
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
-              Library
-            </h4>
-            <ul className="space-y-2 text-xs text-slate-400">
-              <li>
-                <a
-                  href="#components"
-                  className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <FaCaretRight className="text-cyan-400 transition-transform group-hover:translate-x-0.5" />
-                  UI Components
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#templates"
-                  className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <FaCaretRight className="text-cyan-400 transition-transform group-hover:translate-x-0.5" />
-                  Templates
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#pricing"
-                  className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <FaCaretRight className="text-cyan-400 transition-transform group-hover:translate-x-0.5" />
-                  Pro Access
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
-              Services
-            </h4>
-            <ul className="space-y-2 text-xs text-slate-400">
-              <li>
-                <a
-                  href="#hire"
-                  className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <FaCaretRight className="text-cyan-400 transition-transform group-hover:translate-x-0.5" />
-                  Custom Web Design
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#how-it-works"
-                  className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <FaCaretRight className="text-cyan-400 transition-transform group-hover:translate-x-0.5" />
-                  Workflow
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#hire"
-                  className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <FaCaretRight className="text-cyan-400 transition-transform group-hover:translate-x-0.5" />
-                  Project Inquiry
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
-              Support
-            </h4>
-            <ul className="space-y-2 text-xs text-slate-400">
-              <li>
-                <Link
-                  to="/docs"
-                  className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <FaCaretRight className="text-cyan-400 transition-transform group-hover:translate-x-0.5" />
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="/legal"
-                  className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <FaCaretRight className="text-cyan-400 transition-transform group-hover:translate-x-0.5" />
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#terms"
-                  className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                  <FaCaretRight className="text-cyan-400 transition-transform group-hover:translate-x-0.5" />
-                  Terms of Service
-                </a>
-              </li>
-            </ul>
-          </div> */}
-
+          className="grid grid-cols-1 md:grid-cols-4 gap-10 pt-10 md:pt-8 px-6  border-t border-white/10">
           {/* 1. Products / Library */}
           <div className="flex flex-col space-y-2">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
               Products / Library
             </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400 flex flex-col">
+            <ul className="space-y-0.5 text-xs text-slate-400 flex flex-col">
               <li>
                 <Link
                   to="/components"
@@ -353,7 +255,7 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
               Services / Hire
             </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400 flex flex-col">
+            <ul className="space-y-0.5 text-xs text-slate-400 flex flex-col">
               <li>
                 <a
                   href="/#services"
@@ -386,7 +288,7 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
               Developers / Docs
             </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400 flex flex-col">
+            <ul className="space-y-0.5 text-xs text-slate-400 flex flex-col">
               <li>
                 <Link
                   to="/docs"
@@ -419,7 +321,7 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
               Company & Legal
             </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400 flex flex-col">
+            <ul className="space-y-0.5 text-xs text-slate-400 flex flex-col">
               <li>
                 <Link
                   to="/legal"
