@@ -182,7 +182,6 @@
 //   );
 // }
 
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowRight } from "react-icons/hi2";
@@ -227,14 +226,13 @@ export default function HomeComponentsTeaser() {
     <section
       id="components"
       className="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-10 scroll-mt-20">
-      
       {/* Title Header with Motion */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-center space-y-2">
+        className="text-center space-y-2 ">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
           Explore{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
@@ -258,7 +256,6 @@ export default function HomeComponentsTeaser() {
             <Link
               to="/components"
               className="group rounded-2xl bg-slate-900/60 border border-white/10 overflow-hidden backdrop-blur-md hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
-              
               {/* Live Component Preview Box (Replaces Static Image) */}
               <div className="h-48 bg-slate-950/80 overflow-hidden relative flex items-center justify-center p-4 border-b border-white/5">
                 <div className="w-full flex items-center justify-center scale-95 group-hover:scale-100 transition-transform duration-300 pointer-events-none">
@@ -295,7 +292,6 @@ export default function HomeComponentsTeaser() {
           <HiOutlineArrowRight className="w-4 h-4" />
         </Link>
       </motion.div>
-
     </section>
   );
 }
