@@ -127,7 +127,7 @@ export default function DocsPreviewSection() {
       icon: HiOutlineSparkles,
       title: "Custom Hooks & Motion",
       desc: "Reusable React custom hooks (useDebounce, useLocalStorage) and Tailwind animation effects.",
-      glow: "hover:shadow-pink-500/10",
+      glow: "hover:shadow-pink-500/5",
     },
   ];
 
@@ -162,7 +162,7 @@ export default function DocsPreviewSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          className="text-center max-w-4xl mx-auto mb-14 space-y-2">
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold shadow-sm">
             <HiBookmark className="w-4 h-4" />
             <span>Free Developer Ecosystem</span>
@@ -186,7 +186,7 @@ export default function DocsPreviewSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6 mb-12">
           {features.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -195,14 +195,14 @@ export default function DocsPreviewSection() {
                 variants={itemVariants}
                 whileHover={{ y: -6, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className={`group relative bg-slate-950/80 p-6 sm:p-7 rounded-3xl border border-white/10 hover:border-cyan-500/40 transition-all duration-300 shadow-xl backdrop-blur-xl ${item.glow}`}>
-                <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-5 border border-cyan-500/20 group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-slate-950 transition-all duration-300">
+                className={`group relative bg-slate-900/90 p-6 sm:p-7 rounded-3xl border border-white/5 hover:border-cyan-500/0 transition-all duration-300 shadow-xl backdrop-blur-xl ${item.glow}`}>
+                <div className="w-12 h-12 rounded-2xl bg-slate-900 text-cyan-400 flex items-center justify-center mb-5 border border-cyan-500/20 group-hover:scale-120 group-hover:bg-cyan-500/10 group-hover:text-cyan-300 group-hover:rotate-2 transition-all duration-300">
                   <Icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-2 tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-400 leading-tight">
                   {item.desc}
                 </p>
               </motion.div>
