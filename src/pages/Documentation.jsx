@@ -1094,7 +1094,7 @@ export default function Documentation() {
   const activeIntegration = integrationsData?.[integrationSubTab] || {};
 
   return (
-    <div className="min-h-screen bg-white/1 backdrop-blur-md md:rounded-2xl text-slate-100 py-4 mt-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="min-h-screen bg-white/1 backdrop-blur-md md:rounded-2xl text-slate-100 py-4 mt-2 lg:mt-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* 1. TOP LICENSE BANNER */}
       <div className="mb-8 p-4 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-slate-900 to-emerald-500/10 border border-cyan-500/20 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg shadow-cyan-950/30">
         <div className="flex space-x-3 items-start">

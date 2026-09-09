@@ -245,10 +245,10 @@ export default function GlassGlowHeroButton() {
   return (
     <section className="relative pt-0 pb-16 px-4 sm:px-8 md:pt-16 lg:pt-30 overflow-hidden min-h-screen flex items-center justify-center sm:items-start text-wrap">
       {/* 1. ANIMATED BACKGROUND GRID PATTERN */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:30px_30px] animate-pulse" />
+      {/* <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:30px_30px] animate-pulse" /> */}
 
       {/* 2. PULSING GLOW ORBS */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 sm:w-125 h-75 bg-cyan-500/55 blur-[140px] pointer-events-none rounded-full animate-pulse" />
+      <div className="absolute top-1/5 left-1/2 -translate-x-1/2 -translate-y-1/2 w-95 sm:w-125 h-75 bg-cyan-500/85 blur-[130px] pointer-events-none rounded-full animate-pulse" />
 
       {/* Main Content Container - motion.div එකක් බවට පත් කළා */}
       <motion.div
@@ -426,9 +426,9 @@ export default function GlassGlowHeroButton() {
         
         </motion.div>
 
-          <div className="max-w-4xl mx-auto px-4 my-8 flex justify-center">
+          {/* <div className="max-w-4xl mx-auto px-4 my-8 flex justify-center">
             <TerminalBox />
-          </div>
+          </div> */}
       </motion.div>
     </section>
   );
