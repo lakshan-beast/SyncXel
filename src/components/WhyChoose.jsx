@@ -223,7 +223,7 @@ export default function Features() {
             </span>
           </h2>
 
-          <p className="text-slate-300/80 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-300/80 text-sm sm:text-base leading-tight max-w-2xl mx-auto">
             Whether you are using our pre-built component blocks or hiring us
             for custom development, we maintain the highest engineering
             standards.
@@ -243,10 +243,10 @@ export default function Features() {
               variants={itemVariants}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="group relative p-8 rounded-3xl bg-slate-900/60 border border-white/10 hover:border-cyan-500/40 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 backdrop-blur-xl flex flex-col justify-between">
-              <div className="space-y-4">
+              className="group relative py-8 px-10 rounded-3xl bg-slate-900/90 border border-white/5 hover:border-cyan-500/10 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 backdrop-blur-xl flex flex-col justify-between">
+              <div className="space-y-3">
                 {/* Icon Box with Hover Fill Effect */}
-                <div className="w-12 h-12 rounded-2xl bg-slate-950 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500 group-hover:border-cyan-400 transition-all duration-300 shadow-md">
+                <div className="w-12 h-12 rounded-2xl bg-slate-950 border border-white/10 flex items-center justify-center group-hover:scale-110  group-hover:bg-cyan-500/30 group-hover:border-cyan-400/50 transition-all duration-300 shadow-md">
                   {feature.icon}
                 </div>
 
@@ -254,17 +254,17 @@ export default function Features() {
                   {feature.title}
                 </h3>
 
-                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                <p className="text-slate-400 text-xs sm:text-sm leading-tight">
                   {feature.description}
                 </p>
               </div>
 
               {/* Bottom Subtle Indicator Line */}
-              <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+              <div className="mt-3 pt-2 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">
                 <span className="group-hover:text-cyan-400 transition-colors font-medium">
                   SyncXel Standard
                 </span>
-                <span className="w-2 h-2 rounded-full bg-cyan-500/30 group-hover:bg-cyan-400 transition-colors" />
+                <span className="w-2 h-2 rounded-full bg-cyan-500/30 group-hover:bg-cyan-400/60 transition-colors" />
               </div>
             </motion.div>
           ))}
