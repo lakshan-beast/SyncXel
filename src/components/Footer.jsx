@@ -55,7 +55,7 @@ export default function Footer() {
         {/* 1. TOP BIG HIGH CONTRAST CTA BOX WITH ANIMATED BORDER */}
         <motion.div
           variants={itemVariants}
-          className="relative rounded-3xl p-[1px] overflow-hidden group max-w-6xl mx-auto my-10">
+          className="relative rounded-4xl p-0.5 overflow-hidden group max-w-6xl mx-auto my-10">
           {/* 🌟 1. DUWANA BORDER EFFECT (Animated Rotating Gradient) */}
           <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,#06b6d4_0%,#6366f1_50%,#06b6d4_100%)] opacity-70 animate-[spin_6s_linear_infinite] group-hover:opacity-100 transition-opacity" />
 
@@ -86,7 +86,7 @@ export default function Footer() {
             </div>
 
             {/* Right Action Buttons */}
-            <div className="flex flex-col sm:flex-row md:flex-col items-center gap-1 md:gap-4 w-full md:w-auto z-10">
+            <div className="flex flex-col sm:flex-row md:flex-col items-center gap-1 md:gap-2 w-full md:w-auto z-10">
               {/* Start Project Button */}
               <a
                 href="#hire"
@@ -108,107 +108,107 @@ export default function Footer() {
           </div>
         </motion.div>
 
+        {/* Brand Column */}
+        <div className="col-span-2 space-y-4">
+          <Link
+            to="/"
+            className="flex items-center space-x-3 cursor-pointer group">
+            {/* Animated Rotating Border Logo Container */}
+            <div className="relative w-11 h-11 flex items-center justify-center">
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 8,
+                  ease: "linear",
+                }}
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-cyan-400 p-[2px] shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+                <div className="w-full h-full bg-slate-950 rounded-full" />
+              </motion.div>
+
+              {/* Actual Logo Image */}
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                src="/syncxel-logo-removebg.png"
+                alt="SyncXel Logo"
+                width={28}
+                height={28}
+                className="object-contain relative z-10 rounded-full"
+              />
+            </div>
+
+            {/* Brand Name with Glow Effect */}
+            <div className="flex flex-col">
+              <span className="text-3xl font-black tracking-tighter text-white font-baloo uppercase group-hover:text-cyan-200 transition-colors drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+                Sync
+                <span className="text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 ml-1.5">
+                  Xel
+                </span>
+              </span>
+              <span className="text-[7px] font-baloo tracking-widest text-cyan-400/80 -mt-1 uppercase">
+                UI MATRIX v2.0
+              </span>
+            </div>
+
+            <span className="px-2.5 py-0.5 text-[10px] font-extrabold text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 rounded-full tracking-wider uppercase shadow-[0_0_10px_rgba(34,211,238,0.2)] animate-pulse">
+              Beta
+            </span>
+          </Link>
+
+          <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Crafting production-ready UI components, design systems, and custom
+            web applications for developers and startups globally.
+          </p>
+
+          {/* Social Icons */}
+          <div className="flex items-center space-x-3 pt-2">
+            <a
+              href="https://github.com/lakshan-beast"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
+              title="GitHub Profile">
+              <SiGithub className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lakshan-sandeepa"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
+              title="LinkedIn Profile">
+              <RxLinkedinLogo className="w-5 h-5" />
+            </a>
+            <a
+              href="https://lakshan-sandeepa-dev.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
+              title="Portfolio Profile">
+              <SlGlobe className="w-5 h-5" />
+            </a>
+            <a
+              href="https://t.me/lakshan_dev"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer hover:rounded-2xl shadow-md"
+              title="Telegram Chat">
+              <FaTelegramPlane className="w-5 h-5" />
+            </a>
+            <a
+              href="mailto:syncxelofficial@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer hover:rounded-2xl shadow-md"
+              title="Email Chat">
+              <FaEnvelope className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+
         {/* 2. MIDDLE FOOTER LINKS GRID */}
         <motion.div
           variants={itemVariants}
-          className="grid grid-cols-1 md:grid-cols-6 gap-12 pt-20 md:pt-6 border-t border-white/10">
-          {/* Brand Column */}
-          <div className="col-span-2 space-y-4">
-            <Link
-              to="/"
-              className="flex items-center space-x-3 cursor-pointer group">
-              {/* Animated Rotating Border Logo Container */}
-              <div className="relative w-11 h-11 flex items-center justify-center">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{
-                    repeat: Infinity,
-                    duration: 8,
-                    ease: "linear",
-                  }}
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-cyan-400 p-[2px] shadow-[0_0_15px_rgba(34,211,238,0.4)]">
-                  <div className="w-full h-full bg-slate-950 rounded-full" />
-                </motion.div>
-
-                {/* Actual Logo Image */}
-                <motion.img
-                  whileHover={{ scale: 1.1 }}
-                  src="/syncxel-logo-removebg.png"
-                  alt="SyncXel Logo"
-                  width={28}
-                  height={28}
-                  className="object-contain relative z-10 rounded-full"
-                />
-              </div>
-
-              {/* Brand Name with Glow Effect */}
-              <div className="flex flex-col">
-                <span className="text-3xl font-black tracking-tighter text-white font-baloo uppercase group-hover:text-cyan-200 transition-colors drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
-                  Sync
-                  <span className="text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 ml-1.5">
-                    Xel
-                  </span>
-                </span>
-                <span className="text-[7px] font-baloo tracking-widest text-cyan-400/80 -mt-1 uppercase">
-                  UI MATRIX v2.0
-                </span>
-              </div>
-
-              <span className="px-2.5 py-0.5 text-[10px] font-extrabold text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 rounded-full tracking-wider uppercase shadow-[0_0_10px_rgba(34,211,238,0.2)] animate-pulse">
-                Beta
-              </span>
-            </Link>
-
-            <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
-              Crafting production-ready UI components, design systems, and
-              custom web applications for developers and startups globally.
-            </p>
-
-            {/* Social Icons */}
-            <div className="flex items-center space-x-3 pt-2">
-              <a
-                href="https://github.com/lakshan-beast"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
-                title="GitHub Profile">
-                <SiGithub className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/lakshan-sandeepa"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
-                title="LinkedIn Profile">
-                <RxLinkedinLogo className="w-5 h-5" />
-              </a>
-              <a
-                href="https://lakshan-sandeepa-dev.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all hover:rounded-2xl shadow-md"
-                title="Portfolio Profile">
-                <SlGlobe className="w-5 h-5" />
-              </a>
-              <a
-                href="https://t.me/lakshan_dev"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer hover:rounded-2xl shadow-md"
-                title="Telegram Chat">
-                <FaTelegramPlane className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:syncxelofficial@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-cyan-500/40 transition-all flex items-center justify-center cursor-pointer hover:rounded-2xl shadow-md"
-                title="Email Chat">
-                <FaEnvelope className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
+          className="grid grid-cols-1 md:grid-cols-4 gap-10 pt-20 md:pt-16 border-t border-white/10 ">
           {/* Nav Links */}
           {/* <div></div>
           <div>
@@ -497,6 +497,42 @@ export default function Footer() {
           </div>
         </motion.div>
       </motion.div>
+
+      <div
+        data-aos="zoom-in"
+        className="col-span-full w-full text-center font-baloo font-[950] text-[13vw] leading-none mt-5  pointer-events-none relative -bottom-9 lg:-bottom-15 z-10 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] bg-clip-text text-transparent opacity-40 bg-[length:200%_200%] max-[600px]:text-[17vw] max-[600px]:mt-[3rem] max-[600px]:mb-[12px] animate-[pureCssClouds_15s_ease_infinite_alternate] uppercase tracking-tighter"
+        style={{
+          backgroundImage: `
+              radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.5) 0%, transparent 40%),
+              radial-gradient(circle at 50% 30%, rgba(34, 211, 238, 0.6) 0%, transparent 50%),
+              radial-gradient(circle at 80% 60%, rgba(99, 102, 241, 0.6) 0%, transparent 45%),
+              linear-gradient(to right, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.05))
+            `,
+        }}>
+        Sync
+        <span className="[-webkit-text-fill-color:initial] text-cyan-400/80 [text-shadow:0_0_30px_rgba(34,211,238,0.6)] transition-all duration-500 ml-6 lg:ml-12 tracking-wide">
+          Xel
+        </span>
+        .
+      </div>
+
+      {/* Keyframe animation definition (Add this to your global CSS file or a style tag) */}
+      <style>{`
+          @keyframes pureCssClouds {
+            0% {
+              background-position: 0% 50%;
+              filter: hue-rotate(0deg);
+            }
+            50% {
+              background-position: 100% 100%;
+              filter: hue-rotate(15deg);
+            }
+            100% {
+              background-position: 50% 0%;
+              filter: hue-rotate(-15deg);
+            }
+          }
+        `}</style>
     </footer>
   );
 }
