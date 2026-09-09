@@ -286,7 +286,7 @@ export default function TechStack() {
   const duplicatedTech = [...technologies, ...technologies, ...technologies];
 
   return (
-    <section className="py-16 border-y border-white/15 bg-[#080b12] overflow-hidden relative">
+    <section className="py-16 border-y border-white/15 bg-[#080b12] overflow-hidden relative border-none">
       {/* Animation Styles for Marquee */}
       <style>
         {`
@@ -313,7 +313,7 @@ export default function TechStack() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center text-lg sm:text-lg font-semibold text-white/80 tracking-[0.15rem] uppercase mb-8">
+          className="text-center text-lg font-semibold text-white/80 tracking-[0.15rem] uppercase mb-8">
           Built for Modern Web Technologies
         </motion.p>
 
