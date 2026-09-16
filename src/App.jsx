@@ -63,7 +63,7 @@ export default function App() {
                   <DocsPreviewSection />
                   {/* <SocialProof /> */}
                   <FeaturesSection />
-                  <TrustBar />
+                  {/* <TrustBar /> */}
                   <TeamSection />
                   <ServicesSection />
                   <FaqSection />
