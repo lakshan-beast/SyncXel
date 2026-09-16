@@ -186,7 +186,7 @@ export default function DocsPreviewSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6 mb-12">
+          className="flex flex-wrap justify-center gap-2 md:gap-3 mb-12">
           {features.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -195,11 +195,11 @@ export default function DocsPreviewSection() {
                 variants={itemVariants}
                 whileHover={{ y: -6, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className={`group relative bg-slate-900/90 p-6 sm:p-7 rounded-3xl border border-white/5 hover:border-cyan-500/0 transition-all duration-300 shadow-xl backdrop-blur-xl ${item.glow}`}>
+                className={`group relative bg-slate-800/50 p-6 sm:px-5 rounded-3xl border-2 border-white/10 hover:border-cyan-500/5 transition-all duration-300 shadow-xl backdrop-blur-xl w-full md:w-[calc(50%-8px)] lg:w-[calc(33.333%-8px)]`}>
                 <div className="w-12 h-12 rounded-2xl bg-slate-900 text-cyan-400 flex items-center justify-center mb-5 border border-cyan-500/20 group-hover:scale-120 group-hover:bg-cyan-500/10 group-hover:text-cyan-300 group-hover:rotate-2 transition-all duration-300">
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 tracking-tight">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-0 tracking-tight">
                   {item.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-tight">
