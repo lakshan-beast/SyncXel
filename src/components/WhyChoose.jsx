@@ -236,17 +236,17 @@ export default function Features() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 ">
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 ">
           {features.map((feature, idx) => (
             <motion.div
               key={idx}
               variants={itemVariants}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="group relative py-8 px-10 rounded-3xl bg-slate-900/90 border border-white/5 hover:border-cyan-500/10 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 backdrop-blur-xl flex flex-col justify-between">
-              <div className="space-y-3">
+              className="group relative py-5 px-10 rounded-3xl bg-slate-800/50 border-2 border-white/10 hover:border-cyan-500/5 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 backdrop-blur-xl flex flex-col justify-between">
+              <div className="space-y-2">
                 {/* Icon Box with Hover Fill Effect */}
-                <div className="w-12 h-12 rounded-2xl bg-slate-950 border border-white/10 flex items-center justify-center group-hover:scale-110  group-hover:bg-cyan-500/30 group-hover:border-cyan-400/50 transition-all duration-300 shadow-md">
+                <div className="w-12 h-12 rounded-2xl bg-slate-950 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500/30 group-hover:border-cyan-400/50 transition-all duration-300 shadow-md">
                   {feature.icon}
                 </div>
 
