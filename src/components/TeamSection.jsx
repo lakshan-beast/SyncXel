@@ -483,7 +483,7 @@ export default function TeamSection() {
               <span>Behind SyncXel</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
               Meet the{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500">
                 Founder & Architect
@@ -503,7 +503,7 @@ export default function TeamSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative p-8 sm:p-10 rounded-4xl bg-slate-900/90 border-2 border-white/5 shadow-2xl backdrop-blur-2xl hover:border-cyan-500/10 transition-all duration-300">
+            className="relative p-8 sm:py-8 sm:px-9 rounded-4xl bg-slate-800/50 border-2 border-white/10 shadow-2xl backdrop-blur-2xl hover:border-cyan-500/10 transition-all duration-300 shadow-sm">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 lg:gap-6  ">
               {/* Profile Image with Hover Animation */}
               <motion.div
