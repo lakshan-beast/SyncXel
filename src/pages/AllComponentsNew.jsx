@@ -18,11 +18,15 @@ import { TbFileDownloadFilled } from "react-icons/tb";
 
 import { TbCopyPlusFilled, TbCopyCheckFilled } from "react-icons/tb";
 // import { GiFishBucket } from "react-icons/gi";
-{/* <GiFishBucket /> */}
+{
+  /* <GiFishBucket /> */
+}
 import { GiBoatFishing } from "react-icons/gi";
 
 import { freeComponentsData } from "../data/free/freeIndex";
 import { premiumKits } from "../data/premiumKitData";
+// import { uiPacksData } from "../data/uiPacks";
+import PackComponent from "./Packs";
 
 export default function AllComponents() {
   // State for Main Tabs: "freemium" or "premium"
@@ -69,22 +73,6 @@ export default function AllComponents() {
     "Success & Toasts",
     "Back to Top & FAB",
   ];
-
-  //   Buttons & Actions
-  // Loaders & Spinners
-  // Modals & Popups
-  // Cards & Containers
-  // Badges & Tags
-  // Inputs & Search Fields
-  // Navbars & Headers
-  // Forms & Authentication
-  // Toggles & Switches
-  // Pricing Tables
-  // Accordions & FAQs
-  // Avatars & Profiles
-  // Tabs & Dynamic Panels
-  // Footers & Sitemaps
-  // Notifications, Toasts & Alerts
 
   // Filtered components based on selected category
   const filteredFreeComponents = freeComponentsData.filter(
@@ -154,6 +142,15 @@ export default function AllComponents() {
             🧩 Freemium Components (Free)
           </button>
           <button
+            onClick={() => setMainTab("uiPacksData")}
+            className={`px-6 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+              mainTab === "uiPacksData"
+                ? "bg-amber-400 text-slate-950 shadow-lg shadow-amber-400/20"
+                : "text-slate-400 hover:text-white"
+            }`}>
+            🚀 Premium UI-Packs (Templates)
+          </button>
+          <button
             onClick={() => setMainTab("premium")}
             className={`px-6 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
               mainTab === "premium"
@@ -164,6 +161,8 @@ export default function AllComponents() {
           </button>
         </div>
       </div>
+
+      <PackComponent />
 
       {/* 3. CONTENT AREA BASED ON MAIN TAB */}
       {mainTab === "freemium" ? (
