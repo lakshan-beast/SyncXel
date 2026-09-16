@@ -1033,14 +1033,14 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
+          className="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-6">
           {services.map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="group relative px-6 py-8 rounded-4xl bg-slate-900/90 border-3 md:border-2 border-white/5 hover:border-cyan-500/10 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 backdrop-blur-md flex flex-col justify-between">
+              className="group relative px-6 py-8 rounded-4xl bg-slate-900/90 border-3 md:border-2 border-white/5 hover:border-cyan-500/10 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 backdrop-blur-md flex flex-col justify-between w-full md:w-[calc(50%-8px)] lg:w-[calc(33.333%-8px)]">
               <div className="space-y-2 lg:space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-slate-800 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:border-cyan-500/40 transition-all duration-300">
                   {item.icon}
@@ -1088,14 +1088,14 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
+            className="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-6">
             {steps.map((step, idx) => (
               <motion.div
                 key={idx}
                 variants={itemVariants}
                 whileHover={{ y: -4 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="relative py-6 px-10 rounded-4xl bg-slate-900/90 border-3 md:border-2 border-white/5 hover:border-cyan-500/10 transition-all space-y-3 backdrop-blur-sm hover:shadow-xl">
+                className="relative py-6 px-10 rounded-3xl bg-slate-800/50 border-3 md:border-2 border-white/5 hover:border-cyan-500/10 transition-all space-y-3 backdrop-blur-sm hover:shadow-xl w-full md:w-[calc(50%-8px)] lg:w-[calc(33.333%-8px)]">
                 <span className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
                   {step.number}
                 </span>
