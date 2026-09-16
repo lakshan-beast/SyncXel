@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 import HeroSection from "./components/Hero";
 import TrustBar from "./components/TrustBar";
-import TeckStack from "./components/TeckStack";
+// import TeckStack from "./components/TeckStack";
 import ServicesSection from "./components/Services";
 import TeamSection from "./components/TeamSection";
 import FaqSection from "./components/FAQ";
@@ -58,7 +58,7 @@ export default function App() {
                 <>
                   <HeroSection />
 
-                  <TeckStack />
+                  {/* <TeckStack /> */}
                   <Components />
                   <DocsPreviewSection />
                   {/* <SocialProof /> */}
