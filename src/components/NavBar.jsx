@@ -539,12 +539,12 @@ export default function NavBar() {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 px-4 sm:px-8 pt-4 lg:pt-5 z-50">
+      className="fixed top-0 left-0 right-0 px-4 sm:px-8 pt-4 lg:pt-5 z-50 ">
       {/* Nav Container - No overflow-hidden on main nav so dropdowns work perfectly */}
       <nav className="max-w-7xl mx-auto bg-white/10 backdrop-blur-xl border-2 border-cyan-700/20 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.9)] shadow-cyan-500/20 transition-all duration-300 relative">
         {/* Dynamic Announcement Ticker at Top (Safe overflow wrapper for rounded top) */}
         <div className="hidden lg:block overflow-hidden rounded-t-2xl">
-          <div className="bg-linear-to-r from-cyan-500/20 via-indigo-500/15 to-cyan-500/10 border-b border-cyan-500/20 py-1.5 px-4 text-center text-[11px] text-cyan-300 font-medium flex items-center justify-center gap-2">
+          <div className=" border-b border-cyan-500/20 py-1.5 px-4 text-center text-[11px] text-cyan-300 font-medium flex items-center justify-center gap-2 bg-transparent">
             <span className="bg-cyan-400 text-slate-950 font-bold px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wider animate-pulse">
               NEW
             </span>
