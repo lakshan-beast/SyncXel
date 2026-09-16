@@ -233,7 +233,7 @@ export default function HomeComponentsTeaser() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className="text-center space-y-2 ">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
           Explore{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
             UI Library
