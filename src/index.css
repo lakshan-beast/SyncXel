@@ -32,7 +32,7 @@
 /* Base Body Font */
 body {
   font-family: var(--font-baloo);
-  background-color: var(--color-syncxel-dark);
+  /* background-color: var(--color-syncxel-dark); */
   color: #ffffff;
 }
 
