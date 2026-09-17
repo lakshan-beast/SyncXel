@@ -9,7 +9,7 @@ export default function CyberAccordionPreview() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full p-3 flex justify-between items-center text-xs text-cyan-300 font-bold bg-slate-950 hover:bg-cyan-500/10 transition-colors cursor-pointer">
-        <span>SYS_PROTOCOL_01</span>
+        <span>SYSTEM PROTOCOL 01</span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.2 }}>
