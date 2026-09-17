@@ -19,7 +19,7 @@ import { IoIosGitBranch } from "react-icons/io";
 import { integrationsData } from "../data/docs/integrationsData";
 
 import QuickSetup from "../components/tabs/QuickSetup";
-import CssTricks from "../components/tabs/Csstricks";
+import CssTricks from "../components/tabs/CssTricks";
 import GitGuide from "../components/tabs/GridGuide";
 import VercelGuide from "../components/tabs/VercelGuide";
 import SeoDnsGuide from "../components/tabs/SeoGuide";

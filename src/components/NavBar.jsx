@@ -323,7 +323,7 @@ export default function NavBar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 px-4 sm:px-8 pt-4 lg:pt-5 z-50">
       {/* Nav Container - Clean White & Black DevSync Style */}
-      <nav className="max-w-7xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200 rounded-2xl shadow-sm transition-all duration-300 relative text-slate-900">
+      <nav className="w-full mx-auto bg-white/90 backdrop-blur-md border border-slate-200 rounded-2xl shadow-sm transition-all duration-300 relative text-slate-900">
         {/* Dynamic Announcement Ticker at Top */}
         <div className="hidden lg:block overflow-hidden rounded-t-2xl bg-slate-50 border-b border-slate-200">
           <div className="py-1.5 px-4 text-center text-[11px] text-slate-600 font-mono flex items-center justify-center gap-2">
