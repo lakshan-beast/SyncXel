@@ -11,6 +11,7 @@ export const uiPacksData = [
     previewImg: "src/assets/footer-preview.png",
     demoUrl: "/footers", // Local preview route or component view
     checkoutUrl: "https://yourstore.lemonsqueezy.com/buy/footer-pack-id",
+    liveUrl: "",
   },
   {
     id: "auth-pack-01",
