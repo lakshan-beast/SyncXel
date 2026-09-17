@@ -107,11 +107,8 @@ export default function App() {
           </Routes>
         </main>
 
-        {/* <SystemStatus /> */}
-
         <ScrollToTop />
       </div>
-      {/* </div> */}
     </Router>
   );
 }
