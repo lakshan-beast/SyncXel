@@ -276,9 +276,9 @@ export default function FaqSection() {
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                className={`rounded-2xl border transition-all duration-300 overflow-hidden bg-white shadow-xs ${
+                className={`rounded-2xl border-2 transition-all duration-300 overflow-hidden bg-white shadow-xs ${
                   isOpen
-                    ? "border-slate-400 shadow-md"
+                    ? "border-slate-300 shadow-md"
                     : "border-slate-200 hover:border-slate-300"
                 }`}>
                 
@@ -286,13 +286,13 @@ export default function FaqSection() {
                 <button
                   type="button"
                   onClick={() => toggleFaq(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                  className="w-full px-6 py-3 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}>
-                  <div className="space-y-1">
+                  <div className="space-y-0">
                     <span className="font-mono text-[10px] text-slate-400 block">
                       // query_0{idx + 1}
                     </span>
-                    <span className="text-base sm:text-lg font-bold text-slate-950 tracking-tight">
+                    <span className="text-base sm:text-lg font-bold font-exo text-slate-950 tracking-tight">
                       {faq.question}
                     </span>
                   </div>
@@ -319,7 +319,7 @@ export default function FaqSection() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}>
-                      <div className="px-6 pb-6 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 mt-0 font-sans">
+                      <div className="px-6 py-2 pb-3 pt-0 text-slate-600 text-xs sm:text-sm leading-tight border-t border-slate-100 mt-0 font-baloo">
                         <p className="pt-4">{faq.answer}</p>
                       </div>
                     </motion.div>
