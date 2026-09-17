@@ -43,7 +43,7 @@ export default function App() {
           <div className="absolute top-[40%] right-[-10%] w-75 sm:w-125 h-125 bg-blue-600/15 blur-[160px] rounded-full" />
           <div className="absolute bottom-[-10%] left-[-10%] w-87.5 sm:w-125 h-100 bg-cyan-600/15 blur-[160px] rounded-full" /> */}
       {/* </div> */}
-      <MatrixRain />
+      {/* <MatrixRain /> */}
 
       {/* 3. Main Content Wrapper */}
       <div className="relative z-10 flex flex-col min-h-screen justify-between">
