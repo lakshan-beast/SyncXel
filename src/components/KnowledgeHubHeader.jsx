@@ -9,7 +9,7 @@ export default function KnowledgeHubHeader({
   return (
     <div className="space-y-6 mb-8">
       {/* 1. TOP LICENSE BANNER */}
-      <div className="p-4 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-slate-900 to-emerald-500/10 border border-cyan-500/20 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg shadow-cyan-950/30">
+      {/* <div className="p-4 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-slate-900 to-emerald-500/10 border border-cyan-500/20 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg shadow-cyan-950/30">
         <div className="flex space-x-3 items-center">
           <div className="p-2.5 bg-cyan-500/20 rounded-xl text-cyan-400 border border-cyan-500/30 shrink-0">
             <HiSparkles className="w-5 h-5" />
@@ -27,7 +27,7 @@ export default function KnowledgeHubHeader({
         <span className="text-xs text-slate-400 bg-slate-900/80 px-3.5 py-1.5 rounded-lg border border-white/5 whitespace-nowrap">
           MIT Style • Free Forever 🚀
         </span>
-      </div>
+      </div> */}
 
       {/* 2. HEADER & LIVE SEARCH BAR */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-slate-900/40 border border-white/5 p-6 rounded-2xl backdrop-blur-md">
