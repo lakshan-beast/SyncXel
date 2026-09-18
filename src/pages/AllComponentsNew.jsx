@@ -431,14 +431,26 @@
 import React, { useState } from "react";
 import HubHeader from "../components/HubHeader";
 import HubTabs from "../components/HubTabs";
+
 import FreeComponentsTab from "../components/FreeComponentsTab";
 import TemplateComponentsTab from "../components/TemplateComponentsTab";
 
+import { freeComponentsData } from "../data/free/freeIndex";
+// import { premiumKitsData } from "../data/premiumKitData";
+
 export default function ComponentsHubPage() {
   const [mainTab, setMainTab] = useState("freemium");
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Buttons & Actions");
   const [cardTabs, setCardTabs] = useState({});
   const [copiedId, setCopiedId] = useState(null);
+
+  const filteredFreeComponents = freeComponentsData.filter(
+    (item) => item.category === activeCategory,
+  );
+
+  // const premiumKits = premiumKitsData.filter(
+  //   (item) => item.category === activeCategory,
+  // );
 
   // Mock data variables
   const categories = [
@@ -460,7 +472,7 @@ export default function ComponentsHubPage() {
     "Success & Toasts",
     "Back to Top & FAB",
   ];
-  const filteredFreeComponents = []; // ඔයාගේ ෆිල්ටර් කරන ලද ඩේටා
+  // const filteredFreeComponents = []; // ඔයාගේ ෆිල්ටර් කරන ලද ඩේටා
   const premiumKits = []; // ඔයාගේ ප්‍රීමියම් කිට්ස් ඩේටා
 
   const toggleCardTab = (id, tab) => {

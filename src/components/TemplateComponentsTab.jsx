@@ -1,6 +1,8 @@
 import React from "react";
 import { HiBookOpen, HiExternalLink, HiShoppingCart, HiChatAlt2 } from "react-icons/hi";
 
+import { premiumKits } from "../data/premiumKitData";
+
 export default function TemplateComponentsTab({ premiumKits }) {
   return (
     <div className="max-w-6xl mx-auto space-y-6 font-mono">
