@@ -158,14 +158,14 @@ const itemVariants = {
 
 export default function Hero() {
   return (
-    <section className="relative pt-8 pb-16 px-4 sm:px-8 md:pt-12 lg:pt-25 overflow-hidden min-h-screen flex items-center justify-center sm:items-start text-wrap bg-white text-slate-900">
+    <section className="relative pt-2 pb-2 px-4 py-0 sm:px-8 md:pt-4 lg:pt-15 overflow-hidden min-h-screen flex items-center justify-center sm:items-start text-wrap bg-white text-slate-900">
       {/* 1. SUBTLE GRID BACKGROUND (DevSync Style) */}
       <div className="absolute inset-0 opacity-40 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
       {/* // උදාහරණයක් විදිහට Subtle Dot Grid එකක් දානවා නම්: */}
       <div className="min-h-screen bg-white bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:20px_20px] space-y-5 font-baloo p-4 sm:p-8"></div>
       {/* Main Content Container */}
       <motion.div
-        className="max-w-7xl mx-auto space-y-6 md:space-y-12 relative z-10 w-full"
+        className="max-w-7xl mx-auto space-y-0 md:space-y-10 relative z-10 w-full"
         variants={containerVariants}
         initial="hidden"
         animate="visible">
@@ -179,7 +179,7 @@ export default function Hero() {
             <a
               href="#components"
               className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-4xl bg-slate-100 border border-slate-300 hover:border-slate-400 text-xs text-slate-700 transition-all shadow-xs group">
-              <span className="w-2 h-2 rounded-full bg-slate-900 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-slate-900 animate-ping" />
               <span className="font-semibold text-slate-900">SyncXel v1.0</span>
               <span className="text-slate-500">
                 {" "}
@@ -229,7 +229,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.92, y: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="max-w-90 w-full h-12 px-8 rounded-4xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all flex items-center justify-between shadow-sm group cursor-pointer font-mono">
+              className="w-80 lg:w-90 h-12 px-8 rounded-4xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all flex items-center justify-between shadow-sm group cursor-pointer font-mono">
               <div className="flex items-center space-x-4">
                 <HiOutlineSparkles className="w-5 h-5 text-slate-300 group-hover:-rotate-12 group-hover:scale-125 transition-transform shrink-0 duration-300" />
                 {/* Desktop view: Code style */}
@@ -237,7 +237,7 @@ export default function Hero() {
                   return explore_components();
                 </span>
                 {/* Mobile view: Clean text */}
-                <span className="lg:hidden text-sm">Explore Components</span>
+                <span className="lg:hidden text-xs">Explore Components</span>
               </div>
 
               <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-slate-400 shrink-0" />
@@ -249,7 +249,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.92, y: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="max-w-90 w-full h-12 px-6 rounded-4xl bg-white border border-slate-300 hover:border-slate-400 text-slate-900 font-medium text-sm hover:bg-slate-50 transition-all flex items-center justify-between cursor-pointer group font-mono">
+              className="w-80 lg:w-90 h-12 px-6 rounded-4xl bg-white border border-slate-300 hover:border-slate-400 text-slate-900 font-medium text-sm hover:bg-slate-50 transition-all flex items-center justify-between cursor-pointer group font-mono">
               <div className="flex items-center space-x-2">
                 <HiOutlineCodeBracket className="w-5 h-5 text-slate-700 group-hover:scale-125 group-hover:-rotate-16 transition-transform shrink-0 duration-300" />
 
@@ -258,7 +258,7 @@ export default function Hero() {
                   const hire = () =&gt; custom_dev();
                 </span>
                 {/* Mobile view: Clean text */}
-                <span className="lg:hidden text-sm">
+                <span className="lg:hidden text-xs">
                   Hire Us for Custom Project
                 </span>
               </div>

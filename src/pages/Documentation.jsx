@@ -193,7 +193,7 @@ export default function Documentation() {
   const activeIntegration = integrationsData?.[integrationSubTab] || {};
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 py-0 mt-0 lg:mt-12 px-4 lg:px-5 max-w-7xl w-full mx-auto font-mono relative ">
+    <div className="min-h-screen bg-white text-slate-900 py-0 mt-0 lg:mt-12 px-4 lg:px-5 mb-5 max-w-7xl w-full mx-auto font-mono relative ">
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
 
@@ -207,7 +207,7 @@ export default function Documentation() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-0">
           {/* SIDEBAR NAVIGATION */}
           <aside className="lg:col-span-1 space-y-1 ">
-            <div className="bg-white border border-slate-200 rounded-3xl p-3 flex lg:flex-col gap-1.5 shadow-xs overflow-x-scroll scrollbar-thumb-slate-300">
+            <div className="bg-white border border-slate-200 rounded-3xl p-3 flex lg:flex-col gap-1.5 shadow-xs scrollbar-thumb-slate-300">
               <span className="font-mono text-[10px] text-slate-500/50 hidden lg:block px-3 py-3">
                 // documentation_nav
               </span>

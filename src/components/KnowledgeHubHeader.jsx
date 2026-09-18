@@ -79,11 +79,11 @@ export default function KnowledgeHubHeader({
   quickStartData,
 }) {
   return (
-    <div className="space-y-2 mb-4 font-mono">
+    <div className="space-y-2 mb-6 font-mono">
       {/* HEADER & LIVE SEARCH BAR */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border-none border-slate-200 p-6 sm:p-8 rounded-2xl shadow-none relative overflow-hidden">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border-none border-slate-200 p-6 sm:px-2 sm:py-5 rounded-2xl shadow-none relative overflow-hidden">
         {/* Subtle Background Glow */}
-        <div className="absolute -right-10 -top-10 w-40 h-40 bg-slate-100 rounded-full blur-2xl pointer-events-none" />
+        {/* <div className="absolute -right-10 -top-10 w-40 h-40 bg-slate-100 rounded-full blur-2xl pointer-events-none" /> */}
 
         {/* Title & Expanded Rich Description */}
         <div className="space-y-2 relative z-10 max-w-2xl">

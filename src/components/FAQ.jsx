@@ -240,10 +240,10 @@ export default function FaqSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-left space-y-3">
+          className="text-left space-y-0">
           
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
-            <span className="font-mono text-xs text-slate-400 block">
+            <span className="font-mono text-xs text-slate-500/50 mb-0 block">
               // support_and_knowledge_base
             </span>
 
@@ -257,7 +257,7 @@ export default function FaqSection() {
             Frequently Asked <span className="text-slate-900">Questions</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-sans">
+          <p className="text-sm sm:text-base text-slate-600 leading-tight max-w-3xl font-baloo">
             Everything you need to know about SyncXel UI components and custom frontend engineering services.
           </p>
         </motion.div>
@@ -268,7 +268,7 @@ export default function FaqSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="space-y-3">
+          className="space-y-1">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
 
@@ -278,21 +278,21 @@ export default function FaqSection() {
                 variants={itemVariants}
                 className={`rounded-2xl border-2 transition-all duration-300 overflow-hidden bg-white shadow-xs ${
                   isOpen
-                    ? "border-slate-300 shadow-md"
-                    : "border-slate-200 hover:border-slate-300"
+                    ? "border-slate-50 shadow-md"
+                    : "border-slate-50 hover:border-slate-100"
                 }`}>
                 
                 {/* Accordion Question Header */}
                 <button
                   type="button"
                   onClick={() => toggleFaq(idx)}
-                  className="w-full px-6 py-3 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                  className="w-full px-8 py-3 text-left flex items-center justify-between gap-2 cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}>
                   <div className="space-y-0">
-                    <span className="font-mono text-[10px] text-slate-400 block">
+                    <span className="font-mono text-[10px] text-slate-500/50 block">
                       // query_0{idx + 1}
                     </span>
-                    <span className="text-base sm:text-lg font-bold font-exo text-slate-950 tracking-tight">
+                    <span className="text-base sm:text-lg font-bold font-exo text-slate-900 tracking-tight">
                       {faq.question}
                     </span>
                   </div>
@@ -319,7 +319,7 @@ export default function FaqSection() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}>
-                      <div className="px-6 py-2 pb-3 pt-0 text-slate-600 text-xs sm:text-sm leading-tight border-t border-slate-100 mt-0 font-baloo">
+                      <div className="px-10 py-2 pb-3 pt-0 text-slate-500 text-xs sm:text-sm leading-tight border-t border-slate-100 mt-0 font-baloo">
                         <p className="pt-4">{faq.answer}</p>
                       </div>
                     </motion.div>

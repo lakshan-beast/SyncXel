@@ -246,7 +246,7 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-left space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
-            <span className="font-mono text-xs text-slate-400 block">
+            <span className="font-mono text-xs text-slate-500/50 mb-0 block">
               // core_engineering_standards
             </span>
 
@@ -261,7 +261,7 @@ export default function Features() {
             <span className="text-slate-900">Speed, Quality & Precision</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-sans">
+          <p className="text-sm sm:text-base text-slate-500 leading-tight max-w-6xl font-baloo">
             Whether you are using our pre-built component blocks or hiring us
             for custom development, we maintain the highest engineering
             standards.
@@ -274,7 +274,7 @@ export default function Features() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
           {features.map((feature, idx) => {
             const Icon = feature.icon;
             return (
@@ -284,13 +284,13 @@ export default function Features() {
                 whileHover={{ y: -4, scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="group relative bg-white p-7 rounded-2xl border border-slate-200 hover:border-slate-400 transition-all duration-300 shadow-xs hover:shadow-md flex flex-col justify-between">
+                className="group relative bg-white px-9 py-5 rounded-2xl border border-slate-100 hover:border-slate-200 transition-all duration-300 shadow-xs hover:shadow-md flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-900 flex items-center justify-center mb-4 border border-slate-300 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300">
+                  <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-900 flex items-center justify-center mb-0 border border-slate-300 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300">
                     <Icon className="w-5 h-5" />
                   </div>
 
-                  <span className="font-mono text-[10px] text-slate-400 block mb-1">
+                  <span className="font-mono text-[10px] text-slate-500/50 block mb-2">
                     // feature_0{idx + 1}
                   </span>
 
@@ -298,16 +298,16 @@ export default function Features() {
                     {feature.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-600 leading-tight font-sans">
+                  <p className="text-xs sm:text-sm text-slate-500 leading-tight font-baloo">
                     {feature.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
-                  <span className="group-hover:text-slate-900 transition-colors">
+                <div className="mt-3 pt-3 border-t border-slate-200 flex items-center justify-between text-[11px] font-baloo text-slate-500 font-bold">
+                  <span className="group-hover:text-slate-600 transition-colors">
                     SyncXel Standard
                   </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-slate-900 transition-colors" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-900 animate-ping group-hover:bg-slate-900 transition-colors" />
                 </div>
               </motion.div>
             );

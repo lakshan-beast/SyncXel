@@ -535,7 +535,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-left space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
-            <span className="font-mono text-xs text-slate-400 block">
+            <span className="font-mono text-xs text-slate-500/50 mb-0 block">
               // client_services_and_engineering
             </span>
 
@@ -547,10 +547,10 @@ export default function Services() {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight">
             Turn Your Web Ideas Into{" "}
-            <span className="text-slate-900">Production Reality.</span>
+            <span className="text-slate-900">Production Reality</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-sans">
+          <p className="text-sm sm:text-base text-slate-500 leading-tight max-w-6xl font-baloo">
             Need a custom web application or modern landing page? I partner with
             founders, startups, and businesses to build high-converting web
             solutions.
@@ -558,8 +558,8 @@ export default function Services() {
         </motion.div>
 
         {/* 1. Services Cards Grid */}
-        <div className="space-y-4">
-          <span className="font-mono text-xs text-slate-400 block">
+        <div className="space-y-2">
+          <span className="font-mono text-xs text-slate-500/50 mb-2 block">
             // core_services_modules
           </span>
           <motion.div
@@ -567,7 +567,7 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {services.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -577,13 +577,13 @@ export default function Services() {
                   whileHover={{ y: -4, scale: 1.01 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className="group relative bg-white p-7 rounded-2xl border border-slate-200 hover:border-slate-400 transition-all duration-300 shadow-xs hover:shadow-md flex flex-col justify-between">
+                  className="group relative bg-white py-5 px-9 rounded-2xl border border-slate-100 hover:border-slate-200 transition-all duration-300 shadow-xs hover:shadow-md flex flex-col justify-between">
                   <div>
-                    <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-900 flex items-center justify-center mb-4 border border-slate-300 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300">
+                    <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-900 flex items-center justify-center mb-4 border border-slate-300 group-hover:bg-slate-800 group-hover:text-white transition-all duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
 
-                    <span className="font-mono text-[10px] text-slate-400 block mb-1">
+                    <span className="font-mono text-[10px] text-slate-400 block -mb-1">
                       // service_0{index + 1}
                     </span>
 
@@ -600,7 +600,7 @@ export default function Services() {
                     {item.tags.map((tag, tIndx) => (
                       <span
                         key={tIndx}
-                        className="px-2.5 py-0.5 rounded-lg bg-slate-100 border border-slate-200 text-[10px] font-baloo text-slate-700">
+                        className="px-3 py-0.5 rounded-2xl bg-slate-100 border border-slate-200 text-[10px] font-baloo text-slate-700">
                         {tag}
                       </span>
                     ))}
@@ -613,14 +613,14 @@ export default function Services() {
 
         {/* 2. The 4-Step Process */}
         <div className="space-y-4">
-          <span className="font-mono text-xs text-slate-400 block">
+          <span className="font-mono text-xs text-slate-500/50 mb-0 block">
             // workflow_execution_steps
           </span>
           <div className="text-left space-y-0 mb-6">
             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
               How We Work Together
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 font-baloo">
+            <p className="text-xs sm:text-sm text-slate-500 font-baloo leading-tight">
               A transparent 4-step workflow from initial design to final
               deployment.
             </p>
@@ -638,18 +638,18 @@ export default function Services() {
                 variants={itemVariants}
                 whileHover={{ y: -4 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="relative p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 transition-all space-y-3 shadow-xs hover:shadow-md flex flex-col justify-between">
+                className="relative px-9 py-5 rounded-2xl bg-white border border-slate-100 hover:border-slate-200 transition-all space-y-3 shadow-xs hover:shadow-md flex flex-col justify-between">
                 <div>
-                  <span className="font-mono text-xs text-slate-400 block mb-0">
-                    // step_{step.number}
-                  </span>
-                  <span className="text-4xl font-extrabold text-slate-900 block mb-2">
+                  <span className="text-4xl font-extrabold bg-slate-900 text-slate-50 mb-2 p-1.5 rounded-md ">
                     {step.number}
+                  </span>
+                  <span className="font-mono text-xs text-slate-400 block mb-0 mt-2">
+                    // step_{step.number}
                   </span>
                   <h4 className="text-base font-bold text-slate-950 mb-1">
                     {step.title}
                   </h4>
-                  <p className="text-xs text-slate-600 leading-tight font-baloo">
+                  <p className="text-xs text-slate-500 leading-tight font-baloo px-3 pt-3">
                     {step.desc}
                   </p>
                 </div>
@@ -660,7 +660,7 @@ export default function Services() {
 
         {/* 3. Inquiry Form Box */}
         <div className="space-y-4 max-w-2xl mx-auto">
-          <span className="font-mono text-xs text-slate-400 block text-center">
+          <span className="font-mono text-xs text-slate-500/50 mb-1 block text-left">
             // project_inquiry_form.config
           </span>
           <motion.div
@@ -670,11 +670,11 @@ export default function Services() {
             transition={{ duration: 0.6 }}
             className="relative rounded-2xl bg-white border border-slate-200 p-6 sm:p-8 shadow-md w-full">
             <div className="space-y-6">
-              <div className="text-center space-y-2">
+              <div className="text-center space-y-3">
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
                   Have A Project In Mind?
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-sans">
+                <p className="text-xs sm:text-sm text-slate-500 font-baloo">
                   Fill out the form below to share your requirements. I usually
                   respond within 24 hours.
                 </p>
@@ -684,21 +684,21 @@ export default function Services() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="p-8 rounded-xl bg-slate-50 border border-slate-300 text-center space-y-3">
+                  className="p-8 rounded-xl bg-slate-50 border border-slate-50 text-center space-y-3">
                   <HiOutlineCheckCircle className="w-12 h-12 text-slate-900 mx-auto" />
                   <h4 className="text-xl font-bold text-slate-950">
                     Message Received!
                   </h4>
-                  <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto font-sans">
+                  <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto font-baloo">
                     Thank you for reaching out. I will review your project
                     details and get back to you shortly.
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div className="space-y-1.5 text-left">
-                      <label className="text-xs font-semibold text-slate-700">
+                      <label className="text-xs font-semibold text-slate-500 font-baloo">
                         Your Name
                       </label>
                       <input
@@ -706,11 +706,11 @@ export default function Services() {
                         name="name"
                         required
                         placeholder="John Doe"
-                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-950 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-slate-400 font-sans"
+                        className="w-full px-4 py-2 rounded-xl bg-slate-50 border border-slate-100 text-slate-500 text-sm focus:outline-none focus:border-slate-200 transition-colors placeholder:text-slate-400 font-baloo"
                       />
                     </div>
                     <div className="space-y-1.5 text-left">
-                      <label className="text-xs font-semibold text-slate-700">
+                      <label className="text-xs font-semibold text-slate-500 font-baloo">
                         Your Email
                       </label>
                       <input
@@ -718,19 +718,19 @@ export default function Services() {
                         name="email"
                         required
                         placeholder="john@example.com"
-                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-950 text-sm focus:outline-none focus:border-slate-900 transition-colors placeholder:text-slate-400 font-sans"
+                        className="w-full px-4 py-2 rounded-xl bg-slate-50 border border-slate-100 text-slate-500 text-sm focus:outline-none focus:border-slate-200 transition-colors placeholder:text-slate-400 font-baloo"
                       />
                     </div>
                   </div>
 
                   {/* Budget Selector */}
                   <div className="space-y-2 text-left">
-                    <label className="text-xs font-semibold text-slate-700">
+                    <label className="text-xs font-semibold text-slate-500 font-baloo">
                       Estimated Budget
                     </label>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 p-3">
                       {[
-                        "<$500",
+                        "< $500",
                         "$500 - $1,000",
                         "$1,000 - $3,000",
                         "$3,000+",
@@ -744,7 +744,7 @@ export default function Services() {
                           className={`py-2.5 px-3 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
                             selectedBudget === budget
                               ? "bg-slate-900 border-slate-900 text-white shadow-xs"
-                              : "bg-slate-50 border-slate-300 text-slate-600 hover:text-slate-950"
+                              : "bg-slate-50 border-slate-200 text-slate-600 hover:text-slate-950"
                           }`}>
                           {budget}
                         </motion.button>
@@ -754,7 +754,7 @@ export default function Services() {
 
                   {/* Project Details */}
                   <div className="space-y-1.5 text-left">
-                    <label className="text-xs font-semibold text-slate-700">
+                    <label className="text-xs font-semibold text-slate-500 font-baloo">
                       Project Overview
                     </label>
                     <textarea
@@ -762,7 +762,7 @@ export default function Services() {
                       rows={4}
                       required
                       placeholder="Tell me about your project goals, required pages/features, and timeline..."
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-950 text-sm focus:outline-none focus:border-slate-900 transition-colors resize-none placeholder:text-slate-400 font-sans"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 text-slate-950 text-sm focus:outline-none focus:border-slate-200 transition-colors resize-none placeholder:text-slate-400 font-baloo"
                     />
                   </div>
 
@@ -771,7 +771,7 @@ export default function Services() {
                     disabled={loading}
                     whileHover={{ scale: 1.01 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full py-3.5 rounded-xl bg-slate-900 text-white font-bold text-sm hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-50 shadow-xs">
+                    className="w-full py-3.5 rounded-xl bg-slate-900 text-white font-bold text-sm hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-80 shadow-xs">
                     <HiOutlinePaperAirplane className="w-4 h-4 text-slate-400" />
                     <span>
                       {loading ? "Sending Message..." : "Send Project Inquiry"}

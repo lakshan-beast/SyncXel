@@ -218,16 +218,16 @@ export default function TeamSection() {
 
       <div className="relative z-10 p-2 sm:p-8 max-w-5xl mx-auto space-y-12">
         {/* MEET THE FOUNDER SECTION */}
-        <div className="space-y-10">
+        <div className="space-y-8">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-left space-y-3">
+            className="text-left space-y-0">
             <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
-              <span className="font-mono text-xs text-slate-400 block">
+              <span className="font-mono text-xs text-slate-500/50 block">
                 // founder_and_architect
               </span>
 
@@ -242,7 +242,7 @@ export default function TeamSection() {
               <span className="text-slate-900">Founder & Architect</span>
             </h2>
 
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-sans">
+            <p className="text-sm sm:text-base text-slate-600 leading-tight max-w-6xl font-baloo">
               Building modern digital products with a strong focus on
               high-performance code, clean UI architecture, and seamless user
               experiences.
@@ -255,7 +255,7 @@ export default function TeamSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-slate-400 transition-all duration-300">
+            className="relative p-6 sm:p-7 rounded-3xl bg-white border border-slate-50 shadow-xs hover:border-slate-100 transition-all duration-300">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
               {/* Profile Image with Hover Animation */}
               <motion.div
@@ -265,31 +265,31 @@ export default function TeamSection() {
                 <img
                   src={HeroImage}
                   alt="Lakshan Sandeepa - Founder of SyncXel"
-                  className="w-36 h-36 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-slate-300 shadow-md"
+                  className="w-36 h-36 sm:w-44 sm:h-44 rounded-full object-cover border-4 border-slate-300 shadow-md"
                 />
-                <div className="absolute -bottom-1 right-2 bg-slate-900 p-1.5 rounded-full border border-white shadow-md">
+                <div className="absolute bottom-1 right-1 bg-slate-500 p-2 rounded-full border-3 border-white shadow-none">
                   <HiOutlineCheckBadge
-                    className="w-5 h-5 text-white"
+                    className="w-6 h-6 text-white"
                     title="Verified Creator"
                   />
                 </div>
               </motion.div>
 
               {/* Founder Bio & Details */}
-              <div className="space-y-4 text-center md:text-left flex-1">
-                <div className="space-y-1">
-                  <span className="font-mono text-[10px] text-slate-400 block">
+              <div className="space-y-2 text-center md:text-left flex-1">
+                <div className="space-y-0">
+                  <span className="font-mono text-[10px] text-slate-500/50 block">
                     // lead_engineer_identity
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
                     Lakshan Sandeepa
                   </h3>
-                  <p className="text-slate-600 font-mono text-xs font-medium border-b border-slate-100 pb-3">
-                    Founder & Lead Web Engineer @ SyncXel
+                  <p className="text-slate-500 font-baloo text-xs font-medium border-b-2 border-slate-200 pb-3">
+                    Founder & Lead Web Engineer <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-300 via-slate-400 to-slate-600">@SyncXel</span>
                   </p>
                 </div>
 
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-sans">
+                <p className="text-slate-500 text-xs sm:text-sm leading-tight font-baloo">
                   Passionate about crafting high-performance web applications,
                   clean code, and modern minimalist aesthetics. Building SyncXel
                   to help developers code faster and businesses launch
@@ -297,7 +297,7 @@ export default function TeamSection() {
                 </p>
 
                 {/* Tech Tags */}
-                <div className="flex flex-wrap gap-1.5 pt-1 justify-center md:justify-start">
+                <div className="flex flex-wrap gap-2 pt-1 justify-center md:justify-start">
                   {[
                     "React.js",
                     "TypeScript",
@@ -307,7 +307,7 @@ export default function TeamSection() {
                   ].map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-[11px] font-mono text-slate-700">
+                      className="px-4 py-1 rounded-4xl bg-slate-100 border border-slate-200 text-[11px] font-baloo text-slate-700 font-semibold hover:border-slate-300 hover:bg-slate-300 transition-colors duration-300">
                       {tag}
                     </span>
                   ))}
@@ -356,9 +356,9 @@ export default function TeamSection() {
                           stiffness: 400,
                           damping: 17,
                         }}
-                        className="p-2.5 rounded-lg bg-slate-100 border border-slate-300 text-slate-700 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all shadow-xs group"
+                        className="p-3 rounded-3xl bg-slate-50 border border-slate-100 text-slate-700 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-md group "
                         title={social.title}>
-                        <Icon className="w-4 h-4 transition-transform group-hover:scale-110" />
+                        <Icon className="w-5 h-5 transition-transform group-hover:scale-110" />
                       </motion.a>
                     );
                   })}

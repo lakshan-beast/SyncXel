@@ -56,12 +56,12 @@ export default function NavBar() {
     //         to="/"
     //         className="flex items-center space-x-3 cursor-pointer group">
     //         <div className="relative w-10 h-10 flex items-center justify-center">
-    //           <motion.div
-    //             animate={{ rotate: 360 }}
-    //             transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
-    //             className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-cyan-400 p-[1.5px] shadow-[0_0_12px_rgba(34,211,238,0.4)]">
-    //             <div className="w-full h-full bg-[#0B0D13] rounded-full" />
-    //           </motion.div>
+    // <motion.div
+    //   animate={{ rotate: 360 }}
+    //   transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
+    //   className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-cyan-400 p-[1.5px] shadow-[0_0_12px_rgba(34,211,238,0.4)]">
+    //   <div className="w-full h-full bg-[#0B0D13] rounded-full" />
+    // </motion.div>
 
     //           <motion.img
     //             whileHover={{ scale: 1.1 }}
@@ -73,22 +73,22 @@ export default function NavBar() {
     //           />
     //         </div>
 
-    //         <div className="flex flex-col">
-    //           <span className="text-3xl font-black tracking-tighter text-white font-baloo uppercase group-hover:text-cyan-200 transition-colors">
-    //             Sync
-    //             <span className="text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 ml-1">
-    //               Xel
-    //             </span>
-    //           </span>
-    //           <span className="text-[8px] font-baloo tracking-widest text-cyan-400/80 -mt-1 uppercase">
-    //             UI MATRIX v2.0
-    //           </span>
-    //         </div>
+    //   <div className="flex flex-col">
+    //     <span className="text-3xl font-black tracking-tighter text-white font-baloo uppercase group-hover:text-cyan-200 transition-colors">
+    //       Sync
+    //       <span className="text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 ml-1">
+    //         Xel
+    //       </span>
+    //     </span>
+    //     <span className="text-[8px] font-baloo tracking-widest text-cyan-400/80 -mt-1 uppercase">
+    //       UI MATRIX v2.0
+    //     </span>
+    //   </div>
 
-    //         <span className="hidden sm:inline-block px-2 py-0.5 text-[9px] font-extrabold text-cyan-400 bg-cyan-500/15 border border-cyan-500/30 rounded-full tracking-wider uppercase shadow-[0_0_8px_rgba(34,211,238,0.2)] animate-pulse">
-    //           Beta
-    //         </span>
-    //       </Link>
+    //   <span className="hidden sm:inline-block px-2 py-0.5 text-[9px] font-extrabold text-cyan-400 bg-cyan-500/15 border border-cyan-500/30 rounded-full tracking-wider uppercase shadow-[0_0_8px_rgba(34,211,238,0.2)] animate-pulse">
+    //     Beta
+    //   </span>
+    // </Link>
 
     //       {/* Desktop Navigation Links */}
     //       <div className="hidden md:flex items-center space-x-6 lg:space-x-8 text-xs font-medium text-slate-200">
@@ -336,38 +336,48 @@ export default function NavBar() {
           </div>
         </div> */}
 
-        <div className="px-5 sm:px-6 py-4 flex items-center justify-between">
+        <div className="px-5 sm:px-6 py-6 flex items-center justify-between">
           {/* Logo Section */}
           <Link
             to="/"
             className="flex items-center space-x-3 cursor-pointer group">
             <div className="relative w-9 h-9 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-300">
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-cyan-400 p-[1.5px] shadow-[0_0_12px_rgba(34,211,238,0.4)]">
+                <div className="w-full h-full bg-[#0B0D13] rounded-full" />
+              </motion.div>
+
               <motion.img
                 whileHover={{ scale: 1.05 }}
                 src="/syncxel-logo-removebg.png"
                 alt="SyncXel Logo"
-                width={20}
-                height={20}
+                width={24}
+                height={24}
                 className="object-contain relative z-10 rounded-full"
               />
             </div>
 
             <div className="flex flex-col">
-              <span className="text-2xl font-black tracking-tighter text-slate-950 font-mono uppercase">
-                Sync<span className="text-cyan-600">Xel</span>
+              <span className="text-3xl font-black tracking-tighter text-slate-900 font-baloo uppercase group-hover:text-cyan-200 transition-colors">
+                Sync
+                <span className="text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 ml-1">
+                  Xel
+                </span>
               </span>
-              <span className="text-[9px] font-mono tracking-widest text-slate-400 -mt-1 uppercase">
-                // ui_matrix_v2.0
+              <span className="text-[8px] font-baloo tracking-widest text-slate-400/80 -mt-1 uppercase">
+                UI MATRIX v2.0
               </span>
             </div>
 
-            <span className="hidden sm:inline-block px-2 py-0.5 text-[9px] font-mono font-bold text-cyan-700 bg-cyan-50 border border-cyan-200 rounded tracking-wider uppercase">
-              beta
+            <span className="hidden sm:inline-block px-2 py-0.5 text-[9px] font-extrabold text-cyan-400 bg-cyan-500/15 border border-cyan-500/30 rounded-full tracking-wider uppercase shadow-[0_0_8px_rgba(34,211,238,0.2)] animate-pulse">
+              Beta
             </span>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-3 text-xs font-mono text-slate-700">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-3 text-xs font-baloo text-slate-700">
             {/* Components Dropdown */}
             <div className="relative group cursor-pointer py-1">
               <Link

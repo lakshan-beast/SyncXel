@@ -30,12 +30,12 @@ export default function DocsPreviewSection() {
       desc: "Conventional commits cheat-sheet and immediate fixes for common Git push bugs.",
       glow: "hover:shadow-purple-500/10",
     },
-    {
-      icon: HiOutlineSparkles,
-      title: "Custom Hooks & Motion",
-      desc: "Reusable React custom hooks (useDebounce, useLocalStorage) and Tailwind animation effects.",
-      glow: "hover:shadow-pink-500/5",
-    },
+    // {
+    //   icon: HiOutlineSparkles,
+    //   title: "Custom Hooks & Motion",
+    //   desc: "Reusable React custom hooks (useDebounce, useLocalStorage) and Tailwind animation effects.",
+    //   glow: "hover:shadow-pink-500/5",
+    // },
   ];
 
   const containerVariants = {
@@ -147,7 +147,7 @@ export default function DocsPreviewSection() {
           transition={{ duration: 0.6 }}
           className="text-left mb-14 space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
-            <span className="font-mono text-xs text-slate-400 block">
+            <span className="font-mono text-xs text-slate-500/50 mb-0 block">
               // free_developer_ecosystem
             </span>
 
@@ -161,7 +161,7 @@ export default function DocsPreviewSection() {
             Everything You Need To Build & Deploy Faster.
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
+          <p className="text-sm sm:text-base text-slate-500 leading-tight max-w-6xl">
             Syncxel isn't just a component library. Access our curated knowledge
             hub to solve frontend challenges in seconds.
           </p>
@@ -183,7 +183,7 @@ export default function DocsPreviewSection() {
                 whileHover={{ y: -4, scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="group relative bg-white p-8 sm:p-7 rounded-2xl border border-slate-200 hover:border-slate-400 transition-all duration-300 shadow-xs hover:shadow-md w-full md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] flex flex-col justify-between">
+                className="group relative bg-white p-8 sm:p-7 rounded-2xl border border-slate-100 hover:border-slate-200 transition-all duration-300 shadow-xs hover:shadow-md w-full md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] flex flex-col justify-between">
                 <div>
                   <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-900 flex items-center justify-center mb-4 border border-slate-300 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300">
                     <Icon className="w-5 h-5" />
@@ -197,7 +197,7 @@ export default function DocsPreviewSection() {
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-600 leading-tight">
+                  <p className="text-xs sm:text-sm text-slate-500 leading-tight">
                     {item.desc}
                   </p>
                 </div>
@@ -212,14 +212,14 @@ export default function DocsPreviewSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-left mx-auto">
+          className="text-left mx-auto w-fit">
           <Link to="/docs">
             <motion.button
               whileHover={{ skewX: [-3, 3, -1, 0], scale: 1.02 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400 }}
-              className="group inline-flex items-center space-x-3 px-6 py-3.5 bg-slate-900 border border-slate-800 text-white font-mono text-xs sm:text-sm font-bold rounded-xl hover:bg-slate-800 shadow-sm cursor-pointer transition-all mx-auto">
-              <span className="text-cyan-400">
+              className="group inline-flex items-center space-x-5 px-6 py-3.5 bg-slate-800 border border-slate-800 text-white font-mono text-xs sm:text-md font-bold rounded-xl hover:bg-slate-800 shadow-sm cursor-pointer transition-all mx-auto">
+              <span className="text-slate-300">
                 const docs = () =&gt; view_ecosystem();
               </span>
               <HiOutlineArrowRight className="w-4 h-4 text-slate-400 group-hover:translate-x-1.5 transition-transform duration-300" />

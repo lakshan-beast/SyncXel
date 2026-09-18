@@ -138,12 +138,12 @@ export default function HomeComponentsTeaser() {
       category: "Checkboxes",
       component: <BrutalPopCheckbox />,
     },
-    {
-      id: 3,
-      title: "Cyber Agent Ring Card",
-      category: "Avatars",
-      component: <CyberAgentRing />,
-    },
+    // {
+    //   id: 3,
+    //   title: "Cyber Agent Ring Card",
+    //   category: "Avatars",
+    //   component: <CyberAgentRing />,
+    // },
     {
       id: 4,
       title: "Facebook Skeleton Loader",
@@ -155,7 +155,7 @@ export default function HomeComponentsTeaser() {
   return (
     <section
       id="components"
-      className="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-10 scroll-mt-20 text-slate-900">
+      className="py-20 px-4 sm:px-8 max-w-5xl mx-auto space-y-10 scroll-mt-0 text-slate-900">
       {/* Title Header with Motion (Left Aligned DevSync Style) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -163,19 +163,19 @@ export default function HomeComponentsTeaser() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className="text-left space-y-2 max-w-5xl mx-auto">
-        <span className="font-mono text-xs text-slate-400 block">
+        <span className="font-mono text-xs text-slate-500/50 mb-0 block">
           // ui_components_showcase
         </span>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tight">
           Explore UI Library
         </h2>
-        <p className="text-slate-600 text-sm sm:text-base max-w-xl">
+        <p className="text-slate-500 text-sm sm:text-base max-w-xl">
           Clean, production-ready components built with React & Tailwind CSS.
         </p>
       </motion.div>
 
       {/* 4 Live Components Cards Grid with Staggered Motion */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 max-w-5xl mx-auto px-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 max-w-6xl mx-auto px-0">
         {teaserItems.map((item, index) => (
           <motion.div
             key={item.id}
@@ -185,9 +185,9 @@ export default function HomeComponentsTeaser() {
             transition={{ duration: 0.4, delay: index * 0.1 }}>
             <Link
               to="/components"
-              className="group rounded-xl bg-slate-500/60 border-2 border-slate-200 hover:border-slate-200/10 overflow-hidden shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full mx-10 md:mx-0">
+              className="group rounded-xl bg-slate-300/60 border-2 border-slate-100 hover:border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full mx-5 md:mx-0">
               {/* Live Component Preview Box */}
-              <div className="h-52 bg-slate-50/70 overflow-hidden relative flex items-center justify-center px-3 py-8 border-b border-slate-200">
+              <div className="h-56 bg-slate-50/70 overflow-hidden relative flex items-center justify-center px-3 py-10 border-b border-slate-200">
                 <div className="w-full flex items-center justify-center scale-95 group-hover:scale-100 transition-transform duration-300 pointer-events-none">
                   {item.component}
                 </div>
@@ -198,7 +198,7 @@ export default function HomeComponentsTeaser() {
 
               {/* Card Info Bar */}
               <div className="p-4 flex items-center justify-between bg-white">
-                <h3 className="text-slate-900/50 font-mono font-bold text-xs group-hover:text-cyan-600 transition-colors line-clamp-1">
+                <h3 className="text-slate-900/50 font-mono font-bold text-xs group-hover:text-slate-600 transition-colors line-clamp-1">
                   {item.title}
                 </h3>
                 <HiOutlineArrowRight className="w-4 h-4 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all shrink-0 ml-2" />
