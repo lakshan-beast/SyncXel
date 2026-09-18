@@ -229,7 +229,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.92, y: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-80 lg:w-90 h-12 px-8 rounded-4xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all flex items-center justify-between shadow-sm group cursor-pointer font-mono">
+              className="w-80 lg:w-90 h-12 px-8 rounded-4xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all flex items-center justify-between shadow-sm group cursor-pointer font-baloo">
               <div className="flex items-center space-x-4">
                 <HiOutlineSparkles className="w-5 h-5 text-slate-300 group-hover:-rotate-12 group-hover:scale-125 transition-transform shrink-0 duration-300" />
                 {/* Desktop view: Code style */}
@@ -249,7 +249,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.92, y: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-80 lg:w-90 h-12 px-6 rounded-4xl bg-white border border-slate-300 hover:border-slate-400 text-slate-900 font-medium text-sm hover:bg-slate-50 transition-all flex items-center justify-between cursor-pointer group font-mono">
+              className="w-80 lg:w-90 h-12 px-6 rounded-4xl bg-white border border-slate-300 hover:border-slate-400 text-slate-900 font-medium text-sm hover:bg-slate-50 transition-all flex items-center justify-between cursor-pointer group font-baloo">
               <div className="flex items-center space-x-2">
                 <HiOutlineCodeBracket className="w-5 h-5 text-slate-700 group-hover:scale-125 group-hover:-rotate-16 transition-transform shrink-0 duration-300" />
 

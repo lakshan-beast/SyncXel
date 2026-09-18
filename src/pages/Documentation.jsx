@@ -193,7 +193,7 @@ export default function Documentation() {
   const activeIntegration = integrationsData?.[integrationSubTab] || {};
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 py-0 mt-0 lg:mt-12 px-4 lg:px-5 mb-5 max-w-7xl w-full mx-auto font-mono relative ">
+    <div className="min-h-screen bg-white text-slate-900 py-0 mt-0 lg:mt-12 px-4 lg:px-5 mb-5 max-w-7xl w-full mx-auto font-mono relative overflow-x-hidden">
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
 
