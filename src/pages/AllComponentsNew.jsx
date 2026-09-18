@@ -436,7 +436,8 @@ import FreeComponentsTab from "../components/FreeComponentsTab";
 import TemplateComponentsTab from "../components/TemplateComponentsTab";
 
 import { freeComponentsData } from "../data/free/freeIndex";
-// import { premiumKitsData } from "../data/premiumKitData";
+import  premiumKits  from "../data/premiumKitData";
+import PackComponent from "../components/Packs";
 
 export default function ComponentsHubPage() {
   const [mainTab, setMainTab] = useState("freemium");
@@ -473,7 +474,7 @@ export default function ComponentsHubPage() {
     "Back to Top & FAB",
   ];
   // const filteredFreeComponents = []; // ඔයාගේ ෆිල්ටර් කරන ලද ඩේටා
-  const premiumKits = []; // ඔයාගේ ප්‍රීමියම් කිට්ස් ඩේටා
+  // const premiumKits = []; // ඔයාගේ ප්‍රීමියම් කිට්ස් ඩේටා
 
   const toggleCardTab = (id, tab) => {
     setCardTabs((prev) => ({ ...prev, [id]: tab }));

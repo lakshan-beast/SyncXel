@@ -97,7 +97,7 @@ export default function FreeComponentsTab({
       </AnimatePresence>
 
       {/* --- COMPONENT CARDS GRID --- */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-3 lg:gap-x-3 lg:gap-y-7">
         {filteredFreeComponents.map((item) => {
           const currentTab = cardTabs[item.id] || "preview";
           const isCopied = copiedId === item.id;
@@ -108,31 +108,31 @@ export default function FreeComponentsTab({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="relative group rounded-3xl p-[1px] bg-slate-800 shadow-xl">
-              <div className="h-full w-full bg-slate-950 rounded-[23px] flex flex-col justify-between overflow-hidden relative">
+              className="relative group rounded-3xl p-[1px] bg-slate-300 shadow-xl border-none">
+              <div className="h-full w-full bg-slate-200 border-none rounded-[23px] flex flex-col justify-between overflow-hidden relative">
                 {/* Card Header */}
-                <div className="p-5 pb-4 bg-slate-900/80 border-b border-slate-800">
+                <div className="px-5 py-3 pb-4 bg-white border-none shadow-none">
                   <div className="flex items-start justify-between gap-3 mb-2.5">
                     <div className="space-y-1">
-                      <span className="inline-block text-[10px] font-bold text-slate-300 tracking-wider uppercase bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
+                      <span className="inline-block text-[10px] font-bold text-slate-300 tracking-wider uppercase bg-slate-800 px-3 py-1 rounded-full border border-slate-700 mb-3">
                         {item.category}
                       </span>
-                      <h3 className="text-base font-bold text-white tracking-wide">
+                      <h3 className="text-base font-bold text-slate-700 tracking-wide">
                         {item.title}
                       </h3>
                     </div>
-                    <span className="text-[10px] font-black text-white bg-slate-800 px-2.5 py-1 rounded-full border border-slate-700 shrink-0">
+                    <span className="text-[10px] font-baloo text-white bg-slate-800 px-3.5 py-0.5 rounded-full border border-slate-700 shrink-0">
                       FREE
                     </span>
                   </div>
-                  <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                  <p className="text-xs text-slate-500 leading-tight font-baloo">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Sub-Tabs & Counter Bar */}
-                <div className="flex items-center justify-between px-4 py-2.5 bg-slate-900/50 border-b border-slate-800">
-                  <div className="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800">
+                <div className="flex items-center justify-between px-2 py-0 bg-white border-none border-slate-800">
+                  <div className="flex items-center bg-slate-300 p-1 rounded-xl border-none border-slate-800">
                     <button
                       onClick={() => toggleCardTab(item.id, "preview")}
                       className={`text-xs px-3.5 py-1.5 rounded-lg font-medium transition-all flex items-center space-x-1.5 cursor-pointer ${
@@ -162,25 +162,25 @@ export default function FreeComponentsTab({
                 </div>
 
                 {/* Body Content Box */}
-                <div className="p-6 min-h-[220px] bg-slate-950/60 flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none" />
+                <div className="px-2 py-2 min-h-55 bg-slate-50/70 flex items-center justify-center relative overflow-hidden">
+                  {/* <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none" /> */}
 
                   {currentTab === "preview" ? (
                     <div className="w-full flex items-center justify-center relative z-10">
                       {item.component}
                     </div>
                   ) : (
-                    <pre className="w-full h-36 overflow-auto text-xs text-slate-200 bg-slate-900 p-4 rounded-xl border border-slate-800 font-mono text-left relative z-10 shadow-inner">
+                    <pre className="w-full h-36 overflow-auto text-xs text-slate-200 bg-slate-900 p-4 rounded-xl border border-slate-800 font-mono text-left relative z-10 shadow-inner scrollbar-thumb-slate-600 flex justify-start items-center">
                       <code>{item.code}</code>
                     </pre>
                   )}
                 </div>
 
                 {/* Footer Action */}
-                <div className="p-4 bg-slate-900 flex items-center justify-between border-t border-slate-800">
+                <div className="px-5 py-2 bg-white flex items-center justify-between border-t border-slate-200">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-white" />
-                    <span className="text-[11px] font-medium text-slate-300">
+                    <span className="text-[10px] text-slate-500 font-semibold font-baloo">
                       Production Ready
                     </span>
                   </div>

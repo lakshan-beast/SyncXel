@@ -415,8 +415,8 @@
 // }
 
 import React, { useState } from "react";
-import { componentsData } from "../data/componentData2"; // 👈 Data source
-import ComponentCard from "../components/componentCard"; // 👈 මෙතනට ComponentCard එක import කරන්න
+import { componentsData } from "../../src/data/componentData2"; // 👈 Data source
+import ComponentCard from "../../src/components/componentCard"; // 👈 මෙතනට ComponentCard එක import කරන්න
 
 export default function AllComponents2() {
   const [selectedCategory, setSelectedCategory] = useState("animations");
