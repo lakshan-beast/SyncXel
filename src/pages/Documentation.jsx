@@ -207,7 +207,7 @@ export default function Documentation() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-0">
           {/* SIDEBAR NAVIGATION */}
           <aside className="lg:col-span-1 space-y-1 ">
-            <div className="bg-white border border-slate-200 rounded-3xl p-3 flex lg:flex-col gap-1.5 shadow-xs scrollbar-thumb-slate-300">
+            <div className="bg-white border border-slate-200 rounded-3xl p-3 flex lg:flex-col gap-1.5 shadow-xs scrollbar-thumb-slate-300 overflow-scroll">
               <span className="font-mono text-[10px] text-slate-500/50 hidden lg:block px-3 py-3">
                 // documentation_nav
               </span>

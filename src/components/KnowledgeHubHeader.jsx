@@ -92,7 +92,7 @@ export default function KnowledgeHubHeader({
             <span>// system_knowledge_repository_v2.0</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             Developer <span className="text-slate-500/60">Knowledge Hub</span>
           </h2>
 
