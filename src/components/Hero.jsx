@@ -161,38 +161,44 @@ export default function Hero() {
     <section className="relative pt-8 pb-16 px-4 sm:px-8 md:pt-12 lg:pt-25 overflow-hidden min-h-screen flex items-center justify-center sm:items-start text-wrap bg-white text-slate-900">
       {/* 1. SUBTLE GRID BACKGROUND (DevSync Style) */}
       <div className="absolute inset-0 opacity-40 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
-
+      {/* // උදාහරණයක් විදිහට Subtle Dot Grid එකක් දානවා නම්: */}
+      <div className="min-h-screen bg-white bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:20px_20px] space-y-5 font-baloo p-4 sm:p-8"></div>
       {/* Main Content Container */}
       <motion.div
-        className="max-w-6xl mx-auto space-y-6 md:space-y-20 relative z-10 w-full"
+        className="max-w-7xl mx-auto space-y-6 md:space-y-12 relative z-10 w-full"
         variants={containerVariants}
         initial="hidden"
         animate="visible">
         {/* Content Block (Left Aligned) */}
-        <div className="space-y-6 max-w-6xl mx-auto">
+        <div className="space-y-5 max-w-6xl mx-auto">
           {/* Section 1: Version Badge & Comment */}
           <motion.div variants={itemVariants} className="text-left">
-            <span className="font-mono text-xs text-slate-400 block mb-2">
+            <span className="font-mono text-xs text-slate-500/50 block mb-1">
               // project_status_and_updates
             </span>
             <a
               href="#components"
-              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-md bg-slate-100 border border-slate-300 hover:border-slate-400 text-xs text-slate-700 transition-all shadow-xs group">
+              className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-4xl bg-slate-100 border border-slate-300 hover:border-slate-400 text-xs text-slate-700 transition-all shadow-xs group">
               <span className="w-2 h-2 rounded-full bg-slate-900 animate-pulse" />
               <span className="font-semibold text-slate-900">SyncXel v1.0</span>
-              <span className="text-slate-500"> • Free UI & Templates</span>
+              <span className="text-slate-500">
+                {" "}
+                • Free UI, Paid Templates & Dev Guides
+              </span>
               <HiOutlineArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-slate-600" />
             </a>
           </motion.div>
 
           {/* Section 2: Main Headline & Comment */}
           <motion.div variants={itemVariants} className="space-y-0 text-left">
-            <span className="font-mono text-xs text-slate-400 block">
+            <span className="font-mono text-xs text-slate-500/50 block">
               // primary_headline
             </span>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-slate-950 tracking-tight leading-[1.1]">
               Build Modern Web Apps <br className="hidden sm:inline" />
-              <span className="text-slate-900">10x Faster.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-200 to-slate-700 block sm:inline mt-1 sm:mt-0">
+                10x Faster
+              </span>
             </h1>
           </motion.div>
 
@@ -200,7 +206,7 @@ export default function Hero() {
           <motion.div
             variants={itemVariants}
             className="space-y-1 text-left max-w-3xl">
-            <span className="font-mono text-xs text-slate-400 block">
+            <span className="font-mono text-xs text-slate-500/50 block">
               // project_description
             </span>
             <p className="text-slate-600 text-sm sm:text-base md:text-lg leading-tight">
@@ -211,82 +217,23 @@ export default function Hero() {
           </motion.div>
 
           {/* Section 4: Call To Actions & Comment */}
-          {/* <motion.div
-            variants={itemVariants}
-            className="flex flex-col  items-stretch sm:items-center justify-start gap-3 pt-2 text-left">
-            <span className="font-mono text-xs text-slate-400 block w-full">
-              // cta_buttons
-            </span>
-
-            <div></div>
-            {/* <motion.a
-              href="#components"
-              whileHover={{ scale: 1.02, y: -1 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400 }}
-              className="w-full sm:w-auto px-6 py-3 rounded-lg bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 shadow-sm group cursor-pointer font-mono">
-              <HiOutlineSparkles className="w-4 h-4 text-slate-300 group-hover:rotate-12 transition-transform" />
-
-              {/* Desktop view: Code style *
-              <span className="hidden lg:inline text-cyan-400">
-                return explore_components();
-              </span>
-              {/* Mobile view: Clean text *
-              <span className="lg:hidden">Explore Components</span>
-
-              <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-slate-400" />
-            </motion.a> */}
-
-          {/* <motion.a
-              href="#components"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.92, y: 1 }} // ක්ලික් කරද්දී පොඩ්ඩක් යටට තද වෙනවා
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 17, // spring එකේ bounce ගතිය පාලනය කරන්න
-              }}
-              className="w-full sm:w-auto px-6 py-3 rounded-lg bg-slate-900 text-white font-medium text-sm transition-all flex items-center justify-center space-x-2 shadow-sm cursor-pointer font-mono">
-              <span>return explore_components();</span>
-            </motion.a> */}
-
-          {/* <motion.a
-              href="#hire"
-              whileHover={{ scale: 1.02, y: -1 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400 }}
-              className="w-full sm:w-auto px-6 py-3 rounded-lg bg-white border border-slate-300 hover:border-slate-400 text-slate-900 font-medium text-sm hover:bg-slate-50 transition-all flex items-center justify-center space-x-2 cursor-pointer group font-mono">
-              <HiOutlineCodeBracket className="w-4 h-4 text-slate-700 group-hover:rotate-6 transition-transform" />
-
-              {/* Desktop view: Code style *
-              <span className="hidden lg:inline">
-                const hire = () =&gt; custom_dev();
-              </span>
-              {/* Mobile view: Clean text *
-              <span className="lg:hidden">Hire Us for Custom Project</span>
-            </motion.a> *
-          </motion.div> */}
-
-          {/* Section 4: Call To Actions & Comment */}
-
-          <span className="font-mono text-xs text-slate-400 block w-full">
-            // cta_buttons
-          </span>
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3.5 text-left">
+            className="flex flex-col sm:items-start justify-start gap-1.5 text-left">
+            <span className="font-mono text-xs text-slate-500/50 block w-full">
+              // cta_buttons
+            </span>
             {/* Button 1: Explore Components */}
             <motion.a
               href="#components"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.92, y: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-full sm:w-[300px] md:w-auto h-12 px-6 rounded-lg bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all flex items-center justify-between shadow-sm group cursor-pointer font-mono">
-              <div className="flex items-center space-x-2">
-                <HiOutlineSparkles className="w-4 h-4 text-slate-300 group-hover:rotate-12 transition-transform shrink-0" />
-
+              className="max-w-90 w-full h-12 px-8 rounded-4xl bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition-all flex items-center justify-between shadow-sm group cursor-pointer font-mono">
+              <div className="flex items-center space-x-4">
+                <HiOutlineSparkles className="w-5 h-5 text-slate-300 group-hover:-rotate-12 group-hover:scale-125 transition-transform shrink-0 duration-300" />
                 {/* Desktop view: Code style */}
-                <span className="hidden lg:inline text-cyan-400 text-xs tracking-tight">
+                <span className="hidden lg:inline text-slate-200 text-md tracking-tight">
                   return explore_components();
                 </span>
                 {/* Mobile view: Clean text */}
@@ -302,9 +249,9 @@ export default function Hero() {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.92, y: 1 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-full sm:w-[310px] h-12 px-6 rounded-lg bg-white border border-slate-300 hover:border-slate-400 text-slate-900 font-medium text-sm hover:bg-slate-50 transition-all flex items-center justify-between cursor-pointer group font-mono">
+              className="max-w-90 w-full h-12 px-6 rounded-4xl bg-white border border-slate-300 hover:border-slate-400 text-slate-900 font-medium text-sm hover:bg-slate-50 transition-all flex items-center justify-between cursor-pointer group font-mono">
               <div className="flex items-center space-x-2">
-                <HiOutlineCodeBracket className="w-4 h-4 text-slate-700 group-hover:rotate-6 transition-transform shrink-0" />
+                <HiOutlineCodeBracket className="w-5 h-5 text-slate-700 group-hover:scale-125 group-hover:-rotate-16 transition-transform shrink-0 duration-300" />
 
                 {/* Desktop view: Code style */}
                 <span className="hidden lg:inline text-xs tracking-tight">

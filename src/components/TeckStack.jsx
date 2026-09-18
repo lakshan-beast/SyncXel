@@ -141,6 +141,17 @@ import {
 } from "react-icons/si";
 import { FaCss3Alt } from "react-icons/fa6";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.2,
+      staggerChildren: 0.15,
+    },
+  },
+};
+
 export default function TechStack() {
   const technologies = [
     {
@@ -212,7 +223,11 @@ export default function TechStack() {
         `}
       </style>
 
-      <div className="mx-auto max-w-5xl px-1 sm:px-0 relative">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="mx-auto max-w-5xl px-1 sm:px-0 relative">
         {/* Left-aligned Code Comment & Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -220,7 +235,7 @@ export default function TechStack() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="text-left mb-6">
-          <span className="font-mono text-xs text-slate-400 block mb-1">
+          <span className="font-mono text-xs text-slate-500/50 block mb-0">
             // core_technologies_&_stack
           </span>
           <h3 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
@@ -237,22 +252,22 @@ export default function TechStack() {
           <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-linear-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
 
           {/* Animated Track */}
-          <div className="animate-marquee items-center space-x-10 sm:space-x-14 px-4">
+          <motion.div className="animate-marquee items-center space-x-10 sm:space-x-16 px-4">
             {duplicatedTech.map((tech, idx) => (
               <motion.div
                 key={`${tech.name}-${idx}`}
                 whileHover={{ scale: 1.05, y: -2 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="flex items-center space-x-2.5 opacity-75 hover:opacity-100 cursor-pointer font-mono">
+                className="flex items-center space-x-2.5 opacity-75 hover:opacity-100 cursor-pointer font-baloo">
                 {tech.icon}
-                <span className="text-slate-800 font-semibold text-sm sm:text-base tracking-tight whitespace-nowrap">
+                <span className="text-slate-800 font-semibold text-sm sm:text-lg tracking-tight whitespace-nowrap">
                   {tech.name}
                 </span>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

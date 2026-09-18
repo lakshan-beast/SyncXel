@@ -325,7 +325,7 @@ export default function NavBar() {
       {/* Nav Container - Clean White & Black DevSync Style */}
       <nav className="w-full max-w-7xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200 rounded-2xl shadow-sm transition-all duration-300 relative text-slate-900">
         {/* Dynamic Announcement Ticker at Top */}
-        <div className="hidden lg:block overflow-hidden rounded-t-2xl bg-slate-50 border-b border-slate-200">
+        {/* <div className="hidden lg:block overflow-hidden rounded-t-2xl bg-slate-50 border-b border-slate-200">
           <div className="py-1.5 px-4 text-center text-[11px] text-slate-600 font-mono flex items-center justify-center gap-2">
             <span className="bg-slate-900 text-cyan-400 font-bold px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wider">
               // NEW
@@ -334,7 +334,7 @@ export default function NavBar() {
               Glassmorphic UI Components v2 Dropped — Explore the Matrix
             </span>
           </div>
-        </div>
+        </div> */}
 
         <div className="px-5 sm:px-6 py-4 flex items-center justify-between">
           {/* Logo Section */}

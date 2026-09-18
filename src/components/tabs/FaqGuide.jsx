@@ -1,5 +1,4 @@
-import { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
 import { faqData } from "../../data/docs/faqData";
 import { HiOutlineChevronDown, HiOutlineQuestionMarkCircle } from "react-icons/hi";
 
@@ -11,53 +10,70 @@ export default function FaqGuide() {
   };
 
   return (
-    <div className="space-y-8">
-      {/* Main Header Card */}
-      <div className="bg-slate-900/60 border border-white/10 rounded-2xl p-6 space-y-3">
-        <h2 className="text-xl font-bold text-white">{faqData.title}</h2>
-        <p className="text-xs text-slate-400">{faqData.subtitle}</p>
-        <p className="text-xs text-slate-400 italic">{faqData.description}</p>
+    <div className="space-y-5 font-baloo">
+      
+      {/* 1. MAIN HEADER CARD */}
+      <div className="bg-white border border-slate-800/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-xl space-y-1">
+        <span className="text-[10px] font-mono text-slate-500/60">
+          // frequently_asked_questions
+        </span>
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          {faqData.title}
+        </h2>
+        <p className="text-xs sm:text-sm text-slate-500">
+          {faqData.subtitle}
+        </p>
+        <p className="text-xs text-slate-600 italic bg-slate-50 p-3.5 mt-5 rounded-2xl border border-slate-200/60 text-center">
+          {faqData.description}
+        </p>
       </div>
 
-      {/* FAQs Accordion Loop */}
-      <div className="space-y-4">
+      {/* 2. FAQS ACCORDION LOOP */}
+      <div className="space-y-1">
         {faqData.items.map((faq, idx) => {
           const isOpen = openIndex === idx;
           return (
             <div
               key={faq.id || idx}
-              className="bg-slate-900/60 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300">
+              className="bg-white border border-slate-800/10 rounded-2xl overflow-hidden shadow-xl transition-all duration-300">
+              
               {/* Question Header */}
               <button
                 onClick={() => toggleAccordion(idx)}
-                className="w-full flex items-center justify-between p-6 text-left focus:outline-none">
-                <div className="flex items-center space-x-3">
-                  <HiOutlineQuestionMarkCircle className="w-5 h-5 text-cyan-400 shrink-0" />
-                  <span className="text-sm font-bold text-white">{faq.question}</span>
+                className="w-full flex items-center justify-between p-6 sm:p-5 text-left focus:outline-none">
+                <div className="flex items-center space-x-3.5">
+                  <HiOutlineQuestionMarkCircle className="w-5 h-5 text-slate-900 shrink-0" />
+                  <span className="text-sm sm:text-base font-bold text-slate-900 font-baloo">
+                    {faq.question}
+                  </span>
                 </div>
                 <HiOutlineChevronDown
-                  className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${
-                    isOpen ? "transform rotate-180 text-cyan-400" : ""
+                  className={`w-5 h-5 text-slate-500 transition-transform duration-300 shrink-0 ${
+                    isOpen ? "transform rotate-180 text-slate-900" : ""
                   }`}
                 />
               </button>
 
               {/* Answer Content Body */}
               {isOpen && (
-                <div className="px-6 pb-6 pt-0 space-y-4 border-t border-white/5 pt-4">
-                  <p className="text-xs text-slate-300 leading-relaxed">{faq.answer}</p>
+                <div className="px-6 sm:px-8 pb-6 sm:pb-8 space-y-1.5 border-t border-slate-200/60 pt-4">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-tight mb-5">
+                    {faq.answer}
+                  </p>
 
                   {/* Explanation */}
                   {faq.explanation && (
-                    <p className="text-[11px] text-slate-400 italic bg-slate-950/30 p-2.5 rounded-lg border-l-2 border-cyan-500/50">
-                      💡 <span className="font-medium text-slate-300">Why?</span> {faq.explanation}
+                    <p className="text-[11px] text-slate-600 italic bg-white py-1.5 px-3.5 rounded-lg border-l-4 border-l-slate-700 border border-slate-300/50">
+                      💡 <span className="font-medium text-slate-800 mr-2">Why ? </span>{" "}
+                      {faq.explanation}
                     </p>
                   )}
 
                   {/* Pro Tip */}
                   {faq.proTip && (
-                    <div className="text-[11px] text-amber-300/90 bg-amber-500/10 p-2.5 rounded-lg border border-amber-500/20">
-                      🔥 <span className="font-bold">Pro Tip:</span> {faq.proTip}
+                    <div className="text-[11px] bg-slate-50 text-slate-700 py-2.5 px-3.5 rounded-lg border border-slate-200 font-baloo">
+                      🔥 <span className="font-bold text-slate-900">Pro Tip : </span>{" "}
+                      {faq.proTip}
                     </div>
                   )}
                 </div>

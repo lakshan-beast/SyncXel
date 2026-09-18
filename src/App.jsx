@@ -5,8 +5,6 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 import HeroSection from "./components/Hero";
-import TrustBar from "./components/TrustBar";
-// import TeckStack from "./components/TeckStack";
 import ServicesSection from "./components/Services";
 import TeamSection from "./components/TeamSection";
 import FaqSection from "./components/FAQ";
@@ -20,31 +18,10 @@ import Documentation from "./pages/Documentation";
 import ScrollToTop from "./components/ScrollTop";
 
 import DocsPreviewSection from "./components/DocsPreview";
-import SocialProof from "./components/SocailProof";
-
-import MatrixRain from "./components/MatrixRain";
-import SystemStatus from "./components/SystemStatus";
-import TerminalBox from "./components/TerminalBox";
-
-import SyncRunner from "./components/SyncRunner";
 
 export default function App() {
   return (
     <Router>
-      {/* Container එක relative සහ overflow-hidden තියෙන්න ඕන */}
-      {/* <div className="relative min-h-screen bg-syncxel-dark text-white selection:bg-syncxel-cyan selection:text-syncxel-dark flex flex-col justify-between overflow-x-hidden"> */}
-      {/* 🌟 FIXED BACKGROUND */}
-      {/* <div className="fixed inset-0 pointer-events-none z-0"> */}
-      {/* 1. Grid Pattern */}
-      {/* <div className=" inset-0 opacity-20 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [bg-size:24px_24px] animate-pulse" />
-
-          {/* 2. Glow Orbs 
-          <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-125 sm:w-175 h-100 bg-cyan-500/20 blur-[150px] rounded-full animate-pulse" />
-          <div className="absolute top-[40%] right-[-10%] w-75 sm:w-125 h-125 bg-blue-600/15 blur-[160px] rounded-full" />
-          <div className="absolute bottom-[-10%] left-[-10%] w-87.5 sm:w-125 h-100 bg-cyan-600/15 blur-[160px] rounded-full" /> */}
-      {/* </div> */}
-      {/* <MatrixRain /> */}
-
       {/* 3. Main Content Wrapper */}
       <div className="relative z-10 flex flex-col min-h-screen justify-between">
         <Navbar />
@@ -57,18 +34,12 @@ export default function App() {
               element={
                 <>
                   <HeroSection />
-
-                  {/* <TeckStack /> */}
                   <Components />
                   <DocsPreviewSection />
-                  {/* <SocialProof /> */}
                   <FeaturesSection />
-                  {/* <TrustBar /> */}
                   <TeamSection />
                   <ServicesSection />
                   <FaqSection />
-
-                  {/* <SyncRunner /> */}
                   <Footer />
                 </>
               }
@@ -80,7 +51,6 @@ export default function App() {
               element={
                 <>
                   <AllComponents />
-                  {/* <Footer /> */}
                 </>
               }
             />

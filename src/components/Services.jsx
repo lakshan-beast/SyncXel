@@ -567,7 +567,7 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-4">
+            className="grid grid-cols-1 sm:grid-cols-3 gap-2">
             {services.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -577,7 +577,7 @@ export default function Services() {
                   whileHover={{ y: -4, scale: 1.01 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className="group relative bg-white p-7 rounded-2xl border border-slate-200 hover:border-slate-400 transition-all duration-300 shadow-xs hover:shadow-md w-full md:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] flex flex-col justify-between">
+                  className="group relative bg-white p-7 rounded-2xl border border-slate-200 hover:border-slate-400 transition-all duration-300 shadow-xs hover:shadow-md flex flex-col justify-between">
                   <div>
                     <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-900 flex items-center justify-center mb-4 border border-slate-300 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300">
                       <Icon className="w-5 h-5" />
@@ -591,16 +591,16 @@ export default function Services() {
                       {item.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-slate-600 leading-tight font-sans">
+                    <p className="text-xs sm:text-sm text-slate-600 leading-tight font-baloo">
                       {item.description}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-1.5 pt-6">
+                  <div className="flex flex-wrap gap-1.5 pt-4">
                     {item.tags.map((tag, tIndx) => (
                       <span
                         key={tIndx}
-                        className="px-2.5 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-[10px] font-mono text-slate-700">
+                        className="px-2.5 py-0.5 rounded-lg bg-slate-100 border border-slate-200 text-[10px] font-baloo text-slate-700">
                         {tag}
                       </span>
                     ))}
@@ -616,11 +616,11 @@ export default function Services() {
           <span className="font-mono text-xs text-slate-400 block">
             // workflow_execution_steps
           </span>
-          <div className="text-left space-y-1 mb-6">
+          <div className="text-left space-y-0 mb-6">
             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
               How We Work Together
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 font-sans">
+            <p className="text-xs sm:text-sm text-slate-600 font-baloo">
               A transparent 4-step workflow from initial design to final
               deployment.
             </p>
@@ -631,7 +631,7 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2">
             {steps.map((step, idx) => (
               <motion.div
                 key={idx}
@@ -640,16 +640,16 @@ export default function Services() {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="relative p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 transition-all space-y-3 shadow-xs hover:shadow-md flex flex-col justify-between">
                 <div>
-                  <span className="font-mono text-xs text-slate-400 block mb-2">
+                  <span className="font-mono text-xs text-slate-400 block mb-0">
                     // step_{step.number}
                   </span>
-                  <span className="text-3xl font-extrabold text-slate-900 block mb-2">
+                  <span className="text-4xl font-extrabold text-slate-900 block mb-2">
                     {step.number}
                   </span>
                   <h4 className="text-base font-bold text-slate-950 mb-1">
                     {step.title}
                   </h4>
-                  <p className="text-xs text-slate-600 leading-tight font-sans">
+                  <p className="text-xs text-slate-600 leading-tight font-baloo">
                     {step.desc}
                   </p>
                 </div>

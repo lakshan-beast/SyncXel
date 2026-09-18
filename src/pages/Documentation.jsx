@@ -193,7 +193,7 @@ export default function Documentation() {
   const activeIntegration = integrationsData?.[integrationSubTab] || {};
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 py-2 mt-2 lg:mt-12 px-4 lg:px-5 max-w-7xl w-full mx-auto font-mono relative overflow-hidden">
+    <div className="min-h-screen bg-white text-slate-900 py-0 mt-0 lg:mt-12 px-4 lg:px-5 max-w-7xl w-full mx-auto font-mono relative ">
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
 
@@ -204,11 +204,11 @@ export default function Documentation() {
         />
 
         {/* LAYOUT: SIDEBAR + CONTENT AREA */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 mt-0">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-0">
           {/* SIDEBAR NAVIGATION */}
-          <aside className="lg:col-span-1 space-y-1">
-            <div className="bg-white border border-slate-200 rounded-2xl p-3 flex lg:flex-col overflow-x-auto gap-1.5 shadow-xs">
-              <span className="font-mono text-[10px] text-slate-400 hidden lg:block px-3 py-1">
+          <aside className="lg:col-span-1 space-y-1 ">
+            <div className="bg-white border border-slate-200 rounded-3xl p-3 flex lg:flex-col gap-1.5 shadow-xs overflow-x-scroll scrollbar-thumb-slate-300">
+              <span className="font-mono text-[10px] text-slate-500/50 hidden lg:block px-3 py-3">
                 // documentation_nav
               </span>
               {categories.map((cat) => {
@@ -218,7 +218,7 @@ export default function Documentation() {
                   <button
                     key={cat.id}
                     onClick={() => setActiveTab(cat.id)}
-                    className={`flex items-center space-x-3 px-4 py-2.5 rounded-xl text-xs font-baloo transition-all whitespace-nowrap w-full text-left ${
+                    className={`flex items-center space-x-3 px-4 py-2.5 rounded-md text-xs font-baloo transition-all whitespace-nowrap w-full text-left ${
                       isActive
                         ? "bg-slate-900 text-white shadow-sm font-bold"
                         : "text-slate-600 hover:text-slate-950 hover:bg-slate-100"
@@ -232,7 +232,7 @@ export default function Documentation() {
           </aside>
 
           {/* MAIN CONTENT CONTAINER */}
-          <main className="lg:col-span-3 bg-white border border-slate-200 rounded-2xl p-2 sm:p-4 shadow-xs">
+          <main className="lg:col-span-3 bg-white border-none border-slate-200 rounded-2xl shadow-xs">
             {/* TAB 1: QUICK START */}
             {activeTab === "quick-start" && <QuickSetup />}
 

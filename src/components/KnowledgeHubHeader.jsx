@@ -79,24 +79,24 @@ export default function KnowledgeHubHeader({
   quickStartData,
 }) {
   return (
-    <div className="space-y-6 mb-8 font-mono">
+    <div className="space-y-2 mb-4 font-mono">
       {/* HEADER & LIVE SEARCH BAR */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-xs relative overflow-hidden">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border-none border-slate-200 p-6 sm:p-8 rounded-2xl shadow-none relative overflow-hidden">
         {/* Subtle Background Glow */}
         <div className="absolute -right-10 -top-10 w-40 h-40 bg-slate-100 rounded-full blur-2xl pointer-events-none" />
 
         {/* Title & Expanded Rich Description */}
         <div className="space-y-2 relative z-10 max-w-2xl">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 text-xs font-mono shadow-xs">
+          <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200 text-slate-500/50 text-xs font-mono shadow-xs">
             {/* <HiSparkles className="w-3.5 h-3.5 text-slate-500" /> */}
             <span>// system_knowledge_repository_v2.0</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-black text-slate-900 tracking-tight">
-            Developer <span className="text-slate-500">Knowledge Hub</span>
+            Developer <span className="text-slate-500/60">Knowledge Hub</span>
           </h2>
 
-          <p className="text-slate-600 text-xs sm:text-sm leading-thight font-baloo">
+          <p className="text-slate-500/80 text-xs sm:text-sm leading-thight font-baloo">
             A comprehensive engineering repository featuring production-ready UI
             components, secure authentication patterns, state management
             architectures, robust form integrations, custom hooks, and
@@ -120,7 +120,7 @@ export default function KnowledgeHubHeader({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search docs, snippets, hooks..."
-            className="w-full pl-10 pr-9 py-2.5 bg-slate-50 text-sm text-slate-900 placeholder-slate-400 rounded-xl border border-slate-200 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all shadow-inner font-mono"
+            className="w-full pl-10 pr-9 py-2.5 bg-slate-50 text-sm text-slate-900 placeholder-slate-400 rounded-xl border border-slate-200 focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900 transition-all shadow-inner font-baloo"
           />
           {/* Clear Search Button */}
           {searchQuery && (
