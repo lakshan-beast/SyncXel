@@ -428,33 +428,114 @@
 // }
 // //
 
+// import React, { useState } from "react";
+// import HubHeader from "../components/HubHeader";
+// import HubTabs from "../components/HubTabs";
+
+// import FreeComponentsTab from "../components/FreeComponentsTab";
+// import TemplateComponentsTab from "../components/TemplateComponentsTab";
+
+// import { freeComponentsData } from "../data/free/freeIndex";
+// // import  premiumKits  from "../data/premiumKitData";
+// import PackComponent from "../components/Packs";
+
+// export default function ComponentsHubPage() {
+//   const [mainTab, setMainTab] = useState("freemium");
+//   const [activeCategory, setActiveCategory] = useState("Buttons & Actions");
+//   const [cardTabs, setCardTabs] = useState({});
+//   const [copiedId, setCopiedId] = useState(null);
+
+//   const filteredFreeComponents = freeComponentsData.filter(
+//     (item) => item.category === activeCategory,
+//   );
+
+//   // Mock data variables
+//   const categories = [
+//     "Buttons & Actions",
+//     "Cards & Containers",
+//     "Loaders & Animations",
+//     "Modals, Toasts & Notifications",
+//     "Inputs & Search Bars",
+//     "Badges & Status Indicators",
+//     "Navbars & Dropdowns",
+//     "Toggles & Switches",
+//     "Pricing & Subscriptions",
+//     "Accordions & Collapsibles",
+//     "Avatars & Profiles",
+//     "Tabs & Dynamic Panels",
+//     "Footers & Status Bars",
+//     "Forms & Authentication",
+//     "Checkboxes & Radios",
+//     "Success & Toasts",
+//     "Back to Top & FAB",
+//   ];
+//   // const filteredFreeComponents = []; // ඔයාගේ ෆිල්ටර් කරන ලද ඩේටා
+//   // const premiumKits = []; // ඔයාගේ ප්‍රීමියම් කිට්ස් ඩේටා
+
+//   const toggleCardTab = (id, tab) => {
+//     setCardTabs((prev) => ({ ...prev, [id]: tab }));
+//   };
+
+//   const handleCopy = (id, code) => {
+//     navigator.clipboard.writeText(code);
+//     setCopiedId(id);
+//     setTimeout(() => setCopiedId(null), 2000);
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-white text-slate-900 py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-2 lg:mt-10">
+//       {/* Main Header */}
+//       <HubHeader />
+
+//       {/* Main Tabs Switcher */}
+//       <HubTabs mainTab={mainTab} setMainTab={setMainTab} />
+
+//       {/* Content Sections */}
+//       {mainTab === "freemium" ? (
+//         <FreeComponentsTab
+//           categories={categories}
+//           activeCategory={activeCategory}
+//           setActiveCategory={setActiveCategory}
+//           filteredFreeComponents={filteredFreeComponents}
+//           cardTabs={cardTabs}
+//           toggleCardTab={toggleCardTab}
+//           copiedId={copiedId}
+//           handleCopy={handleCopy}
+//         />
+//       ) : (
+//         <TemplateComponentsTab premiumKits={premiumKits} />
+//       )}
+//     </div>
+//   );
+// }
+
 import React, { useState } from "react";
 import HubHeader from "../components/HubHeader";
 import HubTabs from "../components/HubTabs";
 
 import FreeComponentsTab from "../components/FreeComponentsTab";
 import TemplateComponentsTab from "../components/TemplateComponentsTab";
+import UiPacksTab from "../components/UiPacks";
 
+// ඩේටා ෆාיילස් නිවැරදිව ඉම්පෝට් කරගන්න (ඔයාගේ පාත්ස් වෙනස් නම් ඒවා බලා දාන්න)
 import { freeComponentsData } from "../data/free/freeIndex";
-import  premiumKits  from "../data/premiumKitData";
-import PackComponent from "../components/Packs";
+import { uiPacksData } from "../data/uiPacks"; // uiPacksData තියෙන ෆයිල් එක
+import { premiumKits } from "../data/premiumKitData"; // premiumKits තියෙන ෆයිල් එක
 
 export default function ComponentsHubPage() {
-  const [mainTab, setMainTab] = useState("freemium");
-  const [activeCategory, setActiveCategory] = useState("Buttons & Actions");
+  // 1. ප්‍රධාන ටැබ් එක සඳහා state එක ("free" | "packs" | "templates")
+  const [mainTab, setMainTab] = useState("free");
+
+  // 2. එක් එක් ටැබ් එකට වෙන වෙනම active category states
+  const [freeCategory, setFreeCategory] = useState("Buttons & Actions");
+  const [packCategory, setPackCategory] = useState("All");
+  const [templateCategory, setTemplateCategory] = useState("All");
+
   const [cardTabs, setCardTabs] = useState({});
   const [copiedId, setCopiedId] = useState(null);
 
-  const filteredFreeComponents = freeComponentsData.filter(
-    (item) => item.category === activeCategory,
-  );
-
-  // const premiumKits = premiumKitsData.filter(
-  //   (item) => item.category === activeCategory,
-  // );
-
-  // Mock data variables
-  const categories = [
+  // --- Categories Lists for Each Tab ---
+  const freeCategories = [
     "Buttons & Actions",
     "Cards & Containers",
     "Loaders & Animations",
@@ -473,8 +554,25 @@ export default function ComponentsHubPage() {
     "Success & Toasts",
     "Back to Top & FAB",
   ];
-  // const filteredFreeComponents = []; // ඔයාගේ ෆිල්ටර් කරන ලද ඩේටා
-  // const premiumKits = []; // ඔයාගේ ප්‍රීමියම් කිට්ස් ඩේටා
+
+  // UI Packs වල තියෙන categories අනුව (Footers, Authentication වගේ)
+  const packCategories = ["All", "Footers", "Authentication"];
+
+  // Templates වල තියෙන categories අනුව
+  const templateCategories = ["All", "Full Template Suite"];
+
+  // --- Filtering Data based on active tab and category ---
+  const filteredFreeComponents = freeComponentsData.filter(
+    (item) => item.category === freeCategory,
+  );
+
+  const filteredUiPacks = uiPacksData.filter(
+    (item) => packCategory === "All" || item.category === packCategory,
+  );
+
+  const filteredTemplates = premiumKits.filter(
+    (item) => templateCategory === "All" || item.category === templateCategory,
+  );
 
   const toggleCardTab = (id, tab) => {
     setCardTabs((prev) => ({ ...prev, [id]: tab }));
@@ -491,24 +589,57 @@ export default function ComponentsHubPage() {
       {/* Main Header */}
       <HubHeader />
 
-      {/* Main Tabs Switcher */}
+      {/* Main Tabs Switcher (Free, UI Packs, Templates මාරු කරන ටැබ් එක) */}
+      <span className="font-mono text-slate-500/50 mb-0 block">
+        // primary_ecosystem_segment_selector
+      </span>
       <HubTabs mainTab={mainTab} setMainTab={setMainTab} />
+      <span className="font-mono text-slate-500/50 mb-1 block">
+        // modular_taxonomy_category_filters
+      </span>
 
-      {/* Content Sections */}
-      {mainTab === "freemium" ? (
+      {/* --- Tab 1: Free Components --- */}
+      {mainTab === "free" && (
         <FreeComponentsTab
-          categories={categories}
-          activeCategory={activeCategory}
-          setActiveCategory={setActiveCategory}
+          categories={freeCategories}
+          activeCategory={freeCategory}
+          setActiveCategory={setFreeCategory}
           filteredFreeComponents={filteredFreeComponents}
           cardTabs={cardTabs}
           toggleCardTab={toggleCardTab}
           copiedId={copiedId}
           handleCopy={handleCopy}
         />
-      ) : (
-        <TemplateComponentsTab premiumKits={premiumKits} />
       )}
+
+      {/* --- Tab 2: UI Packs --- */}
+      {mainTab === "packs" && (
+        <UiPacksTab
+          categories={packCategories}
+          activeCategory={packCategory}
+          setActiveCategory={setPackCategory}
+          componentsData={filteredUiPacks}
+          cardTabs={cardTabs}
+          toggleCardTab={toggleCardTab}
+          copiedId={copiedId}
+          handleCopy={handleCopy}
+        />
+      )}
+
+      {/* --- Tab 3: Full Templates --- */}
+      {mainTab === "templates" && (
+        <TemplateComponentsTab
+          categories={templateCategories}
+          activeCategory={templateCategory}
+          setActiveCategory={setTemplateCategory}
+          componentsData={filteredTemplates}
+          cardTabs={cardTabs}
+          toggleCardTab={toggleCardTab}
+          copiedId={copiedId}
+          handleCopy={handleCopy}
+        />
+      )}
+      
     </div>
   );
 }
