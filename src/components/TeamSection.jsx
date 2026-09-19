@@ -356,9 +356,9 @@ export default function TeamSection() {
                           stiffness: 400,
                           damping: 17,
                         }}
-                        className="p-3 rounded-3xl bg-slate-50 border border-slate-100 text-slate-700 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-md group "
+                        className="p-2 rounded-xl bg-slate-50 border border-slate-100 text-slate-700 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-md group "
                         title={social.title}>
-                        <Icon className="w-5 h-5 transition-transform group-hover:scale-110" />
+                        <Icon className="w-6 h-6 transition-transform group-hover:scale-110" />
                       </motion.a>
                     );
                   })}
