@@ -155,14 +155,14 @@ export default function HomeComponentsTeaser() {
   return (
     <section
       id="components"
-      className="py-20 px-4 sm:px-8 max-w-5xl mx-auto space-y-10 scroll-mt-0 text-slate-900">
+      className="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-10 scroll-mt-0 text-slate-900">
       {/* Title Header with Motion (Left Aligned DevSync Style) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-left space-y-2 max-w-5xl mx-auto">
+        className="text-left space-y-2 max-w-6xl mx-auto">
         <span className="font-mono text-xs text-slate-500/50 mb-0 block">
           // ui_components_showcase
         </span>
@@ -175,7 +175,7 @@ export default function HomeComponentsTeaser() {
       </motion.div>
 
       {/* 4 Live Components Cards Grid with Staggered Motion */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 max-w-6xl mx-auto px-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-5 max-w-6xl mx-auto px-0">
         {teaserItems.map((item, index) => (
           <motion.div
             key={item.id}

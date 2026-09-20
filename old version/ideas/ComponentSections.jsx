@@ -16,7 +16,7 @@ import {
   HiXMark, // ❌ Clear Search Icon
 } from "react-icons/hi2";
 
-import QuickSetupGuide from "../components/QuickSetup";
+import QuickSetupGuide from "../../src/components/QuickSetup";
 
 export default function AllComponents() {
   // Categories List
