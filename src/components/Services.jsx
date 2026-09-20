@@ -641,7 +641,7 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {steps.map((step, idx) => (
               <motion.div
                 key={idx}
@@ -650,16 +650,16 @@ export default function Services() {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="relative px-9 py-5 rounded-2xl bg-white border border-slate-100 hover:border-slate-200 transition-all space-y-3 shadow-xs hover:shadow-md flex flex-col justify-between">
                 <div>
-                  <span className="text-4xl font-extrabold bg-slate-800/90 text-slate-50 mb-2 p-1.5 rounded-md ">
+                  <span className="text-4xl font-extrabold bg-slate-800/90 text-slate-50 mb-2 px-1.5 py-0.5 rounded-md ">
                     {step.number}
                   </span>
-                  <span className="font-mono text-xs text-slate-400 block mb-0 mt-2">
+                  <span className="font-mono text-xs text-slate-400 block mb-0 mt-3">
                     // step_{step.number}
                   </span>
                   <h4 className="text-base font-bold text-slate-950 mb-1">
                     {step.title}
                   </h4>
-                  <p className="text-xs text-slate-500 leading-tight font-baloo px-3 pt-3">
+                  <p className="text-xs text-slate-500 leading-tight font-baloo px-2 py-0 pt-3">
                     {step.desc}
                   </p>
                 </div>
