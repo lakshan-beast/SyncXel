@@ -323,7 +323,7 @@ export default function NavBar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 px-4 sm:px-8 pt-4 lg:pt-5 z-50 ">
       {/* Nav Container - Clean White & Black DevSync Style */}
-      <nav className="w-full max-w-7xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200 rounded-2xl shadow-sm transition-all duration-300 relative text-slate-900">
+      <nav className="w-full max-w-7xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200 rounded-4xl md:rounded-2xl shadow-sm transition-all duration-300 relative text-slate-900">
         {/* Dynamic Announcement Ticker at Top */}
         {/* <div className="hidden lg:block overflow-hidden rounded-t-2xl bg-slate-50 border-b border-slate-200">
           <div className="py-1.5 px-4 text-center text-[11px] text-slate-600 font-mono flex items-center justify-center gap-2">
@@ -336,37 +336,37 @@ export default function NavBar() {
           </div>
         </div> */}
 
-        <div className="px-5 sm:px-6 py-6 flex items-center justify-between">
+        <div className="px-5 sm:px-6 py-3 lg:py-5 flex items-center justify-between">
           {/* Logo Section */}
           <Link
             to="/"
-            className="flex items-center space-x-3 cursor-pointer group">
-            <div className="relative w-9 h-9 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-300">
+            className="flex items-center space-x-2 cursor-pointer group">
+            <div className="relative w-12 h-12 flex items-center justify-center rounded-full bg-slate-900 border border-slate-300">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-cyan-400 p-[1.5px] shadow-[0_0_12px_rgba(34,211,238,0.4)]">
-                <div className="w-full h-full bg-[#0B0D13] rounded-full" />
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-slate-900 via-cyan-500 to-cyan-400 p-0.5 shadow-[0_0_12px_rgba(34,211,238,0.9)]">
+                <div className="w-full h-full bg-[#000000] rounded-full" />
               </motion.div>
 
               <motion.img
                 whileHover={{ scale: 1.05 }}
                 src="/syncxel-logo-removebg.png"
                 alt="SyncXel Logo"
-                width={24}
-                height={24}
+                width={32}
+                height={32}
                 className="object-contain relative z-10 rounded-full"
               />
             </div>
 
             <div className="flex flex-col">
-              <span className="text-3xl font-black tracking-tighter text-slate-900 font-baloo uppercase group-hover:text-cyan-200 transition-colors">
+              <span className="text-4xl font-black tracking-tighter text-slate-900 font-baloo uppercase group-hover:text-cyan-200 transition-colors">
                 Sync
-                <span className="text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 ml-1">
+                <span className="text-transparent tracking-wide bg-clip-text bg-gradient-to-r from-slate-400/50 via-slate-500 to-slate-600 ml-3">
                   Xel
                 </span>
               </span>
-              <span className="text-[8px] font-baloo tracking-widest text-slate-400/80 -mt-1 uppercase">
+              <span className="text-[8px] font-baloo tracking-widest text-slate-500/50 -mt-1 uppercase">
                 UI MATRIX v2.0
               </span>
             </div>
@@ -377,7 +377,7 @@ export default function NavBar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-3 text-xs font-baloo text-slate-700">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-3 text-xs lg:text-lg font-baloo text-slate-600/80">
             {/* Components Dropdown */}
             <div className="relative group cursor-pointer py-1">
               <Link
@@ -433,22 +433,22 @@ export default function NavBar() {
               <div className="absolute top-full left-0 mt-3 w-56 bg-white backdrop-blur-2xl border border-slate-200 rounded-xl p-2 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 font-mono">
                 <Link
                   to="/components"
-                  className="block px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors">
-                  <div className="text-slate-900 font-bold text-xs">
+                  className="block font-baloo px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors">
+                  <div className="text-slate-900 font-bold text-xs ">
                     Free UI Library
                   </div>
-                  <div className="text-[10px] text-slate-500">
+                  <div className="text-[10px] text-slate-400 px-2">
                     Copy-paste components
                   </div>
                 </Link>
                 <a
                   href="#hire"
                   onClick={(e) => handleNavClick(e, "hire")}
-                  className="block px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors mt-0.5">
+                  className="block font-baloo px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors mt-0.5">
                   <div className="text-slate-900 font-bold text-xs">
                     Custom Engineering
                   </div>
-                  <div className="text-[10px] text-slate-500">
+                  <div className="text-[10px] text-slate-400 px-2">
                     Hire us for web apps
                   </div>
                 </a>
@@ -464,12 +464,12 @@ export default function NavBar() {
           </div>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-2 font-mono">
+          <div className="hidden md:flex items-center space-x-2 font-baloo">
             <a href="#hire" onClick={(e) => handleNavClick(e, "hire")}>
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-white border border-slate-300 text-slate-800 font-semibold text-xs rounded-lg hover:bg-slate-50 transition-all cursor-pointer">
+                className="px-6 py-2 bg-white border border-slate-300 text-slate-800 font-semibold text-xs lg:text-base rounded-lg hover:bg-slate-50 transition-all cursor-pointer">
                 const hire = () =&gt; us();
               </motion.button>
             </a>
@@ -478,7 +478,7 @@ export default function NavBar() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 bg-slate-900 text-white font-semibold text-xs rounded-lg hover:bg-slate-800 transition-all cursor-pointer shadow-sm">
+                className="px-6 py-2 bg-slate-900 text-white font-semibold text-xs rounded-lg hover:bg-slate-800 transition-all cursor-pointer shadow-sm hover:scale-105">
                 get_started()
               </motion.button>
             </Link>
@@ -492,9 +492,9 @@ export default function NavBar() {
               className="text-slate-900 hover:text-slate-600 p-1 focus:outline-none"
               aria-label="Toggle Menu">
               {mobileMenuOpen ? (
-                <IoClose className="w-7 h-7" />
+                <IoClose className="w-9 h-9" />
               ) : (
-                <FaBarsStaggered className="w-6 h-6" />
+                <FaBarsStaggered className="w-8 h-8" />
               )}
             </button>
           </div>
@@ -508,7 +508,7 @@ export default function NavBar() {
               animate={{ opacity: 1, height: "auto", y: 0 }}
               exit={{ opacity: 0, height: 0, y: -10 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="mt-2 pt-3 px-4 pb-4 border-t border-slate-200 flex flex-col space-y-2 md:hidden text-center overflow-hidden font-mono text-xs">
+              className="mt-2 pt-3 px-4 pb-4 border-t border-slate-200 flex flex-col space-y-2 md:hidden text-center overflow-hidden font-baloo text-xs">
               <Link
                 to="/components"
                 onClick={closeMenu}
