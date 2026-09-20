@@ -1,10 +1,12 @@
 import React from "react";
+import { HiGift } from "react-icons/hi";
 import {
   HiArrowLeft,
   HiSparkles,
   HiCheckCircle,
   HiShieldCheck,
 } from "react-icons/hi2";
+import { MdOutlineTipsAndUpdates } from "react-icons/md";
 
 export default function HubHeader() {
   return (
@@ -37,7 +39,7 @@ export default function HubHeader() {
           <div className="flex flex-wrap items-center gap-1 pt-1">
             {/* Last Updated */}
             <div className="text-xs text-slate-500 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-200 flex items-center gap-2 shadow-xs font-baloo">
-              <span className="w-4 h-4 rounded-full bg-slate-900 animate-bounce"></span>
+              <MdOutlineTipsAndUpdates className="w-5 h-5  text-slate-900 animate-bounce" />
               <span>
                 Last Updated :{" "}
                 <strong className="text-slate-900">September 2026</strong>
@@ -46,7 +48,7 @@ export default function HubHeader() {
 
             {/* Legal / Free Usage Message */}
             <div className="bg-slate-50 border border-slate-200 px-3.5 py-2 rounded-xl flex items-center gap-4 text-xs text-slate-700 shadow-xs font-baloo">
-              <HiShieldCheck className="w-4 h-4 text-slate-900 shrink-0 animate-ping" />
+              <HiGift className="w-4 h-4 text-slate-900 shrink-0 animate-ping" />
               <span className="animate-pulse">
                 Free components can be used in personal & client projects!
               </span>
