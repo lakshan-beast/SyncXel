@@ -233,11 +233,14 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="py-16 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto relative overflow-hidden bg-white text-slate-900 font-mono scroll-mt-20">
+      className="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-10 scroll-mt-0 text-slate-900">
+    {/* <section
+      id="features"
+      className="py-16 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto relative overflow-hidden bg-white text-slate-900 font-mono scroll-mt-20"> */}
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 opacity-30 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
 
-      <div className="relative z-10 p-2 sm:p-8 max-w-5xl mx-auto space-y-12">
+      <div className="relative z-10 p-2 sm:p-8 max-w-7xl mx-auto space-y-12">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -274,7 +277,7 @@ export default function Features() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           {features.map((feature, idx) => {
             const Icon = feature.icon;
             return (
