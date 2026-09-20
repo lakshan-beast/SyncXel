@@ -9,7 +9,7 @@ export const uiPacksData = [
     sales: "New",
     description: "5 Production-ready React, Tailwind CSS & Framer Motion footers with responsive layouts and interactive newsletter states.",
     previewImg: "src/assets/footer-preview.png",
-    demoUrl: "https://syncxel-ui-preview.vercel.app/footers", // Local preview route or component view
+    demoUrl: "https://syncxel-ui-preview.vercel.app/footer", // Local preview route or component view
     checkoutUrl: "https://yourstore.lemonsqueezy.com/buy/footer-pack-id",
     liveUrl: "",
   },
