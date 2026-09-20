@@ -131,12 +131,16 @@ export default function HomeComponentsTeaser() {
       title: "Laser Beam Button",
       category: "Buttons",
       component: <LaserBeamButton />,
+      description:
+        "Cyberpunk action button wrapped with a continuous spinning laser beam border.",
     },
     {
       id: 2,
       title: "Brutal Pop Checkbox",
       category: "Checkboxes",
       component: <BrutalPopCheckbox />,
+      description:
+        "High-contrast geometric brutalist checkbox with sharp directional drop-shadows.",
     },
     // {
     //   id: 3,
@@ -149,6 +153,8 @@ export default function HomeComponentsTeaser() {
       title: "Facebook Skeleton Loader",
       category: "Loaders",
       component: <FacebookSkeletonLoader />,
+      description:
+        "Horizontal sweeping shimmer card loader powered by Framer Motion placeholders.",
     },
   ];
 
@@ -187,7 +193,7 @@ export default function HomeComponentsTeaser() {
               to="/components"
               className="group rounded-xl bg-slate-300/60 border-2 border-slate-100 hover:border-slate-200 overflow-hidden shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full mx-5 md:mx-0">
               {/* Live Component Preview Box */}
-              <div className="h-56 bg-slate-50/70 overflow-hidden relative flex items-center justify-center px-3 py-10 border-b border-slate-200">
+              <div className="h-60 bg-slate-50/70 overflow-hidden relative flex items-center justify-center px-3 py-10 border-b border-slate-200">
                 <div className="w-full flex items-center justify-center scale-95 group-hover:scale-100 transition-transform duration-300 pointer-events-none">
                   {item.component}
                 </div>
@@ -198,9 +204,12 @@ export default function HomeComponentsTeaser() {
 
               {/* Card Info Bar */}
               <div className="p-4 flex items-center justify-between bg-white">
-                <h3 className="text-slate-900/50 font-mono font-bold text-xs group-hover:text-slate-600 transition-colors line-clamp-1">
-                  {item.title}
-                </h3>
+                <div>
+                  <h3 className="text-slate-900/50 font-mono font-bold text-xs group-hover:text-slate-600 transition-colors line-clamp-1">
+                    {item.title}
+                  </h3>
+                  {/* <p className="text-slate-500 leading-tight mt-2 px-2">{item.description}</p> */}
+                </div>
                 <HiOutlineArrowRight className="w-4 h-4 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all shrink-0 ml-2" />
               </div>
             </Link>
