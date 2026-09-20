@@ -212,13 +212,15 @@ export default function TeamSection() {
   return (
     <section
       id="team"
-      className="py-16 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto relative overflow-hidden bg-white text-slate-900 font-mono scroll-mt-20">
+      className="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-10 scroll-mt-0 text-slate-900">
+      {/* id="team"
+      className="py-16 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto relative overflow-hidden bg-white text-slate-900 font-mono scroll-mt-20"> */}
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 opacity-30 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
 
-      <div className="relative z-10 p-2 sm:p-8 max-w-5xl mx-auto space-y-12">
+      <div className="relative z-10 p-2 sm:p-8 max-w-7xl mx-auto space-y-12">
         {/* MEET THE FOUNDER SECTION */}
-        <div className="space-y-8">
+        <div className="space-y-8 ">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -255,7 +257,7 @@ export default function TeamSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative p-6 sm:p-7 rounded-3xl bg-white border border-slate-50 shadow-xs hover:border-slate-100 transition-all duration-300">
+            className="relative p-6 sm:p-7 rounded-3xl bg-white border border-slate-50 shadow-xs hover:border-slate-100 transition-all duration-300 max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
               {/* Profile Image with Hover Animation */}
               <motion.div
