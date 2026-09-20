@@ -227,12 +227,13 @@ export default function FaqSection() {
   return (
     <section
       id="faq"
-      className="py-16 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto relative overflow-hidden bg-white text-slate-900 font-mono scroll-mt-20">
+      className="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-10 scroll-mt-0 text-slate-900">
+      {/* className="py-16 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto relative overflow-hidden bg-white text-slate-900 font-mono scroll-mt-20"> */}
       
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 opacity-30 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
 
-      <div className="relative z-10 p-2 sm:p-8 max-w-5xl mx-auto space-y-12">
+      <div className="relative z-10 p-2 sm:p-8 max-w-7xl mx-auto space-y-12">
         
         {/* Section Header */}
         <motion.div
