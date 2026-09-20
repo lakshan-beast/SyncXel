@@ -134,18 +134,19 @@ export default function DocsPreviewSection() {
     //   </div>
     // </section>
 
-    <section className="py-10 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto relative overflow-hidden bg-white text-slate-900">
+    <section className="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-10 scroll-mt-0 text-slate-900">
+    {/* <section className="py-10 px-4 sm:px-6 lg:px-0 max-w-7xl mx-auto relative overflow-hidden bg-white text-slate-900"> */}
       {/* Subtle Grid Background */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
+      <div className="absolute inset-0 opacity-0 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
 
-      <div className="relative z-10 p-2 sm:p-8 max-w-5xl mx-auto">
+      <div className="text-left space-y-2 p-2 sm:py-8 max-w-6xl mx-auto">
         {/* Header (Left Aligned DevSync Style) */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-left mb-14 space-y-3">
+          className="text-left mb-12 space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
             <span className="font-mono text-xs text-slate-500/50 mb-0 block">
               // free_developer_ecosystem
