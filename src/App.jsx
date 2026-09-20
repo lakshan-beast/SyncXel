@@ -26,7 +26,7 @@ export default function App() {
       <div className="relative z-10 flex flex-col min-h-screen justify-between">
         <Navbar />
 
-        <main className="pt-24 grow">
+        <main className="pt-16 md:pt-20 lg:pt-24 grow">
           <Routes>
             {/* 1. HOME PAGE ROUTE (/) */}
             <Route
