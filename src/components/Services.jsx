@@ -471,13 +471,13 @@ export default function Services() {
         "Pixel-perfect conversion of your Figma or Adobe XD designs into clean, modular, and responsive production code.",
       tags: ["Figma", "Pixel-Perfect", "Clean Code", "Responsive UI"],
     },
-    {
-      icon: HiOutlineCpuChip, // Component reference (Fixed)
-      title: "Firebase & API Integrations",
-      description:
-        "Client-side application engineering integrated with Firebase (Authentication & Database), EmailJS, and external REST APIs.",
-      tags: ["Firebase Auth", "Firestore DB", "EmailJS", "API Integration"],
-    },
+    // {
+    //   icon: HiOutlineCpuChip, // Component reference (Fixed)
+    //   title: "Firebase & API Integrations",
+    //   description:
+    //     "Client-side application engineering integrated with Firebase (Authentication & Database), EmailJS, and external REST APIs.",
+    //   tags: ["Firebase Auth", "Firestore DB", "EmailJS", "API Integration"],
+    // },
     {
       icon: HiOutlineRocketLaunch, // Component reference (Fixed)
       title: "Landing Pages & Re-design",
@@ -530,11 +530,13 @@ export default function Services() {
   return (
     <section
       id="hire"
-      className="py-16 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto relative overflow-hidden bg-white text-slate-900 font-mono scroll-mt-20">
+      className="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-10 scroll-mt-0 text-slate-900">
+      {/* id="hire"
+      className="py-16 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto relative overflow-hidden bg-white text-slate-900 font-mono scroll-mt-20"> */}
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 opacity-30 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
 
-      <div className="relative z-10 p-2 sm:p-8 max-w-5xl mx-auto space-y-16">
+      <div className="relative z-10 p-2 sm:p-8 max-w-7xl mx-auto space-y-16">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -575,7 +577,7 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            className="grid grid-cols-1 sm:grid-cols-3 gap-2">
             {services.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -639,7 +641,7 @@ export default function Services() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2">
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
             {steps.map((step, idx) => (
               <motion.div
                 key={idx}
@@ -1108,8 +1110,8 @@ export default function Services() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="relative rounded-3xl bg-white border border-slate-200 p-6 sm:p-8 shadow-xl w-full">
-                <div className="space-y-6">
+                className="relative rounded-3xl bg-white border border-slate-200 p-6 sm:p-8 shadow-md w-full">
+                <div className="space-y-2">
                   <div className="text-left space-y-1">
                     <h4 className="text-xl sm:text-2xl font-extrabold text-slate-950 tracking-tight">
                       Send a Project Inquiry
@@ -1134,7 +1136,7 @@ export default function Services() {
                       </p>
                     </motion.div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={handleSubmit} className="space-y-2">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         <div className="space-y-1.5 text-left">
                           <label className="text-xs font-semibold text-slate-600 font-baloo">
@@ -1182,7 +1184,7 @@ export default function Services() {
                               onClick={() => setSelectedBudget(budget)}
                               className={`py-2.5 px-3 rounded-md text-xs font-semibold border transition-all cursor-pointer ${
                                 selectedBudget === budget
-                                  ? "bg-slate-900 border-slate-900 text-white shadow-xs"
+                                  ? "bg-slate-900 border-slate-900 text-white shadow-xs scale-105"
                                   : "bg-slate-50 border-slate-200 text-slate-700 hover:text-slate-950"
                               }`}>
                               {budget}
