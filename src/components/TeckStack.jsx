@@ -274,7 +274,7 @@ export default function TechStack() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="mx-auto max-w-5xl px-5 sm:px-0 relative">
+        className="mx-auto max-w-5xl px-0 sm:px-0 relative">
         {/* Left-aligned Code Comment & Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -291,7 +291,7 @@ export default function TechStack() {
         </motion.div>
 
         {/* Marquee Container with White Gradient Overlays */}
-        <div className="relative w-full overflow-hidden py-5 bg-slate-100/5 border-none border-slate-200/80 rounded-xl">
+        <div className="relative w-full overflow-hidden py-5 bg-white border-none border-slate-200/80 rounded-xl">
           {/* Left Gradient Fade */}
           <div className="absolute left-0 top-0 bottom-0 w-18 sm:w-28 bg-linear-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
 
