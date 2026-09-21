@@ -35,46 +35,51 @@ export default function NavBar() {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 px-3 sm:px-8 pt-3 lg:pt-0 z-50 ">
+      className="fixed top-0 left-0 right-0 px-3 sm:px-8 lg:px-0 pt-3 lg:pt-0 z-50 ">
       {/* Nav Container - Clean White & Black DevSync Style */}
-      <nav className="w-full max-w-7xl lg:max-w-full mx-auto bg-white/90 backdrop-blur-sm border border-slate-200/80 lg:border-none rounded-3xl md:rounded-2xl shadow-none transition-all duration-300 relative text-slate-900">
-      {/* logo */}
+      <nav className="w-full max-w-7xl lg:max-w-full mx-auto bg-white/90 backdrop-blur-sm border border-slate-200/80 lg:border-none rounded-3xl md:rounded-2xl shadow-none lg:shadow-md transition-all duration-300 relative text-slate-900">
+        {/* logo */}
         <div className="px-4 sm:px-6 py-4 lg:py-5 flex items-center justify-between">
           {/* Logo Section */}
           <Link
             to="/"
-            className="flex items-center space-x-2 cursor-pointer group">
-            <div className="relative w-12 h-12 flex items-center justify-center rounded-full bg-slate-900 border border-slate-100">
+            className="flex items-center space-x-4 cursor-pointer group">
+            {/* <div className="relative w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 border border-slate-100">
+              {/* 🔥 Super Smooth & Glowing Rotating Ring *
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-slate-900 via-cyan-500 to-cyan-400 p-0.5 shadow-[0_0_12px_rgba(34,211,238,0.9)]">
-                <div className="w-full h-full bg-[#000000] rounded-full" />
+                transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
+                className="absolute -inset-1 rounded-full bg-[conic-gradient(from_0deg,#22d3ee,#ffffff,#3b82f6,#22d3ee)] p-[2px] shadow-[0_0_20px_rgba(34,211,238,0.7)]">
+                <div className="w-full h-full bg-slate-950 rounded-full" />
               </motion.div>
 
               <motion.img
-                whileHover={{ scale: 1.05 }}
+                // whileHover={{ scale: 1.05 }}
                 src="/syncxel-logo-removebg.png"
                 alt="SyncXel Logo"
-                width={30}
-                height={30}
+                width={28}
+                height={28}
                 className="object-contain relative z-10 rounded-full"
               />
-            </div>
+            </div> */}
 
             <div className="flex flex-col">
-              <span className="text-3xl font-black tracking-tighter text-slate-800/80 font-baloo uppercase group-hover:text-slate-400 transition-colors">
-                Sync
-                <span className="text-transparent tracking-wide bg-clip-text ml-2 bg-linear-to-r from-slate-200 to-slate-700 ">
+              {/* Option 2 Connected Pill Style */}
+              <div className="flex items-center">
+                <span className="text-2xl md:text-3xl font-black font-baloo uppercase bg-transparent text-slate-950 p-0 rounded-l-md shadow-inner leading-0">
+                  Sync
+                </span>
+                <span className="text-2xl md:text-3xl font-black font-baloo uppercase bg-slate-950 text-white px-2 ml-0.5 rounded-md border border-l-0 border-white/20 shadow-md leading-none">
                   Xel
                 </span>
-              </span>
-              <span className="text-[10px] font-baloo tracking-widest text-slate-700/50 -mt-1 uppercase">
+              </div>
+
+              <span className="text-[10px] font-baloo tracking-widest text-slate-400 -mt-0.5 uppercase">
                 UI MATRIX V2.0
               </span>
             </div>
 
-            <span className="inline-block px-3 py-0.5 ml-1 text-[9px] font-extrabold font-baloo text-cyan-400 bg-cyan-500/15 border border-cyan-500/30 rounded-full tracking-wider uppercase shadow-[0_0_8px_rgba(34,211,238,0.2)] animate-pulse">
+            <span className="inline-block px-3 py-0.5 ml-1 text-[9px] font-extrabold font-baloo text-slate-400 bg-slate-500/15 border border-slate-500/30 rounded-full tracking-wider uppercase shadow-[0_0_8px_rgba(34,211,238,0.2)] animate-pulse">
               Beta
             </span>
           </Link>
