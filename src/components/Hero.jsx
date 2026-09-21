@@ -165,7 +165,7 @@ export default function Hero() {
       {/* <div className="min-h-screen bg-white bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:20px_20px] space-y-5 font-baloo p-4 sm:p-8"></div> */} 
       {/* Main Content Container */}
       <motion.div
-        className="max-w-7xl mx-auto space-y-0 md:space-y-15 lg:space-y-30 relative z-10 w-full"
+        className="max-w-7xl mx-auto space-y-0 md:space-y-10 lg:space-y-20 relative z-10 w-full"
         variants={containerVariants}
         initial="hidden"
         animate="visible">
