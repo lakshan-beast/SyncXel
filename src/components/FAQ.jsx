@@ -1,5 +1,3 @@
-
-
 // import React, { useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 // import {
@@ -159,7 +157,6 @@
 //   );
 // }
 
-
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -227,23 +224,19 @@ export default function FaqSection() {
   return (
     <section
       id="faq"
-      className="py-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-10 scroll-mt-0 text-slate-900">
-      {/* className="py-16 px-4 sm:px-6 lg:px-0 max-w-6xl mx-auto relative overflow-hidden bg-white text-slate-900 font-mono scroll-mt-20"> */}
-      
+      className="py-10 px-4 sm:px-8 max-w-7xl mx-auto scroll-mt-0  lg:scroll-mt-1">
       {/* Subtle Grid Background */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" />
+      {/* <div className="absolute inset-0 opacity-30 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" /> */}
 
       <div className="relative z-10 p-2 sm:p-8 max-w-7xl mx-auto space-y-12">
-        
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
-          className="text-left space-y-0">
-          
-          <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
+          className="text-left space-y-1">
+          <div className="flex flex-col gap-1 lg:flex-row lg:justify-between mb-3 lg:mb-0">
             <span className="font-mono text-xs text-slate-500/50 mb-0 block">
               // support_and_knowledge_base
             </span>
@@ -258,8 +251,9 @@ export default function FaqSection() {
             Frequently Asked <span className="text-slate-900">Questions</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-tight max-w-3xl font-baloo">
-            Everything you need to know about SyncXel UI components and custom frontend engineering services.
+          <p className="text-sm sm:text-base text-slate-500 leading-tight max-w-4xl font-baloo">
+            Everything you need to know about SyncXel UI components and custom
+            frontend engineering services.
           </p>
         </motion.div>
 
@@ -269,7 +263,7 @@ export default function FaqSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="space-y-1">
+          className="space-y-3 lg:space-y-1">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
 
@@ -277,23 +271,22 @@ export default function FaqSection() {
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                className={`rounded-2xl border-2 transition-all duration-300 overflow-hidden bg-white shadow-xs ${
+                className={`rounded-xl border-2 transition-all duration-100 overflow-hidden bg-white shadow-xs ${
                   isOpen
-                    ? "border-slate-50 shadow-md"
-                    : "border-slate-50 hover:border-slate-100"
+                    ? "border-slate-300/50 shadow-lg"
+                    : "border-slate-200/50 hover:border-slate-200/50"
                 }`}>
-                
                 {/* Accordion Question Header */}
                 <button
                   type="button"
                   onClick={() => toggleFaq(idx)}
-                  className="w-full px-8 py-3 text-left flex items-center justify-between gap-2 cursor-pointer focus:outline-none"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between gap-3 cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}>
                   <div className="space-y-0">
                     <span className="font-mono text-[10px] text-slate-500/50 block">
                       // query_0{idx + 1}
                     </span>
-                    <span className="text-base sm:text-lg font-bold font-exo text-slate-900 tracking-tight">
+                    <span className="text-base sm:text-lg font-bold font-exo text-slate-600 tracking-tight">
                       {faq.question}
                     </span>
                   </div>
@@ -301,8 +294,8 @@ export default function FaqSection() {
                   <div
                     className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300 ${
                       isOpen
-                        ? "bg-slate-900 border-slate-900 text-white"
-                        : "bg-slate-100 border-slate-300 text-slate-700"
+                        ? "bg-slate-700 border-slate-800 text-white"
+                        : "bg-slate-100 border-slate-200 text-slate-700"
                     }`}>
                     <HiOutlineChevronDown
                       className={`w-4 h-4 transition-transform duration-300 ${
@@ -320,7 +313,7 @@ export default function FaqSection() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}>
-                      <div className="px-10 py-2 pb-3 pt-0 text-slate-500 text-xs sm:text-sm leading-tight border-t border-slate-100 mt-0 font-baloo">
+                      <div className="px-8 py-1 pb-3 pt-0 text-slate-500 text-base sm:text-md leading-tight border-t border-slate-100 mt-0 font-baloo">
                         <p className="pt-4">{faq.answer}</p>
                       </div>
                     </motion.div>
