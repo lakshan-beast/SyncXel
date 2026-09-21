@@ -3,54 +3,21 @@
 @import "tailwindcss";
 
 @theme {
-  /* SyncXel Brand Colors (Logo Matrix) */
-  --color-syncxel-dark: #0b0d13;
-  --color-syncxel-card: #161b26;
-  --color-syncxel-border: #2a324b;
-  --color-syncxel-blue: #3a86ff;
-  --color-syncxel-cyan: #56cfe1;
-  --color-syncxel-mint: #70e4c8;
-  --color-syncxel-text-muted: #d0d5db;
-
-  /* Brand Custom Gradients */
-  --background-image-syncxel-gradient: linear-gradient(
-    135deg,
-    #3a86ff 0%,
-    #56cfe1 50%,
-    #70e4c8 100%
-  );
-
   --font-exo: "Exo", sans-serif;
   --font-baloo: "Baloo 2", sans-serif;
 }
 
-* {
+/* Global Smooth Behavior & Font Smoothing */
+html {
   scroll-behavior: smooth;
-  /* scroll-margin-top: 6rem; */
 }
 
-/* Base Body Font */
 body {
-  font-family: var(--font-baloo);
-  /* background-color: var(--color-syncxel-dark); */
+  font-family: var(--font-baloo, sans-serif);
   color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-/* 3. Dark Theme Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
-::-webkit-scrollbar-thumb {
-  background: #3d94a1;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #404040;
-}
-
 
 /* Headings Custom Font */
 h1,
@@ -58,5 +25,24 @@ h2,
 h3,
 h4,
 .font-heading {
-  font-family: var(--font-exo);
+  font-family: var(--font-exo, sans-serif);
+}
+
+/* Modern Minimal Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090b10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
 }

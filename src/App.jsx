@@ -16,7 +16,6 @@ import Legal from "./pages/Legel";
 import Documentation from "./pages/Documentation";
 
 import ScrollToTop from "./components/ScrollTop";
-
 import DocsPreviewSection from "./components/DocsPreview";
 
 export default function App() {
@@ -26,7 +25,8 @@ export default function App() {
       <div className="relative z-10 flex flex-col min-h-screen justify-between">
         <Navbar />
 
-        <main className="pt-20 @sm:pt-25 md:pt-40 lg:pt-6 grow">
+        {/* 🌟 Optimized Responsive Padding-Top */}
+        <main className="pt-24 sm:pt-32.5 md:pt-40 lg:pt-18.5 xl:pt-16 grow">
           <Routes>
             {/* 1. HOME PAGE ROUTE (/) */}
             <Route
