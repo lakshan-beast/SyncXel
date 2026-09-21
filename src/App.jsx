@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 
 import HeroSection from "./components/Hero";
 import ServicesSection from "./components/Services";
+import WorkflowSection from "./components/WorkflowSection";
+import ContactSection from "./components/ContactSection";
 import TeamSection from "./components/TeamSection";
 import FaqSection from "./components/FAQ";
 import FeaturesSection from "./components/WhyChoose";
@@ -39,6 +41,8 @@ export default function App() {
                   <FeaturesSection />
                   <TeamSection />
                   <ServicesSection />
+                  <WorkflowSection />
+                  <ContactSection />
                   <FaqSection />
                   <Footer />
                 </>
