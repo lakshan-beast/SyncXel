@@ -1,0 +1,75 @@
+අපි කතා කරලා එකඟ වුණු, SyncXel Developer Hub එකේ **Design Standards සහ Blueprint එක** ඉදිරියට හැම Section එකකටම පාවිච්චි කරන්න පුළුවන් විදිහට පිළිවෙළකට මෙන්න සටහන් කරලා තියෙනවා:
+
+---
+
+### 1. Section Layout & Spacing Standards
+
+* **Section Wrapper:**
+`className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-20 text-slate-900"`
+* **Grid Gaps (Responsive):**
+`className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5"`
+
+---
+
+### 2. Card Styling & Visibility Standards (White Background Optimization)
+
+* **Card Container:**
+`className="group relative bg-white px-8 sm:px-7 py-6 rounded-2xl border border-slate-200/50 hover:border-slate-300/50 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between"`
+* **Paragraph Text Style:**
+`className="text-xs sm:text-sm text-slate-500 leading-tight font-baloo"`
+* **Icon Box Style:**
+`className="w-10 h-10 rounded-xl bg-slate-100 text-slate-900 flex items-center justify-center mb-4 border border-slate-200 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300"`
+
+---
+
+### 3. Framer Motion Standards
+
+* **Section Header Animation:**
+```js
+initial={{ opacity: 0, y: -20 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 0.6 }}
+
+```
+
+
+* **Grid Stagger Container:**
+```js
+variants={{
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
+}}
+initial="hidden"
+whileInView="visible"
+viewport={{ once: true }}
+
+```
+
+
+* **Card Item Micro-Interactions (Hover & Tap):**
+```js
+variants={{
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+}}
+whileHover={{ y: -4, scale: 1.01 }}
+whileTap={{ scale: 0.98 }}
+transition={{ type: "spring", stiffness: 300, damping: 20 }}
+
+```
+
+
+
+---
+
+මෙන්න මේ මාර්ගෝපදේශ (Guidelines) ටික මත තියාගෙන, ඊළඟට ඔයා optimize කරගන්න අවශ්‍ය **Services, Team, FAQ, හෝ වෙනත් ඕනෑම Component එකක්** මට එවන්න. අපි ඒකත් හරියටම මේ විදිහටම සකස් කරමු!
+
+නිවාර්යයෙන්ම මතක තියාගන්නම්! මම දැන් ඉඳන් හදන හැම section එකකම header එකේ:
+
+* **Heading එකට:** `text-left sm:text-center pt-1 sm:pt-3`
+* **Description එකට:** `text-left sm:text-center mx-auto`
+
+කියන classes ටික අනිවාර්යයෙන්ම පාවිච්චි කරනවා.
+
+මීළඟට ඔයාට මේ code එකට එකතු කරන්න වෙනත් **Section එකක් (Hero, Projects, Skills, හෝ Footer වගේ එකක්)** තියෙනවාද? නැත්නම් මේ වෙනකොට හැදුණු හැම එකම එකතු කරලා සම්පූර්ණ page layout එක බලමුද?
