@@ -5,7 +5,6 @@ import { TbCopyCheckFilled, TbCopyPlusFilled } from "react-icons/tb";
 
 import { MdOutlineFileDownloadDone } from "react-icons/md";
 
-
 import { freeComponentsData } from "../data/free/freeIndex";
 
 export default function FreeComponentsTab({
@@ -22,6 +21,9 @@ export default function FreeComponentsTab({
 
   return (
     <div className="font-mono">
+      <span className="font-mono text-slate-500/50 mb-1 block">
+        // modular_taxonomy_category_filters
+      </span>
       {/* --- DESKTOP CATEGORIES PILLS --- */}
       <div className="hidden md:flex flex-wrap gap-2 mb-12 justify-start">
         {categories.map((cat) => (
@@ -271,8 +273,6 @@ export default function FreeComponentsTab({
 
                 {/* Copies Count Badge */}
                 <div className="flex items-center gap-2.5 text-xs font-baloo font-bold text-slate-700 bg-white pr-5 py-0.5 rounded-none border-none border-slate-200 shadow-xs">
-                  
-
                   <MdOutlineFileDownloadDone className="w-6 h-5 text-slate-900 animate-pulse" />
                   <span>{item.copiesCount}</span>
                 </div>

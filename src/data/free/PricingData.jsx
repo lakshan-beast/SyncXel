@@ -1,5 +1,5 @@
-import CyberPricingCard from "../../library/free/pricing/CyberPricingCard";
-import MatrixEnterpriseTier from "../../library/free/pricing/MatrixEnterpriseTier";
+import CyberPricingCard from "../../../old version/library/pricing/CyberPricingCard";
+import MatrixEnterpriseTier from "../../../old version/library/pricing/MatrixEnterpriseTier";
 
 export const pricingData = [
   {

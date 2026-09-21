@@ -61,7 +61,7 @@ export default function Documentation() {
   const activeIntegration = integrationsData?.[integrationSubTab] || {};
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 py-0 mt-2 lg:mt-12 px-4 lg:px-5 mb-5 max-w-7xl w-full mx-auto font-mono relative overflow-x-hidden">
+    <div className="min-h-screen bg-white text-slate-900 py-0 mt-2 lg:mt-12 px-4 lg:px-5 mb-5 max-w-7xl w-full mx-auto font-baloo relative overflow-x-hidden">
       <div className="relative z-10">
         <KnowledgeHubHeader
           searchQuery={searchQuery}

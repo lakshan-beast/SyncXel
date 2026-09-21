@@ -1,8 +1,8 @@
-import CyberGlassNavbar from "../../library/free/navbars/CyberGlassNavbar";
-import FloatingTerminalNavbar from "../../library/free/navbars/FloatingTerminalNavbar";
+import CyberGlassNavbar from "../../../old version/library/navbars/CyberGlassNavbar";
+import FloatingTerminalNavbar from "../../../old version/library/navbars/FloatingTerminalNavbar";
 
-import CyberDropdownPreview from "../../library/free/navbars/CyberDropdownPreview";
-import CyberNavPillPreview from "../../library/free/navbars/CyberNavPillPreview";
+import CyberDropdownPreview from "../../../old version/library/navbars/CyberDropdownPreview";
+import CyberNavPillPreview from "../../../old version/library/navbars/CyberNavPillPreview";
 
 export const navbarsData = [
   {

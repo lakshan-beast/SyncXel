@@ -2,22 +2,22 @@ import GlassLoginForm from "../../library/free/inputs/GlassLoginForm";
 import GlassLoginForm1 from "../../library/free/inputs/f1";
 import GlassLoginForm2 from "../../library/free/inputs/f2";
 
-import CyberLoginPreview from "../../library/free/forms/CyberLoginPreview";
-import CyberSignupPreview from "../../library/free/forms/CyberSignupPreview";
+import CyberLoginPreview from "../../../old version/library/forms/CyberLoginPreview";
+import CyberSignupPreview from "../../../old version/library/forms/CyberSignupPreview";
 
-import CyberLoginForm from "../../library/free/forms/CyberLoginForm";
-import BrutalSignupForm from "../../library/free/forms/BrutalSignupForm";
+import CyberLoginForm from "../../../old version/library/forms/CyberLoginForm";
+import BrutalSignupForm from "../../../old version/library/forms/BrutalSignupForm";
 // import GlassLoginForm from "../../library/free/forms/GlassLoginForm";
-import BentoWizardForm from "../../library/free/forms/BentoWizardForm";
-import ClayLoginForm from "../../library/free/forms/ClayLoginForm";
-import RetroTerminalForm from "../../library/free/forms/RetroTerminalForm";
+import BentoWizardForm from "../../../old version/library/forms/BentoWizardForm";
+import ClayLoginForm from "../../../old version/library/forms/ClayLoginForm";
+import RetroTerminalForm from "../../../old version/library/forms/RetroTerminalForm";
 
-import CyberPaymentForm from "../../library/free/forms/CyberPaymentForm";
-import BrutalNewsletterForm from "../../library/free/forms/BrutalNewsletterForm";
-import GlassResetForm from "../../library/free/forms/GlassResetForm";
-import BentoInviteForm from "../../library/free/forms/BentoInviteForm";
-import ClayFeedbackForm from "../../library/free/forms/ClayFeedbackForm";
-import RetroTerminalExecForm from "../../library/free/forms/RetroTerminalExecForm";
+import CyberPaymentForm from "../../../old version/library/forms/CyberPaymentForm";
+import BrutalNewsletterForm from "../../../old version/library/forms/BrutalNewsletterForm";
+import GlassResetForm from "../../../old version/library/forms/GlassResetForm";
+import BentoInviteForm from "../../../old version/library/forms/BentoInviteForm";
+import ClayFeedbackForm from "../../../old version/library/forms/ClayFeedbackForm";
+import RetroTerminalExecForm from "../../../old version/library/forms/RetroTerminalExecForm";
 
 export const formsData = [
   {

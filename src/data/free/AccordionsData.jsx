@@ -1,5 +1,5 @@
-import CyberAccordionPreview from "../../library/free/accordions/CyberAccordionPreview";
-import MatrixLogAccordion from "../../library/free/accordions/MatrixLogAccordion";
+import CyberAccordionPreview from "../../../old version/library/accordions/CyberAccordionPreview";
+import MatrixLogAccordion from "../../../old version/library/accordions/MatrixLogAccordion";
 
 export const accordionsData = [
   {

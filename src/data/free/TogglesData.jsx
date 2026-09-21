@@ -22,19 +22,19 @@
 //   },
 // ];
 
-import CyberPowerSwitch from "../../library/free/toggles/CyberPowerSwitch";
-import QuantumModeToggle from "../../library/free/toggles/QuantumModeToggle";
-import CyberNeuralToggle from "../../library/free/toggles/CyberNeuralToggle";
-import BrutalPopToggle from "../../library/free/toggles/BrutalPopToggle";
-import BrutalHardSwitch from "../../library/free/toggles/BrutalHardSwitch";
-import GlassFrostToggle from "../../library/free/toggles/GlassFrostToggle";
-import GlassGlowToggle from "../../library/free/toggles/GlassGlowToggle";
-import BentoGridToggle from "../../library/free/toggles/BentoGridToggle";
-import BentoSyncSwitch from "../../library/free/toggles/BentoSyncSwitch";
-import ClaySoftToggle from "../../library/free/toggles/ClaySoftToggle";
-import ClayPillToggle from "../../library/free/toggles/ClayPillToggle";
-import RetroTerminalToggle from "../../library/free/toggles/RetroTerminalToggle";
-import RetroCrtSwitch from "../../library/free/toggles/RetroCrtSwitch";
+import CyberPowerSwitch from "../../../old version/library/toggles/CyberPowerSwitch";
+import QuantumModeToggle from "../../../old version/library/toggles/QuantumModeToggle";
+import CyberNeuralToggle from "../../../old version/library/toggles/CyberNeuralToggle";
+import BrutalPopToggle from "../../../old version/library/toggles/BrutalPopToggle";
+import BrutalHardSwitch from "../../../old version/library/toggles/BrutalHardSwitch";
+import GlassFrostToggle from "../../../old version/library/toggles/GlassFrostToggle";
+import GlassGlowToggle from "../../../old version/library/toggles/GlassGlowToggle";
+import BentoGridToggle from "../../../old version/library/toggles/BentoGridToggle";
+import BentoSyncSwitch from "../../../old version/library/toggles/BentoSyncSwitch";
+import ClaySoftToggle from "../../../old version/library/toggles/ClaySoftToggle";
+import ClayPillToggle from "../../../old version/library/toggles/ClayPillToggle";
+import RetroTerminalToggle from "../../../old version/library/toggles/RetroTerminalToggle";
+import RetroCrtSwitch from "../../../old version/library/toggles/RetroCrtSwitch";
 
 export const togglesData = [
   {

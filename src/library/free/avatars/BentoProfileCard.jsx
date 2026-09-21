@@ -9,7 +9,7 @@ export default function BentoProfileCard() {
         BN
       </div>
       <div>
-        <h4 className="text-xs font-bold">Bento_Profile</h4>
+        <h4 className="text-xs font-bold">Bento Profile</h4>
         <p className="text-[10px] text-slate-400">Workspace Owner</p>
       </div>
     </motion.div>

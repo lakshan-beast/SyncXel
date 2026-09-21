@@ -1,4 +1,4 @@
-import CssRobot from "../../library/free/animations/CssRobot";
+import CssRobot from "../../../old version/library/animations/CssRobot";
 
 export const animationsData = [
   {
