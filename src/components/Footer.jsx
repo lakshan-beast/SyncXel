@@ -15,8 +15,6 @@ import { SlGlobe } from "react-icons/sl";
 import { RxLinkedinLogo } from "react-icons/rx";
 import { HiOutlineSparkles, HiOutlineArrowUpRight } from "react-icons/hi2";
 
-// import FooterLinks from "./FooterNavLinks";
-
 // --- Framer Motion Variants ---
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -45,19 +43,20 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-slate-950 pt-0 md:pt-12 pb-10 px-4 sm:px-8 border-t border-white/20 overflow-hidden rounded-t-4xl">
+    <footer className="relative bg-slate-950 pt-0 md:pt-2 pb-5 px-2 sm:px-8 border-t border-white/20 overflow-hidden rounded-t-3xl">
       <motion.div
-        className="max-w-7xl mx-auto space-y-5 relative z-10"
+        className="max-w-7xl mx-auto space-y-3 relative z-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}>
+
         {/* 1. TOP BIG HIGH CONTRAST CTA BOX WITH ANIMATED BORDER */}
         <motion.div
           variants={itemVariants}
-          className="relative rounded-4xl p-0.5 overflow-hidden group max-w-6xl lg:max-w-4xl mx-auto my-10">
+          className="relative rounded-4xl p-0.5 overflow-hidden group max-w-6xl lg:max-w-5xl mx-auto my-10">
           {/* 🌟 1. DUWANA BORDER EFFECT (Animated Rotating Gradient) */}
-          <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,#06b6d4_0%,#6366f1_50%,#06b6d4_100%)] opacity-30 animate-[spin_6s_linear_infinite] group-hover:opacity-100 transition-opacity" />
+          <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,#06b6d4_0%,#6366f1_50%,#06b6d4_100%)] opacity-20 animate-[spin_6s_linear_infinite] group-hover:opacity-100 transition-opacity" />
 
           {/* 🌟 2. INNER CONTENT BOX (Dark Background over Border) */}
           <div className="relative rounded-[calc(1.5rem-1px)] bg-slate-950/50 backdrop-blur-xl p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 z-10">
