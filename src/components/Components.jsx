@@ -232,7 +232,7 @@ export default function HomeComponentsTeaser() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5 px-3 sm:px-0">
           {teaserItems.map((item, index) => (
             <motion.div key={item.id} variants={itemVariants}>
               <Link
@@ -249,7 +249,7 @@ export default function HomeComponentsTeaser() {
                 </div>
 
                 {/* Card Info Bar */}
-                <div className="p-5 flex items-center justify-between bg-white">
+                <div className="px-5 py-2 flex items-center justify-between bg-white">
                   <div>
                     <span className="font-mono text-[10px] text-slate-400 block mb-1">
                       // component_0{index + 1}
