@@ -213,7 +213,7 @@ export default function FaqSection() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: -50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -225,9 +225,6 @@ export default function FaqSection() {
     <section
       id="faq"
       className="py-10 px-4 sm:px-8 max-w-7xl mx-auto scroll-mt-0  lg:scroll-mt-1">
-      {/* Subtle Grid Background */}
-      {/* <div className="absolute inset-0 opacity-30 pointer-events-none bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px]" /> */}
-
       <div className="relative z-10 p-2 sm:p-8 max-w-7xl mx-auto space-y-12">
         {/* Section Header */}
         <motion.div
@@ -273,7 +270,7 @@ export default function FaqSection() {
                 variants={itemVariants}
                 className={`rounded-2xl border-2 transition-all duration-100 overflow-hidden bg-white shadow-xs ${
                   isOpen
-                    ? "border-slate-200/30 shadow-lg"
+                    ? "border-slate-200/30 shadow-lg border-none"
                     : "border-slate-200/10 hover:border-slate-200/20"
                 }`}>
                 {/* Accordion Question Header */}
