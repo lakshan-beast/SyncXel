@@ -79,21 +79,20 @@ export default function KnowledgeHubHeader({
   quickStartData,
 }) {
   return (
-    <div className="space-y-2 mb-6 font-mono">
+    <div className="space-y-2 mb-8 font-mono">
       {/* HEADER & LIVE SEARCH BAR */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border-none border-slate-200 p-6 sm:px-2 sm:py-5 rounded-2xl shadow-none relative overflow-hidden">
-        {/* Subtle Background Glow */}
-        {/* <div className="absolute -right-10 -top-10 w-40 h-40 bg-slate-100 rounded-full blur-2xl pointer-events-none" /> */}
-
         {/* Title & Expanded Rich Description */}
         <div className="space-y-2 relative z-10 max-w-2xl">
-          <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200 text-slate-500/50 text-xs font-mono shadow-xs">
-            {/* <HiSparkles className="w-3.5 h-3.5 text-slate-500" /> */}
+          <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200 text-slate-500/30 text-xs font-mono shadow-xs">
             <span>// system_knowledge_repository_v2.0</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-            Developer <span className="text-slate-500/60">Knowledge Hub</span>
+          <h2 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+            Developer{" "}
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-200 to-slate-700 block sm:inline mt-1 sm:mt-0">
+              Knowledge Hub
+            </span>
           </h2>
 
           <p className="text-slate-500/80 text-xs sm:text-sm leading-thight font-baloo">

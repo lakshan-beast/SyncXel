@@ -10,19 +10,19 @@ import { MdOutlineTipsAndUpdates } from "react-icons/md";
 
 export default function HubHeader() {
   return (
-    <div className="space-y-2 mb-8 font-mono">
+    <div className="space-y-2 mb-6 font-mono">
       {/* HEADER & TECH SYSTEM BAR (White / Light Theme) */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border-none border-slate-50 px-6 py-3 sm:px-8 sm:py-7 rounded-2xl shadow-sm relative overflow-hidden">
         {/* Left Column: Title, Expanded Description, Metadata & Back Button */}
         <div className="space-y-2 relative z-10 max-w-2xl">
           {/* Terminal Style Pill Badge */}
-          <div className="inline-flex items-center space-x-2 px-4 py-1 rounded-full bg-slate-50 border border-slate-200 text-slate-600 text-xs font-mono shadow-xs">
+          <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200 text-slate-500/50 text-xs font-mono shadow-xs">
             {/* <HiSparkles className="w-3.5 h-3.5 text-slate-700" /> */}
             <span>// next_gen_ui_ecosystem_v2.0</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-            Developer <span className="text-slate-400">Components Hub</span>
+          <h1 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            Developer <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-200 to-slate-700 block sm:inline mt-1 sm:mt-0">Components Hub</span>
           </h1>
 
           {/* Expanded Rich Description */}

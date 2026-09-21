@@ -43,9 +43,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-slate-950 pt-0 md:pt-2 pb-5 px-2 sm:px-8 border-t border-white/20 overflow-hidden rounded-t-3xl">
+    <footer className="relative bg-slate-950 pt-0 md:pt-2 pb-5 px-2 sm:px-8 border-t border-white/20 overflow-hidden rounded-t-3xl w-full">
       <motion.div
-        className="max-w-7xl mx-auto space-y-3 relative z-10"
+        className="max-w w-full mx-auto space-y-3 relative z-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
