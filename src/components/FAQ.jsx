@@ -263,7 +263,7 @@ export default function FaqSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="space-y-3 lg:space-y-1">
+          className="space-y-2 lg:space-y-1">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
 
@@ -271,10 +271,10 @@ export default function FaqSection() {
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                className={`rounded-xl border-2 transition-all duration-100 overflow-hidden bg-white shadow-xs ${
+                className={`rounded-2xl border-2 transition-all duration-100 overflow-hidden bg-white shadow-xs ${
                   isOpen
-                    ? "border-slate-200/70 shadow-lg"
-                    : "border-slate-200/20 hover:border-slate-200/50"
+                    ? "border-slate-200/30 shadow-lg"
+                    : "border-slate-200/10 hover:border-slate-200/20"
                 }`}>
                 {/* Accordion Question Header */}
                 <button
