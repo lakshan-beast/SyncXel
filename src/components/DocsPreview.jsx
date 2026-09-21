@@ -148,7 +148,7 @@ export default function DocsPreviewSection() {
                 const docs = () =&gt; view_ecosystem();
               </span>
               {/* Mobile view: Clean text */}
-              <span className="lg:hidden text-xs">View All Docs</span>
+              <span className="lg:hidden text-xs">view_ecosystem()</span>
               <HiOutlineArrowRight className="w-4 h-4 text-slate-400 group-hover:translate-x-1.5 transition-transform duration-300" />
             </motion.button>
           </Link>
