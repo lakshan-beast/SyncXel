@@ -273,8 +273,8 @@ export default function FaqSection() {
                 variants={itemVariants}
                 className={`rounded-xl border-2 transition-all duration-100 overflow-hidden bg-white shadow-xs ${
                   isOpen
-                    ? "border-slate-300/50 shadow-lg"
-                    : "border-slate-200/50 hover:border-slate-200/50"
+                    ? "border-slate-200/70 shadow-lg"
+                    : "border-slate-200/20 hover:border-slate-200/50"
                 }`}>
                 {/* Accordion Question Header */}
                 <button
@@ -313,7 +313,7 @@ export default function FaqSection() {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}>
-                      <div className="px-8 py-1 pb-3 pt-0 text-slate-500 text-base sm:text-md leading-tight border-t border-slate-100 mt-0 font-baloo">
+                      <div className="px-8 py-1 pb-3 pt-0 text-slate-500 text-xs sm:text-md leading-tight border-t border-slate-100 mt-0 font-baloo">
                         <p className="pt-4">{faq.answer}</p>
                       </div>
                     </motion.div>
