@@ -34,19 +34,25 @@ export const buttonsData = [
     description:
       "High-contrast brutalist button with hard black shadows, thick borders, and Framer Motion micro-interactions.",
     copiesCount: 340,
+    useCases: [
+      "SaaS Landing Pages (For 'Claim Free Trial' or 'Get Started' CTA)",
+      "Creator Economy / Gumroad (For digital product 'Buy Now' buttons)",
+    ],
     component: <BrutalPrimaryButton />,
-    code: `<motion.button className="px-5 py-2.5 bg-yellow-400 text-slate-950 font-black text-xs border-2 border-slate-950 rounded-lg shadow-[4px_4px_0px_0px_#020617]">CLICK_ME_NOW</motion.button>`,
+
+    code: `import { motion } from "framer-motion";\n\nexport default function BrutalPrimaryButton() {\n  return (\n    <motion.button\n      whileHover={{ x: -2, y: -2 }}\n      whileTap={{ x: 2, y: 2 }}\n      className="px-8 py-2.5 bg-yellow-400 text-slate-950 font-black font-baloo text-xs border-2 border-slate-950 rounded-lg shadow-[4px_4px_0px_0px_#020617] cursor-pointer"\n    >\n      CLick Me Now\n    </motion.button>\n  );\n}`,
   },
-  {
-    id: "brutal-action-pill",
-    title: "Neo-Brutalism Action Pill",
-    category: "Buttons & Actions",
-    description:
-      "Vibrant pink brutalist action element featuring distinct offset hard shadows and crisp typography.",
-    copiesCount: 290,
-    component: <BrutalActionPill />,
-    code: `<motion.button className="px-5 py-2.5 bg-pink-500 text-white font-black text-xs border-2 border-slate-950 rounded-lg shadow-[4px_4px_0px_0px_#020617]">EXECUTE_ACTION</motion.button>`,
-  },
+
+  // {
+  //   id: "brutal-action-pill",
+  //   title: "Neo-Brutalism Action Pill",
+  //   category: "Buttons & Actions",
+  //   description:
+  //     "Vibrant pink brutalist action element featuring distinct offset hard shadows and crisp typography.",
+  //   copiesCount: 290,
+  //   component: <BrutalActionPill />,
+  //   code: `<motion.button className="px-5 py-2.5 bg-pink-500 text-white font-black text-xs border-2 border-slate-950 rounded-lg shadow-[4px_4px_0px_0px_#020617]">EXECUTE_ACTION</motion.button>`,
+  // },
 
   {
     id: "btn-holo-shimmer",

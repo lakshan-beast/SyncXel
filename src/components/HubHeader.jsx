@@ -10,7 +10,7 @@ import { MdOutlineTipsAndUpdates } from "react-icons/md";
 
 export default function HubHeader() {
   return (
-    <div className="space-y-2 mb-6 font-mono">
+    <div className="space-y-2 mb-6 font-mono ">
       {/* HEADER & TECH SYSTEM BAR (White / Light Theme) */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border-none border-slate-50  rounded-2xl shadow-none relative overflow-hidden">
         {/* Left Column: Title, Expanded Description, Metadata & Back Button */}

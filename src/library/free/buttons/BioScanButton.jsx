@@ -10,11 +10,11 @@ export default function BioScanButton() {
       onHoverStart={() => setScanning(true)}
       onHoverEnd={() => setScanning(false)}
       whileTap={{ scale: 0.95 }}
-      className="relative px-5 py-2.5 bg-slate-900 border border-emerald-500/40 text-emerald-400 font-baloo text-xs rounded-xl overflow-hidden cursor-pointer shadow-[0_0_15px_rgba(16,185,129,0.15)]"
+      className="relative px-8 py-3 bg-slate-900 border border-emerald-500/40 text-emerald-400 font-baloo text-xs rounded-xl overflow-hidden cursor-pointer shadow-[0_0_15px_rgba(16,185,129,0.15)]"
     >
-      <span className="relative z-10 flex items-center gap-2">
-        <span className={`w-2 h-2 rounded-full ${scanning ? "bg-emerald-400 animate-ping" : "bg-emerald-600"}`} />
-        BIO_ACCESS
+      <span className="relative z-10 flex items-center gap-4">
+        <span className={`w-3 h-3 rounded-full ${scanning ? "bg-emerald-400 animate-ping" : "bg-emerald-600"}`} />
+        BIO ACCESS
       </span>
       {scanning && (
         <motion.div

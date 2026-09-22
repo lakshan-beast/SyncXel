@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 export default function HolographicShimmerButton() {
   return (
     <motion.button
-      whileHover={{ scale: 1.03, boxShadow: "0 0 25px rgba(236,72,153,0.3)" }}
+      whileHover={{ scale: 1.03, boxShadow: "0 0 25px rgba(236,72,153,0.5)" }}
       whileTap={{ scale: 0.95 }}
-      className="relative overflow-hidden px-5 py-2.5 bg-slate-950 border border-pink-500/40 text-pink-400 font-baloo text-xs rounded-xl cursor-pointer group shadow-[0_0_15px_rgba(236,72,153,0.15)]"
-    >
-      <span className="relative z-10">HOLO_SHIMMER</span>
+      className="relative overflow-hidden px-8 py-2.5 bg-slate-950 border-2 border-pink-500/40 text-pink-400 font-baloo text-sm rounded-xl cursor-pointer group shadow-[0_0_15px_rgba(236,72,153,0.15)]">
+      <span className="relative z-10">Holo Shimmer</span>
       <motion.div
         initial={{ x: "-100%" }}
         whileHover={{ x: "100%" }}

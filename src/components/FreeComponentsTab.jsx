@@ -228,7 +228,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HiEye, HiCode, HiFilter, HiX } from "react-icons/hi";
 import { TbCopyCheckFilled, TbCopyPlusFilled } from "react-icons/tb";
 
-import { MdOutlineFileDownloadDone } from "react-icons/md";
+import {
+  MdOutlineFileDownloadDone,
+  MdOutlineTipsAndUpdates,
+} from "react-icons/md";
 
 import { freeComponentsData } from "../data/free/freeIndex";
 
@@ -265,66 +268,6 @@ export default function FreeComponentsTab({
         ))}
       </div>
 
-      {/* --- MOBILE CATEGORY SELECTOR BUTTON --- */}
-      {/* <div className="md:hidden mb-6">
-        <button
-          onClick={() => setIsMobileCategoryOpen(true)}
-          className="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-ms font-bold font-baloo text-slate-200 flex items-center justify-between shadow-md">
-          <span className="flex items-center space-x-2">
-            <span>
-              Category :{" "}
-              <strong className="text-white">{activeCategory}</strong>
-            </span>
-          </span>
-          <span className="text-[10px] bg-slate-700/50 px-5.5 py-1 rounded-md text-slate-300">
-            Change ▾
-          </span>
-        </button>
-      </div> */}
-
-      {/* --- MOBILE BOTTOM SHEET / DRAWER FOR CATEGORIES --- */}
-      {/* <AnimatePresence>
-        {isMobileCategoryOpen && (
-          <div className="fixed inset-0 z-50 flex items-end justify-center bg-slate-500/80 backdrop-blur-sm md:hidden">
-            <motion.div
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="w-full max-h-[75vh] bg-slate-950 border-t border-slate-800 rounded-t-3xl p-6 overflow-y-auto space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider">
-                  // select_category
-                </h3>
-                <button
-                  onClick={() => setIsMobileCategoryOpen(false)}
-                  className="p-2 text-slate-300 hover:text-white rounded-lg bg-slate-700 border border-slate-800">
-                  <HiX className="w-5 h-5" />
-                </button>
-              </div>
-
-              <div className="grid grid-cols-1 gap-2 pt-2">
-                {categories.map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => {
-                      setActiveCategory(cat);
-                      setIsMobileCategoryOpen(false);
-                    }}
-                    className={`w-full text-left px-4 py-3 rounded-xl text-xs font-bold font-baloo transition-all border ${
-                      activeCategory === cat
-                        ? "bg-slate-300 text-slate-950 border-slate-200 shadow-md"
-                        : "bg-slate-900 text-slate-300 border-slate-800 hover:bg-slate-800"
-                    }`}>
-                    {cat}
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence> */}
-
       {/* --- MOBILE FLOATING CATEGORY BUTTON (Fixed at Bottom-Left to avoid BMC Widget on Right) --- */}
       <div className="fixed bottom-4 left-4 z-40 md:hidden">
         <motion.button
@@ -344,9 +287,7 @@ export default function FreeComponentsTab({
             Change ▾
           </span> */}
         </motion.button>
-      </div> 
-
-      
+      </div>
 
       {/* --- MOBILE TELEGRAM-STYLE FLOATING BOTTOM SHEET --- */}
       <AnimatePresence>
@@ -360,7 +301,7 @@ export default function FreeComponentsTab({
               className="w-full max-w-md max-h-[70vh] bg-slate-950 border border-slate-800 rounded-3xl p-5 overflow-y-auto space-y-4 shadow-2xl">
               <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                 <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider">
-                   select category
+                  select category
                 </h3>
                 <button
                   onClick={() => setIsMobileCategoryOpen(false)}
@@ -426,6 +367,28 @@ export default function FreeComponentsTab({
                 <p className="text-xs text-slate-500 leading-tight font-baloo pt-1">
                   {item.description}
                 </p>
+
+                {/* --- REAL WORLD USE CASES (Right Below Description) --- */}
+                {item.useCases && item.useCases.length > 0 && (
+                  <div className="mt-3 pt-2.5 border-t border-slate-200 space-y-1 bg-slate-800/10 py-2.5 px-3 rounded-xl border hover:border-slate-100/80">
+                    <div className="text-xs font-baloo font-bold text-slate-900 border-b border-slate-300 pb-2 tracking-normal mb-2 flex flex-row gap-1">
+                      <MdOutlineTipsAndUpdates className="w-5 h-5  text-slate-900 animate-pulse" />
+                      Ideal Use Cases
+                    </div>
+                    <ul className="space-y-1 px-2">
+                      {item.useCases.map((uc, idx) => (
+                        <li
+                          key={idx}
+                          className="text-[11px] text-slate-600 font-baloo flex items-start gap-1 leading-tight">
+                          <span className="text-slate-900 font-bold mt-0.5">
+                            ▸
+                          </span>
+                          <span>{uc}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               {/* Sub-Tabs & Counter Bar */}
@@ -483,7 +446,7 @@ export default function FreeComponentsTab({
                     {item.component}
                   </div>
                 ) : (
-                  <pre className="w-full h-36 overflow-auto text-xs text-slate-200 bg-slate-900 p-4 rounded-xl border border-slate-800 font-mono text-left relative z-10 shadow-inner scrollbar-thumb-slate-600 flex justify-start items-center">
+                  <pre className="w-full h-36 overflow-auto text-sm text-slate-200 bg-slate-900 p-4 rounded-xl border border-slate-800 font-mono text-left relative z-10 shadow-inner scrollbar-thumb-slate-600 flex justify-start items-start">
                     <code>{item.code}</code>
                   </pre>
                 )}
