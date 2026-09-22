@@ -514,7 +514,7 @@ export default function Footer() {
                 </span>
               </h2>
 
-              <p className="text-slate-400 text-sm md:text-base leading-relaxed font-baloo">
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-baloo">
                 Explore our production-ready UI components or hire us to build
                 your custom web product with precision.
               </p>
@@ -568,7 +568,7 @@ export default function Footer() {
               </span>
             </Link>
 
-            <p className="text-base text-slate-400 max-w-lg leading-tight font-baloo">
+            <p className="text-xs sm:text-sm text-slate-400 max-w-lg leading-tight font-baloo">
               Crafting production-ready UI components, design systems, and
               custom web applications for developers and startups globally.
             </p>
@@ -759,10 +759,10 @@ export default function Footer() {
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-4 gap-6 font-baloo px-6">
             {/* 1. Ecosystem / Products */}
             <div className="flex flex-col space-y-5">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
-                // ecosystem
+              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
+                ecosystem
               </h4>
-              <ul className="space-y-1 pl-3 text-xs text-slate-400 flex flex-col">
+              <ul className="space-y-1 pl-3 text-xs sm:text-sm text-slate-400 flex flex-col">
                 <li>
                   <Link
                     to="/components"
@@ -800,10 +800,10 @@ export default function Footer() {
 
             {/* 2. Tech Stack & Resources (External Links) */}
             <div className="flex flex-col space-y-5">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
-                // tech_stack
+              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
+                tech_stack
               </h4>
-              <ul className="space-y-1 pl-3 text-xs text-slate-400 flex flex-col">
+              <ul className="space-y-1 pl-3 text-xs sm:text-sm text-slate-400 flex flex-col">
                 <li>
                   <a
                     href="https://react.dev"
@@ -849,10 +849,10 @@ export default function Footer() {
 
             {/* 3. Agency & Services */}
             <div className="flex flex-col space-y-5">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
-                // agency
+              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
+                agency
               </h4>
-              <ul className="space-y-1 pl-3 text-xs text-slate-400 flex flex-col">
+              <ul className="space-y-1 pl-3 text-xs sm:text-sm text-slate-400 flex flex-col">
                 <li>
                   <a
                     href="/#services"
@@ -890,10 +890,10 @@ export default function Footer() {
 
             {/* 4. Governance & Legal */}
             <div className="flex flex-col space-y-5">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
-                // governance
+              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
+                governance
               </h4>
-              <ul className="space-y-1 pl-3 text-xs text-slate-400 flex flex-col">
+              <ul className="space-y-1 pl-3 text-xs sm:text-sm text-slate-400 flex flex-col">
                 <li>
                   <Link
                     to="/docs"

@@ -14,7 +14,7 @@ export default function TemplateComponentsTab({
 }) {
   return (
     <div className="max-w-7xl mx-auto space-y-8 font-mono">
-      <span className="font-mono text-slate-500/50 mb-1 block">
+      <span className="font-mono text-slate-500/50 mb-1 block text-xs">
         // design_system_ui_packs_registry
       </span>
       {/* 1. Category Filter Pills (Footers/Authentication හෝ Full Template Suite මාරු කරන්න) */}
