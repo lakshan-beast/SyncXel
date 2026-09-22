@@ -1,4 +1,3 @@
-
 // import React, { useState } from "react";
 // import { motion } from "framer-motion";
 // import { HiArrowLeft } from "react-icons/hi";
@@ -289,7 +288,6 @@
 //   );
 // }
 
-
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiArrowLeft, HiX } from "react-icons/hi";
@@ -347,7 +345,6 @@ export default function LegalPage({ tabList = defaultTabList }) {
         variants={containerVariants}
         initial="hidden"
         animate="visible">
-        
         {/* =========================================
             1. TOP HEADER & BACK BUTTON
            ========================================= */}
@@ -392,9 +389,9 @@ export default function LegalPage({ tabList = defaultTabList }) {
         {/* =========================================
             2. NAVIGATION TABS (DESKTOP & MOBILE RESPONSIVE)
            ========================================= */}
-        {tabList && tabList.length > 0 && (
+        {/* {tabList && tabList.length > 0 && (
           <>
-            {/* --- DESKTOP TABS PILLS --- */}
+            {/* --- DESKTOP TABS PILLS --- *
             <motion.div
               variants={itemVariants}
               className="hidden md:flex flex-wrap gap-2">
@@ -417,7 +414,7 @@ export default function LegalPage({ tabList = defaultTabList }) {
               })}
             </motion.div>
 
-            {/* --- MOBILE TAB SELECTOR BUTTON --- */}
+            {/* --- MOBILE TAB SELECTOR BUTTON --- 
             <motion.div variants={itemVariants} className="md:hidden">
               <button
                 onClick={() => setIsMobileTabOpen(true)}
@@ -435,7 +432,7 @@ export default function LegalPage({ tabList = defaultTabList }) {
               </button>
             </motion.div>
 
-            {/* --- MOBILE BOTTOM SHEET / DRAWER FOR TABS --- */}
+            {/* --- MOBILE BOTTOM SHEET / DRAWER FOR TABS --- *
             <AnimatePresence>
               {isMobileTabOpen && (
                 <div className="fixed inset-0 z-50 flex items-end justify-center bg-slate-500/80 backdrop-blur-sm md:hidden">
@@ -483,6 +480,108 @@ export default function LegalPage({ tabList = defaultTabList }) {
               )}
             </AnimatePresence>
           </>
+        )} */}
+
+        {/* =========================================
+            2. NAVIGATION TABS (DESKTOP & MOBILE RESPONSIVE)
+           ========================================= */}
+        {tabList && tabList.length > 0 && (
+          <>
+            {/* --- DESKTOP TABS PILLS --- */}
+            <motion.div
+              variants={itemVariants}
+              className="hidden md:flex flex-wrap gap-2">
+              {tabList.map((tab) => {
+                const Icon = tab.icon;
+                const isActive = activeTab === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 cursor-pointer ${
+                      isActive
+                        ? "bg-slate-950 text-white border border-slate-950 shadow-md scale-105"
+                        : "text-slate-600 hover:text-slate-950 hover:bg-slate-100 border border-slate-200/60 bg-white"
+                    }`}>
+                    {Icon && <Icon className="w-4 h-4" />}
+                    <span>{tab.label}</span>
+                  </button>
+                );
+              })}
+            </motion.div>
+
+            {/* --- MOBILE FLOATING TAB SELECTOR BUTTON (Fixed at Bottom-Left) --- */}
+            <div className="fixed bottom-3 left-4 z-40 md:hidden">
+              <motion.button
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setIsMobileTabOpen(true)}
+                className="px-6 py-5 bg-slate-950/95 backdrop-blur-md border border-slate-700 rounded-4xl text-xs font-bold font-baloo text-slate-200 flex items-center space-x-3 shadow-2xl cursor-pointer">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                <span className="flex items-center space-x-1.5">
+                  <span className="text-slate-400">Section:</span>
+                  <strong className="text-white max-w-32 truncate flex items-center gap-1.5">
+                    {ActiveIcon && (
+                      <ActiveIcon className="w-3.5 h-3.5 text-slate-400" />
+                    )}
+                    {activeTabObj.label}
+                  </strong>
+                </span>
+                <span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded-lg text-slate-300 ml-1 border border-slate-700">
+                  Change ▾
+                </span>
+              </motion.button>
+            </div>
+
+            {/* --- MOBILE TELEGRAM-STYLE FLOATING BOTTOM SHEET FOR TABS --- */}
+            <AnimatePresence>
+              {isMobileTabOpen && (
+                <div className="fixed inset-0 z-50 flex items-end justify-center bg-slate-500/80 backdrop-blur-sm md:hidden p-4 pb-6">
+                  <motion.div
+                    initial={{ y: "100%", opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: "100%", opacity: 0 }}
+                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                    className="w-full max-w-md max-h-[70vh] bg-slate-950 border border-slate-800 rounded-3xl p-5 overflow-y-auto space-y-4 shadow-2xl">
+                    <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                      <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider">
+                        // select_legal_section
+                      </h3>
+                      <button
+                        onClick={() => setIsMobileTabOpen(false)}
+                        className="p-2 text-slate-300 hover:text-white rounded-xl bg-slate-800 border border-slate-700 cursor-pointer">
+                        <HiX className="w-5 h-5" />
+                      </button>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-2 pt-1">
+                      {tabList.map((tab) => {
+                        const Icon = tab.icon;
+                        const isActive = activeTab === tab.id;
+                        return (
+                          <button
+                            key={tab.id}
+                            onClick={() => {
+                              setActiveTab(tab.id);
+                              setIsMobileTabOpen(false);
+                            }}
+                            className={`w-full text-left px-4 py-3 rounded-2xl text-xs font-bold font-baloo transition-all border flex items-center gap-3 cursor-pointer ${
+                              isActive
+                                ? "bg-slate-300 text-slate-950 border-slate-200 shadow-md"
+                                : "bg-slate-900 text-slate-300 border-slate-800 hover:bg-slate-800"
+                            }`}>
+                            {Icon && <Icon className="w-4 h-4" />}
+                            <span>{tab.label}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                </div>
+              )}
+            </AnimatePresence>
+          </>
         )}
 
         {/* =========================================
@@ -492,7 +591,6 @@ export default function LegalPage({ tabList = defaultTabList }) {
           variants={itemVariants}
           className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm space-y-8 relative overflow-hidden text-slate-700">
           <div className="text-sm leading-relaxed text-slate-600 font-sans">
-            
             {/* ================= PRIVACY POLICY ================= */}
             {activeTab === "privacy" && (
               <div className="space-y-6">
