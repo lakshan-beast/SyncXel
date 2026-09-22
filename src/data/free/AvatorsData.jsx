@@ -15,16 +15,16 @@ import RetroTerminalUserCard from "../../library/free/avatars/RetroTerminalUserC
 import RetroCrtAgentBadge from "../../library/free/avatars/RetroCrtAgentBadge";
 
 export const avatarsData = [
-  {
-    id: "avatar-cyber-agent",
-    title: "Cyber Agent Avatar Ring",
-    category: "Avatars & Profiles",
-    description:
-      "Futuristic user profile badge with rotating dashed neon ring and live status pulse indicator.",
-    copiesCount: 295,
-    component: <CyberAvatarPreview />,
-    code: `<div className="w-72 p-4 bg-slate-950 border border-cyan-500/40 rounded-xl font-baloo flex items-center gap-4 text-white">...</div>`,
-  },
+  // {
+  //   id: "avatar-cyber-agent",
+  //   title: "Cyber Agent Avatar Ring",
+  //   category: "Avatars & Profiles",
+  //   description:
+  //     "Futuristic user profile badge with rotating dashed neon ring and live status pulse indicator.",
+  //   copiesCount: 295,
+  //   component: <CyberAvatarPreview />,
+  //   code: `<div className="w-72 p-4 bg-slate-950 border border-cyan-500/40 rounded-xl font-baloo flex items-center gap-4 text-white">...</div>`,
+  // },
   {
     id: "avatar-cyber-hexa",
     title: "Cyberpunk Hexagonal Profile",

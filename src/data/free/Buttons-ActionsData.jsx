@@ -227,16 +227,16 @@ export const buttonsData = [
     component: <NeonButton />,
     code: `<motion.button whileHover={{ scale: 1.02, boxShadow: "0 0 25px rgba(34,211,238,0.4)" }} whileTap={{ scale: 0.95 }} className="px-5 py-2.5 bg-slate-950 border border-cyan-500/40 text-cyan-400 text-sm font-medium rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.15)] cursor-pointer">Neon Glow</motion.button>`,
   },
-  {
-    id: "toggle-switch-cyan",
-    title: "Cyan Glow Toggle Switch",
-    category: "Buttons & Actions",
-    description:
-      "Modern layout-animated toggle switch with glowing cyan neon thumb state.",
-    copiesCount: 192,
-    component: <ToggleSwitch />,
-    code: `// Utilizes Framer Motion layout animation for fluid toggle behavior.`,
-  },
+  // {
+  //   id: "toggle-switch-cyan",
+  //   title: "Cyan Glow Toggle Switch",
+  //   category: "Buttons & Actions",
+  //   description:
+  //     "Modern layout-animated toggle switch with glowing cyan neon thumb state.",
+  //   copiesCount: 192,
+  //   component: <ToggleSwitch />,
+  //   code: `// Utilizes Framer Motion layout animation for fluid toggle behavior.`,
+  // },
   {
     id: "btn-gradient-border",
     title: "Gradient Border Button",

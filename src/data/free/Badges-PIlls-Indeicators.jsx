@@ -25,16 +25,16 @@ export const badgesData = [
     component: <LiveStatusBadge />,
     code: `<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-950 border border-emerald-500/40 rounded-full font-baloo text-[11px] text-emerald-400"><span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />SYS_ONLINE</div>`,
   },
-  {
-    id: "badge-cyber-security",
-    title: "Cyber Security Clearance Badge",
-    category: "Badges & Status Indicators",
-    description:
-      "High-security tier badge with hover scale effect and blinking matrix cursor.",
-    copiesCount: 340,
-    component: <CyberSecurityBadge />,
-    code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-slate-950 border border-cyan-500/40 rounded-xl font-baloo text-[11px] text-cyan-300">SECURE_L3</div>`,
-  },
+  // {
+  //   id: "badge-cyber-security",
+  //   title: "Cyber Security Clearance Badge",
+  //   category: "Badges & Status Indicators",
+  //   description:
+  //     "High-security tier badge with hover scale effect and blinking matrix cursor.",
+  //   copiesCount: 340,
+  //   component: <CyberSecurityBadge />,
+  //   code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-slate-950 border border-cyan-500/40 rounded-xl font-baloo text-[11px] text-cyan-300">SECURE_L3</div>`,
+  // },
   {
     id: "badge-brutal-alert",
     title: "Neo-Brutalism Alert Badge",
@@ -45,26 +45,26 @@ export const badgesData = [
     component: <BrutalAlertBadge />,
     code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-yellow-300 border-2 border-slate-950 rounded-xl font-baloo text-[11px] text-slate-950 font-black shadow-[3px_3px_0px_0px_#020617]">SYSTEM_ALERT</div>`,
   },
-  {
-    id: "badge-brutal-rank",
-    title: "Neo-Brutalism Elite Rank",
-    category: "Badges & Status Indicators",
-    description:
-      "Vibrant pink brutalist rank badge featuring hard directional shadows.",
-    copiesCount: 280,
-    component: <BrutalRankBadge />,
-    code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-pink-400 border-2 border-slate-950 rounded-xl font-baloo text-[11px] text-slate-950 font-black shadow-[3px_3px_0px_0px_#020617]">RANK_ELITE</div>`,
-  },
-  {
-    id: "badge-glass-frost",
-    title: "Glassmorphism Frost Badge",
-    category: "Badges & Status Indicators",
-    description:
-      "Frosted translucent glass overlay badge with crisp cyan aura lighting.",
-    copiesCount: 350,
-    component: <GlassFrostBadge />,
-    code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl font-baloo text-[11px] text-cyan-200">FROST_SECURE</div>`,
-  },
+  // {
+  //   id: "badge-brutal-rank",
+  //   title: "Neo-Brutalism Elite Rank",
+  //   category: "Badges & Status Indicators",
+  //   description:
+  //     "Vibrant pink brutalist rank badge featuring hard directional shadows.",
+  //   copiesCount: 280,
+  //   component: <BrutalRankBadge />,
+  //   code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-pink-400 border-2 border-slate-950 rounded-xl font-baloo text-[11px] text-slate-950 font-black shadow-[3px_3px_0px_0px_#020617]">RANK_ELITE</div>`,
+  // },
+  // {
+  //   id: "badge-glass-frost",
+  //   title: "Glassmorphism Frost Badge",
+  //   category: "Badges & Status Indicators",
+  //   description:
+  //     "Frosted translucent glass overlay badge with crisp cyan aura lighting.",
+  //   copiesCount: 350,
+  //   component: <GlassFrostBadge />,
+  //   code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl font-baloo text-[11px] text-cyan-200">FROST_SECURE</div>`,
+  // },
   {
     id: "badge-glass-neon",
     title: "Glassmorphism Neon Sync",
@@ -115,16 +115,16 @@ export const badgesData = [
     component: <ClayPillBadge />,
     code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-slate-900 rounded-full shadow-[4px_4px_8px_#020617] border border-slate-800 font-baloo text-[11px] text-cyan-300">VOLUMETRIC_ID</div>`,
   },
-  {
-    id: "badge-retro-terminal",
-    title: "Retro Terminal Status Badge",
-    category: "Badges & Status Indicators",
-    description:
-      "Green phosphor monospaced terminal environment status badge console.",
-    copiesCount: 275,
-    component: <RetroTerminalBadge />,
-    code: `<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-black border-2 border-green-500 rounded font-mono text-[11px] text-green-400">SYS_TERMINAL</div>`,
-  },
+  // {
+  //   id: "badge-retro-terminal",
+  //   title: "Retro Terminal Status Badge",
+  //   category: "Badges & Status Indicators",
+  //   description:
+  //     "Green phosphor monospaced terminal environment status badge console.",
+  //   copiesCount: 275,
+  //   component: <RetroTerminalBadge />,
+  //   code: `<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-black border-2 border-green-500 rounded font-mono text-[11px] text-green-400">SYS_TERMINAL</div>`,
+  // },
   {
     id: "badge-retro-crt",
     title: "Retro CRT Active Badge",
@@ -134,16 +134,16 @@ export const badgesData = [
     component: <RetroCrtBadge />,
     code: `<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-black border-2 border-green-500 rounded font-mono text-[11px] text-green-300">CRT_ACTIVE</div>`,
   },
-  {
-    id: "badge-live-status",
-    title: "Live Status Ping Badge",
-    category: "Badges & Status Indicators",
-    description:
-      "Pulsing system online status badge with glowing emerald indicators.",
-    copiesCount: 290,
-    component: <LiveStatusBadge />,
-    code: `<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-950 border border-emerald-500/40 rounded-full font-baloo text-[11px] text-emerald-400"><span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />SYS_ONLINE</div>`,
-  },
+  // {
+  //   id: "badge-live-status",
+  //   title: "Live Status Ping Badge",
+  //   category: "Badges & Status Indicators",
+  //   description:
+  //     "Pulsing system online status badge with glowing emerald indicators.",
+  //   copiesCount: 290,
+  //   component: <LiveStatusBadge />,
+  //   code: `<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-950 border border-emerald-500/40 rounded-full font-baloo text-[11px] text-emerald-400"><span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />SYS_ONLINE</div>`,
+  // },
   {
     id: "badge-cyber-security",
     title: "Cyber Security Clearance Badge",
