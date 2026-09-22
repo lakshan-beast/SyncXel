@@ -332,7 +332,7 @@ export default function Hero() {
               className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 hover:border-slate-300 text-xs text-slate-700 transition-all shadow-xs group w-fit">
               <span className="w-2 h-2 rounded-full bg-slate-900 animate-ping shrink-0" />
               <span className="font-semibold text-slate-900">SyncXel v2.0</span>
-              <span className="text-slate-500 hidden sm:inline">
+              <span className="text-slate-500 md:hidden sm:inline">
                 • Free UI, Paid Templates & Dev Guides
               </span>
               <HiOutlineArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-slate-600" />
