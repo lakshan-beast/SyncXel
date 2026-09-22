@@ -756,13 +756,13 @@ export default function Footer() {
           </div> */}
 
           {/* Links Columns Grid */}
-          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-6 font-baloo">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-4 gap-6 font-baloo px-6">
             {/* 1. Ecosystem / Products */}
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-5">
               <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
                 // ecosystem
               </h4>
-              <ul className="space-y-2 text-xs text-slate-400 flex flex-col">
+              <ul className="space-y-1 pl-3 text-xs text-slate-400 flex flex-col">
                 <li>
                   <Link
                     to="/components"
@@ -799,11 +799,11 @@ export default function Footer() {
             </div>
 
             {/* 2. Tech Stack & Resources (External Links) */}
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-5">
               <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
                 // tech_stack
               </h4>
-              <ul className="space-y-2 text-xs text-slate-400 flex flex-col">
+              <ul className="space-y-1 pl-3 text-xs text-slate-400 flex flex-col">
                 <li>
                   <a
                     href="https://react.dev"
@@ -848,11 +848,11 @@ export default function Footer() {
             </div>
 
             {/* 3. Agency & Services */}
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-5">
               <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
                 // agency
               </h4>
-              <ul className="space-y-2 text-xs text-slate-400 flex flex-col">
+              <ul className="space-y-1 pl-3 text-xs text-slate-400 flex flex-col">
                 <li>
                   <a
                     href="/#services"
@@ -889,11 +889,11 @@ export default function Footer() {
             </div>
 
             {/* 4. Governance & Legal */}
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-5">
               <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
                 // governance
               </h4>
-              <ul className="space-y-2 text-xs text-slate-400 flex flex-col">
+              <ul className="space-y-1 pl-3 text-xs text-slate-400 flex flex-col">
                 <li>
                   <Link
                     to="/docs"
