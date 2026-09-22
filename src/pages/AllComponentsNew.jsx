@@ -73,7 +73,7 @@ export default function ComponentsHubPage() {
       <HubHeader />
 
       {/* Main Tabs Switcher */}
-      <span className="font-mono text-slate-500/50 mb-0 block">
+      <span className="font-mono text-slate-500/50 mb-1 block text-xs">
         // primary_ecosystem_segment_selector
       </span>
       <HubTabs mainTab={mainTab} setMainTab={setMainTab} />
