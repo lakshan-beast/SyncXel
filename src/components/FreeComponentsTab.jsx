@@ -223,7 +223,6 @@
 //   );
 // }
 
-
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiEye, HiCode, HiFilter, HiX } from "react-icons/hi";
@@ -247,7 +246,7 @@ export default function FreeComponentsTab({
 
   return (
     <div className="font-mono">
-      <span className="font-mono text-slate-500/50 mb-1 block">
+      <span className="font-mono text-slate-500/50 mb-1 text-xs hidden md:block">
         // modular_taxonomy_category_filters
       </span>
       {/* --- DESKTOP CATEGORIES PILLS --- */}
@@ -267,7 +266,7 @@ export default function FreeComponentsTab({
       </div>
 
       {/* --- MOBILE CATEGORY SELECTOR BUTTON --- */}
-      <div className="md:hidden mb-6">
+      {/* <div className="md:hidden mb-6">
         <button
           onClick={() => setIsMobileCategoryOpen(true)}
           className="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-xl text-ms font-bold font-baloo text-slate-200 flex items-center justify-between shadow-md">
@@ -281,10 +280,10 @@ export default function FreeComponentsTab({
             Change ▾
           </span>
         </button>
-      </div>
+      </div> */}
 
       {/* --- MOBILE BOTTOM SHEET / DRAWER FOR CATEGORIES --- */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {isMobileCategoryOpen && (
           <div className="fixed inset-0 z-50 flex items-end justify-center bg-slate-500/80 backdrop-blur-sm md:hidden">
             <motion.div
@@ -324,6 +323,72 @@ export default function FreeComponentsTab({
             </motion.div>
           </div>
         )}
+      </AnimatePresence> */}
+
+      {/* --- MOBILE FLOATING CATEGORY BUTTON (Fixed at Bottom-Left to avoid BMC Widget on Right) --- */}
+      <div className="fixed bottom-3 left-4 z-40 md:hidden">
+        <motion.button
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setIsMobileCategoryOpen(true)}
+          className="px-6 py-5 bg-slate-950/95 backdrop-blur-md border border-slate-700 rounded-4xl text-xs font-bold font-baloo text-slate-200 flex items-center space-x-12.5 shadow-2xl cursor-pointer">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+          <span className="flex items-center space-x-1">
+            <span className="text-slate-400">Category:</span>
+            <strong className="text-white max-w-32 truncate">
+              {activeCategory}
+            </strong>
+          </span>
+          <span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded-lg text-slate-300 ml-1 border border-slate-700">
+            Change ▾
+          </span>
+        </motion.button>
+      </div> 
+
+      
+
+      {/* --- MOBILE TELEGRAM-STYLE FLOATING BOTTOM SHEET --- */}
+      <AnimatePresence>
+        {isMobileCategoryOpen && (
+          <div className="fixed inset-0 z-50 flex items-end justify-center bg-slate-500/80 backdrop-blur-sm md:hidden p-4 pb-6">
+            <motion.div
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "100%", opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="w-full max-w-md max-h-[70vh] bg-slate-950 border border-slate-800 rounded-3xl p-5 overflow-y-auto space-y-4 shadow-2xl">
+              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider">
+                   select_category
+                </h3>
+                <button
+                  onClick={() => setIsMobileCategoryOpen(false)}
+                  className="p-2 text-slate-300 hover:text-white rounded-xl bg-slate-800 border border-slate-700 cursor-pointer">
+                  <HiX className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="grid grid-cols-1 gap-2 pt-1">
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => {
+                      setActiveCategory(cat);
+                      setIsMobileCategoryOpen(false);
+                    }}
+                    className={`w-full text-left px-4 py-3 rounded-2xl text-xs font-bold font-baloo transition-all border cursor-pointer ${
+                      activeCategory === cat
+                        ? "bg-slate-300 text-slate-950 border-slate-200 shadow-md"
+                        : "bg-slate-900 text-slate-300 border-slate-800 hover:bg-slate-800"
+                    }`}>
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        )}
       </AnimatePresence>
 
       <span className="font-mono text-slate-500/50 mb-1 block text-xs">
@@ -331,7 +396,7 @@ export default function FreeComponentsTab({
       </span>
 
       {/* --- COMPONENT CARDS GRID --- */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-3 lg:gap-x-7 lg:gap-y-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-8 lg:gap-x-7 lg:gap-y-10 px-5 md:px-0">
         {filteredFreeComponents.map((item) => {
           const currentTab = cardTabs[item.id] || "preview";
           const isCopied = copiedId === item.id;
@@ -343,7 +408,6 @@ export default function FreeComponentsTab({
               animate={{ opacity: 1, y: 0 }}
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
               className="relative group rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between">
-              
               {/* Card Header */}
               <div className="px-5 py-4 pb-1 bg-white border-none">
                 <div className="flex items-start justify-between gap-3 mb-1">
@@ -390,9 +454,18 @@ export default function FreeComponentsTab({
                         ? "bg-white text-slate-950 font-bold shadow-xs"
                         : "text-slate-600 hover:text-slate-900"
                     }`}
-                    title={window.innerWidth < 768 ? "Code view available on desktop only" : ""}>
+                    title={
+                      window.innerWidth < 768
+                        ? "Code view available on desktop only"
+                        : ""
+                    }>
                     <HiCode className="w-4 h-4" />
-                    <span>Code <span className="text-[9px] text-slate-400 md:hidden">(Desktop)</span></span>
+                    <span>
+                      Code{" "}
+                      <span className="text-[9px] text-slate-400 md:hidden">
+                        (Desktop)
+                      </span>
+                    </span>
                   </button>
                 </div>
 
@@ -419,7 +492,7 @@ export default function FreeComponentsTab({
               {/* Footer Action */}
               <div className="px-4 py-2 bg-white flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="font-medium text-slate-600 font-mono">
+                  <span className="font-medium text-slate-400 font-baloo text-xs">
                     // production_ready
                   </span>
                   <span className="w-2 h-2 rounded-full bg-slate-900 animate-ping" />
@@ -429,10 +502,10 @@ export default function FreeComponentsTab({
                 <motion.button
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleCopy(item.id, item.code)}
-                  className={`hidden sm:flex px-4 py-2 rounded-md text-xs font-baloo font-bold transition-all cursor-pointer items-center space-x-2 shadow-sm ${
+                  className={`hidden sm:flex px-4 py-2  text-xs font-baloo font-bold transition-all duration-300 cursor-pointer items-center space-x-2 shadow-sm ${
                     isCopied
-                      ? "bg-emerald-600/60 text-white"
-                      : "bg-slate-800/50 hover:bg-slate-800 text-white"
+                      ? "bg-emerald-600/60 text-white rounded-3xl"
+                      : "bg-slate-800/50 hover:bg-slate-800 text-white rounded-md"
                   }`}>
                   {isCopied ? (
                     <>
@@ -447,7 +520,6 @@ export default function FreeComponentsTab({
                   )}
                 </motion.button>
               </div>
-
             </motion.div>
           );
         })}
