@@ -250,7 +250,7 @@ export default function TechStack() {
   const duplicatedTech = [...technologies, ...technologies, ...technologies];
 
   return (
-    <section className="pt-12 overflow-hidden relative border-none">
+    <section className="pt-6 lg:pt-12 overflow-hidden relative border-none">
       {/* Animation Styles for Marquee */}
       <style>
         {`
@@ -281,7 +281,7 @@ export default function TechStack() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-left mb-6">
+          className="text-left mb-2">
           <span className="font-mono text-xs text-slate-500/50 block mb-0">
             // core_technologies_&_stack
           </span>
