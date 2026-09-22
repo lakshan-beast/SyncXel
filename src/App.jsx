@@ -28,7 +28,7 @@ export default function App() {
         <Navbar />
 
         {/* 🌟 Optimized Responsive Padding-Top */}
-        <main className="pt-6 sm:pt-30.5 md:pt-0 lg:pt-10.5 xl:pt-12 grow">
+        <main className="pt-5.5 sm:pt-30.5 md:pt-0 lg:pt-10.5 xl:pt-12 grow">
           <Routes>
             {/* 1. HOME PAGE ROUTE (/) */}
             <Route

@@ -311,7 +311,7 @@ const itemVariants = {
 
 export default function Hero() {
   return (
-    <section className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex flex-col justify-center bg-white text-slate-900">
+    <section className="relative pt-26 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex flex-col justify-center bg-white text-slate-900">
       {/* Main Content Container */}
       <motion.div
         className="max-w-7xl mx-auto space-y-6 sm:space-y-18 lg:space-y-28 relative z-10 w-full"
