@@ -12,11 +12,11 @@ export default function HubHeader() {
   return (
     <div className="space-y-2 mb-6 font-mono">
       {/* HEADER & TECH SYSTEM BAR (White / Light Theme) */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border-none border-slate-50 px-6 py-3 sm:px-0 sm:py-0 rounded-2xl shadow-none relative overflow-hidden">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border-none border-slate-50  rounded-2xl shadow-none relative overflow-hidden">
         {/* Left Column: Title, Expanded Description, Metadata & Back Button */}
         <div className="space-y-2 relative z-10 max-w-2xl">
           {/* Terminal Style Pill Badge */}
-          <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200 text-slate-500/50 text-xs font-mono shadow-xs">
+          <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200/50 text-slate-500/50 text-xs font-mono shadow-xs">
             {/* <HiSparkles className="w-3.5 h-3.5 text-slate-700" /> */}
             <span>// next_gen_ui_ecosystem_v2.0</span>
           </div>
@@ -39,7 +39,7 @@ export default function HubHeader() {
           <div className="flex flex-wrap items-center gap-1 pt-1">
             {/* Last Updated */}
             <div className="text-xs text-slate-500 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-200 flex items-center gap-2 shadow-xs font-baloo">
-              <MdOutlineTipsAndUpdates className="w-5 h-5  text-slate-900 animate-bounce" />
+              <MdOutlineTipsAndUpdates className="w-5 h-5  text-slate-900 animate-pulse" />
               <span>
                 Last Updated :{" "}
                 <strong className="text-slate-900">September 2026</strong>
@@ -60,7 +60,7 @@ export default function HubHeader() {
             href="/"
             className="py-2.5 px-5 bg-slate-900 border border-slate-700 hover:bg-slate-800 rounded-xl transition-all text-slate-200 hover:text-white flex items-center gap-2 space-x-2 text-xs font-baloo font-medium cursor-pointer w-fit shadow-xs hover:gap-3">
             <HiArrowLeft className="w-4 h-4" />
-            <span>back-to_home()</span>
+            <span>back_to_home()</span>
           </a>
         </div>
 
