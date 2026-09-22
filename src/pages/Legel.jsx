@@ -511,16 +511,16 @@ export default function LegalPage({ tabList = defaultTabList }) {
             </motion.div>
 
             {/* --- MOBILE FLOATING TAB SELECTOR BUTTON (Fixed at Bottom-Left) --- */}
-            <div className="fixed bottom-3 left-4 z-40 md:hidden">
+            <div className="fixed bottom-4 left-4 z-40 md:hidden">
               <motion.button
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsMobileTabOpen(true)}
-                className="px-6 py-5 bg-slate-950/95 backdrop-blur-md border border-slate-700 rounded-4xl text-xs font-bold font-baloo text-slate-200 flex items-center space-x-3 shadow-2xl cursor-pointer">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                <span className="flex items-center space-x-1.5">
-                  <span className="text-slate-400">Section:</span>
+                className="px-5 py-5 bg-slate-950/95 backdrop-blur-md border border-slate-700 rounded-4xl text-xs font-bold font-baloo text-slate-200 flex items-center space-x-3 shadow-2xl cursor-pointer">
+                <span className="w-3 h-3 mr-3 rounded-full bg-emerald-400 animate-ping" />
+                <span className="flex items-center space-x-3">
+                  <span className="text-slate-400">Section : </span>
                   <strong className="text-white max-w-32 truncate flex items-center gap-1.5">
                     {ActiveIcon && (
                       <ActiveIcon className="w-3.5 h-3.5 text-slate-400" />
@@ -528,9 +528,9 @@ export default function LegalPage({ tabList = defaultTabList }) {
                     {activeTabObj.label}
                   </strong>
                 </span>
-                <span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded-lg text-slate-300 ml-1 border border-slate-700">
+                {/* <span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded-lg text-slate-300 ml-1 border border-slate-700">
                   Change ▾
-                </span>
+                </span> */}
               </motion.button>
             </div>
 
@@ -546,7 +546,7 @@ export default function LegalPage({ tabList = defaultTabList }) {
                     className="w-full max-w-md max-h-[70vh] bg-slate-950 border border-slate-800 rounded-3xl p-5 overflow-y-auto space-y-4 shadow-2xl">
                     <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                       <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider">
-                        // select_legal_section
+                       select legal section
                       </h3>
                       <button
                         onClick={() => setIsMobileTabOpen(false)}
