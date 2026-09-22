@@ -107,7 +107,7 @@ export default function KnowledgeHubHeader({
             href="/"
             className="py-2.5 px-5 bg-slate-900 border border-slate-700 hover:bg-slate-800 rounded-xl transition-all text-slate-300 hover:text-white flex items-center gap-2 space-x-2 text-xs font-medium cursor-pointer w-fit group group-hover:gap-3">
             <HiArrowLeft className="w-4 h-4" />
-            <span>Back to Home</span>
+            <span>back_to_home()</span>
           </a>
         </div>
 
