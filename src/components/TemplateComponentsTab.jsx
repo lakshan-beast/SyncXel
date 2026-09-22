@@ -13,15 +13,18 @@ export default function TemplateComponentsTab({
   componentsData = [], // 👈 මෙතනින් UI Packs හෝ Full Templates ඩේටා ඩිනමික් විදිහට ලෝඩ් වෙයි
 }) {
   return (
-    <div className="max-w-6xl mx-auto space-y-8 font-mono">
+    <div className="max-w-7xl mx-auto space-y-8 font-mono">
+      <span className="font-mono text-slate-500/50 mb-1 block">
+        // design_system_ui_packs_registry
+      </span>
       {/* 1. Category Filter Pills (Footers/Authentication හෝ Full Template Suite මාරු කරන්න) */}
       {categories.length > 1 && (
-        <div className="flex flex-wrap gap-2 justify-start pt-2">
+        <div className="flex flex-wrap gap-2 justify-start">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-xl text-xs font-baloo font-bold transition-all cursor-pointer ${
                 activeCategory === cat
                   ? "bg-white text-slate-950 shadow-md"
                   : "bg-slate-900 border border-slate-800 text-slate-400 hover:text-white"
@@ -83,7 +86,7 @@ export default function TemplateComponentsTab({
                   </div>
 
                   {/* Item Details & Actions */}
-                  <div className="px-8 py-2 flex flex-col justify-between">
+                  <div className="px-4 lg:px-8 py-2 flex flex-col justify-between">
                     <div>
                       {/* Category Badge */}
                       <div className="flex items-center justify-between mb-1">
@@ -110,7 +113,9 @@ export default function TemplateComponentsTab({
                         </div>
                         <div className="flex items-center space-x-2.5 text-xs text-slate-700">
                           <span className="w-1.5 h-1.5 rounded-full bg-slate-900 shrink-0"></span>
-                          <span className="text-slate-500/70">Tailwind CSS & Framer Motion integrated</span>
+                          <span className="text-slate-500/70">
+                            Tailwind CSS & Framer Motion integrated
+                          </span>
                         </div>
                         <div className="flex items-center space-x-2.5 text-xs text-slate-700">
                           <span className="w-1.5 h-1.5 rounded-full bg-slate-900 shrink-0"></span>
@@ -125,7 +130,7 @@ export default function TemplateComponentsTab({
                         <div className="flex items-start space-x-2.5 text-xs text-slate-700">
                           <HiBookOpen className="w-4 h-4 text-slate-900 shrink-0 mt-0.5" />
                           <div>
-                            <strong className="text-slate-900 block mb-0.5 font-mono">
+                            <strong className="text-slate-700 block mb-0.5 font-mono">
                               // a_z_documentation_included:
                             </strong>
                             <span className="font-baloo text-slate-600">
@@ -144,18 +149,19 @@ export default function TemplateComponentsTab({
                     </div>
 
                     {/* Actions & Price */}
-                    <div className="space-y-4 pt-4 border-t border-slate-200">
+                    <div className="space-y-2 pt-4 border-t border-slate-200">
                       {/* LKR Price conversion helper tag display */}
                       <div className="flex items-center justify-between text-xs font-baloo text-slate-600 px-1">
                         <span>Estimated Local Rate:</span>
-                        <span className="font-bold text-slate-900 text-xs md:text-3xl">
+                        <span className="font-bold text-slate-900 text-base md:text-3xl">
                           {item.price} /{" "}
-
-                          <span className="font-baloo text-slate-500 text-xs md:text-xl">rs.
-                          {Math.round(
-                            (parseFloat(item.price.replace(/[^0-9.]/g, "")) ||
-                              0) * 305,
-                          ).toLocaleString()}</span>
+                          <span className="font-baloo text-slate-500 text-base md:text-xl">
+                            rs.
+                            {Math.round(
+                              (parseFloat(item.price.replace(/[^0-9.]/g, "")) ||
+                                0) * 305,
+                            ).toLocaleString()}
+                          </span>
                         </span>
                       </div>
 
@@ -165,7 +171,7 @@ export default function TemplateComponentsTab({
                             href={item.demoUrl}
                             target="_blank"
                             rel="noreferrer"
-                            className="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-baloo font-medium flex items-center space-x-1.5 transition-all cursor-pointer border border-slate-200 shadow-xs">
+                            className="px-4 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-baloo font-medium flex items-center space-x-1.5 transition-all cursor-pointer border border-slate-200 shadow-xs">
                             <HiExternalLink className="w-5 h-5" />
                             <span>Live Demo</span>
                           </a>
@@ -177,7 +183,12 @@ export default function TemplateComponentsTab({
                             rel="noreferrer"
                             className="flex-1 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-exo font-bold flex items-center justify-center space-x-2 transition-all shadow-sm cursor-pointer">
                             <HiShoppingCart className="w-4 h-4" />
-                            <span>Get Pack <span className="text-2xl ml-3">{item.price}</span></span>
+                            <span className="py-0">
+                              Get Pack{" "}
+                              <span className="text-2xl ml-3">
+                                {item.price}
+                              </span>
+                            </span>
                           </a>
                         )}
                       </div>
@@ -188,7 +199,7 @@ export default function TemplateComponentsTab({
                         target="_blank"
                         rel="noreferrer"
                         className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 hover:text-slate-900 rounded-xl text-xs font-baloo font-medium flex items-center justify-center space-x-2 transition-all cursor-pointer shadow-xs">
-                        <HiChatAlt2 className="w-5 h-5 text-slate-900" />
+                        <HiChatAlt2 className="w-6 h-7 text-slate-900" />
                         <span>Customize "{item.title}" on Telegram</span>
                       </a>
                     </div>
