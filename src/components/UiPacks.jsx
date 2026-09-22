@@ -14,9 +14,10 @@ export default function UiPacksTab({
   setActiveCategory = () => {},
 }) {
   return (
-    <div className="max-w-7xl mx-auto py-3 px-4">
-      <h2 className="text-3xl font-bold text-white mb-8">{title}</h2>
-
+    <div className="max-w-7xl mx-auto">
+      <span className="font-mono text-slate-500/50 mb-1 block">
+        // design_system_ui_packs_registry
+      </span>
       {/* Categories Filter (අවශ්‍ය නම් පමණක් පෙන්වීමට) */}
       {categories.length > 1 && (
         <div className="flex flex-wrap justify-start items-start gap-2 mb-8">
@@ -69,7 +70,7 @@ export default function UiPacksTab({
               </div>
 
               {/* Footer / Price & Actions */}
-              <div className="mt-3 pt-3 border-t-2 border-slate-200 flex items-center justify-between gap-1">
+              <div className="mt-3 pt-3 border-t-2 border-slate-200 flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-1">
                 <span className="text-3xl sm:text-4xl font-bold text-slate-900 font-mono tracking-tight flex items-end">
                   {pack.price}/{" "}
                   <span className="text-slate-400 text-2xl font-medium font-baloo">
@@ -77,7 +78,7 @@ export default function UiPacksTab({
                   </span>
                 </span>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 ">
                   {pack.demoUrl && (
                     <a
                       href={pack.demoUrl}
