@@ -524,7 +524,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-20 text-slate-900">
+      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-20 text-slate-900 border-t-2 border-slate-200">
       <div className="relative z-10 space-y-12">
         {/* Header */}
         <motion.div
