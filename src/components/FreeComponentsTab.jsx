@@ -393,10 +393,10 @@ export default function FreeComponentsTab({
 
               {/* Sub-Tabs & Counter Bar */}
               <div className="flex items-center justify-between px-2 py-2 bg-white border-b-2 border-slate-200">
-                <div className="flex items-center bg-slate-300/50 p-0 rounded-md border border-slate-100">
+                <div className="flex items-center bg-slate-300/50 p-0 rounded-lg border border-slate-100">
                   <button
                     onClick={() => toggleCardTab(item.id, "preview")}
-                    className={`text-xs px-4 py-1.5 rounded-lg font-baloo font-medium transition-all flex items-center space-x-1.5 cursor-pointer ${
+                    className={`text-xs px-5 py-1.5 rounded-lg font-baloo font-medium transition-all flex items-center space-x-2 cursor-pointer ${
                       currentTab === "preview"
                         ? "bg-white text-slate-950 font-bold shadow-xs"
                         : "text-slate-600 hover:text-slate-900"
@@ -412,7 +412,7 @@ export default function FreeComponentsTab({
                       if (window.innerWidth < 768) return;
                       toggleCardTab(item.id, "code");
                     }}
-                    className={`text-xs px-3.5 py-1.5 rounded-lg font-baloo font-medium transition-all flex items-center space-x-1.5 md:cursor-pointer md:opacity-100 opacity-40 cursor-not-allowed ${
+                    className={`text-xs px-4 py-1.5 rounded-lg font-baloo font-medium transition-all flex items-center space-x-2.5 md:cursor-pointer md:opacity-100 opacity-40 cursor-not-allowed ${
                       currentTab === "code"
                         ? "bg-white text-slate-950 font-bold shadow-xs"
                         : "text-slate-600 hover:text-slate-900"
@@ -433,9 +433,9 @@ export default function FreeComponentsTab({
                 </div>
 
                 {/* Copies Count Badge */}
-                <div className="flex items-center gap-2.5 text-xs font-baloo font-bold text-slate-700 bg-white pr-5 py-0.5 rounded-none border-none border-slate-200 shadow-xs">
+                <div className="flex items-center gap-2 text-lg font-baloo font-bold text-slate-700 bg-white pr-5 py-0.5 rounded-none border-none border-slate-200 shadow-xs">
                   <MdOutlineFileDownloadDone className="w-6 h-5 text-slate-900 animate-pulse" />
-                  <span>{item.copiesCount}</span>
+                  <span>( {item.copiesCount} )</span>
                 </div>
               </div>
 

@@ -7,7 +7,7 @@ import {
 
 export default function HubTabs({ mainTab, setMainTab }) {
   return (
-    <div className="flex justify-start items-center pb-2 mb-8 font-baloo border-b-2 border-slate-200">
+    <div className="flex justify-start items-center pb-5 mb-8 font-baloo border-b-2 border-slate-200">
       {/* Container - Left Aligned, Light Theme Style matching Header */}
       <div className="bg-white py-2 rounded-2xl border-none  flex flex-col lg:flex-row items-stretch lg:items-center gap-2  w-full lg:w-auto">
         {/* 1. Free Components Tab */}

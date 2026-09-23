@@ -7,16 +7,21 @@
 // }
 
 import { motion } from "framer-motion";
+import { FiActivity } from "react-icons/fi";
 
-// 4. Neon Glow Button
-export default function NeonButton() {
+export default function NeonButton({ 
+  text = "Activate Neon Matrix", 
+  onClick 
+}) {
   return (
     <motion.button 
-      whileHover={{ scale: 1.02, boxShadow: "0 0 25px rgba(34,211,238,0.4)" }}
+      whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(217, 70, 239, 0.5)" }}
       whileTap={{ scale: 0.95 }}
-      className="px-4 py-2 bg-slate-950 border border-cyan-500/40 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-400 text-xs font-medium rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.15)] cursor-pointer"
+      onClick={onClick}
+      className="px-8 py-3.5 bg-gradient-to-r from-purple-950 via-zinc-950 to-fuchsia-950 border-2 border-fuchsia-500/50 hover:border-fuchsia-400 text-fuchsia-300 hover:text-white font-baloo text-xs font-bold rounded-2xl shadow-[0_10px_25px_rgba(217,70,239,0.25)] cursor-pointer select-none flex items-center gap-2.5 transition-all group"
     >
-      Neon Glow
+      <FiActivity className="w-4 h-4 text-fuchsia-400 group-hover:scale-110 transition-transform" />
+      <span className="tracking-widest">{text}</span>
     </motion.button>
   );
 }

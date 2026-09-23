@@ -1,4 +1,6 @@
 import React from "react";
+import DesignStylesShowcase from "./DesignsStylesShowcase";
+import { HiShoppingBag } from "react-icons/hi";
 
 const getLKPrice = (priceStr) => {
   const numericValue = parseFloat(priceStr.replace(/[^0-9.]/g, "")) || 0;
@@ -15,12 +17,13 @@ export default function UiPacksTab({
 }) {
   return (
     <div className="max-w-7xl mx-auto">
-      <span className="font-mono text-slate-500/50 mb-1 block">
+      <DesignStylesShowcase />
+      <span className="font-mono text-slate-500/50 mb-1 block text-xs mt-5">
         // design_system_ui_packs_registry
       </span>
       {/* Categories Filter (අවශ්‍ය නම් පමණක් පෙන්වීමට) */}
       {categories.length > 1 && (
-        <div className="flex flex-wrap justify-start items-start gap-2 mb-8">
+        <div className="flex flex-wrap justify-start items-start gap-2 mb-8 border-b-2 border-slate-200 pb-5">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -93,7 +96,8 @@ export default function UiPacksTab({
                       href={pack.checkoutUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="px-3.5 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-baloo font-bold rounded-xl transition shadow-xs">
+                      className="px-3.5 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-baloo font-bold rounded-xl transition shadow-xs flex gap-2 items-center">
+                      <HiShoppingBag className="w-3.5 h-3.5" />
                       Buy Pack
                     </a>
                   )}

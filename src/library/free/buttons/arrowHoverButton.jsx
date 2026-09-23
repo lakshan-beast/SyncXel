@@ -12,20 +12,27 @@
 // }
 
 import { motion } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
 
-// 2. Arrow Hover Button
-export default function ArrowHoverButton() {
+export default function ArrowHoverButton({
+  text = "Explore Articles",
+  onClick,
+}) {
   return (
     <motion.button
       whileHover="hover"
       whileTap={{ scale: 0.95 }}
-      className="group px-4 py-2 bg-slate-900 border border-slate-800 hover:border-cyan-500/50 text-slate-200 text-xs rounded-xl inline-flex items-center gap-2 cursor-pointer shadow-md">
-      <span>Explore More</span>
+      onClick={onClick}
+      className="group px-8 py-3.5 bg-gradient-to-r from-violet-950 via-purple-950 to-stone-950 border-2 border-amber-500/40 hover:border-amber-400 text-amber-100 font-baloo text-xs font-bold rounded-2xl inline-flex items-center gap-3 cursor-pointer select-none shadow-[0_10px_25px_rgba(245,158,11,0.2)] transition-colors">
+      <span className="tracking-wide group-hover:text-amber-300 transition-colors">
+        {text}
+      </span>
+
       <motion.span
-        variants={{ hover: { x: 5 } }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="text-cyan-400">
-        →
+        variants={{ hover: { x: 6 } }}
+        transition={{ type: "spring", stiffness: 350, damping: 15 }}
+        className="text-amber-400 flex items-center">
+        <FiArrowRight className="w-4 h-4" />
       </motion.span>
     </motion.button>
   );

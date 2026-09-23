@@ -28,21 +28,33 @@ export default function ComponentsHubPage() {
     "Modals, Toasts & Notifications",
     "Inputs & Search Bars",
     "Badges & Status Indicators",
-    "Pricing & Subscriptions",
     "Avatars & Profiles",
     "Checkboxes & Radios",
     "Success & Toasts",
     "Back to Top & FAB",
-    // "Tabs & Dynamic Panels",
-    // "Footers & Status Bars",
-    // "Navbars & Dropdowns",
-    // "Toggles & Switches",
-    // "Accordions & Collapsibles",
-    // "Forms & Authentication",
+    "Toggles & Switches",
   ];
 
-  const packCategories = ["All", "Footers", "Authentication", "Landing Pages"];
-  const templateCategories = ["All", "Full Template Suite"];
+  // UI Packs 
+  const packCategories = [
+    "All",
+    "Navbars",
+    "Hero Sections",
+    "Authentication",
+    "Features",
+    "Pricing & Tables",
+    "Testimonials",
+    "FAQ",
+    "Footers",
+  ];
+
+  // Full Templates / Dashboards 
+  const templateCategories = [
+    "All",
+    "Full Template Suite",
+    "SaaS Dashboards",
+    "Landing Pages",
+  ];
 
   // --- Filtering Data based on active tab and category ---
   const filteredFreeComponents = freeComponentsData.filter(
@@ -73,7 +85,7 @@ export default function ComponentsHubPage() {
       <HubHeader />
 
       {/* Main Tabs Switcher */}
-      <span className="font-mono text-slate-500/50 mb-1 block text-xs">
+      <span className="font-mono text-slate-500/50 mb-1 block text-xs border-t-2 border-slate-200 pt-5">
         // primary_ecosystem_segment_selector
       </span>
       <HubTabs mainTab={mainTab} setMainTab={setMainTab} />
