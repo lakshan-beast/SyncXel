@@ -1,0 +1,34 @@
+මේ **Monetization & Licensing** විස්තරය (Single Payment, Lifetime Access, .zip access, commercial rights) කියන්නේ කස්ටමර් කෙනෙක් ප්‍රොඩක්ට් එකක් මිලදී ගන්න කලින් අනිවාර්යයෙන්ම දකින්න ඕනේ **Trust & Clarity** එකක්.
+
+මේක ප්‍රොජෙක්ට් එකේ ප්‍රධාන තැන් **4ක** පාවිච්චි කරන්න පුළුවන්:
+
+---
+
+### 1. Lemon Squeezy Product Description එක ඇතුළේ
+
+යූසර් කෙනෙක් Lemon Squeezy චෙක්අවුට් පේජ් එකට ගියාම (Buy කරන්න කලින්) මේක බලාගන්න ලැබෙන්න **Product Description** එකේ අගටම දාන්න ඕනේ:
+
+> *"Includes immediate .zip source code access, git repository updates, and full commercial usage rights for personal and client projects. Backed by our lifetime access model."*
+
+### 2. වෙබ් අඩවියේ Pricing Section එකට යටින් (Trust Badge එකක් විදිහට)
+
+අපි හදපු `PricingSection.jsx` එකේ Pro Tier එකට යටින් හෝ Pricing කාඩ් එක ඇතුළේ කුඩා නොට් එකක් විදිහට දාන්න පුළුවන්:
+
+> **⚡ What’s included:** One-time payment · Lifetime access · Free future updates · Commercial rights.
+
+### 3. වෙබ් අඩවියේ FAQ (Frequently Asked Questions) සෙක්ෂන් එකේ
+
+ಯූසර්ලා නිතර අසන ප්‍රශ්න වලට උත්තර දෙන තැන (FAQ) මේක ප්‍රශ්නයක් විදිහට දාන එක ගොඩක්ම වටිනවා:
+
+* **Q: Is it a one-time payment or a subscription?**
+* *A:* It's a **Single Payment (Lifetime Access)** model! Once you purchase a pack, you get immediate .zip source code access, lifetime updates, and full commercial usage rights for personal and client projects.
+
+
+
+### 4. GitHub Repository එකේ (`README.md` සහ වෙනම `LICENSE.md` එකක)
+
+අපි දැනටමත් README එකේ මේක දාලා තියෙනවා. ඒකට අමතරව ප්‍රොජෙක්ට් එකේ ෆෝල්ඩර් එකේ වෙනම `LICENSE` හෝ `TERMS.md` ෆයිල් එකක් හැදුවොත් ඒකෙත් මේක දාන්න පුළුවන්.
+
+---
+
+சுටුකොට කිව්වොත්, මේක **Lemon Squeezy Checkout Page එකේ**, **ਸයිට් එකේ Pricing/FAQ සෙක්ෂන් වල**, සහ **GitHub README එකේ** කියන තැන් වල පාවිච්චි කරන එක තමයි වඩාත්ම ප්‍රයෝජනවත් වන්නේ!
