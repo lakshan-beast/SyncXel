@@ -337,7 +337,7 @@ export default function FreeComponentsTab({
       </span>
 
       {/* --- COMPONENT CARDS GRID --- */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-8 lg:gap-x-7 lg:gap-y-10 px-5 md:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-8 lg:gap-x-7 lg:gap-y-10 px-2 md:px-0">
         {filteredFreeComponents.map((item) => {
           const currentTab = cardTabs[item.id] || "preview";
           const isCopied = copiedId === item.id;
@@ -440,7 +440,7 @@ export default function FreeComponentsTab({
               </div>
 
               {/* Body Content Box */}
-              <div className="p-3 min-h-35 max-h-55 bg-slate-50/50 flex items-center justify-center relative overflow-hidden border-b border-slate-200">
+              <div className="p-3 min-h-45 max-h-55 bg-slate-50/50 flex items-center justify-center relative overflow-hidden border-b border-slate-200">
                 {currentTab === "preview" ? (
                   <div className="w-full flex items-center justify-center relative z-10">
                     {item.component}

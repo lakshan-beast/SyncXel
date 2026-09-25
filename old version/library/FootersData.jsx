@@ -1,5 +1,5 @@
-import CyberFooterPreview from "../../../old version/library/footers/CyberFooterPreview";
-import MatrixStatusFooter from "../../../old version/library/footers/MatrixStatusFooter";
+import CyberFooterPreview from "./footers/CyberFooterPreview";
+import MatrixStatusFooter from "./footers/MatrixStatusFooter";
 
 export const footersData = [
   {

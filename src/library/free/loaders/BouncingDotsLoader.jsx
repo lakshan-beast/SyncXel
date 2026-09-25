@@ -1,29 +1,25 @@
-// export default function BouncingDotsLoader() {
-//   return (
-//     <div className="flex space-x-2 items-center justify-center">
-//       <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce [animation-delay:-0.3s] shadow-[0_0_10px_#22d3ee]"></div>
-//       <div className="w-3 h-3 bg-indigo-500 rounded-full animate-bounce [animation-delay:-0.15s] shadow-[0_0_10px_#6366f1]"></div>
-//       <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce shadow-[0_0_10px_#22d3ee]"></div>
-//     </div>
-//   );
-// }
-
 import { motion } from "framer-motion";
 
 export default function BouncingDotsLoader() {
+  const colors = [
+    "bg-amber-400 shadow-[0_0_12px_#fbbf24]",
+    "bg-orange-500 shadow-[0_0_12px_#f97316]",
+    "bg-rose-500 shadow-[0_0_12px_#f43f5e]"
+  ];
+
   return (
-    <div className="flex space-x-2 items-center justify-center">
+    <div className="flex space-x-3 items-center justify-center p-4 bg-gradient-to-r from-stone-950 via-neutral-950 to-stone-950 rounded-2xl border border-orange-500/30 shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
       {[0, 0.2, 0.4].map((delay, i) => (
         <motion.div
           key={i}
-          animate={{ y: [0, -8, 0] }}
+          animate={{ y: [0, -10, 0], scale: [1, 1.15, 1] }}
           transition={{
             repeat: Infinity,
             duration: 0.6,
             delay,
             ease: "easeInOut",
           }}
-          className={`w-3 h-3 rounded-full ${i === 1 ? "bg-indigo-500 shadow-[0_0_10px_#6366f1]" : "bg-cyan-400 shadow-[0_0_10px_#22d3ee]"}`}
+          className={`w-3.5 h-3.5 rounded-full ${colors[i]}`}
         />
       ))}
     </div>
