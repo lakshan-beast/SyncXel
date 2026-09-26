@@ -91,10 +91,18 @@ export const successData = [
     title: "Glassmorphism Neon Toast",
     category: "Success & Toasts",
     description:
-      "Translucent glass notification container highlighted with ambient indigo aura.",
+      "Translucent glass notification container highlighted with ambient indigo aura, frosted backdrop blur, professional title-case typography, and cloud sync feedback.",
     copiesCount: 315,
+
+    // Hyper-realistic use cases
+    useCases: [
+      "SaaS Multi-Device Sync Portals: Positioned as floating glass notifications when user data or settings are successfully pushed to cloud storage.",
+      "Modern Web Applications: Used for displaying sleek, translucent success confirmations with ambient neon glow effects.",
+    ],
+
     component: <GlassNeonToast />,
-    code: `<div className="w-80 p-3.5 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl font-baloo flex items-center gap-3 text-white">...</div>`,
+
+    code: `import { motion } from "framer-motion";\nimport { FiCloud } from "react-icons/fi";\n\nexport default function GlassNeonToast() {\n  return (\n    <motion.div\n      initial={{ opacity: 0, y: 15 }}\n      animate={{ opacity: 1, y: 0 }}\n      whileHover={{ scale: 1.02 }}\n      transition={{ type: "spring", stiffness: 400, damping: 25 }}\n      className="w-80 p-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl font-baloo flex items-center gap-3.5 shadow-[0_0_30px_rgba(129,140,248,0.2)] text-white select-none cursor-pointer group"\n    >\n      <div className="w-9 h-9 rounded-xl bg-indigo-500/20 border border-indigo-400/40 flex items-center justify-center text-indigo-300 font-bold text-xs shadow-[0_0_12px_#818cf8] shrink-0 group-hover:scale-105 transition-transform">\n        <FiCloud className="w-4 h-4" />\n      </div>\n      <div className="space-y-0.5 flex-1">\n        <div className="flex items-center justify-between">\n          <h4 className="text-xs font-bold text-indigo-200 tracking-wide">\n            Cloud Sync Complete\n          </h4>\n          <span className="text-[9px] text-indigo-300 bg-indigo-500/20 px-1.5 py-0.5 rounded border border-indigo-400/30 font-medium">\n            Synced\n          </span>\n        </div>\n        <p className="text-[11px] text-slate-300 font-medium leading-relaxed">\n          All workspace preferences have been securely synchronized.\n        </p>\n      </div>\n    </motion.div>\n  );\n}`,
   },
   // {
   //   id: "toast-bento-status",
@@ -121,39 +129,65 @@ export const successData = [
     title: "Claymorphism Soft Toast",
     category: "Success & Toasts",
     description:
-      "Tactile 3D matte volumetric success notification with diffuse shadows.",
+      "Tactile 3D matte volumetric success notification featuring diffuse dual-shadows, professional title-case typography, and data export feedback styling.",
     copiesCount: 270,
+
+    // Hyper-realistic use cases
+    useCases: [
+      "Cloud Storage & Backup Portals: Positioned as real-time toast confirmations when large database snapshots or volume backups finish exporting.",
+      "Data Analytics Dashboards: Used for notifying successful data extractions and file generations with soft claymorphism styling.",
+    ],
+
     component: <ClaySoftToast />,
-    code: `<div className="w-80 p-3.5 bg-slate-900 rounded-2xl shadow-[6px_6px_12px_#020617] border border-slate-800 text-white">...</div>`,
+
+    code: `import { motion } from "framer-motion";\nimport { FiCheck } from "react-icons/fi";\n\nexport default function ClaySoftToast() {\n  return (\n    <motion.div\n      initial={{ opacity: 0, y: 15 }}\n      animate={{ opacity: 1, y: 0 }}\n      whileHover={{ scale: 1.02 }}\n      transition={{ type: "spring", stiffness: 400, damping: 25 }}\n      className="w-80 p-4 bg-slate-900 rounded-2xl shadow-[6px_6px_14px_#020617,-6px_-6px_14px_#1e293b] border border-slate-800 font-baloo flex items-center gap-3.5 text-white select-none cursor-pointer"\n    >\n      <div className="w-9 h-9 rounded-xl bg-slate-900 shadow-[inset_2px_2px_5px_#020617,inset_-2px_-2px_5px_#1e293b] border border-slate-800 flex items-center justify-center text-indigo-400 font-bold text-xs shrink-0">\n        <FiCheck className="w-4 h-4 stroke-[3]" />\n      </div>\n      <div className="flex-1 space-y-0.5">\n        <div className="flex items-center justify-between">\n          <h4 className="text-xs font-bold text-slate-100 tracking-wide">\n            Data Export Complete\n          </h4>\n          <span className="text-[9px] text-indigo-400 bg-indigo-500/10 px-1.5 py-0.5 rounded border border-indigo-500/30 font-medium">\n            Ready\n          </span>\n        </div>\n        <p className="text-[11px] text-slate-400 font-medium leading-relaxed">\n          Your database snapshot has been compiled and saved successfully.\n        </p>\n      </div>\n    </motion.div>\n  );\n}`,
   },
+
   {
     id: "toast-clay-pill",
     title: "Claymorphism Soft Pill Banner",
     category: "Success & Toasts",
     description:
-      "Smooth pill-shaped tactile volumetric success banner component.",
+      "Smooth pill-shaped tactile volumetric success banner component featuring dual-shadow depth rendering, professional title-case typography, and profile update feedback.",
     copiesCount: 290,
+
+    // Hyper-realistic use cases
+    useCases: [
+      "SaaS User Settings Portals: Positioned as floating pill notifications when users update their profile details, emails, or account avatars.",
+      "Mobile-First Web Dashboards: Used for presenting compact, non-intrusive success confirmations with soft tactile claymorphism styling.",
+    ],
+
     component: <ClayPillBanner />,
-    code: `<div className="w-80 p-3 bg-slate-900 rounded-full shadow-[6px_6px_12px_#020617] border border-slate-800 text-white">...</div>`,
+
+    code: `import { motion } from "framer-motion";\nimport { FiCheck } from "react-icons/fi";\n\nexport default function ClayPillBanner() {\n  return (\n    <motion.div\n      initial={{ opacity: 0, y: 15 }}\n      animate={{ opacity: 1, y: 0 }}\n      whileHover={{ scale: 1.02 }}\n      transition={{ type: "spring", stiffness: 400, damping: 25 }}\n      className="w-80 p-3 bg-slate-900 rounded-full shadow-[6px_6px_14px_#020617,-6px_-6px_14px_#1e293b] border border-slate-800 font-baloo flex items-center gap-3 px-4 text-white select-none cursor-pointer"\n    >\n      <div className="w-8 h-8 rounded-full bg-slate-900 shadow-[inset_2px_2px_5px_#020617,inset_-2px_-2px_5px_#1e293b] border border-slate-800 flex items-center justify-center text-emerald-400 font-bold text-xs shrink-0">\n        <FiCheck className="w-4 h-4 stroke-[3]" />\n      </div>\n      <div className="flex-1 pr-1 space-y-0.5">\n        <h4 className="text-xs font-bold text-slate-100 tracking-wide">\n          Profile Updated Successfully\n        </h4>\n        <p className="text-[10px] text-slate-400 font-medium">\n          Your account details have been synchronized.\n        </p>\n      </div>\n    </motion.div>\n  );\n}`,
   },
+
   {
-    id: "toast-retro-terminal",
-    title: "Retro 90s Terminal Success Log",
+    id: "toast-brutal-pop",
+    title: "Neo-Brutalism Pop Toast",
     category: "Success & Toasts",
     description:
-      "Green phosphor monospaced terminal environment response message console.",
-    copiesCount: 305,
-    component: <RetroTerminalToast />,
-    code: `<div className="w-80 p-3.5 bg-black border-2 border-green-500 rounded font-mono flex items-center gap-3 text-green-400">...</div>`,
+      "High-contrast geometric brutalist confirmation popup featuring hard shadows, bold yellow styling, professional title-case typography, and settings save feedback.",
+    copiesCount: 340,
+
+    // Hyper-realistic use cases
+    useCases: [
+      "SaaS Billing & Subscription Portals: Positioned as real-time success popups when users update payment methods or upgrade tiers.",
+      "Creator Dashboard Settings: Used for confirming profile adjustments and workspace configurations with bold neo-brutalist aesthetics.",
+    ],
+
+    component: <BrutalPopToast />,
+
+    code: `import { motion } from "framer-motion";\nimport { FiCheck } from "react-icons/fi";\n\nexport default function BrutalPopToast() {\n  return (\n    <motion.div\n      initial={{ opacity: 0, y: 15 }}\n      animate={{ opacity: 1, y: 0 }}\n      whileHover={{ x: -2, y: -2, boxShadow: "5px 5px 0px 0px #020617" }}\n      transition={{ type: "spring", stiffness: 400, damping: 25 }}\n      className="w-80 p-4 bg-yellow-300 border-2 border-slate-950 rounded-2xl font-baloo flex items-center gap-3.5 shadow-[3px_3px_0px_0px_#020617] text-slate-950 select-none cursor-pointer group"\n    >\n      <div className="w-9 h-9 rounded-xl bg-pink-500 border-2 border-slate-950 flex items-center justify-center text-white font-black text-sm shadow-[2px_2px_0px_0px_#020617] shrink-0 group-hover:rotate-6 transition-transform">\n        <FiCheck className="w-4 h-4 stroke-[3]" />\n      </div>\n      <div className="space-y-0.5 flex-1">\n        <div className="flex items-center justify-between">\n          <h4 className="text-xs font-black tracking-wide text-slate-950">Changes Saved</h4>\n          <span className="text-[9px] font-bold text-slate-900 bg-yellow-400 px-1.5 py-0.5 rounded border border-slate-950">\n            Live\n          </span>\n        </div>\n        <p className="text-[11px] font-medium text-slate-800 leading-relaxed">\n          Your workspace billing configuration has been updated successfully.\n        </p>\n      </div>\n    </motion.div>\n  );\n}`,
   },
-//   {
-//     id: "toast-retro-crt",
-//     title: "Retro CRT Alert Banner",
-//     category: "Success & Toasts",
-//     description:
-//       "Nostalgic glowing 90s CRT monitor alert banner with phosphor effects.",
-//     copiesCount: 275,
-//     component: <RetroCrtBanner />,
-//     code: `<div className="w-80 p-3.5 bg-black border-2 border-green-500 rounded font-mono flex items-center gap-3 text-green-400">...</div>`,
-//   },
+  //   {
+  //     id: "toast-retro-crt",
+  //     title: "Retro CRT Alert Banner",
+  //     category: "Success & Toasts",
+  //     description:
+  //       "Nostalgic glowing 90s CRT monitor alert banner with phosphor effects.",
+  //     copiesCount: 275,
+  //     component: <RetroCrtBanner />,
+  //     code: `<div className="w-80 p-3.5 bg-black border-2 border-green-500 rounded font-mono flex items-center gap-3 text-green-400">...</div>`,
+  //   },
 ];
