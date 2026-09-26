@@ -848,3 +848,140 @@
 //   );
 // }
 
+
+
+
+ {/* Links Columns Grid */}
+          {/* <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-6 font-baloo">
+            {/* 1. Products *
+            <div className="flex flex-col space-y-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
+                // products
+              </h4>
+              <ul className="space-y-2 text-xs text-slate-400 flex flex-col">
+                <li>
+                  <Link
+                    to="/components"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    UI Components
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="/#templates"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Templates
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#pricing"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Pricing
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* 2. Services *
+            <div className="flex flex-col space-y-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
+                // services
+              </h4>
+              <ul className="space-y-2 text-xs text-slate-400 flex flex-col">
+                <li>
+                  <a
+                    href="/#services"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Web Design
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#how-it-works"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Workflow
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#hire"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Hire Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* 3. Developers 
+            <div className="flex flex-col space-y-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
+                // docs
+              </h4>
+              <ul className="space-y-2 text-xs text-slate-400 flex flex-col">
+                <li>
+                  <Link
+                    to="/docs"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Documentation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/docs"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Getting Started
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/docs"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Changelog
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* 4. Legal 
+            <div className="flex flex-col space-y-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
+                // legal
+              </h4>
+              <ul className="space-y-2 text-xs text-slate-400 flex flex-col">
+                <li>
+                  <Link
+                    to="/legal"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/legal"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="/#faq"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div> */}
