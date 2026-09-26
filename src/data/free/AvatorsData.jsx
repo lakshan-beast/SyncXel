@@ -55,16 +55,16 @@ export const avatarsData = [
     component: <BrutalBadgeProfile />,
     code: `<div className="w-72 p-4 bg-pink-400 border-2 border-slate-950 rounded-2xl font-baloo flex items-center gap-4 shadow-[3px_3px_0px_0px_#020617]">...</div>`,
   },
-  {
-    id: "avatar-matrix-ring",
-    title: "Matrix Quantum Profile Ring",
-    category: "Avatars & Profiles",
-    description:
-      "Indigo neon glow avatar component optimized for card preview container layouts.",
-    copiesCount: 260,
-    component: <MatrixProfileRing />,
-    code: `<div className="w-72 p-4 bg-slate-950 border border-indigo-500/40 rounded-xl font-baloo flex items-center gap-4 text-white">...</div>`,
-  },
+  // {
+  //   id: "avatar-matrix-ring",
+  //   title: "Matrix Quantum Profile Ring",
+  //   category: "Avatars & Profiles",
+  //   description:
+  //     "Indigo neon glow avatar component optimized for card preview container layouts.",
+  //   copiesCount: 260,
+  //   component: <MatrixProfileRing />,
+  //   code: `<div className="w-72 p-4 bg-slate-950 border border-indigo-500/40 rounded-xl font-baloo flex items-center gap-4 text-white">...</div>`,
+  // },
   {
     id: "avatar-glass-enclave",
     title: "Glassmorphism Enclave Card",
