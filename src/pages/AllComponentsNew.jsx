@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import HubHeader from "../components/HubHeader";
-import HubTabs from "../components/HubTabs";
+import HubHeader from "../components/ComHubHeader";
+import HubTabs from "../components/ComHubTabs";
 
 import FreeComponentsTab from "../components/FreeComponentsTab";
 import TemplateComponentsTab from "../components/TemplateComponentsTab";
