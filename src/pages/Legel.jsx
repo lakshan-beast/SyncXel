@@ -63,7 +63,7 @@ export default function LegalPage({ tabList = defaultTabList }) {
           className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border-none border-slate-50  rounded-2xl shadow-none relative overflow-hidden">
           <div className="space-y-2 relative z-10 max-w-2xl">
             <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200/50 text-slate-500/50 text-xs font-mono shadow-xs">
-              <span>// legal_compliance_repository_v2.0</span>
+              <span>// legal_compliance_repository_V2.0</span>
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
@@ -144,9 +144,6 @@ export default function LegalPage({ tabList = defaultTabList }) {
                     {activeTabObj.label}
                   </strong>
                 </span>
-                {/* <span className="text-[10px] bg-slate-800 px-2 py-0.5 rounded-lg text-slate-300 ml-1 border border-slate-700">
-                  Change ▾
-                </span> */}
               </motion.button>
             </div>
 

@@ -21,7 +21,7 @@ export default function UiPacksTab({
       <span className="font-mono text-slate-500/50 mb-1 block text-xs mt-5">
         // design_system_ui_packs_registry
       </span>
-      {/* Categories Filter (අවශ්‍ය නම් පමණක් පෙන්වීමට) */}
+      {/* Categories Filter */}
       {categories.length > 1 && (
         <div className="flex flex-wrap justify-start items-start gap-2 mb-8 border-b-2 border-slate-200 pb-5">
           {categories.map((cat) => (

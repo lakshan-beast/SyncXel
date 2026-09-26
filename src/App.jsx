@@ -5,20 +5,20 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 import HeroSection from "./components/Hero";
+import Components from "./components/ComponentsPreview";
+import DocsPreviewSection from "./components/DocsPreview";
+import FeaturesSection from "./components/WhyChoose";
+import TeamSection from "./components/TeamSection";
 import ServicesSection from "./components/Services";
 import WorkflowSection from "./components/WorkflowSection";
 import ContactSection from "./components/ContactSection";
-import TeamSection from "./components/TeamSection";
-import FaqSection from "./components/FAQ";
-import FeaturesSection from "./components/WhyChoose";
-import Components from "./components/Components";
+import FaqSection from "./components/FAQSection";
 
 import AllComponents from "./pages/AllComponentsNew";
-import Legal from "./pages/Legel";
 import Documentation from "./pages/Documentation";
+import Legal from "./pages/Legel";
 
 import ScrollToTop from "./components/ScrollTop";
-import DocsPreviewSection from "./components/DocsPreview";
 
 export default function App() {
   return (

@@ -41,7 +41,7 @@ export default function DesignStylesShowcase() {
       <div className="space-y-3 mb-10 max-w-2xl">
         <div className="inline-flex items-center space-x-2 px-4 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-400 text-xs shadow-xs">
           <span className="w- h-3 rounded-full bg-emerald-500 animate-pulse" />
-          <span>// available_design_families_v2.0</span>
+          <span>// available_design_families_V.0</span>
         </div>
 
         <h2 className="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight font-sans">
