@@ -212,7 +212,7 @@ export default function FreeComponentsTab({
               </div>
 
               {/* Body Content Box */}
-              <div className="p-3 min-h-45 max-h-85 bg-slate-50/50 flex items-center justify-center relative overflow-hidden border-b border-slate-200">
+              <div className="p-3 min-h-55 max-h-85 bg-slate-50/50 flex items-center justify-center relative overflow-hidden border-b border-slate-200">
                 {currentTab === "preview" ? (
                   <div className="w-full flex items-center justify-center relative z-10">
                     {item.component}
