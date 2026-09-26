@@ -1,5 +1,5 @@
 import CyanRingLoader from "../../library/free/loaders/CyanRingLoader";
-import PristineLightButton from "./PristineLightButton";
+import PristineLightButton from "../../library/free/buttons/PristineLightButton";
 import EmeraldTextLoader from "../../library/free/loaders/EmeraldTextLoader";
 import PingRadarLoader from "../../library/free/loaders/PingRadarLoader";
 import BouncingDotsLoader from "../../library/free/loaders/BouncingDotsLoader";

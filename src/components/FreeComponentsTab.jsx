@@ -218,7 +218,7 @@ export default function FreeComponentsTab({
                     {item.component}
                   </div>
                 ) : (
-                  <pre className="w-full h-36 overflow-auto text-sm text-slate-200 bg-slate-900 p-4 rounded-xl border border-slate-800 font-mono text-left relative z-10 shadow-inner scrollbar-thumb-slate-600 flex justify-start items-start">
+                  <pre className="w-full h-55 overflow-auto text-sm text-slate-200 bg-slate-900 p-4 rounded-xl border border-slate-800 font-mono text-left relative z-10 shadow-inner scrollbar-thumb-slate-600 flex justify-start items-start">
                     <code>{item.code}</code>
                   </pre>
                 )}
