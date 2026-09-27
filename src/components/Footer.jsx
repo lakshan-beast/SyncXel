@@ -6,14 +6,11 @@ import {
   FaRegCopyright,
   FaCaretRight,
   FaCoffee,
-  FaTelegramPlane,
   FaWhatsapp,
   FaEnvelope,
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { SiGithub } from "react-icons/si";
-import { SlGlobe } from "react-icons/sl";
-import { RxLinkedinLogo } from "react-icons/rx";
 import { HiOutlineSparkles, HiOutlineArrowUpRight } from "react-icons/hi2";
 
 // --- Framer Motion Variants ---
@@ -151,30 +148,6 @@ export default function Footer() {
                 title="GitHub Profile">
                 <SiGithub className="w-5 h-5" />
               </a>
-              {/* <a
-                href="https://www.linkedin.com/in/lakshan-sandeepa"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
-                title="LinkedIn Profile">
-                <RxLinkedinLogo className="w-5 h-5" />
-              </a> */}
-              {/* <a
-                href="https://lakshan-sandeepa-dev.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
-                title="Portfolio Profile">
-                <SlGlobe className="w-5 h-5" />
-              </a> */}
-              {/* <a
-                href="https://t.me/lakshan_dev"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
-                title="Telegram Chat">
-                <FaTelegramPlane className="w-5 h-5" />
-              </a> */}
               <a
                 href="https://wa.me/+94707046840"
                 target="_blank"
