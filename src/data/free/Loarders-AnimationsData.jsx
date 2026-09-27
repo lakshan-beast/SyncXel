@@ -184,6 +184,7 @@ export const loadersData = [
 
     code: `import { motion } from "framer-motion";\n\nexport default function DashedRingLoader() {\n  return (\n    <div className="relative flex items-center justify-center w-12 h-12 select-none">\n      <motion.div\n        animate={{ rotate: 360 }}\n        transition={{ repeat: Infinity, duration: 2, ease: "linear" }}\n        className="absolute inset-0 border-2 border-dashed border-cyan-500/40 rounded-full"\n      />\n      <div className="w-3 h-3 bg-cyan-400 rounded-full shadow-[0_0_10px_#22d3ee]" />\n    </div>\n  );\n}`,
   },
+  
   {
     id: "loader-dual-ping",
     title: "Multi-Layer Pulse Radar",

@@ -107,23 +107,4 @@ export const successData = [
 
     code: `import { motion } from "framer-motion";\nimport { FiCheck } from "react-icons/fi";\n\nexport default function ClayPillBanner() {\n  return (\n    <motion.div\n      initial={{ opacity: 0, y: 15 }}\n      animate={{ opacity: 1, y: 0 }}\n      whileHover={{ scale: 1.02 }}\n      transition={{ type: "spring", stiffness: 400, damping: 25 }}\n      className="w-80 p-3 bg-slate-900 rounded-full shadow-[6px_6px_14px_#020617,-6px_-6px_14px_#1e293b] border border-slate-800 font-baloo flex items-center gap-3 px-4 text-white select-none cursor-pointer"\n    >\n      <div className="w-8 h-8 rounded-full bg-slate-900 shadow-[inset_2px_2px_5px_#020617,inset_-2px_-2px_5px_#1e293b] border border-slate-800 flex items-center justify-center text-emerald-400 font-bold text-xs shrink-0">\n        <FiCheck className="w-4 h-4 stroke-[3]" />\n      </div>\n      <div className="flex-1 pr-1 space-y-0.5">\n        <h4 className="text-xs font-bold text-slate-100 tracking-wide">\n          Profile Updated Successfully\n        </h4>\n        <p className="text-[10px] text-slate-400 font-medium">\n          Your account details have been synchronized.\n        </p>\n      </div>\n    </motion.div>\n  );\n}`,
   },
-
-  {
-    id: "toast-brutal-pop",
-    title: "Neo-Brutalism Pop Toast",
-    category: "Success & Toasts",
-    description:
-      "High-contrast geometric brutalist confirmation popup featuring hard shadows, bold yellow styling, professional title-case typography, and settings save feedback.",
-    copiesCount: 340,
-
-    // Hyper-realistic use cases
-    useCases: [
-      "SaaS Billing & Subscription Portals: Positioned as real-time success popups when users update payment methods or upgrade tiers.",
-      "Creator Dashboard Settings: Used for confirming profile adjustments and workspace configurations with bold neo-brutalist aesthetics.",
-    ],
-
-    component: <BrutalPopToast />,
-
-    code: `import { motion } from "framer-motion";\nimport { FiCheck } from "react-icons/fi";\n\nexport default function BrutalPopToast() {\n  return (\n    <motion.div\n      initial={{ opacity: 0, y: 15 }}\n      animate={{ opacity: 1, y: 0 }}\n      whileHover={{ x: -2, y: -2, boxShadow: "5px 5px 0px 0px #020617" }}\n      transition={{ type: "spring", stiffness: 400, damping: 25 }}\n      className="w-80 p-4 bg-yellow-300 border-2 border-slate-950 rounded-2xl font-baloo flex items-center gap-3.5 shadow-[3px_3px_0px_0px_#020617] text-slate-950 select-none cursor-pointer group"\n    >\n      <div className="w-9 h-9 rounded-xl bg-pink-500 border-2 border-slate-950 flex items-center justify-center text-white font-black text-sm shadow-[2px_2px_0px_0px_#020617] shrink-0 group-hover:rotate-6 transition-transform">\n        <FiCheck className="w-4 h-4 stroke-[3]" />\n      </div>\n      <div className="space-y-0.5 flex-1">\n        <div className="flex items-center justify-between">\n          <h4 className="text-xs font-black tracking-wide text-slate-950">Changes Saved</h4>\n          <span className="text-[9px] font-bold text-slate-900 bg-yellow-400 px-1.5 py-0.5 rounded border border-slate-950">\n            Live\n          </span>\n        </div>\n        <p className="text-[11px] font-medium text-slate-800 leading-relaxed">\n          Your workspace billing configuration has been updated successfully.\n        </p>\n      </div>\n    </motion.div>\n  );\n}`,
-  },
 ];

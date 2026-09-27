@@ -2,7 +2,7 @@ import { buttonsData } from "./Buttons-ActionsData";
 import { loadersData } from "./Loarders-AnimationsData";
 import { cardsData } from "./Cards&Containers";
 import { badgesData } from "./Badges-PIlls-Indeicators";
-import { backTopData } from "./TopButtonData";
+// import { backTopData } from "./TopButtonData";
 import { successData } from "./SuccessData";
 import { checkboxesData } from "./CheckboxesData";
 import { togglesData } from "./TogglesData";
@@ -14,14 +14,14 @@ import { avatarsData } from "./AvatorsData";
 export const freeComponentsData = [
   ...buttonsData,
   ...loadersData,
-  ...backTopData,
+  // ...backTopData,
   ...cardsData,
   ...badgesData,
   ...successData,
   ...togglesData,
   ...checkboxesData,
   ...avatarsData,
-  
+
   // ...inputsData,
   // ...notificationsData,
 ];

@@ -25,19 +25,19 @@ export default function ComponentsHubPage() {
     "Buttons & Actions",
     "Cards & Containers",
     "Loaders & Animations",
-    "Modals, Toasts & Notifications",
-    "Inputs & Search Bars",
+    // "Modals, Toasts & Notifications",
+    // "Inputs & Search Bars",
     "Badges & Status Indicators",
     "Avatars & Profiles",
     "Checkboxes & Radios",
     "Success & Toasts",
-    "Back to Top & FAB",
+    // "Back to Top & FAB",
     "Toggles & Switches",
   ];
 
   // UI Packs 
   const packCategories = [
-    "All",
+    // "All",
     "Navbars",
     "Hero Sections",
     "Authentication",
@@ -62,7 +62,7 @@ export default function ComponentsHubPage() {
   );
 
   const filteredUiPacks = uiPacksData.filter(
-    (item) => packCategory === "All" || item.category === packCategory,
+    (item) => packCategory === "Navbars" || item.category === packCategory,
   );
 
   const filteredTemplates = premiumKits.filter(
