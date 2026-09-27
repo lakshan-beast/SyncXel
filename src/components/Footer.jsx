@@ -190,12 +190,61 @@ export default function Footer() {
         <motion.div>
           {/* Links Columns Grid */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-4 gap-6 font-baloo px-6">
-            {/* 1. Ecosystem / Products */}
+            {/* 1. Agency & Services */}
             <div className="flex flex-col space-y-5">
               <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
-                ecosystem
+                agency
               </h4>
-              <ul className="space-y-1 pl-3 text-xs sm:text-sm text-slate-400 flex flex-col">
+              <ul className="space-y-1 pl-1 text-xs sm:text-sm text-slate-400 flex flex-col">
+                <li>
+                  <a
+                    href="/#features"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Platform Features
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#services"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Custom Web Apps
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#how-it-works"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Our Workflow
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#team"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Hire Engineers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/#contact-section"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* 2. Governance & Legal */}
+            <div className="flex flex-col space-y-5">
+              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
+                governance
+              </h4>
+              <ul className="space-y-1 pl-1 text-xs sm:text-sm text-slate-400 flex flex-col">
                 <li>
                   <Link
                     to="/components"
@@ -205,38 +254,48 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="/components"
+                  <Link
+                    to="/docs"
                     className="hover:text-white transition-colors flex items-center gap-1.5 group">
                     <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    Design Tokens
+                    Documentation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/legal"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Privacy & Terms
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/lakshan-beast/SyncXel"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Open Source Hub
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/#templates"
+                    href="/#faq"
                     className="hover:text-white transition-colors flex items-center gap-1.5 group">
                     <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    Pro Templates
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#pricing"
-                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    Matrix Pricing
+                    FAQ / Help
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* 2. Tech Stack & Resources (External Links) */}
+            {/* 3. Tech Stack & Resources (External Links) */}
             <div className="flex flex-col space-y-5">
               <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
                 tech stack
               </h4>
-              <ul className="space-y-1 pl-3 text-xs sm:text-sm text-slate-400 flex flex-col">
+              <ul className="space-y-1 pl-1 text-xs sm:text-sm text-slate-400 flex flex-col">
                 <li>
                   <a
                     href="https://react.dev"
@@ -277,90 +336,14 @@ export default function Footer() {
                     Vite Engine
                   </a>
                 </li>
-              </ul>
-            </div>
-
-            {/* 3. Agency & Services */}
-            <div className="flex flex-col space-y-5">
-              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
-                agency
-              </h4>
-              <ul className="space-y-1 pl-3 text-xs sm:text-sm text-slate-400 flex flex-col">
-                <li>
-                  <a
-                    href="/#services"
-                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    Custom Web Apps
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#services"
-                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    UI / UX Audit
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#how-it-works"
-                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    Our Workflow
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#team"
-                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    Hire Engineers
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* 4. Governance & Legal */}
-            <div className="flex flex-col space-y-5">
-              <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
-                governance
-              </h4>
-              <ul className="space-y-1 pl-3 text-xs sm:text-sm text-slate-400 flex flex-col">
-                <li>
-                  <Link
-                    to="/docs"
-                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/legal"
-                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    Privacy & Terms
-                  </Link>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/lakshan-beast/SyncXel"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    Open Source Hub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#faq"
-                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    FAQ / Help
-                  </a>
-                </li>
+                <a
+                  href="https://vercel.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                  <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                  Vercel Cloud
+                </a>
               </ul>
             </div>
           </div>
