@@ -55,8 +55,8 @@ export default function Hero() {
               href="#components"
               className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 hover:border-slate-300 text-xs text-slate-700 transition-all shadow-xs group w-fit">
               <span className="w-2 h-2 rounded-full bg-slate-900 animate-ping shrink-0" />
-              <span className="font-semibold text-slate-900">SyncXel v2.0</span>
-              <span className="text-slate-500 md:hidden sm:inline">
+              <span className="font-semibold text-slate-900">SyncXel V2.0</span>
+              <span className="text-slate-500 sm:hidden md:inline">
                 • Free UI, Paid Templates & Dev Guides
               </span>
               <HiOutlineArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-slate-600" />
@@ -101,9 +101,9 @@ export default function Hero() {
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-full sm:w-auto h-12 px-6 rounded-xl bg-slate-900 text-white font-medium text-xs sm:text-sm hover:bg-slate-800 transition-all flex items-center justify-between sm:justify-center sm:space-x-4 shadow-xs group cursor-pointer font-mono">
+              className="w-full sm:w-auto h-12 px-6 rounded-xl bg-slate-900 text-white font-medium text-lg sm:text-sm hover:bg-slate-800 transition-all flex items-center justify-between sm:justify-center sm:space-x-4 shadow-xs group cursor-pointer font-baloo">
               <div className="flex items-center space-x-3">
-                <HiOutlineSparkles className="w-4 h-4 text-slate-300 group-hover:-rotate-12 group-hover:scale-125 transition-transform shrink-0 duration-300" />
+                <HiOutlineSparkles className="w-4 h-4 text-slate-300 group-hover:-rotate-180 group-hover:scale-125 transition-transform shrink-0 duration-300" />
                 <span className="hidden lg:inline text-slate-200 tracking-tight">
                   return explore_components();
                 </span>
@@ -118,9 +118,9 @@ export default function Hero() {
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-full sm:w-auto h-12 px-6 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-900 font-medium text-xs sm:text-sm hover:bg-slate-50 transition-all flex items-center justify-between sm:justify-center sm:space-x-3 cursor-pointer group font-mono shadow-xs">
+              className="w-full sm:w-auto h-12 px-6 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-900 font-medium text-xs sm:text-sm hover:bg-slate-50 transition-all flex items-center justify-between sm:justify-center sm:space-x-3 cursor-pointer group font-baloo shadow-xs">
               <div className="flex items-center space-x-3">
-                <HiOutlineCodeBracket className="w-4 h-4 text-slate-700 group-hover:scale-125 group-hover:-rotate-12 transition-transform shrink-0 duration-300" />
+                <HiOutlineCodeBracket className="w-4 h-4 text-slate-700 group-hover:scale-125 group-hover:-rotate-45 transition-transform shrink-0 duration-300" />
                 <span className="hidden lg:inline tracking-tight">
                   const hire = () =&gt; custom_dev();
                 </span>

@@ -15,7 +15,7 @@ import { avatarsData } from "./AvatorsData";
 // import { footersData } from "./FootersData";
 import { checkboxesData } from "./CheckboxesData";
 import { successData } from "./SuccessData";
-import { fabData } from "./FabData";
+import { backTopData } from "./TopButtonData";
 
 export const freeComponentsData = [
   ...buttonsData,
@@ -35,5 +35,5 @@ export const freeComponentsData = [
   // ...footersData,
   ...checkboxesData,
   ...successData,
-  ...fabData,
+  ...backTopData,
 ];

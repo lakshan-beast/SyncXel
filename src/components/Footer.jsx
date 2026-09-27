@@ -7,6 +7,7 @@ import {
   FaCaretRight,
   FaCoffee,
   FaTelegramPlane,
+  FaWhatsapp,
   FaEnvelope,
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
@@ -135,44 +136,52 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex items-center space-x-2 pt-2">
               <a
-                href="https://github.com/lakshan-beast"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
-                title="GitHub Profile">
-                <SiGithub className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/lakshan-sandeepa"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
-                title="LinkedIn Profile">
-                <RxLinkedinLogo className="w-5 h-5" />
-              </a>
-              <a
-                href="https://lakshan-sandeepa-dev.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
-                title="Portfolio Profile">
-                <SlGlobe className="w-5 h-5" />
-              </a>
-              <a
-                href="https://t.me/lakshan_dev"
-                target="_blank"
-                rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
-                title="Telegram Chat">
-                <FaTelegramPlane className="w-5 h-5" />
-              </a>
-              <a
                 href="mailto:syncxelofficial@gmail.com"
                 target="_blank"
                 rel="noreferrer"
                 className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
                 title="Email">
                 <FaEnvelope className="w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com/lakshan-beast/SyncXel"
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
+                title="GitHub Profile">
+                <SiGithub className="w-5 h-5" />
+              </a>
+              {/* <a
+                href="https://www.linkedin.com/in/lakshan-sandeepa"
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
+                title="LinkedIn Profile">
+                <RxLinkedinLogo className="w-5 h-5" />
+              </a> */}
+              {/* <a
+                href="https://lakshan-sandeepa-dev.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
+                title="Portfolio Profile">
+                <SlGlobe className="w-5 h-5" />
+              </a> */}
+              {/* <a
+                href="https://t.me/lakshan_dev"
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
+                title="Telegram Chat">
+                <FaTelegramPlane className="w-5 h-5" />
+              </a> */}
+              <a
+                href="https://wa.me/+94707046840"
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-400 hover:text-white hover:border-white/30 transition-all shadow-xs"
+                title="Whatsapp Business Chat">
+                <FaWhatsapp className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -225,7 +234,7 @@ export default function Footer() {
             {/* 2. Tech Stack & Resources (External Links) */}
             <div className="flex flex-col space-y-5">
               <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
-                tech_stack
+                tech stack
               </h4>
               <ul className="space-y-1 pl-3 text-xs sm:text-sm text-slate-400 flex flex-col">
                 <li>
@@ -303,7 +312,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/#hire"
+                    href="/#team"
                     className="hover:text-white transition-colors flex items-center gap-1.5 group">
                     <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
                     Hire Engineers
@@ -336,7 +345,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/lakshan-beast"
+                    href="https://github.com/lakshan-beast/SyncXel"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-white transition-colors flex items-center gap-1.5 group">

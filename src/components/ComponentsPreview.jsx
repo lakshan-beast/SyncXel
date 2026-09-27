@@ -143,10 +143,9 @@ export default function HomeComponentsTeaser() {
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400 }}
               className="group inline-flex items-center space-x-3 px-6 py-3.5 bg-slate-900 border border-slate-900 text-white font-mono text-xs sm:text-sm font-bold rounded-xl hover:bg-slate-800 shadow-xs cursor-pointer transition-all">
-              <span className="hidden lg:inline text-xs tracking-tight">
+              <span className="text-xs tracking-tight">
                 const components = () =&gt; explore_ui();
               </span>
-              <span className="lg:hidden text-xs">explore_ui()</span>
               <HiOutlineArrowRight className="w-4 h-4 text-slate-300 group-hover:translate-x-1.5 transition-transform duration-300" />
             </motion.button>
           </Link>

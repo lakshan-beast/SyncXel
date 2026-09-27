@@ -1,40 +1,17 @@
-// import CyberPowerSwitch from "../../library/free/toggles/CyberPowerSwitch";
-// import QuantumModeToggle from "../../library/free/toggles/QuantumModeToggle";
-
-// export const togglesData = [
-//   {
-//     id: "toggle-cyber-power",
-//     title: "Cyberpunk Power Switch",
-//     category: "Toggles & Switches",
-//     description: "Interactive glowing sliding power switch built with Framer Motion spring physics and font-baloo typography.",
-//     copiesCount: 290,
-//     component: <CyberPowerSwitch />,
-//     code: `<div className="flex items-center justify-between w-64 p-3 bg-slate-950 border border-cyan-500/40 rounded-xl font-baloo"><span className="text-xs text-cyan-300 font-bold">SYS_POWER_GRID</span></div>`,
-//   },
-//   {
-//     id: "toggle-quantum-mode",
-//     title: "Quantum Mode Switcher",
-//     category: "Toggles & Switches",
-//     description: "Futuristic state switcher toggle featuring neon active shadows and clean card preview dimensions.",
-//     copiesCount: 240,
-//     component: <QuantumModeToggle />,
-//     code: `<div className="flex items-center justify-between w-64 p-3 bg-slate-950 border border-indigo-500/40 rounded-xl font-baloo"><span className="text-xs text-indigo-300 font-bold">QUANTUM_SYNC</span></div>`,
-//   },
-// ];
-
 import CyberPowerSwitch from "../../library/free/toggles/CyberPowerSwitch";
 import QuantumModeToggle from "../../library/free/toggles/QuantumModeToggle";
 import CyberNeuralToggle from "../../library/free/toggles/CyberNeuralToggle";
 import BrutalPopToggle from "../../library/free/toggles/BrutalPopToggle";
-import BrutalHardSwitch from "../../library/free/toggles/BrutalHardSwitch";
-import GlassFrostToggle from "../../library/free/toggles/GlassFrostToggle";
-import GlassGlowToggle from "../../library/free/toggles/GlassGlowToggle";
-import BentoGridToggle from "../../library/free/toggles/BentoGridToggle";
-import BentoSyncSwitch from "../../library/free/toggles/BentoSyncSwitch";
-import ClaySoftToggle from "../../library/free/toggles/ClaySoftToggle";
-import ClayPillToggle from "../../library/free/toggles/ClayPillToggle";
-import RetroTerminalToggle from "../../library/free/toggles/RetroTerminalToggle";
 import RetroCrtSwitch from "../../library/free/toggles/RetroCrtSwitch";
+import GlassGlowToggle from "../../library/free/toggles/GlassGlowToggle";
+import ClayPillToggle from "../../library/free/toggles/ClayPillToggle";
+import BentoSyncSwitch from "../../library/free/toggles/BentoSyncSwitch";
+
+import BentoGridToggle from "../../library/free/toggles/BentoGridToggle";
+import ClaySoftToggle from "../../library/free/toggles/ClaySoftToggle";
+import BrutalHardSwitch from "../../library/free/toggles/BrutalHardSwitch";
+import RetroTerminalToggle from "../../library/free/toggles/RetroTerminalToggle";
+import GlassFrostToggle from "../../library/free/toggles/GlassFrostToggle";
 
 export const togglesData = [
   {
@@ -113,26 +90,6 @@ export const togglesData = [
     code: `import { useState } from "react";\nimport { motion } from "framer-motion";\nimport { FiZap } from "react-icons/fi";\n\nexport default function BrutalPopToggle() {\n  const [isOn, setIsOn] = useState(false);\n\n  return (\n    <div\n      onClick={() => setIsOn(!isOn)}\n      className="flex items-center justify-between w-72 p-3.5 bg-yellow-300 border-2 border-slate-950 rounded-2xl font-baloo cursor-pointer shadow-[4px_4px_0px_0px_#020617] hover:shadow-[6px_6px_0px_0px_#020617] transition-all select-none group"\n    >\n      <div className="flex items-center gap-2.5">\n        <div className="w-7 h-7 bg-slate-950 rounded-lg flex items-center justify-center text-yellow-300">\n          <FiZap className="w-3.5 h-3.5" />\n        </div>\n        <div>\n          <span className="text-xs text-slate-950 font-black block">Beta Features</span>\n          <span className="text-[10px] text-slate-800 font-bold">\n            {isOn ? "Active & Opted-In" : "Disabled"}\n          </span>\n        </div>\n      </div>\n      <div\n        className={\`w-12 h-6 flex items-center rounded-lg p-0.5 border-2 border-slate-950 \${\n          isOn ? "bg-pink-500 justify-end" : "bg-white justify-start"\n        }\`}\n      >\n        <motion.div\n          layout\n          transition={{ type: "spring", stiffness: 700, damping: 30 }}\n          className="w-4 h-4 rounded bg-slate-950 shadow-sm"\n        />\n      </div>\n    </div>\n  );\n}`,
   },
 
-  // {
-  //   id: "toggle-brutal-hard",
-  //   title: "Neo-Brutalism Hard Toggle",
-  //   category: "Toggles & Switches",
-  //   description:
-  //     "Vibrant pink brutalist switch container with bold sharp borders and drop-shadows.",
-  //   copiesCount: 260,
-  //   component: <BrutalHardSwitch />,
-  //   code: `<div className="flex items-center justify-between w-64 p-3 bg-pink-400 border-2 border-slate-950 rounded-xl font-baloo shadow-[3px_3px_0px_0px_#020617]"><span className="text-xs font-black">HARD_TOGGLE</span></div>`,
-  // },
-  // {
-  //   id: "toggle-glass-frost",
-  //   title: "Glassmorphism Frost Toggle",
-  //   category: "Toggles & Switches",
-  //   description:
-  //     "Frosted translucent glass overlay switch built with deep backdrop blur.",
-  //   copiesCount: 345,
-  //   component: <GlassFrostToggle />,
-  //   code: `<div className="flex items-center justify-between w-64 p-3 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl font-baloo text-white"><span className="text-xs font-bold">FROST_TOGGLE</span></div>`,
-  // },
   {
     id: "toggle-glass-glow",
     title: "Glassmorphism Ambient Glow Mode Toggle",
@@ -151,16 +108,7 @@ export const togglesData = [
 
     code: `import { useState } from "react";\nimport { motion } from "framer-motion";\nimport { HiSparkles } from "react-icons/hi";\n\nexport default function GlassGlowToggle() {\n  const [isOn, setIsOn] = useState(true);\n\n  return (\n    <div\n      onClick={() => setIsOn(!isOn)}\n      className="flex items-center justify-between w-80 p-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl font-baloo cursor-pointer shadow-[0_15px_35px_rgba(0,0,0,0.3)] hover:border-white/40 transition-all select-none group"\n    >\n      <div className="flex items-center gap-3">\n        <div className={\`w-8 h-8 rounded-xl flex items-center justify-center transition-colors \${isOn ? "bg-indigo-500/20 text-indigo-300 shadow-[0_0_12px_rgba(99,102,241,0.4)]" : "bg-white/5 text-white/50"}\`}>\n          <HiSparkles className="w-4 h-4" />\n        </div>\n        <div>\n          <span className="text-xs text-white font-bold tracking-wide block">Ambient Glow Mode</span>\n          <span className="text-[10px] text-indigo-200/70 font-medium">\n            {isOn ? "Active & Enhanced" : "Standard UI"}\n          </span>\n        </div>\n      </div>\n      <div\n        className={\`w-12 h-6 flex items-center rounded-full p-1 border border-white/25 \${isOn ? "bg-indigo-600/40 justify-end shadow-[inset_0_0_10px_rgba(99,102,241,0.5)]" : "bg-white/5 justify-start"}\`}\n      >\n        <motion.div\n          layout\n          transition={{ type: "spring", stiffness: 700, damping: 30 }}\n          className="w-4 h-4 rounded-full bg-indigo-200 shadow-[0_0_10px_#818cf8]"\n        />\n      </div>\n    </div>\n  );\n}`,
   },
-  // {
-  //   id: "toggle-bento-grid",
-  //   title: "Bento Grid Cluster Switch",
-  //   category: "Toggles & Switches",
-  //   description:
-  //     "Clean minimalist bento dashboard state toggle container layout.",
-  //   copiesCount: 320,
-  //   component: <BentoGridToggle />,
-  //   code: `<div className="flex items-center justify-between w-64 p-3 bg-slate-900 border border-slate-800 rounded-2xl font-baloo text-white"><span className="text-xs font-bold">BENTO_CLUSTER</span></div>`,
-  // },
+  
   {
     id: "toggle-bento-sync",
     title: "Bento Cloud Database Sync Switch",
@@ -179,16 +127,7 @@ export const togglesData = [
 
     code: `import { useState } from "react";\nimport { motion } from "framer-motion";\nimport { FiDatabase } from "react-icons/fi";\n\nexport default function BentoSyncSwitch() {\n  const [isOn, setIsOn] = useState(true);\n\n  return (\n    <div\n      onClick={() => setIsOn(!isOn)}\n      className="flex items-center justify-between w-80 p-4 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl font-baloo cursor-pointer shadow-[0_10px_25px_rgba(0,0,0,0.4)] transition-all select-none group"\n    >\n      <div className="flex items-center gap-3">\n        <div className={\`w-8 h-8 rounded-xl flex items-center justify-center transition-colors \${isOn ? "bg-emerald-500/15 text-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.2)]" : "bg-slate-800 text-slate-500"}\`}>\n          <FiDatabase className="w-4 h-4" />\n        </div>\n        <div>\n          <span className="text-xs text-slate-200 font-bold tracking-wide block">Cloud Database Sync</span>\n          <span className="text-[10px] text-slate-400 font-medium">\n            {isOn ? "Syncing Live Data" : "Paused & Offline"}\n          </span>\n        </div>\n      </div>\n      <div\n        className={\`w-12 h-6 flex items-center rounded-xl p-1 border border-slate-800 bg-slate-950 \${isOn ? "justify-end shadow-[inset_0_0_8px_rgba(16,185,129,0.3)]" : "justify-start"}\`}\n      >\n        <motion.div\n          layout\n          transition={{ type: "spring", stiffness: 700, damping: 30 }}\n          className="w-4 h-4 rounded-lg bg-emerald-500 shadow-[0_0_10px_#10b981]"\n        />\n      </div>\n    </div>\n  );\n}`,
   },
-  // {
-  //   id: "toggle-clay-soft",
-  //   title: "Claymorphism Soft Switch",
-  //   category: "Toggles & Switches",
-  //   description:
-  //     "Soft tactile 3D matte volumetric state switch with diffuse shadows.",
-  //   copiesCount: 255,
-  //   component: <ClaySoftToggle />,
-  //   code: `<div className="flex items-center justify-between w-64 p-3 bg-slate-900 rounded-2xl shadow-[6px_6px_12px_#020617] border border-slate-800 text-white"><span className="text-xs font-bold">CLAY_SWITCH</span></div>`,
-  // },
+  
   {
     id: "toggle-clay-pill",
     title: "Claymorphism Volumetric Rendering Toggle",
@@ -207,16 +146,7 @@ export const togglesData = [
 
     code: `import { useState } from "react";\nimport { motion } from "framer-motion";\nimport { FiBox } from "react-icons/fi";\n\nexport default function ClayPillToggle() {\n  const [isOn, setIsOn] = useState(true);\n\n  return (\n    <div\n      onClick={() => setIsOn(!isOn)}\n      className="flex items-center justify-between w-80 p-4 bg-slate-900 rounded-2xl shadow-[6px_6px_14px_#020617,-6px_-6px_14px_#1e293b] border border-slate-800 hover:border-slate-700 font-baloo cursor-pointer transition-all select-none group"\n    >\n      <div className="flex items-center gap-3">\n        <div className={\`w-8 h-8 rounded-xl flex items-center justify-center transition-colors \${isOn ? "bg-cyan-500/20 text-cyan-300 shadow-[0_0_10px_rgba(34,211,238,0.3)]" : "bg-slate-800 text-slate-500"}\`}>\n          <FiBox className="w-4 h-4" />\n        </div>\n        <div>\n          <span className="text-xs text-slate-200 font-bold tracking-wide block">Volumetric Rendering</span>\n          <span className="text-[10px] text-cyan-300/80 font-medium">\n            {isOn ? "WebGL 3D Accelerated" : "Standard 2D Mode"}\n          </span>\n        </div>\n      </div>\n      <div\n        className={\`w-12 h-6 flex items-center rounded-full p-1 bg-slate-950 shadow-inner border border-slate-800 \${isOn ? "justify-end bg-cyan-950/40" : "justify-start"}\`}\n      >\n        <motion.div\n          layout\n          transition={{ type: "spring", stiffness: 700, damping: 30 }}\n          className="w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]"\n        />\n      </div>\n    </div>\n  );\n}`,
   },
-  // {
-  //   id: "toggle-retro-terminal",
-  //   title: "Retro 90s Terminal Toggle",
-  //   category: "Toggles & Switches",
-  //   description:
-  //     "Green phosphor monospaced terminal environment state switch console.",
-  //   copiesCount: 295,
-  //   component: <RetroTerminalToggle />,
-  //   code: `<div className="flex items-center justify-between w-64 p-3 bg-black border-2 border-green-500 rounded font-mono text-green-400"><span className="text-xs">SYS_TOGGLE</span></div>`,
-  // },
+  
   {
     id: "toggle-retro-crt",
     title: "Retro CRT Phosphor Display Switch",

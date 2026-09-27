@@ -9,7 +9,7 @@ const getLKPrice = (priceStr) => {
 };
 
 export default function UiPacksTab({
-  title = "Syncxel UI Packs & Kits",
+  title = "SyncXel UI Packs & Kits",
   componentsData = [],
   categories = [],
   activeCategory = "All",

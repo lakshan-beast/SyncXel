@@ -148,7 +148,7 @@ export default function TeamSection() {
                       title: "Telegram Chat",
                     },
                     {
-                      href: "mailto:syncxelofficial@gmail.com",
+                      href: "mailto:lakshansandeepa0305@gmail.com",
                       icon: FaEnvelope,
                       title: "Email Chat",
                     },

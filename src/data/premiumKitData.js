@@ -1,3 +1,5 @@
+import photographerImage from "../assets/photograpy-website.png"
+
 export const premiumKits = [
   // Photographer Portfolio & Agency Kit
   {
@@ -8,7 +10,7 @@ export const premiumKits = [
     sales: "01 Sold",
     description:
       "Complete dark-mode ready photographer website template with Navbar, Hero, Services, Contact, Footer, and Framer Motion animations fully integrated.",
-    previewImg: "src/assets/photograpy-website.png",
+    previewImg: photographerImage,
     demoUrl: "https://photography-website-puce-omega.vercel.app",
     checkoutUrl: "https://yourstore.lemonsqueezy.com/buy/your-product-id",
   },
