@@ -189,7 +189,7 @@ export default function Footer() {
 
         <motion.div>
           {/* Links Columns Grid */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-4 gap-6 font-baloo px-6">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6 font-baloo px-6">
             {/* 1. Agency & Services */}
             <div className="flex flex-col space-y-5">
               <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-white font-mono">
