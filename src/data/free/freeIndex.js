@@ -1,39 +1,27 @@
 import { buttonsData } from "./Buttons-ActionsData";
 import { loadersData } from "./Loarders-AnimationsData";
-// import { animationsData } from "./AnimationData";
-import { notificationsData } from "./NavigationsData";
 import { cardsData } from "./Cards&Containers";
 import { badgesData } from "./Badges-PIlls-Indeicators";
-import { inputsData } from "./Inputs&Searchbars";
-// import { navbarsData } from "./Navbarsdata";
-// import { formsData } from "./FormsData";
-import { togglesData } from "./TogglesData";
-// import { pricingData } from "./PricingData";
-// import { accordionsData } from "../../../old version/library/accordions/AccordionsData";
-import { avatarsData } from "./AvatorsData";
-// import { tabsData } from "./tabletsData";
-// import { footersData } from "./FootersData";
-import { checkboxesData } from "./CheckboxesData";
-import { successData } from "./SuccessData";
 import { backTopData } from "./TopButtonData";
+import { successData } from "./SuccessData";
+import { checkboxesData } from "./CheckboxesData";
+import { togglesData } from "./TogglesData";
+import { avatarsData } from "./AvatorsData";
+
+// import { inputsData } from "./Inputs&Searchbars";
+// import { notificationsData } from "./NavigationsData";
 
 export const freeComponentsData = [
   ...buttonsData,
   ...loadersData,
-  // ...animationsData,
-  // ...formsData,
-  ...notificationsData,
+  ...backTopData,
   ...cardsData,
   ...badgesData,
-  ...inputsData,
-  // ...navbarsData,
-  ...togglesData,
-  // ...pricingData,
-  // ...accordionsData,
-  ...avatarsData,
-  // ...tabsData,
-  // ...footersData,
-  ...checkboxesData,
   ...successData,
-  ...backTopData,
+  ...togglesData,
+  ...checkboxesData,
+  ...avatarsData,
+  
+  // ...inputsData,
+  // ...notificationsData,
 ];

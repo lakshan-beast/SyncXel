@@ -14,24 +14,52 @@
 //   );
 // }
 
+// import { motion } from "framer-motion";
+
+// export default function FacebookSkeletonLoader() {
+//   return (
+//     <div className="w-72 p-4 rounded-2xl bg-slate-900/90 border border-slate-800/80 backdrop-blur-xl space-y-3 overflow-hidden relative shadow-lg">
+//       <motion.div
+//         animate={{ x: ["-100%", "100%"] }}
+//         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+//         className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent pointer-events-none"
+//       />
+//       <div className="flex items-center space-x-3">
+//         <div className="rounded-full bg-slate-800 h-10 w-10 shrink-0"></div>
+//         <div className="space-y-2 flex-1">
+//           <div className="h-3 bg-slate-800 rounded-md w-3/4"></div>
+//           <div className="h-2 bg-slate-800/60 rounded-md w-1/2"></div>
+//         </div>
+//       </div>
+//       <div className="h-16 bg-slate-800/50 rounded-xl"></div>
+//     </div>
+//   );
+// }
+
+
 import { motion } from "framer-motion";
 
 export default function FacebookSkeletonLoader() {
   return (
-    <div className="w-72 p-4 rounded-2xl bg-slate-900/90 border border-slate-800/80 backdrop-blur-xl space-y-3 overflow-hidden relative shadow-lg">
+    <div className="w-full max-w-sm mx-auto p-6 rounded-3xl bg-slate-900/90 border border-slate-800/80 backdrop-blur-xl space-y-2 overflow-hidden relative shadow-none select-none ">
+      {/* Sweeping Shimmer Light Effect */}
       <motion.div
         animate={{ x: ["-100%", "100%"] }}
-        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent pointer-events-none"
+        transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-100/20 to-transparent pointer-events-none "
       />
-      <div className="flex items-center space-x-3">
-        <div className="rounded-full bg-slate-800 h-10 w-10 shrink-0"></div>
+      
+      {/* Top Profile Header Placeholder */}
+      <div className="flex items-center space-x-2">
+        <div className="rounded-full bg-slate-700 h-10 w-10 shrink-0" />
         <div className="space-y-2 flex-1">
-          <div className="h-3 bg-slate-800 rounded-md w-3/4"></div>
-          <div className="h-2 bg-slate-800/60 rounded-md w-1/2"></div>
+          <div className="h-3 bg-slate-700 rounded-md w-3/4" />
+          <div className="h-2 bg-slate-700/80 rounded-md w-1/2" />
         </div>
       </div>
-      <div className="h-16 bg-slate-800/50 rounded-xl"></div>
+
+      {/* Main Content Card Placeholder */}
+      <div className="h-18 bg-slate-700/50 rounded-xl" />
     </div>
   );
 }

@@ -7,17 +7,34 @@
 //   );
 // }
 
+// import { motion } from "framer-motion";
+
+// export default function PingRadarLoader() {
+//   return (
+//     <div className="relative flex items-center justify-center w-12 h-12">
+//       <motion.div
+//         scale={[1, 1.8]}
+//         opacity={[0.6, 0]}
+//         transition={{ repeat: Infinity, duration: 1.5, ease: "easeOut" }}
+//         className="absolute w-full h-full rounded-full border border-cyan-500/60"
+//       />
+//       <div className="w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_15px_#22d3ee]" />
+//     </div>
+//   );
+// }
+
 import { motion } from "framer-motion";
 
 export default function PingRadarLoader() {
   return (
-    <div className="relative flex items-center justify-center w-12 h-12">
+    <div className="relative flex items-center justify-center w-12 h-12 select-none">
+      {/* Pulsing Expanding Radar Ring */}
       <motion.div
-        scale={[1, 1.8]}
-        opacity={[0.6, 0]}
+        animate={{ scale: [1, 1.8], opacity: [0.6, 0] }}
         transition={{ repeat: Infinity, duration: 1.5, ease: "easeOut" }}
-        className="absolute w-full h-full rounded-full border border-cyan-500/60"
+        className="absolute w-full h-full rounded-full border border-cyan-500/60 shadow-[0_0_10px_rgba(34,211,238,0.3)]"
       />
+      {/* Glowing Core Dot */}
       <div className="w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_15px_#22d3ee]" />
     </div>
   );
