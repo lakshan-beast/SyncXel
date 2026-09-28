@@ -25,19 +25,19 @@ export default function ComponentsHubPage() {
     "Buttons & Actions",
     "Cards & Containers",
     "Loaders & Animations",
-    // "Modals, Toasts & Notifications",
-    // "Inputs & Search Bars",
     "Badges & Status Indicators",
     "Avatars & Profiles",
     "Checkboxes & Radios",
     "Success & Toasts",
-    // "Back to Top & FAB",
     "Toggles & Switches",
+    // "Modals, Toasts & Notifications",
+    // "Inputs & Search Bars",
+    // "Back to Top & FAB",
   ];
 
-  // UI Packs 
+  // UI Packs
   const packCategories = [
-    // "All",
+    "All",
     "Navbars",
     "Hero Sections",
     "Authentication",
@@ -48,7 +48,7 @@ export default function ComponentsHubPage() {
     "Footers",
   ];
 
-  // Full Templates / Dashboards 
+  // Full Templates / Dashboards
   const templateCategories = [
     "All",
     "Full Template Suite",
@@ -62,7 +62,7 @@ export default function ComponentsHubPage() {
   );
 
   const filteredUiPacks = uiPacksData.filter(
-    (item) => packCategory === "Navbars" || item.category === packCategory,
+    (item) => packCategory === "All" || item.category === packCategory,
   );
 
   const filteredTemplates = premiumKits.filter(
