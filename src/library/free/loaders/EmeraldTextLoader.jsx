@@ -65,7 +65,7 @@ export default function EmeraldTextLoader() {
           <span className="text-xs font-bold text-slate-800 tracking-wide">
             Synchronizing Database
           </span>
-          <span className="text-[10px] font-mono text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
+          <span className="text-[10px] font-baloo text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
             Live
           </span>
         </div>

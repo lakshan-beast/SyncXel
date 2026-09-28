@@ -21,8 +21,8 @@ export default function DualRingLoader() {
       {/* Inner Indigo Ring (Counter-Clockwise) */}
       <motion.div
         animate={{ rotate: -360 }}
-        transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-        className="absolute inset-2 border-3 border-indigo-500/20 border-b-indigo-500 rounded-full shadow-[0_0_10px_rgba(129,140,248,0.9)]"
+        transition={{ repeat: Infinity, duration: 2.5, ease: "easeOut" }}
+        className="absolute inset-2 border-3 border-indigo-200/20 border-b-indigo-500 rounded-full shadow-[0_0_10px_rgba(129,140,248,0.9)]"
       />
     </div>
   );

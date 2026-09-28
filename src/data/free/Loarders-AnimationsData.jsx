@@ -1,5 +1,3 @@
-import CyanRingLoader from "../../library/free/loaders/CyanRingLoader";
-import PristineLightButton from "../../library/free/buttons/PristineLightButton";
 import EmeraldTextLoader from "../../library/free/loaders/EmeraldTextLoader";
 import PingRadarLoader from "../../library/free/loaders/PingRadarLoader";
 import BouncingDotsLoader from "../../library/free/loaders/BouncingDotsLoader";
@@ -34,25 +32,6 @@ export const loadersData = [
 
     code: `import { motion } from "framer-motion";\n\nexport default function BouncingDotsLoader() {\n  const colors = [\n    "bg-amber-400 shadow-[0_0_10px_#fbbf24]",\n    "bg-orange-500 shadow-[0_0_10px_#f97316]",\n    "bg-rose-500 shadow-[0_0_10px_#f43f5e]"\n  ];\n\n  return (\n    <div className="w-full max-w-sm mx-auto py-5 px-5 rounded-2xl bg-transparent flex items-center justify-between font-baloo select-none shadow-md border border-slate-200">\n      <div className="flex items-center gap-2.5">\n        <span className="w-2 h-2 rounded-full bg-orange-500 animate-ping" />\n        <span className="text-base font-semibold text-slate-400 tracking-wide capitalize">\n          Synthesizing AI Response...\n        </span>\n      </div>\n      <div className="flex space-x-2.5 items-center">\n        {[0, 0.2, 0.4].map((delay, i) => (\n          <motion.div\n            key={i}\n            animate={{ y: [0, -6, 0], scale: [1, 1.15, 1] }}\n            transition={{\n              repeat: Infinity,\n              duration: 0.6,\n              delay,\n              ease: "easeInOut",\n            }}\n            className={\`w-3 h-3 rounded-full \${colors[i]}\`}\n          />\n        ))}\n      </div>\n    </div>\n  );\n}`,
   },
-
-  // {
-  //   id: "btn-pristine-light",
-  //   title: "Pristine Pastel Corporate Light CTA Button",
-  //   category: "Buttons & Actions",
-  //   description:
-  //     "Clean, professional light-mode action button featuring soft pastel gradient backdrops, crisp slate typography, delicate drop shadows, and an interactive icon container.",
-  //   copiesCount: 390,
-
-  //   // Hyper-realistic use cases
-  //   useCases: [
-  //     "B2B SaaS Enterprise Portals: Positioned on clean light-mode marketing headers for 'Schedule Enterprise Demo' or 'Request Access' triggers.",
-  //     "Corporate Financial Platforms: Used in professional executive dashboards, billing settings, and invoice approval flows.",
-  //   ],
-
-  //   component: <PristineLightButton />,
-
-  //   code: `import { motion } from "framer-motion";\nimport { FiArrowRight } from "react-icons/fi";\n\nexport default function PristineLightButton({ text = "Schedule Enterprise Demo", onClick }) {\n  return (\n    <motion.button\n      whileHover={{ scale: 1.03, y: -2, boxShadow: "0 20px 35px -10px rgba(99, 102, 241, 0.25)" }}\n      whileTap={{ scale: 0.96 }}\n      transition={{ type: "spring", stiffness: 400, damping: 17 }}\n      onClick={onClick}\n      className="px-7 py-3.5 bg-gradient-to-r from-white via-slate-50 to-indigo-50/50 border border-slate-200/80 hover:border-indigo-300 text-slate-800 font-baloo text-xs font-bold rounded-2xl shadow-[0_10px_25px_rgba(100,116,139,0.1)] cursor-pointer select-none flex items-center gap-3 group transition-colors"\n    >\n      <span className="tracking-wide group-hover:text-indigo-600 transition-colors">\n        {text}\n      </span>\n      <div className="w-6 h-6 rounded-full bg-indigo-50 group-hover:bg-indigo-600 flex items-center justify-center transition-colors">\n        <FiArrowRight className="w-3.5 h-3.5 text-indigo-600 group-hover:text-white transition-colors" />\n      </div>\n    </motion.button>\n  );\n}`,
-  // },
 
   {
     id: "loader-emerald-text",
@@ -152,18 +131,17 @@ export const loadersData = [
     title: "Audio Equalizer Wave",
     category: "Loaders & Animations",
     description:
-      "Compact square widget container featuring rhythmic pulsing vertical bars, transparent background styling, and clean light-theme typography for audio search states.",
-    copiesCount: 230,
+      "Dynamic audio frequency equalizer wave with staggered multi-colored motion bars, housed inside a clean minimalist white container.",
+    copiesCount: 189,
 
-    // Hyper-realistic use cases
     useCases: [
-      "Music & Podcast Streaming Platforms: Used inside square grid cards or modal widgets while querying audio databases on light-mode interfaces.",
-      "Voice AI Assistants: Positioned as an active listening indicator in square UI panels during speech recognition.",
+      "AI Voice & Transcription SaaS: Positioned inside live audio processing or speech-to-text nodes.",
+      "Media Streaming Dashboards: Used as an active media playback status indicator.",
     ],
 
     component: <SoundWaveLoader />,
 
-    code: `import { motion } from "framer-motion";\n\nexport default function SoundWaveLoader() {\n  return (\n    <div className="w-48 h-48 mx-auto p-5 rounded-3xl bg-transparent border border-slate-100 flex flex-col justify-between items-center text-center font-baloo select-none shadow-md">\n      <div className="space-y-1">\n        <h4 className="text-xs font-bold text-cyan-600 leading-tight tracking-wide">\n          Searching Audio Streams\n        </h4>\n      </div>\n      <div className="flex items-end justify-center gap-1.5 h-10 my-auto">\n        {[0.6, 0.8, 0.5, 0.7, 0.65].map((dur, i) => (\n          <motion.div\n            key={i}\n            animate={{ height: ["20%", "100%", "20%"] }}\n            transition={{\n              repeat: Infinity,\n              duration: dur,\n              ease: "easeInOut",\n            }}\n            className={\`w-2 rounded-full \${i === 2 ? "bg-indigo-500 shadow-[0_0_8px_#6366f1]" : "bg-cyan-400 shadow-[0_0_8px_#22d3ee]"}\`}\n          />\n        ))}\n      </div>\n    </div>\n  );\n}`,
+    code: `import { motion } from "framer-motion";\n\nexport default function SoundWaveLoader() {\n  return (\n    <div className="w-28 h-28 mx-auto p-5 rounded-3xl bg-white border border-slate-200 flex flex-col justify-between items-center text-center font-baloo select-none shadow-sm">\n      <div className="flex items-end justify-center gap-1.5 h-7 my-auto">\n        {[0.6, 0.8, 0.5, 0.7, 0.65].map((dur, i) => (\n          <motion.div\n            key={i}\n            animate={{ height: ["20%", "100%", "20%"] }}\n            transition={{ repeat: Infinity, duration: dur, ease: "easeInOut" }}\n            className={\`w-1.5 rounded-full \${i === 2 ? "bg-indigo-500 shadow-[0_0_8px_#6366f1]" : "bg-cyan-400 shadow-[0_0_8px_#22d3ee]"}\`}\n          />\n        ))}\n      </div>\n    </div>\n  );\n}`,
   },
 
   {
@@ -171,78 +149,124 @@ export const loadersData = [
     title: "Dashed Neon Ring",
     category: "Loaders & Animations",
     description:
-      "Rotating dashed border container framing a glowing central nexus, designed as a clean standalone minimalist indicator.",
+      "Rotating dashed border container framing a glowing central nexus with a subtle ping pulse, housed inside a minimalist white container.",
     copiesCount: 175,
 
-    // Hyper-realistic use cases
     useCases: [
-      "Fintech Status Indicators: Positioned inside transaction processing rows to show active secure states.",
-      "Cloud SaaS Infrastructure: Used as a minimalist cluster status indicator widget.",
+      "SaaS Light Mode Dashboards: Positioned inside table loading states, card headers, or metric grid items.",
+      "Fintech Transaction Panels: Used as a sleek visual indicator for active secure states.",
     ],
 
     component: <DashedRingLoader />,
 
-    code: `import { motion } from "framer-motion";\n\nexport default function DashedRingLoader() {\n  return (\n    <div className="relative flex items-center justify-center w-12 h-12 select-none">\n      <motion.div\n        animate={{ rotate: 360 }}\n        transition={{ repeat: Infinity, duration: 2, ease: "linear" }}\n        className="absolute inset-0 border-2 border-dashed border-cyan-500/40 rounded-full"\n      />\n      <div className="w-3 h-3 bg-cyan-400 rounded-full shadow-[0_0_10px_#22d3ee]" />\n    </div>\n  );\n}`,
+    code: `import { motion } from "framer-motion";\n\nexport default function DashedRingLoader() {\n  return (\n    <div className="w-28 h-28 mx-auto bg-white border border-slate-200 rounded-3xl shadow-sm flex items-center justify-center relative select-none">\n      <motion.div\n        animate={{ rotate: 360 }}\n        transition={{ repeat: Infinity, duration: 3, ease: "linear" }}\n        className="absolute w-12 h-12 border-2 border-dashed border-cyan-500/80 rounded-full"\n      />\n      <div className="relative flex items-center justify-center">\n        <div className="absolute w-5 h-5 animate-ping bg-cyan-400/35 rounded-full" />\n        <div className="w-3 h-3 bg-cyan-500 rounded-full shadow-[0_0_10px_#22d3ee]" />\n      </div>\n    </div>\n  );\n}`,
   },
-  
+
   {
     id: "loader-dual-ping",
     title: "Multi-Layer Pulse Radar",
     category: "Loaders & Animations",
     description:
-      "Concentric glowing motion rings radiating outward for status feeds.",
+      "Concentric glowing motion rings radiating outward, styled as a minimalist standalone indicator inside a clean white container background.",
     copiesCount: 204,
+
+    useCases: [
+      "SaaS Light Mode Dashboards: Positioned inside table rows, card headers, or metric grids for live telemetry status.",
+      "Fintech Analytics Portals: Used as a subtle, clean active connectivity indicator on light-themed interfaces.",
+    ],
+
     component: <DualPingLoader />,
-    code: `<div className="relative flex items-center justify-center w-14 h-14"><motion.div animate={{ scale: [1, 1.6], opacity: [0.6, 0] }} transition={{ repeat: Infinity, duration: 1.5 }} className="absolute w-full h-full rounded-full bg-cyan-500/20" /></div>`,
+
+    code: `import { motion } from "framer-motion";\n\nexport default function DualPingLoader() {\n  return (\n    <div className="w-28 h-28 mx-auto bg-white border border-slate-200/20 rounded-3xl shadow-sm flex items-center justify-center relative select-none">\n      <motion.div\n        animate={{ scale: [1, 1.6], opacity: [0.6, 0] }}\n        transition={{ repeat: Infinity, duration: 1.5, ease: "easeOut" }}\n        className="absolute w-12 h-12 rounded-full bg-cyan-500/20"\n      />\n      <motion.div\n        animate={{ scale: [1, 1.3], opacity: [0.8, 0] }}\n        transition={{ repeat: Infinity, duration: 1.2, delay: 0.3, ease: "easeOut" }}\n        className="absolute w-9 h-9 rounded-full bg-indigo-500/25"\n      />\n      <div className="w-3.5 h-3.5 rounded-full bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.4)]" />\n    </div>\n  );\n}`,
   },
+
   {
     id: "loader-gradient-spinner",
     title: "Cyber Gradient Spinner",
     category: "Loaders & Animations",
     description:
-      "Sleek border ring transitioning smoothly with cyan and indigo motion hues.",
+      "Sleek border ring transitioning smoothly with cyan and indigo motion hues, housed inside a clean minimalist white container.",
     copiesCount: 295,
+
+    useCases: [
+      "SaaS Light Mode Dashboards: Positioned inside table loading states, button spinners, or card headers.",
+      "Fintech Transaction Panels: Used as a subtle, high-performance visual indicator for active background processes.",
+    ],
+
     component: <CyberGradientSpinner />,
-    code: `<div className="relative w-12 h-12 flex items-center justify-center"><motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 1, ease: "linear" }} className="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 border-r-indigo-500" /></div>`,
+
+    code: `import { motion } from "framer-motion";\n\nexport default function CyberGradientSpinner() {\n  return (\n    <div className="w-28 h-28 mx-auto bg-white border border-slate-200 rounded-3xl shadow-sm flex items-center justify-center relative select-none">\n      <motion.div\n        animate={{ rotate: 360 }}\n        transition={{ repeat: Infinity, duration: 1, ease: "linear" }}\n        className="w-10 h-10 rounded-full border-3 border-transparent border-t-cyan-500 border-r-indigo-500 shadow-[0_0_10px_rgba(6,182,212,0.2)]"\n      />\n    </div>\n  );\n}`,
   },
+
   {
     id: "loader-tokenizing",
     title: "Tokenizing Process Indicator",
     category: "Loaders & Animations",
     description:
-      "Monospace status pill with sequential pulsing block animation.",
+      "Ultra-clean horizontal SaaS banner featuring a glowing telemetry indicator, refined typography, and sleek sequential pulsing blocks.",
     copiesCount: 340,
+
+    useCases: [
+      "Fintech API Vaults: Positioned inside inline configuration rows while processing user authentication tokens.",
+      "AI SaaS Platforms: Used during LLM prompt vectorization and background data chunking states on light-mode dashboards.",
+    ],
+
     component: <TokenizingLoader />,
-    code: `<div className="flex items-center gap-2 font-mono text-xs text-cyan-400 bg-slate-900/90 px-3.5 py-2 rounded-xl border border-slate-800"><span>TOKENIZING</span></div>`,
+
+    code: `import { motion } from "framer-motion";\n\nexport default function TokenizingLoader() {\n  return (\n    <div className="w-full max-w-sm mx-auto p-4 bg-white border border-slate-200/80 rounded-3xl shadow-xs flex items-center justify-between font-baloo select-none">\n      <div className="flex items-center gap-3">\n        <div className="relative w-8 h-8 rounded-2xl bg-cyan-50 border border-cyan-100 flex items-center justify-center shrink-0">\n          <motion.div\n            animate={{ scale: [1, 1.4], opacity: [0.5, 0] }}\n            transition={{ repeat: Infinity, duration: 1.5, ease: "easeOut" }}\n            className="absolute inset-0 rounded-2xl bg-cyan-400/20"\n          />\n          <div className="w-2.5 h-2.5 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.5)]" />\n        </div>\n        <div className="flex flex-col">\n          <span className="text-xs font-bold text-slate-800 tracking-wide">\n            Tokenizing API Stream\n          </span>\n          <span className="text-[11px] text-slate-400 font-medium">\n            Encrypting payload data...\n          </span>\n        </div>\n      </div>\n      <div className="flex items-center gap-1 bg-slate-50 border border-slate-100 px-3 py-2 rounded-2xl">\n        {[0, 0.2, 0.4].map((delay, i) => (\n          <motion.span\n            key={i}\n            animate={{ opacity: [1, 0.2, 1], scaleY: [1, 0.6, 1] }}\n            transition={{ repeat: Infinity, duration: 0.8, delay }}\n            className={\`w-1 h-3 rounded-full \${i === 1 ? "bg-indigo-500" : "bg-cyan-500"}\`}\n          />\n        ))}\n      </div>\n    </div>\n  );\n}`,
   },
+
   {
     id: "loader-geometric-square",
     title: "Nested Geometric Spinner",
     category: "Loaders & Animations",
     description:
-      "Counter-rotating square borders framing a bright center coordinate.",
+      "Counter-rotating square borders framing a bright center coordinate, housed inside a clean minimalist white container.",
     copiesCount: 162,
+
+    useCases: [
+      "SaaS Light Mode Dashboards: Positioned inside table loading states, card headers, or metric grid items.",
+      "Fintech Analytics Portals: Used as a sleek, high-precision visual indicator for active data processing.",
+    ],
+
     component: <GeometricSquareLoader />,
-    code: `<div className="relative w-12 h-12 flex items-center justify-center"><motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 3 }} className="absolute inset-0 border border-cyan-500/30 rounded-xl" /></div>`,
+
+    code: `import { motion } from "framer-motion";\n\nexport default function GeometricSquareLoader() {\n  return (\n    <div className="w-28 h-28 mx-auto bg-white border border-slate-200 rounded-3xl shadow-sm flex items-center justify-center relative select-none">\n      <div className="relative w-12 h-12 flex items-center justify-center">\n        <motion.div\n          animate={{ rotate: 360 }}\n          transition={{ repeat: Infinity, duration: 3, ease: "linear" }}\n          className="absolute inset-0 border border-cyan-500/30 rounded-xl"\n        />\n        <motion.div\n          animate={{ rotate: -360 }}\n          transition={{ repeat: Infinity, duration: 2, ease: "linear" }}\n          className="absolute inset-2 border border-indigo-500/40 rounded-lg"\n        />\n        <div className="w-2 h-2 bg-cyan-400 rounded-sm shadow-[0_0_10px_#22d3ee]" />\n      </div>\n    </div>\n  );\n}`,
   },
+
   {
     id: "loader-grid-matrix",
     title: "Pulsing Grid Matrix",
     category: "Loaders & Animations",
     description:
-      "2x2 pulsing dot matrix with staggered neon motion illumination.",
+      "2x2 pulsing dot matrix with staggered neon motion illumination, housed inside a clean minimalist white container.",
     copiesCount: 218,
+
+    useCases: [
+      "SaaS Light Mode Dashboards: Positioned inside table loading states, card headers, or metric grid items.",
+      "Fintech Analytics Portals: Used as a sleek, high-precision visual indicator for active data processing.",
+    ],
+
     component: <GridMatrixLoader />,
-    code: `<div className="grid grid-cols-2 gap-1.5 w-8 h-8"><motion.div animate={{ opacity: [1, 0.3, 1] }} transition={{ repeat: Infinity, duration: 0.8 }} className="rounded-sm bg-cyan-400" /></div>`,
+
+    code: `import { motion } from "framer-motion";\n\nexport default function GridMatrixLoader() {\n  return (\n    <div className="w-28 h-28 mx-auto bg-white border border-slate-200 rounded-3xl shadow-sm flex items-center justify-center relative select-none">\n      <div className="grid grid-cols-2 gap-1.5 w-8 h-8">\n        {[0, 0.2, 0.4, 0.6].map((delay, i) => (\n          <motion.div\n            key={i}\n            animate={{ opacity: [1, 0.3, 1] }}\n            transition={{ repeat: Infinity, duration: 0.8, delay, ease: "easeInOut" }}\n            className={\`rounded-sm \${i === 0 || i === 3 ? "bg-cyan-400 shadow-[0_0_8px_#22d3ee]" : "bg-indigo-500/50"}\`}\n          />\n        ))}\n      </div>\n    </div>\n  );\n}`,
   },
+
   {
     id: "loader-neon-spinner",
     title: "Glowing Neon Ring Loader",
     category: "Loaders & Animations",
     description:
-      "Smooth glowing circular spinner with vivid neon backdrop dispersion.",
+      "Smooth glowing circular spinner with vivid neon backdrop dispersion, housed inside a clean minimalist white container.",
     copiesCount: 410,
+
+    useCases: [
+      "SaaS Light Mode Dashboards: Positioned inside table loading states, card headers, or metric grid items.",
+      "Fintech Analytics Portals: Used as a sleek, high-performance visual indicator for active data processing.",
+    ],
+
     component: <NeonSpinnerLoader />,
-    code: `<div className="relative w-12 h-12 flex items-center justify-center"><motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 1 }} className="absolute inset-0 rounded-full border-4 border-cyan-400 border-t-transparent" /></div>`,
+
+    code: `import { motion } from "framer-motion";\n\nexport default function NeonSpinnerLoader() {\n  return (\n    <div className="w-28 h-28 mx-auto bg-white border border-slate-200 rounded-3xl shadow-sm flex items-center justify-center relative select-none">\n      <div className="relative w-12 h-12 flex items-center justify-center">\n        <div className="absolute inset-0 rounded-full border-4 border-slate-100" />\n        <motion.div\n          animate={{ rotate: 360 }}\n          transition={{ repeat: Infinity, duration: 1, ease: "linear" }}\n          className="absolute inset-0 rounded-full border-4 border-cyan-400 border-t-transparent shadow-[0_0_15px_rgba(34,211,238,0.4)]"\n        />\n      </div>\n    </div>\n  );\n}`,
   },
 ];
