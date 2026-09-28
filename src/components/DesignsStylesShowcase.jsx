@@ -1,5 +1,4 @@
 import React from "react";
-import { HiSparkles } from "react-icons/hi2";
 
 export default function DesignStylesShowcase() {
   const designStyles = [
@@ -70,7 +69,7 @@ export default function DesignStylesShowcase() {
                 {style.tag}
               </span>
               <span className="text-xs text-slate-300 font-mono">
-              // design 0{idx + 1}
+                // design 0{idx + 1}
               </span>
             </div>
 
