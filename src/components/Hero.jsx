@@ -97,7 +97,7 @@ export default function Hero() {
             
             {/* Button 1: Explore Components */}
             <motion.a
-              href="#components"
+              href="#components-prev"
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
@@ -114,7 +114,7 @@ export default function Hero() {
 
             {/* Button 2: Hire Us */}
             <motion.a
-              href="#hire"
+              href="#services"
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
@@ -122,7 +122,7 @@ export default function Hero() {
               <div className="flex items-center space-x-3">
                 <HiOutlineCodeBracket className="w-4 h-4 text-slate-700 group-hover:scale-125 group-hover:-rotate-45 transition-transform shrink-0 duration-300" />
                 <span className="hidden lg:inline tracking-tight">
-                  const hire = () =&gt; custom_dev();
+                  const services = () =&gt; custom_services();
                 </span>
                 <span className="lg:hidden">Hire Us for Custom Project</span>
               </div>
