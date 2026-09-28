@@ -17,17 +17,17 @@ import { IoIosGitBranch } from "react-icons/io";
 // Data Imports
 import { integrationsData } from "../data/docs/integrationsData";
 
-import QuickSetup from "../components/tabs/QuickSetup";
-import CssTricks from "../components/tabs/CssTricks";
-import GitGuide from "../components/tabs/GridGuide";
-import VercelGuide from "../components/tabs/VercelGuide";
-import SeoDnsGuide from "../components/tabs/SeoGuide";
-import CustomHooks from "../components/tabs/HooksGuide";
-import AnimationGuide from "../components/tabs/AnimationGuide";
-import AuthGuide from "../components/tabs/AuthGuide";
-import StateGuide from "../components/tabs/StateGuide";
-import FormsGuide from "../components/tabs/FormsGuide";
-import FaqGuide from "../components/tabs/FaqGuide";
+import QuickSetup from "../components/guideTabs/QuickSetup";
+import CssTricks from "../components/guideTabs/CssTricks";
+import GitGuide from "../components/guideTabs/GridGuide";
+import VercelGuide from "../components/guideTabs/VercelGuide";
+import SeoDnsGuide from "../components/guideTabs/SeoGuide";
+import CustomHooks from "../components/guideTabs/HooksGuide";
+import AnimationGuide from "../components/guideTabs/AnimationGuide";
+import AuthGuide from "../components/guideTabs/AuthGuide";
+import StateGuide from "../components/guideTabs/StateGuide";
+import FormsGuide from "../components/guideTabs/FormsGuide";
+import FaqGuide from "../components/guideTabs/FaqGuide";
 
 import KnowledgeHubHeader from "../components/KnowledgeHubHeader";
 
