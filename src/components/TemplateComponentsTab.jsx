@@ -136,11 +136,11 @@ export default function TemplateComponentsTab({
                             <span className="font-baloo text-slate-600">
                               Complete setup guides for Firebase, Vercel &
                               GitHub. Visit{" "}
-                              <a
-                                href="/docs"
+                              <Link
+                                to="/docs"
                                 className="text-slate-900 underline font-bold">
                                 syncxel.com/docs
-                              </a>
+                              </Link>
                               .
                             </span>
                           </div>
