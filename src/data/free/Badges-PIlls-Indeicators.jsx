@@ -1,70 +1,58 @@
-import LiveStatusBadge from "../../library/free/badges/LiveStatusBadge";
+import EncryptedVaultBadge from "../../library/free/badges/EncryptedVaultBadge";
 import CyberSecurityBadge from "../../library/free/badges/CyberSecurityBadge";
 
-// import LiveStatusBadge2 from "../../library/free/badges/LiveStatusBadge2";
-// import CyberSecurityBadge2 from "../../library/free/badges/CyberSecurityBadge2";
 import BrutalAlertBadge from "../../library/free/badges/BrutalAlertBadge";
-import BrutalRankBadge from "../../library/free/badges/BrutalRankBadge";
-import GlassFrostBadge from "../../library/free/badges/GlassFrostBadge";
 import GlassNeonBadge from "../../library/free/badges/GlassNeonBadge";
 import BentoStatusBadge from "../../library/free/badges/BentoStatusBadge";
 import BentoClusterBadge from "../../library/free/badges/BentoClusterBadge";
 import ClaySoftBadge from "../../library/free/badges/ClaySoftBadge";
 import ClayPillBadge from "../../library/free/badges/ClayPillBadge";
-import RetroTerminalBadge from "../../library/free/badges/RetroTerminalBadge";
 import RetroCrtBadge from "../../library/free/badges/RetroCrtBadge";
+
+import RetroTerminalBadge from "../../library/free/badges/RetroTerminalBadge";
+import BrutalRankBadge from "../../library/free/badges/BrutalRankBadge";
+import GlassFrostBadge from "../../library/free/badges/GlassFrostBadge";
+
+// import LiveStatusBadge2 from "../../library/free/badges/LiveStatusBadge2";
+// import CyberSecurityBadge2 from "../../library/free/badges/CyberSecurityBadge2";
 
 export const badgesData = [
   {
-    id: "badge-live-status",
-    title: "Live Status Ping Badge",
+    id: "badge-encrypted-vault",
+    title: "Encrypted Vault Status Badge",
     category: "Badges & Status Indicators",
     description:
-      "Pulsing system online status badge with glowing emerald indicators.",
-    copiesCount: 290,
-    component: <LiveStatusBadge />,
-    code: `<div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-950 border border-emerald-500/40 rounded-full font-baloo text-[11px] text-emerald-400"><span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />SYS_ONLINE</div>`,
+      "Secure fintech status indicator featuring a pulsing indigo core and clean white container layout for encrypted gateway sessions.",
+    copiesCount: 312,
+
+    useCases: [
+      "Fintech Vault Panels: Positioned inside payment gateway headers to indicate active TLS 1.3 encryption.",
+      "SaaS Security Settings: Used in compliance and API key management screens.",
+    ],
+
+    component: <EncryptedVaultBadge />,
+
+    code: `import { motion } from "framer-motion";\n\nexport default function EncryptedVaultBadge() {\n  return (\n    <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-white border border-slate-200 rounded-full font-baloo text-xs font-semibold text-slate-700 shadow-2xs select-none">\n      <div className="relative flex items-center justify-center w-2.5 h-2.5">\n        <motion.span\n          animate={{ scale: [1, 1.8], opacity: [0.6, 0] }}\n          transition={{ repeat: Infinity, duration: 2, ease: "easeOut" }}\n          className="absolute inset-0 rounded-full bg-indigo-500/30"\n        />\n        <span className="w-2 h-2 rounded-full bg-indigo-600" />\n      </div>\n      <span className="tracking-wide">ENCRYPTED_VAULT // TLS 1.3</span>\n    </div>\n  );\n}`,
   },
-  // {
-  //   id: "badge-cyber-security",
-  //   title: "Cyber Security Clearance Badge",
-  //   category: "Badges & Status Indicators",
-  //   description:
-  //     "High-security tier badge with hover scale effect and blinking matrix cursor.",
-  //   copiesCount: 340,
-  //   component: <CyberSecurityBadge />,
-  //   code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-slate-950 border border-cyan-500/40 rounded-xl font-baloo text-[11px] text-cyan-300">SECURE_L3</div>`,
-  // },
+
   {
-    id: "badge-brutal-alert",
-    title: "Neo-Brutalism Alert Badge",
+    id: "badge-neural-sync",
+    title: "AI Neural Sync Status Badge",
     category: "Badges & Status Indicators",
     description:
-      "High-contrast geometric warning badge with sharp brutalist borders.",
-    copiesCount: 315,
+      "High-end telemetry badge featuring a dual-layer pulsing neon core and split monospace typography, built for modern AI and LLM workflow dashboards.",
+    copiesCount: 342,
+
+    useCases: [
+      "AI SaaS Platforms: Positioned in LLM playground headers or prompt streaming panels to indicate real-time neural connection.",
+      "Data Intelligence Portals: Used in analytics cards to show active background model syncing status.",
+    ],
+
     component: <BrutalAlertBadge />,
-    code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-yellow-300 border-2 border-slate-950 rounded-xl font-baloo text-[11px] text-slate-950 font-black shadow-[3px_3px_0px_0px_#020617]">SYSTEM_ALERT</div>`,
+
+    code: `import { motion } from "framer-motion";\n\nexport default function BrutalAlertBadge() {\n  return (\n    <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-white border border-slate-200/80 rounded-full font-baloo text-xs font-semibold text-slate-800 shadow-xs select-none">\n      <div className="relative flex items-center justify-center w-2.5 h-2.5">\n        <motion.div\n          animate={{ scale: [1, 2], opacity: [0.5, 0] }}\n          transition={{ repeat: Infinity, duration: 1.6, ease: "easeOut" }}\n          className="absolute inset-0 rounded-full bg-cyan-400/40"\n        />\n        <div className="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.6)]" />\n      </div>\n      <div className="flex items-center gap-1.5 font-mono text-[11px]">\n        <span className="text-slate-900 font-bold tracking-wide">AI_SYNC</span>\n        <span className="text-slate-300">/</span>\n        <span className="text-emerald-600 font-semibold">ACTIVE</span>\n      </div>\n    </div>\n  );\n}`,
   },
-  // {
-  //   id: "badge-brutal-rank",
-  //   title: "Neo-Brutalism Elite Rank",
-  //   category: "Badges & Status Indicators",
-  //   description:
-  //     "Vibrant pink brutalist rank badge featuring hard directional shadows.",
-  //   copiesCount: 280,
-  //   component: <BrutalRankBadge />,
-  //   code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-pink-400 border-2 border-slate-950 rounded-xl font-baloo text-[11px] text-slate-950 font-black shadow-[3px_3px_0px_0px_#020617]">RANK_ELITE</div>`,
-  // },
-  // {
-  //   id: "badge-glass-frost",
-  //   title: "Glassmorphism Frost Badge",
-  //   category: "Badges & Status Indicators",
-  //   description:
-  //     "Frosted translucent glass overlay badge with crisp cyan aura lighting.",
-  //   copiesCount: 350,
-  //   component: <GlassFrostBadge />,
-  //   code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl font-baloo text-[11px] text-cyan-200">FROST_SECURE</div>`,
-  // },
+  
   {
     id: "badge-glass-neon",
     title: "Glassmorphism Neon Sync",
@@ -73,7 +61,7 @@ export const badgesData = [
       "Translucent glass badge highlighted with ambient indigo lighting.",
     copiesCount: 295,
     component: <GlassNeonBadge />,
-    code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl font-baloo text-[11px] text-indigo-200">NEON_SYNC</div>`,
+    code: `<div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl font-baloo text-[11px] text-indigo-200">NEON SYNC</div>`,
   },
   {
     id: "badge-bento-status",

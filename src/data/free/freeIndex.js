@@ -7,7 +7,6 @@ import { successData } from "./SuccessData";
 import { checkboxesData } from "./CheckboxesData";
 import { togglesData } from "./TogglesData";
 import { avatarsData } from "./AvatorsData";
-
 // import { inputsData } from "./Inputs&Searchbars";
 // import { notificationsData } from "./NavigationsData";
 
