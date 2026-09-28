@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiEye, HiCode, HiFilter, HiX } from "react-icons/hi";
+import { HiEye, HiCode,  HiX } from "react-icons/hi";
 import { TbCopyCheckFilled, TbCopyPlusFilled } from "react-icons/tb";
 
 import {
@@ -177,10 +177,9 @@ export default function FreeComponentsTab({
                     <span>Preview</span>
                   </button>
 
-                  {/* Code Tab: Mobile වලදී disabled වී පෙන්වීම (md:flex මඟින් ලැප්ටප් වල පමණක් ක්‍රියාත්මක වේ) */}
+                  {/* Code Tab: Mobile disabled  */}
                   <button
                     onClick={() => {
-                      // మొබයිල් එකේදී Code එක ක්ලික් කිරීම වැළැක්වීම
                       if (window.innerWidth < 768) return;
                       toggleCardTab(item.id, "code");
                     }}
@@ -233,7 +232,7 @@ export default function FreeComponentsTab({
                   <span className="w-2 h-2 rounded-full bg-slate-900 animate-ping" />
                 </div>
 
-                {/* Copy Button: Mobile වලදී hidden වී, Tablet/Desktop (`sm:flex`) වලදී පමණක් පෙන්වීම */}
+                {/* Copy Button: Mobile devices for hidden , Tablet/Desktop (`sm:flex`)  */}
                 <motion.button
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleCopy(item.id, item.code)}
