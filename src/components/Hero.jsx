@@ -101,7 +101,7 @@ export default function Hero() {
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
-              className="w-full sm:w-auto h-12 px-6 rounded-xl bg-slate-900 text-white font-medium text-lg sm:text-sm hover:bg-slate-800 transition-all flex items-center justify-between sm:justify-center sm:space-x-4 shadow-xs group cursor-pointer font-baloo">
+              className="w-full sm:w-auto h-12 px-6 rounded-xl bg-slate-900 text-white font-medium text-xs sm:text-sm hover:bg-slate-800 transition-all flex items-center justify-between sm:justify-center sm:space-x-4 shadow-xs group cursor-pointer font-baloo">
               <div className="flex items-center space-x-3">
                 <HiOutlineSparkles className="w-4 h-4 text-slate-300 group-hover:-rotate-180 group-hover:scale-125 transition-transform shrink-0 duration-300" />
                 <span className="hidden lg:inline text-slate-200 tracking-tight">
