@@ -1,12 +1,30 @@
 import React from "react";
 import { HiGift } from "react-icons/hi";
-import {
-  HiArrowLeft,
-  HiCheckCircle,
-} from "react-icons/hi2";
+import { HiArrowLeft, HiCheckCircle } from "react-icons/hi2";
 import { MdOutlineTipsAndUpdates } from "react-icons/md";
 
 export default function HubHeader() {
+  // months
+  const Months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+  const MonthName = Months[currentMonth];
+
   return (
     <div className="space-y-2 mb-6 font-mono ">
       {/* HEADER & TECH SYSTEM BAR (White / Light Theme) */}
@@ -20,7 +38,10 @@ export default function HubHeader() {
           </div>
 
           <h1 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-            Developer <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-200 to-slate-700 block sm:inline mt-1 sm:mt-0">Components Hub</span>
+            Developer{" "}
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-200 to-slate-700 block sm:inline mt-1 sm:mt-0">
+              Components Hub
+            </span>
           </h1>
 
           {/* Expanded Rich Description */}
@@ -40,7 +61,9 @@ export default function HubHeader() {
               <MdOutlineTipsAndUpdates className="w-5 h-5  text-slate-900 animate-pulse" />
               <span>
                 Last Updated :{" "}
-                <strong className="text-slate-900">September 2026</strong>
+                <strong className="text-slate-900">
+                  {MonthName} {currentYear}
+                </strong>
               </span>
             </div>
 
@@ -78,8 +101,8 @@ export default function HubHeader() {
               Friendly
             </span>
             <span className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
-              <HiCheckCircle className="w-4 h-4 text-slate-900" /> TypeScript
-              Native Support
+              <HiCheckCircle className="w-4 h-4 text-slate-900" /> Fully
+              Accessible (ARIA Ready)
             </span>
             <span className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
               <HiCheckCircle className="w-4 h-4 text-slate-900" /> Fully

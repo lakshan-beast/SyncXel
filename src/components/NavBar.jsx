@@ -77,7 +77,6 @@ export default function NavBar() {
                 to="/components"
                 className="hover:text-cyan-600 flex items-center space-x-1 transition-colors">
                 <span>components()</span>
-                {/* <IoIosArrowDown className="w-3 h-3 transition-transform group-hover:rotate-180 text-slate-400" /> */}
               </Link>
             </div>
 

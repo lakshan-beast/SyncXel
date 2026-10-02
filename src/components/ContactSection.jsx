@@ -123,7 +123,7 @@ export default function ContactSection() {
               </div>
               <div className="flex flex-col sm:flex-row gap-2">
                 <a
-                  href="https://www.linkedin.com/in/lakshan-sandeepa"
+                  href="https://www.linkedin.com/in/lakshan-sandeepa/detail/recommendation/write/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-2.5 px-4 rounded-xl bg-slate-900 text-white text-xs font-semibold font-baloo hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 text-center shadow-xs">
@@ -131,7 +131,7 @@ export default function ContactSection() {
                   <span>Write Recommendation</span>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/lakshan-sandeepa"
+                  href="https://www.linkedin.com/in/lakshan-sandeepa/details/recommendations/#endorsements"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-2.5 px-4 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 text-xs font-baloo font-semibold hover:bg-slate-200 transition-all flex items-center justify-center space-x-2 text-center">
