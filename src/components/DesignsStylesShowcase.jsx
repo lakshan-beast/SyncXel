@@ -2,35 +2,115 @@ import React from "react";
 
 export default function DesignStylesShowcase() {
   const designStyles = [
+    // {
+    //   name: "Modern Slate",
+    //   tag: "Core Developer Vibe",
+    //   desc: "Clean, precise slate tones and terminal aesthetics built for modern SaaS applications.",
+    //   badgeColor: "bg-slate-900 text-white",
+    // },
+    // {
+    //   name: "Neo-Brutalism",
+    //   tag: "High-Contrast",
+    //   desc: "Thick borders, hard black shadows, and bold accents for high-impact creator products.",
+    //   badgeColor: "bg-amber-400 text-slate-950",
+    // },
+    // {
+    //   name: "Glassmorphism",
+    //   tag: "Frosted Glow",
+    //   desc: "Semi-transparent glass backgrounds with backdrop blur and soft futuristic lighting.",
+    //   badgeColor: "bg-purple-600 text-white",
+    // },
+    // {
+    //   name: "Clean Minimalist",
+    //   tag: "Enterprise SaaS",
+    //   desc: "Apple-inspired minimalist layouts with subtle typography and spacious padding.",
+    //   badgeColor: "bg-emerald-600 text-white",
+    // },
+    // {
+    //   name: "Vibrant Gradient",
+    //   tag: "Creative & Bold",
+    //   desc: "Rich color blending and dynamic gradients ideal for modern digital agencies and portfolios.",
+    //   badgeColor: "bg-blue-600 text-white",
+    // },
+
+    // {
+    //   id: "modern-slate",
+    //   name: "AI-First Slate",
+    //   tag: "Command-Line & AI Ready",
+    //   desc: "Deep slate tones integrated with ⌘K command palettes, live status indicators, and sleek terminal aesthetics.",
+    //   badgeColor: "bg-slate-900 border border-slate-700 text-slate-200",
+    // },
+    // {
+    //   id: "tech-brutalism",
+    //   name: "Tech Brutalism",
+    //   tag: "Raw High-Impact",
+    //   desc: "Bold thick borders, hard structural shadows, and monospace accents designed for high-impact developer tools.",
+    //   badgeColor:
+    //     "bg-amber-400 border border-slate-950 text-slate-950 font-bold",
+    // },
+    // {
+    //   id: "frosted-glass",
+    //   name: "Ambient Glass",
+    //   tag: "Frosted & Glow",
+    //   desc: "Ultra-thin 1px gradient borders, deep backdrop blurs, and floating ambient background lighting effects.",
+    //   badgeColor:
+    //     "bg-purple-600/30 border border-purple-500/40 text-purple-200 backdrop-blur-md",
+    // },
+    // {
+    //   id: "zenith-minimal",
+    //   name: "Zenith Minimal",
+    //   tag: "Enterprise Clarity",
+    //   desc: "Apple-inspired precise typography, generous whitespace, and restrained, elegant monochrome contrast.",
+    //   badgeColor:
+    //     "bg-emerald-600/20 border border-emerald-500/30 text-emerald-300",
+    // },
+    // {
+    //   id: "hyper-gradient",
+    //   name: "Hyper Gradient",
+    //   tag: "Vibrant & Futuristic",
+    //   desc: "Rich multi-stop color blending, fluid mesh gradients, and glowing accents ideal for modern SaaS products.",
+    //   badgeColor:
+    //     "bg-gradient-to-r from-indigo-500 to-violet-500 text-white shadow-lg shadow-indigo-500/25",
+    // },
+
     {
-      name: "Modern Slate",
-      tag: "Core Developer Vibe",
-      desc: "Clean, precise slate tones and terminal aesthetics built for modern SaaS applications.",
-      badgeColor: "bg-slate-900 text-white",
+      id: "modern-slate",
+      name: "AI-First Slate",
+      tag: "Edge Cloud & Serverless",
+      desc: "Deep slate tones integrated with ⌘K command palettes, live status indicators, and sleek terminal aesthetics for developer infrastructure.",
+      badgeColor: "bg-slate-900 border border-slate-700 text-slate-200",
     },
     {
-      name: "Neo-Brutalism",
-      tag: "High-Contrast",
-      desc: "Thick borders, hard black shadows, and bold accents for high-impact creator products.",
-      badgeColor: "bg-amber-400 text-slate-950",
+      id: "tech-brutalism",
+      name: "Tech Brutalism",
+      tag: "Web3 & Crypto Assets",
+      desc: "Bold thick borders, hard structural shadows, and monospace accents designed for high-impact neo-banks and digital wallets.",
+      badgeColor:
+        "bg-amber-400 border border-slate-950 text-slate-950 font-bold",
     },
     {
-      name: "Glassmorphism",
-      tag: "Frosted Glow",
-      desc: "Semi-transparent glass backgrounds with backdrop blur and soft futuristic lighting.",
-      badgeColor: "bg-purple-600 text-white",
+      id: "frosted-glass",
+      name: "Ambient Glass",
+      tag: "Green Energy & Solar",
+      desc: "Ultra-thin 1px gradient borders, deep backdrop blurs, and floating ambient lighting ideal for clean-tech and smart grid monitors.",
+      badgeColor:
+        "bg-purple-600/30 border border-purple-500/40 text-purple-200 backdrop-blur-md",
     },
     {
-      name: "Clean Minimalist",
-      tag: "Enterprise SaaS",
-      desc: "Apple-inspired minimalist layouts with subtle typography and spacious padding.",
-      badgeColor: "bg-emerald-600 text-white",
+      id: "zenith-minimal",
+      name: "Zenith Minimal",
+      tag: "AI Autonomous Agents",
+      desc: "Apple-inspired precise typography, generous whitespace, and restrained monochrome contrast tailored for AI platforms.",
+      badgeColor:
+        "bg-emerald-600/20 border border-emerald-500/30 text-emerald-300",
     },
     {
-      name: "Vibrant Gradient",
-      tag: "Creative & Bold",
-      desc: "Rich color blending and dynamic gradients ideal for modern digital agencies and portfolios.",
-      badgeColor: "bg-blue-600 text-white",
+      id: "hyper-gradient",
+      name: "Hyper Gradient",
+      tag: "EV & Smart Mobility",
+      desc: "Rich multi-stop color blending, fluid mesh gradients, and glowing accents built for modern electric vehicle and fleet SaaS platforms.",
+      badgeColor:
+        "bg-gradient-to-r from-indigo-500 to-violet-500 text-white shadow-lg shadow-indigo-500/25",
     },
   ];
 
