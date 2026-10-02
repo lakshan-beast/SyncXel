@@ -76,14 +76,16 @@ export default function DesignStylesShowcase() {
     {
       id: "modern-slate",
       name: "AI-First Slate",
-      tag: "Edge Cloud & Serverless",
+      tag: "Command-Line & AI Ready",
+      niche: "Edge Cloud & Serverless Infrastructure",
       desc: "Deep slate tones integrated with ⌘K command palettes, live status indicators, and sleek terminal aesthetics for developer infrastructure.",
       badgeColor: "bg-slate-900 border border-slate-700 text-slate-200",
     },
     {
       id: "tech-brutalism",
       name: "Tech Brutalism",
-      tag: "Web3 & Crypto Assets",
+      tag: "Raw High-Impact",
+      niche: "Web3 Neo-Bank & Crypto Assets",
       desc: "Bold thick borders, hard structural shadows, and monospace accents designed for high-impact neo-banks and digital wallets.",
       badgeColor:
         "bg-amber-400 border border-slate-950 text-slate-950 font-bold",
@@ -91,23 +93,26 @@ export default function DesignStylesShowcase() {
     {
       id: "frosted-glass",
       name: "Ambient Glass",
-      tag: "Green Energy & Solar",
+      tag: "Frosted & Glow",
+      niche: "Green Energy & Smart Solar Grid",
       desc: "Ultra-thin 1px gradient borders, deep backdrop blurs, and floating ambient lighting ideal for clean-tech and smart grid monitors.",
       badgeColor:
-        "bg-purple-600/30 border border-purple-500/40 text-purple-200 backdrop-blur-md",
+        "bg-purple-600/10 border border-purple-500/40 text-purple-400 backdrop-blur-md",
     },
     {
       id: "zenith-minimal",
       name: "Zenith Minimal",
-      tag: "AI Autonomous Agents",
+      tag: "Enterprise Clarity",
+      niche: "AI-First Autonomous Agents Hub",
       desc: "Apple-inspired precise typography, generous whitespace, and restrained monochrome contrast tailored for AI platforms.",
       badgeColor:
-        "bg-emerald-600/20 border border-emerald-500/30 text-emerald-300",
+        "bg-emerald-600/10 border border-emerald-500/30 text-emerald-400",
     },
     {
       id: "hyper-gradient",
       name: "Hyper Gradient",
-      tag: "EV & Smart Mobility",
+      tag: "Vibrant & Futuristic",
+      niche: "EV & Smart Mobility Fleet SaaS",
       desc: "Rich multi-stop color blending, fluid mesh gradients, and glowing accents built for modern electric vehicle and fleet SaaS platforms.",
       badgeColor:
         "bg-gradient-to-r from-indigo-500 to-violet-500 text-white shadow-lg shadow-indigo-500/25",
@@ -145,7 +150,7 @@ export default function DesignStylesShowcase() {
             className="p-5 bg-white border border-slate-200 rounded-2xl shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between space-y-3 group">
             <div className="flex items-center justify-between">
               <span
-                className={`text-[10px] font-baloo font-bold px-2.5 py-1 rounded-full ${style.badgeColor}`}>
+                className={`text-[10px] font-baloo font-bold px-4 py-1.5 rounded-full ${style.badgeColor}`}>
                 {style.tag}
               </span>
               <span className="text-xs text-slate-300 font-mono">
@@ -157,7 +162,7 @@ export default function DesignStylesShowcase() {
               <h3 className="text-sm font-bold text-slate-900 font-sans group-hover:text-emerald-600 transition-colors">
                 {style.name}
               </h3>
-              <p className="text-xs text-slate-500 font-baloo leading-tight">
+              <p className="text-xs text-slate-500 font-baloo leading-tight pl-1">
                 {style.desc}
               </p>
             </div>
