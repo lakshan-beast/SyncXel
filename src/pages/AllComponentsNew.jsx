@@ -79,6 +79,8 @@ export default function ComponentsHubPage() {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
+  // new idea = CyberSecurity & Awareness Category
+
   return (
     <div className="min-h-screen bg-white text-slate-900 py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-20 lg:mt-12">
       {/* Main Header */}

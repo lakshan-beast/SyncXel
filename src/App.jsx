@@ -14,6 +14,8 @@ import WorkflowSection from "./components/WorkflowSection";
 import ContactSection from "./components/ContactSection";
 import FaqSection from "./components/FAQSection";
 
+import UIComponentGenerator from "./components/UIComponentGenerator";
+
 import AllComponents from "./pages/AllComponentsNew";
 import Documentation from "./pages/Documentation";
 import Legal from "./pages/Legel";
@@ -44,6 +46,8 @@ export default function App() {
                   <WorkflowSection />
                   <ContactSection />
                   <FaqSection />
+
+                  <UIComponentGenerator />
                   <Footer />
                 </>
               }
