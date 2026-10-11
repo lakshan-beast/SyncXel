@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { HiGift } from "react-icons/hi";
 import { HiArrowLeft, HiCheckCircle } from "react-icons/hi2";
 import { MdOutlineTipsAndUpdates } from "react-icons/md";
@@ -33,31 +34,47 @@ export default function HubHeader() {
         <div className="space-y-2 relative z-10 max-w-2xl">
           {/* Terminal Style Pill Badge */}
           <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200/50 text-slate-500/50 text-xs font-mono shadow-xs">
-            {/* <HiSparkles className="w-3.5 h-3.5 text-slate-700" /> */}
-            <span>// next_gen_ui_ecosystem_V2.0</span>
+            <motion.span
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}>
+              // next_gen_ui_ecosystem_V2.0
+            </motion.span>
           </div>
 
-          <h1 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
             Developer{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-200 to-slate-700 block sm:inline mt-1 sm:mt-0">
               Components Hub
             </span>
-          </h1>
+          </motion.h1>
 
           {/* Expanded Rich Description */}
-          <p className="text-slate-500 text-xs sm:text-sm leading-tight font-baloo">
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-slate-500 text-xs sm:text-sm leading-tight font-baloo">
             Explore a comprehensive engineering repository featuring modular,
             highly optimized React & Tailwind CSS components, interactive UI
             packs, and professional production-grade UI-Kit bundles crafted for
             modern web applications. Designed to accelerate your full-stack
             development workflow with clean copy-and-paste snippets, smooth
             Framer Motion animations, and precise architectural patterns.
-          </p>
+          </motion.p>
 
           {/* Metadata & Legal Notice (Placed BEFORE Back Button) */}
           <div className="flex flex-wrap items-center gap-1 pt-1">
             {/* Last Updated */}
-            <div className="text-xs text-slate-500 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-200 flex items-center gap-2 shadow-xs font-baloo">
+            <motion.div
+              initial={{ opacity: 0, x: -15 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-xs text-slate-500 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-200 flex items-center gap-2 shadow-xs font-baloo">
               <MdOutlineTipsAndUpdates className="w-5 h-5  text-slate-900 animate-pulse" />
               <span>
                 Last Updated :{" "}
@@ -65,15 +82,19 @@ export default function HubHeader() {
                   {MonthName} {currentYear}
                 </strong>
               </span>
-            </div>
+            </motion.div>
 
             {/* Legal / Free Usage Message */}
-            <div className="bg-slate-50 border border-slate-200 px-3.5 py-2 rounded-xl flex items-center gap-4 text-xs text-slate-700 shadow-xs font-baloo">
-              <HiGift className="w-4 h-4 text-slate-900 shrink-0 animate-ping" />
+            <motion.div
+              initial={{ opacity: 0, x: -15 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-slate-50 border border-slate-200 px-3.5 py-2 rounded-xl flex items-center gap-4 text-xs text-slate-700 shadow-xs font-baloo">
+              <HiGift className="w-4 h-4 text-slate-900 shrink-0 animate-bounce" />
               <span className="animate-pulse">
                 Free components can be used in personal & client projects!
               </span>
-            </div>
+            </motion.div>
           </div>
 
           {/* Back to Home Button */}
@@ -88,30 +109,84 @@ export default function HubHeader() {
         {/* Right Column: Feature Highlights / Badges */}
         <div className="relative z-10 flex flex-col gap-1.5 shrink-0 self-start">
           <div className="grid grid-cols-2 md:flex md:flex-col gap-1.5 font-baloo">
-            <span className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
+            <motion.span
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.2,
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
               <HiCheckCircle className="w-4 h-4 text-slate-900" /> Tailwind CSS
               v4 Ready
-            </span>
-            <span className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.3,
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
               <HiCheckCircle className="w-4 h-4 text-slate-900" /> Framer Motion
               Animations
-            </span>
-            <span className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.4,
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
               <HiCheckCircle className="w-4 h-4 text-slate-900" /> Copy & Paste
               Friendly
-            </span>
-            <span className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.5,
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
               <HiCheckCircle className="w-4 h-4 text-slate-900" /> Fully
               Accessible (ARIA Ready)
-            </span>
-            <span className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.6,
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
               <HiCheckCircle className="w-4 h-4 text-slate-900" /> Fully
               Responsive Layouts
-            </span>
-            <span className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.7,
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-xs text-slate-500 flex items-center gap-2 font-medium shadow-xs">
               <HiCheckCircle className="w-4 h-4 text-slate-900" /> Production
               Ready Code
-            </span>
+            </motion.span>
           </div>
         </div>
       </div>
