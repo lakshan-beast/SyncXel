@@ -6,6 +6,9 @@ import {
   HiOutlineRocketLaunch,
   HiBookmark,
 } from "react-icons/hi2";
+import { HiOutlineSparkles } from "react-icons/hi";
+import { GrDiamond } from "react-icons/gr";
+import { VscPackage } from "react-icons/vsc";
 
 export default function ServicesSection() {
   const services = [
@@ -29,6 +32,32 @@ export default function ServicesSection() {
       description:
         "Modern, high-converting landing pages optimized for maximum performance, SEO, and interactive user experiences.",
       tags: ["High Conversion", "SEO Ready", "Fast Load", "Micro-interactions"],
+    },
+    {
+      icon: VscPackage,
+      title: "Premium UI Packs & Templates",
+      description:
+        "Exquisite frontend-only templates and premium UI packs across 8 categories including travel, dashboard, and gaming.",
+      tags: ["Framer Motion", "UI Packs", "Website Templates", "Lemon Squeezy"],
+    },
+    {
+      icon: GrDiamond,
+      title: "Modular Free Components",
+      description:
+        "A growing library of 70-80+ free essential UI components like buttons, modals, and inputs with clean copy-paste code.",
+      tags: [
+        "Free Components",
+        "Copy-Paste Code",
+        "Tailwind CSS",
+        "Desktop Ready",
+      ],
+    },
+    {
+      icon: HiOutlineSparkles,
+      title: "SyncXelUI AI Generation",
+      description:
+        "An innovative, next-generation AI-powered UI layout generator tool designed to automate and accelerate your development workflow.",
+      tags: ["AI Generator", "Automation", "Smart Layouts", "Next-Gen UI"],
     },
   ];
 
@@ -62,25 +91,42 @@ export default function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-left space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
-            <span className="font-mono text-xs text-slate-400 block">
+            <motion.span
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="font-mono text-xs text-slate-400 block">
               // core_services_modules
-            </span>
-            <div className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
+            </motion.span>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
               <HiBookmark className="w-3.5 h-3.5 text-slate-600" />
               <span>services_module.config</span>
-            </div>
+            </motion.div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
             Turn Your Web Ideas Into{" "}
             <span className="text-slate-900">Production Reality</span>
-          </h2>
+          </motion.h2>
 
-          <p className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
+          <motion.p
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
             Need a custom web application or modern landing page? I partner with
             founders, startups, and businesses to build high-converting web
             solutions.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Services Cards Grid */}
@@ -105,26 +151,45 @@ export default function ServicesSection() {
                     <Icon className="w-5 h-5" />
                   </div>
 
-                  <span className="font-mono text-[10px] text-slate-400 block mb-2">
+                  <motion.span
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="font-mono text-[10px] text-slate-400 block mb-2">
                     // service_0{index + 1}
-                  </span>
+                  </motion.span>
 
-                  <h3 className="text-base sm:text-lg font-bold text-slate-950 mb-2 tracking-tight">
+                  <motion.h3
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-base sm:text-lg font-bold text-slate-950 mb-2 tracking-tight">
                     {item.title}
-                  </h3>
+                  </motion.h3>
 
-                  <p className="text-xs sm:text-sm text-slate-500 leading-tight font-baloo">
+                  <motion.p
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-xs sm:text-sm text-slate-500 leading-tight font-baloo">
                     {item.description}
-                  </p>
+                  </motion.p>
                 </div>
 
                 <div className="flex flex-wrap gap-1.5 pt-4 mt-4 border-t border-slate-100">
                   {item.tags.map((tag, tIndx) => (
-                    <span
+                    <motion.span
+                      initial={{ opacity: 0.3, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 17,
+                      }}
                       key={tIndx}
                       className="px-3 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-[10px] font-baloo text-slate-700 font-medium">
                       {tag}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </motion.div>
