@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiEye, HiCode,  HiX } from "react-icons/hi";
+import { HiEye, HiCode, HiX } from "react-icons/hi";
 import { TbCopyCheckFilled, TbCopyPlusFilled } from "react-icons/tb";
 
 import {
@@ -30,7 +30,12 @@ export default function FreeComponentsTab({
       {/* --- DESKTOP CATEGORIES PILLS --- */}
       <div className="hidden md:flex flex-wrap gap-2 mb-12 justify-start">
         {categories.map((cat) => (
-          <button
+          <motion.button
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            whileTap={{ scale: 0.95 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             key={cat}
             onClick={() => setActiveCategory(cat)}
             className={`px-5.5 py-2 rounded-md text-xs font-baloo font-bold transition-all cursor-pointer border ${
@@ -39,7 +44,7 @@ export default function FreeComponentsTab({
                 : "bg-slate-200/40 text-slate-600 border-slate-300/50 hover:text-white hover:bg-slate-700/30"
             }`}>
             {cat}
-          </button>
+          </motion.button>
         ))}
       </div>
 
@@ -84,7 +89,10 @@ export default function FreeComponentsTab({
 
               <div className="grid grid-cols-1 gap-2 pt-1">
                 {categories.map((cat) => (
-                  <button
+                  <motion.button
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    whileTap={{ scale: 0.95 }}
                     key={cat}
                     onClick={() => {
                       setActiveCategory(cat);
@@ -96,7 +104,7 @@ export default function FreeComponentsTab({
                         : "bg-slate-900 text-slate-300 border-slate-800 hover:bg-slate-800"
                     }`}>
                     {cat}
-                  </button>
+                  </motion.button>
                 ))}
               </div>
             </motion.div>
@@ -125,20 +133,37 @@ export default function FreeComponentsTab({
               <div className="px-5 py-4 pb-1 bg-white border-none">
                 <div className="flex items-start justify-between gap-3 mb-1">
                   <div className="space-y-1">
-                    <span className="inline-block text-[10px] font-baloo font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
+                    <motion.span
+                      initial={{ opacity: 0, x: -50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="inline-block text-[10px] font-baloo font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
                       {item.category}
-                    </span>
-                    <h3 className="text-base font-bold text-slate-900 tracking-tight font-baloo pt-1">
+                    </motion.span>
+
+                    <motion.h3
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="text-base font-bold text-slate-900 tracking-tight font-baloo pt-1">
                       {item.title}
-                    </h3>
+                    </motion.h3>
                   </div>
-                  <span className="text-[10px] font-baloo font-bold text-white bg-slate-900 px-4.5 py-1 rounded-full shadow-xs shrink-0">
+                  <motion.span
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-[10px] font-baloo font-bold text-white bg-slate-900 px-4.5 py-1 rounded-full shadow-xs shrink-0">
                     FREE
-                  </span>
+                  </motion.span>
                 </div>
-                <p className="text-xs text-slate-500 leading-tight font-baloo pt-1">
+                <motion.p
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-xs text-slate-500 leading-tight font-baloo pt-1">
                   {item.description}
-                </p>
+                </motion.p>
 
                 {/* --- REAL WORLD USE CASES (Right Below Description) --- */}
                 {item.useCases && item.useCases.length > 0 && (
@@ -149,14 +174,22 @@ export default function FreeComponentsTab({
                     </div>
                     <ul className="space-y-1 px-2">
                       {item.useCases.map((uc, idx) => (
-                        <li
+                        <motion.li
+                          initial={{ opacity: 0.3, x: -30 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{
+                            delay: 0.2,
+                            type: "spring",
+                            stiffness: 400,
+                            damping: 17,
+                          }}
                           key={idx}
                           className="text-[11px] text-slate-600 font-baloo flex items-start gap-1 leading-tight">
                           <span className="text-slate-900 font-bold mt-0.5">
                             ▸
                           </span>
                           <span>{uc}</span>
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
                   </div>
@@ -166,7 +199,10 @@ export default function FreeComponentsTab({
               {/* Sub-Tabs & Counter Bar */}
               <div className="flex items-center justify-between px-2 py-2 bg-white border-b-2 border-slate-200">
                 <div className="flex items-center bg-slate-300/50 p-0 rounded-lg border border-slate-100">
-                  <button
+                  <motion.button
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => toggleCardTab(item.id, "preview")}
                     className={`text-xs px-2 py-1.5 rounded-lg font-baloo font-medium transition-all flex items-center space-x-2 cursor-pointer ${
                       currentTab === "preview"
@@ -175,10 +211,13 @@ export default function FreeComponentsTab({
                     }`}>
                     <HiEye className="w-4 h-4" />
                     <span>Preview</span>
-                  </button>
+                  </motion.button>
 
                   {/* Code Tab: Mobile disabled  */}
-                  <button
+                  <motion.button
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => {
                       if (window.innerWidth < 768) return;
                       toggleCardTab(item.id, "code");
@@ -200,11 +239,11 @@ export default function FreeComponentsTab({
                         (Desktop)
                       </span>
                     </span>
-                  </button>
+                  </motion.button>
                 </div>
 
                 {/* Copies Count Badge */}
-                <div className="flex items-center gap-2 text-lg font-baloo font-bold text-slate-700 bg-white pr-5 py-0.5 rounded-none border-none border-slate-200 shadow-xs">
+                <div className="flex items-center gap-2 text-lg font-baloo font-bold text-slate-700 bg-white pr-5 py-0.5 rounded-none border-none border-slate-200 shadow-xs hidden">
                   <MdOutlineFileDownloadDone className="w-6 h-5 text-slate-900 animate-pulse" />
                   <span>( {item.copiesCount} )</span>
                 </div>
@@ -213,28 +252,61 @@ export default function FreeComponentsTab({
               {/* Body Content Box */}
               <div className="p-3 min-h-55 max-h-85 bg-slate-50/50 flex items-center justify-center relative overflow-hidden border-b border-slate-200">
                 {currentTab === "preview" ? (
-                  <div className="w-full flex items-center justify-center relative z-10">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: 0.1,
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="w-full flex items-center justify-center relative z-10">
                     {item.component}
-                  </div>
+                  </motion.div>
                 ) : (
-                  <pre className="w-full h-55 overflow-auto text-sm text-slate-200 bg-slate-900 p-4 rounded-xl border border-slate-800 font-mono text-left relative z-10 shadow-inner scrollbar-thumb-slate-600 flex justify-start items-start">
+                  <motion.pre
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: 0.1,
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="w-full h-55 overflow-auto text-sm text-slate-200 bg-slate-900 p-4 rounded-xl border border-slate-800 font-mono text-left relative z-10 shadow-inner scrollbar-thumb-slate-600 flex justify-start items-start">
                     <code>{item.code}</code>
-                  </pre>
+                  </motion.pre>
                 )}
               </div>
 
               {/* Footer Action */}
               <div className="px-4 py-2 bg-white flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="font-medium text-slate-400 font-baloo text-xs">
+                  <motion.span
+                    initial={{ opacity: 0.3, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="font-medium text-slate-400 font-baloo text-xs">
                     // production_ready
-                  </span>
+                  </motion.span>
                   <span className="w-2 h-2 rounded-full bg-slate-900 animate-ping" />
                 </div>
 
                 {/* Copy Button: Mobile devices for hidden , Tablet/Desktop (`sm:flex`)  */}
                 <motion.button
                   whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0.3, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
                   onClick={() => handleCopy(item.id, item.code)}
                   className={`hidden sm:flex px-4 py-2  text-xs font-baloo font-bold transition-all duration-300 cursor-pointer items-center space-x-2 shadow-sm ${
                     isCopied
