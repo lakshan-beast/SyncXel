@@ -3,26 +3,66 @@ import { motion } from "framer-motion";
 import { HiBookmark } from "react-icons/hi2";
 
 export default function WorkflowSection() {
+  // const steps = [
+  //   {
+  //     number: "01",
+  //     title: "Discovery & Strategy",
+  //     desc: "We discuss your project requirements, target audience, and key features in detail.",
+  //   },
+  //   {
+  //     number: "02",
+  //     title: "UI/UX & Architecture",
+  //     desc: "We plan the user flow, UI layouts, and frontend component architecture for scalability.",
+  //   },
+  //   {
+  //     number: "03",
+  //     title: "Frontend Engineering",
+  //     desc: "We write clean, modular React/Next.js code with regular progress updates and interactive demos.",
+  //   },
+  //   {
+  //     number: "04",
+  //     title: "Testing & Deployment",
+  //     desc: "Rigorous responsiveness testing, Lighthouse performance tuning, and seamless Vercel deployment.",
+  //   },
+  // ];
+
   const steps = [
     {
-      number: "01",
+      step: "01",
       title: "Discovery & Strategy",
-      desc: "We discuss your project requirements, target audience, and key features in detail.",
+      description:
+        "We discuss your project requirements, target audience, and key features in detail.",
     },
     {
-      number: "02",
+      step: "02",
       title: "UI/UX & Architecture",
-      desc: "We plan the user flow, UI layouts, and frontend component architecture for scalability.",
+      description:
+        "We plan the user flow, UI layouts, and frontend component architecture for scalability.",
     },
     {
-      number: "03",
+      step: "03",
       title: "Frontend Engineering",
-      desc: "We write clean, modular React/Next.js code with regular progress updates and interactive demos.",
+      description:
+        "We write clean, modular React/Next.js code with regular progress updates and interactive demos.",
     },
     {
-      number: "04",
-      title: "Testing & Deployment",
-      desc: "Rigorous responsiveness testing, Lighthouse performance tuning, and seamless Vercel deployment.",
+      step: "04",
+      title: "Testing & Bug Hunting",
+      description:
+        "Rigorous responsiveness testing, Lighthouse performance tuning, and cross-browser quality checks.",
+    },
+    // --- මෙතැන් සිට අලුත් පියවර 2 ---
+    {
+      step: "05",
+      title: "Security & Optimization",
+      description:
+        "Implementing source-code protection via encryption, F12 blocking, and asset minification for security.",
+    },
+    {
+      step: "06",
+      title: "Deployment & Delivery",
+      description:
+        "Seamless deployment to hosting platforms like Vercel and secure handover of production-ready codebases.",
     },
   ];
 
@@ -56,23 +96,40 @@ export default function WorkflowSection() {
           transition={{ duration: 0.6 }}
           className="text-left space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
-            <span className="font-mono text-xs text-slate-400 block">
+            <motion.span
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="font-mono text-xs text-slate-400 block">
               // workflow_execution_steps
-            </span>
-            <div className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
+            </motion.span>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
               <HiBookmark className="w-3.5 h-3.5 text-slate-600" />
               <span>workflow_module.config</span>
-            </div>
+            </motion.div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
             How We <span className="text-slate-900">Work Together</span>
-          </h2>
+          </motion.h2>
 
-          <p className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
+          <motion.p
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
             A transparent 4-step workflow from initial design to final
             deployment ensuring maximum quality and precision.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Workflow Cards Grid */}
@@ -81,7 +138,7 @@ export default function WorkflowSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
           {steps.map((step, idx) => (
             <motion.div
               key={idx}
@@ -92,21 +149,37 @@ export default function WorkflowSection() {
               className="group relative bg-white px-8 sm:px-7 py-6 rounded-2xl border border-slate-200/50 hover:border-slate-300/50 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-extrabold bg-slate-900 text-white px-2.5 py-1 rounded-xl shadow-xs">
-                    {step.number}
-                  </span>
-                  <span className="font-mono text-[10px] text-slate-400">
-                    // step_{step.number}
-                  </span>
+                  <motion.span
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-2xl font-extrabold bg-slate-900 text-white px-2.5 py-1 rounded-xl shadow-xs">
+                    {step.step}
+                  </motion.span>
+                  <motion.span
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="font-mono text-[10px] text-slate-400">
+                    // step_{step.step}
+                  </motion.span>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-slate-950 mb-2 tracking-tight">
+                <motion.h3
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-base sm:text-lg font-bold text-slate-950 mb-2 tracking-tight">
                   {step.title}
-                </h3>
+                </motion.h3>
 
-                <p className="text-xs sm:text-sm text-slate-500 leading-tight font-baloo">
-                  {step.desc}
-                </p>
+                <motion.p
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-xs sm:text-sm text-slate-500 leading-tight font-baloo">
+                  {step.description}
+                </motion.p>
               </div>
             </motion.div>
           ))}
