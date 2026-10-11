@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { HiOutlineSearch, HiX, HiArrowLeft } from "react-icons/hi";
 
 export default function KnowledgeHubHeader({
@@ -12,23 +13,36 @@ export default function KnowledgeHubHeader({
         {/* Title & Expanded Rich Description */}
         <div className="space-y-2 relative z-10 max-w-2xl">
           <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200 text-slate-500/30 text-xs font-mono shadow-xs">
-            <span>// system_knowledge_repository_V2.0</span>
+            <motion.span
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}>
+              // system_knowledge_repository_V2.0
+            </motion.span>
           </div>
 
-          <h2 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             Developer{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-200 to-slate-700 block sm:inline mt-1 sm:mt-0">
               Knowledge Hub
             </span>
-          </h2>
+          </motion.h2>
 
-          <p className="text-slate-500/80 text-xs sm:text-sm leading-thight font-baloo">
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-slate-500/80 text-xs sm:text-sm leading-thight font-baloo">
             A comprehensive engineering repository featuring production-ready UI
             components, secure authentication patterns, state management
             architectures, robust form integrations, custom hooks, and
             streamlined Vercel deployment guides designed to accelerate your
             full-stack development workflow with precision.
-          </p>
+          </motion.p>
 
           <a
             href="/"
@@ -39,7 +53,11 @@ export default function KnowledgeHubHeader({
         </div>
 
         {/* Active Live Search Input */}
-        <div className="relative w-full md:w-80 shrink-0 z-10">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative w-full md:w-80 shrink-0 z-10">
           <HiOutlineSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
           <input
             type="text"
@@ -57,7 +75,7 @@ export default function KnowledgeHubHeader({
               <HiX className="w-4 h-4" />
             </button>
           )}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
