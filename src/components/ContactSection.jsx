@@ -24,7 +24,7 @@ export default function ContactSection() {
     formData.append("access_key", apiKey);
     formData.append(
       "subject",
-      `💼 New Project Inquiry from ${formData.get("name")}`
+      `💼 New Project Inquiry from ${formData.get("name")}`,
     );
     formData.append("from_name", "SyncXel webs Inquiry Form");
     formData.append("Estimated Budget", selectedBudget);
@@ -63,28 +63,50 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-left space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
-            <span className="font-mono text-xs text-slate-400 block">
+            <motion.span
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="font-mono text-xs text-slate-400 block">
               // project_inquiry_and_social_proof
-            </span>
-            <div className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
+            </motion.span>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
               <HiBookmark className="w-3.5 h-3.5 text-slate-600" />
               <span>contact_module.config</span>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-800 font-baloo">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-800 font-baloo">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span>Available for Freelance Projects</span>
-          </div>
+          </motion.div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
-            Let's Build Something <span className="text-slate-900">Awesome Together</span>
-          </h2>
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
+            Let's Build Something{" "}
+            <span className="text-slate-900">Awesome Together</span>
+          </motion.h2>
 
-          <p className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
+          <motion.p
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
             Have a project in mind, a React component to build, or need help
             scaling your web app? Fill out the form or reach out directly.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Grid Layout for Left info & Right form */}
@@ -98,15 +120,28 @@ export default function ContactSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               className="p-6 rounded-2xl bg-white border border-slate-200/50 shadow-sm space-y-3">
-              <p className="text-xs sm:text-sm text-slate-600 italic font-baloo leading-relaxed">
+              <motion.p
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-xs sm:text-sm text-slate-600 italic font-baloo leading-relaxed">
                 "Working with him was an absolute breeze. Delivered top-notch,
                 clean React code right on schedule. Highly recommended!"
-              </p>
+              </motion.p>
               <div className="flex items-center justify-between text-xs font-semibold text-slate-900 font-baloo pt-2 border-t border-slate-100">
-                <span>— Senior Product Manager</span>
-                <span className="text-[10px] text-slate-400 font-mono">
+                <motion.span
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}>
+                  — Senior Product Manager
+                </motion.span>
+                <motion.span
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-[10px] text-slate-400 font-mono">
                   Verified Peer
-                </span>
+                </motion.span>
               </div>
             </motion.div>
 
@@ -122,47 +157,65 @@ export default function ContactSection() {
                 <span>Connect & Recommendations on LinkedIn</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-2">
-                <a
+                <motion.a
                   href="https://www.linkedin.com/in/lakshan-sandeepa/detail/recommendation/write/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
                   className="flex-1 py-2.5 px-4 rounded-xl bg-slate-900 text-white text-xs font-semibold font-baloo hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 text-center shadow-xs">
                   <FaPen className="w-3 h-3 text-slate-300" />
                   <span>Write Recommendation</span>
-                </a>
-                <a
+                </motion.a>
+                <motion.a
                   href="https://www.linkedin.com/in/lakshan-sandeepa/details/recommendations/#endorsements"
                   target="_blank"
                   rel="noopener noreferrer"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
                   className="flex-1 py-2.5 px-4 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 text-xs font-baloo font-semibold hover:bg-slate-200 transition-all flex items-center justify-center space-x-2 text-center">
                   <FaExternalLinkAlt className="w-3 h-3 text-slate-600" />
                   <span>View Recommendations</span>
-                </a>
+                </motion.a>
               </div>
             </motion.div>
 
-            <div className="text-xs text-slate-500 font-baloo flex items-center space-x-2 px-1">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-xs text-slate-500 font-baloo flex items-center space-x-2 px-1">
               <span>Average response time:</span>
               <span className="font-bold text-slate-800">Under 4 hours</span>
-            </div>
+            </motion.div>
           </div>
 
           {/* --- RIGHT COLUMN: Inquiry Form Box --- */}
           <div className="lg:col-span-5">
             <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.98, y: -30 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="relative rounded-2xl bg-white border border-slate-200/50 p-6 sm:p-8 shadow-md w-full">
               <div className="space-y-4">
                 <div className="text-left space-y-1">
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 tracking-tight">
+                  <motion.h3
+                    initial={{ opacity: 0, y: -10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-xl sm:text-2xl font-extrabold text-slate-950 tracking-tight">
                     Send a Project Inquiry
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-500 font-baloo">
+                  </motion.h3>
+                  <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-xs sm:text-sm text-slate-500 font-baloo">
                     Share your requirements below to get started.
-                  </p>
+                  </motion.p>
                 </div>
 
                 {submitted ? (
@@ -171,22 +224,37 @@ export default function ContactSection() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="p-8 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-3">
                     <HiOutlineCheckCircle className="w-12 h-12 text-slate-900 mx-auto" />
-                    <h4 className="text-xl font-bold text-slate-950">
+                    <motion.h4
+                      initial={{ opacity: 0, y: -30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="text-xl font-bold text-slate-950">
                       Message Received!
-                    </h4>
-                    <p className="text-xs sm:text-sm text-slate-500 font-baloo leading-tight">
+                    </motion.h4>
+                    <motion.p
+                      initial={{ opacity: 0, y: -30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="text-xs sm:text-sm text-slate-500 font-baloo leading-tight">
                       Thank you for reaching out. I will review your project
                       details and get back to you shortly.
-                    </p>
+                    </motion.p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-3">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div className="space-y-1 text-left">
-                        <label className="text-xs font-semibold text-slate-600 font-baloo">
+                        <motion.label
+                          initial={{ opacity: 0, x: -30 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.6 }}
+                          className="text-xs font-semibold text-slate-600 font-baloo">
                           Your Name
-                        </label>
-                        <input
+                        </motion.label>
+                        <motion.input
+                          initial={{ opacity: 0, y: 15 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.6 }}
                           type="text"
                           name="name"
                           required
@@ -195,10 +263,17 @@ export default function ContactSection() {
                         />
                       </div>
                       <div className="space-y-1 text-left">
-                        <label className="text-xs font-semibold text-slate-600 font-baloo">
+                        <motion.label
+                          initial={{ opacity: 0, x: -30 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.6 }}
+                          className="text-xs font-semibold text-slate-600 font-baloo">
                           Your Email
-                        </label>
-                        <input
+                        </motion.label>
+                        <motion.input
+                          initial={{ opacity: 0, y: 15 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.6 }}
                           type="email"
                           name="email"
                           required
@@ -210,9 +285,13 @@ export default function ContactSection() {
 
                     {/* Budget Selector */}
                     <div className="space-y-1.5 text-left">
-                      <label className="text-xs font-semibold text-slate-600 font-baloo">
+                      <motion.label
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="text-xs font-semibold text-slate-600 font-baloo">
                         Estimated Budget
-                      </label>
+                      </motion.label>
                       <div className="grid grid-cols-2 gap-1.5">
                         {[
                           "< $500",
@@ -239,10 +318,17 @@ export default function ContactSection() {
 
                     {/* Project Details */}
                     <div className="space-y-1 text-left">
-                      <label className="text-xs font-semibold text-slate-600 font-baloo">
+                      <motion.label
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="text-xs font-semibold text-slate-600 font-baloo">
                         Project Overview
-                      </label>
-                      <textarea
+                      </motion.label>
+                      <motion.textarea
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
                         name="message"
                         rows={3}
                         required
@@ -254,6 +340,9 @@ export default function ContactSection() {
                     <motion.button
                       type="submit"
                       disabled={loading}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
                       whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.98 }}
                       className="w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs sm:text-sm font-baloo hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-80 shadow-xs">
