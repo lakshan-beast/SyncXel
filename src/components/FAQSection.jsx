@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -48,15 +46,16 @@ export default function FaqSection() {
   };
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, x: 30 },
     visible: {
       opacity: 1,
+      x: 0,
       transition: { staggerChildren: 0.1 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
@@ -77,24 +76,40 @@ export default function FaqSection() {
           transition={{ duration: 0.6 }}
           className="text-left space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
-            <span className="font-mono text-xs text-slate-400 block">
+            <motion.span
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="font-mono text-xs text-slate-400 block">
               // support_and_knowledge_base
-            </span>
+            </motion.span>
 
-            <div className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
               <HiOutlineQuestionMarkCircle className="w-3.5 h-3.5 text-slate-600" />
               <span>faq_system.config</span>
-            </div>
+            </motion.div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
             Frequently Asked <span className="text-slate-900">Questions</span>
-          </h2>
+          </motion.h2>
 
-          <p className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl font-baloo mx-auto text-left sm:text-center">
+          <motion.p
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl font-baloo mx-auto text-left sm:text-center">
             Everything you need to know about SyncXel UI components and custom
             frontend engineering services.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* FAQ Accordion List */}
@@ -122,15 +137,27 @@ export default function FaqSection() {
                   onClick={() => toggleFaq(idx)}
                   className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none">
                   <div className="space-y-1">
-                    <span className="font-mono text-[10px] text-slate-400 block">
+                    <motion.span
+                      initial={{ opacity: 0, x: -50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="font-mono text-[10px] text-slate-400 block">
                       // query_0{idx + 1}
-                    </span>
-                    <span className="text-base sm:text-lg font-bold text-slate-950 tracking-tight">
+                    </motion.span>
+
+                    <motion.span
+                      initial={{ opacity: 0, x: -50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="text-base sm:text-lg font-bold text-slate-950 tracking-tight">
                       {faq.question}
-                    </span>
+                    </motion.span>
                   </div>
 
-                  <div
+                  <motion.div
+                    initial={{ opacity: 0, x: 10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
                     className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border transition-all duration-300 ${
                       isOpen
                         ? "bg-slate-900 border-slate-900 text-white"
@@ -141,15 +168,15 @@ export default function FaqSection() {
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
-                  </div>
+                  </motion.div>
                 </button>
 
                 {/* Accordion Answer Content */}
                 <AnimatePresence>
                   {isOpen && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
+                      initial={{ opacity: 0, height: 0, x: -30 }}
+                      animate={{ opacity: 1, height: "auto", x: 0 }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}>
                       <div className="px-6 pb-6 pt-0 text-slate-500 text-xs sm:text-sm leading-tight border-t border-slate-100 font-baloo">
