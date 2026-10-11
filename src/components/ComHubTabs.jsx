@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   HiPuzzlePiece,
   HiRocketLaunch,
@@ -11,7 +12,10 @@ export default function HubTabs({ mainTab, setMainTab }) {
       {/* Container - Left Aligned, Light Theme Style matching Header */}
       <div className="bg-white py-2 rounded-2xl border-none  flex flex-col lg:flex-row items-stretch lg:items-center gap-2  w-full lg:w-auto">
         {/* 1. Free Components Tab */}
-        <button
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           onClick={() => setMainTab("free")}
           className={`flex items-center gap-2.5 px-5 py-3.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
             mainTab === "free"
@@ -20,10 +24,13 @@ export default function HubTabs({ mainTab, setMainTab }) {
           }`}>
           <HiPuzzlePiece className="w-4 h-4 shrink-0" />
           <span>Freemium Components Repository</span>
-        </button>
+        </motion.button>
 
         {/* 2. UI Packs Tab */}
-        <button
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           onClick={() => setMainTab("packs")}
           className={`flex items-center gap-2.5 px-5 py-3.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
             mainTab === "packs"
@@ -32,10 +39,14 @@ export default function HubTabs({ mainTab, setMainTab }) {
           }`}>
           <HiRocketLaunch className="w-4 h-4 shrink-0" />
           <span>Production UI Packs & Bundles</span>
-        </button>
+        </motion.button>
 
         {/* 3. Templates / Kits Tab */}
-        <button
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          ton
           onClick={() => setMainTab("templates")}
           className={`flex items-center gap-2.5 px-5 py-3.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
             mainTab === "templates"
@@ -44,7 +55,7 @@ export default function HubTabs({ mainTab, setMainTab }) {
           }`}>
           <HiSquare3Stack3D className="w-4 h-4 shrink-0" />
           <span>Enterprise UI-Kit Suites</span>
-        </button>
+        </motion.button>
       </div>
     </div>
   );
