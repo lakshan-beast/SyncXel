@@ -73,14 +73,26 @@ export default function Documentation() {
           {/* SIDEBAR NAVIGATION */}
           <aside className="lg:col-span-1 space-y-1">
             <div className="bg-white border border-slate-200 rounded-3xl p-3 flex lg:flex-col gap-1.5 shadow-xs scrollbar-thumb-slate-300 overflow-x-auto">
-              <span className="font-mono text-[10px] text-slate-500/50 hidden lg:block px-3 py-3">
+              <motion.span
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="font-mono text-[10px] text-slate-500/50 hidden lg:block px-3 py-3">
                 // documentation_nav
-              </span>
+              </motion.span>
               {categories.map((cat) => {
                 const Icon = cat.icon;
                 const isActive = activeTab === cat.id;
                 return (
-                  <button
+                  <motion.button
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 0.2,
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
                     key={cat.id}
                     onClick={() => setActiveTab(cat.id)}
                     className={`flex items-center space-x-3 px-4 py-2.5 rounded-md text-xs font-baloo transition-all whitespace-nowrap w-full text-left ${
@@ -90,7 +102,7 @@ export default function Documentation() {
                     }`}>
                     <Icon className="w-4 h-4 shrink-0" />
                     <span>{cat.label}</span>
-                  </button>
+                  </motion.button>
                 );
               })}
             </div>
