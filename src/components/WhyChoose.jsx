@@ -82,28 +82,44 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-left space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
-            <span className="font-mono text-xs text-slate-400 block">
+            <motion.span
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="font-mono text-xs text-slate-400 block">
               // core_engineering_standards
-            </span>
+            </motion.span>
 
-            <div className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
               <HiBookmark className="w-3.5 h-3.5 text-slate-600" />
               <span>features_module.config</span>
-            </div>
+            </motion.div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
             Engineered for{" "}
-            <span className="text-slate-900/80">
+            <span className="text-slate-900/90">
               Speed, Quality & Precision
             </span>
-          </h2>
+          </motion.h2>
 
-          <p className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
             Whether you are using our pre-built component blocks or hiring us
             for custom development, we maintain the highest engineering
             standards.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Features Grid with Optimized Gaps */}
@@ -124,21 +140,29 @@ export default function Features() {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="group relative bg-white px-8 sm:px-7 py-6 rounded-3xl lg:rounded-2xl border border-slate-200/50 hover:border-slate-300/50 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center mb-2 border border-slate-200 group-hover:bg-slate-700/50 group-hover:text-white transition-all duration-300">
-                    <Icon className="w-5 h-5 font-bold" />
+                  <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center mb-2 border border-slate-200 group-hover:bg-slate-700/50 group-hover:text-white transition-all duration-300 group">
+                    <Icon className="w-5 h-5 font-bold group-hover:animate-bounce" />
                   </div>
 
                   <span className="font-mono text-[10px] text-slate-400 block mb-2">
                     // feature_0{idx + 1}
                   </span>
 
-                  <h3 className="text-base sm:text-lg font-bold text-slate-950 mb-2 tracking-tight">
+                  <motion.h3
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-base sm:text-lg font-bold text-slate-950 mb-2 tracking-tight">
                     {feature.title}
-                  </h3>
+                  </motion.h3>
 
-                  <p className="px-2 text-xs sm:text-sm text-slate-500 leading-tight font-baloo">
+                  <motion.p
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="px-2 text-xs sm:text-sm text-slate-500 leading-tight font-baloo">
                     {feature.description}
-                  </p>
+                  </motion.p>
                 </div>
 
                 <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-baloo text-slate-500 font-bold">
