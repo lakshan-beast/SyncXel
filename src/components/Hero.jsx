@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -42,16 +41,21 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible">
-        
         {/* Content Block */}
         <div className="space-y-6 max-w-6xl mx-auto">
-          
           {/* Section 1: Version Badge */}
           <motion.div variants={itemVariants} className="text-left">
             <span className="font-mono text-xs text-slate-400 block mb-2">
               // project_status_and_updates
             </span>
-            <a
+            <motion.a
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
               href="#components"
               className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 hover:border-slate-300 text-xs text-slate-700 transition-all shadow-xs group w-fit">
               <span className="w-2 h-2 rounded-full bg-slate-900 animate-ping shrink-0" />
@@ -60,7 +64,7 @@ export default function Hero() {
                 • Free UI, Paid Templates & Dev Guides
               </span>
               <HiOutlineArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-slate-600" />
-            </a>
+            </motion.a>
           </motion.div>
 
           {/* Section 2: Main Headline */}
@@ -78,25 +82,41 @@ export default function Hero() {
 
           {/* Section 3: Description */}
           <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            }}
             variants={itemVariants}
             className="space-y-2 text-left max-w-3xl">
             <span className="font-mono text-xs text-slate-400 block">
               // project_description
             </span>
-            <p className="text-slate-500 text-sm sm:text-base md:text-lg leading-tight font-baloo">
+            <motion.p
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              className="text-slate-500 text-sm sm:text-base md:text-lg leading-tight font-baloo">
               Hand-crafted React & Tailwind components, ready-to-use templates,
               step-by-step deployment guides, and custom web development
               services—all in one place.
-            </p>
+            </motion.p>
           </motion.div>
 
           {/* Section 4: Call To Actions */}
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3 text-left pt-2">
-            
             {/* Button 1: Explore Components */}
             <motion.a
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               href="#components-prev"
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
@@ -115,6 +135,8 @@ export default function Hero() {
             {/* Button 2: Hire Us */}
             <motion.a
               href="#services"
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0, delay: 0.4 }}
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 15 }}
