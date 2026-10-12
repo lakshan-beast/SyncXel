@@ -74,7 +74,7 @@ export default function Documentation() {
           <aside className="lg:col-span-1 space-y-1">
             <div className="bg-white border border-slate-200 rounded-3xl p-3 flex lg:flex-col gap-1.5 shadow-xs scrollbar-thumb-slate-300 overflow-x-auto">
               <motion.span
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 className="font-mono text-[10px] text-slate-500/50 hidden lg:block px-3 py-3">
@@ -85,7 +85,7 @@ export default function Documentation() {
                 const isActive = activeTab === cat.id;
                 return (
                   <motion.button
-                    initial={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{
                       delay: 0.2,
