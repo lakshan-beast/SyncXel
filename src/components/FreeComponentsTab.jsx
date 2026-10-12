@@ -133,13 +133,9 @@ export default function FreeComponentsTab({
               <div className="px-5 py-4 pb-1 bg-white border-none">
                 <div className="flex items-start justify-between gap-3 mb-1">
                   <div className="space-y-1">
-                    <motion.span
-                      initial={{ opacity: 0, x: -50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6 }}
-                      className="inline-block text-[10px] font-baloo font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
+                    <span className="inline-block text-[10px] font-baloo font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
                       {item.category}
-                    </motion.span>
+                    </span>
 
                     <motion.h3
                       initial={{ opacity: 0, x: -30 }}
@@ -149,18 +145,18 @@ export default function FreeComponentsTab({
                       {item.title}
                     </motion.h3>
                   </div>
-                  <motion.span
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-[10px] font-baloo font-bold text-white bg-slate-900 px-4.5 py-1 rounded-full shadow-xs shrink-0">
+                  <span className="text-[10px] font-baloo font-bold text-white bg-slate-900 px-4.5 py-1 rounded-full shadow-xs shrink-0">
                     FREE
-                  </motion.span>
+                  </span>
                 </div>
                 <motion.p
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
                   className="text-xs text-slate-500 leading-tight font-baloo pt-1">
                   {item.description}
                 </motion.p>
@@ -175,7 +171,7 @@ export default function FreeComponentsTab({
                     <ul className="space-y-1 px-2">
                       {item.useCases.map((uc, idx) => (
                         <motion.li
-                          initial={{ opacity: 0.3, x: -30 }}
+                          initial={{ opacity: 0.3, x: -10 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{
                             delay: 0.2,
@@ -284,7 +280,7 @@ export default function FreeComponentsTab({
               <div className="px-4 py-2 bg-white flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <motion.span
-                    initial={{ opacity: 0.3, x: -20 }}
+                    initial={{ opacity: 0.3, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{
                       type: "spring",
@@ -300,7 +296,7 @@ export default function FreeComponentsTab({
                 {/* Copy Button: Mobile devices for hidden , Tablet/Desktop (`sm:flex`)  */}
                 <motion.button
                   whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0.3, x: 20 }}
+                  initial={{ opacity: 0.3, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{
                     type: "spring",
