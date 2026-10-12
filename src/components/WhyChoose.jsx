@@ -79,11 +79,15 @@ export default function Features() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }}
           className="text-left space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
             <motion.span
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="font-mono text-xs text-slate-400 block">
@@ -91,7 +95,7 @@ export default function Features() {
             </motion.span>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
@@ -101,7 +105,7 @@ export default function Features() {
           </div>
 
           <motion.h2
-            initial={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
@@ -112,9 +116,13 @@ export default function Features() {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }}
             className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
             Whether you are using our pre-built component blocks or hiring us
             for custom development, we maintain the highest engineering
@@ -159,7 +167,11 @@ export default function Features() {
                   <motion.p
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
                     className="px-2 text-xs sm:text-sm text-slate-500 leading-tight font-baloo">
                     {feature.description}
                   </motion.p>
