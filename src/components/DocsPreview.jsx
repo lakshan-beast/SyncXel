@@ -59,7 +59,7 @@ export default function DocsPreviewSection() {
           className="space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
             <motion.span
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="font-mono text-xs text-slate-400 block">
@@ -67,7 +67,7 @@ export default function DocsPreviewSection() {
             </motion.span>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
@@ -77,7 +77,7 @@ export default function DocsPreviewSection() {
           </div>
 
           <motion.h2
-            initial={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
@@ -85,9 +85,13 @@ export default function DocsPreviewSection() {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }}
             className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl text-left sm:text-center mx-auto font-baloo">
             SyncXel isn't just a component library. Access our curated knowledge
             hub to solve frontend challenges in seconds.
@@ -116,16 +120,12 @@ export default function DocsPreviewSection() {
                     <Icon className="w-5 h-5 group-hover:animate-pulse" />
                   </div>
 
-                  <motion.span
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="font-mono text-[10px] text-slate-400 block mb-2">
+                  <span className="font-mono text-[10px] text-slate-400 block mb-2">
                     // module_0{index + 1}
-                  </motion.span>
+                  </span>
 
                   <motion.h3
-                    initial={{ opacity: 0, x: -30 }}
+                    initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                     className="text-base sm:text-lg font-bold text-slate-950 mb-2 tracking-tight">
@@ -133,10 +133,14 @@ export default function DocsPreviewSection() {
                   </motion.h3>
 
                   <motion.p
-                    initial={{ opacity: 0, x: -30 }}
+                    initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-xs sm:text-sm text-slate-500 leading-tight font-baloo">
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="text-xs sm:text-sm text-slate-500 leading-tight font-baloo pl-2">
                     {item.desc}
                   </motion.p>
                 </div>
@@ -147,14 +151,14 @@ export default function DocsPreviewSection() {
 
         {/* CTA Button */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center">
           <Link to="/docs" className="inline-block">
-            <motion.button
-              initial={{ opacity: 0, y: 30 }}
+            <button
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -162,7 +166,7 @@ export default function DocsPreviewSection() {
               className="group inline-flex items-center space-x-3 px-6 py-3.5 bg-slate-900 border border-slate-900 text-white font-mono text-xs sm:text-sm font-bold rounded-xl hover:bg-slate-800 shadow-xs cursor-pointer transition-all">
               <span>const docs = () =&gt; view_ecosystem();</span>
               <HiOutlineArrowRight className="w-4 h-4 text-slate-300 group-hover:translate-x-1.5 transition-transform duration-300" />
-            </motion.button>
+            </button>
           </Link>
         </motion.div>
       </div>
