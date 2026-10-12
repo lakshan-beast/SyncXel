@@ -6,6 +6,8 @@ import FreeComponentsTab from "../components/FreeComponentsTab";
 import TemplateComponentsTab from "../components/TemplateComponentsTab";
 import UiPacksTab from "../components/UiPacks";
 
+import UIComponentGenerator from "../components/UIComponentGenerator";
+
 import { freeComponentsData } from "../data/free/freeIndex";
 import { uiPacksData } from "../data/uiPacks";
 import { premiumKits } from "../data/premiumKitData";
@@ -85,6 +87,7 @@ export default function ComponentsHubPage() {
     <div className="min-h-screen bg-white text-slate-900 py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-20 lg:mt-12">
       {/* Main Header */}
       <HubHeader />
+      <UIComponentGenerator />
 
       {/* Main Tabs Switcher */}
       <span className="font-mono text-slate-500/50 mb-1 block text-xs border-t-2 border-slate-200 pt-5">
