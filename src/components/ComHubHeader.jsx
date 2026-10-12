@@ -35,7 +35,7 @@ export default function HubHeader() {
           {/* Terminal Style Pill Badge */}
           <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200/50 text-slate-500/50 text-xs font-mono shadow-xs">
             <motion.span
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}>
               // next_gen_ui_ecosystem_V2.0
@@ -43,7 +43,7 @@ export default function HubHeader() {
           </div>
 
           <motion.h1
-            initial={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
@@ -57,7 +57,11 @@ export default function HubHeader() {
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            }}
             className="text-slate-500 text-xs sm:text-sm leading-tight font-baloo">
             Explore a comprehensive engineering repository featuring modular,
             highly optimized React & Tailwind CSS components, interactive UI
@@ -70,11 +74,7 @@ export default function HubHeader() {
           {/* Metadata & Legal Notice (Placed BEFORE Back Button) */}
           <div className="flex flex-wrap items-center gap-1 pt-1">
             {/* Last Updated */}
-            <motion.div
-              initial={{ opacity: 0, x: -15 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-xs text-slate-500 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-200 flex items-center gap-2 shadow-xs font-baloo">
+            <div className="text-xs text-slate-500 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-200 flex items-center gap-2 shadow-xs font-baloo">
               <MdOutlineTipsAndUpdates className="w-5 h-5  text-slate-900 animate-pulse" />
               <span>
                 Last Updated :{" "}
@@ -82,19 +82,15 @@ export default function HubHeader() {
                   {MonthName} {currentYear}
                 </strong>
               </span>
-            </motion.div>
+            </div>
 
             {/* Legal / Free Usage Message */}
-            <motion.div
-              initial={{ opacity: 0, x: -15 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-50 border border-slate-200 px-3.5 py-2 rounded-xl flex items-center gap-4 text-xs text-slate-700 shadow-xs font-baloo">
+            <div className="bg-slate-50 border border-slate-200 px-3.5 py-2 rounded-xl flex items-center gap-4 text-xs text-slate-700 shadow-xs font-baloo">
               <HiGift className="w-4 h-4 text-slate-900 shrink-0 animate-bounce" />
               <span className="animate-pulse">
                 Free components can be used in personal & client projects!
               </span>
-            </motion.div>
+            </div>
           </div>
 
           {/* Back to Home Button */}
@@ -110,7 +106,7 @@ export default function HubHeader() {
         <div className="relative z-10 flex flex-col gap-1.5 shrink-0 self-start">
           <div className="grid grid-cols-2 md:flex md:flex-col gap-1.5 font-baloo">
             <motion.span
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.2,
@@ -123,7 +119,7 @@ export default function HubHeader() {
               v4 Ready
             </motion.span>
             <motion.span
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.3,
@@ -136,7 +132,7 @@ export default function HubHeader() {
               Animations
             </motion.span>
             <motion.span
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.4,
@@ -149,7 +145,7 @@ export default function HubHeader() {
               Friendly
             </motion.span>
             <motion.span
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.5,
@@ -162,7 +158,7 @@ export default function HubHeader() {
               Accessible (ARIA Ready)
             </motion.span>
             <motion.span
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.6,
@@ -175,7 +171,7 @@ export default function HubHeader() {
               Responsive Layouts
             </motion.span>
             <motion.span
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 delay: 0.7,
