@@ -47,7 +47,6 @@ export default function UiPacksTab({
         // section_registry: production_grade_ui_packs
       </span>
 
-      {/* ඩේටා නැත්නම් පෙන්වන මැසේජ් එක */}
       {componentsData.length === 0 ? (
         <div className="text-center py-16 bg-slate-900 border border-slate-800 rounded-2xl">
           <motion.p
@@ -68,7 +67,7 @@ export default function UiPacksTab({
               <div>
                 {/* Category Badge */}
                 <motion.span
-                  initial={{ opacity: 0, x: -50 }}
+                  initial={{ opacity: 0, x: -15 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                   className="text-[10px] font-baloo font-semibold px-5 py-1 bg-slate-100 text-slate-700 rounded-full border border-slate-200 inline-block">
@@ -76,7 +75,7 @@ export default function UiPacksTab({
                 </motion.span>
 
                 <motion.h3
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                   className="text-xl font-bold text-slate-900 tracking-tight font-mono mt-2">
@@ -84,9 +83,13 @@ export default function UiPacksTab({
                 </motion.h3>
 
                 <motion.p
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
                   className="text-slate-500/80 text-xs sm:text-sm mt-1 leading-tight font-baloo">
                   {pack.description}
                 </motion.p>
@@ -95,9 +98,13 @@ export default function UiPacksTab({
               {/* Footer / Price & Actions */}
               <div className="mt-3 pt-3 border-t-2 border-slate-200 flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-1">
                 <motion.span
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+                  initial={{ opacity: 0, x: -15 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
                   className="text-3xl sm:text-4xl font-bold text-slate-900 font-mono tracking-tight flex items-end">
                   {pack.price}/{" "}
                   <motion.span
@@ -111,29 +118,23 @@ export default function UiPacksTab({
 
                 <div className="flex items-center gap-2 ">
                   {pack.demoUrl && (
-                    <motion.a
-                      initial={{ opacity: 0, x: 25 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: 0.1 }}
+                    <a
                       href={pack.demoUrl}
                       target="_blank"
                       rel="noreferrer"
                       className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-baloo font-medium rounded-xl border border-slate-200 transition shadow-xs">
                       Live Preview
-                    </motion.a>
+                    </a>
                   )}
                   {pack.checkoutUrl && (
-                    <motion.a
-                      initial={{ opacity: 0, x: 25 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6 }}
+                    <a
                       href={pack.checkoutUrl}
                       target="_blank"
                       rel="noreferrer"
                       className="px-3.5 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-baloo font-bold rounded-xl transition shadow-xs flex gap-2 items-center">
                       <HiShoppingBag className="w-3.5 h-3.5" />
                       Buy Pack
-                    </motion.a>
+                    </a>
                   )}
                 </div>
               </div>
