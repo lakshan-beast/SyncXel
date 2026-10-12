@@ -55,16 +55,16 @@ export default function AnimationGuide() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <motion.h3
-                   initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
                   className="text-md sm:text-lg font-bold text-slate-900 font-mono">
                   {item.title}
                 </motion.h3>
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
                   className="text-xs sm:text-sm text-slate-500 mt-1">
                   {item.desc}
                 </motion.p>
@@ -106,37 +106,19 @@ export default function AnimationGuide() {
 
             {/* Explanation */}
             {item.explanation && (
-              <motion.p
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{
-                  delay: 0.2,
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 17,
-                }}
-                className="text-[11px] text-slate-600 italic bg-white py-2.5 px-3.5 rounded-lg border-l-4 border-l-slate-700 border border-slate-300/50">
+              <p className="text-[11px] text-slate-600 italic bg-white py-2.5 px-3.5 rounded-lg border-l-4 border-l-slate-700 border border-slate-300/50">
                 💡{" "}
                 <span className="font-medium text-slate-800 mr-2">Why ? </span>{" "}
                 {item.explanation}
-              </motion.p>
+              </p>
             )}
 
             {/* Pro Tip */}
             {item.proTip && (
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{
-                  delay: 0.2,
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 17,
-                }}
-                className="text-[11px] bg-slate-50 text-slate-700 py-2.5 px-3.5 rounded-lg border border-slate-200 font-baloo">
+              <div className="text-[11px] bg-slate-50 text-slate-700 py-2.5 px-3.5 rounded-lg border border-slate-200 font-baloo">
                 🔥 <span className="font-bold text-slate-900">Pro Tip : </span>{" "}
                 {item.proTip}
-              </motion.div>
+              </div>
             )}
           </div>
         ))}
