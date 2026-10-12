@@ -112,7 +112,7 @@ export default function TemplateComponentsTab({
                       {/* Category Badge */}
                       <div className="flex items-center justify-between mb-1">
                         <motion.span
-                          initial={{ opacity: 0, x: -50 }}
+                          initial={{ opacity: 0, x: -10 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.6 }}
                           className="text-[10px] font-baloo px-4 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold border border-slate-200">
@@ -121,7 +121,7 @@ export default function TemplateComponentsTab({
                       </div>
 
                       <motion.h3
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         className="text-2xl font-black text-slate-900 tracking-tight font-mono mb-2">
@@ -129,9 +129,13 @@ export default function TemplateComponentsTab({
                       </motion.h3>
 
                       <motion.p
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: -15 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }}
                         className="text-xs sm:text-sm text-slate-500 leading-tight mb-3 font-baloo">
                         {item.description}
                       </motion.p>
@@ -139,7 +143,7 @@ export default function TemplateComponentsTab({
                       {/* Features checklist */}
                       <div className="space-y-1 px-3 mb-3 font-baloo">
                         <motion.div
-                          initial={{ opacity: 0.3, x: -30 }}
+                          initial={{ opacity: 0.3, x: -10 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{
                             type: "spring",
@@ -154,7 +158,7 @@ export default function TemplateComponentsTab({
                         </motion.div>
 
                         <motion.div
-                          initial={{ opacity: 0.3, x: -30 }}
+                          initial={{ opacity: 0.3, x: -10 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{
                             delay: 0.2,
@@ -170,7 +174,7 @@ export default function TemplateComponentsTab({
                         </motion.div>
 
                         <motion.div
-                          initial={{ opacity: 0.3, x: -30 }}
+                          initial={{ opacity: 0.3, x: -10 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{
                             delay: 0.4,
@@ -194,11 +198,7 @@ export default function TemplateComponentsTab({
                             <strong className="text-slate-700 block mb-0.5 font-mono">
                               a_z_documentation_included:
                             </strong>
-                            <motion.span
-                              initial={{ opacity: 0, x: -30 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              transition={{ duration: 0.6 }}
-                              className="font-baloo text-slate-600">
+                            <span className="font-baloo text-slate-600">
                               Complete setup guides for Firebase, Vercel &
                               GitHub. Visit{" "}
                               <Link
@@ -207,7 +207,7 @@ export default function TemplateComponentsTab({
                                 syncxel.com/docs
                               </Link>
                               .
-                            </motion.span>
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -219,7 +219,7 @@ export default function TemplateComponentsTab({
                       <div className="flex items-center justify-between text-xs font-baloo text-slate-600 px-1">
                         <span>Estimated Local Rate:</span>
                         <motion.span
-                          initial={{ opacity: 0, x: 30 }}
+                          initial={{ opacity: 0, x: 10 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.6 }}
                           className="font-bold text-slate-900 text-base md:text-3xl">
@@ -237,7 +237,7 @@ export default function TemplateComponentsTab({
                       <div className="flex items-center space-x-3">
                         {item.demoUrl && (
                           <motion.a
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: -10 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
                             href={item.demoUrl}
@@ -250,7 +250,7 @@ export default function TemplateComponentsTab({
                         )}
                         {item.checkoutUrl && (
                           <motion.a
-                            initial={{ opacity: 0, x: 20 }}
+                            initial={{ opacity: 0, x: 10 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
                             href={item.checkoutUrl}
@@ -270,7 +270,7 @@ export default function TemplateComponentsTab({
 
                       {/* Telegram Customize Upsell */}
                       <motion.a
-                        initial={{ opacity: 0.3, y: 20 }}
+                        initial={{ opacity: 0.3, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{
                           type: "spring",
