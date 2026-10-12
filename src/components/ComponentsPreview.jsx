@@ -68,7 +68,7 @@ export default function HomeComponentsTeaser() {
           className="space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
             <motion.span
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="font-mono text-xs text-slate-400 block">
@@ -76,7 +76,7 @@ export default function HomeComponentsTeaser() {
             </motion.span>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
@@ -86,7 +86,7 @@ export default function HomeComponentsTeaser() {
           </div>
 
           <motion.h2
-            initial={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
@@ -94,9 +94,13 @@ export default function HomeComponentsTeaser() {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            }}
             className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl text-left sm:text-center mx-auto font-baloo">
             Clean, high-performance, and production-ready components built with
             React & Tailwind CSS. Designed to accelerate your frontend workflow
@@ -119,26 +123,24 @@ export default function HomeComponentsTeaser() {
                 {/* Live Component Preview Box */}
                 <div className="h-60 bg-slate-50/70 overflow-hidden relative flex items-center justify-center px-4 py-10 border-b border-slate-100">
                   <motion.div
-                    initial={{ opacity: 0, y: -50 }}
+                    initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="w-full flex items-center justify-center scale-95 group-hover:scale-100 transition-transform duration-300 pointer-events-none">
                     {item.component}
                   </motion.div>
-                  <motion.span
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                  <span
+                   
                     className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-xs border border-slate-700/30 text-[10px] font-mono font-semibold text-white z-10 shadow-xs">
                     {item.category.toLowerCase()}
-                  </motion.span>
+                  </span>
                 </div>
 
                 {/* Card Info Bar */}
                 <div className="px-5 py-2 flex items-center justify-between bg-white">
                   <div>
                     <motion.span
-                      initial={{ opacity: 0, x: -50 }}
+                      initial={{ opacity: 0, x: -15 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6 }}
                       className="font-mono text-[10px] text-slate-400 block mb-1">
@@ -146,7 +148,7 @@ export default function HomeComponentsTeaser() {
                     </motion.span>
 
                     <motion.h3
-                      initial={{ opacity: 0, x: -30 }}
+                      initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6 }}
                       className="text-slate-950 font-bold text-sm sm:text-base tracking-tight group-hover:text-slate-700 transition-colors">
@@ -154,13 +156,9 @@ export default function HomeComponentsTeaser() {
                     </motion.h3>
                   </div>
 
-                  <motion.div
-                    initial={{ opacity: 0.5, x: 10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300 border border-slate-200">
+                  <div className="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300 border border-slate-200">
                     <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                  </motion.div>
+                  </div>
                 </div>
               </Link>
             </motion.div>
@@ -176,7 +174,7 @@ export default function HomeComponentsTeaser() {
           className="text-center">
           <Link to="/components" className="inline-block">
             <motion.button
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
