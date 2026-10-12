@@ -140,6 +140,7 @@
 // }
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { quickStartData } from "../../data/docs/quickStartData";
 import { HiOutlineClipboardCopy, HiOutlineCheck } from "react-icons/hi";
 
@@ -164,9 +165,13 @@ export default function QuickSetup() {
             <span className="text-[10px] font-mono text-slate-500/60">
               // quick_setup_matrix
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ type: "tween", stiffness: 400, damping: 17 }}
+              className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
               {quickStartData?.title}
-            </h2>
+            </motion.h2>
           </div>
           {quickStartData?.licenseBanner && (
             <span className="text-[10px] font-baloo font-extrabold px-3 py-1 rounded-full bg-slate-900 text-white border border-slate-800 shadow-xs">
@@ -174,9 +179,13 @@ export default function QuickSetup() {
             </span>
           )}
         </div>
-        <p className="text-xs sm:text-sm text-slate-500 mt-2">
+        <motion.p
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-xs sm:text-sm text-slate-500 mt-2">
           {quickStartData?.subtitle || quickStartData?.description}
-        </p>
+        </motion.p>
       </div>
 
       {/* 2. PREREQUISITES BOX */}
@@ -187,7 +196,18 @@ export default function QuickSetup() {
           </h4>
           <ul className="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1 ml-2">
             {quickStartData.prerequisites.items.map((item, idx) => (
-              <li key={idx}>{item}</li>
+              <motion.li
+                initial={{ opacity: 0.3, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.1,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }}
+                key={idx}>
+                {item}
+              </motion.li>
             ))}
           </ul>
         </div>
@@ -205,12 +225,20 @@ export default function QuickSetup() {
             {/* CRITICAL FIX: min-w-0 added here so inner horizontal scroll works perfectly on mobile */}
             <div className="flex-1 min-w-0 space-y-3">
               <div>
-                <h3 className="text-md font-bold text-slate-900 font-mono">
+                <motion.h3
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-md font-bold text-slate-900 font-mono">
                   {step.title}
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
+                </motion.h3>
+                <motion.p
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-xs text-slate-500 mt-1 pl-2">
                   {step.description}
-                </p>
+                </motion.p>
               </div>
 
               {/* Multi-Package Manager Commands Support */}
@@ -232,9 +260,18 @@ export default function QuickSetup() {
                   </div>
 
                   <div className="p-3 font-mono text-xs text-slate-200 flex items-center justify-between gap-4 overflow-x-auto">
-                    <span className="whitespace-nowrap">
+                    <motion.span
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{
+                        delay: 0.1,
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 17,
+                      }}
+                      className="whitespace-nowrap">
                       {step.commands[activePkg]}
-                    </span>
+                    </motion.span>
                     <button
                       onClick={() =>
                         handleCopy(step.commands[activePkg], `qs-${step.step}`)
@@ -266,7 +303,18 @@ export default function QuickSetup() {
                       <HiOutlineClipboardCopy className="w-4 h-4" />
                     )}
                   </button>
-                  <pre className="whitespace-pre">{step.code}</pre>
+                  <motion.pre
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: 0.1,
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="whitespace-pre">
+                    {step.code}
+                  </motion.pre>
                 </div>
               )}
 
