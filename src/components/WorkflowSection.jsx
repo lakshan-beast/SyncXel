@@ -93,11 +93,15 @@ export default function WorkflowSection() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }}
           className="text-left space-y-3">
           <div className="flex flex-col gap-2 lg:flex-row lg:justify-between">
             <motion.span
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="font-mono text-xs text-slate-400 block">
@@ -105,7 +109,7 @@ export default function WorkflowSection() {
             </motion.span>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 15 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="inline-flex items-center w-fit space-x-2 px-3 py-1 rounded-md bg-slate-100 border border-slate-300 text-slate-800 text-xs font-mono shadow-xs">
@@ -115,7 +119,7 @@ export default function WorkflowSection() {
           </div>
 
           <motion.h2
-            initial={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight text-left sm:text-center pt-1 sm:pt-3">
@@ -123,9 +127,13 @@ export default function WorkflowSection() {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+           transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }}
             className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
             A transparent 4-step workflow from initial design to final
             deployment ensuring maximum quality and precision.
@@ -149,24 +157,16 @@ export default function WorkflowSection() {
               className="group relative bg-white px-8 sm:px-7 py-6 rounded-2xl border border-slate-200/50 hover:border-slate-300/50 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <motion.span
-                    initial={{ opacity: 0, y: -50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-2xl font-extrabold bg-slate-900 text-white px-2.5 py-1 rounded-xl shadow-xs">
+                  <span className="text-2xl font-extrabold bg-slate-900 text-white px-2.5 py-1 rounded-xl shadow-xs">
                     {step.step}
-                  </motion.span>
-                  <motion.span
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="font-mono text-[10px] text-slate-400">
+                  </span>
+                  <span className="font-mono text-[10px] text-slate-400">
                     // step_{step.step}
-                  </motion.span>
+                  </span>
                 </div>
 
                 <motion.h3
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                   className="text-base sm:text-lg font-bold text-slate-950 mb-2 tracking-tight">
@@ -174,10 +174,14 @@ export default function WorkflowSection() {
                 </motion.h3>
 
                 <motion.p
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{ opacity: 0, x: -15 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="text-xs sm:text-sm text-slate-500 leading-tight font-baloo">
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  className="text-xs sm:text-sm text-slate-500 leading-tight font-baloo pl-2">
                   {step.description}
                 </motion.p>
               </div>
