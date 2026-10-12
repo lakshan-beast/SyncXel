@@ -66,18 +66,34 @@ export default function LegalPage({ tabList = defaultTabList }) {
               <span>// legal_compliance_repository_V2.0</span>
             </div>
 
-            <h1 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            <motion.h1
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
               Legal &{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-200 to-slate-700 block sm:inline mt-1 sm:mt-0">
                 Compliance Hub
               </span>
-            </h1>
+            </motion.h1>
 
-            <p className="text-slate-500 text-xs sm:text-sm leading-tight font-baloo">
+            <motion.p
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              className="text-slate-500 text-xs sm:text-sm leading-tight font-baloo">
               Review our terms of use, licensing policies, and privacy
               commitments designed to ensure complete transparency for all
               developers and clients.
-            </p>
+            </motion.p>
 
             <div className="text-xs text-slate-500 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-200 flex items-center gap-2 shadow-xs font-baloo">
               <MdOutlineTipsAndUpdates className="w-5 h-5 text-slate-900 animate-pulse" />
@@ -104,13 +120,23 @@ export default function LegalPage({ tabList = defaultTabList }) {
             {/* --- DESKTOP TABS PILLS --- */}
             <motion.div
               variants={itemVariants}
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
               className="hidden md:flex flex-wrap gap-2">
               <div className="bg-white border-none border-slate-100 rounded-3xl p-3 flex lg:flex-row gap-2 scrollbar-thumb-slate-300 overflow-x-auto">
                 {tabList.map((tab) => {
                   const Icon = tab.icon;
                   const isActive = activeTab === tab.id;
                   return (
-                    <button
+                    <motion.button
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
                       key={tab.id}
                       onClick={() => setActiveTab(tab.id)}
                       className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 cursor-pointer ${
@@ -120,7 +146,7 @@ export default function LegalPage({ tabList = defaultTabList }) {
                       }`}>
                       {Icon && <Icon className="w-4 h-4 shrink-0" />}
                       <span>{tab.label}</span>
-                    </button>
+                    </motion.button>
                   );
                 })}
               </div>
@@ -201,6 +227,9 @@ export default function LegalPage({ tabList = defaultTabList }) {
             3. MAIN CONTENT CONTAINER (White Card)
            ========================================= */}
         <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           variants={itemVariants}
           className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm space-y-8 relative overflow-hidden text-slate-700">
           <div className="text-sm leading-relaxed text-slate-600 font-sans">
@@ -217,7 +246,15 @@ export default function LegalPage({ tabList = defaultTabList }) {
                 </p>
 
                 <div className="space-y-2 font-mono">
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
+                  <motion.div
+                    initial={{ opacity: 0.3, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
                     <h3 className="font-semibold text-slate-900 text-xs sm:text-sm">
                       1. Information Collection & Merchant of Record
                     </h3>
@@ -229,9 +266,18 @@ export default function LegalPage({ tabList = defaultTabList }) {
                       required for digital asset fulfillment and invoice
                       generation.
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
+                  <motion.div
+                    initial={{ opacity: 0.3, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 0.1,
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
                     <h3 className="font-semibold text-slate-900 text-xs sm:text-sm">
                       2. Cookies and Analytics
                     </h3>
@@ -241,9 +287,18 @@ export default function LegalPage({ tabList = defaultTabList }) {
                       personal tracking information is sold or shared with
                       external third-party advertisers.
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
+                  <motion.div
+                    initial={{ opacity: 0.3, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 0.2,
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
                     <h3 className="font-semibold text-slate-900 text-xs sm:text-sm">
                       3. Data Security
                     </h3>
@@ -252,7 +307,7 @@ export default function LegalPage({ tabList = defaultTabList }) {
                       secure database practices to ensure your interactions and
                       download histories remain strictly confidential.
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             )}
@@ -270,7 +325,15 @@ export default function LegalPage({ tabList = defaultTabList }) {
                 </p>
 
                 <div className="space-y-2 font-mono">
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
+                  <motion.div
+                    initial={{ opacity: 0.3, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
                     <h3 className="font-semibold text-slate-900 text-xs sm:text-sm">
                       1. Free Resources License
                     </h3>
@@ -281,9 +344,18 @@ export default function LegalPage({ tabList = defaultTabList }) {
                       <strong>personal and commercial projects</strong>.
                       Attribution is appreciated but not strictly mandatory.
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
+                  <motion.div
+                    initial={{ opacity: 0.3, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 0.1,
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
                     <h3 className="font-semibold text-slate-900 text-xs sm:text-sm">
                       2. Premium / Paid Assets License
                     </h3>
@@ -297,9 +369,18 @@ export default function LegalPage({ tabList = defaultTabList }) {
                       the source code files directly as standalone UI components
                       or template collections is strictly prohibited.
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
+                  <motion.div
+                    initial={{ opacity: 0.3, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 0.2,
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1">
                     <h3 className="font-semibold text-slate-900 text-xs sm:text-sm">
                       3. Limitation of Liability
                     </h3>
@@ -310,7 +391,7 @@ export default function LegalPage({ tabList = defaultTabList }) {
                       indirect, or incidental system bugs, crashes, or
                       compilation issues arising from code integration.
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             )}
@@ -328,7 +409,15 @@ export default function LegalPage({ tabList = defaultTabList }) {
                   downloaded.
                 </p>
 
-                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2 font-mono">
+                <motion.div
+                  initial={{ opacity: 0.3, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  className="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-2 font-mono">
                   <h3 className="font-semibold text-slate-900 text-xs sm:text-sm">
                     Exceptions & Developer Assistance
                   </h3>
@@ -344,7 +433,7 @@ export default function LegalPage({ tabList = defaultTabList }) {
                     within <strong>7 days of purchase</strong>. We will review
                     your case and provide a functional fix or replacement.
                   </p>
-                </div>
+                </motion.div>
               </div>
             )}
           </div>
@@ -353,13 +442,32 @@ export default function LegalPage({ tabList = defaultTabList }) {
               4. SUPPORT FOOTER
              ========================================= */}
           <div className="pt-6 border-t border-slate-200 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-3 font-baloo">
-            <span>Have custom licensing inquiries or legal questions?</span>
-            <a
+            <motion.span
+              initial={{ opacity: 0.3, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}>
+              Have custom licensing inquiries or legal questions?
+            </motion.span>
+            <motion.a
+              initial={{ opacity: 0.3, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{
+                delay: 0.2,
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
               href="mailto:syncxelofficial@gmail.com"
               className="inline-flex items-center gap-1.5 text-slate-800 hover:text-slate-950 transition-colors font-baloo font-medium">
               <IoMdMail className="w-4 h-4 text-slate-500" />
               <span>syncxelofficial@gmail.com</span>
-            </a>
+            </motion.a>
           </div>
         </motion.div>
       </motion.div>
