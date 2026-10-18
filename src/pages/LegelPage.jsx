@@ -41,6 +41,26 @@ const defaultTabList = [
 ];
 
 export default function LegalPage({ tabList = defaultTabList }) {
+  // all months
+  const Months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+  const MonthName = Months[currentMonth];
   const [activeTab, setActiveTab] = useState("privacy");
   const [isMobileTabOpen, setIsMobileTabOpen] = useState(false);
 
@@ -99,7 +119,10 @@ export default function LegalPage({ tabList = defaultTabList }) {
               <MdOutlineTipsAndUpdates className="w-5 h-5 text-slate-900 animate-pulse" />
               <span>
                 Last Updated :{" "}
-                <strong className="text-slate-900">September 2026</strong>
+                <strong className="text-slate-900">
+                  {" "}
+                  {MonthName} {currentYear}
+                </strong>
               </span>
             </div>
 
