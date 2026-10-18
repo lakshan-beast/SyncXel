@@ -66,13 +66,17 @@ export default function UiPacksTab({
               {/* Top Content */}
               <div>
                 {/* Category Badge */}
-                <motion.span
-                  initial={{ opacity: 0, x: -15 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="text-[10px] font-baloo font-semibold px-5 py-1 bg-slate-100 text-slate-700 rounded-full border border-slate-200 inline-block">
-                  {pack.category}
-                </motion.span>
+                <div className="flex justify-between items-center">
+                  <motion.span
+                    initial={{ opacity: 0, x: -15 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-[10px] font-baloo font-semibold px-5 py-1 bg-slate-100 text-slate-700 rounded-full border border-slate-200 inline-block">
+                    {pack.category}
+                  </motion.span>
+
+                  <span className="relative top-0 right-0">{pack.status}</span>
+                </div>
 
                 <motion.h3
                   initial={{ opacity: 0, x: -10 }}
