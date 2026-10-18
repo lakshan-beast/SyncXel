@@ -5,8 +5,8 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 import HeroSection from "./components/Hero";
-import Components from "./components/ComponentsPreview";
-import DocsPreviewSection from "./components/DocsPreview";
+import ComponentsPreview from "./components/ComponentsPreview";
+import DocsPreview from "./components/DocsPreview";
 import FeaturesSection from "./components/WhyChoose";
 import TeamSection from "./components/TeamSection";
 import ServicesSection from "./components/Services";
@@ -14,9 +14,9 @@ import WorkflowSection from "./components/WorkflowSection";
 import ContactSection from "./components/ContactSection";
 import FaqSection from "./components/FAQSection";
 
-import AllComponents from "./pages/AllComponentsNew";
-import Documentation from "./pages/Documentation";
-import Legal from "./pages/Legel";
+import AllComponents from "./pages/AllComponentspPage";
+import AllDocumentation from "./pages/AllDocumentationPage";
+import Legal from "./pages/LegelPage";
 
 import ScrollToTop from "./components/ScrollTop";
 
@@ -36,16 +36,14 @@ export default function App() {
               element={
                 <>
                   <HeroSection />
-                  <Components />
-                  <DocsPreviewSection />
+                  <ComponentsPreview />
+                  <DocsPreview />
                   <FeaturesSection />
                   <TeamSection />
                   <ServicesSection />
                   <WorkflowSection />
                   <ContactSection />
                   <FaqSection />
-
-                  
                   <Footer />
                 </>
               }
@@ -66,7 +64,7 @@ export default function App() {
               path="/docs"
               element={
                 <>
-                  <Documentation />
+                  <AllDocumentation />
                 </>
               }
             />
