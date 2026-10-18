@@ -5,7 +5,7 @@ import { HiArrowLeft, HiCheckCircle } from "react-icons/hi2";
 import { MdOutlineTipsAndUpdates } from "react-icons/md";
 
 export default function HubHeader() {
-  // months
+  // all months
   const Months = [
     "January",
     "February",
