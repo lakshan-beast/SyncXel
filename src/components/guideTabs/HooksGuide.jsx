@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { customHooksData } from "../../data/docs/customHooksData";
 import { HiOutlineClipboardCopy, HiOutlineCheck } from "react-icons/hi";
 
@@ -15,19 +16,26 @@ export default function CustomHooks() {
 
   return (
     <div className="space-y-5 font-baloo">
-      
       {/* 1. MAIN HEADER CARD */}
       <div className="bg-white border border-slate-800/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-xl space-y-1">
         <span className="text-[10px] font-mono text-slate-500/60">
           // custom_hooks_library
         </span>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+        <motion.h2
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ type: "tween", stiffness: 400, damping: 17 }}
+          className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
           React Custom Hooks Library
-        </h2>
-        <p className="text-xs sm:text-sm text-slate-500">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-xs sm:text-sm text-slate-500">
           Reusable, production-ready utility hooks to supercharge your React
           applications.
-        </p>
+        </motion.p>
         <p className="text-xs text-slate-600 italic bg-slate-50 p-3.5 mt-5 rounded-2xl border border-slate-200/60 text-center">
           Copy and paste these clean TypeScript/JavaScript hooks directly into
           your project utils folder.
@@ -40,15 +48,22 @@ export default function CustomHooks() {
           <div
             key={hook.id || idx}
             className="bg-white border border-slate-800/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-xl space-y-3">
-            
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h3 className="text-md sm:text-lg font-bold text-slate-900 font-mono">
+                <motion.h3
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-md sm:text-lg font-bold text-slate-900 font-mono">
                   {hook.name}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 mt-1">
+                </motion.h3>
+                <motion.p
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-xs sm:text-sm text-slate-500 mt-1">
                   {hook.description}
-                </p>
+                </motion.p>
               </div>
               <span className="text-[10px] font-extrabold px-3 py-1 rounded-full bg-slate-900 text-white border border-slate-800 shrink-0 shadow-xs">
                 Custom Hook
@@ -67,13 +82,25 @@ export default function CustomHooks() {
                   <HiOutlineClipboardCopy className="w-4 h-4" />
                 )}
               </button>
-              <pre className="whitespace-pre">{hook.code}</pre>
+              <motion.pre
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.1,
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }}
+                className="whitespace-pre">
+                {hook.code}
+              </motion.pre>
             </div>
 
             {/* Explanation */}
             {hook.explanation && (
               <p className="text-[11px] text-slate-600 italic bg-white py-2.5 px-3.5 rounded-lg border-l-4 border-l-slate-700 border border-slate-300/50">
-                💡 <span className="font-medium text-slate-800 mr-2">Why ? </span>{" "}
+                💡{" "}
+                <span className="font-medium text-slate-800 mr-2">Why ? </span>{" "}
                 {hook.explanation}
               </p>
             )}
