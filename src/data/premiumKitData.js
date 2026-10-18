@@ -7,7 +7,7 @@ export const premiumKits = [
     title: "Photographer Portfolio & Agency Kit",
     category: "Full Template Suite",
     price: "$19",
-    sales: "01 Sold",
+    sales: "05+ Happy Clients",
     description:
       "Complete dark-mode ready photographer website template with Navbar, Hero, Services, Contact, Footer, and Framer Motion animations fully integrated.",
     previewImg: photographerImage,

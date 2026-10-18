@@ -1,5 +1,5 @@
-
 export const quickStartData = {
+  // main quick start data
   title: "Quick Start Guide",
   subtitle: "Get up and running with Syncxel components in under 5 minutes.",
   description:
@@ -16,7 +16,10 @@ export const quickStartData = {
       "TypeScript (Optional, but fully supported)",
     ],
   },
+
+  // quick steps : start installing dependencis and icons
   steps: [
+    // step 01 : install dependencis and icons
     {
       step: 1,
       title: "Install Dependencies & Icons",
@@ -31,54 +34,60 @@ export const quickStartData = {
       explanation:
         "We install `clsx` and `tailwind-merge` as they are essential for dynamically merging Tailwind CSS classes without style conflicts.",
     },
+
+    // stpe 02 : create utility helper
     {
       step: 2,
       title: "Create the Utility Helper (`cn`)",
       description:
         "Create a utility file to handle conditional classes smoothly. Paste this helper into `src/lib/utils.ts` (or `utils/cn.ts`):",
       code: `import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
+             import { twMerge } from "tailwind-merge";
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}`,
+              export function cn(...inputs: ClassValue[]) {
+                return twMerge(clsx(inputs));
+              }`,
       explanation:
         "This utility function safely merges multiple Tailwind classes and resolves conflicting classes (e.g., overriding padding or colors dynamically).",
     },
+
+    // step 03 : configure tailwind css
     {
       step: 3,
       title: "Configure Tailwind CSS",
       description:
         "Ensure your `tailwind.config.js` scans your source files and includes necessary support for custom themes and dark mode.",
       code: `/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"],
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-      },
-    },
-  },
-  plugins: [],
-};`,
+              module.exports = {
+                darkMode: ["class"],
+                content: [
+                  "./pages/**/*.{js,ts,jsx,tsx}",
+                  "./components/**/*.{js,ts,jsx,tsx}",
+                  "./app/**/*.{js,ts,jsx,tsx}",
+                  "./src/**/*.{js,ts,jsx,tsx}",
+                ],
+                theme: {
+                  extend: {
+                    colors: {
+                      border: "hsl(var(--border))",
+                      input: "hsl(var(--input))",
+                      ring: "hsl(var(--ring))",
+                      background: "hsl(var(--background))",
+                      foreground: "hsl(var(--foreground))",
+                      primary: {
+                        DEFAULT: "hsl(var(--primary))",
+                        foreground: "hsl(var(--primary-foreground))",
+                      },
+                    },
+                  },
+                },
+                plugins: [],
+              };`,
       proTip:
         "If you are using Tailwind CSS v4, you can skip the config file and directly import your theme variables in your main CSS entry point.",
     },
+
+    // step 04 : copy paste components
     {
       step: 4,
       title: "Copy & Paste Component",
