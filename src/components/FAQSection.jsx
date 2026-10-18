@@ -180,9 +180,9 @@ export default function FaqSection() {
                 <AnimatePresence>
                   {isOpen && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0, x: -30 }}
-                      animate={{ opacity: 1, height: "auto", x: 0 }}
-                      exit={{ opacity: 0, height: 0, x: 30 }}
+                      initial={{ opacity: 0, height: 0, y: -30 }}
+                      animate={{ opacity: 1, height: "auto", y: 0 }}
+                      exit={{ opacity: 0, height: 0, y: 30 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}>
                       <div className="px-6 pb-6 pt-0 text-slate-500 text-xs sm:text-sm leading-tight border-t border-slate-100 font-baloo">
                         <p className="pt-4">{faq.answer}</p>
