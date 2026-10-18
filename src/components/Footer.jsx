@@ -249,6 +249,14 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
+                    href="/#team"
+                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
+                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
+                    Hire Engineers
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="/#services"
                     className="hover:text-white transition-colors flex items-center gap-1.5 group">
                     <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
@@ -263,14 +271,7 @@ export default function Footer() {
                     Our Workflow
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="/#team"
-                    className="hover:text-white transition-colors flex items-center gap-1.5 group">
-                    <FaCaretRight className="text-slate-500 transition-transform group-hover:translate-x-0.5 shrink-0" />
-                    Hire Engineers
-                  </a>
-                </li>
+
                 <li>
                   <a
                     href="/#contact-section"
