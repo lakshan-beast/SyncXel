@@ -26,29 +26,23 @@ export default function AnimationGuide() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ type: "tween", stiffness: 400, damping: 17 }}
           className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-          Animations & Motion Guide
+          {animationData?.title}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           className="text-xs sm:text-sm text-slate-500">
-          Bring your website to life with smooth Framer Motion snippets and
-          custom Tailwind keyframe animations.
+          {animationData?.subtitle}
         </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-xs text-slate-600 italic bg-slate-50 p-3.5 mt-5 rounded-2xl border border-slate-200/60 text-center">
-          Copy-paste these animation configurations directly into your project
-          components and config files.
-        </motion.p>
+        <p className="text-xs text-slate-600 italic bg-slate-50 p-3.5 mt-5 rounded-2xl border border-slate-200/60 text-center">
+          {animationData?.description}
+        </p>
       </div>
 
       {/* 2. ANIMATIONS LIST LOOP */}
       <div className="space-y-5">
-        {animationData.map((item, idx) => (
+        {animationData?.steps?.map((item, idx) => (
           <div
             key={item.id || idx}
             className="bg-white border border-slate-800/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-xl space-y-3">
@@ -69,13 +63,9 @@ export default function AnimationGuide() {
                   {item.desc}
                 </motion.p>
               </div>
-              <motion.span
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-[10px] font-extrabold px-3 py-1 rounded-full bg-slate-900 text-white border border-slate-800 shrink-0 shadow-xs">
+              <span className="text-[10px] font-extrabold px-3 py-1 rounded-full bg-slate-900 text-white border border-slate-800 shrink-0 shadow-xs">
                 Motion
-              </motion.span>
+              </span>
             </div>
 
             {/* Code Block (Mobile horizontal scroll fixed) */}
