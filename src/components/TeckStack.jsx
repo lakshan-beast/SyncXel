@@ -133,8 +133,15 @@ export default function TechStack() {
             {duplicatedTech.map((tech, idx) => (
               <motion.div
                 key={`${tech.name}-${idx}`}
-                whileHover={{ scale: 1.05, y: -2 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                initial={{ opacity: 0.3, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{
+                  delay: 0.2,
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                }}
                 className="flex items-center space-x-3 opacity-75 hover:opacity-100 grayscale hover:grayscale-0 cursor-pointer font-baloo hover:scale-105 transition-all duration-300">
                 {tech.icon}
                 <span className="text-slate-800 font-semibold text-sm sm:text-lg tracking-tight whitespace-nowrap">
