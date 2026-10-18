@@ -39,9 +39,9 @@ export const teamData = [
   },
   {
     id: 2,
-    name: "Teran Chamuditha", // යාලුවාගේ නම දාන්න
-    role: "Cybersecurity Engineer & Core Contributor",
-    avatar: HeroImage2, // Cool security avatar එකක්
+    name: "Teran Chamuditha", 
+    role: "Cybersecurity Engineer & Backend Developer",
+    avatar: HeroImage2, // Cool security avatar 
     status: "Auditing Codebases",
     bio: "Software engineer specializing in web application security, ethical hacking, and secure architecture integration.",
     skills: [
