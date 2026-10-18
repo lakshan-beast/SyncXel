@@ -52,7 +52,7 @@ export default function TemplateComponentsTab({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-slate-400 font-sans text-xs">
-            No items found in this category.
+            More Templates Coming Soon...
           </motion.p>
         </div>
       ) : (
@@ -99,7 +99,7 @@ export default function TemplateComponentsTab({
                           initial={{ opacity: 0, x: -25 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.6, delay: 0.3 }}
-                          className="text-xs font-baloo font-medium text-slate-700 bg-white/90 backdrop-blur-md border border-slate-200 px-5 py-1.5 rounded-full shadow-sm">
+                          className="text-xs font-baloo font-medium text-slate-700 bg-white/90 backdrop-blur-md border border-slate-200 px-5 py-1.5 rounded-full shadow-sm animate-pulse">
                           {item.sales}
                         </motion.span>
                       )}
