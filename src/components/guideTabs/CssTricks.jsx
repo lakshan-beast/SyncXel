@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { cssTricksData } from "../../data/docs/cssTricksData";
 import { HiOutlineClipboardCopy, HiOutlineCheck } from "react-icons/hi";
 
@@ -19,19 +20,26 @@ export default function CssTricks() {
         <div
           key={trick.id}
           className="bg-white border border-slate-800/10 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-xl space-y-5">
-          
           {/* Header & Category Badge */}
           <div className="flex items-start justify-between gap-4">
             <div>
               <span className="text-[10px] font-mono text-slate-500/60">
                 // css_trick_module
               </span>
-              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mt-0.5">
+              <motion.h2
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ type: "tween", stiffness: 400, damping: 17 }}
+                className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mt-0.5">
                 {trick.title}
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-xs sm:text-sm text-slate-500 mt-1">
                 {trick.description}
-              </p>
+              </motion.p>
             </div>
             <span className="text-[10px] font-extrabold px-3 py-1 rounded-full bg-slate-900 text-white border border-slate-800 shrink-0 shadow-xs">
               {trick.category}
@@ -44,10 +52,13 @@ export default function CssTricks() {
               <div
                 key={idx}
                 className="space-y-3.5 bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200/60">
-                
-                <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider font-mono">
+                <motion.h3
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-xs font-bold text-slate-900 uppercase tracking-wider font-mono">
                   {method.name}
-                </h3>
+                </motion.h3>
 
                 {/* Code Block (Mobile horizontal scroll fixed) */}
                 <div className="relative bg-slate-950 p-4 sm:p-5 rounded-xl border border-slate-800 font-mono text-xs text-slate-300 overflow-x-auto w-full">
@@ -63,13 +74,27 @@ export default function CssTricks() {
                       <HiOutlineClipboardCopy className="w-4 h-4" />
                     )}
                   </button>
-                  <pre className="whitespace-pre">{method.code}</pre>
+                  <motion.pre
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: 0.1,
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    className="whitespace-pre">
+                    {method.code}
+                  </motion.pre>
                 </div>
 
                 {/* Explanation */}
                 {method.explanation && (
                   <p className="text-[11px] text-slate-600 italic bg-white py-2.5 px-3.5 rounded-lg border-l-4 border-l-slate-700 border border-slate-300/50">
-                    💡 <span className="font-medium text-slate-800 mr-2">Why ? </span>{" "}
+                    💡{" "}
+                    <span className="font-medium text-slate-800 mr-2">
+                      Why ?{" "}
+                    </span>{" "}
                     {method.explanation}
                   </p>
                 )}
@@ -77,7 +102,8 @@ export default function CssTricks() {
                 {/* Pro Tip */}
                 {method.proTip && (
                   <div className="text-[11px] bg-white text-slate-700 py-2.5 px-3.5 rounded-lg border border-slate-200 font-baloo">
-                    🔥 <span className="font-bold text-slate-900">Pro Tip : </span>{" "}
+                    🔥{" "}
+                    <span className="font-bold text-slate-900">Pro Tip : </span>{" "}
                     {method.proTip}
                   </div>
                 )}
