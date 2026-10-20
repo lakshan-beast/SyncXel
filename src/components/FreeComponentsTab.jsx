@@ -55,7 +55,7 @@ export default function FreeComponentsTab({
           animate={{ scale: 1, opacity: 1 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsMobileCategoryOpen(true)}
-          className="px-5 py-5 bg-amber-300 backdrop-blur-md border border-slate-700 rounded-4xl text-xs font-bold font-baloo text-slate-200 flex items-center space-x-1 shadow-2xl cursor-pointer">
+          className="px-5 py-5 bg-slate-300 backdrop-blur-md border border-slate-700 rounded-4xl text-xs font-bold font-baloo text-slate-200 flex items-center space-x-1 shadow-2xl cursor-pointer">
           <span className="w-3 h-3 mr-3 rounded-full bg-emerald-400 animate-ping" />
           <span className="flex items-center space-x-3">
             <span className="text-slate-400">Category : </span>

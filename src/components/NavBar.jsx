@@ -47,19 +47,19 @@ export default function NavBar() {
             <div className="flex flex-col">
               {/* Option 2 Connected Pill Style */}
               <div className="flex items-center">
-                <span className="text-2xl md:text-3xl font-black font-baloo uppercase bg-transparent text-slate-950 p-0 rounded-l-md shadow-inner leading-0">
+                <span className="text-2xl md:text-[29px] font-black font-baloo uppercase bg-transparent text-slate-950 p-0 rounded-l-md shadow-inner leading-0">
                   Sync
                 </span>
                 <motion.span
                   initial={{ x: -50, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="text-2xl md:text-3xl font-black font-baloo uppercase bg-slate-950 text-white px-2 py-0.5  ml-0.5 rounded-md border border-l-0 border-white/20 shadow-md leading-none">
+                  className="text-2xl md:text-[29px] font-black font-baloo uppercase bg-slate-950 text-white px-2.5 py-0  ml-0.5 rounded-md border border-l-0 border-white/20 shadow-md leading-none">
                   Xel
                 </motion.span>
               </div>
 
-              <span className="text-[10px] font-baloo tracking-widest text-slate-400 -mt-0.5 uppercase">
+              <span className="text-[10px] font-baloo tracking-widest text-slate-400 -mt-0 uppercase">
                 UI MATRIX V2.0
               </span>
             </div>

@@ -1,17 +1,17 @@
 // import CyberAvatarPreview from "../../library/free/avatars/CyberAvatarPreview";
 // import MatrixProfileRing from "../../library/free/avatars/MatrixProfileRing";
 
-import CyberAvatarPreview from "../../library/free/avatars/CyberAvatarPreview";
-import CyberHexaProfile from "../../library/free/avatars/CyberHexaProfile";
+import CyberAvatarPreview from "../../library/free/avatars/AuroraCreatorProfileCard";
+import CyberHexaProfile from "../../library/free/avatars/CyberpunkGamerProfileCard";
 import BrutalPopAvatar from "../../library/free/avatars/BrutalPopAvatar";
-import BrutalBadgeProfile from "../../library/free/avatars/BrutalBadgeProfile";
-import MatrixProfileRing from "../../library/free/avatars/MatrixProfileRing";
-import GlassEnclaveCard from "../../library/free/avatars/GlassEnclaveCard";
-import BentoProfileCard from "../../library/free/avatars/BentoProfileCard";
+import BrutalBadgeProfile from "../../library/free/avatars/BrutalAvatarWithStatus";
+import MatrixProfileRing from "../../library/free/avatars/MinimalUserListRow";
+import GlassEnclaveCard from "../../library/free/avatars/GlassProfileCard";
+import BentoProfileCard from "../../library/free/avatars/LuxuryDarkAuthorCard";
 import BentoStatusBadge from "../../library/free/avatars/BentoStatusBadge";
-import ClayVolumetricAvatar from "../../library/free/avatars/ClayVolumetricAvatar";
+import ClayVolumetricAvatar from "../../library/free/avatars/SoftUserAvatarChip";
 import ClayPillProfile from "../../library/free/avatars/ClayPillProfile";
-import RetroTerminalUserCard from "../../library/free/avatars/RetroTerminalUserCard";
+import RetroTerminalUserCard from "../../library/free/avatars/Y2KStickerAvatarBadge";
 import RetroCrtAgentBadge from "../../library/free/avatars/RetroCrtAgentBadge";
 
 export const avatarsData = [

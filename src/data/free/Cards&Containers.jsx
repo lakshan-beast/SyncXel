@@ -11,16 +11,16 @@ import ClayActionCard from "../../library/free/cards/ClayActionCard";
 import RetroTerminalCard from "../../library/free/cards/RetroTerminalCard";
 import RetroLogCard from "../../library/free/cards/RetroLogCard";
 
-import EducaCard from "../../library/free/cards/EducCards"
+import EducaCard from "../../library/free/cards/EducCards";
 
 export const cardsData = [
-{
+  {
     id: "card-brutal-profile",
     title: "Educa Card",
     category: "Cards & Containers",
     description:
       "High-contrast neo-brutalist profile tile featuring thick borders, hard offset shadow styling, dynamic hover depth, badge icons, and standard professional user details.",
-    copiesCount: '',
+    copiesCount: "",
 
     // Hyper-realistic use cases
     useCases: [
