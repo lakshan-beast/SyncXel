@@ -2,11 +2,11 @@ import CyberToastNotification from "../../library/free/notifications/CyberToastN
 import HolographicModalTrigger from "../../library/free/notifications/HolographicModalTrigger";
 
 import BrutalModal from "../../library/free/notifications/BrutalModal";
-import GlassModal from "../../library/free/notifications/GlassModal";
+import GlassModal from "../../library/free/notifications/GlassUndoToast";
 
-import BentoModal from "../../library/free/notifications/BentoModal";
+import BentoModal from "../../library/free/notifications/BrutalSuccessToast";
 import ClayModal from "../../library/free/notifications/ClayModal";
-import RetroModal from "../../library/free/notifications/RetroModal";
+import RetroModal from "../../library/free/notifications/BentoUploadToast";
 
 export const notificationsData = [
   {

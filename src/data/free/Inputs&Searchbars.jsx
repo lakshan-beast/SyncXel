@@ -1,13 +1,16 @@
-import NeonInputSearch from "../../library/free/inputs/NeonInputSearch";
-import CommandConsoleInput from "../../library/free/inputs/CommandConsoleInput";
+import NeonInputSearch from "../../library/free/inputs/GlassEmailInput";
+import CommandConsoleInput from "../../library/free/inputs/ClayNameInput";
 
-import BrutalOtpInput from "../../library/free/inputs/BrutalOtpInput";
+import BrutalOtpInput from "../../library/free/inputs/BrutalSearchInput";
 import GlassFloatingInput from "../../library/free/inputs/GlassFloatingInput";
-import BentoSearchShortcut from "../../library/free/inputs/BentoSearchShortcut";
-import ClayTagInput from "../../library/free/inputs/ClayTagInput";
+import BentoSearchShortcut from "../../library/free/inputs/BentoURLInput";
+import ClayTagInput from "../../library/free/inputs/SoftFloatingLabelInput";
 
-import RetroTerminalInput from "../../library/free/inputs/RetroTerminalInput";
-import DualThumbSlider from "../../library/free/inputs/DualThumbSlider";
+import RetroTerminalInput from "../../library/free/inputs/CyberpunkCommandInput";
+import DualThumbSlider from "../../library/free/inputs/AuroraPasswordInput";
+
+import LuxuryCardNumberInput from "../../library/free/inputs/LuxuryCardNumberInput";
+import Y2KStickerAvatarBadge from "../../library/free/inputs/Y2KUsernameInput";
 
 export const inputsData = [
   {
@@ -20,6 +23,29 @@ export const inputsData = [
     component: <RetroTerminalInput />,
     code: `<div className="w-72 p-2 bg-black border-2 border-green-500 rounded font-mono text-green-400 flex items-center gap-2"><span className="text-xs">&gt;</span><input type="text" placeholder="ENTER_QUERY..." className="bg-transparent text-green-300 text-xs focus:outline-none w-full" /><span className="w-2 h-4 bg-green-500 animate-pulse" /></div>`,
   },
+
+  {
+    id: "input-retro-terminal",
+    title: "Luxury Card Number Input",
+    category: "Inputs & Search Bars",
+    description:
+      "Green phosphor monospaced search bar with blinking block cursor.",
+    copiesCount: 220,
+    component: <LuxuryCardNumberInput />,
+    code: `<div className="w-72 p-2 bg-black border-2 border-green-500 rounded font-mono text-green-400 flex items-center gap-2"><span className="text-xs">&gt;</span><input type="text" placeholder="ENTER_QUERY..." className="bg-transparent text-green-300 text-xs focus:outline-none w-full" /><span className="w-2 h-4 bg-green-500 animate-pulse" /></div>`,
+  },
+
+  {
+    id: "input-retro-terminal",
+    title: "Y2K Sticker Avatar Badge",
+    category: "Inputs & Search Bars",
+    description:
+      "Green phosphor monospaced search bar with blinking block cursor.",
+    copiesCount: 220,
+    component: <Y2KStickerAvatarBadge />,
+    code: `<div className="w-72 p-2 bg-black border-2 border-green-500 rounded font-mono text-green-400 flex items-center gap-2"><span className="text-xs">&gt;</span><input type="text" placeholder="ENTER_QUERY..." className="bg-transparent text-green-300 text-xs focus:outline-none w-full" /><span className="w-2 h-4 bg-green-500 animate-pulse" /></div>`,
+  },
+
   {
     id: "input-dual-slider",
     title: "Dual-Thumb Range Slider",

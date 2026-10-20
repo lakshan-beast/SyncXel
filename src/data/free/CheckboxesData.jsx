@@ -1,15 +1,15 @@
-import CyberNeonCheckbox from "../../library/free/checkboxes/CyberNeonCheckbox";
-import CyberGlitchCheckbox from "../../library/free/checkboxes/CyberGlitchCheckbox";
+import CyberNeonCheckbox from "../../library/free/checkboxes/CyberpunkPermissionCheckbox";
+import CyberGlitchCheckbox from "../../library/free/checkboxes/Y2KTagCheckbox";
 import BrutalPopCheckbox from "../../library/free/checkboxes/BrutalPopCheckbox";
 import BrutalHardCheckbox from "../../library/free/checkboxes/BrutalTaskCheckbox";
 import GlassFrostCheckbox from "../../library/free/checkboxes/GlassFilterCheckbox";
 import GlassNeonCheckbox from "../../library/free/checkboxes/GlassNeonCheckbox";
 import BentoClusterCheckbox from "../../library/free/checkboxes/BentoPreferenceCheckbox";
-import BentoGridCheckbox from "../../library/free/checkboxes/BentoGridCheckbox";
-import ClaySoftCheckbox from "../../library/free/checkboxes/ClaySoftCheckbox";
-import ClayPillCheckbox from "../../library/free/checkboxes/ClayPillCheckbox";
-import RetroTerminalCheckbox from "../../library/free/checkboxes/RetroTerminalCheckbox";
-import RetroCrtCheckbox from "../../library/free/checkboxes/RetroCrtCheckbox";
+import BentoGridCheckbox from "../../library/free/checkboxes/LuxuryPlanCheckbox";
+import ClaySoftCheckbox from "../../library/free/checkboxes/ClayOnboardingCheckbox";
+import ClayPillCheckbox from "../../library/free/checkboxes/MinimalFilterCheckbox";
+import RetroTerminalCheckbox from "../../library/free/checkboxes/SoftConsentCheckbox";
+import RetroCrtCheckbox from "../../library/free/checkboxes/AuroraFeatureCheckbox";
 
 export const checkboxesData = [
   {

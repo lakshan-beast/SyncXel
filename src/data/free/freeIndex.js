@@ -7,8 +7,8 @@ import { successData } from "./SuccessData";
 import { checkboxesData } from "./CheckboxesData";
 import { togglesData } from "./TogglesData";
 import { avatarsData } from "./AvatorsData";
-// import { inputsData } from "./Inputs&Searchbars";
-// import { notificationsData } from "./NavigationsData";
+import { inputsData } from "./Inputs&Searchbars";
+import { notificationsData } from "./NavigationsData";
 
 export const freeComponentsData = [
   ...buttonsData,
@@ -21,6 +21,6 @@ export const freeComponentsData = [
   ...checkboxesData,
   ...avatarsData,
 
-  // ...inputsData,
-  // ...notificationsData,
+  ...inputsData,
+  ...notificationsData,
 ];

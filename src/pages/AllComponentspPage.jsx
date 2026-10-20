@@ -32,7 +32,7 @@ export default function ComponentsHubPage() {
     "Checkboxes & Radios",
     "Success & Toasts",
     "Toggles & Switches",
-    // "Modals, Toasts & Notifications",
+    "Modals, Toasts & Notifications",
     // "Inputs & Search Bars",
     // "Back to Top & FAB",
   ];
