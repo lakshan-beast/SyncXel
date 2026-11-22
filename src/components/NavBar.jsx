@@ -45,7 +45,7 @@ export default function NavBar() {
             to="/"
             className="flex items-center space-x-2 cursor-pointer group">
             <div className="aspect-square w-14 h-14 shadow-3xl border-none border-slate-700 rounded-full p-0.5 bg-slate-100">
-              <img src="/public/logo.jpeg" alt="" width={100} height={100} className="rounded-full" />
+              <img src="../../public/logo.jpeg" alt="" width={100} height={100} className="rounded-full" />
             </div>
 
             <div className="flex flex-col">
