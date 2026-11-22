@@ -37,29 +37,29 @@ export const teamData = [
       devto: "https://dev.to/lakshan_sandeepa35/",
     },
   },
-  {
-    id: 2,
-    name: "Teran Chamuditha", 
-    role: "Cybersecurity Engineer & Backend Developer",
-    avatar: HeroImage2, // Cool security avatar 
-    status: "Auditing Codebases",
-    bio: "Software engineer specializing in web application security, ethical hacking, and secure architecture integration.",
-    skills: [
-      "OWASP Top 10",
-      "Penetration Testing",
-      "Security Audits",
-      "Secure Backend",
-    ],
-    socials: {
-      github: "",
-      linkedin: "",
-      portfolio: "",
-      telegram: "",
-      mail: "",
-      reddit: "",
-      devto: "",
-    },
-  },
+  // {
+  //   id: 2,
+  //   name: "Teran Chamuditha", 
+  //   role: "Cybersecurity Engineer & Backend Developer",
+  //   avatar: HeroImage2, // Cool security avatar 
+  //   status: "Auditing Codebases",
+  //   bio: "Software engineer specializing in web application security, ethical hacking, and secure architecture integration.",
+  //   skills: [
+  //     "OWASP Top 10",
+  //     "Penetration Testing",
+  //     "Security Audits",
+  //     "Secure Backend",
+  //   ],
+  //   socials: {
+  //     github: "",
+  //     linkedin: "",
+  //     portfolio: "",
+  //     telegram: "",
+  //     mail: "",
+  //     reddit: "",
+  //     devto: "",
+  //   },
+  // },
 ];
 
 export default function TeamSection() {
@@ -264,8 +264,7 @@ export default function TeamSection() {
                               href={social.href}
                               target="_blank"
                               rel="noreferrer"
-                              initial={{ opacity: 0.3, y: 20 }}
-                              whileInView={{ opacity: 1, y: 0 }}
+                              
                               whileHover={{ scale: 1.1, y: -2 }}
                               whileTap={{ scale: 0.95 }}
                               transition={{

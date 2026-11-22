@@ -180,13 +180,7 @@ export default function ServicesSection() {
                 <div className="flex flex-wrap gap-1.5 pt-3 mt-3 border-t border-slate-100">
                   {item.tags.map((tag, tIndx) => (
                     <motion.span
-                      initial={{ opacity: 0.3, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 17,
-                      }}
+                      
                       key={tIndx}
                       className="px-3 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-[10px] font-baloo text-slate-700 font-medium">
                       {tag}
