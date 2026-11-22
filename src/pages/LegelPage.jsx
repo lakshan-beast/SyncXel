@@ -1,3 +1,5 @@
+// ඒත් මෙතන වැදගත් point එකක් තියෙනවා — “lifetime” කියන්නේ legally product එකේ lifetime එක, customer ගේ lifetime එක නෙවෙයි. ඒ නිසා terms වල “lifetime of the product” කියලා clear කරන්න ඕන.
+
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiArrowLeft, HiX } from "react-icons/hi";

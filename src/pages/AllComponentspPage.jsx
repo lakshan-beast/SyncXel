@@ -48,6 +48,16 @@ export default function ComponentsHubPage() {
     "Testimonials",
     "FAQ",
     "Footers",
+    "CTA Sections",
+    // "Logo Cloud",
+    "Team",
+    "Contact",
+    "Blog",
+    "Integrations",
+    "Timeline & Changelog",
+    // "Empty States / 404",
+    // "Banners / Announcements",
+    // "Stats / Metrics ",
   ];
 
   // Full Templates / Dashboards
@@ -84,7 +94,7 @@ export default function ComponentsHubPage() {
   // new idea = CyberSecurity & Awareness Category
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-20 lg:mt-12">
+    <div className="min-h-screen bg-white text-slate-900 py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-20 lg:mt-20">
       {/* Main Header */}
       <HubHeader />
       {/* <UIComponentGenerator /> */}
