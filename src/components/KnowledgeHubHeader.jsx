@@ -9,10 +9,10 @@ export default function KnowledgeHubHeader({
   return (
     <div className="space-y-2 mb-6 font-mono">
       {/* HEADER & LIVE SEARCH BAR */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white border-none border-slate-200 rounded-2xl shadow-none relative overflow-hidden">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 bg-white border-none border-slate-200 rounded-2xl shadow-none relative overflow-hidden">
         {/* Title & Expanded Rich Description */}
         <div className="space-y-2 relative z-10 max-w-2xl">
-          <div className="inline-flex items-center space-x-2 px-5 py-1 rounded-full bg-white border border-slate-200 text-slate-500/30 text-xs font-mono shadow-xs">
+          <div className="inline-flex items-center space-x-2 px-5 py-1 bg-white border-l-2 border-l-slate-300 text-slate-500/30 text-xs font-mono">
             <motion.span
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}

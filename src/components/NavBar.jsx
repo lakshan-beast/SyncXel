@@ -37,13 +37,17 @@ export default function NavBar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 px-3 sm:px-8 lg:px-0 pt-3 lg:pt-0 z-50 ">
       {/* Nav Container - Clean White & Black DevSync Style */}
-      <nav className="w-full max-w-7xl lg:max-w-full mx-auto bg-white/90 backdrop-blur-sm border-2 border-slate-300/80 lg:border-none rounded-3xl md:rounded-b-4xl md:rounded-t-none shadow-md transition-all duration-300 relative text-slate-900 px-3 lg:px-70 py-2 lg:pt-2 ">
+      <nav className="w-full max-w-7xl lg:max-w-full mx-auto bg-white/90 backdrop-blur-sm border-2 border-slate-300/80 lg:border-none rounded-3xl md:rounded-b-4xl md:rounded-t-none shadow-md transition-all duration-300 relative text-slate-900 px-3 lg:px-70 py-3 lg:pt-3 ">
         {/* logo */}
         <div className="px-4 sm:px-6 py-4 lg:py-5 flex items-center justify-between">
           {/* Logo Section */}
           <Link
             to="/"
-            className="flex items-center space-x-4 cursor-pointer group">
+            className="flex items-center space-x-2 cursor-pointer group">
+            <div className="aspect-square w-14 h-14 shadow-3xl border-none border-slate-700 rounded-full p-0.5 bg-slate-100">
+              <img src="/public/logo.jpeg" alt="" width={100} height={100} className="rounded-full" />
+            </div>
+
             <div className="flex flex-col">
               {/* Option 2 Connected Pill Style */}
               <div className="flex items-center">
