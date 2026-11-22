@@ -42,7 +42,7 @@ export default function Hero() {
         initial="hidden"
         animate="visible">
         {/* Content Block */}
-        <div className="space-y-6 max-w-6xl mx-auto">
+        <div className="space-y-6 max-w-7xl mx-auto">
           {/* Section 1: Version Badge */}
           <motion.div variants={itemVariants} className="text-left">
             <span className="font-mono text-xs text-slate-400 block mb-2">
