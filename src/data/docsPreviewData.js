@@ -244,11 +244,11 @@ import {
 } from "react-icons/hi2";
 
 import { quickStartData } from "./docs/quickStartData";
-import { integrationsData } from "./docs/integrationsdata";
-import { gitData } from "./docs/gitdata";
-import { customHooksData } from "./docs/customHooksdata";
-import { authData } from "./docs/authdata";
-import { vercelData } from "./docs/verceldata";
+import { integrationsData } from "./docs/integrationsData";
+import { gitData } from "./docs/gitData";
+import { customHooksData } from "./docs/customHooksData";
+import { authData } from "./docs/authData";
+import { vercelData } from "./docs/vercelData";
 
 export const docsPreviewData = [
   {
