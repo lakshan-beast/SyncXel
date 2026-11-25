@@ -246,7 +246,7 @@ export default function Footer() {
         {/* CTA Section */}
         <motion.div
           {...reveal}
-          className="relative overflow-hidden border-b border-slate-200/80 py-16 sm:py-18 dark:border-white/10 max-w-5xl mx-auto">
+          className="relative overflow-hidden border-b border-slate-200/80 py-16 sm:py-18 dark:border-white/20 max-w-5xl mx-auto">
           <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border-2 border-slate-300/50 dark:border-white/[0.05]" />
           <div className="pointer-events-none absolute -right-8 -top-8 h-48 w-48 rounded-full border-3 border-slate-300/50 dark:border-white/[0.03]" />
 
@@ -357,7 +357,7 @@ export default function Footer() {
         {/* Technology Resources */}
         <motion.div
           {...reveal}
-          className="border-y border-slate-200/80 py-12 dark:border-white/10 max-w-7xl mx-auto
+          className="border-y border-slate-200/80 py-12 dark:border-white/20 max-w-7xl mx-auto
           ">
           <div className="mb-7 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -387,7 +387,16 @@ export default function Footer() {
         </motion.div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col gap-5 border-t border-slate-200/80 py-8 dark:border-white/10 sm:flex-row items-center sm:items-center sm:justify-between max-w-7xl mx-auto">
+        <div className="flex flex-col gap-3 border-t border-slate-200/90 py-8 dark:border-white/20 sm:flex-row items-center sm:items-center sm:justify-between max-w-7xl mx-auto">
+          <p className="text-[11px] text-slate-400 text-center sm:text-left">
+            Copyright © {new Date().getFullYear()}{" "}
+            <span className="text-slate-500 dark:text-white/80">
+              {" "}
+              SyncXel Web Solutions
+            </span>
+            . All rights reserved.
+          </p>
+
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
             <Link
               to="/legal"
@@ -402,15 +411,6 @@ export default function Footer() {
             </a>
           </div>
 
-          <p className="text-[11px] text-slate-400 text-center sm:text-left">
-            Copyright © {new Date().getFullYear()}{" "}
-            <span className="text-slate-500 dark:text-white/80">
-              {" "}
-              SyncXel Web Solutions
-            </span>
-            . All rights reserved.
-          </p>
-
           <button
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -421,7 +421,7 @@ export default function Footer() {
         </div>
 
         {/* Brand Statement */}
-        <div className="relative overflow-hidden py-4 sm:py-5 pt-6 mb-6 sm:mb-0">
+        <div className="relative overflow-hidden py-4 sm:py-5 pt-6 mb-12 sm:mb-0">
           <p className="pointer-events-none select-none text-center text-[clamp(4rem,13vw,24rem)] font-bold leading-none tracking-[-0.01em] text-slate-200/80 dark:text-white/[0.15] text-shadow-lg dark:shadow-none bg-gradient-to-b from-slate-50 via-slate-500 to-slate-50 bg-clip-text text-transparent dark:from-slate-950 dark:via-white/50 dark:to-slate-950">
             SYNCXEL .
           </p>
