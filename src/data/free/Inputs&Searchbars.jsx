@@ -25,7 +25,7 @@ export const inputsData = [
   },
 
   {
-    id: "input-retro-terminal",
+    id: "input-retro-terminal-filed",
     title: "Luxury Card Number Input",
     category: "Inputs & Search Bars",
     description:

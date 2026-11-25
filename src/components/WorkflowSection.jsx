@@ -135,7 +135,7 @@ export default function WorkflowSection() {
             damping: 17,
           }}
             className="text-sm sm:text-base text-slate-500 leading-tight max-w-3xl mx-auto font-baloo text-left sm:text-center">
-            A transparent 4-step workflow from initial design to final
+            A transparent 6-step workflow from initial design to final
             deployment ensuring maximum quality and precision.
           </motion.p>
         </motion.div>

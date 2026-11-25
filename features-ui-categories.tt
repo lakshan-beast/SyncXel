@@ -1,0 +1,12 @@
+| Priority | Category                | ඇයි වැදගත්                                            | Designs 5 බැගින් මොනවද                                                       |
+| -------- | ----------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------- |
+| High     | CTA Sections            | conversion වලට direct impact, SaaS sites වල must-have | banner style, gradient panel, split layout, stats + CTA, newsletter CTA      |
+| High     | Stats / Metrics         | social proof + credibility, landing pages වල common   | counter cards, bento stats, animated numbers, dashboard-style, minimal strip |
+| High     | Logo Cloud / Logos      | trust signal, “trusted by” sections                   | marquee, grid, pills, bordered grid, spotlight                               |
+| Medium   | Team Sections           | about pages වලට, agency/SaaS දෙකටම                    | card grid, list view, spotlight, filterable, quote + stats                   |
+| Medium   | Contact Sections        | lead gen, form + map/info combos                      | split form, card style, map + info, minimal, multi-step                      |
+| Medium   | Blog / Content          | content marketing sites වලට                           | grid cards, list view, featured post, magazine, minimal                      |
+| Medium   | Integrations            | SaaS products වලට, app directory                      | logo grid, category tabs, marquee, card list, connect flow                   |
+| Low      | Timeline / Changelog    | product updates, company history                      | vertical timeline, horizontal, card-based, changelog list, milestone         |
+| Low      | Empty States / 404      | app UX polish                                         | illustration + CTA, minimal, search-based, error variants                    |
+| Low      | Banners / Announcements | promos, product launches                              | top bar, dismissible, gradient, countdown, feature announce                  |
