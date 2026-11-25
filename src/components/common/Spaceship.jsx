@@ -327,7 +327,7 @@ export default function Spaceship() {
 
   return (
     <div
-      className="pointer-events-none absolute inset-0 overflow-hidden"
+      className="pointer-events-none absolute inset-0 overflow-hidden hidden sm:block"
       aria-hidden="true">
       <motion.div
         className="absolute left-0 top-0 select-none"

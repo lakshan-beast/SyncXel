@@ -158,12 +158,13 @@ export default function BackgroundAtmosphere() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden ">
       {/* Flying spacecraft */}
       <Spaceship />
 
       <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border-3 border-slate-300/50 dark:border-white/[0.07] animate-ping" />
-      <div className="absolute -right-5 -top-5 h-38 w-38 bg-white/30 rounded-full animate-ping" />
+      <div className="absolute -right-5 -top-5 h-38 w-38 bg-white/20 sm:bg-white/30 rounded-full animate-ping" />
+
       <div className="pointer-events-none absolute -right-8 -top-8 h-48 w-48 rounded-full border-t-4 border-l-slate-300/50 dark:border-white/[0.07] animate-spin" />
 
       {/* Original blue atmosphere */}
@@ -200,7 +201,7 @@ export default function BackgroundAtmosphere() {
       />
 
       {/* Animated grid */}
-      <div className="absolute inset-0 overflow-hidden opacity-[0.45] dark:opacity-[0.35]">
+      {/* <div className="absolute inset-0 overflow-hidden opacity-[0.95] dark:opacity-[0.95] hidden">
         <motion.div
           className="absolute inset-[-56px]"
           animate={
@@ -224,13 +225,13 @@ export default function BackgroundAtmosphere() {
               "linear-gradient(to bottom, black 0%, transparent 100%)",
           }}
         />
-      </div>
+      </div> */}
 
       {/* Deep space stars */}
       {stars.map((star) => (
         <motion.div
           key={star.id}
-          className="absolute rounded-full bg-blue-500 dark:bg-blue-100"
+          className="absolute rounded-full bg-blue-500 dark:bg-blue-100 hidden sm:block"
           style={{
             left: star.left,
             top: star.top,
@@ -324,8 +325,6 @@ export default function BackgroundAtmosphere() {
     </div>
   );
 }
-
-
 
 // import { motion, useReducedMotion } from "framer-motion";
 // import Spaceship from "./Spaceship";
