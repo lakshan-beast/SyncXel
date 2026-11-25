@@ -269,7 +269,7 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0">
+            <div className="flex flex-col gap-2 sm:flex-row lg:shrink-0">
               <a
                 href="/#contact-section"
                 className="group inline-flex items-center justify-center gap-3 rounded-xl bg-slate-950 px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-slate-800 dark:bg-white dark:text-black dark:hover:bg-slate-300">
@@ -421,7 +421,7 @@ export default function Footer() {
         </div>
 
         {/* Brand Statement */}
-        <div className="relative overflow-hidden py-4 sm:py-5 pt-6">
+        <div className="relative overflow-hidden py-4 sm:py-5 pt-6 mb-6 sm:mb-0">
           <p className="pointer-events-none select-none text-center text-[clamp(4rem,13vw,24rem)] font-bold leading-none tracking-[-0.01em] text-slate-200/80 dark:text-white/[0.15] text-shadow-lg dark:shadow-none bg-gradient-to-b from-slate-50 via-slate-500 to-slate-50 bg-clip-text text-transparent dark:from-slate-950 dark:via-white/50 dark:to-slate-950">
             SYNCXEL .
           </p>

@@ -323,7 +323,7 @@ export default function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-5 lg:px-8 pt-3">
-      <nav className="max-w-full lg:mx-40 rounded-full border border-slate-200/80 dark:shadow-2xl dark:border-slate-800/60 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl drop-shadow-slate-200">
+      <nav className="max-w-full lg:mx-40 rounded-2xl border border-slate-200/80 dark:shadow-2xl dark:border-slate-800/60 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl drop-shadow-slate-200">
         <div className="flex items-center justify-between px-4 sm:px-6 py-5">
           {/* Brand */}
           <Link
