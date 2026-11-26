@@ -16,7 +16,7 @@ export default function FAQCTA() {
         Still have questions?
       </h3>
 
-      <p className="mt-2 text-sm leading-tight text-black/50 dark:text-white/45">
+      <p className="mt-2 text-sm leading-tight text-black/50 dark:text-white/60">
         Can't find what you're looking for? Let's talk about it.
       </p>
 
