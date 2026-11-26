@@ -388,7 +388,7 @@ export default function HomeComponentsTeaser() {
 
         {/* Category filters */}
         <div className="mb-8 mt-6 flex flex-wrap items-center gap-2">
-          <div className="mr-2 flex items-center gap-2 text-xs font-medium text-blue-600/40 dark:text-slate-300/40">
+          <div className="mr-2 flex items-center gap-2 text-xs font-medium text-blue-700 dark:text-slate-300/40">
             <HiOutlineSquares2X2 aria-hidden="true"  className="text-base" />
             Filter
           </div>
@@ -405,7 +405,7 @@ export default function HomeComponentsTeaser() {
                 className={`rounded-full px-4 py-2 text-xs font-semibold transition-all duration-300 ${
                   isActive
                     ? "bg-[#171717] text-white dark:bg-white dark:text-black"
-                    : "border border-black/[0.08] text-black/50 hover:border-black/20 hover:text-black dark:border-white/[0.1] dark:text-white/50 dark:hover:border-white/25 dark:hover:text-white"
+                    : "border border-black/[0.08] text-black/70 hover:border-black/20 hover:text-black dark:border-white/[0.1] dark:text-white/50 dark:hover:border-white/25 dark:hover:text-white"
                 }`}>
                 {category}
               </button>
@@ -431,7 +431,7 @@ export default function HomeComponentsTeaser() {
             <p className="text-lg font-semibold tracking-tight">
               Looking for more components?
             </p>
-            <p className="mt-1 text-sm leading-tight text-black/45 dark:text-white/40">
+            <p className="mt-1 text-sm leading-tight text-black/65 dark:text-white/40">
               Discover the complete collection in the SyncXel library.
             </p>
           </div>

@@ -45,7 +45,7 @@
 //         <div className="space-y-6 max-w-7xl mx-auto">
 //           {/* Section 1: Version Badge */}
 //           <motion.div variants={itemVariants} className="text-left">
-//             <span className="font-mono text-xs text-slate-400 block mb-2">
+//             <span className="font-mono text-xs text-slate-600 block mb-2">
 //               // project_status_and_updates
 //             </span>
 //             <motion.a
@@ -69,7 +69,7 @@
 
 //           {/* Section 2: Main Headline */}
 //           <motion.div variants={itemVariants} className="space-y-2 text-left">
-//             <span className="font-mono text-xs text-slate-400 block">
+//             <span className="font-mono text-xs text-slate-600 block">
 //               // primary_headline
 //             </span>
 //             <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-slate-950 tracking-tight leading-[1.1]">
@@ -91,7 +91,7 @@
 //             }}
 //             variants={itemVariants}
 //             className="space-y-2 text-left max-w-3xl">
-//             <span className="font-mono text-xs text-slate-400 block">
+//             <span className="font-mono text-xs text-slate-600 block">
 //               // project_description
 //             </span>
 //             <motion.p
@@ -129,7 +129,7 @@
 //                 </span>
 //                 <span className="lg:hidden">Explore Components</span>
 //               </div>
-//               <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-slate-400 shrink-0 sm:ml-2" />
+//               <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-slate-600 shrink-0 sm:ml-2" />
 //             </motion.a>
 
 //             {/* Button 2: Hire Us */}
@@ -148,7 +148,7 @@
 //                 </span>
 //                 <span className="lg:hidden">Hire Us for Custom Project</span>
 //               </div>
-//               <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-slate-400 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity sm:ml-2" />
+//               <HiOutlineArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-slate-600 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity sm:ml-2" />
 //             </motion.a>
 //           </motion.div>
 //         </div>
@@ -239,7 +239,7 @@
 //           {/* Description */}
 //           <motion.p
 //             variants={itemVariants}
-//             className="mt-7 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-400">
+//             className="mt-7 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 dark:text-slate-600">
 //             Explore handcrafted React and Tailwind components, premium UI packs,
 //             complete website templates, and practical development guides. Need a
 //             website for your business? Let's build it together.
@@ -400,12 +400,12 @@ function PreviewVisual() {
             <span className="h-2.5 w-2.5 rounded-full bg-[#54C96B]" />
           </div>
 
-          <div className="flex items-center gap-2 rounded-md bg-slate-100 px-3 py-1.5 ml-1.5 text-[10px] text-slate-400 dark:bg-white/[0.05] dark:text-slate-500">
+          <div className="flex items-center gap-2 rounded-md bg-slate-100 px-3 py-1.5 ml-1.5 text-[10px] text-slate-600 dark:bg-white/[0.05] dark:text-slate-500">
             <HiCubeTransparent className="h-3.5 w-3.5" />
             syncxel.dev / preview
           </div>
 
-          <HiArrowUpRight className="h-4 w-4 text-slate-400 ml-2" />
+          <HiArrowUpRight className="h-4 w-4 text-slate-600 ml-2" />
         </div>
 
         {/* Preview content */}
@@ -413,10 +413,10 @@ function PreviewVisual() {
           {/* Code panel */}
           <div className="border-b border-slate-200/80 p-5 sm:border-b-0 sm:border-r dark:border-white/10">
             <div className="mb-5 flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-400">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-600">
                 // component.tsx
               </span>
-              <HiCodeBracket className="h-4 w-4 text-slate-400" />
+              <HiCodeBracket className="h-4 w-4 text-slate-600" />
             </div>
 
             <div className="space-y-0.5 font-mono text-[11px] leading-relaxed sm:text-xs">
@@ -426,7 +426,7 @@ function PreviewVisual() {
                   {"{"} motion {"}"}
                 </span>
               </p>
-              <p className="pl-3 text-slate-400">
+              <p className="pl-3 text-slate-600">
                 from{" "}
                 <span className="text-emerald-600 dark:text-emerald-400">
                   "framer-motion"
@@ -437,13 +437,13 @@ function PreviewVisual() {
                 export default function
               </p>
               <p className="text-slate-800 dark:text-slate-200">
-                Button<span className="text-slate-400">()</span> {"{"}
+                Button<span className="text-slate-600">()</span> {"{"}
               </p>
-              <p className="pl-3 text-slate-500 dark:text-slate-400">
+              <p className="pl-3 text-slate-500 dark:text-slate-600">
                 return (
               </p>
               <p className="pl-6 text-rose-500 dark:text-rose-400">
-                <span className="text-slate-400">{"<"}</span>motion.button
+                <span className="text-slate-600">{"<"}</span>motion.button
               </p>
               <p className="pl-9 text-slate-500">
                 whileHover
@@ -458,16 +458,16 @@ function PreviewVisual() {
                 </span>
               </p>
               <p className="pl-6 text-rose-500 dark:text-rose-400">
-                <span className="text-slate-400">{"</"}</span>motion.button
-                <span className="text-slate-400">{">"}</span>
+                <span className="text-slate-600">{"</"}</span>motion.button
+                <span className="text-slate-600">{">"}</span>
               </p>
-              <p className="pl-3 text-slate-500 dark:text-slate-400">);</p>
+              <p className="pl-3 text-slate-500 dark:text-slate-600">);</p>
               <p className="text-slate-800 dark:text-slate-200">{"}"}</p>
             </div>
 
             <div className="mt-8 flex items-center gap-2 border-t border-slate-100 pt-4 dark:border-white/[0.07]">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              <span className="font-mono text-[10px] text-slate-400">
+              <span className="font-mono text-[10px] text-slate-600">
                 clean_code.jsx
               </span>
             </div>
@@ -476,7 +476,7 @@ function PreviewVisual() {
           {/* Live component preview */}
           <div className="flex min-h-[290px] flex-col justify-between bg-gradient-to-br from-slate-50 to-white p-5 dark:from-slate-950/90 dark:to-slate-700/30">
             <div className="flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-slate-400">
+              <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-slate-600">
                 Live component
               </span>
               <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-1 text-[9px] font-medium text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-400">
@@ -490,7 +490,7 @@ function PreviewVisual() {
                   <p className="text-sm font-semibold text-slate-900 dark:text-white">
                     Build something great.
                   </p>
-                  <p className="mt-1 text-[10px] text-slate-400 leading-tight">
+                  <p className="mt-1 text-[10px] text-slate-600 leading-tight">
                     Thoughtful UI. Better experiences.
                   </p>
                 </div>
@@ -512,14 +512,14 @@ function PreviewVisual() {
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
                   <HiCheck className="h-3 w-3" />
                 </span>
-                <span className="text-[10px] text-slate-400">
+                <span className="text-[10px] text-slate-600">
                   Responsive interface
                 </span>
               </div>
             </div>
 
             <div className="flex items-center justify-between">
-              <span className="text-[10px] text-slate-400">
+              <span className="text-[10px] text-slate-600">
                 UI / UX preview
               </span>
               <div className="flex gap-1">
@@ -545,14 +545,14 @@ function PreviewVisual() {
           <p className="text-xs font-semibold text-slate-900 dark:text-white">
             From idea to interface
           </p>
-          <p className="mt-0.5 text-[10px] text-slate-400">
+          <p className="mt-0.5 text-[10px] text-slate-600">
             Design · Develop · Deliver
           </p>
         </div>
       </motion.div>
 
       {/* Decorative index */}
-      <div className="absolute -bottom-10 right-2 hidden font-mono text-[10px] tracking-[0.2em] text-slate-400 sm:block">
+      <div className="absolute -bottom-10 right-2 hidden font-mono text-[10px] tracking-[0.2em] text-slate-600 sm:block">
         SX / 001
       </div>
     </div>
@@ -627,7 +627,7 @@ export default function HeroSection() {
 
             <motion.p
               variants={reveal}
-              className="mt-9 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-400">
+              className="mt-9 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-600">
               // build beyond the ordinary
             </motion.p>
 
@@ -642,7 +642,7 @@ export default function HeroSection() {
 
             <motion.p
               variants={reveal}
-              className="mt-7 max-w-xl text-[15px] leading-tight text-slate-600 sm:text-base dark:text-slate-400">
+              className="mt-7 max-w-xl text-[15px] leading-tight text-slate-600 sm:text-base dark:text-slate-600">
               Discover premium React UI components, UI packs and website
               templates for developers — or partner with SyncXel to turn your
               business ideas into powerful digital experiences.
@@ -676,7 +676,7 @@ export default function HeroSection() {
                     For developers
                   </p>
                 </span>
-                <p className="mt-1 text-[11px] text-slate-400">
+                <p className="mt-1 text-[11px] text-slate-600">
                   Components · UI Packs · Guides
                 </p>
               </div>
@@ -690,7 +690,7 @@ export default function HeroSection() {
                     For businesses
                   </p>
                 </span>
-                <p className="mt-1 text-[11px] text-slate-400">
+                <p className="mt-1 text-[11px] text-slate-600">
                   Websites · Interfaces · Development
                 </p>
               </div>
@@ -709,7 +709,7 @@ export default function HeroSection() {
         </div> */}
 
         {/* Scroll hint */}
-        <div className="group mt-12 hidden items-center justify-center gap-4 text-[10px] font-medium uppercase tracking-[0.2em] text-slate-400 md:flex hover:scale-105 duration-400">
+        <div className="group mt-12 hidden items-center justify-center gap-4 text-[10px] font-medium uppercase tracking-[0.2em] text-slate-600 md:flex hover:scale-105 duration-400">
           <HiArrowDownRight className="h-3.5 w-3.5 group-hover:rotate-45 duration-400" />
           Explore what you can build
         </div>

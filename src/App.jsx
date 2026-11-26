@@ -201,11 +201,6 @@ function AppLayout() {
         <Suspense
           fallback={
             <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-white dark:bg-slate-950">
-              {/* <div className="h-9 w-9 animate-spin rounded-full border-4 border-blue-500/20 border-t-blue-500" />
-
-              <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                Loading page...
-              </p> */}
               <GeometricSquareLoader />
             </div>
           }>
