@@ -609,18 +609,16 @@ export default function HeroSection() {
             <motion.h1
               variants={reveal}
               className="mt-4 max-w-[720px] text-[clamp(3.2rem,7vw,6.2rem)] font-semibold leading-[0.98] tracking-[-0.075em]">
-              Ideas deserve
+              Build Better
               <span className="mt-2 block bg-gradient-to-r from-slate-500 via-slate-950 to-slate-500 bg-clip-text pb-2 text-transparent dark:from-slate-400 dark:via-white dark:to-slate-500">
-                better digital.
+                Digital Experiences.
               </span>
             </motion.h1>
 
             <motion.p
               variants={reveal}
               className="mt-7 max-w-xl text-[15px] leading-tight text-slate-600 sm:text-base dark:text-slate-400">
-              A place where developers find better building blocks — and
-              businesses turn ideas into meaningful web experiences. Explore the
-              resources or let's create something built around your vision.
+              Discover premium React UI components, UI packs and website templates for developers — or partner with SyncXel to turn your business ideas into powerful digital experiences.
             </motion.p>
 
             <motion.div

@@ -52,9 +52,9 @@ export default function DocsHome({ categories, onCategory, onGuide }) {
           </div>
 
           <h1 className="text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-5xl">
-            Build better.
+            Developer Guides.
             <span className="block text-blue-600 dark:text-blue-400">
-              Learn faster.
+              Build with confidence.
             </span>
           </h1>
 

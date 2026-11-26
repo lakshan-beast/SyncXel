@@ -28,7 +28,7 @@ export default function UIPacksPage() {
             </span>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 mt-3">
-              UI Packs
+              Premium UI Packs
             </h1>
 
             <p className="text-sm sm:text-base text-slate-500 leading-relaxed mt-4">
