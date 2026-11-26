@@ -388,8 +388,8 @@ export default function HomeComponentsTeaser() {
 
         {/* Category filters */}
         <div className="mb-8 mt-6 flex flex-wrap items-center gap-2">
-          <div className="mr-2 flex items-center gap-2 text-xs font-medium text-black/40 dark:text-white/40">
-            <HiOutlineSquares2X2 className="text-base" />
+          <div className="mr-2 flex items-center gap-2 text-xs font-medium text-blue-600/40 dark:text-slate-300/40">
+            <HiOutlineSquares2X2 aria-hidden="true"  className="text-base" />
             Filter
           </div>
 
@@ -440,7 +440,7 @@ export default function HomeComponentsTeaser() {
             to="/components"
             className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-all hover:gap-3 dark:text-blue-400">
             Explore the library
-            <HiOutlineArrowRight />
+            <HiOutlineArrowRight aria-hidden="true"  />
           </Link>
         </div>
       </div>
