@@ -445,13 +445,13 @@ function PreviewVisual() {
               <p className="pl-6 text-rose-500 dark:text-rose-400">
                 <span className="text-slate-700">{"<"}</span>motion.button
               </p>
-              <p className="pl-9 text-slate-700">
+              <p className="pl-9 text-slate-400">
                 whileHover
                 <span className="text-amber-600 dark:text-amber-300">
                   ={"{{"} scale: 1.03 {"}}"}
                 </span>
               </p>
-              <p className="pl-9 text-slate-700">
+              <p className="pl-9 text-slate-400">
                 className=
                 <span className="text-emerald-600 dark:text-emerald-400">
                   "..."
@@ -467,7 +467,7 @@ function PreviewVisual() {
 
             <div className="mt-8 flex items-center gap-2 border-t border-slate-100 pt-4 dark:border-white/[0.07]">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              <span className="font-mono text-[10px] text-slate-700">
+              <span className="font-mono text-[10px] text-slate-400">
                 clean_code.jsx
               </span>
             </div>
