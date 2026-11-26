@@ -1,0 +1,13 @@
+# SyncXel
+
+> SyncXel is a web development platform offering free React UI components, premium UI packs, website templates, and custom web development services.
+
+## Main Website
+
+- [Home](https://syncxel.vercel.app/): Main website and overview.
+- [UI Components](https://syncxel.vercel.app/components): Free React UI components.
+- [Documentation](https://syncxel.vercel.app/docs): Development guides and documentation.
+- [UI Packs](https://syncxel.vercel.app/ui-packs): Premium UI packs.
+- [Templates](https://syncxel.vercel.app/templates): Website templates.
+- [Services](https://syncxel.vercel.app/services): Custom web development services.
+- [Projects](https://syncxel.vercel.app/projects): Projects and case studies.
