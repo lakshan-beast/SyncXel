@@ -332,7 +332,7 @@ export default function Navbar() {
             className="flex items-center gap-2.5 shrink-0"
             aria-label="SyncXel Home">
             <img
-              src="/logo.jpeg"
+              src="/logo.webp"
               alt="SyncXel Logo"
               className="w-11 h-11 p-0.5 rounded-full object-cover border border-slate-600"
             />

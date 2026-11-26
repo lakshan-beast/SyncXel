@@ -295,7 +295,7 @@ export default function Footer() {
           <div className="">
             <Link to="/" className="inline-flex items-center gap-3">
               <img
-                src="/logo.jpeg"
+                src="/logo.webp"
                 alt="SyncXel"
                 className="h-11 w-12 rounded-full p-0.5  object-cover border border-slate-600"
               />
