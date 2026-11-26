@@ -300,6 +300,56 @@
 //   );
 // }
 
+{
+  /* Background atmosphere */
+}
+{
+  /* <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_20%,rgba(148,163,184,0.18),transparent_2%)] dark:bg-[radial-gradient(ellipse_at_70%_20%,rgba(148,163,184,0.09),transparent_42%)]" />
+        <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(rgba(148,163,184,4)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,4)_1px,transparent_1px)] [background-size:56px_56px] dark:opacity-[0.12]" />
+        <div className="absolute inset-x-0 bottom-6 h-96 bg-gradient-to-t from-[#fafafa] to-transparent dark:from-[#090909]" />
+      </div> */
+}
+
+{
+  /* Background atmosphere */
+}
+{
+  /* <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        {/* Soft radial glow *
+        <div
+          className="absolute -top-40 right-[-10%] h-[500px] w-[600px] rounded-full
+    bg-blue-400/[0.5] blur-[100px]
+    dark:bg-blue-400/[0.42]"
+        />
+
+        {/* Secondary glow *
+        <div
+          className="absolute left-[-20%] top-[60%] h-[450px] w-[450px] rounded-full
+    bg-slate-700 blur-[100px]
+    dark:bg-slate-300/40"
+        />
+
+        {/* Grid pattern *
+        <div
+          className="absolute inset-0 opacity-[0.7] dark:opacity-[0.5]"
+          style={{
+            backgroundImage: `
+        linear-gradient(to right, rgba(148,163,184,0.15) 1px, transparent 50px),
+        linear-gradient(to bottom, rgba(148,163,184,0.15) 1px, transparent 50px)
+      `,
+            backgroundSize: "56px 56px",
+            maskImage: "linear-gradient(to bottom, black 0%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, black 0%, transparent 100%)",
+          }}
+        />
+
+        {/* Bottom fade *
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-white to-transparent dark:from-slate-950" />
+      </div> */
+}
+
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
@@ -330,7 +380,7 @@ function PreviewVisual() {
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.65, duration: 0.6 }}
+        transition={{ delay: 0.15, duration: 0.6 }}
         className="absolute right-2 top-2 z-20 hidden items-center gap-2 rounded-full border border-slate-200/80 bg-white/90 px-3 py-3 text-[11px] font-medium text-slate-600 shadow-lg shadow-slate-900/5 backdrop-blur-xl sm:flex dark:border-white/10 dark:bg-[#171717]/90 dark:text-slate-300">
         <span className="h-2 w-2 rounded-full bg-emerald-500" />
         Crafted for the modern web
@@ -340,7 +390,7 @@ function PreviewVisual() {
       <motion.div
         initial={{ opacity: 0, y: 28, rotate: 1.5 }}
         animate={{ opacity: 1, y: 0, rotate: 0 }}
-        transition={{ duration: 0.85, delay: 0.2, ease: "easeOut" }}
+        transition={{ duration: 0.45, delay: 0.2, ease: "easeOut" }}
         className="relative z-10 overflow-hidden rounded-[22px] border border-slate-200/90 bg-white shadow-[0_30px_100px_-35px_rgba(15,23,42,0.25)] dark:border-white/10 dark:bg-slate-950/90 dark:shadow-[0_30px_100px_-35px_rgba(0,0,0,0.8)]">
         {/* Browser top bar */}
         <div className="flex items-center justify-start border-b border-slate-200/80 px-4 py-3.5 dark:border-white/10">
@@ -449,7 +499,9 @@ function PreviewVisual() {
                 </div>
               </div>
 
-              <motion.div whileHover={{ scale: 1.03}} className="flex items-center justify-between rounded-xl bg-slate-900 px-4 py-3 text-white dark:bg-white dark:text-black">
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                className="flex items-center justify-between rounded-xl bg-slate-900 px-4 py-3 text-white dark:bg-white dark:text-black">
                 <span className="text-xs font-semibold">
                   Explore components
                 </span>
@@ -484,7 +536,7 @@ function PreviewVisual() {
       <motion.div
         initial={{ opacity: 0, x: 18, y: 12 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ delay: 0.9, duration: 0.6 }}
+        transition={{ delay: 0.25, duration: 0.35 }}
         className="absolute -bottom-7 -left-2 z-20 flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white/95 p-3.5 shadow-xl shadow-slate-900/10 backdrop-blur-xl sm:-left-8 dark:border-white/10 dark:bg-slate-950/90 dark:shadow-black/30">
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-800 dark:bg-white/10 dark:text-white">
           <HiCommandLine className="h-5 w-5" />
@@ -510,13 +562,28 @@ function PreviewVisual() {
 export default function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
 
+  // const reveal = {
+  //   hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       duration: shouldReduceMotion ? 0 : 0.7,
+  //       ease: "easeOut",
+  //     },
+  //   },
+  // };
+
   const reveal = {
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
+    hidden: {
+      opacity: 0,
+      y: shouldReduceMotion ? 0 : 10,
+    },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: shouldReduceMotion ? 0 : 0.7,
+        duration: shouldReduceMotion ? 0 : 0.35,
         ease: "easeOut",
       },
     },
@@ -526,48 +593,6 @@ export default function HeroSection() {
     <section
       id="home"
       className="relative isolate overflow-hidden bg-[#fafafa] text-slate-950 transition-colors duration-500 dark:bg-slate-950/90 dark:text-white ">
-      {/* Background atmosphere */}
-      {/* <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_20%,rgba(148,163,184,0.18),transparent_2%)] dark:bg-[radial-gradient(ellipse_at_70%_20%,rgba(148,163,184,0.09),transparent_42%)]" />
-        <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(rgba(148,163,184,4)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,4)_1px,transparent_1px)] [background-size:56px_56px] dark:opacity-[0.12]" />
-        <div className="absolute inset-x-0 bottom-6 h-96 bg-gradient-to-t from-[#fafafa] to-transparent dark:from-[#090909]" />
-      </div> */}
-
-      {/* Background atmosphere */}
-      {/* <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        {/* Soft radial glow *
-        <div
-          className="absolute -top-40 right-[-10%] h-[500px] w-[600px] rounded-full
-    bg-blue-400/[0.5] blur-[100px]
-    dark:bg-blue-400/[0.42]"
-        />
-
-        {/* Secondary glow *
-        <div
-          className="absolute left-[-20%] top-[60%] h-[450px] w-[450px] rounded-full
-    bg-slate-700 blur-[100px]
-    dark:bg-slate-300/40"
-        />
-
-        {/* Grid pattern *
-        <div
-          className="absolute inset-0 opacity-[0.7] dark:opacity-[0.5]"
-          style={{
-            backgroundImage: `
-        linear-gradient(to right, rgba(148,163,184,0.15) 1px, transparent 50px),
-        linear-gradient(to bottom, rgba(148,163,184,0.15) 1px, transparent 50px)
-      `,
-            backgroundSize: "56px 56px",
-            maskImage: "linear-gradient(to bottom, black 0%, transparent 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, black 0%, transparent 100%)",
-          }}
-        />
-
-        {/* Bottom fade *
-        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-white to-transparent dark:from-slate-950" />
-      </div> */}
-
       <BackgroundAtmosphere />
 
       <div className="mx-auto max-w-full px-5 pb-16 pt-32 sm:px-8 sm:pt-36 lg:px-50 lg:pb-20 lg:pt-40">
@@ -579,7 +604,7 @@ export default function HeroSection() {
             variants={{
               visible: {
                 transition: {
-                  staggerChildren: shouldReduceMotion ? 0 : 0.12,
+                  staggerChildren: shouldReduceMotion ? 0 : 0.04,
                 },
               },
             }}
@@ -618,7 +643,9 @@ export default function HeroSection() {
             <motion.p
               variants={reveal}
               className="mt-7 max-w-xl text-[15px] leading-tight text-slate-600 sm:text-base dark:text-slate-400">
-              Discover premium React UI components, UI packs and website templates for developers — or partner with SyncXel to turn your business ideas into powerful digital experiences.
+              Discover premium React UI components, UI packs and website
+              templates for developers — or partner with SyncXel to turn your
+              business ideas into powerful digital experiences.
             </motion.p>
 
             <motion.div
