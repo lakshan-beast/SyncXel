@@ -198,7 +198,7 @@ export default function FounderProfile() {
           <img
             src="/hero.jpg"
             alt="Lakshan Sandeepa - Founder of SyncXel"
-            className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.03]"
+            className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.03] grayscale-50 hover:grayscale-0"
             loading="lazy"
           />
 
