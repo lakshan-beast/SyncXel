@@ -264,13 +264,13 @@ function PreviewCard({ item, index, reduceMotion }) {
       {/* Card top */}
       <div className="flex items-center justify-between border-b border-black/5 px-6 py-5 dark:border-white/[0.07] sm:px-7">
         <div className="flex items-center gap-3">
-          <span className="font-mono text-xs text-black/35 dark:text-white/35">
+          <span className="font-mono text-xs text-slate-600 dark:text-slate-300">
             / {item.number}
           </span>
 
           <span className="h-1 w-1 rounded-full bg-blue-500" />
 
-          <span className="text-xs font-medium text-black/45 dark:text-white/45">
+          <span className="text-xs font-medium text-slate-700 dark:text-slate-300">
             {item.category}
           </span>
         </div>
@@ -302,7 +302,7 @@ function PreviewCard({ item, index, reduceMotion }) {
           {item.component}
         </div>
 
-        <div className="pointer-events-none absolute bottom-4 right-5 flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-wider text-black/30 dark:text-white/30">
+        <div className="pointer-events-none absolute bottom-4 right-5 flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-wider text-slate-700 dark:text-slate-300">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
           Live Preview
         </div>
@@ -315,7 +315,7 @@ function PreviewCard({ item, index, reduceMotion }) {
             {item.name}
           </h3>
 
-          <p className="mt-2 text-sm leading-tight text-black/50 dark:text-white/45">
+          <p className="mt-2 text-sm leading-tight text-slate-700 dark:text-slate-300">
             {item.description}
           </p>
         </div>
@@ -365,7 +365,7 @@ export default function HomeComponentsTeaser() {
             <h2 className="text-4xl font-semibold leading-[1.12] tracking-[-0.045em] sm:text-5xl lg:text-6xl">
               Better building blocks.
               <br />
-              <span className="text-black/35 dark:text-white/35">
+              <span className="text-slate-600 dark:text-slate-300">
                 Better experiences.
               </span>
             </h2>
@@ -431,7 +431,7 @@ export default function HomeComponentsTeaser() {
             <p className="text-lg font-semibold tracking-tight">
               Looking for more components?
             </p>
-            <p className="mt-1 text-sm leading-tight text-slate-600 dark:text-slate-300">
+            <p className="mt-1 text-sm leading-tight text-slate-700 dark:text-slate-300">
               Discover the complete collection in the SyncXel library.
             </p>
           </div>
