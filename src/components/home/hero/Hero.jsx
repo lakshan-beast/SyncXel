@@ -627,7 +627,7 @@ export default function HeroSection() {
 
             <motion.p
               variants={reveal}
-              className="mt-9 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-700">
+              className="mt-9 font-mono text-[11px] uppercase tracking-[0.22em] text-slate-400">
               // build beyond the ordinary
             </motion.p>
 
