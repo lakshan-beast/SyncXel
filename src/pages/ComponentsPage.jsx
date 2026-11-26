@@ -312,7 +312,7 @@ export default function ComponentsPage() {
   return (
     <>
       <SEO
-        title="Free UI Components - Buttons, Cards, Inputs & More | SyncXel"
+        title="Free React UI Components - Buttons, Cards & More | SyncXel"
         description="Explore free, customizable React UI components including buttons, cards, inputs, loaders, toggles and more. Preview, test and copy code directly from SyncXel."
         path="/components"
       />
