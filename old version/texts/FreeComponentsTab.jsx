@@ -8,7 +8,7 @@ import {
   MdOutlineTipsAndUpdates,
 } from "react-icons/md";
 
-import { freeComponentsData } from "../data/free/freeIndex";
+import { freeComponentsData } from "../../src/data/free/freeIndex";
 
 export default function FreeComponentsTab({
   categories,
