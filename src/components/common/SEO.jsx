@@ -42,26 +42,26 @@
 
 const SITE_URL = "https://syncxel.vercel.app";
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${SITE_URL}/#organization`,
-      name: "SyncXel",
-      url: SITE_URL,
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
-      name: "SyncXel",
-      url: SITE_URL,
-      publisher: {
-        "@id": `${SITE_URL}/#organization`,
-      },
-    },
-  ],
-};
+// const structuredData = {
+//   "@context": "https://schema.org",
+//   "@graph": [
+//     {
+//       "@type": "Organization",
+//       "@id": `${SITE_URL}/#organization`,
+//       name: "SyncXel",
+//       url: SITE_URL,
+//     },
+//     {
+//       "@type": "WebSite",
+//       "@id": `${SITE_URL}/#website`,
+//       name: "SyncXel",
+//       url: SITE_URL,
+//       publisher: {
+//         "@id": `${SITE_URL}/#organization`,
+//       },
+//     },
+//   ],
+// };
 
 export default function SEO({
   title,
@@ -101,12 +101,12 @@ export default function SEO({
       <meta name="twitter:description" content={description} />
 
       {/* Structured Data - JSON-LD */}
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
         }}
-      />
+      /> */}
     </>
   );
 }

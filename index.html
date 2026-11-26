@@ -4,6 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Structured Data - SyncXel Organization & Website -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://syncxel.vercel.app/#organization",
+            "name": "SyncXel",
+            "url": "https://syncxel.vercel.app/"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://syncxel.vercel.app/#website",
+            "name": "SyncXel",
+            "url": "https://syncxel.vercel.app/",
+            "publisher": {
+              "@id": "https://syncxel.vercel.app/#organization"
+            }
+          }
+        ]
+      }
+    </script>
+
     <!-- Primary Meta Tags -->
     <title>SyncXel - Premium UI Components, UI Packs & Website Templates</title>
 
