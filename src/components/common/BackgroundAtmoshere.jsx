@@ -20,14 +20,14 @@
 //     <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 //       {/* Original blue glow */}
 //       <div
-//         className="absolute -top-40 right-[-10%] h-[500px] w-[600px]
+//         className="absolute -top-40 right-[-10%] h-[500px] w-150
 //         rounded-full bg-blue-400/[0.5] blur-[100px]
 //         dark:bg-blue-400/[0.42]"
 //       />
 
 //       {/* Original secondary glow */}
 //       <div
-//         className="absolute left-[-20%] top-[60%] h-[450px] w-[450px]
+//         className="absolute left-[-20%] top-[60%] h-112.5 w-112.5
 //         rounded-full bg-slate-700 blur-[100px]
 //         dark:bg-slate-300/40"
 //       />
@@ -169,21 +169,21 @@ export default function BackgroundAtmosphere() {
 
       {/* Original blue atmosphere */}
       <div
-        className="absolute -top-40 right-[-10%] h-[500px] w-[600px]
-        rounded-full bg-blue-400/[0.5] blur-[100px]
-        dark:bg-blue-400/[0.42]"
+        className="absolute -top-40 right-[-10%] h-125 w-150
+        rounded-full bg-blue-400/5 blur-[100px]
+        dark:bg-blue-400/5"
       />
 
       {/* Original secondary atmosphere */}
       <div
-        className="absolute left-[-20%] top-[60%] h-[450px] w-[450px]
+        className="absolute left-[-20%] top-[60%] h-112.5 w-112.5
         rounded-full bg-slate-700 blur-[100px]
         dark:bg-slate-300/40"
       />
 
       {/* Galaxy nebula */}
       <div
-        className="absolute left-[20%] top-[15%] h-[600px] w-[600px]
+        className="absolute left-[20%] top-[15%] h-150 w-150
         rounded-full opacity-30 blur-[130px]"
         style={{
           background:
@@ -192,7 +192,7 @@ export default function BackgroundAtmosphere() {
       />
 
       <div
-        className="absolute right-[5%] top-[35%] h-[450px] w-[450px]
+        className="absolute right-[5%] top-[35%] h-112.5 w-112.5
         rounded-full opacity-25 blur-[120px]"
         style={{
           background:
@@ -264,7 +264,7 @@ export default function BackgroundAtmosphere() {
         Array.from({ length: 12 }, (_, i) => (
           <motion.div
             key={`bright-${i}`}
-            className="absolute h-[3px] w-[3px] rounded-full bg-white"
+            className="absolute h-0.75 w-0.75 rounded-full bg-white"
             style={{
               left: `${(i * 29 + 11) % 100}%`,
               top: `${(i * 43 + 17) % 100}%`,
@@ -355,7 +355,7 @@ export default function BackgroundAtmosphere() {
 
 //       {/* Main blue atmosphere */}
 //       <div
-//         className="absolute -top-40 right-[-10%] h-[500px] w-[600px]
+//         className="absolute -top-40 right-[-10%] h-[500px] w-150
 //         rounded-full bg-blue-400/[0.35] blur-[90px]
 //         dark:bg-blue-400/[0.25]"
 //       />
@@ -369,7 +369,7 @@ export default function BackgroundAtmosphere() {
 
 //       {/* Galaxy nebula */}
 //       <div
-//         className="absolute left-[20%] top-[15%] h-[450px] w-[450px]
+//         className="absolute left-[20%] top-[15%] h-112.5 w-112.5
 //         rounded-full opacity-20 blur-[100px]"
 //         style={{
 //           background:

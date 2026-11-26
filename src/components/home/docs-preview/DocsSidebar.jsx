@@ -4,7 +4,7 @@ import { previewCategories } from "../../../data/docsPreviewData";
 
 export default function DocsSidebar({ activeCategory, onSelect }) {
   return (
-    <aside className="flex w-full flex-col border-b border-slate-800 bg-slate-950/90 p-4 sm:p-5 lg:w-[245px] lg:shrink-0 lg:border-b-0 lg:border-r">
+    <aside className="flex w-full flex-col border-b border-slate-800 bg-slate-950/90 p-4 sm:p-5 lg:w-61.25 lg:shrink-0 lg:border-b-0 lg:border-r">
       <div className="mb-5 flex items-center justify-between">
         <span className="text-[11px] font-semibold tracking-[0.16em] text-slate-400">
           DOCUMENTATION
@@ -27,7 +27,7 @@ export default function DocsSidebar({ activeCategory, onSelect }) {
               className={`flex min-w-0 items-center gap-2.5 rounded-xl px-3 py-3 text-left text-xs font-medium transition-all duration-200 ${
                 isActive
                   ? "bg-blue-500/15 text-blue-400"
-                  : "text-slate-400 hover:bg-white/[0.05] hover:text-white"
+                  : "text-slate-400 hover:bg-white/5 hover:text-white"
               }`}>
               <Icon className="shrink-0 text-base" />
 

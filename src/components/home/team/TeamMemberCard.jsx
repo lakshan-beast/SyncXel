@@ -19,7 +19,7 @@ export default function TeamMemberCard({
       transition={{ duration: shouldReduceMotion ? 0 : 0.5 }}
       className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-950/90 dark:hover:border-blue-500/30 dark:hover:shadow-black/20">
       {/* Member image */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 dark:bg-slate-900">
+      <div className="relative aspect-4/3 overflow-hidden bg-slate-100 dark:bg-slate-900">
         {image ? (
           <img
             src={image}

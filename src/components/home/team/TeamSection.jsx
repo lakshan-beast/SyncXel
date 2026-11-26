@@ -436,7 +436,7 @@ export default function TeamSection() {
 
         <div className="absolute -left-40 bottom-0 h-80 w-80 rounded-full bg-indigo-400/10 blur-[120px] dark:bg-indigo-500/10" />
 
-        <div className="absolute inset-0 opacity-[0.025] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)] [background-size:48px_48px] dark:opacity-[0.07]" />
+        <div className="absolute inset-0 opacity-[0.025] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)]` can be written as `bg-[linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)]  dark:opacity-[0.07]" />
       </div>
 
       <div className="mx-auto max-w-7xl">

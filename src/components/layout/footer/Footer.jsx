@@ -200,10 +200,10 @@ function TechnologyCard({ technology }) {
       href={technology.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-3 rounded-xl border-l-2 border-l-slate-200/80 bg-white/70 p-3 transition-all duration-300 hover:-translate-y-1 hover:border-slate-200 hover:bg-white hover:shadow-lg hover:shadow-slate-900/[0.04] dark:border-white/[0.08] dark:bg-white/[0.025] dark:hover:border-white/20 dark:hover:bg-white/[0.06]"
+      className="group flex items-center gap-3 rounded-xl border-l-2 border-l-slate-200/80 bg-white/70 p-3 transition-all duration-300 hover:-translate-y-1 hover:border-slate-200 hover:bg-white hover:shadow-lg hover:shadow-slate-900/5 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20 dark:hover:bg-white/5"
       aria-label={`Visit official ${technology.name} website`}>
       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-all duration-300 group-hover:bg-slate-600 group-hover:text-white dark:bg-white/[0.07] dark:text-slate-300 dark:group-hover:bg-white dark:group-hover:text-black">
-        <Icon className="h-[19px] w-[19px]" />
+        <Icon className="h-4.75 w-4.75" />
       </div>
 
       <div className="min-w-0 flex-1">
@@ -235,7 +235,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="relative overflow-hidden border-t-2 border-slate-200/60 rounded-2xl bg-[#f1f1f1] text-slate-900 transition-colors duration-500 dark:border-white/[0.08] dark:bg-slate-950/90 dark:text-white">
+      className="relative overflow-hidden border-t-2 border-slate-200/60 rounded-2xl bg-[#f1f1f1] text-slate-900 transition-colors duration-500 dark:border-white/10 dark:bg-slate-950/90 dark:text-white">
       {/* Background atmosphere */}
       {/* <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -right-60 top-0 h-[450px] w-[450px] rounded-full bg-slate-300/10 blur-[100px] dark:bg-white/[0.15]" />
@@ -247,8 +247,8 @@ export default function Footer() {
         <motion.div
           {...reveal}
           className="relative overflow-hidden border-b border-slate-200/80 py-16 sm:py-18 dark:border-white/20 max-w-5xl mx-auto">
-          <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border-2 border-slate-300/50 dark:border-white/[0.05]" />
-          <div className="pointer-events-none absolute -right-8 -top-8 h-48 w-48 rounded-full border-3 border-slate-300/50 dark:border-white/[0.03]" />
+          <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border-2 border-slate-300/50 dark:border-white/5" />
+          <div className="pointer-events-none absolute -right-8 -top-8 h-48 w-48 rounded-full border-3 border-slate-300/50 dark:border-white/5" />
 
           <div className="relative flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
@@ -279,7 +279,7 @@ export default function Footer() {
 
               <Link
                 to="/components"
-                className="inline-flex items-center justify-center gap-3 rounded-xl border border-slate-300 bg-white/60 px-6 py-4 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:bg-white dark:border-white/15 dark:bg-white/[0.03] dark:text-slate-200 dark:hover:border-white/20 dark:hover:bg-white/[0.03]">
+                className="inline-flex items-center justify-center gap-3 rounded-xl border border-slate-300 bg-white/60 px-6 py-4 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:bg-white dark:border-white/15 dark:bg-white/5 dark:text-slate-200 dark:hover:border-white/20 dark:hover:bg-white/5">
                 Explore Resources
                 <HiArrowRight className="h-4 w-4" />
               </Link>
@@ -332,7 +332,7 @@ export default function Footer() {
                         : undefined
                     }
                     aria-label={social.label}
-                    className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/70 px-3 py-2.5 text-[11px] font-medium text-slate-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-400 hover:text-slate-950 dark:border-white/10 dark:bg-white/[0.03] dark:text-slate-300 dark:hover:border-white/25 dark:hover:text-white">
+                    className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white/70 px-3 py-2.5 text-[11px] font-medium text-slate-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-400 hover:text-slate-950 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:border-white/25 dark:hover:text-white">
                     <Icon className="h-3.5 w-3.5" />
                     {social.label}
                   </a>
@@ -422,7 +422,7 @@ export default function Footer() {
 
         {/* Brand Statement */}
         <div className="relative overflow-hidden py-4 sm:py-5 pt-6 mb-12 sm:mb-0">
-          <p className="pointer-events-none select-none text-center text-[clamp(4rem,13vw,24rem)] font-bold leading-none tracking-[-0.01em] text-slate-200/80 dark:text-white/[0.15] text-shadow-lg dark:shadow-none bg-gradient-to-b from-slate-50 via-slate-500 to-slate-50 bg-clip-text text-transparent dark:from-slate-950 dark:via-white/50 dark:to-slate-950">
+          <p className="pointer-events-none select-none text-center text-[clamp(4rem,13vw,24rem)] font-bold leading-none tracking-[-0.01em] text-slate-200/80 dark:text-white/5 text-shadow-lg dark:shadow-none bg-gradient-to-b from-slate-50 via-slate-500 to-slate-50 bg-clip-text dark:from-slate-950 dark:via-white/50 dark:to-slate-950">
             SYNCXEL .
           </p>
 

@@ -8,9 +8,9 @@ import UiPacksTab from "../components/UiPacks";
 
 // import UIComponentGenerator from "../components/UIComponentGenerator";
 
-import { freeComponentsData } from "../data/free/freeIndex";
-import { uiPacksData } from "../data/uiPacks";
-import { premiumKits } from "../data/premiumKitData";
+import { freeComponentsData } from "../src/data/free/freeIndex";
+import { uiPacksData } from "../src/data/uiPacks";
+import { premiumKits } from "../src/data/premiumKitData";
 
 export default function ComponentsHubPage() {
   const [mainTab, setMainTab] = useState("free");

@@ -41,7 +41,7 @@ export default function LegalNavigation({ activeSection, onSectionChange }) {
             type="button"
             onClick={() => onSectionChange(item.id)}
             aria-pressed={isActive}
-            className={`group flex min-w-[220px] flex-1 items-center gap-4 rounded-2xl border p-4 text-left transition-all duration-300 sm:min-w-0 ${
+            className={`group flex min-w-55 flex-1 items-center gap-4 rounded-2xl border p-4 text-left transition-all duration-300 sm:min-w-0 ${
               isActive
                 ? "border-blue-200 bg-blue-50 shadow-sm dark:border-blue-500/30 dark:bg-blue-500/10"
                 : "border-slate-200 bg-white hover:border-blue-200 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-500/30 dark:hover:bg-slate-900/80"

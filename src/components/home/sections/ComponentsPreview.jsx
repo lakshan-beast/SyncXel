@@ -258,11 +258,11 @@ function PreviewCard({ item, index, reduceMotion }) {
         duration: 0.55,
         delay: reduceMotion ? 0 : index * 0.12,
       }}
-      className={`group relative overflow-hidden rounded-[28px] border border-black/[0.07] bg-white transition-colors duration-300 dark:border-white/[0.09] dark:bg-slate-950/90 ${
+      className={`group relative overflow-hidden rounded-[28px] border border-black/[0.07] bg-white transition-colors duration-300 dark:border-white/10 dark:bg-slate-950/90 ${
         isFeatured ? "lg:col-span-7" : "lg:col-span-5"
       }`}>
       {/* Card top */}
-      <div className="flex items-center justify-between border-b border-black/[0.06] px-6 py-5 dark:border-white/[0.07] sm:px-7">
+      <div className="flex items-center justify-between border-b border-black/5 px-6 py-5 dark:border-white/[0.07] sm:px-7">
         <div className="flex items-center gap-3">
           <span className="font-mono text-xs text-black/35 dark:text-white/35">
             / {item.number}
@@ -275,7 +275,7 @@ function PreviewCard({ item, index, reduceMotion }) {
           </span>
         </div>
 
-        <span className="rounded-full border border-black/[0.07] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-black/50 dark:border-white/[0.1] dark:text-white/50">
+        <span className="rounded-full border border-black/[0.07] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-black/50 dark:border-white/5 dark:text-white/50">
           {item.tag}
         </span>
       </div>
@@ -283,7 +283,7 @@ function PreviewCard({ item, index, reduceMotion }) {
       {/* Live preview area */}
       <div
         className={`relative flex items-center justify-center overflow-hidden bg-[#f7f8fa] p-6 dark:bg-[#1b1d21] sm:p-8 ${
-          isFeatured ? "min-h-[270px] lg:min-h-[330px]" : "min-h-[230px]"
+          isFeatured ? "min-h-67.5 lg:min-h-82.5" : "min-h-57.5"
         }`}>
         <div
           aria-hidden="true"
@@ -297,7 +297,7 @@ function PreviewCard({ item, index, reduceMotion }) {
 
         <div
           className={`relative z-10 flex w-full items-center justify-center ${
-            item.id === 4 ? "max-w-[390px]" : "max-w-full"
+            item.id === 4 ? "max-w-97.5" : "max-w-full"
           }`}>
           {item.component}
         </div>
@@ -310,7 +310,7 @@ function PreviewCard({ item, index, reduceMotion }) {
 
       {/* Card bottom */}
       <div className="flex flex-col justify-between gap-5 p-6 sm:flex-row sm:items-end sm:p-7">
-        <div className="max-w-[390px]">
+        <div className="max-w-97.5">
           <h3 className="text-lg font-semibold tracking-tight text-[#171717] dark:text-white sm:text-xl">
             {item.name}
           </h3>
@@ -348,14 +348,14 @@ export default function HomeComponentsTeaser() {
       {/* Subtle background decoration */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 top-20 h-[420px] w-[420px] rounded-full bg-blue-500/[0.045] blur-[110px]"
+        className="pointer-events-none absolute -right-40 top-20 h-105 w-105 rounded-full bg-blue-500/5 blur-[110px]"
       />
 
       <div className="relative mx-auto max-w-7xl">
         {/* Section heading */}
         {/* <div className="mb-12 flex flex-col justify-between gap-8 lg:mb-16 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-black/[0.02] px-4 py-2 dark:border-white/[0.1] dark:bg-white/[0.03]">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/[0.02] px-4 py-2 dark:border-white/5 dark:bg-white/[0.03]">
               <HiOutlineSparkles className="text-sm text-blue-500" />
               <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-black/60 dark:text-white/60">
                 Explore the library
@@ -405,7 +405,7 @@ export default function HomeComponentsTeaser() {
                 className={`rounded-full px-4 py-2 text-xs font-semibold transition-all duration-300 ${
                   isActive
                     ? "bg-[#171717] text-white dark:bg-white dark:text-black"
-                    : "border border-black/[0.08] text-black/70 hover:border-black/20 hover:text-black dark:border-white/20 dark:text-slate-300 dark:hover:border-white/40 dark:hover:text-white"
+                    : "border border-black/10 text-black/70 hover:border-black/20 hover:text-black dark:border-white/20 dark:text-slate-300 dark:hover:border-white/40 dark:hover:text-white"
                 }`}>
                 {category}
               </button>
@@ -426,7 +426,7 @@ export default function HomeComponentsTeaser() {
         </motion.div>
 
         {/* Bottom CTA */}
-        <div className="mt-10 max-w-3xl mx-auto flex flex-col items-start justify-between gap-5 rounded-[24px] border border-black/[0.07] bg-[#f8f9fb] p-7 dark:border-white/[0.08] dark:bg-[#141414] sm:flex-row sm:items-center sm:p-9">
+        <div className="mt-10 max-w-3xl mx-auto flex flex-col items-start justify-between gap-5 rounded-3xl border border-black/[0.07] bg-[#f8f9fb] p-7 dark:border-white/10 dark:bg-[#141414] sm:flex-row sm:items-center sm:p-9">
           <div>
             <p className="text-lg font-semibold tracking-tight">
               Looking for more components?

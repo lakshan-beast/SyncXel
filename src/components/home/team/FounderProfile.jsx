@@ -53,7 +53,7 @@
 //         whileInView={{ opacity: 1, x: 0 }}
 //         viewport={{ once: true, amount: 0.3 }}
 //         transition={{ duration: shouldReduceMotion ? 0 : 0.7 }}
-//         className="relative mx-auto w-full max-w-[420px]">
+//         className="relative mx-auto w-full max-w-105">
 //         <div className="absolute -inset-3 rounded-[2rem] border border-slate-200/80 dark:border-slate-700/60" />
 
 //         <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] bg-slate-100 dark:bg-slate-900">
@@ -191,10 +191,10 @@ export default function FounderProfile() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: shouldReduceMotion ? 0 : 0.7 }}
-        className="relative mx-auto w-full max-w-[420px]">
-        <div className="absolute -inset-3 rounded-[2rem] border border-slate-200/80 dark:border-slate-700/60" />
+        className="relative mx-auto w-full max-w-105">
+        <div className="absolute -inset-3 rounded-4xl border border-slate-200/80 dark:border-slate-700/60" />
 
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] bg-slate-100 dark:bg-slate-900">
+        <div className="relative aspect-4/5 overflow-hidden rounded-[1.6rem] bg-slate-100 dark:bg-slate-900">
           <img
             src="/hero.jpg"
             alt="Lakshan Sandeepa - Founder of SyncXel"
@@ -277,7 +277,7 @@ export default function FounderProfile() {
                 aria-label={`Visit ${social.label} profile`}
                 title={social.label}
                 className="group flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-blue-500/50 dark:hover:bg-blue-500/10 dark:hover:text-blue-400">
-                <Icon className="h-[18px] w-[18px]" />
+                <Icon className="h-4.5 w-4.5" />
               </a>
             );
           })}

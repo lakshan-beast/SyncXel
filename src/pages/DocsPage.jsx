@@ -153,7 +153,7 @@ export default function DocsPage() {
                   </div>
 
                   {searchQuery.trim() && (
-                    <div className="absolute left-0 right-0 top-14 z-40 max-h-[420px] overflow-y-auto rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl shadow-slate-900/10 dark:border-slate-800 dark:bg-slate-900">
+                    <div className="absolute left-0 right-0 top-14 z-40 max-h-105 overflow-y-auto rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl shadow-slate-900/10 dark:border-slate-800 dark:bg-slate-900">
                       {searchResults.length > 0 ? (
                         searchResults.map((result) => (
                           <button

@@ -7,7 +7,7 @@ import {
 
 export default function FAQCTA() {
   return (
-    <div className="mt-9 rounded-[24px] border border-black/[0.07] bg-[#f7f8fa] p-6 dark:border-white/[0.08] dark:bg-slate-950/90">
+    <div className="mt-9 rounded-3xl border border-black/[0.07] bg-[#f7f8fa] p-6 dark:border-white/10 dark:bg-slate-950/90">
       <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400">
         <HiOutlineChatBubbleLeftRight className="text-xl" />
       </div>

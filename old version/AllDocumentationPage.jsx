@@ -15,19 +15,19 @@ import { HiOutlineQuestionMarkCircle } from "react-icons/hi2";
 import { IoIosGitBranch } from "react-icons/io";
 
 // Data Imports
-import { integrationsData } from "../data/docs/integrationsData";
+import { integrationsData } from "../src/data/docs/integrationsData";
 
-import QuickSetup from "../components/guideTabs/QuickSetup";
-import CssTricks from "../components/guideTabs/CssTricks";
-import GitGuide from "../components/guideTabs/GridGuide";
-import VercelGuide from "../components/guideTabs/VercelGuide";
-import SeoDnsGuide from "../components/guideTabs/SeoGuide";
-import CustomHooks from "../components/guideTabs/HooksGuide";
-import AnimationGuide from "../components/guideTabs/AnimationGuide";
-import AuthGuide from "../components/guideTabs/AuthGuide";
-import StateGuide from "../components/guideTabs/StateGuide";
-import FormsGuide from "../components/guideTabs/FormsGuide";
-import FaqGuide from "../components/guideTabs/FaqGuide";
+import QuickSetup from "../src/components/guideTabs/QuickSetup";
+import CssTricks from "../src/components/guideTabs/CssTricks";
+import GitGuide from "../src/components/guideTabs/GridGuide";
+import VercelGuide from "../src/components/guideTabs/VercelGuide";
+import SeoDnsGuide from "../src/components/guideTabs/SeoGuide";
+import CustomHooks from "../src/components/guideTabs/HooksGuide";
+import AnimationGuide from "../src/components/guideTabs/AnimationGuide";
+import AuthGuide from "../src/components/guideTabs/AuthGuide";
+import StateGuide from "../src/components/guideTabs/StateGuide";
+import FormsGuide from "../src/components/guideTabs/FormsGuide";
+import FaqGuide from "../src/components/guideTabs/FaqGuide";
 
 import KnowledgeHubHeader from "../components/KnowledgeHubHeader";
 

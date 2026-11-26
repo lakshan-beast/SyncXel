@@ -6,7 +6,7 @@ export default function FAQItem({ item, isOpen, onToggle }) {
   const reduceMotion = useReducedMotion();
 
   return (
-    <div className="border-b border-black/[0.08] dark:border-white/[0.09]">
+    <div className="border-b border-black/10 dark:border-white/10">
       <button
         type="button"
         onClick={onToggle}
@@ -27,7 +27,7 @@ export default function FAQItem({ item, isOpen, onToggle }) {
           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
             isOpen
               ? "rotate-45 border-blue-500 bg-blue-500 text-white"
-              : "border-black/[0.1] text-black/50 group-hover:border-blue-500 group-hover:text-blue-500 dark:border-white/[0.12] dark:text-white/50"
+              : "border-black/5 text-black/50 group-hover:border-blue-500 group-hover:text-blue-500 dark:border-white/10 dark:text-white/50"
           }`}>
           <HiOutlinePlus className="text-base" />
         </span>

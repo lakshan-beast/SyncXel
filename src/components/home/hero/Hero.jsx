@@ -400,7 +400,7 @@ function PreviewVisual() {
             <span className="h-2.5 w-2.5 rounded-full bg-[#54C96B]" />
           </div>
 
-          <div className="flex items-center gap-2 rounded-md bg-slate-100 px-3 py-1.5 ml-1.5 text-[10px] text-slate-600 dark:bg-white/[0.05] dark:text-slate-500">
+          <div className="flex items-center gap-2 rounded-md bg-slate-100 px-3 py-1.5 ml-1.5 text-[10px] text-slate-600 dark:bg-white/5 dark:text-slate-500">
             <HiCubeTransparent className="h-3.5 w-3.5" />
             syncxel.dev / preview
           </div>
@@ -474,7 +474,7 @@ function PreviewVisual() {
           </div>
 
           {/* Live component preview */}
-          <div className="flex min-h-[290px] flex-col justify-between bg-gradient-to-br from-slate-50 to-white p-5 dark:from-slate-950/90 dark:to-slate-700/30">
+          <div className="flex min-h-72.5 flex-col justify-between bg-gradient-to-br from-slate-50 to-white p-5 dark:from-slate-950/90 dark:to-slate-700/30">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-slate-600">
                 Live component
@@ -610,7 +610,7 @@ export default function HeroSection() {
             }}
             className="relative z-10 max-w-2xl">
             <motion.div variants={reveal}>
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/75 px-3.5 py-2 shadow-sm shadow-slate-900/[0.03] backdrop-blur-md dark:border-white/10 dark:bg-white/[0.04]">
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/75 px-3.5 py-2 shadow-sm shadow-slate-900/3 backdrop-blur-md dark:border-white/10 dark:bg-white/4">
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-900 text-white dark:bg-white dark:text-black">
                   <HiSparkles className="h-3 w-3 animate-pulse" />
                 </span>
@@ -633,7 +633,7 @@ export default function HeroSection() {
 
             <motion.h1
               variants={reveal}
-              className="mt-4 max-w-[720px] text-[clamp(3.2rem,7vw,6.2rem)] font-semibold leading-[0.98] tracking-[-0.075em]">
+              className="mt-4 max-w-180 text-[clamp(3.2rem,7vw,6.2rem)] font-semibold leading-[0.98] tracking-[-0.075em]">
               Build Better
               <span className="mt-2 block bg-gradient-to-r from-slate-500 via-slate-950 to-slate-500 bg-clip-text pb-2 text-transparent dark:from-slate-400 dark:via-white dark:to-slate-500">
                 Digital Experiences.
@@ -660,7 +660,7 @@ export default function HeroSection() {
 
               <a
                 href="#services"
-                className="group inline-flex min-h-13 items-center justify-center gap-3 rounded-xl border border-slate-300 bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-700 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-slate-500 hover:bg-white dark:border-white/15 dark:bg-white/[0.03] dark:text-slate-200 dark:hover:border-white/30 dark:hover:bg-white/[0.07]">
+                className="group inline-flex min-h-13 items-center justify-center gap-3 rounded-xl border border-slate-300 bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-700 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-slate-500 hover:bg-white dark:border-white/15 dark:bg-white/3 dark:text-slate-200 dark:hover:border-white/30 dark:hover:bg-white/[0.07]">
                 Discuss a project
                 <HiArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>

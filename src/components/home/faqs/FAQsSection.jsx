@@ -64,8 +64,6 @@
 //   );
 // }
 
-
-
 import React, { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
@@ -82,25 +80,25 @@ export default function FAQSection() {
 
   const currentQuestions = faqData[activeCategory] || [];
 
-  const activeCategoryLabel =
-    faqCategories.find((category) => category.id === activeCategory)?.label;
+  const activeCategoryLabel = faqCategories.find(
+    (category) => category.id === activeCategory,
+  )?.label;
 
   return (
     <section
       id="faq"
-      className="relative isolate overflow-hidden bg-white px-5 py-24 sm:px-8 lg:px-12 lg:py-32 dark:bg-slate-950"
-    >
+      className="relative isolate overflow-hidden bg-white px-5 py-24 sm:px-8 lg:px-12 lg:py-32 dark:bg-slate-950">
       {/* Background atmosphere */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-blue-400/50 blur-[120px] dark:bg-blue-500/10" />
 
         <div className="absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-indigo-400/50 blur-[120px] dark:bg-indigo-500/10" />
 
-         <div className="absolute inset-0 opacity-[0.065] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)] [background-size:48px_48px] dark:opacity-[0.095]" />
+        <div className="absolute inset-0 opacity-[0.065] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)]` can be written as `bg-[linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)] dark:opacity-[0.095]" />
+        {/* <div className="absolute inset-0 opacity-[0.065] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)] [background-size:48px_48px] dark:opacity-[0.095]" /> */}
       </div>
 
-
-{/* Background atmosphere */}
+      {/* Background atmosphere */}
       {/* <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -right-40 top-20 h-80 w-80 rounded-full bg-blue-400/50 blur-[120px] dark:bg-blue-500/20" />
 
@@ -108,7 +106,6 @@ export default function FAQSection() {
 
         <div className="absolute inset-0 opacity-[0.095] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)] [background-size:48px_48px] dark:opacity-[0.125]" />
       </div> */}
-
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
         {/* Left content */}
@@ -123,8 +120,7 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: reduceMotion ? 0 : 0.6 }}
-          className="min-w-0 lg:col-span-7"
-        >
+          className="min-w-0 lg:col-span-7">
           <FAQCategoryTabs
             categories={faqCategories}
             activeCategory={activeCategory}
@@ -141,10 +137,7 @@ export default function FAQSection() {
             </span>
           </div>
 
-          <FAQAccordion
-            category={activeCategory}
-            items={currentQuestions}
-          />
+          <FAQAccordion category={activeCategory} items={currentQuestions} />
         </motion.div>
       </div>
     </section>
