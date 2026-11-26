@@ -243,7 +243,8 @@ function TechnologyCard({ technology }) {
   return (
     <div className="group flex min-w-[200px] items-center gap-3 rounded-xl border border-slate-200/80 bg-white/75 px-3.5 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-slate-200 hover:bg-white hover:shadow-lg hover:shadow-slate-900/[0.04] dark:border-white/[0.09] dark:bg-white/[0.025] dark:hover:border-white/10 dark:hover:bg-white/[0.06] dark:hover:shadow-black/20">
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-colors duration-300 group-hover:bg-slate-900 group-hover:text-white dark:bg-white/[0.07] dark:text-slate-300 dark:group-hover:bg-white dark:group-hover:text-black">
-        <Icon className="h-[19px] w-[19px]" />
+        <Icon aria-hidden="true"
+  focusable="false" className="h-5 w-5" />
       </div>
 
       <div className="min-w-0">
