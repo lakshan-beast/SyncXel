@@ -90,13 +90,13 @@ export default function FAQSection() {
       className="relative isolate overflow-hidden bg-white px-5 py-24 sm:px-8 lg:px-12 lg:py-32 dark:bg-slate-950">
       {/* Background atmosphere */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-blue-400/50 blur-[120px] dark:bg-blue-500/10" />
+        <div className="absolute -left-40 top-0 h-80 w-80 rounded-full bg-blue-400/50 blur-[120px] dark:bg-blue-500/20" />
 
-        <div className="absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-indigo-400/50 blur-[120px] dark:bg-indigo-500/10" />
+        <div className="absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-indigo-400/50 blur-[120px] dark:bg-indigo-500/30" />
 
-        <div className="absolute inset-0 opacity-[0.065] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)]` can be written as `bg-[linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)] dark:opacity-[0.095]" />
-        {/* <div className="absolute inset-0 opacity-[0.065] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)] [background-size:48px_48px] dark:opacity-[0.095]" /> */}
+        <div className="absolute inset-0 opacity-[0.65] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)]` can be written as `bg-[linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)] dark:opacity-[0.95]" />
       </div>
+      {/* <div className="absolute inset-0 opacity-[0.065] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)] [background-size:48px_48px] dark:opacity-[0.095]" /> */}
 
       {/* Background atmosphere */}
       {/* <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -132,8 +132,9 @@ export default function FAQSection() {
               {activeCategoryLabel}
             </p>
 
-            <span className="shrink-0 font-mono text-xs text-slate-400 dark:text-slate-500">
-              {String(currentQuestions.length).padStart(2, "0")} Questions
+            <span className="shrink-0 text-xs text-slate-400 dark:text-slate-500">
+              {" "}
+              ({String(currentQuestions.length).padStart(2, "0")}) Questions
             </span>
           </div>
 

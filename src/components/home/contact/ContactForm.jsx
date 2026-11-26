@@ -93,7 +93,7 @@ export default function ContactForm() {
       className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_20px_80px_rgba(15,23,42,0.06)] dark:border-white/[0.09] dark:bg-slate-950/90 dark:shadow-[0_25px_90px_rgba(0,0,0,0.25)] sm:p-8 lg:p-9"
     >
       <div className="mb-8">
-        <span className="font-mono text-xs text-blue-600 dark:text-blue-400">
+        <span className="text-xs text-blue-600 dark:text-blue-400">
           contact_module.config
         </span>
 
@@ -101,13 +101,13 @@ export default function ContactForm() {
           Tell us about your project.
         </h3>
 
-        <p className="mt-2 text-sm leading-tight text-slate-500 dark:text-slate-400">
+        <p className="mt-0 text-sm leading-tight text-slate-500 dark:text-slate-400">
           Share a few details and we'll get back to you.
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           <FormField
             label="Your name"
             name="name"

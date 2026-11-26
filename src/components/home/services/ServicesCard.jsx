@@ -18,7 +18,7 @@ export default function ServiceCard({ service, index }) {
       className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border p-7 transition-all duration-500 sm:p-8 ${
         service.featured
           ? "border-slate-800 bg-slate-950/90 text-white dark:border-slate-800 dark:bg-slate-800"
-          : "border-slate-200 bg-white text-slate-900 hover:border-blue-200 hover:shadow-xl hover:shadow-slate-200/40 dark:border-slate-800 dark:bg-slate-950/90 dark:text-white dark:hover:border-blue-900 dark:hover:shadow-black/20"
+          : "border-slate-200 bg-white text-slate-900 hover:border-blue-200 hover:shadow-xl hover:shadow-slate-200/40 dark:border-slate-800 dark:bg-slate-950/90 dark:text-white dark:hover:border-blue-900/40 dark:hover:shadow-black/20"
       }`}>
       {service.featured && (
         <>
@@ -54,7 +54,7 @@ export default function ServiceCard({ service, index }) {
         </h3>
 
         <p
-          className={`mt-2 max-w-lg text-sm leading-tight ${
+          className={`mt-2 px-2 max-w-lg text-sm leading-tight ${
             service.featured
               ? "text-slate-400"
               : "text-slate-600 dark:text-slate-400"
@@ -78,10 +78,10 @@ export default function ServiceCard({ service, index }) {
       </div>
 
       <div
-        className={`relative z-10 mt-3 border-t pt-3 ${
+        className={`relative z-10 mt-3 border-t-2 pt-3 ${
           service.featured
             ? "border-slate-800"
-            : "border-slate-200 dark:border-slate-800"
+            : "border-slate-200 dark:border-slate-900"
         }`}>
         <a
           href="#contact-section"

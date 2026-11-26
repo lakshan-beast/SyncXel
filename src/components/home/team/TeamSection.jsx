@@ -475,7 +475,7 @@ export default function TeamSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col items-start gap-6 lg:items-end">
-            <p className="max-w-md text-base leading-relaxed text-slate-600 lg:text-right dark:text-slate-400">
+            <p className="max-w-md text-base leading-tight text-slate-600 lg:text-right dark:text-slate-400">
               Meet the people and ideas behind SyncXel. We focus on creating
               thoughtful digital experiences through creativity, technology, and
               continuous improvement.
@@ -506,7 +506,7 @@ export default function TeamSection() {
                 Meet the people behind the work.
               </h3>
 
-              <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-400">
+              <p className="mt-3 max-w-xl text-base leading-tight text-slate-600 dark:text-slate-400">
                 A growing team bringing different skills and ideas
                 together to build better digital experiences.
               </p>

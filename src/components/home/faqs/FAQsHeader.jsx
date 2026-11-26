@@ -78,7 +78,7 @@ export default function FAQHeader() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="mt-5 max-w-md text-base leading-relaxed text-slate-600 dark:text-slate-400"
+        className="mt-3 max-w-md text-base leading-tight text-slate-600 dark:text-slate-400"
       >
         Everything you need to know about SyncXel, our digital
         resources, and the services we provide.

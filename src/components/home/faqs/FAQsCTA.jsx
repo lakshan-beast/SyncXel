@@ -12,11 +12,11 @@ export default function FAQCTA() {
         <HiOutlineChatBubbleLeftRight className="text-xl" />
       </div>
 
-      <h3 className="text-base font-semibold text-[#171717] dark:text-white">
+      <h3 className="text-lg font-semibold text-[#171717] dark:text-white">
         Still have questions?
       </h3>
 
-      <p className="mt-2 text-sm leading-tight text-black/50 dark:text-white/60">
+      <p className="mt-0 pr-3 text-sm leading-tight text-black/50 dark:text-white/60">
         Can't find what you're looking for? Let's talk about it.
       </p>
 

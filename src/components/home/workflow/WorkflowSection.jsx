@@ -19,7 +19,7 @@ export default function WorkflowSection() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -right-40 -bottom-40 h-[550px] w-[550px] rounded-full bg-blue-400/[0.07] blur-[140px] dark:bg-blue-400/[0.09]" />
+        <div className="absolute -right-40 -bottom-40 h-137.5 w-137.5 rounded-full bg-blue-400/[0.07] blur-[140px] dark:bg-blue-400/10" />
 
         <div className="absolute -top-40 -left-40 h-[450px] w-[450px] rounded-full bg-slate-400/[0.08] blur-[130px] dark:bg-slate-300/[0.04]" />
 
@@ -33,9 +33,9 @@ export default function WorkflowSection() {
         />
       </div>
 
-      <div className="mx-auto max-w-full lg:px-50">
+      <div className="mx-auto max-w-7xl relative ">
         <WorkflowHeader />
-
+{/*  */}
         <WorkflowTimeline />
 
         <WorkflowCTA />

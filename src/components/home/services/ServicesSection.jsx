@@ -35,7 +35,7 @@ export default function ServicesSection() {
           <a
             href="#contact-section"
             className="w-fit text-xs font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
-            Tell us about your project ↗
+            Tell us about your project  ↗
           </a>
         </div>
       </div>

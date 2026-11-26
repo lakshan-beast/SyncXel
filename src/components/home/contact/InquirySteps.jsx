@@ -12,7 +12,7 @@ export default function InquirySteps() {
         {inquirySteps.map((step, index) => (
           <div key={step.number} className="flex gap-4">
             <div className="flex flex-col items-center">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white font-mono text-xs font-semibold text-slate-600 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-300">
+              <span className="flex w-10 h-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white font-mono text-xs font-semibold text-slate-600 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-300">
                 {step.number}
               </span>
 
@@ -26,7 +26,7 @@ export default function InquirySteps() {
                 {step.title}
               </h3>
 
-              <p className="mt-1 text-xs leading-6 text-slate-500 dark:text-slate-400">
+              <p className="mt-0 text-xs leading-6 text-slate-500 dark:text-slate-400">
                 {step.description}
               </p>
             </div>

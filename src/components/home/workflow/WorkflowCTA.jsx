@@ -10,18 +10,18 @@ export default function WorkflowCTA() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: shouldReduceMotion ? 0 : 0.5 }}
-      className="max-w-6xl mx-auto mt-16 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 p-7 sm:p-10 dark:border-slate-800 dark:bg-slate-950/90">
+      className="max-w-5xl mx-auto mt-16 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 p-7 sm:p-10 dark:border-slate-800/50 dark:bg-slate-950/90">
       <div className="flex flex-col items-start justify-between gap-7 sm:flex-row sm:items-center">
         <div className="max-w-xl">
           <p className="text-xs font-semibold tracking-[0.18em] text-blue-600 dark:text-blue-400">
             LET'S BUILD SOMETHING
           </p>
 
-          <h3 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
+          <h3 className="mt-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
             Have an idea in mind?
           </h3>
 
-          <p className="mt-3 text-sm leading-tight text-slate-600 dark:text-slate-400">
+          <p className="mt-1 text-sm leading-tight text-slate-600 dark:text-slate-400">
             Explore our digital products or tell us about your next website
             project. Let's find the right direction together.
           </p>

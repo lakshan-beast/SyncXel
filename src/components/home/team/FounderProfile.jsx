@@ -194,7 +194,7 @@ export default function FounderProfile() {
         className="relative mx-auto w-full max-w-105">
         <div className="absolute -inset-3 rounded-4xl border border-slate-200/80 dark:border-slate-700/60" />
 
-        <div className="relative aspect-4/5 overflow-hidden rounded-[1.6rem] bg-slate-100 dark:bg-slate-900">
+        <div className="relative aspect-square overflow-hidden rounded-[1.6rem] bg-slate-100 dark:bg-slate-900">
           <img
             src="/hero.jpg"
             alt="Lakshan Sandeepa - Founder of SyncXel"
@@ -229,11 +229,11 @@ export default function FounderProfile() {
           MEET THE FOUNDER
         </span>
 
-        <h3 className="mt-5 text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] text-slate-900 sm:text-7xl xl:text-8xl dark:text-white">
+        <h3 className="mt-3 text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] text-slate-900 sm:text-7xl xl:text-8xl dark:text-white">
           Founder<span className="text-blue-500">.</span>
         </h3>
 
-        <div className="mt-7">
+        <div className="mt-3">
           <h4 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
             Lakshan Sandeepa
           </h4>
@@ -243,7 +243,7 @@ export default function FounderProfile() {
           </p>
         </div>
 
-        <p className="mt-7 max-w-xl text-sm leading-tight text-slate-600 sm:text-base dark:text-slate-400">
+        <p className="mt-3 max-w-xl text-sm leading-tight text-slate-600 sm:text-base dark:text-slate-400">
           Building SyncXel around a simple idea — making quality digital
           experiences and development resources more accessible. Focused on
           frontend development, thoughtful UI design, and creating practical
@@ -251,7 +251,7 @@ export default function FounderProfile() {
         </p>
 
         {/* Expertise */}
-        <div className="mt-7 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-2">
           {["Frontend Development", "UI Engineering", "Digital Products"].map(
             (item) => (
               <span
@@ -264,7 +264,7 @@ export default function FounderProfile() {
         </div>
 
         {/* Social links */}
-        <div className="mt-9 flex flex-wrap items-center gap-3">
+        <div className="mt-4 pt-2 border-t-2 border-t-slate-300/10 flex flex-wrap items-center gap-2">
           {founderSocials.map((social) => {
             const Icon = social.icon;
 
@@ -276,7 +276,7 @@ export default function FounderProfile() {
                 rel="noopener noreferrer"
                 aria-label={`Visit ${social.label} profile`}
                 title={social.label}
-                className="group flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-blue-500/50 dark:hover:bg-blue-500/10 dark:hover:text-blue-400">
+                className="group flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 dark:border-slate-700/50 dark:bg-slate-950 dark:text-slate-300/50 dark:hover:border-blue-500/50 dark:hover:bg-blue-500/10 dark:hover:text-blue-400">
                 <Icon className="h-4.5 w-4.5" />
               </a>
             );

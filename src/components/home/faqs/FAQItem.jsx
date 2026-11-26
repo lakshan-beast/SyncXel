@@ -15,10 +15,10 @@ export default function FAQItem({ item, isOpen, onToggle }) {
         id={`faq-question-${item.id}`}
         className="group flex w-full items-center justify-between gap-5 py-6 text-left">
         <span
-          className={`text-sm font-semibold leading-6 transition-colors duration-300 sm:text-base ${
+          className={`text-sm font-semibold leading-6 transition-colors duration-300 sm:text-lg ${
             isOpen
               ? "text-blue-600 dark:text-blue-400"
-              : "text-[#202020] group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400"
+              : "text-[#202020] group-hover:text-blue-600 dark:text-white/70 dark:group-hover:text-blue-400"
           }`}>
           {item.question}
         </span>
