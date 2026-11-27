@@ -30,7 +30,7 @@ export default function TemplateComponentsTab({
     <div className="max-w-7xl mx-auto space-y-8">
       {/* Category Filter */}
       {categories.length > 1 && (
-        <div className="flex flex-wrap gap-2 justify-start border-b border-slate-200 pb-5">
+        <div className="flex flex-wrap gap-2 justify-start border-b border-slate-200/30 pb-5">
           {categories.map((category) => (
             <motion.button
               key={category}
@@ -40,8 +40,8 @@ export default function TemplateComponentsTab({
               onClick={() => setActiveCategory(category)}
               className={`px-5 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer border ${
                 activeCategory === category
-                  ? "bg-slate-900 text-white border-slate-900 shadow-sm"
-                  : "bg-slate-100/70 text-slate-600 border-slate-200 hover:bg-slate-200 hover:text-slate-900"
+                  ? "bg-blue-600 text-white shadow-md border-slate-600 shadow-blue-600/20"
+                  : "border-slate-200 bg-white text-slate-600 hover:border-blue-300 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-blue-500/50 dark:hover:text-blue-400"
               }`}>
               {category}
             </motion.button>
@@ -51,13 +51,13 @@ export default function TemplateComponentsTab({
 
       {/* Registry Label */}
       <div className="flex items-center justify-between gap-3">
-        <span className="font-mono text-[11px] text-slate-400">
-          // enterprise_full_stack_templates
+        <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
+          enterprise full stack templates
         </span>
 
         <span className="text-xs text-slate-400">
           {componentsData.length}{" "}
-          {componentsData.length === 1 ? "template" : "templates"} available
+          {componentsData.length === 1 ? "template" : "templates"} available 
         </span>
       </div>
 
@@ -85,10 +85,10 @@ export default function TemplateComponentsTab({
                   duration: 0.45,
                   delay: shouldReduceMotion ? 0 : index * 0.08,
                 }}
-                className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:border-slate-300 hover:shadow-md transition-all duration-300">
+                className="group bg-white/70 dark:bg-slate-400 border-2 border-slate-300/40 dark:border-slate-700 rounded-tr-3xl rounded-bl-3xl flex flex-col hover:border-blue-200 hover:shadow-md hover:shadow-slate-200/50 transition-all duration-300">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                   {/* Template Image Preview */}
-                  <div className="relative min-h-64 lg:min-h-full overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-200 bg-slate-50 flex items-center justify-center p-6 sm:p-8">
+                  <div className="relative min-h-64 lg:min-h-full overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-200 bg-slate-50 flex items-center justify-center p-6 sm:p-8 rounded-bl-3xl">
                     {item.previewImg ? (
                       <motion.img
                         initial={shouldReduceMotion ? false : { opacity: 0 }}
@@ -137,12 +137,12 @@ export default function TemplateComponentsTab({
                       </h3>
 
                       {/* Description */}
-                      <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-5">
+                      <p className="text-sm text-slate-700 leading-tight px-2 my-3">
                         {item.description}
                       </p>
 
                       {/* Features */}
-                      <div className="space-y-3 px-1 mb-5">
+                      <div className="space-y-1 px-3 mb-5">
                         <div className="flex items-start gap-3 text-xs text-slate-600">
                           <span className="w-1.5 h-1.5 mt-1 rounded-full bg-slate-900 shrink-0" />
                           <span>

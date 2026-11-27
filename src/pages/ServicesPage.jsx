@@ -19,7 +19,7 @@ export default function ServicesPage() {
         path="/services"
       />
 
-      <main className="min-h-screen overflow-hidden">
+      <main className="min-h-screen overflow-hidden dark:bg-slate-900">
         <ServicesHeader />
         <CoreServices />
         <WhatWeBuild />

@@ -51,8 +51,8 @@ export default function UiPacksTab({
               onClick={() => setActiveCategory(category)}
               className={`px-4 py-2 rounded-lg text-xs font-semibold border transition-all duration-200 cursor-pointer ${
                 activeCategory === category
-                  ? "bg-slate-900 text-white border-slate-900 shadow-sm"
-                  : "bg-white text-slate-600 border-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                  ? "bg-blue-600 text-white shadow-md shadow-blue-600/20"
+                  : "border border-slate-200 bg-white text-slate-600 hover:border-blue-300 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-blue-500/50 dark:hover:text-blue-400"
               }`}>
               {category}
             </motion.button>
@@ -81,7 +81,7 @@ export default function UiPacksTab({
         </div>
       ) : (
         /* UI Packs Grid */
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4">
           {componentsData.map((pack, index) => (
             <motion.article
               key={pack.id}
@@ -92,7 +92,7 @@ export default function UiPacksTab({
                 duration: 0.45,
                 delay: shouldReduceMotion ? 0 : (index % 2) * 0.08,
               }}
-              className="group bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300 flex flex-col justify-between">
+              className="group bg-white/80 dark:bg-slate-400 border-2 border-slate-300/40 dark:border-slate-700 rounded-tr-3xl rounded-bl-3xl p-6 sm:p-8 flex flex-col hover:border-blue-200 hover:shadow-md hover:shadow-slate-200/50 transition-all duration-300">
               {/* Pack Information */}
               <div>
                 <div className="flex flex-wrap justify-between items-center gap-3">
@@ -111,7 +111,7 @@ export default function UiPacksTab({
                   {pack.title}
                 </h3>
 
-                <p className="text-sm text-slate-500 mt-2 leading-relaxed">
+                <p className="text-sm text-slate-700 leading-tight px-2 mt-3">
                   {pack.description}
                 </p>
 

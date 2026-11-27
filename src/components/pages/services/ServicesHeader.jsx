@@ -7,7 +7,7 @@ export default function ServicesHeader() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative px-5 sm:px-8 lg:px-12 pt-20 sm:pt-32 pb-8 sm:pb-10 bg-white dark:bg-slate-950">
+    <section className="relative px-5 sm:px-8 lg:px-12 pt-20 sm:pt-36 pb-8 sm:pb-10 bg-white dark:bg-slate-950 rounded-b-3xl">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-end">
           <motion.div

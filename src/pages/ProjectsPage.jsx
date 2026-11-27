@@ -24,7 +24,7 @@ export default function ProjectsPage() {
         path="/projects"
       />
       
-      <main className="min-h-screen overflow-hidden bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-white">
+      <main className="min-h-screen overflow-hidden bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-900 dark:text-white">
         <ProjectsHeader />
 
         <section className="mx-auto max-w-7xl">

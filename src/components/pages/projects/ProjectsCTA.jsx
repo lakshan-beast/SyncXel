@@ -6,7 +6,7 @@ export default function ProjectsCTA() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="bg-white px-5 py-24 dark:bg-slate-950 sm:px-8 lg:px-10">
+    <section className="bg-white px-5 py-4 dark:bg-slate-950 sm:px-8 lg:px-10">
       <motion.div
         initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}

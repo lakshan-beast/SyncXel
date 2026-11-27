@@ -106,7 +106,7 @@ export default function ProjectCard({ project, index = 0 }) {
           {project.category === "Personal Projects" && (
             <Link
               to={`/projects/${project.id}`}
-              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-blue-300 hover:text-blue-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-500/50 dark:hover:text-blue-400">
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-blue-300 hover:text-blue-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-500/50 dark:hover:text-blue-400  ">
               <HiOutlineBookOpen />
               Case Study
             </Link>

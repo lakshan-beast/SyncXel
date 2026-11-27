@@ -22,7 +22,7 @@ export default function ProjectsGrid({ projects }) {
   return (
     <motion.div
       layout
-      className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+      className="grid grid-cols-1 gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-3 mb-6">
       {projects.map((project, index) => (
         <ProjectCard key={project.id} project={project} index={index} />
       ))}

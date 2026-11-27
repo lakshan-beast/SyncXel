@@ -18,20 +18,20 @@ export default function TemplatesPage() {
   }, [activeCategory]);
 
   return (
-    <main className="min-h-screen">
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 mt-14">
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-900">
+      <section className="px-5 sm:px-8 lg:px-12 py-16 sm:py-32">
         <div className="max-w-7xl mx-auto">
           {/* Page Header */}
           <div className="max-w-3xl mb-10">
-            <span className="font-mono text-xs tracking-wider text-blue-600">
-              // complete_website_templates
+            <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
+              complete website templates
             </span>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 mt-3">
+            <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
               Website Templates
             </h1>
 
-            <p className="text-sm sm:text-base text-slate-500 leading-relaxed mt-4">
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-tight mt-4">
               Ready-to-use website templates built with modern technologies.
               Explore live demos, discover what's included, and find a starting
               point for your next project.

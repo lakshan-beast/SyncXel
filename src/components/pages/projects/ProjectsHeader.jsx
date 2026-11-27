@@ -6,7 +6,7 @@ export default function ProjectsHeader() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative px-5 sm:px-8 lg:px-12 pt-20 sm:pt-32 pb-8 sm:pb-10 bg-white dark:bg-slate-950">
+    <section className="relative px-5 sm:px-8 lg:px-12 pt-20 sm:pt-36 pb-8 sm:pb-10 bg-white dark:bg-slate-950 rounded-b-3xl">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-end">
           <motion.div
@@ -21,11 +21,11 @@ export default function ProjectsHeader() {
             </span>
 
             <motion.h1
-                          initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.6 }}
-                          className="mt-3 text-4xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white sm:text-6xl">
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mt-3 text-4xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white sm:text-6xl">
               Ideas turned into
               <span className="block text-blue-800 dark:text-blue-700">
                 digital experiences.
