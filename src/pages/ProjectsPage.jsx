@@ -23,11 +23,11 @@ export default function ProjectsPage() {
         description="Explore projects built by SyncXel, featuring modern web interfaces, creative frontend development, responsive designs and interactive experiences."
         path="/projects"
       />
-      ;
+      
       <main className="min-h-screen overflow-hidden bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-white">
         <ProjectsHeader />
 
-        <section className="mx-auto max-w-7xl px-5 pb-24 pt-12 sm:px-8 lg:px-10">
+        <section className="mx-auto max-w-7xl">
           <ProjectsFilters
             activeCategory={activeCategory}
             setActiveCategory={setActiveCategory}

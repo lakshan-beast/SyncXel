@@ -115,7 +115,7 @@ export default function LegalPage() {
         description="Read SyncXel's terms of service, privacy policy, product policies and other important legal information."
         path="/legal"
       />
-      ;
+      
       <main className="relative overflow-hidden bg-white py-20 dark:bg-slate-950 mt-10">
         {/* Background decoration */}
         <div className="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-blue-500/5 blur-3xl" />

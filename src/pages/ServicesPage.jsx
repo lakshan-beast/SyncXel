@@ -18,7 +18,7 @@ export default function ServicesPage() {
         description="Explore SyncXel web design and development services, including modern website interfaces, responsive layouts and custom frontend solutions."
         path="/services"
       />
-      ;
+
       <main className="min-h-screen overflow-hidden">
         <ServicesHeader />
         <CoreServices />
