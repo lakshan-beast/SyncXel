@@ -45,22 +45,22 @@ export default function ServicesFAQ() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="px-5 sm:px-8 lg:px-12 py-16 sm:py-24">
+    <section className="px-5 sm:px-8 lg:px-12 py-16 sm:py-24 bg-white dark:bg-slate-950">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-20">
         <div>
-          <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] text-blue-600 uppercase">
-            <HiOutlineQuestionMarkCircle className="w-4 h-4" />
+          <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
+            {/* <HiOutlineQuestionMarkCircle className="w-4 h-4" /> */}
             Frequently Asked Questions
           </span>
 
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mt-4">
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
             Got questions?
-            <span className="block text-slate-400 mt-1">
+            <span className="text-blue-700 dark:text-blue-800 block">
               We've got answers.
             </span>
           </h2>
 
-          <p className="text-sm text-slate-500 leading-relaxed mt-5 max-w-sm">
+          <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-tight mt-4">
             Here are some common questions about our services and
             the project development process.
           </p>
@@ -73,7 +73,7 @@ export default function ServicesFAQ() {
           </a>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-2">
           {faqItems.map((item, index) => {
             const isOpen = activeIndex === index;
 
@@ -82,8 +82,8 @@ export default function ServicesFAQ() {
                 key={item.question}
                 className={`border rounded-xl overflow-hidden transition-colors ${
                   isOpen
-                    ? "border-blue-200 bg-blue-50/30"
-                    : "border-slate-200 bg-white"
+                    ? "border-blue-200 dark:border-slate-800 bg-blue-50/30 dark:bg-slate-900"
+                    : "border-slate-200/50 bg-white/30 dark:bg-slate-800/20 dark:border-slate-800"
                 }`}
               >
                 <button
@@ -94,7 +94,7 @@ export default function ServicesFAQ() {
                   aria-expanded={isOpen}
                   className="w-full flex items-center justify-between gap-4 text-left p-5 sm:p-6"
                 >
-                  <span className="text-sm sm:text-base font-semibold text-slate-800">
+                  <span className="text-sm sm:text-base leading-tight font-semibold text-slate-800 dark:text-slate-300">
                     {item.question}
                   </span>
 
@@ -120,7 +120,7 @@ export default function ServicesFAQ() {
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <p className="px-5 sm:px-6 pb-6 text-sm text-slate-500 leading-relaxed">
+                      <p className="px-5 sm:px-7 pb-6 text-sm text-slate-500 dark:text-slate-300/70 leading-tight">
                         {item.answer}
                       </p>
                     </motion.div>

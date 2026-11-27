@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { HiOutlineCode, HiOutlineLightningBolt } from "react-icons/hi";
@@ -42,41 +41,41 @@ export default function ServicesTechStack() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="px-5 sm:px-8 lg:px-12 py-16 sm:py-24">
+    <section className="px-5 sm:px-8 lg:px-12 py-16 sm:py-24 bg-white dark:bg-slate-950">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
-            <span className="text-[11px] font-bold tracking-[0.18em] text-blue-600 uppercase">
+            <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
               Our Technology Stack
             </span>
 
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mt-4">
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
               Modern tools.
-              <span className="block text-slate-400 mt-1">
+              <span className="text-blue-700 dark:text-blue-800 block">
                 Thoughtful implementation.
               </span>
             </h2>
 
-            <p className="text-sm sm:text-base text-slate-500 leading-relaxed mt-5">
-              We use modern frontend technologies and development tools
-              to create responsive interfaces, maintainable components
-              and engaging digital experiences.
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-tight mt-4">
+              We use modern frontend technologies and development tools to
+              create responsive interfaces, maintainable components and engaging
+              digital experiences.
             </p>
 
             <div className="flex flex-wrap gap-3 mt-8">
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-600 bg-slate-50 border border-slate-200 rounded-lg px-3 py-2">
+              <div className="flex items-center gap-2 text-xs font-semibold text-slate-600 bg-slate-50 dark:bg-slate-800 dark:text-slate-200/70 dark:border-slate-600 border border-slate-200 rounded-lg px-5 py-2">
                 <HiOutlineCode className="w-4 h-4 text-blue-600" />
                 Modern Frontend
               </div>
 
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-600 bg-slate-50 border border-slate-200 rounded-lg px-3 py-2">
+              <div className="flex items-center gap-2 text-xs font-semibold text-slate-600 bg-slate-50 dark:bg-slate-800 dark:text-slate-200/70 dark:border-slate-600 border border-slate-200 rounded-lg px-5 py-2">
                 <HiOutlineLightningBolt className="w-4 h-4 text-blue-600" />
                 Interactive UI
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.name}
@@ -89,13 +88,12 @@ export default function ServicesTechStack() {
                   duration: 0.4,
                   delay: shouldReduceMotion ? 0 : index * 0.05,
                 }}
-                className="min-h-[112px] p-4 bg-white border border-slate-200 rounded-xl flex flex-col justify-between hover:border-blue-200 hover:bg-blue-50/30 transition-colors"
-              >
-                <span className="text-sm font-bold text-slate-800">
+                className="min-h-[112px] py-3 px-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl flex flex-col justify-between transition-colors">
+                <span className="text-sm font-bold text-slate-800 dark:text-slate-300">
                   {tech.name}
                 </span>
 
-                <span className="text-[10px] font-medium uppercase tracking-wider text-slate-400">
+                <span className="text-[10px] font-medium uppercase tracking-wider text-slate-400/60 text-center">
                   {tech.type}
                 </span>
               </motion.div>
