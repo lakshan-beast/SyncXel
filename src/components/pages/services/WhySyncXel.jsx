@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
@@ -39,21 +38,21 @@ export default function WhySyncXel() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="px-5 sm:px-8 lg:px-12 py-16 sm:py-24 bg-slate-950 relative overflow-hidden">
+    <section className="px-5 sm:px-8 lg:px-12 py-16 sm:py-24  bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
       <div className="absolute -top-32 -right-32 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">
         <div className="max-w-2xl mb-12">
-          <span className="text-[11px] font-bold tracking-[0.18em] text-blue-400 uppercase">
+          <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
             The SyncXel Approach
           </span>
 
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-4">
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
             More than just
-            <span className="text-blue-400"> building websites.</span>
+            <span className="text-blue-700 dark:text-blue-800 block"> building websites.</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-400 leading-relaxed mt-4">
+          <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-tight mt-4">
             We focus on creating digital experiences that are practical,
             visually consistent and aligned with the purpose of each project.
           </p>
@@ -66,28 +65,27 @@ export default function WhySyncXel() {
             return (
               <motion.article
                 key={benefit.title}
-                initial={
-                  shouldReduceMotion ? false : { opacity: 0, y: 20 }
-                }
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{
                   duration: 0.5,
                   delay: shouldReduceMotion ? 0 : index * 0.08,
                 }}
-                className="p-6 rounded-2xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.07] hover:border-blue-400/30 transition-all duration-300"
-              >
-                <div className="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-400/20 text-blue-400 flex items-center justify-center">
+                className="relative group bg-white dark:bg-slate-800 border-2 border-slate-300/40 dark:border-slate-700 rounded-tr-3xl rounded-bl-3xl p-6 sm:p-8 flex flex-col hover:border-blue-200/30 hover:dark:border-slate-700/30 hover:shadow-sm hover:shadow-slate-200/50 transition-all duration-300">
+                <div className="relative z-10 w-14 h-14 rounded-2xl  shadow-sm flex items-center justify-center bg-blue-900 text-blue-300">
                   <Icon className="w-5 h-5" />
                 </div>
 
-                <h3 className="text-base font-bold text-white mt-6">
-                  {benefit.title}
-                </h3>
+                <div className="flex-col justify-between min-h-12">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-200 mt-3">
+                    {benefit.title}
+                  </h3>
 
-                <p className="text-sm text-slate-400 leading-relaxed mt-3">
-                  {benefit.description}
-                </p>
+                  <p className="text-sm text-slate-400 leading-tight mt-5">
+                    {benefit.description}
+                  </p>
+                </div>
               </motion.article>
             );
           })}

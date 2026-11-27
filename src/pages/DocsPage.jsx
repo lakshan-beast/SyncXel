@@ -87,7 +87,7 @@ export default function DocsPage() {
         description="Explore SyncXel documentation and practical developer guides to install, customize and integrate UI components, UI packs and website templates into your projects."
         path="/docs"
       />
-      ;
+      
       <main className="min-h-screen bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-white mt-20">
         <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
           <div className="flex min-h-[calc(100vh-80px)] gap-0">

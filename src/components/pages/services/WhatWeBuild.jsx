@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
@@ -8,11 +7,9 @@ import {
   HiOutlineViewGrid,
   HiOutlineCalendar,
   HiOutlineChartBar,
-//   HiArrowUpRight,
+  //   HiArrowUpRight,
 } from "react-icons/hi";
-import {
-  HiArrowUpRight,
-} from "react-icons/hi2";
+import { HiArrowUpRight } from "react-icons/hi2";
 
 const projectTypes = [
   {
@@ -63,62 +60,63 @@ export default function WhatWeBuild() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="px-5 sm:px-8 lg:px-12 py-16 sm:py-24">
+    <section className="px-5 sm:px-8 lg:px-12 py-16 sm:py-24 bg-white dark:bg-slate-950">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
-            <span className="text-[11px] font-bold tracking-[0.18em] text-blue-600 uppercase">
+            <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
               Project Possibilities
             </span>
 
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mt-4">
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
               Ideas we can
-              <span className="text-blue-600"> bring to life.</span>
+              <span className="text-blue-700 dark:text-blue-800 block">
+                {" "}
+                bring to life.
+              </span>
             </h2>
 
-            <p className="text-sm sm:text-base text-slate-500 leading-relaxed mt-4">
-              Whether you're starting a new business or improving an
-              existing digital presence, we can help shape the right
-              frontend experience.
+            <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-tight mt-4">
+              Whether you're starting a new business or improving an existing
+              digital presence, we can help shape the right frontend experience.
             </p>
           </div>
 
-          <span className="text-xs font-mono text-slate-400">
+          <span className="text-sm sm:text-base font-mono text-slate-500 dark:text-slate-400 leading-tight mt-4">
             // project_types_01 — 06
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-200 rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-50 dark:border-slate-800/20 rounded-2xl overflow-hidden max-w-7xl mx-auto gap-3">
           {projectTypes.map((item, index) => {
             const Icon = item.icon;
 
             return (
               <motion.div
                 key={item.number}
-                initial={
-                  shouldReduceMotion ? false : { opacity: 0, y: 16 }
-                }
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{
                   duration: 0.45,
                   delay: shouldReduceMotion ? 0 : (index % 3) * 0.08,
                 }}
-                className="group min-h-[220px] p-6 sm:p-8 border-r border-b border-slate-200 hover:bg-slate-50 transition-colors duration-300"
-              >
+                className="group min-h-55 p-6 sm:py-6 sm:px-8 border-r-2 border-b-2 border-r-slate-200/50 border-b-slate-200/50 hover:bg-slate-200/30 transition-colors duration-300 dark:border-r-slate-900/50 dark:border-b-slate-900/50 shadow-md rounded-md">
                 <div className="flex items-center justify-between">
-                  <Icon className="w-6 h-6 text-blue-600" />
+                  <div className="relative z-10 w-10 h-10 rounded-xl  shadow-sm flex items-center justify-center bg-blue-900 text-blue-300 ">
+                    <Icon className="w-6 h-6" />
+                  </div>
 
-                  <span className="text-[10px] font-mono text-slate-300">
+                  <span className="text-[10px] uppercase tracking-wider font-bold text-blue-600 mt-3">
                     {item.number}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-900 mt-7">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-600 dark:text-slate-400 mt-3">
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-slate-500 leading-relaxed mt-2">
+                <p className="text-sm text-slate-400 leading-tight mt-3 px-1">
                   {item.description}
                 </p>
 

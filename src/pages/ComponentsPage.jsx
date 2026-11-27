@@ -316,7 +316,7 @@ export default function ComponentsPage() {
         description="Explore free, customizable React UI components including buttons, cards, inputs, loaders, toggles and more. Preview, test and copy code directly from SyncXel."
         path="/components"
       />
-      ;
+      
       <main className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-white">
         <HubHeader />
 
