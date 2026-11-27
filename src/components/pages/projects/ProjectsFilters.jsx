@@ -7,17 +7,17 @@ export default function ProjectsFilters({
   totalProjects,
 }) {
   return (
-    <div className="mb-10 flex flex-col gap-6 border-b border-slate-200 pb-7 dark:border-slate-800 lg:flex-row lg:items-center lg:justify-between">
+    <div className="mb-10 py-6 flex flex-col gap-6 border-b border-t border-slate-200 pb-7 dark:border-slate-800 lg:flex-row lg:items-center lg:justify-between">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
+        <p className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
           Explore Our Work
         </p>
 
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
           Projects & Experiments
         </h2>
 
-        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+        <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 leading-tight mt-4">
           {totalProjects} projects in this collection
         </p>
       </div>

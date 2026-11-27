@@ -326,7 +326,7 @@ export default function CaseStudyPage() {
         <section className="relative overflow-hidden border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
           <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
 
-          <div className="relative mx-auto max-w-5xl px-5 py-20 sm:px-8 sm:py-28">
+          <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
             <Link
               to="/projects"
               className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400">
@@ -351,11 +351,11 @@ export default function CaseStudyPage() {
                 {project.title}
               </h1>
 
-              <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg dark:text-slate-400">
+              <p className="mt-4 max-w-3xl text-base leading-tight text-slate-600 sm:text-lg dark:text-slate-400">
                 {project.description}
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
@@ -370,7 +370,7 @@ export default function CaseStudyPage() {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-9 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-blue-700">
+                  className="mt-7 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-blue-700">
                   Visit Live Project
                   <HiArrowUpRight />
                 </a>
@@ -383,7 +383,7 @@ export default function CaseStudyPage() {
         <section className="mx-auto max-w-5xl px-5 py-20 sm:px-8">
           <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:gap-16">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
+              <p className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
                 Project Overview
               </p>
               <h2 className="mt-3 text-2xl font-bold text-slate-900 dark:text-white">
@@ -391,7 +391,7 @@ export default function CaseStudyPage() {
               </h2>
             </div>
 
-            <p className="text-base leading-8 text-slate-600 dark:text-slate-400">
+            <p className="text-base leading-tight text-slate-600 dark:text-slate-400">
               {study.overview}
             </p>
           </div>
@@ -416,7 +416,7 @@ export default function CaseStudyPage() {
                   <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
                     {section.title}
                   </h2>
-                  <p className="mt-4 text-base leading-8 text-slate-600 dark:text-slate-400">
+                  <p className="mt-4 text-base leading-tight text-slate-600 dark:text-slate-400">
                     {section.content}
                   </p>
                 </div>
@@ -426,10 +426,10 @@ export default function CaseStudyPage() {
         </section>
 
         {/* Key Features */}
-        <section className="mx-auto max-w-5xl px-5 py-20 sm:px-8">
+        <section className="mx-auto max-w-5xl py-12">
           <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:gap-16">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
+              <p className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
                 What It Includes
               </p>
               <h2 className="mt-3 text-2xl font-bold text-slate-900 dark:text-white">
@@ -437,7 +437,7 @@ export default function CaseStudyPage() {
               </h2>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-1.5">
               {study.features.map((feature) => (
                 <div key={feature} className="flex items-start gap-3">
                   <HiOutlineCheckCircle className="mt-1 shrink-0 text-xl text-blue-600 dark:text-blue-400" />
@@ -451,10 +451,10 @@ export default function CaseStudyPage() {
         </section>
 
         {/* Bottom CTA */}
-        <section className="border-t border-slate-200 bg-white px-5 py-16 dark:border-slate-800 dark:bg-slate-950 sm:px-8">
+        <section className="border-t border-slate-200 bg-white px-5 py-6 dark:border-slate-800 dark:bg-slate-950 sm:px-8">
           <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
             <div>
-              <div className="flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400">
+              <div className="flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
                 <HiOutlineLightBulb />
                 Explore More
               </div>
