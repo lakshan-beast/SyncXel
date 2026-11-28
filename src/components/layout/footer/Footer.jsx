@@ -438,7 +438,6 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
-
 import {
   HiArrowRight,
   HiArrowUpRight,
@@ -446,7 +445,6 @@ import {
   HiEnvelope,
   HiMapPin,
 } from "react-icons/hi2";
-
 import {
   FaGithub,
   FaWhatsapp,
@@ -456,7 +454,6 @@ import {
   FaJs,
   FaFigma,
 } from "react-icons/fa";
-
 import {
   SiTailwindcss,
   SiTypescript,
@@ -465,10 +462,6 @@ import {
   SiVite,
   SiVercel,
 } from "react-icons/si";
-
-// ----------------------------------
-// Navigation data
-// ----------------------------------
 
 const platformLinks = [
   { label: "Free Components", href: "/components" },
@@ -487,7 +480,7 @@ const serviceLinks = [
 const exploreLinks = [
   { label: "About SyncXel", href: "/#team" },
   { label: "Our Projects", href: "/#team" },
-  { label: "How We Work", href: "/#how-it-works" },
+  { label: "How We Work", href: "/#workflow" },
   { label: "Frequently Asked Questions", href: "/#faq" },
 ];
 
@@ -584,13 +577,9 @@ const socialLinks = [
   },
 ];
 
-// ----------------------------------
-// Reusable components
-// ----------------------------------
-
 function FooterLink({ href, children }) {
   const className =
-    "group inline-flex w-fit items-center gap-1.5 text-[13px] text-slate-500 transition-colors duration-200 hover:text-blue-600";
+    "group inline-flex w-fit items-center gap-1.5 text-[13px] text-slate-400 transition-colors duration-200 hover:text-emerald-400";
 
   if (href.startsWith("http") || href.startsWith("mailto:")) {
     return (
@@ -600,7 +589,6 @@ function FooterLink({ href, children }) {
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noopener noreferrer" : undefined}>
         {children}
-
         {href.startsWith("http") && (
           <HiArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
         )}
@@ -626,11 +614,11 @@ function FooterLink({ href, children }) {
 function FooterColumn({ title, links }) {
   return (
     <div>
-      <h3 className="mb-5 text-[11px] font-bold uppercase tracking-[0.16em] text-slate-900">
+      <h3 className="mb-4 text-[11px] font-bold uppercase tracking-[0.16em] text-white">
         {title}
       </h3>
 
-      <ul className="flex flex-col gap-3">
+      <ul className="flex flex-col gap-2 pl-1">
         {links.map((link) => (
           <li key={link.label}>
             <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -641,7 +629,7 @@ function FooterColumn({ title, links }) {
   );
 }
 
-function TechnologyItem({ technology }) {
+function TechnologyCard({ technology }) {
   const Icon = technology.icon;
 
   return (
@@ -649,22 +637,24 @@ function TechnologyItem({ technology }) {
       href={technology.url}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Visit official ${technology.name} website`}
-      className="group flex items-center gap-2.5 rounded-lg border border-slate-200/80 bg-white px-3 py-2.5 transition-all duration-200 hover:border-slate-300 hover:bg-slate-50">
-      <Icon className="h-4 w-4 shrink-0 text-slate-500 transition-colors group-hover:text-blue-600" />
+      className="group flex items-center gap-3 rounded-xl border border-white/[0.07] bg-[#101a2c] p-3 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/25 hover:bg-[#142238]"
+      aria-label={`Visit official ${technology.name} website`}>
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/[0.05] text-slate-300 transition-all duration-300 group-hover:bg-emerald-400 group-hover:text-[#080f1e]">
+        <Icon aria-hidden="true" focusable="false" className="h-4.75 w-4.75" />
+      </div>
 
-      <span className="truncate text-[11px] font-medium text-slate-600 transition-colors group-hover:text-slate-950">
-        {technology.name}
-      </span>
+      <div className="min-w-0 flex-1">
+        <p className="truncate text-xs font-semibold text-slate-200">
+          {technology.name}
+        </p>
 
-      <HiArrowUpRight className="ml-auto h-3 w-3 shrink-0 text-slate-300 opacity-0 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
+        <p className="text-[10px] text-slate-500">{technology.category}</p>
+      </div>
+
+      <HiArrowUpRight className="h-3.5 w-3.5 shrink-0 text-emerald-400 opacity-0 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
     </a>
   );
 }
-
-// ----------------------------------
-// Main Footer
-// ----------------------------------
 
 export default function Footer() {
   const shouldReduceMotion = useReducedMotion();
@@ -672,99 +662,114 @@ export default function Footer() {
   const reveal = shouldReduceMotion
     ? {}
     : {
-        initial: { opacity: 0, y: 16 },
+        initial: { opacity: 0, y: 18 },
         whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true, amount: 0.12 },
-        transition: { duration: 0.45, ease: "easeOut" },
+        viewport: { once: true, amount: 0.15 },
+        transition: { duration: 0.55, ease: "easeOut" },
       };
 
   return (
     <footer
       id="footer"
-      className="relative overflow-hidden border-t border-slate-200 bg-[#f8fafc] text-slate-900">
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+      className="relative overflow-hidden rounded-2xl border-t border-white/[0.08] bg-[#080f1e] text-white">
+      {/* Background atmosphere */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -right-60 top-0 h-[450px] w-[450px] rounded-full bg-emerald-400/[0.05] blur-[130px]" />
+
+        <div className="absolute -left-40 bottom-0 h-[350px] w-[350px] rounded-full bg-slate-400/[0.04] blur-[120px]" />
+
+        <div
+          className="absolute inset-0 opacity-[0.025]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(148,163,184,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.2) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-full px-5 sm:px-8 lg:px-10">
         {/* CTA Section */}
+        <motion.div
+          {...reveal}
+          className="relative mx-auto max-w-5xl overflow-hidden border-b border-white/[0.08] py-16 sm:py-18">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border border-emerald-400/[0.08]"
+          />
 
-        <motion.div {...reveal} className="py-14 sm:py-16">
-          <div className="relative overflow-hidden rounded-2xl bg-slate-950 px-6 py-10 sm:px-10 sm:py-12 lg:px-14 lg:py-14">
-            {/* Decorative elements */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-8 -top-8 h-48 w-48 rounded-full border border-emerald-400/[0.08]"
+          />
 
-            <div className="pointer-events-none absolute -right-20 -top-32 h-80 w-80 rounded-full border border-white/[0.08]" />
+          <div className="relative flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl">
+              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-emerald-400/70">
+                // let's build something meaningful
+              </p>
 
-            <div className="pointer-events-none absolute -right-5 -top-16 h-56 w-56 rounded-full border border-white/[0.08]" />
+              <h2 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-[-0.06em] text-white sm:text-5xl lg:text-6xl">
+                Have an idea?
+                <span className="mt-1 block bg-gradient-to-r from-slate-400 via-white to-slate-500 bg-clip-text text-transparent">
+                  Let's make it real.
+                </span>
+              </h2>
 
-            <div className="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-blue-500/10 blur-[90px]" />
+              <p className="mt-5 max-w-xl text-sm leading-relaxed text-slate-400">
+                From developer resources to custom digital experiences, let's
+                turn your next idea into something worth building.
+              </p>
+            </div>
 
-            <div className="relative flex flex-col gap-9 lg:flex-row lg:items-end lg:justify-between">
-              <div className="max-w-2xl">
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-blue-300">
-                  // let's build something meaningful
-                </p>
+            <div className="flex flex-col gap-2 sm:flex-row lg:shrink-0">
+              <a
+                href="/#contact-section"
+                className="group inline-flex items-center justify-center gap-3 rounded-xl bg-emerald-400 px-6 py-4 text-sm font-semibold text-[#080f1e] transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-300">
+                Start a Project
+                <HiArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
 
-                <h2 className="mt-5 text-3xl font-semibold leading-[1.1] tracking-[-0.055em] text-white sm:text-4xl lg:text-5xl">
-                  Have an idea?
-                  <span className="mt-1 block text-slate-400">
-                    Let's make it real.
-                  </span>
-                </h2>
-
-                <p className="mt-5 max-w-lg text-sm leading-6 text-slate-400">
-                  From developer resources to custom digital experiences, let's
-                  turn your next idea into something worth building.
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0">
-                <a
-                  href="/#contact-section"
-                  className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-50">
-                  Start a Project
-                  <HiArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                </a>
-
-                <Link
-                  to="/components"
-                  className="inline-flex min-h-12 items-center justify-center gap-3 rounded-xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.06]">
-                  Explore Resources
-                  <HiArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
+              <Link
+                to="/components"
+                className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/10 bg-[#101a2c] px-6 py-4 text-sm font-semibold text-slate-200 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/25 hover:bg-[#142238]">
+                Explore Resources
+                <HiArrowRight className="h-4 w-4 text-emerald-400" />
+              </Link>
             </div>
           </div>
         </motion.div>
 
-        {/* Main Footer Content */}
-
+        {/* Main Footer Navigation */}
         <motion.div
           {...reveal}
-          className="grid gap-12 border-b border-slate-200 py-12 lg:grid-cols-[1.15fr_2fr] lg:gap-16">
+          className="mx-auto grid max-w-7xl gap-14 py-16 lg:grid-cols-[1.25fr_2fr]">
           {/* Brand */}
-
           <div>
             <Link to="/" className="inline-flex items-center gap-3">
               <img
                 src="/logo.webp"
                 alt="SyncXel"
-                className="h-11 w-11 rounded-full border border-slate-200 object-cover"
+                className="h-11 w-12 rounded-full border border-white/10 object-cover p-0.5"
               />
 
               <div>
-                <span className="block text-xl font-bold tracking-tight text-slate-950">
+                <span className="block text-2xl font-bold tracking-tight text-white">
                   SyncXel
                 </span>
 
-                <span className="mt-0.5 block font-mono text-[9px] tracking-[0.2em] text-slate-400">
+                <span className="mt-0 block font-mono text-[9px] tracking-[0.2em] text-slate-500">
                   DIGITAL EXPERIENCES
                 </span>
               </div>
             </Link>
 
-            <p className="mt-5 max-w-xs text-[13px] leading-6 text-slate-500">
+            <p className="mt-6 max-w-xs text-sm leading-relaxed text-slate-400">
               Building thoughtful digital experiences, useful developer
               resources, and modern web solutions.
             </p>
-
-            {/* Social Links */}
 
             <div className="mt-6 flex flex-wrap gap-2">
               {socialLinks.map((social) => {
@@ -783,110 +788,101 @@ export default function Footer() {
                         : undefined
                     }
                     aria-label={social.label}
-                    className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-[11px] font-medium text-slate-600 transition-all duration-200 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950">
-                    <Icon className="h-3.5 w-3.5" />
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/[0.08] bg-[#101a2c] px-3 py-2.5 text-[11px] font-medium text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400/30 hover:text-emerald-400">
+                    <Icon
+                      aria-hidden="true"
+                      focusable="false"
+                      className="h-3.5 w-3.5"
+                    />
                     {social.label}
                   </a>
                 );
               })}
             </div>
 
-            <div className="mt-7 flex items-center gap-2 text-xs text-slate-400">
-              <HiMapPin className="h-4 w-4" />
+            <div className="mt-8 flex items-center gap-2 text-xs text-slate-500">
+              <HiMapPin className="h-4 w-4 text-emerald-400" />
               Sri Lanka
             </div>
           </div>
 
-          {/* Navigation */}
-
-          <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 sm:gap-x-8">
+          {/* Navigation Columns */}
+          <div className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3">
             <FooterColumn title="Platform" links={platformLinks} />
-
             <FooterColumn title="Services" links={serviceLinks} />
-
             <FooterColumn title="Explore" links={exploreLinks} />
           </div>
         </motion.div>
 
-        {/* Technology Stack */}
-
-        <motion.div {...reveal} className="border-b border-slate-200 py-11">
+        {/* Technology Resources */}
+        <motion.div
+          {...reveal}
+          className="mx-auto max-w-7xl border-y border-white/[0.08] py-12">
           <div className="mb-7 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-blue-600">
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-400/60">
                 // technology_stack_and_resources
               </p>
 
-              <h2 className="mt-2 text-xl font-semibold tracking-tight text-slate-900">
-                Technologies we work with
+              <h2 className="mt-3 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                Tech Stack & Resources
               </h2>
 
-              <p className="mt-2 max-w-md text-xs leading-5 text-slate-500">
-                A selection of technologies and tools used to create modern
-                digital experiences.
+              <p className="mt-2 text-xs leading-6 text-slate-400">
+                Technologies and tools behind modern digital experiences.
               </p>
             </div>
 
-            <span className="text-[10px] text-slate-400">
-              Official technology websites
+            <span className="text-[10px] text-slate-500">
+              External links · Official websites
             </span>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             {technologies.map((technology) => (
-              <TechnologyItem key={technology.name} technology={technology} />
+              <TechnologyCard key={technology.name} technology={technology} />
             ))}
           </div>
         </motion.div>
 
         {/* Bottom Bar */}
-
-        <div className="flex flex-col items-center justify-between gap-5 py-7 sm:flex-row">
-          <p className="text-center text-[11px] text-slate-400 sm:text-left">
-            © {new Date().getFullYear()}{" "}
-            <span className="font-medium text-slate-600">
-              SyncXel Web Solutions
-            </span>
-            . All rights reserved.
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 border-t border-white/[0.08] py-8 sm:flex-row sm:justify-between">
+          <p className="text-center text-[11px] text-slate-500 sm:text-left">
+            Copyright © {new Date().getFullYear()}{" "}
+            <span className="text-slate-300">SyncXel Web Solutions</span>. All
+            rights reserved.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
             <Link
               to="/legal"
-              className="text-[11px] text-slate-400 transition-colors hover:text-slate-900">
+              className="text-[11px] text-slate-500 transition-colors hover:text-emerald-400">
               Privacy & Terms
             </Link>
 
             <a
               href="mailto:syncxelofficial@gmail.com"
-              className="text-[11px] text-slate-400 transition-colors hover:text-slate-900">
+              className="text-[11px] text-slate-500 transition-colors hover:text-emerald-400">
               Contact Us
             </a>
           </div>
 
           <button
             type="button"
-            onClick={() =>
-              window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-              })
-            }
-            className="group inline-flex items-center gap-2 text-[11px] font-medium text-slate-500 transition-colors hover:text-blue-600">
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="group inline-flex items-center gap-2 text-[11px] font-medium text-slate-400 transition-colors hover:text-emerald-400">
             Back to top
             <HiArrowUp className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-1" />
           </button>
         </div>
 
         {/* Brand Statement */}
-
-        <div className="relative overflow-hidden pb-7 pt-4">
-          <p className="pointer-events-none select-none text-center text-[clamp(3.5rem,13vw,11rem)] font-bold leading-[0.85] tracking-[-0.07em] text-slate-200/80">
-            SYNCXEL
-            <span className="text-blue-500">.</span>
+        <div className="relative mb-12 overflow-hidden py-4 pt-6 sm:mb-0 sm:py-5">
+          <p className="pointer-events-none select-none bg-gradient-to-b from-slate-700 via-white/20 to-slate-700 bg-clip-text text-center text-[clamp(4rem,13vw,24rem)] font-bold leading-none tracking-[-0.01em] text-transparent">
+            SYNCXEL .
           </p>
 
-          <p className="mt-4 text-center font-mono text-[9px] uppercase tracking-[0.24em] text-slate-400">
+          <p className="mt-1 text-center font-mono text-[9px] uppercase tracking-[0.28em] text-slate-500">
             Built with creativity. Powered by technology.
           </p>
         </div>
