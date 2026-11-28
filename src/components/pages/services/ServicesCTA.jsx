@@ -8,7 +8,7 @@ export default function ServicesCTA() {
   return (
     <section
       id="services-contact"
-      className="px-5 sm:px-8 lg:px-12 pb-16 sm:py-4 bg-slate-50 dark:bg-slate-900">
+      className="px-5 sm:px-8 lg:px-12 pb-16 py-4 bg-slate-50 dark:bg-slate-900">
       <motion.div
         initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
