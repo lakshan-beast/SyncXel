@@ -282,7 +282,7 @@ function PreviewCard({ item, index, reduceMotion }) {
 
       {/* Live preview area */}
       <div
-        className={`relative flex items-center justify-center overflow-hidden bg-[#f7f8fa] p-6 dark:bg-[#1b1d21] sm:p-8 ${
+        className={`relative flex items-center justify-center overflow-hidden bg-[#f7f8fa] p-6 dark:bg-slate-900 sm:p-8 ${
           isFeatured ? "min-h-67.5 lg:min-h-82.5" : "min-h-57.5"
         }`}>
         <div
@@ -426,7 +426,7 @@ export default function HomeComponentsTeaser() {
         </motion.div>
 
         {/* Bottom CTA */}
-        <div className="mt-10 max-w-3xl mx-auto flex flex-col items-start justify-between gap-5 rounded-3xl border border-black/[0.07] bg-[#f8f9fb] p-7 dark:border-white/10 dark:bg-[#141414] sm:flex-row sm:items-center sm:p-9">
+        <div className="mt-10 max-w-3xl mx-auto flex flex-col items-start justify-between gap-5 rounded-3xl border border-black/[0.07] bg-[#f8f9fb] p-7 dark:border-white/10 dark:bg-slate-900 sm:flex-row sm:items-center sm:p-9">
           <div>
             <p className="text-lg font-semibold tracking-tight">
               Looking for more components?
@@ -438,7 +438,7 @@ export default function HomeComponentsTeaser() {
 
           <Link
             to="/components"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-all hover:gap-3 dark:text-blue-400">
+            className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition-all hover:gap-3 dark:text-blue-400 ">
             Explore the library
             <HiOutlineArrowRight aria-hidden="true"  />
           </Link>

@@ -41,7 +41,7 @@ export default function ComponentsPreviewHeader() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
         className="flex flex-col items-start gap-6 lg:items-end">
-        <p className="max-w-md text-base leading-relaxed text-slate-600 lg:text-right dark:text-slate-400">
+        <p className="max-w-md text-base leading-tight text-slate-600 lg:text-right dark:text-slate-400">
           Explore carefully crafted UI components, test their interactions, and
           find the right building blocks for your next project.
         </p>
