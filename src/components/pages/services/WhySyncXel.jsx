@@ -72,7 +72,7 @@ export default function WhySyncXel() {
                   duration: 0.5,
                   delay: shouldReduceMotion ? 0 : index * 0.08,
                 }}
-                className="relative group bg-white dark:bg-slate-800 border-2 border-slate-300/40 dark:border-slate-700 rounded-tr-3xl rounded-bl-3xl p-6 sm:p-8 flex flex-col hover:border-blue-200/30 hover:dark:border-slate-700/30 hover:shadow-sm hover:shadow-slate-200/50 transition-all duration-300">
+                className="relative group bg-white dark:bg-slate-800 border-2 border-slate-300/40 dark:border-slate-700 rounded-md p-6 sm:p-8 flex flex-col hover:border-blue-200/30 hover:dark:border-slate-700/30 hover:shadow-sm hover:shadow-slate-200/50 transition-all duration-300">
                 <div className="relative z-10 w-14 h-14 rounded-2xl  shadow-sm flex items-center justify-center bg-blue-900 text-blue-300">
                   <Icon className="w-5 h-5" />
                 </div>
