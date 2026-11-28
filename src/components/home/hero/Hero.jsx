@@ -413,20 +413,20 @@ function PreviewVisual() {
           {/* Code panel */}
           <div className="border-b border-slate-200/80 p-5 sm:border-b-0 sm:border-r dark:border-white/10">
             <div className="mb-5 flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-700">
+              <span className="text-[10px] uppercase tracking-[0.18em] text-slate-400">
                 // component.tsx
               </span>
-              <HiCodeBracket className="h-4 w-4 text-slate-700" />
+              <HiCodeBracket className="h-4 w-4 text-slate-400" />
             </div>
 
             <div className="space-y-0.5 font-mono text-[11px] leading-relaxed sm:text-xs">
               <p className="text-violet-500 dark:text-violet-400">
                 import{" "}
-                <span className="text-slate-700">
+                <span className="text-slate-400">
                   {"{"} motion {"}"}
                 </span>
               </p>
-              <p className="pl-3 text-slate-700">
+              <p className="pl-3 text-slate-400">
                 from{" "}
                 <span className="text-emerald-600 dark:text-emerald-400">
                   "framer-motion"
@@ -437,13 +437,13 @@ function PreviewVisual() {
                 export default function
               </p>
               <p className="text-slate-800 dark:text-slate-200">
-                Button<span className="text-slate-700">()</span> {"{"}
+                Button<span className="text-slate-400">()</span> {"{"}
               </p>
               <p className="pl-3 text-slate-700 dark:text-slate-300">
                 return (
               </p>
               <p className="pl-6 text-rose-500 dark:text-rose-400">
-                <span className="text-slate-700">{"<"}</span>motion.button
+                <span className="text-slate-400">{"<"}</span>motion.button
               </p>
               <p className="pl-9 text-slate-400">
                 whileHover
@@ -458,8 +458,8 @@ function PreviewVisual() {
                 </span>
               </p>
               <p className="pl-6 text-rose-500 dark:text-rose-400">
-                <span className="text-slate-700">{"</"}</span>motion.button
-                <span className="text-slate-700">{">"}</span>
+                <span className="text-slate-400">{"</"}</span>motion.button
+                <span className="text-slate-400">{">"}</span>
               </p>
               <p className="pl-3 text-slate-700 dark:text-slate-300">);</p>
               <p className="text-slate-800 dark:text-slate-200">{"}"}</p>
@@ -474,12 +474,12 @@ function PreviewVisual() {
           </div>
 
           {/* Live component preview */}
-          <div className="flex min-h-72.5 flex-col justify-between bg-gradient-to-br from-slate-50 to-white p-5 dark:from-slate-950/90 dark:to-slate-700/30">
+          <div className="flex min-h-72.5 flex-col justify-between bg-gradient-to-br from-slate-50 to-white p-7 dark:from-slate-950/90 dark:to-slate-700/30">
             <div className="flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-slate-700">
+              <span className="text-[10px] uppercase tracking-[0.16em] text-slate-400">
                 Live component
               </span>
-              <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-1 text-[9px] font-medium text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-400">
+              <span className="rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1 text-[10px] font-medium text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-400">
                 Preview
               </span>
             </div>
@@ -490,12 +490,12 @@ function PreviewVisual() {
                   <p className="text-sm font-semibold text-slate-900 dark:text-white">
                     Build something great.
                   </p>
-                  <p className="mt-1 text-[10px] text-slate-700 leading-tight">
+                  <p className="mt-1 text-[11px] text-slate-400 leading-tight">
                     Thoughtful UI. Better experiences.
                   </p>
                 </div>
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white dark:bg-white dark:text-black">
-                  <HiSparkles className="h-4 w-4" />
+                  <HiSparkles className="h-5 w-5" />
                 </div>
               </div>
 
@@ -509,17 +509,17 @@ function PreviewVisual() {
               </motion.div>
 
               <div className="mt-4 flex items-center gap-2">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-500/30 dark:text-emerald-400">
                   <HiCheck className="h-3 w-3" />
                 </span>
-                <span className="text-[10px] text-slate-700">
+                <span className="text-[11px] text-slate-400">
                   Responsive interface
                 </span>
               </div>
             </div>
 
             <div className="flex items-center justify-between">
-              <span className="text-[10px] text-slate-700">
+              <span className="text-[10px] text-slate-400">
                 UI / UX preview
               </span>
               <div className="flex gap-1">
@@ -537,7 +537,7 @@ function PreviewVisual() {
         initial={{ opacity: 0, x: 18, y: 12 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ delay: 0.25, duration: 0.35 }}
-        className="absolute -bottom-7 -left-2 z-20 flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white/95 p-3.5 shadow-xl shadow-slate-900/10 backdrop-blur-xl sm:-left-8 dark:border-white/10 dark:bg-slate-950/90 dark:shadow-black/30">
+        className="absolute -bottom-7 -left-2 z-20 flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white/95 py-3.5 px-5 shadow-xl shadow-slate-900/10 backdrop-blur-xl sm:-left-8 dark:border-white/10 dark:bg-slate-950/90 dark:shadow-black/30">
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-800 dark:bg-white/10 dark:text-white">
           <HiCommandLine className="h-5 w-5" />
         </div>
@@ -545,14 +545,14 @@ function PreviewVisual() {
           <p className="text-xs font-semibold text-slate-900 dark:text-white">
             From idea to interface
           </p>
-          <p className="mt-0.5 text-[10px] text-slate-700">
+          <p className="mt-0.5 text-[10px] text-slate-500">
             Design · Develop · Deliver
           </p>
         </div>
       </motion.div>
 
       {/* Decorative index */}
-      <div className="absolute -bottom-10 right-2 hidden font-mono text-[10px] tracking-[0.2em] text-slate-700 sm:block">
+      <div className="absolute -bottom-10 right-2 hidden font-mono text-[10px] tracking-[0.2em] text-slate-500 sm:block">
         SX / 001
       </div>
     </div>
@@ -561,18 +561,6 @@ function PreviewVisual() {
 
 export default function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
-
-  // const reveal = {
-  //   hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: {
-  //       duration: shouldReduceMotion ? 0 : 0.7,
-  //       ease: "easeOut",
-  //     },
-  //   },
-  // };
 
   const reveal = {
     hidden: {
@@ -668,29 +656,29 @@ export default function HeroSection() {
 
             <motion.div
               variants={reveal}
-              className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-slate-200/80 pt-6 dark:border-white/10">
+              className="mt-10 flex items-center gap-x-6 gap-y-3 border-t border-slate-200/80 pt-6 dark:border-white/10">
               <div>
                 <span className="flex items-center gap-2">
                   <FaLaptopCode size={16} />
-                  <p className="text-[11px] font-semibold text-slate-800 dark:text-slate-200 border-l border-l-slate-500 pl-1">
-                    For developers
+                  <p className="text-[12px] font-semibold text-slate-800 dark:text-slate-200 pl-1">
+                    For Developers
                   </p>
                 </span>
-                <p className="mt-1 text-[11px] text-slate-700">
+                <p className="mt-1 text-[11px] text-slate-500">
                   Components · UI Packs · Guides
                 </p>
               </div>
 
-              <span className="hidden h-8 w-px bg-slate-200 sm:block dark:bg-white/10" />
+              <span className="hidden h-8 w-px bg-slate-200 sm:block dark:bg-white/15" />
 
               <div>
                 <span className="flex items-center gap-2">
                   <LuBriefcaseBusiness size={16} />
-                  <p className="text-[11px] font-semibold text-slate-800 dark:text-slate-200 border-l border-l-slate-500 pl-1">
-                    For businesses
+                  <p className="text-[11px] font-semibold text-slate-800 dark:text-slate-200 pl-1">
+                    For Businesses
                   </p>
                 </span>
-                <p className="mt-1 text-[11px] text-slate-700">
+                <p className="mt-1 text-[11px] text-slate-500">
                   Websites · Interfaces · Development
                 </p>
               </div>
@@ -709,7 +697,7 @@ export default function HeroSection() {
         </div> */}
 
         {/* Scroll hint */}
-        <div className="group mt-12 hidden items-center justify-center gap-4 text-[10px] font-medium uppercase tracking-[0.2em] text-slate-700 md:flex hover:scale-105 duration-400">
+        <div className="group mt-12 hidden items-center justify-center gap-4 text-[10px] font-medium uppercase tracking-[0.2em] text-slate-400 md:flex hover:scale-105 duration-400">
           <HiArrowDownRight className="h-3.5 w-3.5 group-hover:rotate-45 duration-400" />
           Explore what you can build
         </div>

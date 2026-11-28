@@ -128,7 +128,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Spaceship from "./Spaceship";
 
 // Generate a consistent starfield
-const stars = Array.from({ length: 200 }, (_, i) => ({
+const stars = Array.from({ length: 300 }, (_, i) => ({
   id: i,
   left: `${(i * 37.7 + 13) % 100}%`,
   top: `${(i * 61.3 + 7) % 100}%`,
