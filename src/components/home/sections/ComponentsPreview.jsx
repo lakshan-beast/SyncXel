@@ -344,7 +344,7 @@ export default function HomeComponentsTeaser() {
   return (
     <section
       id="components-prev"
-      className="relative overflow-hidden bg-white px-5 py-24 text-[#171717] dark:bg-slate-950/80 dark:text-white sm:px-8 lg:px-12 lg:py-32">
+      className="relative overflow-hidden bg-slate-50 dark:bg-slate-900/80 px-5 py-24 text-[#171717]  dark:text-white sm:px-8 lg:px-12 lg:py-32">
       {/* Subtle background decoration */}
       <div
         aria-hidden="true"

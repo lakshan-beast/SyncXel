@@ -156,6 +156,7 @@ import {
   FaGlobe,
   FaTelegramPlane,
 } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const founderSocials = [
   {
@@ -178,6 +179,11 @@ const founderSocials = [
     icon: FaTelegramPlane,
     href: "https://t.me/lakshan_dev",
   },
+  {
+    label: "Whatsapp",
+    icon: FaWhatsapp,
+    href: "https://wa.me/94707046840",
+  },
 ];
 
 export default function FounderProfile() {
@@ -198,7 +204,7 @@ export default function FounderProfile() {
           <img
             src="/hero.jpg"
             alt="Lakshan Sandeepa - Founder of SyncXel"
-            className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.03] grayscale-50 hover:grayscale-0"
+            className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-[1.03] sm:grayscale-50 hover:grayscale-0 "
             loading="lazy"
           />
 
@@ -264,7 +270,7 @@ export default function FounderProfile() {
         </div>
 
         {/* Social links */}
-        <div className="mt-4 pt-2 border-t-2 border-t-slate-300/10 flex flex-wrap items-center gap-2">
+        <div className="mt-4 pt-4 border-t-2 border-t-slate-300/10 flex flex-wrap items-center gap-3">
           {founderSocials.map((social) => {
             const Icon = social.icon;
 
@@ -284,7 +290,7 @@ export default function FounderProfile() {
 
           <a
             href="mailto:syncxelofficial@gmail.com"
-            className="group inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-600 dark:bg-white dark:text-slate-950 dark:hover:bg-blue-500 dark:hover:text-white">
+            className="group inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-600 dark:bg-white dark:text-slate-950 dark:hover:bg-blue-500 dark:hover:text-white mt-3 sm:mt-0">
             <HiOutlineEnvelope className="h-4 w-4" />
             Get in touch
             <HiOutlineArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

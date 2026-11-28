@@ -262,13 +262,16 @@ export default function TechStack() {
   return (
     <section
       aria-label="Technology ecosystem"
-      className="bg-white dark:bg-slate-950">
-      <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between max-w-7xl px-5 lg:mx-auto">
+      className="bg-white dark:bg-slate-950 pb-6">
+      <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between max-w-7xl px-5 sm:px-0 lg:mx-auto">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">
-            // technology_ecosystem
-          </p>
-          <h2 className="mt-2 text-sm font-semibold tracking-wide text-slate-800 dark:text-slate-200">
+          <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] text-blue-600 uppercase">
+            <span className="h-px w-8 bg-blue-300" />
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-blue-300">
+              technology ecosystem{" "}
+            </span>
+          </span>
+          <h2 className="mt-2 text-lg font-semibold tracking-wide text-slate-800 dark:text-slate-200">
             Built with modern technologies
           </h2>
         </div>

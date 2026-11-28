@@ -9,7 +9,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services-section"
-      className="relative isolate overflow-hidden bg-white px-5 py-24 transition-colors duration-300 sm:px-8 lg:px-12 lg:py-32 dark:bg-slate-950">
+      className="relative isolate overflow-hidden  px-5 py-24 transition-colors duration-300 sm:px-8 lg:px-12 lg:py-32 bg-slate-50 dark:bg-slate-900/80">
       {/* Background Decoration */}
       <div className="pointer-events-none absolute -left-40 top-40 -z-10 h-80 w-80 rounded-full bg-blue-500/[0.06] blur-[110px]" />
 
