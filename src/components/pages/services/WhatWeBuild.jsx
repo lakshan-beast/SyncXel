@@ -64,13 +64,13 @@ export default function WhatWeBuild() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
-            <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
+            <span className="text-[11px] font-bold tracking-[0.18em] text-emerald-300 uppercase">
               Project Possibilities
             </span>
 
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
               Ideas we can
-              <span className="text-blue-700 dark:text-blue-800 block">
+              <span className="text-emerald-700 dark:text-emerald-800 block">
                 {" "}
                 bring to life.
               </span>
@@ -103,11 +103,11 @@ export default function WhatWeBuild() {
                 }}
                 className="group min-h-55 p-6 sm:py-6 sm:px-8 border-r-2 border-b-2 border-r-slate-200/50 border-b-slate-200/50 hover:bg-slate-200/30 transition-colors duration-300 dark:border-r-slate-900/50 dark:border-b-slate-900/50 shadow-md rounded-2xl sm:rounded-tr-3xl sm:rounded-bl-3xl sm:rounded-sm">
                 <div className="flex items-center justify-between">
-                  <div className="relative z-10 w-10 h-10 rounded-xl  shadow-sm flex items-center justify-center bg-blue-900 text-blue-300 ">
+                  <div className="relative z-10 w-10 h-10 rounded-xl  shadow-sm flex items-center justify-center bg-emerald-900 text-emerald-300 ">
                     <Icon className="w-6 h-6" />
                   </div>
 
-                  <span className="text-[10px] uppercase tracking-wider font-bold text-blue-600 mt-3">
+                  <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-600 mt-3">
                     {item.number}
                   </span>
                 </div>
@@ -120,7 +120,7 @@ export default function WhatWeBuild() {
                   {item.description}
                 </p>
 
-                <HiArrowUpRight className="w-4 h-4 text-slate-300 mt-5 group-hover:text-blue-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                <HiArrowUpRight className="w-4 h-4 text-slate-300 mt-5 group-hover:text-emerald-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
               </motion.div>
             );
           })}

@@ -45,13 +45,13 @@ export default function ServicesTechStack() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
-            <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
+            <span className="text-[11px] font-bold tracking-[0.18em] text-emerald-300 uppercase">
               Our Technology Stack
             </span>
 
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
               Modern tools.
-              <span className="text-blue-700 dark:text-blue-800 block">
+              <span className="text-emerald-700 dark:text-emerald-800 block">
                 Thoughtful implementation.
               </span>
             </h2>
@@ -64,12 +64,12 @@ export default function ServicesTechStack() {
 
             <div className="flex flex-wrap gap-3 mt-8">
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-600 bg-slate-50 dark:bg-slate-800 dark:text-slate-200/70 dark:border-slate-600 border border-slate-200 rounded-lg px-5 py-2">
-                <HiOutlineCode className="w-4 h-4 text-blue-600" />
+                <HiOutlineCode className="w-4 h-4 text-emerald-600" />
                 Modern Frontend
               </div>
 
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-600 bg-slate-50 dark:bg-slate-800 dark:text-slate-200/70 dark:border-slate-600 border border-slate-200 rounded-lg px-5 py-2">
-                <HiOutlineLightningBolt className="w-4 h-4 text-blue-600" />
+                <HiOutlineLightningBolt className="w-4 h-4 text-emerald-600" />
                 Interactive UI
               </div>
             </div>

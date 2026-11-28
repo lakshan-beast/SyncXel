@@ -48,14 +48,14 @@ export default function ServicesFAQ() {
     <section className="px-5 sm:px-8 lg:px-12 py-16 sm:py-24 bg-white dark:bg-slate-950">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-20">
         <div>
-          <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
+          <span className="text-[11px] font-bold tracking-[0.18em] text-emerald-300 uppercase">
             {/* <HiOutlineQuestionMarkCircle className="w-4 h-4" /> */}
             Frequently Asked Questions
           </span>
 
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
             Got questions?
-            <span className="text-blue-700 dark:text-blue-800 block">
+            <span className="text-emerald-700 dark:text-emerald-800 block">
               We've got answers.
             </span>
           </h2>
@@ -67,7 +67,7 @@ export default function ServicesFAQ() {
 
           <a
             href="mailto:syncxelofficial@gmail.com"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 mt-7"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 hover:text-emerald-700 mt-7"
           >
             Ask us something else
           </a>
@@ -82,7 +82,7 @@ export default function ServicesFAQ() {
                 key={item.question}
                 className={`border rounded-xl overflow-hidden transition-colors ${
                   isOpen
-                    ? "border-blue-200 dark:border-slate-800 bg-blue-50/30 dark:bg-slate-900"
+                    ? "border-emerald-200 dark:border-slate-800 bg-emerald-50/30 dark:bg-slate-900"
                     : "border-slate-200/50 bg-white/30 dark:bg-slate-800/20 dark:border-slate-800"
                 }`}
               >

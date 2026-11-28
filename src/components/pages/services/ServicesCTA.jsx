@@ -15,18 +15,18 @@ export default function ServicesCTA() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="max-w-7xl mx-auto relative overflow-hidden rounded-3xl bg-slate-950 px-6 py-14 sm:px-12 sm:py-16 lg:px-16">
-        <div className="absolute -right-20 -top-32 w-96 h-96 rounded-full bg-blue-600/20 blur-[100px] pointer-events-none" />
+        <div className="absolute -right-20 -top-32 w-96 h-96 rounded-full bg-emerald-600/20 blur-[100px] pointer-events-none" />
 
         <div className="absolute -left-20 -bottom-40 w-80 h-80 rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none" />
 
         <div className="relative max-w-3xl">
-          <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
+          <span className="text-[11px] font-bold tracking-[0.18em] text-emerald-300 uppercase">
             Let's Build Something
           </span>
 
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
             Have an idea?
-            <span className="block text-blue-400 mt-1">
+            <span className="block text-emerald-400 mt-1">
               Let's bring it to life.
             </span>
           </h2>
@@ -39,7 +39,7 @@ export default function ServicesCTA() {
           <div className="flex flex-col sm:flex-row gap-3 mt-8">
             <a
               href="mailto:syncxelofficial@gmail.com?subject=New%20Project%20Inquiry"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-xl transition-all">
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-xl transition-all">
               <HiOutlineMail className="w-5 h-5" />
               Start a Project
               <HiArrowRight className="w-4 h-4" />

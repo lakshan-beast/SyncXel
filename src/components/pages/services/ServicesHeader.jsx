@@ -14,9 +14,9 @@ export default function ServicesHeader() {
             initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}>
-            <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] text-blue-600 uppercase">
-              <span className="h-px w-8 bg-blue-300" />
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-blue-300">
+            <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] text-emerald-600 uppercase">
+              <span className="h-px w-8 bg-emerald-300" />
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-300">
                 What We Offer
               </span>
             </span>
@@ -28,7 +28,7 @@ export default function ServicesHeader() {
               transition={{ duration: 0.6 }}
               className="mt-3 text-4xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white sm:text-6xl">
               Digital solutions.
-              <span className="block text-blue-800 dark:text-blue-700">
+              <span className="block text-emerald-800 dark:text-emerald-700">
                 Built with purpose.
               </span>
             </motion.h1>
@@ -48,14 +48,14 @@ export default function ServicesHeader() {
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-7 sm:justify-end">
               <a
                 href="#core-services"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl transition-all">
+                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:bg-emerald-700 text-white text-sm font-semibold rounded-xl transition-all">
                 Explore Services
                 <HiArrowRight className="w-4 h-4" />
               </a>
 
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors">
+                className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors">
                 View Our Work
                 <HiArrowRight className="w-4 h-4" />
               </Link>
