@@ -39,7 +39,7 @@ export default function FeaturesHeader() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end lg:gap-16 mb-6 sm:mb-10">
       <div>
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
@@ -61,8 +61,8 @@ export default function FeaturesHeader() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="max-w-xl text-4xl font-semibold leading-[1.15] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.5rem] dark:text-white">
           Built for better{" "}
-          <span className="text-blue-600 dark:text-blue-400">
-            digital experiences.
+          <span className="text-blue-600 dark:text-blue-400 block">
+            Digital experiences.
           </span>
         </motion.h2>
       </div>
@@ -73,7 +73,7 @@ export default function FeaturesHeader() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
         className="flex flex-col items-start gap-6 lg:items-end">
-        <p className="max-w-md text-base leading-relaxed text-slate-600 lg:text-right dark:text-slate-400">
+        <p className="max-w-md text-base leading-tight text-slate-600 lg:text-right dark:text-slate-400">
           Thoughtful tools, practical resources, and flexible solutions to help
           developers build better and businesses move forward.
         </p>

@@ -70,7 +70,7 @@ export default function WorkflowHeader() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="max-w-xl text-4xl font-semibold leading-[1.15] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.5rem] dark:text-white">
           From idea to{" "}
-          <span className="text-blue-600 dark:text-blue-400">execution.</span>
+          <span className="text-blue-600 dark:text-blue-400">Execution.</span>
         </motion.h2>
       </div>
 
