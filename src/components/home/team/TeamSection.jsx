@@ -419,6 +419,125 @@
 //   );
 // }
 
+// import React from "react";
+// import { motion, useReducedMotion } from "framer-motion";
+// import FounderProfile from "./FounderProfile";
+
+// export default function TeamSection() {
+//   const shouldReduceMotion = useReducedMotion();
+
+//   return (
+//     <section
+//       id="team-section"
+//       className="relative isolate overflow-hidden bg-white px-5 py-24 sm:px-8 lg:px-12 lg:py-32 dark:bg-slate-950">
+//       {/* Background atmosphere */}
+//       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+//         <div className="absolute -right-40 top-20 h-80 w-80 rounded-full bg-blue-400/10 blur-[120px] dark:bg-blue-500/10" />
+
+//         <div className="absolute -left-40 bottom-0 h-80 w-80 rounded-full bg-indigo-400/10 blur-[120px] dark:bg-indigo-500/10" />
+
+//         <div className="absolute inset-0 opacity-[0.025] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)]` can be written as `bg-[linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)]  dark:opacity-[0.07]" />
+//       </div>
+
+//       <div className="mx-auto max-w-7xl">
+//         {/* Section heading */}
+//         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
+//           <div>
+//             <motion.div
+//               initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.5 }}
+//               className="mb-5 flex items-center gap-3">
+//               <span className="h-px w-8 bg-blue-500" />
+
+//               <span className="text-xs font-semibold tracking-[0.25em] text-blue-600 dark:text-blue-400">
+//                 THE PEOPLE BEHIND SYNCXEL
+//               </span>
+//             </motion.div>
+
+//             <motion.h2
+//               initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.6, delay: 0.1 }}
+//               className="max-w-xl text-4xl font-semibold leading-[1.15] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.5rem] dark:text-white">
+//               Built with purpose.{" "}
+//               <span className="text-blue-600 dark:text-blue-400">
+//                 Driven by ideas.
+//               </span>
+//             </motion.h2>
+//           </div>
+
+//           <motion.div
+//             initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             viewport={{ once: true }}
+//             transition={{ duration: 0.6, delay: 0.2 }}
+//             className="flex flex-col items-start gap-6 lg:items-end">
+//             <p className="max-w-md text-base leading-tight text-slate-600 lg:text-right dark:text-slate-400">
+//               Meet the people and ideas behind SyncXel. We focus on creating
+//               thoughtful digital experiences through creativity, technology, and
+//               continuous improvement.
+//             </p>
+//           </motion.div>
+//         </div>
+
+//         {/* Founder */}
+//         <div className="mt-16">
+//           <FounderProfile />
+//         </div>
+
+//         {/*
+//           =====================================================
+//           FUTURE TEAM MEMBERS
+//           =====================================================
+
+//           Enable this section when the SyncXel team expands.
+//           Replace the sample details with real team information.
+
+//           <div className="mt-28">
+//             <div className="mb-10">
+//               <span className="text-xs font-semibold tracking-[0.25em] text-blue-600 dark:text-blue-400">
+//                 THE TEAM
+//               </span>
+
+//               <h3 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">
+//                 Meet the people behind the work.
+//               </h3>
+
+//               <p className="mt-3 max-w-xl text-base leading-tight text-slate-600 dark:text-slate-400">
+//                 A growing team bringing different skills and ideas
+//                 together to build better digital experiences.
+//               </p>
+//             </div>
+
+//             <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+//               <TeamMemberCard
+//                 name="Team Member One"
+//                 role="Frontend Developer"
+//                 image="/team/member.png"
+//               />
+
+//               <TeamMemberCard
+//                 name="Team Member Two"
+//                 role="UI/UX Designer"
+//                 image="/team/member.png"
+//               />
+
+//               <TeamMemberCard
+//                 name="Team Member Three"
+//                 role="Developer"
+//                 image="/team/member.png"
+//               />
+//             </div>
+//           </div>
+//         */}
+//       </div>
+//     </section>
+//   );
+// }
+
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import FounderProfile from "./FounderProfile";
@@ -429,17 +548,26 @@ export default function TeamSection() {
   return (
     <section
       id="team-section"
-      className="relative isolate overflow-hidden bg-white px-5 py-24 sm:px-8 lg:px-12 lg:py-32 dark:bg-slate-950">
+      className="relative isolate overflow-hidden bg-[#080f1e] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
       {/* Background atmosphere */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -right-40 top-20 h-80 w-80 rounded-full bg-blue-400/10 blur-[120px] dark:bg-blue-500/10" />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute -right-40 top-20 h-80 w-80 rounded-full bg-emerald-400/[0.06] blur-[120px]" />
 
-        <div className="absolute -left-40 bottom-0 h-80 w-80 rounded-full bg-indigo-400/10 blur-[120px] dark:bg-indigo-500/10" />
+        <div className="absolute -left-40 bottom-0 h-80 w-80 rounded-full bg-slate-400/[0.04] blur-[120px]" />
 
-        <div className="absolute inset-0 opacity-[0.025] [background-image:linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)]` can be written as `bg-[linear-gradient(to_right,#64748b_1px,transparent_1px),linear-gradient(to_bottom,#64748b_1px,transparent_1px)]  dark:opacity-[0.07]" />
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(148,163,184,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.2) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+          }}
+        />
       </div>
 
-      <div className="mx-auto max-w-7xl">
+      <div className="relative mx-auto max-w-7xl">
         {/* Section heading */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
           <div>
@@ -449,9 +577,9 @@ export default function TeamSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               className="mb-5 flex items-center gap-3">
-              <span className="h-px w-8 bg-blue-500" />
+              <span className="h-px w-8 bg-emerald-400" />
 
-              <span className="text-xs font-semibold tracking-[0.25em] text-blue-600 dark:text-blue-400">
+              <span className="text-xs font-semibold tracking-[0.25em] text-emerald-400">
                 THE PEOPLE BEHIND SYNCXEL
               </span>
             </motion.div>
@@ -461,11 +589,9 @@ export default function TeamSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="max-w-xl text-4xl font-semibold leading-[1.15] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.5rem] dark:text-white">
+              className="max-w-xl text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
               Built with purpose.{" "}
-              <span className="text-blue-600 dark:text-blue-400">
-                Driven by ideas.
-              </span>
+              <span className="text-emerald-400">Driven by ideas.</span>
             </motion.h2>
           </div>
 
@@ -475,7 +601,7 @@ export default function TeamSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col items-start gap-6 lg:items-end">
-            <p className="max-w-md text-base leading-tight text-slate-600 lg:text-right dark:text-slate-400">
+            <p className="max-w-md text-base leading-relaxed text-slate-400 lg:text-right">
               Meet the people and ideas behind SyncXel. We focus on creating
               thoughtful digital experiences through creativity, technology, and
               continuous improvement.
@@ -498,15 +624,15 @@ export default function TeamSection() {
 
           <div className="mt-28">
             <div className="mb-10">
-              <span className="text-xs font-semibold tracking-[0.25em] text-blue-600 dark:text-blue-400">
+              <span className="text-xs font-semibold tracking-[0.25em] text-emerald-400">
                 THE TEAM
               </span>
 
-              <h3 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">
+              <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
                 Meet the people behind the work.
               </h3>
 
-              <p className="mt-3 max-w-xl text-base leading-tight text-slate-600 dark:text-slate-400">
+              <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-400">
                 A growing team bringing different skills and ideas
                 together to build better digital experiences.
               </p>
