@@ -319,7 +319,7 @@ export default function BackgroundAtmosphere() {
       {/* Bottom fade */}
       <div
         className="absolute inset-x-0 bottom-0 h-64
-        bg-gradient-to-t from-white to-transparent
+        bg-gradient-to-t from-white/10 to-transparent
         dark:from-slate-950"
       />
     </div>

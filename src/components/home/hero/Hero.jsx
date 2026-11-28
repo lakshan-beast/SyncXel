@@ -719,7 +719,7 @@ import {
 } from "react-icons/hi2";
 import { FaLaptopCode } from "react-icons/fa6";
 import { LuBriefcaseBusiness } from "react-icons/lu";
-// import BackgroundAtmosphere from "../../common/BackgroundAtmoshere";
+import BackgroundAtmosphere from "../../common/BackgroundAtmoshere";
 
 const resources = [
   {
@@ -855,11 +855,10 @@ export default function HeroSection() {
     <section
       id="home"
       className="relative isolate overflow-hidden bg-[#080f1e] text-white">
-      {/* Subtle background accents */}
-      <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-emerald-500/[0.07] blur-[100px]" />
-      <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-blue-500/[0.06] blur-[120px]" />
+      <BackgroundAtmosphere />
 
-      <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:px-10 lg:pb-24 lg:pt-40">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:px-10 lg:pb-24 lg:pt-40">
+        {/* Hero content */}
         <div className="grid items-center gap-14 lg:grid-cols-[1fr_0.95fr] lg:gap-12">
           {/* Hero content */}
           <motion.div
