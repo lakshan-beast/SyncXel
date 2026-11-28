@@ -29,10 +29,10 @@ export default function Home() {
       {/* <ComponentsPreview /> */}
       {/* <DocsPreview /> */}
       <FeaturesSection />
-      <TeamSection />
       <ServicesSection />
       <WorkflowSection />
       <ContactSection />
+      <TeamSection />
       <FaqSection />
       <Footer />
     </>
