@@ -65,13 +65,13 @@ export default function CoreServices() {
       className="px-5 sm:px-8 lg:px-12 py-16 sm:py-24 bg-slate-50 dark:bg-slate-900">
       <div className="max-w-7xl mx-auto">
         <div className="max-w-2xl mb-12 sm:mb-16">
-          <span className="text-[11px] font-bold tracking-[0.18em] text-blue-300 uppercase">
+          <span className="text-[11px] font-bold tracking-[0.18em] text-emerald-300 uppercase">
             Our Core Services
           </span>
 
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-300 mt-4">
             What we do,
-            <span className="text-blue-700 dark:text-blue-800">
+            <span className="text-emerald-700 dark:text-emerald-800">
               {" "}
               How we help.
             </span>
@@ -97,9 +97,9 @@ export default function CoreServices() {
                   duration: 0.5,
                   delay: shouldReduceMotion ? 0 : index * 0.1,
                 }}
-                className="group bg-white/80 dark:bg-slate-500 border-2 border-slate-300/40 dark:border-slate-700 rounded-2xl sm:rounded-tr-3xl sm:rounded-bl-3xl sm:rounded-sm p-6 sm:p-8 flex flex-col hover:border-blue-200 hover:shadow-md hover:shadow-slate-200/50 transition-all duration-300">
+                className="group bg-white/80 dark:bg-slate-500 border-2 border-slate-300/40 dark:border-slate-700 rounded-2xl sm:rounded-tr-3xl sm:rounded-bl-3xl sm:rounded-sm p-6 sm:p-8 flex flex-col hover:border-emerald-200 hover:shadow-md hover:shadow-slate-200/50 transition-all duration-300">
                 <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-blue-900 text-blue-300 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-900 text-emerald-300 flex items-center justify-center">
                     <Icon className="w-6 h-6" />
                   </div>
 
@@ -108,7 +108,7 @@ export default function CoreServices() {
                   </span>
                 </div>
 
-                <span className="text-[10px] uppercase tracking-wider font-bold text-blue-600 mt-3">
+                <span className="text-[10px] uppercase tracking-wider font-bold text-emerald-600 mt-3">
                   {service.tag}
                 </span>
 
@@ -131,7 +131,7 @@ export default function CoreServices() {
                     <li
                       key={feature}
                       className="flex items-start gap-2.5 text-xs text-slate-700">
-                      <HiCheck className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                      <HiCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -139,7 +139,7 @@ export default function CoreServices() {
 
                 <a
                   href="#services-contact"
-                  className="mt-8 pt-5 border-t border-slate-200 dark:border-slate-100/50 flex items-center justify-between text-sm font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">
+                  className="mt-8 pt-5 border-t border-slate-200 dark:border-slate-100/50 flex items-center justify-between text-sm font-semibold text-slate-700 group-hover:text-emerald-600 transition-colors">
                   Discuss a Project
                   <HiArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </a>
