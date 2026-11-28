@@ -383,7 +383,7 @@ export default function TechStack() {
 
           <h2 className="mt-3 text-xl font-bold tracking-tight text-white sm:text-2xl">
             Modern tools.
-            <span className="text-emerald-400">
+            <span className="text-emerald-400 block">
               {" "}
               Thoughtful implementation.
             </span>
