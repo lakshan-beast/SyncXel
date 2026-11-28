@@ -156,6 +156,164 @@
 //   );
 // }
 
+// import React from "react";
+// import { motion, useReducedMotion } from "framer-motion";
+// import {
+//   SiReact,
+//   SiTailwindcss,
+//   SiTypescript,
+//   SiNextdotjs,
+//   SiVite,
+//   SiFramer,
+//   SiFigma,
+//   SiGithub,
+//   SiVercel,
+//   SiHtml5,
+//   // SiCss3,
+//   SiJavascript,
+// } from "react-icons/si";
+// import { FaCss3Alt } from "react-icons/fa6";
+
+// const technologies = [
+//   {
+//     name: "React",
+//     category: "UI Library",
+//     icon: SiReact,
+//   },
+//   {
+//     name: "Next.js",
+//     category: "Framework",
+//     icon: SiNextdotjs,
+//   },
+//   {
+//     name: "TypeScript",
+//     category: "Language",
+//     icon: SiTypescript,
+//   },
+//   {
+//     name: "Tailwind CSS",
+//     category: "Styling",
+//     icon: SiTailwindcss,
+//   },
+//   {
+//     name: "JavaScript",
+//     category: "Language",
+//     icon: SiJavascript,
+//   },
+//   {
+//     name: "Framer Motion",
+//     category: "Animation",
+//     icon: SiFramer,
+//   },
+//   {
+//     name: "Vite",
+//     category: "Build Tool",
+//     icon: SiVite,
+//   },
+//   {
+//     name: "Figma",
+//     category: "Design",
+//     icon: SiFigma,
+//   },
+//   {
+//     name: "GitHub",
+//     category: "Version Control",
+//     icon: SiGithub,
+//   },
+//   {
+//     name: "Vercel",
+//     category: "Deployment",
+//     icon: SiVercel,
+//   },
+//   {
+//     name: "HTML5",
+//     category: "Markup",
+//     icon: SiHtml5,
+//   },
+//   {
+//     name: "CSS3",
+//     category: "Styling",
+//     icon: FaCss3Alt,
+//   },
+// ];
+
+// function TechnologyCard({ technology }) {
+//   const Icon = technology.icon;
+
+//   return (
+//     <div className="group flex min-w-50 items-center gap-3 rounded-xl border border-slate-200/80 bg-white/75 px-3.5 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-slate-200 hover:bg-white hover:shadow-lg hover:shadow-slate-900/5 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/10 dark:hover:bg-white/5 dark:hover:shadow-black/20">
+//       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-colors duration-300 group-hover:bg-slate-900 group-hover:text-white dark:bg-white/[0.07] dark:text-slate-300 dark:group-hover:bg-white dark:group-hover:text-black">
+//         <Icon aria-hidden="true" focusable="false" className="h-5 w-5" />
+//       </div>
+
+//       <div className="min-w-0">
+//         <p className="truncate text-xs font-semibold text-slate-800 dark:text-slate-200">
+//           {technology.name}
+//         </p>
+//         <p className="mt-0 text-[10px] text-slate-400">{technology.category}</p>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default function TechStack() {
+//   const shouldReduceMotion = useReducedMotion();
+
+//   return (
+//     <section
+//       aria-label="Technology ecosystem"
+//       className="bg-white dark:bg-slate-950 pb-6">
+//       <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between max-w-7xl px-5 sm:px-0 lg:mx-auto">
+//         <div>
+//           <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] text-blue-600 uppercase">
+//             <span className="h-px w-8 bg-blue-300" />
+//             <span className="text-xs font-bold uppercase tracking-[0.18em] text-blue-300">
+//               technology ecosystem{" "}
+//             </span>
+//           </span>
+//           <h2 className="mt-2 text-lg font-semibold tracking-wide text-slate-800 dark:text-slate-200">
+//             Built with modern technologies
+//           </h2>
+//         </div>
+
+//         <p className="text-[11px] text-slate-400">
+//           Tools behind the experience
+//         </p>
+//       </div>
+
+//       {shouldReduceMotion ? (
+//         <div className="flex flex-wrap gap-3">
+//           {technologies.map((technology) => (
+//             <TechnologyCard key={technology.name} technology={technology} />
+//           ))}
+//         </div>
+//       ) : (
+//         <div className="group relative overflow-hidden">
+//           {/* Edge fades */}
+//           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#fafafa] to-transparent dark:from-slate-950/90" />
+//           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#fafafa] to-transparent dark:from-slate-950/90" />
+
+//           <motion.div
+//             className="flex w-max gap-3 py-2"
+//             animate={{ x: ["0%", "-50%"] }}
+//             transition={{
+//               duration: 42,
+//               ease: "linear",
+//               repeat: Infinity,
+//             }}>
+//             {[...technologies, ...technologies].map((technology, index) => (
+//               <TechnologyCard
+//                 key={`${technology.name}-${index}`}
+//                 technology={technology}
+//               />
+//             ))}
+//           </motion.div>
+//         </div>
+//       )}
+//     </section>
+//   );
+// }
+
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
@@ -169,88 +327,39 @@ import {
   SiGithub,
   SiVercel,
   SiHtml5,
-  // SiCss3,
   SiJavascript,
 } from "react-icons/si";
 import { FaCss3Alt } from "react-icons/fa6";
 
 const technologies = [
-  {
-    name: "React",
-    category: "UI Library",
-    icon: SiReact,
-  },
-  {
-    name: "Next.js",
-    category: "Framework",
-    icon: SiNextdotjs,
-  },
-  {
-    name: "TypeScript",
-    category: "Language",
-    icon: SiTypescript,
-  },
-  {
-    name: "Tailwind CSS",
-    category: "Styling",
-    icon: SiTailwindcss,
-  },
-  {
-    name: "JavaScript",
-    category: "Language",
-    icon: SiJavascript,
-  },
-  {
-    name: "Framer Motion",
-    category: "Animation",
-    icon: SiFramer,
-  },
-  {
-    name: "Vite",
-    category: "Build Tool",
-    icon: SiVite,
-  },
-  {
-    name: "Figma",
-    category: "Design",
-    icon: SiFigma,
-  },
-  {
-    name: "GitHub",
-    category: "Version Control",
-    icon: SiGithub,
-  },
-  {
-    name: "Vercel",
-    category: "Deployment",
-    icon: SiVercel,
-  },
-  {
-    name: "HTML5",
-    category: "Markup",
-    icon: SiHtml5,
-  },
-  {
-    name: "CSS3",
-    category: "Styling",
-    icon: FaCss3Alt,
-  },
+  { name: "React", category: "UI Library", icon: SiReact },
+  { name: "Next.js", category: "Framework", icon: SiNextdotjs },
+  { name: "TypeScript", category: "Language", icon: SiTypescript },
+  { name: "Tailwind CSS", category: "Styling", icon: SiTailwindcss },
+  { name: "JavaScript", category: "Language", icon: SiJavascript },
+  { name: "Framer Motion", category: "Animation", icon: SiFramer },
+  { name: "Vite", category: "Build Tool", icon: SiVite },
+  { name: "Figma", category: "Design", icon: SiFigma },
+  { name: "GitHub", category: "Version Control", icon: SiGithub },
+  { name: "Vercel", category: "Deployment", icon: SiVercel },
+  { name: "HTML5", category: "Markup", icon: SiHtml5 },
+  { name: "CSS3", category: "Styling", icon: FaCss3Alt },
 ];
 
 function TechnologyCard({ technology }) {
   const Icon = technology.icon;
 
   return (
-    <div className="group flex min-w-50 items-center gap-3 rounded-xl border border-slate-200/80 bg-white/75 px-3.5 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-slate-200 hover:bg-white hover:shadow-lg hover:shadow-slate-900/5 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/10 dark:hover:bg-white/5 dark:hover:shadow-black/20">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-colors duration-300 group-hover:bg-slate-900 group-hover:text-white dark:bg-white/[0.07] dark:text-slate-300 dark:group-hover:bg-white dark:group-hover:text-black">
+    <div className="group flex min-w-[175px] items-center gap-3 rounded-xl border border-white/[0.08] bg-[#101a2c] px-3.5 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/30 hover:bg-[#142238] sm:min-w-[190px]">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/5 bg-white/[0.04] text-slate-300 transition-all duration-300 group-hover:border-emerald-400/10 group-hover:bg-emerald-400/10 group-hover:text-emerald-400">
         <Icon aria-hidden="true" focusable="false" className="h-5 w-5" />
       </div>
 
       <div className="min-w-0">
-        <p className="truncate text-xs font-semibold text-slate-800 dark:text-slate-200">
+        <p className="truncate text-xs font-semibold text-slate-200">
           {technology.name}
         </p>
-        <p className="mt-0 text-[10px] text-slate-400">{technology.category}</p>
+        <p className="mt-1 text-[10px] text-slate-500">{technology.category}</p>
       </div>
     </div>
   );
@@ -262,27 +371,38 @@ export default function TechStack() {
   return (
     <section
       aria-label="Technology ecosystem"
-      className="bg-white dark:bg-slate-950 pb-6">
-      <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between max-w-7xl px-5 sm:px-0 lg:mx-auto">
+      className="relative overflow-hidden bg-[#080f1e] py-12 sm:py-14">
+      <div className="mx-auto mb-7 flex max-w-7xl flex-col gap-2 px-5 sm:flex-row sm:items-end sm:justify-between sm:px-8 lg:px-10">
         <div>
-          <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] text-blue-600 uppercase">
-            <span className="h-px w-8 bg-blue-300" />
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-blue-300">
-              technology ecosystem{" "}
+          <div className="flex items-center gap-2">
+            <span className="h-px w-7 bg-emerald-400" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-400">
+              Technology ecosystem
             </span>
-          </span>
-          <h2 className="mt-2 text-lg font-semibold tracking-wide text-slate-800 dark:text-slate-200">
-            Built with modern technologies
+          </div>
+
+          <h2 className="mt-3 text-xl font-bold tracking-tight text-white sm:text-2xl">
+            Modern tools.
+            <span className="text-emerald-400">
+              {" "}
+              Thoughtful implementation.
+            </span>
           </h2>
+
+          <p className="mt-2 max-w-lg text-xs leading-tight text-slate-400 sm:text-sm">
+            The technologies behind our interfaces, digital products and
+            development workflows.
+          </p>
         </div>
 
-        <p className="text-[11px] text-slate-400">
+        <p className="text-[10px] font-medium uppercase tracking-[0.15em] text-slate-600">
           Tools behind the experience
         </p>
       </div>
 
+      {/* Technology cards */}
       {shouldReduceMotion ? (
-        <div className="flex flex-wrap gap-3">
+        <div className="mx-auto flex max-w-7xl flex-wrap gap-3 px-5 sm:px-8 lg:px-10">
           {technologies.map((technology) => (
             <TechnologyCard key={technology.name} technology={technology} />
           ))}
@@ -290,14 +410,15 @@ export default function TechStack() {
       ) : (
         <div className="group relative overflow-hidden">
           {/* Edge fades */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#fafafa] to-transparent dark:from-slate-950/90" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#fafafa] to-transparent dark:from-slate-950/90" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-[#080f1e] to-transparent sm:w-20" />
+
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-[#080f1e] to-transparent sm:w-20" />
 
           <motion.div
-            className="flex w-max gap-3 py-2"
+            className="flex w-max gap-3 py-3"
             animate={{ x: ["0%", "-50%"] }}
             transition={{
-              duration: 42,
+              duration: 45,
               ease: "linear",
               repeat: Infinity,
             }}>
@@ -310,6 +431,15 @@ export default function TechStack() {
           </motion.div>
         </div>
       )}
+
+      {/* Bottom label */}
+      <div className="mx-auto mt-7 flex max-w-7xl items-center gap-3 px-5 sm:px-8 lg:px-10">
+        <span className="h-px flex-1 bg-white/[0.07]" />
+        <span className="font-mono text-[9px] tracking-[0.15em] text-slate-600">
+          BUILT WITH MODERN TECHNOLOGY
+        </span>
+        <span className="h-px flex-1 bg-white/[0.07]" />
+      </div>
     </section>
   );
 }
