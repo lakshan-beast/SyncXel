@@ -97,7 +97,7 @@ export default function CoreServices() {
                   duration: 0.5,
                   delay: shouldReduceMotion ? 0 : index * 0.1,
                 }}
-                className="group bg-white/80 dark:bg-slate-400 border-2 border-slate-300/40 dark:border-slate-700 rounded-tr-3xl rounded-bl-3xl p-6 sm:p-8 flex flex-col hover:border-blue-200 hover:shadow-md hover:shadow-slate-200/50 transition-all duration-300">
+                className="group bg-white/80 dark:bg-slate-500 border-2 border-slate-300/40 dark:border-slate-700 rounded-2xl sm:rounded-tr-3xl sm:rounded-bl-3xl sm:rounded-sm p-6 sm:p-8 flex flex-col hover:border-blue-200 hover:shadow-md hover:shadow-slate-200/50 transition-all duration-300">
                 <div className="flex items-center justify-between">
                   <div className="w-12 h-12 rounded-xl bg-blue-900 text-blue-300 flex items-center justify-center">
                     <Icon className="w-6 h-6" />

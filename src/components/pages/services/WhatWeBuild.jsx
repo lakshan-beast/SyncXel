@@ -101,7 +101,7 @@ export default function WhatWeBuild() {
                   duration: 0.45,
                   delay: shouldReduceMotion ? 0 : (index % 3) * 0.08,
                 }}
-                className="group min-h-55 p-6 sm:py-6 sm:px-8 border-r-2 border-b-2 border-r-slate-200/50 border-b-slate-200/50 hover:bg-slate-200/30 transition-colors duration-300 dark:border-r-slate-900/50 dark:border-b-slate-900/50 shadow-md rounded-md">
+                className="group min-h-55 p-6 sm:py-6 sm:px-8 border-r-2 border-b-2 border-r-slate-200/50 border-b-slate-200/50 hover:bg-slate-200/30 transition-colors duration-300 dark:border-r-slate-900/50 dark:border-b-slate-900/50 shadow-md rounded-2xl sm:rounded-tr-3xl sm:rounded-bl-3xl sm:rounded-sm">
                 <div className="flex items-center justify-between">
                   <div className="relative z-10 w-10 h-10 rounded-xl  shadow-sm flex items-center justify-center bg-blue-900 text-blue-300 ">
                     <Icon className="w-6 h-6" />
