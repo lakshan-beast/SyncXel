@@ -1,8 +1,8 @@
 import React from "react";
 
 import HeroSection from "../components/home/hero/Hero";
-import ComponentsPreview from "../components/home/sections/ComponentsPreview";
-import DocsPreview from "../components/home/docs-preview/DocsPreviewSection";
+// import ComponentsPreview from "../components/home/sections/ComponentsPreview";
+// import DocsPreview from "../components/home/docs-preview/DocsPreviewSection";
 import FeaturesSection from "../components/home/features/FeaturesSection";
 import TeamSection from "../components/home/team/TeamSection";
 import ServicesSection from "../components/home/services/ServicesSection";
@@ -26,8 +26,8 @@ export default function Home() {
 
       <HeroSection />
       <TechStack />
-      <ComponentsPreview />
-      <DocsPreview />
+      {/* <ComponentsPreview /> */}
+      {/* <DocsPreview /> */}
       <FeaturesSection />
       <TeamSection />
       <ServicesSection />

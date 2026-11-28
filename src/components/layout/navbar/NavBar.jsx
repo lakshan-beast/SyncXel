@@ -244,15 +244,179 @@
 //   );
 // }
 
+// import React, { useState, useEffect } from "react";
+// import { Link, useLocation, useNavigate } from "react-router-dom";
+// import { motion, AnimatePresence } from "framer-motion";
+// import {
+//   HiOutlineBars3,
+//   HiOutlineXMark,
+//   HiOutlineChevronDown,
+//   HiOutlineArrowUpRight,
+//   HiOutlineSparkles,
+// } from "react-icons/hi2";
+
+// import NavLinks from "./NavLinks";
+// import SolutionsDropdown from "./SolutionsDropdown";
+// import MobileMenu from "./MobileMenu";
+// import ThemeToggle from "./ThemeToggle";
+
+// export default function Navbar() {
+//   const [mobileOpen, setMobileOpen] = useState(false);
+//   const [solutionsOpen, setSolutionsOpen] = useState(false);
+
+//   const location = useLocation();
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     setMobileOpen(false);
+//     setSolutionsOpen(false);
+//   }, [location.pathname]);
+
+//   useEffect(() => {
+//     document.body.style.overflow = mobileOpen ? "hidden" : "";
+
+//     return () => {
+//       document.body.style.overflow = "";
+//     };
+//   }, [mobileOpen]);
+
+//   const handleNavigation = (target) => {
+//     setMobileOpen(false);
+//     setSolutionsOpen(false);
+
+//     if (target.startsWith("/")) {
+//       navigate(target);
+//       window.scrollTo({ top: 0, behavior: "smooth" });
+//       return;
+//     }
+
+//     const sectionId = target.replace("#", "");
+
+//     if (location.pathname !== "/") {
+//       navigate("/");
+//       setTimeout(() => {
+//         document.getElementById(sectionId)?.scrollIntoView({
+//           behavior: "smooth",
+//           block: "start",
+//         });
+//       }, 150);
+//     } else {
+//       document.getElementById(sectionId)?.scrollIntoView({
+//         behavior: "smooth",
+//         block: "start",
+//       });
+//     }
+//   };
+
+//   const navigationItems = [
+//     // { label: "Components", path: "/components" },
+//     // { label: "UI Packs", path: "/ui-packs" },
+//     // { label: "Templates", path: "/templates" },
+//     // { label: "Docs", path: "/docs" },
+//     { label: "Projects", path: "/projects" },
+//     { label: "Services", path: "/services" },
+//   ];
+
+//   return (
+//     <motion.header
+//       initial={{ opacity: 0, y: -20 }}
+//       animate={{ opacity: 1, y: 0 }}
+//       transition={{ duration: 0.5 }}
+//       className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-5 lg:px-8 pt-3 ">
+//       <nav className="max-w-full lg:mx-40 rounded-2xl border border-slate-200/80 dark:shadow-2xl dark:border-slate-800/60 bg-white/90 dark:bg-slate-700 backdrop-blur-3xl drop-shadow-slate-200 shadow-slate-100/5">
+//         <div className="flex items-center justify-between px-4 sm:px-6 py-5">
+//           {/* Brand */}
+//           <Link
+//             to="/"
+//             onClick={() => setMobileOpen(false)}
+//             className="flex items-center gap-2.5 shrink-0"
+//             aria-label="SyncXel Home">
+//             <img
+//               src="/logo.webp"
+//               alt="SyncXel Logo"
+//               className="w-11 h-11 p-0.5 rounded-full object-cover border border-slate-600"
+//             />
+
+//             <div className="leading-tight">
+//               <span className="block text-lg font-extrabold tracking-tight text-slate-950 dark:text-white">
+//                 SyncXel
+//               </span>
+//               <span className="block text-[9px] font-mono tracking-[0.18em] text-slate-500 dark:text-slate-400">
+//                 UI MATRIX V2.0
+//               </span>
+//             </div>
+//           </Link>
+
+//           {/* Desktop Navigation */}
+//           <div className="hidden xl:flex items-center gap-1">
+//             {navigationItems.map((item) => (
+//               <NavLinks
+//                 key={item.path}
+//                 item={item}
+//                 active={location.pathname === item.path}
+//               />
+//             ))}
+
+//             <SolutionsDropdown
+//               open={solutionsOpen}
+//               setOpen={setSolutionsOpen}
+//               onNavigate={handleNavigation}
+//             />
+//           </div>
+
+//           {/* Actions */}
+//           <div className="flex items-center gap-2">
+//             <ThemeToggle />
+
+//             <button
+//               type="button"
+//               onClick={() => handleNavigation("#contact-section")}
+//               className="hidden md:inline-flex items-center gap-2 rounded-xl bg-slate-950 dark:bg-white px-4 py-2.5 text-xs font-bold text-white dark:text-slate-950 hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors">
+//               Let's Talk
+//               <HiOutlineArrowUpRight className="w-4 h-4" />
+//             </button>
+
+//             {/* Mobile Menu Button */}
+//             <button
+//               type="button"
+//               onClick={() => setMobileOpen((prev) => !prev)}
+//               aria-label={mobileOpen ? "Close menu" : "Open menu"}
+//               aria-expanded={mobileOpen}
+//               className="xl:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+//               {mobileOpen ? (
+//                 <HiOutlineXMark className="w-5 h-5" />
+//               ) : (
+//                 <HiOutlineBars3 className="w-5 h-5" />
+//               )}
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Mobile Navigation */}
+//         <AnimatePresence>
+//           {mobileOpen && (
+//             <MobileMenu
+//               items={navigationItems}
+//               onNavigate={handleNavigation}
+//               onClose={() => setMobileOpen(false)}
+//               currentPath={location.pathname}
+//             />
+//           )}
+//         </AnimatePresence>
+//       </nav>
+//     </motion.header>
+//   );
+// }
+
+
+
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   HiOutlineBars3,
   HiOutlineXMark,
-  HiOutlineChevronDown,
   HiOutlineArrowUpRight,
-  HiOutlineSparkles,
 } from "react-icons/hi2";
 
 import NavLinks from "./NavLinks";
@@ -292,27 +456,22 @@ export default function Navbar() {
 
     const sectionId = target.replace("#", "");
 
-    if (location.pathname !== "/") {
-      navigate("/");
-      setTimeout(() => {
-        document.getElementById(sectionId)?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }, 150);
-    } else {
+    const scrollToSection = () => {
       document.getElementById(sectionId)?.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
+    };
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(scrollToSection, 150);
+    } else {
+      scrollToSection();
     }
   };
 
   const navigationItems = [
-    { label: "Components", path: "/components" },
-    { label: "UI Packs", path: "/ui-packs" },
-    { label: "Templates", path: "/templates" },
-    { label: "Docs", path: "/docs" },
     { label: "Projects", path: "/projects" },
     { label: "Services", path: "/services" },
   ];
@@ -322,33 +481,36 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-5 lg:px-8 pt-3 ">
-      <nav className="max-w-full lg:mx-40 rounded-2xl border border-slate-200/80 dark:shadow-2xl dark:border-slate-800/60 bg-white/90 dark:bg-slate-700 backdrop-blur-3xl drop-shadow-slate-200 shadow-slate-100/5">
-        <div className="flex items-center justify-between px-4 sm:px-6 py-5">
+      className="fixed left-0 right-0 top-0 z-50 px-3 pt-3 sm:px-5 lg:px-8"
+    >
+      <nav className="mx-auto max-w-full rounded-2xl border border-white/[0.08] bg-[#080f1e]/90 shadow-2xl shadow-black/20 backdrop-blur-3xl lg:mx-40">
+        <div className="flex items-center justify-between px-4 py-4 sm:px-6">
           {/* Brand */}
           <Link
             to="/"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-2.5 shrink-0"
-            aria-label="SyncXel Home">
+            className="flex shrink-0 items-center gap-2.5"
+            aria-label="SyncXel Home"
+          >
             <img
               src="/logo.webp"
               alt="SyncXel Logo"
-              className="w-11 h-11 p-0.5 rounded-full object-cover border border-slate-600"
+              className="h-11 w-11 rounded-full border border-emerald-400/20 object-cover p-0.5"
             />
 
             <div className="leading-tight">
-              <span className="block text-lg font-extrabold tracking-tight text-slate-950 dark:text-white">
+              <span className="block text-lg font-extrabold tracking-tight text-white">
                 SyncXel
               </span>
-              <span className="block text-[9px] font-mono tracking-[0.18em] text-slate-500 dark:text-slate-400">
+
+              <span className="block font-mono text-[9px] tracking-[0.18em] text-slate-500">
                 UI MATRIX V2.0
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center gap-1">
+          <div className="hidden items-center gap-1 xl:flex">
             {navigationItems.map((item) => (
               <NavLinks
                 key={item.path}
@@ -360,7 +522,6 @@ export default function Navbar() {
             <SolutionsDropdown
               open={solutionsOpen}
               setOpen={setSolutionsOpen}
-              onNavigate={handleNavigation}
             />
           </div>
 
@@ -371,9 +532,10 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => handleNavigation("#contact-section")}
-              className="hidden md:inline-flex items-center gap-2 rounded-xl bg-slate-950 dark:bg-white px-4 py-2.5 text-xs font-bold text-white dark:text-slate-950 hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors">
+              className="hidden items-center gap-2 rounded-xl bg-emerald-400 px-4 py-2.5 text-xs font-bold text-[#080f1e] transition-all duration-300 hover:bg-emerald-300 md:inline-flex"
+            >
               Let's Talk
-              <HiOutlineArrowUpRight className="w-4 h-4" />
+              <HiOutlineArrowUpRight className="h-4 w-4" />
             </button>
 
             {/* Mobile Menu Button */}
@@ -382,11 +544,12 @@ export default function Navbar() {
               onClick={() => setMobileOpen((prev) => !prev)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
-              className="xl:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] text-slate-300 transition-colors hover:border-emerald-400/20 hover:bg-emerald-400/10 hover:text-emerald-400 xl:hidden"
+            >
               {mobileOpen ? (
-                <HiOutlineXMark className="w-5 h-5" />
+                <HiOutlineXMark className="h-5 w-5" />
               ) : (
-                <HiOutlineBars3 className="w-5 h-5" />
+                <HiOutlineBars3 className="h-5 w-5" />
               )}
             </button>
           </div>
