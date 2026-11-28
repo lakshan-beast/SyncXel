@@ -630,7 +630,7 @@ export default function HeroSection() {
 
             <motion.p
               variants={reveal}
-              className="mt-7 max-w-xl text-[15px] leading-tight text-slate-700 sm:text-base dark:text-slate-300">
+              className="mt-7 max-w-xl text-[15px] leading-tight text-slate-700 sm:text-base dark:text-slate-400">
               Discover premium React UI components, UI packs and website
               templates for developers — or partner with SyncXel to turn your
               business ideas into powerful digital experiences.
@@ -638,7 +638,7 @@ export default function HeroSection() {
 
             <motion.div
               variants={reveal}
-              className="mt-9 flex flex-col gap-3 sm:flex-row">
+              className="mt-9 flex flex-col gap-1.5 sm:flex-row">
               <a
                 href="#components-prev"
                 className="group inline-flex min-h-13 items-center justify-center gap-3 rounded-xl bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-slate-950/10 transition duration-300 hover:-translate-y-1 hover:bg-slate-700 dark:bg-white dark:text-black dark:hover:bg-slate-200">

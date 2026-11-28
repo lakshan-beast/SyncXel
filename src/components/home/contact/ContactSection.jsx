@@ -12,7 +12,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact-section"
-      className="relative isolate overflow-hidden bg-white px-5 py-24 dark:bg-slate-950/90 sm:px-8 lg:px-12 lg:py-32">
+      className="relative isolate overflow-hidden  px-5 py-24 bg-slate-50 dark:bg-slate-900/80 sm:px-8 lg:px-12 lg:py-32">
       {/* Background atmosphere
       <div
         aria-hidden="true"
